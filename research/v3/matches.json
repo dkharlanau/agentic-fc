@@ -195,6 +195,38 @@
         "Role-diverse commands returned, so absence of PASS/SHOOT in earlier games does not establish an immutable possession-parser defect.",
         "Reported Success and issued commands still do not prove useful application of every action."
       ]
+    },
+    {
+      "id": "live-07",
+      "setup": "A0-M3-no-reset-no-tools",
+      "opponent": "AWSenal",
+      "side": "home",
+      "goalsFor": 2,
+      "goalsAgainst": 0,
+      "shotsFor": 8,
+      "shotsAgainst": 1,
+      "shotsOnTargetFor": 2,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 34,
+      "commands": 11,
+      "averageLatencyMs": 1,
+      "commandCounts": {
+        "CLEAR_OVERRIDE": 11
+      },
+      "roleLatencyMs": {
+        "gk": 2,
+        "def": 1,
+        "mid": 1,
+        "fwd1": 1,
+        "fwd2": 1
+      },
+      "reportedRoleSuccessPercent": 100,
+      "opponentCommands": 19,
+      "limitations": [
+        "1ms and eleven CLEAR_OVERRIDE commands do not establish Nova inference or prompt execution.",
+        "Engine play/cache/fallback are possible explanations, not verified causes.",
+        "Same installed M3 as preceding450ms role-diverse report; do not attribute winning to a new change."
+      ]
     }
   ]
 }
