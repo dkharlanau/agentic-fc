@@ -121,6 +121,40 @@
         "No explicit PASS or SHOOT commands; four engine shots, none on target.",
         "Opponent won with zero reported commands; built-in engine remained active."
       ]
+    },
+    {
+      "id": "live-05",
+      "setup": "A0-M3-no-reset-no-tools",
+      "opponent": "No Context FC",
+      "side": "home",
+      "goalsFor": 2,
+      "goalsAgainst": 0,
+      "shotsFor": 4,
+      "shotsAgainst": 5,
+      "shotsOnTargetFor": 2,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 40,
+      "commands": 324,
+      "averageLatencyMs": 1347,
+      "commandCounts": {
+        "PRESS_BALL": 312,
+        "CLEAR_OVERRIDE": 12
+      },
+      "roleLatencyMs": {
+        "gk": 1103,
+        "def": 1290,
+        "mid": 1362,
+        "fwd1": 965,
+        "fwd2": 1279
+      },
+      "reportedRoleSuccessPercent": 100,
+      "opponentCommands": 21,
+      "limitations": [
+        "Same M3 configuration as live-04, different uncontrolled opponent.",
+        "RESET remained absent, but 96% of commands were PRESS_BALL.",
+        "No explicit PASS/SHOOT/GK_DISTRIBUTE commands; built-in engine contributed to shots/goals.",
+        "No controlled conclusion that M3 is stronger than M1."
+      ]
     }
   ]
 }
