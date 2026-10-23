@@ -176,3 +176,17 @@ Official references support testing the hypothesis but do not prove a latency fi
 First manually initiated post-verification M4 match beat DarkHorse_AI2:0 at home:370commands,869ms, shots5:4, on target2:0, possession35%. Counts PRESS_BALL182,MOVE_TO107,RESET57,CLEAR_OVERRIDE16,INTERCEPT6,FOLLOW_PLAYER1,MARK1. The57RESET commands violate the saved prompt instruction. Possible live overrides/session reuse or instruction non-adherence remain hypotheses; no cause is verified. The source prompt still positively lists RESET in its available-command schema, then prohibits it in an appended coordination rule. This conflict is a concrete prompt defect worth removing in a later separate candidate, but do not assert it caused the report.
 
 An unchanged-setup away match appeared in history against EPAM Spor:0:1 loss, shots6:4, on target0:1, possession49%. Only7CLEAR_OVERRIDE commands at3ms, opponent7CLEAR at1ms. Manual initiation was not verified. This is not an LLM latency result or proof the live game used the saved policy. M4 has one verified manual win plus this background/uncertain-initiation loss; context10 is not established as a fix or stronger setup. Keep the controls separate and collect another manually initiated match before changing configuration.
+
+## Next candidate: schema cleanup and possession readiness
+
+`A0-M5-schema-clean` is prepared, not installed: remove RESET from the positive command description/enum while retaining the explicit ban. All other prompt text and planned M4 settings are identical.
+
+Before deployment, seven Playground probes used the M5 FWD2 prompt as an unsaved override with separate stopped/new sessions. Synthetic states derive from the observed kickoff structure, adding explicit possession fields. Nova2Lite chose SHOOT for HOME(645ms) and MOVE_TO for teammate possession(902ms), but chose MOVE_TO instead of SHOOT in both AWAY samples(600/627ms). Haiku4.5 chose the expected category in all three cases: AWAY SHOOT1347ms, HOME SHOOT1393ms, teammate MOVE_TO1329ms. Exact outputs and limits are in `possession-probes.json`; cases are in fixtures/. This is evidence for a future limited Haiku forward trial, not proof of superior match strength. No live Harness model was changed during these probes.
+
+## Live15 M4: 3:0 No Context FC
+
+Second verified manually initiated M4 match won3:0: shots6:3,on target3:0,possession20%,400commands1124ms. MOVE_TO249,PRESS_BALL109,CLEAR_OVERRIDE20,SHOOT16,INTERCEPT4,GK_DISTRIBUTE1,MARK1;RESET0. Role latencies1044/1408/1289/992/1306ms,reportedSuccess100%. Both manual M4 games won, but RESET appeared in one and not the other. Context size remains an unproven cause. An uncertain-initiation background M4-era loss is recorded separately.
+
+M5 schema-clean prompts were installed as GK13/DEF19/MID15/FWD1 14/FWD2 13. All five immutable saved views matched the complete normalized source prompt, Nova2Lite, inferenceunset and context10. This removes the positive RESET enum/definition without changing role tactics or model. Post-reset Fitness and live results are pending.
+
+**M5 passed post-reset UI Fitness5/5**, five commands100%active and displayed0ms. Treat this as the UI gate, not a speed measurement or proof every role generated anew. An incoming BOYS753 match appeared during the update; no new manual match was launched over it. Its exact versions at kickoff are unverified, so keep it outside the clean M5 cohort.

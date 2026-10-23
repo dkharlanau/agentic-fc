@@ -1,6 +1,6 @@
 # Agentic FC — No Human in the Loop
 
-## Latest: H2 research and complete prompts (2026-10-23)
+## Latest: live Harness experiments and setup history (2026-10-23)
 
 **[Начать с полного H2-разбора на русском](research/v2/README.ru.md)** — tactics, model settings, advanced features, evidence corrections and rollout plan.
 
@@ -8,7 +8,7 @@
 
 **Live experiment history (2026-10-23):** [A0/H2.1/H3 prompts, setup hashes and Fitness investigation](research/v3/README.ru.md). A0-M1 reached verified 5/5 Fitness after scrimmage-session reset and a MID tool restriction. A winning strategy remains to be established by live match evidence.
 
-**Current trial configuration:** [M4 prompts](research/v3/context10), Nova2Lite, no tools, sliding history10 and GK UI-label cleanup. Saved configuration and post-reset UI Fitness5/5 verified; comparative live evaluation continues. See [setup history](research/v3/setups.json) and [rendered report numbers](research/v3/matches.json).
+**Current trial configuration:** [M5 prompts](research/v3/schema-clean), Nova2Lite, no tools, sliding history10. Removes the conflicting positive RESET command definition while retaining its prohibition. Saved configuration and post-reset UI Fitness5/5 verified; comparative live evaluation continues. [Possession readiness probes](research/v3/possession-probes.json) document a separate Nova/Haiku comparison on synthetic inputs. See [setup history](research/v3/setups.json) and [rendered report numbers](research/v3/matches.json).
 
 H2 lab: 20 named checks, 2,000 mirrored scene pairs, 20,000 validated commands, 10,000 mirror checks and 10,000 player-order checks. These are **synthetic policy tests, not AWS matches or LLM benchmarks**. No win rate, live model latency or tournament improvement was measured. H2 and later prompt bundles were subsequently trialled in AWS; see the dated live investigation below.
 
@@ -24,7 +24,7 @@ python research/v2/decision_lab.py
 
 Research, tactics, prompts and a testable football policy for the **AWS Agentic Football Cup** (5v5).
 
-> **Status:** A live team of five **AgentCore Harness** agents exists independently in the AWS workshop. This repository contains **offline policy prototypes, research and prompt variants**. It has **not** been deployed to AgentCore; tests here do **not** prove live match performance.
+> **Status:** A live team of five **AgentCore Harness** agents is being operated in the AWS workshop. Prompt bundles and settings in research/v3 have been installed and their observed live reports recorded. Python policy prototypes and laboratories remain offline; their tests do **not** prove live match performance.
 
 ## Historical v1 material
 
@@ -76,7 +76,7 @@ python -m agentic_fc.demo
 
 ## Safety and scope
 
-Public repo. **Never commit team codes, AWS credentials, private game traces, account-specific ARN/account IDs or personal information.** Use synthetic fixtures. Verify IAM scope and workshop restrictions before deployment. Avoid running BOTH legacy and CDK Gateway deployers; they create separate resources. The live team remains unchanged by these GitHub commits.
+Public repo. **Never commit team codes, AWS credentials, private game traces, account-specific ARN/account IDs or personal information.** Use synthetic fixtures. Verify IAM scope and workshop restrictions before deployment. Avoid running BOTH legacy and CDK Gateway deployers; they create separate resources. Publishing this history does not deploy the offline Python controller; AWS prompt/configuration changes are recorded separately in research/v3.
 
 ## Reference implementation
 

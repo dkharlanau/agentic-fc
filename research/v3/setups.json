@@ -244,6 +244,55 @@
         "reportedAverageLatencyMs": 0,
         "limitation": "UI gate verified after session-stop/reload procedure; new generation on each role and real inference latency are not established."
       }
+    },
+    {
+      "promptDirectory": "schema-clean",
+      "model": "global.amazon.nova-2-lite-v1:0",
+      "inferenceConfig": null,
+      "allowedToolsByRole": {
+        "gk": [],
+        "def": [],
+        "mid": [],
+        "fwd1": [],
+        "fwd2": []
+      },
+      "memory": [],
+      "gateway": null,
+      "formation": "2-0-2",
+      "promptSha256": {
+        "def": "86426b2320f5e40e444ebe553b0827b3707ff6f5cd22599478f71e5391c838d9",
+        "fwd1": "ee4c92203e6fcbc86d14329913933ba68d8cd2092947bebd2c66d5ed14c17b15",
+        "fwd2": "03ed589df3ebe560294ac54966bfc27156aa27391c8079dae5aab93ba096a13f",
+        "gk": "43a75e8e85225b14879c7c9b839a7f8b3e5d056d8a841a1a4019b8fc8263cd36",
+        "mid": "7b05fe872d47c532c374390642006759924d84048a61577bf4f3a9bba400c729"
+      },
+      "id": "A0-M5-schema-clean",
+      "parent": "A0-M4-context10",
+      "status": "verified_post_reset_ui_fitness_5_of_5",
+      "truncation": {
+        "strategy": "sliding_window",
+        "messagesCount": 10
+      },
+      "hypothesis": "Remove conflicting RESET permission before comparing live adherence.",
+      "changedFactors": [
+        "Remove positive RESET command definition and enum entry; retain explicit prohibition."
+      ],
+      "comparisonLimitation": "Single prompt cleanup relative to M4; live outcomes remain uncontrolled.",
+      "verification": {
+        "allFiveWindows": 10,
+        "model": "global.amazon.nova-2-lite-v1:0",
+        "inferenceConfigsUnset": true,
+        "normalizedRenderedPromptMatchesSource": true,
+        "promptByteEqualityNotClaimed": true
+      },
+      "fitness": {
+        "passedPositions": 5,
+        "totalPositions": 5,
+        "commands": 5,
+        "activePercent": 100,
+        "reportedAverageLatencyMs": 0,
+        "limitation": "UI gate verified after session-stop/reload procedure; new generation on each role and real inference latency are not established."
+      }
     }
   ]
 }

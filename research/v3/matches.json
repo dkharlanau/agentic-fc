@@ -501,6 +501,47 @@
       ],
       "initiation": "appeared in history; manual initiation not verified",
       "evidenceCapturedAtUTC": "2026-10-23T21:38:40.361991+00:00"
+    },
+    {
+      "id": "live-15",
+      "setup": "A0-M4-context10",
+      "opponent": "No Context FC",
+      "side": "home",
+      "goalsFor": 3,
+      "goalsAgainst": 0,
+      "shotsFor": 6,
+      "shotsAgainst": 3,
+      "shotsOnTargetFor": 3,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 20,
+      "commands": 400,
+      "averageLatencyMs": 1124,
+      "commandCounts": {
+        "MOVE_TO": 249,
+        "PRESS_BALL": 109,
+        "CLEAR_OVERRIDE": 20,
+        "SHOOT": 16,
+        "INTERCEPT": 4,
+        "GK_DISTRIBUTE": 1,
+        "MARK": 1
+      },
+      "opponentCommands": 18,
+      "opponentAverageLatencyMs": 2,
+      "roleLatencyMs": {
+        "gk": 1044,
+        "def": 1408,
+        "mid": 1289,
+        "fwd1": 992,
+        "fwd2": 1306
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy."
+      ],
+      "initiation": "manual after verified M4 gate; configuration unchanged during game",
+      "evidenceCapturedAtUTC": "2026-10-23T21:47:58.170219+00:00"
     }
   ],
   "recordingOrder": "Local evidence-capture order; background matches may be appended retrospectively."
