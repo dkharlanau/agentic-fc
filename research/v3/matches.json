@@ -305,6 +305,38 @@
         "Reported Success and issued commands do not prove useful application of every action.",
         "Uncontrolled live opponent; one game does not establish a stronger policy."
       ]
+    },
+    {
+      "id": "live-10",
+      "setup": "A0-M3-no-reset-no-tools",
+      "opponent": "No Context FC",
+      "side": "home",
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "shotsFor": 4,
+      "shotsAgainst": 5,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 36,
+      "commands": 0,
+      "averageLatencyMs": 14263,
+      "commandCounts": {},
+      "opponentCommands": 0,
+      "opponentAverageLatencyMs": 2,
+      "roleLatencyMs": {
+        "gk": 11142,
+        "def": 18927,
+        "mid": 18937,
+        "fwd1": 11136,
+        "fwd2": 11172
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Zero reported commands and14.263s do not demonstrate model policy execution despite the1:0 win."
+      ]
     }
   ]
 }

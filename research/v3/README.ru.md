@@ -148,3 +148,9 @@ Terminology clarification: a “fresh Fitness” in these operational notes mean
 M3 beat Agentic United1 again,2:0 (earlier same-name opponent1:0). Shots12:3, on target2:0, possession41%:59%. Its370commands averaged433ms: MOVE_TO124,MARK103,INTERCEPT71,PRESS_BALL29,CLEAR_OVERRIDE16,PASS10,SHOOT9,GK_DISTRIBUTE8; RESET0. Role latencies440/431/447/453/439ms, reported Success100%. Opponent8CLEAR commands at2ms. M3 now5wins/1loss in6uncontrolled games, without configuration changes. Different runtime/report regimes remain unexplained; keep the working setup and collect the series rather than force an unsupported context change.
 
 The latest verified leaderboard row is rank17,36points,18played/12wins/6losses, goals29:16(+13). Team summary is20played/13wins/7losses/65%. Both sources are retained in `standings.json`; their two-match discrepancy is not explained.
+
+## Live-10: win with zero reported commands, context experiment justified
+
+Unchanged M3 beat No Context FC1:0 after extra time, but the report recorded0commands and14263ms average. Shots4:5, on target1:0, possession36%:64%. Role latencies11142/18927/18937/11136/11172ms, reported Success100%. The opponent also had0commands at2ms. This win cannot validate the model policy. M3's observed series is6wins/1loss in7games, but runtime/report regimes remain highly variable.
+
+The new zero-command/high-latency result changes the next action: test **A0-M4-context10**, retaining M3's model, prompts, tools, inference and formation while setting the sliding context window to10messages. The actual pre-change value will be recorded from each role rather than assumed. Long context is a hypothesis, not an identified cause. Preserve M3 as the control and inspect the saved configuration and post-reset Fitness before live comparison.
