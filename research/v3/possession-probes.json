@@ -27,7 +27,8 @@
       "expectedCommandCategories": [
         "SHOOT"
       ],
-      "categoryPassed": true
+      "categoryPassed": true,
+      "formatPassed": true
     },
     {
       "modelLabel": "Nova 2 Lite",
@@ -50,7 +51,8 @@
       "expectedCommandCategories": [
         "SHOOT"
       ],
-      "categoryPassed": false
+      "categoryPassed": false,
+      "formatPassed": true
     },
     {
       "modelLabel": "Nova 2 Lite",
@@ -73,7 +75,8 @@
       "expectedCommandCategories": [
         "MOVE_TO"
       ],
-      "categoryPassed": true
+      "categoryPassed": true,
+      "formatPassed": true
     },
     {
       "modelLabel": "Nova 2 Lite",
@@ -96,7 +99,8 @@
       "expectedCommandCategories": [
         "SHOOT"
       ],
-      "categoryPassed": false
+      "categoryPassed": false,
+      "formatPassed": true
     },
     {
       "modelLabel": "Claude Haiku 4.5",
@@ -118,7 +122,8 @@
       "expectedCommandCategories": [
         "SHOOT"
       ],
-      "categoryPassed": true
+      "categoryPassed": true,
+      "formatPassed": true
     },
     {
       "modelLabel": "Claude Haiku 4.5",
@@ -140,7 +145,8 @@
       "expectedCommandCategories": [
         "SHOOT"
       ],
-      "categoryPassed": true
+      "categoryPassed": true,
+      "formatPassed": true
     },
     {
       "modelLabel": "Claude Haiku 4.5",
@@ -163,13 +169,16 @@
       "expectedCommandCategories": [
         "MOVE_TO"
       ],
-      "categoryPassed": true
+      "categoryPassed": true,
+      "formatPassed": true
     }
   ],
   "limitations": [
     "Small, unequal sample counts: Nova home/support1 each, away2; Haiku1 each. Not a model ranking or proof of match advantage.",
     "Expected command categories are a readiness heuristic on synthetic states with added explicit possession fields. Live input availability is not verified.",
     "Reported Playground latency is not end-to-end live action latency.",
-    "Prompt and model overrides were used in Playground only, not saved to deployed Harness configuration."
-  ]
+    "Prompt and model overrides were used in Playground only, not saved to deployed Harness configuration.",
+    "MOVE_TO can be legal under the role policy; missing the expected SHOOT category is not proof of state-parsing failure. Separate format validity, heuristic category adherence and match value."
+  ],
+  "expectedCategoryIsHeuristic": true
 }

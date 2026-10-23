@@ -651,6 +651,48 @@
       ],
       "initiation": "manual after verified M5 gate; unchanged configuration",
       "evidenceCapturedAtUTC": "2026-10-23T22:03:46.755355+00:00"
+    },
+    {
+      "id": "live-19",
+      "setup": "A0-M6-haiku-fwd2",
+      "opponent": "BlackEagle",
+      "side": "home",
+      "goalsFor": 0,
+      "goalsAgainst": 1,
+      "shotsFor": 6,
+      "shotsAgainst": 4,
+      "shotsOnTargetFor": 0,
+      "shotsOnTargetAgainst": 1,
+      "possessionPercent": 55,
+      "commands": 335,
+      "averageLatencyMs": 81,
+      "commandCounts": {
+        "MOVE_TO": 285,
+        "INTERCEPT": 24,
+        "CLEAR_OVERRIDE": 12,
+        "PASS": 8,
+        "GK_DISTRIBUTE": 4,
+        "PRESS_BALL": 1,
+        "SHOOT": 1
+      },
+      "opponentCommands": 4,
+      "opponentAverageLatencyMs": 3,
+      "roleLatencyMs": {
+        "gk": 86,
+        "def": 102,
+        "mid": 86,
+        "fwd1": 79,
+        "fwd2": 88
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "81ms aggregate and88ms FWD2 report do not establish per-tick Haiku inference. One uncontrolled loss does not establish a model effect."
+      ],
+      "initiation": "manual after verified M6 configuration, saved native canary and UI Fitness5/5",
+      "evidenceCapturedAtUTC": "2026-10-23T22:19:18.368341+00:00"
     }
   ],
   "recordingOrder": "Local evidence-capture order; background matches may be appended retrospectively."
