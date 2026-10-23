@@ -84,6 +84,43 @@
         "AI Overview contains causal claims not established by the report.",
         "No explicit PASS/SHOOT/GK_DISTRIBUTE commands despite goals; built-in engine behaviour remains material."
       ]
+    },
+    {
+      "id": "live-04",
+      "setup": "A0-M3-no-reset-no-tools",
+      "opponent": "Matrix_7",
+      "side": "home",
+      "goalsFor": 0,
+      "goalsAgainst": 1,
+      "shotsFor": 4,
+      "shotsAgainst": 6,
+      "shotsOnTargetFor": 0,
+      "shotsOnTargetAgainst": 1,
+      "possessionPercent": 43,
+      "commands": 115,
+      "averageLatencyMs": 3042,
+      "commandCounts": {
+        "PRESS_BALL": 64,
+        "MOVE_TO": 25,
+        "INTERCEPT": 14,
+        "MARK": 11,
+        "FOLLOW_PLAYER": 1
+      },
+      "roleLatencyMs": {
+        "gk": 94,
+        "def": 2908,
+        "mid": 2837,
+        "fwd1": 3330,
+        "fwd2": 5066
+      },
+      "reportedRoleSuccessPercent": 100,
+      "opponentCommands": 0,
+      "limitations": [
+        "RESET disappeared, but this uncontrolled match did not establish stronger play.",
+        "Latency regressed relative to live-03; cause not isolated.",
+        "No explicit PASS or SHOOT commands; four engine shots, none on target.",
+        "Opponent won with zero reported commands; built-in engine remained active."
+      ]
     }
   ]
 }
