@@ -693,6 +693,78 @@
       ],
       "initiation": "manual after verified M6 configuration, saved native canary and UI Fitness5/5",
       "evidenceCapturedAtUTC": "2026-10-23T22:19:18.368341+00:00"
+    },
+    {
+      "id": "live-20",
+      "setup": "A0-M6-haiku-fwd2",
+      "opponent": "AWSenal",
+      "side": "home",
+      "goalsFor": 3,
+      "goalsAgainst": 1,
+      "shotsFor": 7,
+      "shotsAgainst": 4,
+      "shotsOnTargetFor": 3,
+      "shotsOnTargetAgainst": 1,
+      "possessionPercent": 31,
+      "commands": 16,
+      "averageLatencyMs": 1,
+      "commandCounts": {
+        "CLEAR_OVERRIDE": 16
+      },
+      "opponentCommands": 23,
+      "opponentAverageLatencyMs": 2,
+      "roleLatencyMs": {
+        "gk": 1,
+        "def": 1,
+        "mid": 1,
+        "fwd1": 1,
+        "fwd2": 1
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "All16commands areCLEAR_OVERRIDE at1ms; win does not demonstrate Haiku inference or model improvement."
+      ],
+      "initiation": "manual unchanged M6",
+      "evidenceCapturedAtUTC": "2026-10-23T22:24:42.383445+00:00"
+    },
+    {
+      "id": "live-21",
+      "setup": "A0-M6-haiku-fwd2",
+      "opponent": "Amber Arcs 2",
+      "side": "home",
+      "goalsFor": 1,
+      "goalsAgainst": 3,
+      "shotsFor": 3,
+      "shotsAgainst": 6,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 3,
+      "possessionPercent": 36,
+      "commands": 16,
+      "averageLatencyMs": 2,
+      "commandCounts": {
+        "CLEAR_OVERRIDE": 16
+      },
+      "opponentCommands": 17,
+      "opponentAverageLatencyMs": 3,
+      "roleLatencyMs": {
+        "gk": 2,
+        "def": 2,
+        "mid": 2,
+        "fwd1": 2,
+        "fwd2": 1
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "All16commands areCLEAR_OVERRIDE at2ms; loss does not establish a Haiku model effect."
+      ],
+      "initiation": "manual unchanged M6",
+      "evidenceCapturedAtUTC": "2026-10-23T22:32:38.108766+00:00"
     }
   ],
   "recordingOrder": "Local evidence-capture order; background matches may be appended retrospectively."

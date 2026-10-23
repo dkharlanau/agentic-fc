@@ -222,3 +222,19 @@ M6 lost its first manual match0:1. Shots6:4,on target0:1,possession55%.335comman
 Two additional Playground-only prompt probes used Nova on the same synthetic AWAY-shot case while M6 remained saved: existing compact/fwd2.txt returned an invalid empty[](1361input/2output,621ms). identity/fwd2.txt adds explicit wrapper decoding/team/player identification to the M5 source and returned a valid MOVE_TO(0,20,false),2030input/40output,687ms. Both sessions were stopped; neither variant was installed. See prompt-readiness-probes.json for exact data.
 
 Evaluation clarification: earlier Nova AWAY MOVE_TO outputs are valid commands. They miss our expected SHOOT category, which is a tactical readiness heuristic, and do not independently prove incorrect identity/possession parsing. Haiku's category result motivated a bounded trial, not a model-strength ranking. The compact empty[] is a confirmed format failure. Keep these evidence classes separate.
+
+## Live20 unchanged M6:3:1 AWSenal
+
+Second M6 manual game won3:1:shots7:4,on target3:1,possession31%,16CLEAR_OVERRIDE commands1ms;all role latencies1ms,reportedSuccess100%. Earlier M3 also beat AWSenal with a low-millisecond CLEAR-only report. This is not proof of Haiku inference or a model-strength gain. The first two M6 games are1win/1loss; preserve the working configuration for further games rather than force an unsupported model conclusion. A third manual M6 was requested after the match finished.
+
+Formation selector was opened and closed with Done at the same2-0-2 value. It displayed two forwards and two defenders as starting shape; no formation was changed. Other variants require cycling the selector and are not yet enumerated. A1-1-2 trial remains a future hypothesis, not an installed setup.
+
+## Live21 unchanged M6:1:3 Amber Arcs2; scheduling limit verified
+
+Third M6 manual game lost1:3:shots3:6,on target1:3,possession36%,16CLEAR_OVERRIDE commands2ms;role2/2/2/2/1ms,reportedSuccess100%. M6's three clean manual games are1win/2losses, with mixed report regimes. No Haiku strength effect is established.
+
+A normal Find opponent click in a second portal tab, while the first game was visiblyLIVE, was rejected by the server because a team already had an active match or pending invitation. The rejection was cancelled; no second game was created. Keep serial scheduling and do not repeat or bypass this constraint. The enabled lobby button alone does not prove concurrency is allowed.
+
+Next candidate A0-M7-formation121 changes only starting formation relative to M6, from2-0-2 to1-2-1. Hypothesis: more central starting presence and an earlier passing link. The models, prompts and Harness versions remain identical to M6. Formation selector was cycled to1-2-1 and Done; profile showed1-2-1 afterward. Reload verification and UI Fitness are pending. Intermediate animated selector labels are not a complete formation catalog.
+
+**M7 formation1-2-1 persisted after profile reload and passed UI Fitness5/5**:5commands100%active0ms,portal fourNova/oneHaiku labels verified. No Harness configuration changed, so this formation-only check did not repeat the earlier scrimmage-session reset. It is a UI gate, not proof of new model generation. First manual M7 live match was requested after these checks.
