@@ -244,3 +244,7 @@ Next candidate A0-M7-formation121 changes only starting formation relative to M6
 Find opponent now exposed a READY/NOTREADY/INMATCH list with Surprise me. Agentic United1 was enabled and selected; the actual LIVE header confirmed the same opponent. A clicked Find can be an intermediate selector, not a started game.
 
 First M7 match won2:0:shots4:3,on target2:0,possession55%,370commands425ms. MOVE_TO162,MARK69,PRESS_BALL68,INTERCEPT29,PASS19,CLEAR_OVERRIDE13,SHOOT8,GK_DISTRIBUTE2;RESET0. Role latencies459/448/435/447/438ms,reportedSuccess100%. This is a role-diverse issued-command report and a useful repeat-opponent reference. M3 previously beat the same name1:0and2:0, but its other settings and date differ; no isolated formation-strength conclusion is established. FWD2's438ms report does not prove per-tick Haiku inference. Keep M7 unchanged for repeat controls.
+
+After live22, another normal Find was rejected. On returning to the lobby, an active Goalpost Shifters banner was present; WATCH opened an AWAY live game. The request actor is unverified, so do not call this a successfully selected repeat opponent. Saved M7 configuration stayed unchanged. Inspect the same viewer rather than retrying Find.
+
+Fresh leaderboard snapshot:rank13,63points,31played21wins10losses,goals47:25(+22). Summary19played14wins5losses74%, while history caps20 and includes aLIVE entry. That is consistent with recent/capped-view scope, but the exact implementation remains unverified; keep the sources separate.
