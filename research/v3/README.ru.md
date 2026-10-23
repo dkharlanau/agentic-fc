@@ -92,3 +92,7 @@ The 64 team-wide RESET commands are a concrete coordination concern: they can un
 ## Same-input model probes
 
 In MID Harness Playground with tools disabled and A0 FWD1 system prompt, the observed kickoff wrapper was tested once per model in a new session. Nova 2 Lite: 670 ms; Claude Haiku 4.5: 1382 ms; Claude Sonnet 4.6: 1226 ms. All returned valid player-3 MOVE_TO JSON. Targets and tokenization differed. See `model-probes.json` for exact outputs and limits. These single probes do not rank model strength or establish a latency distribution; Nova remains the live control for now.
+
+The no-RESET candidate was installed on all five roles and all five observed scrimmage sessions were stopped before a fresh test. It returned **1/5** (MID PASS). GK showed AGENT_RUNTIME_ERROR HTTP502; DEF showed NO_PARSE; detailed FWD failure codes were not captured. No live match was initiated on this failing candidate. Next **A0-M3-no-reset-no-tools** removes tool access for the remaining four roles while retaining those prompts/model/unset inference/formation. This is a separate candidate, not a clean no-RESET-only live comparison.
+
+**A0-M3-no-reset-no-tools passed 5/5 Fitness** after all five observed scrimmage sessions were stopped and the portal reloaded. All five roles now use no-reset/ prompts, Nova 2 Lite, inference unset, tools=[], no Memory/Gateway, formation2-0-2. Reported5commands100%active; displayed0ms is not an LLM speed claim. The next initiated live match uses this configuration. Its test gate passes; match quality is pending.
