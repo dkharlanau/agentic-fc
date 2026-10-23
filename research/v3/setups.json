@@ -63,6 +63,46 @@
         "gk": "34168702cfb0a71597cbb00f21b7a3d9299571868b9447a7597819b65b9dafd7",
         "mid": "38f8c0cdaf65d0b0e2f78aa0062a9c4a0928c8bc17ac203f708cd9a466e14ea2"
       }
+    },
+    {
+      "id": "A0-M1",
+      "promptDirectory": "a0",
+      "model": "global.amazon.nova-2-lite-v1:0",
+      "inferenceConfig": null,
+      "allowedToolsByRole": {
+        "gk": [
+          "*"
+        ],
+        "def": [
+          "*"
+        ],
+        "mid": [],
+        "fwd1": [
+          "*"
+        ],
+        "fwd2": [
+          "*"
+        ]
+      },
+      "memory": [],
+      "gateway": null,
+      "formation": "2-0-2",
+      "status": "verified_fitness_5_of_5",
+      "fitness": {
+        "passedPositions": 5,
+        "totalPositions": 5,
+        "commands": 5,
+        "activePercent": 100,
+        "reportedAverageLatencyMs": 0,
+        "latencyLimitations": "Portal Fitness value is not a real model-latency benchmark."
+      },
+      "promptSha256": {
+        "def": "f5d051f210c1d63c844b470f642f5e10713a8321d9954ab507f9e40752e04ace",
+        "fwd1": "6c9c55f9e288f9375fe54be45212301a49c5e4a21e77437d3ddcb533ad385f2b",
+        "fwd2": "316935d5f77602eefbf829a288519d08500a059bdbd9c13cb60bd201d838d5b7",
+        "gk": "c6c2ce3e11cd1d61c8873702db02b1fdcaba2f951cf5689f33b9e1cf512effc7",
+        "mid": "3f9972eb2c8836055745d1d9bfbd29d460794091cb190fa64d1ccf8e531e6d21"
+      }
     }
   ]
 }

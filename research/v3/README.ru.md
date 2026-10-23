@@ -68,3 +68,15 @@ The Harness dashboard route returned a permissions error, but the actual managed
 The observed DEF scrimmage session was stopped with the Console's ordinary “Stop current session and create new session” action; success was confirmed. Fitness still failed. Next control: reload the Player Portal and rerun Fitness from its fresh page state. No endpoint permissions or IAM policies were changed.
 
 After restoring DEF A0, stopping its observed scrimmage session and reloading the portal, Fitness improved to **3/5**, with DEF now PASS. This is the first verified change in the Fitness outcome. The exact contribution of session termination versus fresh portal state is not isolated yet. MID and FWD1 scrimmage session identifiers were separately observed in Runtime OTEL tables and stopped through the same ordinary Console operation; their results are pending.
+
+Stopping the separately observed MID/FWD1 scrimmage sessions, reloading the portal and rerunning Fitness yielded **4/5**: FWD1 now PASS, MID now **NO_PARSE** instead of the previous stale 0/1-active-command result. Its new tip says it responded once but the response was not valid JSON with a commandType field. This is materially different evidence. Next isolated change: retain MID's A0 prompt/model/unset inference, remove its allowed-tools wildcard, stop that Fitness session and rerun from a reloaded portal. Earlier prompt/model/tool trials that reused the old scrimmage session cannot establish that those candidates fail on a fresh invocation.
+
+## Verified Fitness recovery: A0-M1 — 5/5
+
+After retaining MID's A0 prompt/model/unset inference, removing only MID's tool wildcard, stopping its observed scrimmage session and reloading the portal, Fitness displayed **All agents passed. Ready to play.** All five positions PASS; Practice and Find opponent enabled. It reported 5 commands and 100% active. Its displayed 0 ms is not evidence of real model latency.
+
+The reproducible working setup is **A0-M1** in `setups.json`: all five A0 prompts, Nova 2 Lite, inference config unset; Allowed tools `*` for GK/DEF/FWD1/FWD2, empty list for MID; no Memory/Gateway; formation 2-0-2. This is a verified connectivity/format/activity gate, not a proven winning policy.
+
+Recovery required eliminating stale/repeated scrimmage-session effects before evaluating current configurations, then addressing a fresh MID NO_PARSE result. Session reset plus portal reload changed DEF/FWD1 results, and restricting MID tools was followed by its PASS. The exact internal cache mechanism and the individual contribution of reset versus reload are not proven. Earlier same-session candidate failures must not be treated as fresh model comparisons.
+
+The first user-initiated live match after 5/5 was launched via Find opponent. Numeric match results will be appended after View Report.

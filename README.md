@@ -6,7 +6,7 @@
 
 **[Five complete H2 Harness prompts](research/v2/prompts)** · **[Harness settings](research/v2/harness-settings.json)** · **[Executed scenario results](research/v2/results/scenario_results.json)** · **[Reproducible laboratory](research/v2/decision_lab.py)**
 
-**Live experiment history (2026-10-23):** [A0/H2.1/H3 prompts, setup hashes and Fitness investigation](research/v3/README.ru.md). Full restored A0 still returned 2/5 Fitness; recovery and a winning strategy are not yet established.
+**Live experiment history (2026-10-23):** [A0/H2.1/H3 prompts, setup hashes and Fitness investigation](research/v3/README.ru.md). A0-M1 reached verified 5/5 Fitness after scrimmage-session reset and a MID tool restriction. A winning strategy remains to be established by live match evidence.
 
 H2 lab: 20 named checks, 2,000 mirrored scene pairs, 20,000 validated commands, 10,000 mirror checks and 10,000 player-order checks. These are **synthetic policy tests, not AWS matches or LLM benchmarks**. No win rate, live model latency or tournament improvement was measured. H2 and later prompt bundles were subsequently trialled in AWS; see the dated live investigation below.
 
