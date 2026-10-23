@@ -80,3 +80,15 @@ The reproducible working setup is **A0-M1** in `setups.json`: all five A0 prompt
 Recovery required eliminating stale/repeated scrimmage-session effects before evaluating current configurations, then addressing a fresh MID NO_PARSE result. Session reset plus portal reload changed DEF/FWD1 results, and restricting MID tools was followed by its PASS. The exact internal cache mechanism and the individual contribution of reset versus reload are not proven. Earlier same-session candidate failures must not be treated as fresh model comparisons.
 
 The first user-initiated live match after 5/5 was launched via Find opponent. Numeric match results will be appended after View Report.
+
+## Live-03 after recovery: A0-M1 2:1 DarkHorse_AI
+
+First user-initiated live match after 5/5 ended in a 2:1 home win. Shots 6:5, on target 2:1, possession 33%:67%. Our 327 commands averaged 872 ms; per-role GK/DEF/MID/FWD1/FWD2: 601/599/796/780/1202 ms. Reported Success 100% for each role is not proof every action was useful or applied.
+
+Commands: PRESS_BALL 198, RESET 64, MOVE_TO 27, CLEAR_OVERRIDE 21, INTERCEPT 14, MARK 3. No explicit PASS, SHOOT or GK_DISTRIBUTE despite two goals. The engine's default behaviour remains material. AI Overview's causal claims are unverified.
+
+The 64 team-wide RESET commands are a concrete coordination concern: they can undo other players' overrides. Next isolated candidate **A0-M2-no-reset** appends a RESET prohibition to all five A0 prompts, retains Nova/unset inference/tools/formation, and uses player-local CLEAR_OVERRIDE when releasing control. This candidate must pass a genuinely fresh Fitness invocation before live comparison.
+
+## Same-input model probes
+
+In MID Harness Playground with tools disabled and A0 FWD1 system prompt, the observed kickoff wrapper was tested once per model in a new session. Nova 2 Lite: 670 ms; Claude Haiku 4.5: 1382 ms; Claude Sonnet 4.6: 1226 ms. All returned valid player-3 MOVE_TO JSON. Targets and tokenization differed. See `model-probes.json` for exact outputs and limits. These single probes do not rank model strength or establish a latency distribution; Nova remains the live control for now.

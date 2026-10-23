@@ -103,6 +103,39 @@
         "gk": "c6c2ce3e11cd1d61c8873702db02b1fdcaba2f951cf5689f33b9e1cf512effc7",
         "mid": "3f9972eb2c8836055745d1d9bfbd29d460794091cb190fa64d1ccf8e531e6d21"
       }
+    },
+    {
+      "id": "A0-M2-no-reset",
+      "promptDirectory": "no-reset",
+      "model": "global.amazon.nova-2-lite-v1:0",
+      "inferenceConfig": null,
+      "allowedToolsByRole": {
+        "gk": [
+          "*"
+        ],
+        "def": [
+          "*"
+        ],
+        "mid": [],
+        "fwd1": [
+          "*"
+        ],
+        "fwd2": [
+          "*"
+        ]
+      },
+      "memory": [],
+      "gateway": null,
+      "formation": "2-0-2",
+      "status": "candidate_not_yet_installed",
+      "singleFactor": "Append prohibition on team-wide RESET; retain all other A0-M1 settings.",
+      "promptSha256": {
+        "def": "bcc6d48b45c66f0536b0dc29f2b921d588ca626773e0c289b57043e381b315cd",
+        "fwd1": "17eb6139aeddb48886a4313a9687c8cec82fb838762ce64202cb3f7de0ec4337",
+        "fwd2": "ab845ad731540fcc64ad90df2053935d39d46cac3fabc937f6de6644198ca69d",
+        "gk": "44b6d73ce3946c7ae2b2b02b6070ca1b0b062739a0b41afc56665f16939881b3",
+        "mid": "24dc79b9dc88ba837726a6ef81e2a084c524734a3b0c0b0148af602bc62e4271"
+      }
     }
   ]
 }

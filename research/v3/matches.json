@@ -48,6 +48,42 @@
         "Opponent reported zero commands; built-in engine still played.",
         "Victory does not establish a stronger policy; latency substantially worsened."
       ]
+    },
+    {
+      "id": "live-03",
+      "setup": "A0-M1",
+      "opponent": "DarkHorse_AI",
+      "side": "home",
+      "goalsFor": 2,
+      "goalsAgainst": 1,
+      "shotsFor": 6,
+      "shotsAgainst": 5,
+      "shotsOnTargetFor": 2,
+      "shotsOnTargetAgainst": 1,
+      "possessionPercent": 33,
+      "commands": 327,
+      "averageLatencyMs": 872,
+      "commandCounts": {
+        "PRESS_BALL": 198,
+        "RESET": 64,
+        "MOVE_TO": 27,
+        "CLEAR_OVERRIDE": 21,
+        "INTERCEPT": 14,
+        "MARK": 3
+      },
+      "roleLatencyMs": {
+        "gk": 601,
+        "def": 599,
+        "mid": 796,
+        "fwd1": 780,
+        "fwd2": 1202
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "One uncontrolled live opponent; does not establish a winning policy.",
+        "AI Overview contains causal claims not established by the report.",
+        "No explicit PASS/SHOOT/GK_DISTRIBUTE commands despite goals; built-in engine behaviour remains material."
+      ]
     }
   ]
 }

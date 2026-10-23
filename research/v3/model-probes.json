@@ -1,0 +1,70 @@
+{
+  "kind": "single observed-input Playground probes; not a benchmark of match strength",
+  "input": "fixtures/observed-kickoff.json:harnessUserMessage",
+  "systemPrompt": "a0/fwd1.txt",
+  "tools": [],
+  "inferenceConfig": null,
+  "samplesPerModel": 1,
+  "results": [
+    {
+      "modelLabel": "Nova 2 Lite",
+      "latencyMs": 670,
+      "inputTokens": 1688,
+      "outputTokens": 44,
+      "response": [
+        {
+          "commandType": "MOVE_TO",
+          "playerId": 3,
+          "parameters": {
+            "target_x": 10.0,
+            "target_y": -10.0,
+            "sprint": true
+          },
+          "duration": 0
+        }
+      ]
+    },
+    {
+      "modelLabel": "Claude Haiku 4.5",
+      "latencyMs": 1382,
+      "inputTokens": 2085,
+      "outputTokens": 53,
+      "response": [
+        {
+          "commandType": "MOVE_TO",
+          "playerId": 3,
+          "parameters": {
+            "target_x": 25.0,
+            "target_y": -8.0,
+            "sprint": true
+          },
+          "duration": 0
+        }
+      ]
+    },
+    {
+      "modelLabel": "Claude Sonnet 4.6",
+      "latencyMs": 1226,
+      "inputTokens": 2086,
+      "outputTokens": 48,
+      "response": [
+        {
+          "commandType": "MOVE_TO",
+          "playerId": 3,
+          "parameters": {
+            "target_x": 30.0,
+            "target_y": -8.0,
+            "sprint": true
+          },
+          "duration": 0
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "One sample on one kickoff state; no latency distribution or match-quality ranking.",
+    "Model/tokenizer defaults differ; token counts are not directly comparable.",
+    "Reported Playground latency is not end-to-end match action latency.",
+    "All three returned valid JSON; tactical value of chosen targets was not established."
+  ]
+}
