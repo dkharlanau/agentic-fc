@@ -579,6 +579,42 @@
       ],
       "initiation": "incoming during M4/M5 update",
       "evidenceCapturedAtUTC": "2026-10-23T21:50:56.822770+00:00"
+    },
+    {
+      "id": "live-17",
+      "setup": "A0-M5-schema-clean",
+      "opponent": "Neman Grodno",
+      "side": "home",
+      "goalsFor": 1,
+      "goalsAgainst": 2,
+      "shotsFor": 4,
+      "shotsAgainst": 11,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 2,
+      "possessionPercent": 57,
+      "commands": 10,
+      "averageLatencyMs": 2,
+      "commandCounts": {
+        "CLEAR_OVERRIDE": 10
+      },
+      "opponentCommands": 14,
+      "opponentAverageLatencyMs": 3,
+      "roleLatencyMs": {
+        "gk": 2,
+        "def": 2,
+        "mid": 2,
+        "fwd1": 1,
+        "fwd2": 1
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Extra-time loss with only10CLEAR_OVERRIDE commands at2ms; does not establish model policy execution or a schema-cleanup effect."
+      ],
+      "initiation": "manual after saved M5 verification and post-reset UI Fitness5/5",
+      "evidenceCapturedAtUTC": "2026-10-23T21:56:56.956179+00:00"
     }
   ],
   "recordingOrder": "Local evidence-capture order; background matches may be appended retrospectively."
