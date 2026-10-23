@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=65"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentic-fc"
+version = "0.1.0"
+description = "Offline tactical prototype for AWS Agentic Football Cup"
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["agentic_fc*"]
