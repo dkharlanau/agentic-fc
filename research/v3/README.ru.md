@@ -202,3 +202,15 @@ AWS documents per-invocation model/systemPrompt overrides in [Harness models and
 ## Live17 first clean M5: Neman Grodno1:2 after extra time
 
 First verified manually initiated M5 match lost1:2: shots4:11,on target1:2,possession57%,10CLEAR_OVERRIDE commands2ms. Role latencies2/2/2/1/1ms,reportedSuccess100%. This is not evidence of model-speed or policy execution and does not establish a schema-cleanup effect. Keep M5 for another unchanged manual game before a separate model trial; do not rewrite tactics from AI Overview causal claims.
+
+## Live18 unchanged M5:1:0 Amber Arcs2
+
+Second M5 manual control won1:0:shots12:4,on target1:0,possession39%,4CLEAR_OVERRIDE commands2ms,all role latencies2ms,reportedSuccess100%. The two clean manual M5 games are1win/1loss, both with only low-millisecond CLEAR commands. This does not establish model execution or a tactical effect of schema cleanup. Next candidate will isolate a FWD2 model change motivated by the earlier HOME/AWAY possession readiness probes, while retaining prompts/context/tools/formation.
+
+## M6: isolated Haiku4.5 FWD2 trial, verified gate
+
+A0-M6-haiku-fwd2 changes only FWD2 model relative to M5, to global.anthropic.claude-haiku-4-5-20251001-v1:0. GK/DEF/MID/FWD1 remain Nova2Lite. All five use the same schema-clean/ prompts, tools=[], inferenceunset, sliding context10, no Memory/Gateway, formation2-0-2. FWD2 immutable version14 was Ready and its complete normalized prompt matched the same source; model ID, unset inference and window10 were verified. Other role versions remain13/19/15/14.
+
+A native saved-configuration FWD2 canary, without model/prompt override, returned SHOOT player4 BL power0.8 for the synthetic AWAY-clear-shot input,2239input/43outputtokens,3058ms reported Playground latency. Its test session was stopped. This confirms availability and one basic category decision, not live match strength. All five observed scrimmage sessions were then stopped and the portal reloaded. **M6 passed UI Fitness5/5**,5commands100%active0ms. Initial portal rendering still labelled FWD2 Nova; on completion it showed Allowed · Haiku4.5, without ARN edits. Do not infer a persistent metadata mismatch from an intermediate page render. First manually initiated M6 live match was requested after the final model label and gate were verified.
+
+Read-only CloudShell diagnostics found recent DEF main-runtime startup events around21:50UTC, while the separate Application Logs stream last showed19:54UTC. Searching the main group after21:40 for the actual Neman game ID returned0matching events. This did not recover the live invocation payload and does not prove absence of inference, caching or a game-side override. Raw IDs and logs remain private. No access policy changed.

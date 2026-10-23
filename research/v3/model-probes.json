@@ -91,6 +91,29 @@
         }
       ],
       "limitation": "Confirms native saved Harness availability for this one input; does not prove invocation during live-07."
+    },
+    {
+      "setup": "A0-M6-haiku-fwd2",
+      "role": "fwd2",
+      "systemPrompt": "schema-clean/fwd2.txt",
+      "override": false,
+      "model": "global.anthropic.claude-haiku-4-5-20251001-v1:0",
+      "input": "fixtures/derived-fwd2-possession.json:away-clear-shot",
+      "reportedPlaygroundLatencyMs": 3058,
+      "inputTokens": 2239,
+      "outputTokens": 43,
+      "response": [
+        {
+          "commandType": "SHOOT",
+          "playerId": 4,
+          "parameters": {
+            "aim_location": "BL",
+            "power": 0.8
+          },
+          "duration": 0
+        }
+      ],
+      "limitation": "Native saved-configuration availability and basic category adherence on one synthetic state; not evidence of invocation or quality in a live game. Test session stopped."
     }
   ]
 }

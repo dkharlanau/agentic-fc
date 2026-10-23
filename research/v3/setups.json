@@ -293,6 +293,70 @@
         "reportedAverageLatencyMs": 0,
         "limitation": "UI gate verified after session-stop/reload procedure; new generation on each role and real inference latency are not established."
       }
+    },
+    {
+      "promptDirectory": "schema-clean",
+      "inferenceConfig": null,
+      "allowedToolsByRole": {
+        "gk": [],
+        "def": [],
+        "mid": [],
+        "fwd1": [],
+        "fwd2": []
+      },
+      "memory": [],
+      "gateway": null,
+      "formation": "2-0-2",
+      "promptSha256": {
+        "def": "86426b2320f5e40e444ebe553b0827b3707ff6f5cd22599478f71e5391c838d9",
+        "fwd1": "ee4c92203e6fcbc86d14329913933ba68d8cd2092947bebd2c66d5ed14c17b15",
+        "fwd2": "03ed589df3ebe560294ac54966bfc27156aa27391c8079dae5aab93ba096a13f",
+        "gk": "43a75e8e85225b14879c7c9b839a7f8b3e5d056d8a841a1a4019b8fc8263cd36",
+        "mid": "7b05fe872d47c532c374390642006759924d84048a61577bf4f3a9bba400c729"
+      },
+      "id": "A0-M6-haiku-fwd2",
+      "parent": "A0-M5-schema-clean",
+      "status": "verified_post_reset_ui_fitness_5_of_5",
+      "truncation": {
+        "strategy": "sliding_window",
+        "messagesCount": 10
+      },
+      "hypothesis": "Test the small synthetic possession-adherence advantage on one forward while retaining the other four role models.",
+      "changedFactors": [
+        "FWD2 model Nova2Lite -> Claude Haiku4.5; retain all prompt text, tools, context, inference config and formation."
+      ],
+      "comparisonLimitation": "Single-role model factor; uncontrolled live opponents and unverified per-call live model payloads limit causal attribution.",
+      "verification": {
+        "unchangedRolesInheritedFrom": "verified A0-M5-schema-clean",
+        "fwd2SavedVersionChecked": 14,
+        "fwd2FullNormalizedPromptMatchesSameSource": true,
+        "fwd2InferenceConfigsUnset": true,
+        "fwd2Window": 10,
+        "fwd2ModelId": "global.anthropic.claude-haiku-4-5-20251001-v1:0"
+      },
+      "modelByRole": {
+        "gk": "global.amazon.nova-2-lite-v1:0",
+        "def": "global.amazon.nova-2-lite-v1:0",
+        "mid": "global.amazon.nova-2-lite-v1:0",
+        "fwd1": "global.amazon.nova-2-lite-v1:0",
+        "fwd2": "global.anthropic.claude-haiku-4-5-20251001-v1:0"
+      },
+      "awsVersionByRole": {
+        "gk": 13,
+        "def": 19,
+        "mid": 15,
+        "fwd1": 14,
+        "fwd2": 14
+      },
+      "fitness": {
+        "passedPositions": 5,
+        "totalPositions": 5,
+        "commands": 5,
+        "activePercent": 100,
+        "reportedAverageLatencyMs": 0,
+        "portalFwd2ModelLabel": "Allowed \u00b7 claude-haiku-4-5-20251001-v1:0",
+        "limitation": "UI gate and final model label verified after session-stop procedure;0ms does not demonstrate fresh generation or model speed for all roles."
+      }
     }
   ]
 }

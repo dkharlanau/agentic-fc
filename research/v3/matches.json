@@ -615,6 +615,42 @@
       ],
       "initiation": "manual after saved M5 verification and post-reset UI Fitness5/5",
       "evidenceCapturedAtUTC": "2026-10-23T21:56:56.956179+00:00"
+    },
+    {
+      "id": "live-18",
+      "setup": "A0-M5-schema-clean",
+      "opponent": "Amber Arcs 2",
+      "side": "home",
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "shotsFor": 12,
+      "shotsAgainst": 4,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 39,
+      "commands": 4,
+      "averageLatencyMs": 2,
+      "commandCounts": {
+        "CLEAR_OVERRIDE": 4
+      },
+      "opponentCommands": 3,
+      "opponentAverageLatencyMs": 3,
+      "roleLatencyMs": {
+        "gk": 2,
+        "def": 2,
+        "mid": 2,
+        "fwd1": 2,
+        "fwd2": 2
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Only4CLEAR_OVERRIDE commands at2ms; not evidence of model policy inference or a winning schema-cleanup effect."
+      ],
+      "initiation": "manual after verified M5 gate; unchanged configuration",
+      "evidenceCapturedAtUTC": "2026-10-23T22:03:46.755355+00:00"
     }
   ],
   "recordingOrder": "Local evidence-capture order; background matches may be appended retrospectively."
