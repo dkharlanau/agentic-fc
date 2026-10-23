@@ -979,6 +979,49 @@
         }
       ],
       "coachingVerification": "Both own messages appeared in Coach Live Feed; actual agent adherence not established."
+    },
+    {
+      "id": "live-27",
+      "setup": "A0-M7-formation121",
+      "opponent": "Meerut United",
+      "side": "home",
+      "goalsFor": 2,
+      "goalsAgainst": 1,
+      "shotsFor": 12,
+      "shotsAgainst": 3,
+      "shotsOnTargetFor": 2,
+      "shotsOnTargetAgainst": 1,
+      "possessionPercent": 45,
+      "commands": 659,
+      "averageLatencyMs": 1093,
+      "commandCounts": {
+        "MOVE_TO": 314,
+        "PRESS_BALL": 246,
+        "CLEAR_OVERRIDE": 36,
+        "PASS": 27,
+        "SHOOT": 19,
+        "GK_DISTRIBUTE": 17
+      },
+      "opponentCommands": 24,
+      "opponentAverageLatencyMs": 3,
+      "roleLatencyMs": {
+        "gk": 932,
+        "def": 1233,
+        "mid": 1264,
+        "fwd1": 1230,
+        "fwd2": 983
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Viewer commentary became stale in overtime; reload of the same viewer recovered terminal2:1. Lobby had also shown activeLIVE; no new match was requested."
+      ],
+      "initiation": "manual auto-matched by normal Find",
+      "evidenceCapturedAtUTC": "2026-10-23T23:45:44.621649+00:00",
+      "overtime": true,
+      "coaching": []
     }
   ],
   "recordingOrder": "Local evidence-capture order; background matches may be appended retrospectively."

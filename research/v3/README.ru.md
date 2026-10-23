@@ -281,3 +281,17 @@ The spectator Unity START control was opened and exposed a coach text field/Shou
 Result1:0 in overtime:shots10:0,on target1:0,possession56%,379commands845ms. PRESS184,MOVE152,INTERCEPT31,CLEAR12;noSHOOT/PASS. Role latencies644/907/942/629/902ms,reportedSuccess100%. Teamshots and issued commands remain distinct; no verified causal benefit from coaching. M7's five observed results are3wins/2losses, but this game has an explicit coaching intervention and one earlier loss has unverified request actor.
 
 Fresh table around this completion:rank12,69points,35P23W12L,goals50:30(+20). Summary20P14W6L70% remains a different/capped scope; exact implementation not verified. Preserve source scopes and dynamic timing.
+
+
+## Live27 unchanged M7:2:1 Meerut United in overtime
+
+No Shout/native probe or Harness change during this game. It won2:1:shots12:3,on target2:1,possession45%,659commands1093ms. MOVE314,PRESS246,CLEAR36,PASS27,SHOOT19,GKDIST17. Role latencies932/1233/1264/1230/983ms,reportedSuccess100%. The viewer stopped updating overtime commentary while lobby also showedLIVE. Reloading the SAME viewer recovered the terminal2:1; no replacement match was started. Do not classify a stalled observation as a failed server process.
+
+M7 has six observed outcomes4wins/2losses, including one coached win and an earlier loss with unverified request actor. Different opponents, command-report regimes and interventions prevent a causal formation-strength estimate.
+
+## M8 formation1-1-2 trial
+
+The GUI selector exposed1-1-2 with FWD FWD /MID /DEF /GK. This aligns the starting rows with the existing assigned role prompts better than1-2-1, whose starting middle row included FWD4. This is a testable tactical hypothesis, not proof that initial rows determine later behaviour. Selected1-1-2 and Done; profile displayed1-1-2. Reload verification and UI Fitness are pending. All five Harness models/prompts/versions/settings remain inherited M7. The aggressive workshop library was reviewed; its all-out setup intentionally exposes an empty goal. It was not installed.
+
+
+**M8 formation1-1-2 persisted after reload and passed UI Fitness5/5**:fivePASS,5commands100%active0ms,portal fourNova/oneAllowedHaiku confirmed. No Harness configuration was edited and no scrimmage reset was repeated for this formation-only change. This verifies the UI gate, not fresh generation/model speed. First post-gate live match is next.

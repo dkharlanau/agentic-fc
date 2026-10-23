@@ -419,6 +419,68 @@
         "sessionResetBeforeThisCheck": false,
         "limitation": "Formation-only change; unchanged Harness configuration inherited M6. UI gate verified, not proof of new generation or real model speed."
       }
+    },
+    {
+      "promptDirectory": "schema-clean",
+      "inferenceConfig": null,
+      "allowedToolsByRole": {
+        "gk": [],
+        "def": [],
+        "mid": [],
+        "fwd1": [],
+        "fwd2": []
+      },
+      "memory": [],
+      "gateway": null,
+      "formation": "1-1-2",
+      "promptSha256": {
+        "def": "86426b2320f5e40e444ebe553b0827b3707ff6f5cd22599478f71e5391c838d9",
+        "fwd1": "ee4c92203e6fcbc86d14329913933ba68d8cd2092947bebd2c66d5ed14c17b15",
+        "fwd2": "03ed589df3ebe560294ac54966bfc27156aa27391c8079dae5aab93ba096a13f",
+        "gk": "43a75e8e85225b14879c7c9b839a7f8b3e5d056d8a841a1a4019b8fc8263cd36",
+        "mid": "7b05fe872d47c532c374390642006759924d84048a61577bf4f3a9bba400c729"
+      },
+      "id": "A0-M8-formation112",
+      "parent": "A0-M7-formation121",
+      "status": "verified_ui_fitness_5_of_5_after_formation_change",
+      "truncation": {
+        "strategy": "sliding_window",
+        "messagesCount": 10
+      },
+      "hypothesis": "Align starting rows with one DEF, one MID and two FWD role prompts, retaining central support while advancing both forwards. Test shots/on-target/goals/results.",
+      "changedFactors": [
+        "Starting formation1-2-1 ->1-1-2; all Harness models/prompts/tools/context/inference retained."
+      ],
+      "comparisonLimitation": "One formation factor relative to M6; uncontrolled opponents and unverified per-call live model payloads limit causal attribution.",
+      "verification": {
+        "inheritedHarnessConfiguration": "verified M6/M7 versions13/19/15/14/14; no Harness edit for this candidate",
+        "profileFormationAfterDone": "1-1-2",
+        "profileReloadVerification": "1-1-2 confirmed in reloaded profile"
+      },
+      "modelByRole": {
+        "gk": "global.amazon.nova-2-lite-v1:0",
+        "def": "global.amazon.nova-2-lite-v1:0",
+        "mid": "global.amazon.nova-2-lite-v1:0",
+        "fwd1": "global.amazon.nova-2-lite-v1:0",
+        "fwd2": "global.anthropic.claude-haiku-4-5-20251001-v1:0"
+      },
+      "awsVersionByRole": {
+        "gk": 13,
+        "def": 19,
+        "mid": 15,
+        "fwd1": 14,
+        "fwd2": 14
+      },
+      "fitness": {
+        "passedPositions": 5,
+        "totalPositions": 5,
+        "commands": 5,
+        "activePercent": 100,
+        "reportedAverageLatencyMs": 0,
+        "portalFwd2ModelLabel": "Allowed \u00b7 claude-haiku-4-5-20251001-v1:0",
+        "sessionResetBeforeThisCheck": false,
+        "limitation": "Formation-only change; unchanged Harness configuration inherited M7. UI gate verified, not proof of new generation or real model speed."
+      }
     }
   ]
 }
