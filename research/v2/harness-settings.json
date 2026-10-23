@@ -1,0 +1,48 @@
+{
+  "status": "candidate H2; not installed in AWS; no LLM benchmark performed",
+  "baseline_model": "Amazon Nova 2 Lite (keep the currently authorized inference profile)",
+  "positions": {
+    "gk": {"configured_player_id": 0, "model": "Nova 2 Lite", "prompt": "prompts/gk.txt"},
+    "def": {"configured_player_id": 1, "model": "Nova 2 Lite", "prompt": "prompts/def.txt"},
+    "mid": {"configured_player_id": 2, "model": "Nova 2 Lite", "prompt": "prompts/mid.txt"},
+    "fwd1": {"configured_player_id": 3, "model": "Nova 2 Lite", "prompt": "prompts/fwd1.txt"},
+    "fwd2": {"configured_player_id": 4, "model": "Nova 2 Lite", "prompt": "prompts/fwd2.txt"}
+  },
+  "inferenceConfig": {"temperature": 0, "maxTokens": 256},
+  "topP": "leave unset/default for initial experiment; do not tune several knobs at once",
+  "additionalModelRequestFields": {"reasoningConfig": {"type": "disabled"}},
+  "stopSequences": [],
+  "memory": "disabled for baseline; this does not by itself guarantee no session history",
+  "tools": [], "skills": [], "lifecycle_hooks": [],
+  "inbound_auth": "existing IAM setting",
+  "service_role": "existing pre-provisioned team-SolutionAccessRole-*",
+  "runtime_deadline": {
+    "server_timeout_ms": null, "workshop_material_reported_ms": 5000,
+    "engineering_p95_target_ms": 1500, "target_is_not_server_limit": true,
+    "note": "Verify current event. Earlier 1 s claim is not established by the current public event page."
+  },
+  "advanced_selector": {
+    "maxTokens": 64, "temperature": 0, "schema_is_stable": true,
+    "schema_file": "selector.schema.json",
+    "actual_support_must_be_verified_for_selected_model": true,
+    "recommended_model_candidate": "Claude Haiku 4.5 via bedrock-runtime; not guaranteed exposed in Harness"
+  },
+  "thresholds_are_experimental": {
+    "voluntary_press_energy_min": 0.25, "optional_chase_energy_min": 0.4,
+    "sprint_run_energy_min": 0.7, "press_max_distance": 28,
+    "forward_shot_distance_seed": 25, "maintained_duration_ticks": 2
+  },
+  "baseline_native_structured_outputs_supported": false,
+  "model_candidates": [
+    {"name": "Claude Haiku 4.5", "condition": "available and permitted in event account; measured before switching", "bedrock_runtime_native_structured_outputs": true},
+    {"name": "Nova Lite", "condition": "speed/quality experiment for GK or DEF; no measured ranking"},
+    {"name": "Nova Micro", "condition": "prefer code-based validation/fallback; do not assume reliable Harness formatting"}
+  ],
+  "warnings": [
+    "Do not use a stop sequence of ] or } because it can remove JSON terminators.",
+    "temperature=0 reduces sampling randomness but does not guarantee JSON validity.",
+    "Max tokens is a ceiling, not a target length. Increase if real outputs truncate.",
+    "Do not send arbitrary API fields into a Harness UI that does not expose them.",
+    "Pure rule-only tournament deployment requires confirmation that event rules permit it."
+  ]
+}

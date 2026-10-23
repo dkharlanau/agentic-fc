@@ -1,0 +1,27 @@
+name: H2 synthetic scenarios
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  scenarios:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run synthetic scenario laboratory (not AWS matches)
+        run: python research/v2/decision_lab.py
+      - name: Check complete prompt sizes and configured IDs
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          for name, pid in [('gk',0),('def',1),('mid',2),('fwd1',3),('fwd2',4)]:
+              text = Path(f'research/v2/prompts/{name}.txt').read_text()
+              assert 0 < len(text) < 20000
+              assert f'CONFIGURED PLAYER {pid}' in text
+          print('Five standalone prompts passed static checks; no model was invoked.')
+          PY
