@@ -272,3 +272,12 @@ A narrower GK candidate moved identity/recovery rules to the top and added both 
 Direct-input controls retained the same synthetic state: original GK returned MOVE_TO(-40) in AWAY recovery and GK_DISTRIBUTE in AWAY possession. V2 returned +49 in AWAY recovery and GK_DISTRIBUTE in possession, but also incorrectly chose GK_DISTRIBUTE in HOME teammate-possession recovery. Therefore neither candidate is ready for deployment. team-routing/ and gk-routing/ are explicitly laboratory-only. The existing live M7 config and 5/5 gate remain the working baseline.
 
 Official sample identity mapping: [agent_base.py](https://github.com/aws-samples/sample-ai-possibilities/blob/main/agentic-football-sample-agents/lib/agent_base.py) obtains controlled teamId from the outer input; [state.py](https://github.com/aws-samples/sample-ai-possibilities/blob/main/agentic-football-sample-agents/lib/state.py) maps team0 HOME to own goal negativeX and team1 AWAY to own goal positiveX. This reference does not establish the exact managed live invocation payload used in these matches.
+
+
+## Live26 M7 plus Shout:1:0 Hail Mary in overtime
+
+The spectator Unity START control was opened and exposed a coach text field/Shout button. Two own tactical instructions were sent: at about00:33/0:0, goalkeeper stay near own goal, defender cover, midfielder forward pass, forwards width and clear-shot priority; during0:0overtime, explicit forwards SHOOT when possessing the ball in range with a clear lane and midfielder safe support pass. Both messages appeared in Coach Live Feed after an initial delay, confirming UI delivery, not agent adherence. Exact own text is retained on the match record. The workshop guide says coaching arrives via teamChat if the implementation consumes it, and previous-match instructions are not automatically retained. Do not claim persistent learning/fine-tuning.
+
+Result1:0 in overtime:shots10:0,on target1:0,possession56%,379commands845ms. PRESS184,MOVE152,INTERCEPT31,CLEAR12;noSHOOT/PASS. Role latencies644/907/942/629/902ms,reportedSuccess100%. Teamshots and issued commands remain distinct; no verified causal benefit from coaching. M7's five observed results are3wins/2losses, but this game has an explicit coaching intervention and one earlier loss has unverified request actor.
+
+Fresh table around this completion:rank12,69points,35P23W12L,goals50:30(+20). Summary20P14W6L70% remains a different/capped scope; exact implementation not verified. Preserve source scopes and dynamic timing.

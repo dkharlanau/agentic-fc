@@ -76,6 +76,28 @@
         "points": 63
       },
       "limitation": "Summary19completed while history caps20 and an active LIVE entry is visible is consistent with a recent/capped-view scope; exact implementation not verified. Do not infer cumulative rank or points from summary."
+    },
+    {
+      "capturedAtUTC": "2026-10-23T23:36:38.709166+00:00",
+      "teamSummary": {
+        "played": 20,
+        "wins": 14,
+        "draws": 0,
+        "losses": 6,
+        "winRatePercent": 70
+      },
+      "leaderboard": {
+        "rank": 12,
+        "played": 35,
+        "wins": 23,
+        "draws": 0,
+        "losses": 12,
+        "goalsFor": 50,
+        "goalsAgainst": 30,
+        "goalDifference": 20,
+        "points": 69
+      },
+      "limitation": "Rendered leaderboard and summary captured around live26 completion; different scope/timing remains unverified. Dynamic ranking can change. Do not infer table rank/points from capped summary."
     }
   ]
 }

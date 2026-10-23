@@ -925,6 +925,60 @@
       ],
       "initiation": "manual auto-matched by normal Find",
       "evidenceCapturedAtUTC": "2026-10-23T23:28:54.942804+00:00"
+    },
+    {
+      "id": "live-26",
+      "setup": "A0-M7-formation121",
+      "opponent": "Hail Mary",
+      "side": "home",
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "shotsFor": 10,
+      "shotsAgainst": 0,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 56,
+      "commands": 379,
+      "averageLatencyMs": 845,
+      "commandCounts": {
+        "PRESS_BALL": 184,
+        "MOVE_TO": 152,
+        "INTERCEPT": 31,
+        "CLEAR_OVERRIDE": 12
+      },
+      "opponentCommands": 6,
+      "opponentAverageLatencyMs": 2,
+      "roleLatencyMs": {
+        "gk": 644,
+        "def": 907,
+        "mid": 942,
+        "fwd1": 629,
+        "fwd2": 902
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "M7 plus two coaching interventions, not an unchanged control.",
+        "No issued SHOOT/PASS in report despite10teamshots and explicit coaching; delivery does not prove policy adherence or caused victory."
+      ],
+      "initiation": "manual auto-matched by normal Find",
+      "evidenceCapturedAtUTC": "2026-10-23T23:36:38.709166+00:00",
+      "overtime": true,
+      "coaching": [
+        {
+          "gameClock": "about00:33",
+          "score": "0:0",
+          "text": "GK 1: stay near your own goal. DEF 2: hold cover. MID 3: pass forward when free. FWD 4/FWD 5: spread wide; shoot in range when unmarked."
+        },
+        {
+          "gameClock": "overtime",
+          "score": "0:0",
+          "text": "FWD 4/FWD 5: if you possess the ball in shooting range with a clear lane, SHOOT immediately. MID 3: support with a safe forward pass."
+        }
+      ],
+      "coachingVerification": "Both own messages appeared in Coach Live Feed; actual agent adherence not established."
     }
   ],
   "recordingOrder": "Local evidence-capture order; background matches may be appended retrospectively."
