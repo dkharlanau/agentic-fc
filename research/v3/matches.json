@@ -155,6 +155,46 @@
         "No explicit PASS/SHOOT/GK_DISTRIBUTE commands; built-in engine contributed to shots/goals.",
         "No controlled conclusion that M3 is stronger than M1."
       ]
+    },
+    {
+      "id": "live-06",
+      "setup": "A0-M3-no-reset-no-tools",
+      "opponent": "Agentic United 1",
+      "side": "home",
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "shotsFor": 5,
+      "shotsAgainst": 4,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 47,
+      "commands": 335,
+      "averageLatencyMs": 454,
+      "commandCounts": {
+        "MOVE_TO": 130,
+        "MARK": 88,
+        "PRESS_BALL": 46,
+        "INTERCEPT": 41,
+        "CLEAR_OVERRIDE": 11,
+        "PASS": 9,
+        "SHOOT": 7,
+        "GK_DISTRIBUTE": 3
+      },
+      "roleLatencyMs": {
+        "gk": 453,
+        "def": 446,
+        "mid": 458,
+        "fwd1": 444,
+        "fwd2": 456
+      },
+      "reportedRoleSuccessPercent": 100,
+      "opponentCommands": 8,
+      "limitations": [
+        "Unchanged M3 and uncontrolled opponent.",
+        "Latency improved across unchanged M3 games:3042/1347/454ms; cause not established.",
+        "Role-diverse commands returned, so absence of PASS/SHOOT in earlier games does not establish an immutable possession-parser defect.",
+        "Reported Success and issued commands still do not prove useful application of every action."
+      ]
     }
   ]
 }
