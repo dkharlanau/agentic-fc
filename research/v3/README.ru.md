@@ -58,3 +58,13 @@ AWS Console does not save a panel with all inference fields cleared: its Save bu
 Public-safe setup manifests and prompt hashes: `setups.json`. Live report metrics: `matches.json`. Raw AWS identifiers, account information, credentials, screenshots and traces remain private under ignored `.local/`.
 
 Full A0 restoration was verified in immutable saved version views for all five roles: Nova 2 Lite, no inference config, All tools (*). Fitness still returned 2/5 (GK/FWD2 PASS; DEF/MID/FWD1 FAIL). DEF reported 0/1 active ticks and missing team PASS. This rules out prompt-only rollback as a sufficient remedy, but does not identify the underlying cause. Next isolated diagnostic: one fixed PASS response on DEF.
+
+## Native Harness response and session diagnostic
+
+A fixed PASS array on DEF produced the exact valid JSON in a new Playground session (reported model latency 595 ms), while Fitness still returned 2/5. A fixed `{"commands":[...]}` envelope also left Fitness at 2/5. Neither diagnostic is a playing strategy; DEF was restored to A0 afterwards.
+
+The Harness dashboard route returned a permissions error, but the actual managed Runtime's **View dashboard** route works. Its OTEL sessions expose a persistent scrimmage session reused by repeated Fitness runs. Recent traces contain only two `AgentCore.Harness.Invoke` spans, HTTP 200, zero model tokens, no model-generation spans. An older call in that session includes model input/output. The initial captured request contains a nested JSON-string `prompt` holding gameState/teamId/myPlayers. These observations motivate a repeated-session/replay hypothesis; the exact cache mechanism is not yet proven.
+
+The observed DEF scrimmage session was stopped with the Console's ordinary “Stop current session and create new session” action; success was confirmed. Fitness still failed. Next control: reload the Player Portal and rerun Fitness from its fresh page state. No endpoint permissions or IAM policies were changed.
+
+After restoring DEF A0, stopping its observed scrimmage session and reloading the portal, Fitness improved to **3/5**, with DEF now PASS. This is the first verified change in the Fitness outcome. The exact contribution of session termination versus fresh portal state is not isolated yet. MID and FWD1 scrimmage session identifiers were separately observed in Runtime OTEL tables and stopped through the same ordinary Console operation; their results are pending.

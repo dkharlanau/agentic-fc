@@ -6,7 +6,9 @@
 
 **[Five complete H2 Harness prompts](research/v2/prompts)** · **[Harness settings](research/v2/harness-settings.json)** · **[Executed scenario results](research/v2/results/scenario_results.json)** · **[Reproducible laboratory](research/v2/decision_lab.py)**
 
-H2 lab: 20 named checks, 2,000 mirrored scene pairs, 20,000 validated commands, 10,000 mirror checks and 10,000 player-order checks. These are **synthetic policy tests, not AWS matches or LLM benchmarks**. No win rate, live model latency or tournament improvement was measured. The candidate is not installed in AWS.
+**Live experiment history (2026-10-23):** [A0/H2.1/H3 prompts, setup hashes and Fitness investigation](research/v3/README.ru.md). Full restored A0 still returned 2/5 Fitness; recovery and a winning strategy are not yet established.
+
+H2 lab: 20 named checks, 2,000 mirrored scene pairs, 20,000 validated commands, 10,000 mirror checks and 10,000 player-order checks. These are **synthetic policy tests, not AWS matches or LLM benchmarks**. No win rate, live model latency or tournament improvement was measured. H2 and later prompt bundles were subsequently trialled in AWS; see the dated live investigation below.
 
 **Corrections to historical v1 documents below:** the current public Cup page does not establish the previously asserted hard one-second deadline. Participant workshop material reported five seconds; actual event timing must be verified. Nova 2 Lite currently does not support native Bedrock Structured Outputs; Haiku 4.5 supports them via bedrock-runtime. Prompt-only Harness does not automatically acquire structured schema enforcement by switching models. Use H2 source notes for current conclusions.
 
