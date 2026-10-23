@@ -8,6 +8,8 @@
 
 **Live experiment history (2026-10-23):** [A0/H2.1/H3 prompts, setup hashes and Fitness investigation](research/v3/README.ru.md). A0-M1 reached verified 5/5 Fitness after scrimmage-session reset and a MID tool restriction. A winning strategy remains to be established by live match evidence.
 
+**Current trial configuration:** [M4 prompts](research/v3/context10), Nova2Lite, no tools, sliding history10 and GK UI-label cleanup. Saved configuration and post-reset UI Fitness5/5 verified; comparative live evaluation continues. See [setup history](research/v3/setups.json) and [rendered report numbers](research/v3/matches.json).
+
 H2 lab: 20 named checks, 2,000 mirrored scene pairs, 20,000 validated commands, 10,000 mirror checks and 10,000 player-order checks. These are **synthetic policy tests, not AWS matches or LLM benchmarks**. No win rate, live model latency or tournament improvement was measured. H2 and later prompt bundles were subsequently trialled in AWS; see the dated live investigation below.
 
 **Corrections to historical v1 documents below:** the current public Cup page does not establish the previously asserted hard one-second deadline. Participant workshop material reported five seconds; actual event timing must be verified. Nova 2 Lite currently does not support native Bedrock Structured Outputs; Haiku 4.5 supports them via bedrock-runtime. Prompt-only Harness does not automatically acquire structured schema enforcement by switching models. Use H2 source notes for current conclusions.

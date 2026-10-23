@@ -211,7 +211,7 @@
       },
       "id": "A0-M4-context10",
       "parent": "A0-M3-no-reset-no-tools",
-      "status": "saved_configuration_verified_pending_fitness",
+      "status": "verified_post_reset_ui_fitness_5_of_5",
       "truncation": {
         "strategy": "sliding_window",
         "messagesCount": 10
@@ -235,6 +235,14 @@
         "inferenceConfigsUnset": true,
         "normalizedRenderedPromptMatchesSource": true,
         "promptByteEqualityNotClaimed": true
+      },
+      "fitness": {
+        "passedPositions": 5,
+        "totalPositions": 5,
+        "commands": 5,
+        "activePercent": 100,
+        "reportedAverageLatencyMs": 0,
+        "limitation": "UI gate verified after session-stop/reload procedure; new generation on each role and real inference latency are not established."
       }
     }
   ]
