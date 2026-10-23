@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-23",
+  "note": "Public-safe configuration history. No cloud resource identifiers or credentials. A0 is the configuration observed at session start, not a proven winning setup.",
+  "setups": [
+    {
+      "id": "A0",
+      "promptDirectory": "a0",
+      "model": "global.amazon.nova-2-lite-v1:0",
+      "inferenceConfig": null,
+      "allowedTools": [
+        "*"
+      ],
+      "memory": [],
+      "gateway": null,
+      "status": "fitness_2_of_5_after_full_verified_restore",
+      "promptSha256": {
+        "def": "f5d051f210c1d63c844b470f642f5e10713a8321d9954ab507f9e40752e04ace",
+        "fwd1": "6c9c55f9e288f9375fe54be45212301a49c5e4a21e77437d3ddcb533ad385f2b",
+        "fwd2": "316935d5f77602eefbf829a288519d08500a059bdbd9c13cb60bd201d838d5b7",
+        "gk": "c6c2ce3e11cd1d61c8873702db02b1fdcaba2f951cf5689f33b9e1cf512effc7",
+        "mid": "3f9972eb2c8836055745d1d9bfbd29d460794091cb190fa64d1ccf8e531e6d21"
+      }
+    },
+    {
+      "id": "H2.1",
+      "promptDirectory": "prompts",
+      "model": "global.amazon.nova-2-lite-v1:0",
+      "inferenceConfig": {
+        "temperature": 0,
+        "maxTokens": 256
+      },
+      "allowedTools": [
+        "*"
+      ],
+      "memory": [],
+      "gateway": null,
+      "status": "fitness_2_of_5",
+      "promptSha256": {
+        "def": "a72dea456738783a0c4f039a94c5d564941f14eac29bd0f274f1be5fd3e89ecd",
+        "fwd1": "fd1e234c10219050935fe1ce28f77abd1da59a1ee5ef66a042c2365ee87d0de1",
+        "fwd2": "8a0dc20065ade95665ff290bad3c05e140dd09f4310ffbca9e9734deed2086e5",
+        "gk": "1609b441eac7cb8ceaa129534389492291ef584715adb4c7e65c434cf112a377",
+        "mid": "4f4b7e788656683c29d68236dd765f9c9126b129b9d217dacb26e2ac63c90fea"
+      }
+    },
+    {
+      "id": "H3-strict",
+      "promptDirectory": "compact",
+      "model": "global.amazon.nova-2-lite-v1:0",
+      "inferenceConfig": {
+        "temperature": 0,
+        "maxTokens": 256
+      },
+      "allowedTools": [],
+      "memory": [],
+      "gateway": null,
+      "status": "fitness_2_of_5",
+      "promptSha256": {
+        "def": "8dcc1cba101c0368367b0f6e61bd13f3a82e76ad2c11feacdd0fa149751af95c",
+        "fwd1": "89a9247619a2a7f4cfa2dca649e66be3e2003d54c6b193057dfb53efc06cdcbd",
+        "fwd2": "f05add426241c291a119f1842838e20a75625e0d187fe20b50856fcc704c9275",
+        "gk": "34168702cfb0a71597cbb00f21b7a3d9299571868b9447a7597819b65b9dafd7",
+        "mid": "38f8c0cdaf65d0b0e2f78aa0062a9c4a0928c8bc17ac203f708cd9a466e14ea2"
+      }
+    }
+  ]
+}

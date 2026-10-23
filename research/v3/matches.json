@@ -1,0 +1,53 @@
+{
+  "kind": "observed live match report summaries; uncontrolled opponents",
+  "matches": [
+    {
+      "id": "live-01",
+      "setup": "H2.1",
+      "side": "away",
+      "goalsFor": 1,
+      "goalsAgainst": 2,
+      "extraTime": true,
+      "shotsFor": 4,
+      "shotsAgainst": 11,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 2,
+      "possessionPercent": 35,
+      "commands": 492,
+      "averageLatencyMs": 1327,
+      "commandCounts": {
+        "MOVE_TO": 298,
+        "GK_DISTRIBUTE": 49,
+        "INTERCEPT": 38,
+        "PRESS_BALL": 31,
+        "SHOOT": 30,
+        "PASS": 29,
+        "CLEAR_OVERRIDE": 17
+      }
+    },
+    {
+      "id": "live-02",
+      "setup": "H3-strict with DEF maxTokens=1024 trial",
+      "side": "away",
+      "goalsFor": 2,
+      "goalsAgainst": 0,
+      "shotsFor": 5,
+      "shotsAgainst": 5,
+      "shotsOnTargetFor": 2,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 51,
+      "commands": 24,
+      "averageLatencyMs": 13940,
+      "commandCounts": {
+        "MOVE_TO": 12,
+        "PASS": 7,
+        "PRESS_BALL": 5
+      },
+      "limitations": [
+        "Mixed configuration around this match; exact per-tick endpoint version not recovered.",
+        "Opponent reported zero commands; built-in engine still played.",
+        "Victory does not establish a stronger policy; latency substantially worsened."
+      ]
+    }
+  ]
+}
