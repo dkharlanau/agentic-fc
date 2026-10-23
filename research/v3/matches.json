@@ -423,6 +423,84 @@
       ],
       "initiation": "incoming/background, not manually initiated",
       "evidenceCapturedAtUTC": "2026-10-23T21:12:03.737652+00:00"
+    },
+    {
+      "id": "live-13",
+      "setup": "A0-M4-context10",
+      "opponent": "DarkHorse_AI",
+      "side": "home",
+      "goalsFor": 2,
+      "goalsAgainst": 0,
+      "shotsFor": 5,
+      "shotsAgainst": 4,
+      "shotsOnTargetFor": 2,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 35,
+      "commands": 370,
+      "averageLatencyMs": 869,
+      "commandCounts": {
+        "PRESS_BALL": 182,
+        "MOVE_TO": 107,
+        "RESET": 57,
+        "CLEAR_OVERRIDE": 16,
+        "INTERCEPT": 6,
+        "FOLLOW_PLAYER": 1,
+        "MARK": 1
+      },
+      "opponentCommands": 15,
+      "opponentAverageLatencyMs": 2,
+      "roleLatencyMs": {
+        "gk": 611,
+        "def": 595,
+        "mid": 915,
+        "fwd1": 910,
+        "fwd2": 988
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "57 RESET commands despite the no-RESET system instruction; actual live prompt/version payload was not recovered, so cause is unknown."
+      ],
+      "initiation": "manual after M4 configuration and post-reset Fitness verification",
+      "evidenceCapturedAtUTC": "2026-10-23T21:38:40.361697+00:00"
+    },
+    {
+      "id": "live-14",
+      "setup": "A0-M4-context10",
+      "opponent": "EPAM Spor",
+      "side": "away",
+      "goalsFor": 0,
+      "goalsAgainst": 1,
+      "shotsFor": 6,
+      "shotsAgainst": 4,
+      "shotsOnTargetFor": 0,
+      "shotsOnTargetAgainst": 1,
+      "possessionPercent": 49,
+      "commands": 7,
+      "averageLatencyMs": 3,
+      "commandCounts": {
+        "CLEAR_OVERRIDE": 7
+      },
+      "opponentCommands": 7,
+      "opponentAverageLatencyMs": 1,
+      "roleLatencyMs": {
+        "gk": 3,
+        "def": 3,
+        "mid": 3,
+        "fwd1": 2,
+        "fwd2": 2
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Only seven CLEAR_OVERRIDE commands at3ms; not evidence of model policy inference. Saved M4 stayed unchanged; actual versions at kickoff unverified."
+      ],
+      "initiation": "appeared in history; manual initiation not verified",
+      "evidenceCapturedAtUTC": "2026-10-23T21:38:40.361991+00:00"
     }
   ],
   "recordingOrder": "Local evidence-capture order; background matches may be appended retrospectively."
