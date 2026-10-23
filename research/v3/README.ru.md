@@ -142,3 +142,9 @@ python3 research/v3/report_parser.py PRIVATE_REPORT.txt --opponent 'Meerut Unite
 Raw reports stay private under ignored `.local/`; review the extracted numbers before appending to matches.json.
 
 Terminology clarification: a “fresh Fitness” in these operational notes means the documented post-session-stop/reload procedure, not proof that every role generated a new LLM response. The UI5/5 gate is verified; its displayed0ms and missing per-call traces do not establish fresh generation on all five roles. The independent saved-configuration FWD1 canary has actual input/output token counts and a generated response.
+
+## Live-09 unchanged M3: repeated-opponent 2:0, 433ms
+
+M3 beat Agentic United1 again,2:0 (earlier same-name opponent1:0). Shots12:3, on target2:0, possession41%:59%. Its370commands averaged433ms: MOVE_TO124,MARK103,INTERCEPT71,PRESS_BALL29,CLEAR_OVERRIDE16,PASS10,SHOOT9,GK_DISTRIBUTE8; RESET0. Role latencies440/431/447/453/439ms, reported Success100%. Opponent8CLEAR commands at2ms. M3 now5wins/1loss in6uncontrolled games, without configuration changes. Different runtime/report regimes remain unexplained; keep the working setup and collect the series rather than force an unsupported context change.
+
+The latest verified leaderboard row is rank17,36points,18played/12wins/6losses, goals29:16(+13). Team summary is20played/13wins/7losses/65%. Both sources are retained in `standings.json`; their two-match discrepancy is not explained.

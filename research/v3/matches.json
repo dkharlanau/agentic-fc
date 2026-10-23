@@ -265,6 +265,46 @@
         "Reported Success and issued commands do not prove useful application of every action.",
         "Uncontrolled live opponent; one game does not establish a stronger policy."
       ]
+    },
+    {
+      "id": "live-09",
+      "setup": "A0-M3-no-reset-no-tools",
+      "opponent": "Agentic United 1",
+      "side": "home",
+      "goalsFor": 2,
+      "goalsAgainst": 0,
+      "shotsFor": 12,
+      "shotsAgainst": 3,
+      "shotsOnTargetFor": 2,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 41,
+      "commands": 370,
+      "averageLatencyMs": 433,
+      "commandCounts": {
+        "MOVE_TO": 124,
+        "MARK": 103,
+        "INTERCEPT": 71,
+        "PRESS_BALL": 29,
+        "CLEAR_OVERRIDE": 16,
+        "PASS": 10,
+        "SHOOT": 9,
+        "GK_DISTRIBUTE": 8
+      },
+      "opponentCommands": 8,
+      "opponentAverageLatencyMs": 2,
+      "roleLatencyMs": {
+        "gk": 440,
+        "def": 431,
+        "mid": 447,
+        "fwd1": 453,
+        "fwd2": 439
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy."
+      ]
     }
   ]
 }

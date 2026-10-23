@@ -1,0 +1,37 @@
+{
+  "kind": "Own-team rendered UI snapshots; summary and leaderboard can differ in scope or timing",
+  "scoring": {
+    "win": 3,
+    "draw": 1,
+    "loss": 0,
+    "tieBreaks": [
+      "goalDifference",
+      "goalsFor",
+      "wins"
+    ]
+  },
+  "snapshots": [
+    {
+      "capturedAtUTC": "2026-10-23T20:41:39.735377+00:00",
+      "teamSummary": {
+        "played": 20,
+        "wins": 13,
+        "draws": 0,
+        "losses": 7,
+        "winRatePercent": 65
+      },
+      "leaderboard": {
+        "rank": 17,
+        "played": 18,
+        "wins": 12,
+        "draws": 0,
+        "losses": 6,
+        "goalsFor": 29,
+        "goalsAgainst": 16,
+        "goalDifference": 13,
+        "points": 36
+      },
+      "limitation": "Two-match difference between views remains unexplained; do not infer table points or rank from summary."
+    }
+  ]
+}
