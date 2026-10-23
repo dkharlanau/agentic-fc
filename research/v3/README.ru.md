@@ -57,7 +57,7 @@ AWS Console does not save a panel with all inference fields cleared: its Save bu
 
 Public-safe setup manifests and prompt hashes: `setups.json`. Live report metrics: `matches.json`. Raw AWS identifiers, account information, credentials, screenshots and traces remain private under ignored `.local/`.
 
-Full A0 restoration was verified in immutable saved version views for all five roles: Nova 2 Lite, no inference config, All tools (*). Fitness still returned 2/5 (GK/FWD2 PASS; DEF/MID/FWD1 FAIL). DEF reported 0/1 active ticks and missing team PASS. This rules out prompt-only rollback as a sufficient remedy, but does not identify the underlying cause. Next isolated diagnostic: one fixed PASS response on DEF.
+Full A0 restoration was verified in immutable saved version views for all five roles: Nova 2 Lite, no inference config, All tools (*). Fitness still returned 2/5 (GK/FWD2 PASS; DEF/MID/FWD1 FAIL). DEF reported 0/1 active ticks and missing team PASS. This reused-session result did not establish how a new A0 model invocation would behave, and did not identify the underlying cause. Next isolated diagnostic: one fixed PASS response on DEF.
 
 ## Native Harness response and session diagnostic
 
@@ -77,7 +77,7 @@ After retaining MID's A0 prompt/model/unset inference, removing only MID's tool 
 
 The reproducible working setup is **A0-M1** in `setups.json`: all five A0 prompts, Nova 2 Lite, inference config unset; Allowed tools `*` for GK/DEF/FWD1/FWD2, empty list for MID; no Memory/Gateway; formation 2-0-2. This is a verified connectivity/format/activity gate, not a proven winning policy.
 
-Recovery required eliminating stale/repeated scrimmage-session effects before evaluating current configurations, then addressing a fresh MID NO_PARSE result. Session reset plus portal reload changed DEF/FWD1 results, and restricting MID tools was followed by its PASS. The exact internal cache mechanism and the individual contribution of reset versus reload are not proven. Earlier same-session candidate failures must not be treated as fresh model comparisons.
+Recovery was observed after resetting the repeated scrimmage sessions and reloading the portal, then addressing the newly observed MID NO_PARSE result. The reset/reload procedure was followed by changed DEF/FWD1 results, and restricting MID tools was followed by its PASS. The exact internal cache mechanism and the individual contribution of reset versus reload are not proven. Earlier same-session candidate failures must not be treated as fresh model comparisons.
 
 The first user-initiated live match after 5/5 was launched via Find opponent. Numeric match results will be appended after View Report.
 
@@ -140,3 +140,5 @@ python3 research/v3/report_parser.py PRIVATE_REPORT.txt --opponent 'Meerut Unite
 ```
 
 Raw reports stay private under ignored `.local/`; review the extracted numbers before appending to matches.json.
+
+Terminology clarification: a “fresh Fitness” in these operational notes means the documented post-session-stop/reload procedure, not proof that every role generated a new LLM response. The UI5/5 gate is verified; its displayed0ms and missing per-call traces do not establish fresh generation on all five roles. The independent saved-configuration FWD1 canary has actual input/output token counts and a generated response.
