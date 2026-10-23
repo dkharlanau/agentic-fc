@@ -32,6 +32,28 @@
         "points": 36
       },
       "limitation": "Two-match difference between views remains unexplained; do not infer table points or rank from summary."
+    },
+    {
+      "capturedAtUTC": "2026-10-23T21:50:56.824007+00:00",
+      "teamSummary": {
+        "played": 20,
+        "wins": 14,
+        "draws": 0,
+        "losses": 6,
+        "winRatePercent": 70
+      },
+      "leaderboard": {
+        "rank": 16,
+        "played": 24,
+        "wins": 17,
+        "draws": 0,
+        "losses": 7,
+        "goalsFor": 38,
+        "goalsAgainst": 18,
+        "goalDifference": 20,
+        "points": 51
+      },
+      "limitation": "Summary and table differ. History UI displays at most20 matches; a rolling/recent-summary scope is a hypothesis, not verified. Dynamic ranking may change quickly. Do not infer rank from summary."
     }
   ]
 }

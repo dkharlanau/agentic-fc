@@ -190,3 +190,11 @@ Second verified manually initiated M4 match won3:0: shots6:3,on target3:0,posses
 M5 schema-clean prompts were installed as GK13/DEF19/MID15/FWD1 14/FWD2 13. All five immutable saved views matched the complete normalized source prompt, Nova2Lite, inferenceunset and context10. This removes the positive RESET enum/definition without changing role tactics or model. Post-reset Fitness and live results are pending.
 
 **M5 passed post-reset UI Fitness5/5**, five commands100%active and displayed0ms. Treat this as the UI gate, not a speed measurement or proof every role generated anew. An incoming BOYS753 match appeared during the update; no new manual match was launched over it. Its exact versions at kickoff are unverified, so keep it outside the clean M5 cohort.
+
+## Incoming BOYS753 win and first M5 manual game
+
+Transition match BOYS753 ended away1:0:shots12:1,on target1:0,possession32%,9commands3ms(PASS5,CLEAR_OVERRIDE4). This is not evidence of model speed/policy inference, and exact kickoff versions were not verified. It remains outside the clean M5 cohort. First manual post-verification M5 match was then requested without a visible incoming LIVE banner.
+
+Latest captured leaderboard row:rank16,51points,24played17wins7losses,goals38:18(+20). It moved fromrank14/48points during the same observation interval, so ranking is dynamic. Summary still20played14wins6losses70%; history UI also limits to20records. Recent/rolling scope may explain part of the discrepancy, but was not verified. Preserve both sources and do not infer table totals from summary.
+
+AWS documents per-invocation model/systemPrompt overrides in [Harness models and instructions](https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness-models.html) and [InvokeHarness](https://docs.aws.amazon.com/boto3/latest/reference/services/bedrock-agentcore/client/invoke_harness.html). A caller can replace saved defaults for one call. This confirms the API capability only; no actual football live override payload was recovered. Therefore saved-version checks and native probes must remain separate from proof of what every live invocation used. Do not diagnose a game-side override merely from RESET or latency reports.

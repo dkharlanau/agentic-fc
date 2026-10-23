@@ -542,6 +542,43 @@
       ],
       "initiation": "manual after verified M4 gate; configuration unchanged during game",
       "evidenceCapturedAtUTC": "2026-10-23T21:47:58.170219+00:00"
+    },
+    {
+      "id": "live-16",
+      "setup": "unattributed-M4-M5-transition",
+      "opponent": "BOYS753",
+      "side": "away",
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "shotsFor": 12,
+      "shotsAgainst": 1,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 32,
+      "commands": 9,
+      "averageLatencyMs": 3,
+      "commandCounts": {
+        "PASS": 5,
+        "CLEAR_OVERRIDE": 4
+      },
+      "opponentCommands": 3,
+      "opponentAverageLatencyMs": 2,
+      "roleLatencyMs": {
+        "gk": 4,
+        "def": 3,
+        "mid": 3,
+        "fwd1": 3,
+        "fwd2": 2
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Exact versions at kickoff unknown; exclude from clean M5 cohort. Only9commands at3ms does not establish model policy inference."
+      ],
+      "initiation": "incoming during M4/M5 update",
+      "evidenceCapturedAtUTC": "2026-10-23T21:50:56.822770+00:00"
     }
   ],
   "recordingOrder": "Local evidence-capture order; background matches may be appended retrospectively."
