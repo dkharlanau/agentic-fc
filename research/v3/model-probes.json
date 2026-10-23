@@ -66,5 +66,31 @@
     "Model/tokenizer defaults differ; token counts are not directly comparable.",
     "Reported Playground latency is not end-to-end match action latency.",
     "All three returned valid JSON; tactical value of chosen targets was not established."
+  ],
+  "savedConfigurationCanaries": [
+    {
+      "setup": "A0-M3-no-reset-no-tools",
+      "role": "fwd1",
+      "systemPrompt": "no-reset/fwd1.txt",
+      "override": false,
+      "model": "global.amazon.nova-2-lite-v1:0",
+      "input": "fixtures/observed-kickoff.json:harnessUserMessage",
+      "reportedPlaygroundLatencyMs": 1168,
+      "inputTokens": 1747,
+      "outputTokens": 40,
+      "response": [
+        {
+          "commandType": "MOVE_TO",
+          "playerId": 3,
+          "parameters": {
+            "target_x": 10,
+            "target_y": -10,
+            "sprint": true
+          },
+          "duration": 0
+        }
+      ],
+      "limitation": "Confirms native saved Harness availability for this one input; does not prove invocation during live-07."
+    }
   ]
 }

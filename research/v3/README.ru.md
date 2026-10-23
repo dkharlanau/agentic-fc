@@ -122,3 +122,21 @@ Leaderboard follow-up snapshot: team summary17matches/10wins/7losses/59%; table 
 ## Live-07 unchanged M3: 2:0 AWSenal; inference not established
 
 Fourth M3 match won2:0. Shots8:1, on target2:0, possession34%:66%. Report shows only11CLEAR_OVERRIDE commands at1ms average; role latencies2/1/1/1/1ms, Success100%. Opponent19commands at3ms. No RESET. This report does **not** establish Nova inference or prompt execution. Engine play/cache/fallback remain possibilities; no specific cause was verified. Do not call1ms a model-speed result or count this as a strong model comparison. M3 has3wins/1loss in4uncontrolled matches, with markedly different command/latency regimes. A further unchanged match is needed before any policy attribution.
+
+After live07's1ms report, an independent native FWD1 canary used its saved M3 configuration without model/prompt override. It returned valid player3 MOVE_TO JSON (x10,y-10,sprinttrue),1747input/40output tokens,1168ms reported Playground latency. This confirms the saved Harness is available on that reference input. It does not prove the live07 game invoked it or identify why the report showed only1ms CLEAR commands.
+
+## Live-08 unchanged M3: 1:0 Meerut United
+
+Fifth M3 match won1:0. Shots10:2, on target1:0, possession19%:81%. Our327commands averaged1091ms; MOVE_TO142,PRESS_BALL120,CLEAR_OVERRIDE20,SHOOT18,PASS15,GK_DISTRIBUTE12; RESET0. Role latencies943/1267/1335/1255/958ms, reported Success100%. Opponent7commands at3ms. M3 now has4wins/1loss in5uncontrolled live matches. This is a useful observed series, not a controlled improvement estimate. Both1ms-clear and substantive role-diverse reports occurred with unchanged installed configuration; preserve that uncertainty.
+
+## Consistent report recording
+
+`report_parser.py` extracts only score, primary STATS, command counts and role performance from a locally saved rendered AX report. It ignores AI Overview explanations and omits account IDs, ARNs, URLs and raw traces. It fails on missing/unknown tables or command totals that do not add up. It does not establish model inference or action application.
+
+Verified against independently recorded fields from seven earlier real reports (live01–07, including both HOME and AWAY), then checked against the live08 UI. Example:
+
+```sh
+python3 research/v3/report_parser.py PRIVATE_REPORT.txt --opponent 'Meerut United' --side home --id live-08 --setup A0-M3-no-reset-no-tools
+```
+
+Raw reports stay private under ignored `.local/`; review the extracted numbers before appending to matches.json.

@@ -227,6 +227,44 @@
         "Engine play/cache/fallback are possible explanations, not verified causes.",
         "Same installed M3 as preceding450ms role-diverse report; do not attribute winning to a new change."
       ]
+    },
+    {
+      "id": "live-08",
+      "setup": "A0-M3-no-reset-no-tools",
+      "opponent": "Meerut United",
+      "side": "home",
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "shotsFor": 10,
+      "shotsAgainst": 2,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 19,
+      "commands": 327,
+      "averageLatencyMs": 1091,
+      "commandCounts": {
+        "MOVE_TO": 142,
+        "PRESS_BALL": 120,
+        "CLEAR_OVERRIDE": 20,
+        "SHOOT": 18,
+        "PASS": 15,
+        "GK_DISTRIBUTE": 12
+      },
+      "opponentCommands": 7,
+      "opponentAverageLatencyMs": 3,
+      "roleLatencyMs": {
+        "gk": 943,
+        "def": 1267,
+        "mid": 1335,
+        "fwd1": 1255,
+        "fwd2": 958
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy."
+      ]
     }
   ]
 }
