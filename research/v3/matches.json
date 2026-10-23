@@ -808,6 +808,123 @@
       ],
       "initiation": "manual selected READY opponent; actual viewer header matched selection",
       "evidenceCapturedAtUTC": "2026-10-23T22:42:50.612652+00:00"
+    },
+    {
+      "id": "live-23",
+      "setup": "A0-M7-formation121",
+      "opponent": "Goalpost Shifters",
+      "side": "away",
+      "goalsFor": 1,
+      "goalsAgainst": 3,
+      "shotsFor": 3,
+      "shotsAgainst": 7,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 3,
+      "possessionPercent": 62,
+      "commands": 362,
+      "averageLatencyMs": 79,
+      "commandCounts": {
+        "MOVE_TO": 204,
+        "PRESS_BALL": 79,
+        "INTERCEPT": 25,
+        "PASS": 17,
+        "SHOOT": 16,
+        "CLEAR_OVERRIDE": 12,
+        "MARK": 9
+      },
+      "opponentCommands": 16,
+      "opponentAverageLatencyMs": 1,
+      "roleLatencyMs": {
+        "gk": 87,
+        "def": 79,
+        "mid": 78,
+        "fwd1": 84,
+        "fwd2": 77
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Stable saved M7 configuration; exact per-call live versions and useful action application not recovered.16issuedSHOOT versus3teamshots does not prove successful shot application."
+      ],
+      "initiation": "observed existing LIVE banner after rejected Find; request actor unverified",
+      "evidenceCapturedAtUTC": "2026-10-23T22:52:29.958009+00:00"
+    },
+    {
+      "id": "live-24",
+      "setup": "A0-M7-formation121",
+      "opponent": "Lighting Cloud",
+      "side": "home",
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "shotsFor": 10,
+      "shotsAgainst": 0,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 39,
+      "commands": 117,
+      "averageLatencyMs": 3365,
+      "commandCounts": {
+        "INTERCEPT": 83,
+        "PRESS_BALL": 25,
+        "MOVE_TO": 5,
+        "CLEAR_OVERRIDE": 4
+      },
+      "opponentCommands": 3,
+      "opponentAverageLatencyMs": 2,
+      "roleLatencyMs": {
+        "gk": 611,
+        "def": 3806,
+        "mid": 4205,
+        "fwd1": 4086,
+        "fwd2": 4057
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Role latency611/3806/4205/4086/4057ms and no issuedPASS/SHOOT despite10teamshots. Native FWD1 probes ran during part of this game; any load effect is unverified."
+      ],
+      "initiation": "manual auto-matched by normal Find",
+      "evidenceCapturedAtUTC": "2026-10-23T23:07:26.355566+00:00"
+    },
+    {
+      "id": "live-25",
+      "setup": "A0-M7-formation121",
+      "opponent": "AWSenal",
+      "side": "home",
+      "goalsFor": 0,
+      "goalsAgainst": 2,
+      "shotsFor": 4,
+      "shotsAgainst": 8,
+      "shotsOnTargetFor": 0,
+      "shotsOnTargetAgainst": 2,
+      "possessionPercent": 61,
+      "commands": 6,
+      "averageLatencyMs": 1,
+      "commandCounts": {
+        "CLEAR_OVERRIDE": 6
+      },
+      "opponentCommands": 22,
+      "opponentAverageLatencyMs": 1,
+      "roleLatencyMs": {
+        "gk": 1,
+        "def": 1,
+        "mid": 1,
+        "fwd1": 0,
+        "fwd2": 0
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Six CLEAR_OVERRIDE commands at1ms do not establish model inference or GK/formation strength."
+      ],
+      "initiation": "manual auto-matched by normal Find",
+      "evidenceCapturedAtUTC": "2026-10-23T23:28:54.942804+00:00"
     }
   ],
   "recordingOrder": "Local evidence-capture order; background matches may be appended retrospectively."

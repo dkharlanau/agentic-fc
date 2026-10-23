@@ -248,3 +248,27 @@ First M7 match won2:0:shots4:3,on target2:0,possession55%,370commands425ms. MOVE
 After live22, another normal Find was rejected. On returning to the lobby, an active Goalpost Shifters banner was present; WATCH opened an AWAY live game. The request actor is unverified, so do not call this a successfully selected repeat opponent. Saved M7 configuration stayed unchanged. Inspect the same viewer rather than retrying Find.
 
 Fresh leaderboard snapshot:rank13,63points,31played21wins10losses,goals47:25(+22). Summary19played14wins5losses74%, while history caps20 and includes aLIVE entry. That is consistent with recent/capped-view scope, but the exact implementation remains unverified; keep the sources separate.
+
+## Live23 M7 observed away:1:3 Goalpost Shifters
+
+The active-banner game ended1:3. Shots3:7,on target1:3,possession62%,362commands79ms:MOVE204,PRESS79,INTERCEPT25,PASS17,SHOOT16,CLEAR12,MARK9. Role latencies87/79/78/84/77ms,reportedSuccess100%. Sixteen issuedSHOOT commands correspond to only3teamshots; command issuance and useful application remain separate evidence. Request actor is unverified; saved M7 remained unchanged. Both M7 observed outcomes(2:0 win and1:3 loss) are retained, with selection/initiation details, without a formation-strength claim.
+
+## Live24 M7:1:0 Lighting Cloud
+
+Third observed M7 outcome won1:0:shots10:0,on target1:0,possession39%,117commands3365ms(INTERCEPT83,PRESS25,MOVE5,CLEAR4). Role latencies611/3806/4205/4086/4057ms,reportedSuccess100%. No issuedPASS/SHOOT despite10teamshots. Issued-command mix, latency and applied engine actions remain distinct. Two native FWD1 probes ran during part of the match; a possible load effect was not isolated. M7 observed series is2wins/1loss, with different opponents and initiation details retained.
+
+
+## Live25 unchanged M7:0:2 AWSenal
+
+Fourth observed M7 outcome lost0:2:shots4:8,on target0:2,possession61%,6CLEAR_OVERRIDE commands1ms; role1/1/1/0/0ms,reportedSuccess100%. This does not establish per-tick inference or formation/model strength. M7 observed series is2wins/2losses, retaining both manual and uncertain-initiation outcomes. Earlier wins against the same opponent do not guarantee repeat results.
+
+
+## Routing laboratory: mixed synthetic results, no live deployment
+
+Twenty-two Playground probes are recorded in routing-probes.json, including failed controls. Saved M7 remained unchanged. FWD1 Nova changed direction between modeTeamId variants in wrapped synthetic inputs; appended team-routing rules gave mixed forward targets and a wrong-side GK recovery. Original GK Nova and Haiku also chose negativeX in the AWAY wrapped recovery case. These are not proof of a live root cause.
+
+A narrower GK candidate moved identity/recovery rules to the top and added both HOME/AWAY examples. V1 passed wrapped recovery on Nova(+49AWAY,-49HOME) and Haiku(+49AWAY), but failed wrapped GK-possession by returning MOVE_TO. V2 added possession precedence; wrapped possession still returned MOVE_TO, while direct prompt-value input returned GK_DISTRIBUTE. This exposed an important input-shape sensitivity. The actual live caller payload was not recovered.
+
+Direct-input controls retained the same synthetic state: original GK returned MOVE_TO(-40) in AWAY recovery and GK_DISTRIBUTE in AWAY possession. V2 returned +49 in AWAY recovery and GK_DISTRIBUTE in possession, but also incorrectly chose GK_DISTRIBUTE in HOME teammate-possession recovery. Therefore neither candidate is ready for deployment. team-routing/ and gk-routing/ are explicitly laboratory-only. The existing live M7 config and 5/5 gate remain the working baseline.
+
+Official sample identity mapping: [agent_base.py](https://github.com/aws-samples/sample-ai-possibilities/blob/main/agentic-football-sample-agents/lib/agent_base.py) obtains controlled teamId from the outer input; [state.py](https://github.com/aws-samples/sample-ai-possibilities/blob/main/agentic-football-sample-agents/lib/state.py) maps team0 HOME to own goal negativeX and team1 AWAY to own goal positiveX. This reference does not establish the exact managed live invocation payload used in these matches.
