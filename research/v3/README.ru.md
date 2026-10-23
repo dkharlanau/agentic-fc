@@ -295,3 +295,8 @@ The GUI selector exposed1-1-2 with FWD FWD /MID /DEF /GK. This aligns the starti
 
 
 **M8 formation1-1-2 persisted after reload and passed UI Fitness5/5**:fivePASS,5commands100%active0ms,portal fourNova/oneAllowedHaiku confirmed. No Harness configuration was edited and no scrimmage reset was repeated for this formation-only change. This verifies the UI gate, not fresh generation/model speed. First post-gate live match is next.
+
+
+## Live28 first M8:1:0 Shalqar United in overtime; RESET recurred
+
+First post-gate M8 game won1:0 without coaching/native probes. Shots4:6,on target1:0,possession42%,325commands815ms. PRESS216,INTERCEPT70,CLEAR20,MOVE11,SHOOT5,RESET2,GKDIST1. Role latencies604/826/937/815/888ms,reportedSuccess100%. Two issuedRESET commands violate the saved schema-clean prompts: positive RESET definition/enum was removed at M5 and explicit prohibition retained. This does not identify the actual live payload or emitting role and does not by itself establish an override, cache or model cause. Do not claim the cleanup guaranteed compliance. Keep M8 unchanged for a second observation rather than attribute a first win to formation strength.

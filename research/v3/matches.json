@@ -1022,6 +1022,51 @@
       "evidenceCapturedAtUTC": "2026-10-23T23:45:44.621649+00:00",
       "overtime": true,
       "coaching": []
+    },
+    {
+      "id": "live-28",
+      "setup": "A0-M8-formation112",
+      "opponent": "Shalqar United",
+      "side": "home",
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "shotsFor": 4,
+      "shotsAgainst": 6,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 42,
+      "commands": 325,
+      "averageLatencyMs": 815,
+      "commandCounts": {
+        "PRESS_BALL": 216,
+        "INTERCEPT": 70,
+        "CLEAR_OVERRIDE": 20,
+        "MOVE_TO": 11,
+        "SHOOT": 5,
+        "RESET": 2,
+        "GK_DISTRIBUTE": 1
+      },
+      "opponentCommands": 17,
+      "opponentAverageLatencyMs": 2,
+      "roleLatencyMs": {
+        "gk": 604,
+        "def": 826,
+        "mid": 937,
+        "fwd1": 815,
+        "fwd2": 888
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Two issued RESET commands violate the saved schema-clean prompts, which exclude RESET from the positive command list and explicitly prohibit it. Actual live payload/role source was not recovered; no cause is established.",
+        "First M8 sample; no isolated formation-strength conclusion."
+      ],
+      "initiation": "manual auto-matched by normal Find after verified M8 gate",
+      "evidenceCapturedAtUTC": "2026-10-23T23:51:54.863746+00:00",
+      "overtime": true,
+      "coaching": []
     }
   ],
   "recordingOrder": "Local evidence-capture order; background matches may be appended retrospectively."
