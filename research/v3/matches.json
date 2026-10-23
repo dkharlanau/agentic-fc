@@ -337,6 +337,93 @@
         "Uncontrolled live opponent; one game does not establish a stronger policy.",
         "Zero reported commands and14.263s do not demonstrate model policy execution despite the1:0 win."
       ]
+    },
+    {
+      "id": "live-11",
+      "setup": "unattributed-background",
+      "opponent": "Octopus",
+      "side": "away",
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "shotsFor": 5,
+      "shotsAgainst": 6,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 54,
+      "commands": 335,
+      "averageLatencyMs": 84,
+      "commandCounts": {
+        "MOVE_TO": 247,
+        "INTERCEPT": 34,
+        "PRESS_BALL": 16,
+        "SHOOT": 12,
+        "PASS": 10,
+        "CLEAR_OVERRIDE": 7,
+        "MARK": 6,
+        "GK_DISTRIBUTE": 3
+      },
+      "opponentCommands": 4,
+      "opponentAverageLatencyMs": 1,
+      "roleLatencyMs": {
+        "gk": 89,
+        "def": 82,
+        "mid": 82,
+        "fwd1": 83,
+        "fwd2": 82
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Observed around M3/M4 updates; exact endpoint versions at match initiation not recovered. Exclude from clean setup comparison."
+      ],
+      "initiation": "incoming/background, not manually initiated",
+      "evidenceCapturedAtUTC": "2026-10-23T21:05:24.026424+00:00"
+    },
+    {
+      "id": "live-12",
+      "setup": "unattributed-background",
+      "opponent": "The Drunkards",
+      "side": "away",
+      "goalsFor": 2,
+      "goalsAgainst": 1,
+      "shotsFor": 7,
+      "shotsAgainst": 6,
+      "shotsOnTargetFor": 2,
+      "shotsOnTargetAgainst": 1,
+      "possessionPercent": 52,
+      "commands": 565,
+      "averageLatencyMs": 77,
+      "commandCounts": {
+        "MOVE_TO": 449,
+        "PRESS_BALL": 46,
+        "PASS": 22,
+        "INTERCEPT": 16,
+        "CLEAR_OVERRIDE": 12,
+        "MARK": 11,
+        "SHOOT": 6,
+        "GK_DISTRIBUTE": 3
+      },
+      "opponentCommands": 12,
+      "opponentAverageLatencyMs": 1,
+      "roleLatencyMs": {
+        "gk": 76,
+        "def": 76,
+        "mid": 73,
+        "fwd1": 79,
+        "fwd2": 80
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Observed around M3/M4 updates; exact endpoint versions at match initiation not recovered. Exclude from clean setup comparison."
+      ],
+      "initiation": "incoming/background, not manually initiated",
+      "evidenceCapturedAtUTC": "2026-10-23T21:12:03.737652+00:00"
     }
-  ]
+  ],
+  "recordingOrder": "Local evidence-capture order; background matches may be appended retrospectively."
 }

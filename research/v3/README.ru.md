@@ -51,7 +51,7 @@ Final deployed configuration before final control: H3 strict prompts in compact/
 
 The user's observation was that Fitness worked before the changes. Earlier prompt-only rollback retained temperature=0/maxTokens=256 and therefore was not a full baseline control.
 
-All original prompts are archived in `a0/`. A0 uses Nova 2 Lite, unset inference configuration and Allowed tools `*`, with no Memory/Gateway. The five original prompts include the tactics already present at session start; “A0” does not mean an untouched workshop template.
+Captured A0 prompts are archived in `a0/`; the GK capture was later found to include a UI label, as noted below. A0 uses Nova 2 Lite, unset inference configuration and Allowed tools `*`, with no Memory/Gateway. The five original prompts include the tactics already present at session start; “A0” does not mean an untouched workshop template.
 
 AWS Console does not save a panel with all inference fields cleared: its Save button becomes disabled. Simply clearing the fields and saving the Harness retained the old parameters. Switching the unsaved model-source selection away from Bedrock and back reset the inference configuration. Saved version inspection then confirmed `Inference configs -`, Nova 2 Lite, and All tools (*). No alternative model source or credentials were saved.
 
@@ -154,3 +154,17 @@ The latest verified leaderboard row is rank17,36points,18played/12wins/6losses, 
 Unchanged M3 beat No Context FC1:0 after extra time, but the report recorded0commands and14263ms average. Shots4:5, on target1:0, possession36%:64%. Role latencies11142/18927/18937/11136/11172ms, reported Success100%. The opponent also had0commands at2ms. This win cannot validate the model policy. M3's observed series is6wins/1loss in7games, but runtime/report regimes remain highly variable.
 
 The new zero-command/high-latency result changes the next action: test **A0-M4-context10**, retaining M3's model, prompts, tools, inference and formation while setting the sliding context window to10messages. The actual pre-change value will be recorded from each role rather than assumed. Long context is a hypothesis, not an identified cause. Preserve M3 as the control and inspect the saved configuration and post-reset Fitness before live comparison.
+
+## GK capture correction and M4 comparison limit
+
+Expanding the saved prompt exposed an extraction mistake: GK's captured A0 text included the interface label `Show less`. It was deployed in the historical A0/M1/M2/M3 bundles. Those files remain unchanged as records of what was actually installed; they are not claimed byte-exact copies of the original GK source. The label is removed in `context10/gk.txt`; the other four prompt texts remain identical to no-reset/. M4 therefore changes both context size and GK cleanup. Do not attribute any outcome solely to the context window. The UI label was not established as a cause of Fitness or latency failures.
+
+All five pre-change Messages Count values were observed as150. All five context10 submissions succeeded. An incoming Octopus match and an already completed win against The Drunkards appeared during this update. Their exact configuration attribution is uncertain; record them outside a clean M4 cohort and do not launch another manual match while an incoming live banner is visible.
+
+## Incoming/background records and M4 verification
+
+An incoming away win over Octopus0:1 was observed while the context update was underway:335commands,84ms, possession54%, shots5:6, on target1:0. A retrospectively opened away win over The Drunkards1:2 showed565commands,77ms, possession52%, shots7:6, on target2:1. Both had role-diverse actions, but exact per-role versions at kickoff were not recovered. They are recorded as `unattributed-background`, excluded from the clean M3/M4 comparison. Local liveNN IDs indicate evidence-recording order, not guaranteed kickoff order.
+
+All five M4 saved immutable versions were inspected: Nova2Lite, inference configs unset, sliding_window Messages Count10, and fully expanded prompt text matching context10/ after whitespace normalization. GK12/DEF18/MID14/FWD1 13/FWD2 12. The GK prompt no longer contains the UI label. This verifies configuration, not execution on every live tick. Post-reset Fitness is pending.
+
+Official references support testing the hypothesis but do not prove a latency fix: [AWS Harness memory/truncation](https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness-memory.html) describes retention options; [Harness operations](https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness-operations.html) includes conversation history in model input and documents session compute; the [Strands reference implementation](https://github.com/strands-agents/harness-sdk/blob/main/strands-py/src/strands/agent/conversation_manager/sliding_window_conversation_manager.py) shows routine window management. The exact managed runtime version and any game-side overrides are not established, so effective history size and model latency still require observation.

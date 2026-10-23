@@ -20,6 +20,9 @@
         "fwd2": "316935d5f77602eefbf829a288519d08500a059bdbd9c13cb60bd201d838d5b7",
         "gk": "c6c2ce3e11cd1d61c8873702db02b1fdcaba2f951cf5689f33b9e1cf512effc7",
         "mid": "3f9972eb2c8836055745d1d9bfbd29d460794091cb190fa64d1ccf8e531e6d21"
+      },
+      "captureLimitationByRole": {
+        "gk": "Captured prompt contains an appended Show less UI label. Retained as the text actually deployed in that historical bundle, not claimed byte-exact original."
       }
     },
     {
@@ -102,6 +105,9 @@
         "fwd2": "316935d5f77602eefbf829a288519d08500a059bdbd9c13cb60bd201d838d5b7",
         "gk": "c6c2ce3e11cd1d61c8873702db02b1fdcaba2f951cf5689f33b9e1cf512effc7",
         "mid": "3f9972eb2c8836055745d1d9bfbd29d460794091cb190fa64d1ccf8e531e6d21"
+      },
+      "captureLimitationByRole": {
+        "gk": "Captured prompt contains an appended Show less UI label. Retained as the text actually deployed in that historical bundle, not claimed byte-exact original."
       }
     },
     {
@@ -141,6 +147,9 @@
         "def": "NO_PARSE",
         "fwd1": "failed; detailed code not captured",
         "fwd2": "failed; detailed code not captured"
+      },
+      "captureLimitationByRole": {
+        "gk": "Captured prompt contains an appended Show less UI label. Retained as the text actually deployed in that historical bundle, not claimed byte-exact original."
       }
     },
     {
@@ -174,10 +183,13 @@
         "activePercent": 100,
         "reportedAverageLatencyMs": 0,
         "latencyLimitations": "Not an end-to-end model-latency measurement."
+      },
+      "captureLimitationByRole": {
+        "gk": "Captured prompt contains an appended Show less UI label. Retained as the text actually deployed in that historical bundle, not claimed byte-exact original."
       }
     },
     {
-      "promptDirectory": "no-reset",
+      "promptDirectory": "context10",
       "model": "global.amazon.nova-2-lite-v1:0",
       "inferenceConfig": null,
       "allowedToolsByRole": {
@@ -194,18 +206,36 @@
         "def": "bcc6d48b45c66f0536b0dc29f2b921d588ca626773e0c289b57043e381b315cd",
         "fwd1": "17eb6139aeddb48886a4313a9687c8cec82fb838762ce64202cb3f7de0ec4337",
         "fwd2": "ab845ad731540fcc64ad90df2053935d39d46cac3fabc937f6de6644198ca69d",
-        "gk": "44b6d73ce3946c7ae2b2b02b6070ca1b0b062739a0b41afc56665f16939881b3",
+        "gk": "ad119756cf2033348e8d0ab4a542f1f4e3a8ae9243b0710999f773fd2420c545",
         "mid": "24dc79b9dc88ba837726a6ef81e2a084c524734a3b0c0b0148af602bc62e4271"
       },
       "id": "A0-M4-context10",
       "parent": "A0-M3-no-reset-no-tools",
-      "status": "installation_in_progress",
+      "status": "saved_configuration_verified_pending_fitness",
       "truncation": {
         "strategy": "sliding_window",
         "messagesCount": 10
       },
-      "singleFactor": "Set sliding-window Messages Count to10 on all roles; retain model, prompts, tools, inference and formation.",
-      "hypothesis": "Bound repeated state history; test latency and issued commands, not just match result."
+      "hypothesis": "Bound repeated state history; test latency and issued commands, not just match result.",
+      "changedFactors": [
+        "Set sliding-window Messages Count from150to10 on all roles.",
+        "Remove an accidentally captured Show less UI label from the GK prompt."
+      ],
+      "comparisonLimitation": "Two changes; do not attribute outcomes exclusively to context size.",
+      "verifiedPreviousMessagesCountByRole": {
+        "gk": 150,
+        "def": 150,
+        "mid": 150,
+        "fwd1": 150,
+        "fwd2": 150
+      },
+      "verification": {
+        "allFiveWindows": 10,
+        "model": "global.amazon.nova-2-lite-v1:0",
+        "inferenceConfigsUnset": true,
+        "normalizedRenderedPromptMatchesSource": true,
+        "promptByteEqualityNotClaimed": true
+      }
     }
   ]
 }
