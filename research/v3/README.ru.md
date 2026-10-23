@@ -238,3 +238,9 @@ A normal Find opponent click in a second portal tab, while the first game was vi
 Next candidate A0-M7-formation121 changes only starting formation relative to M6, from2-0-2 to1-2-1. Hypothesis: more central starting presence and an earlier passing link. The models, prompts and Harness versions remain identical to M6. Formation selector was cycled to1-2-1 and Done; profile showed1-2-1 afterward. Reload verification and UI Fitness are pending. Intermediate animated selector labels are not a complete formation catalog.
 
 **M7 formation1-2-1 persisted after profile reload and passed UI Fitness5/5**:5commands100%active0ms,portal fourNova/oneHaiku labels verified. No Harness configuration changed, so this formation-only check did not repeat the earlier scrimmage-session reset. It is a UI gate, not proof of new model generation. First manual M7 live match was requested after these checks.
+
+## Live22 first M7:2:0 Agentic United1
+
+Find opponent now exposed a READY/NOTREADY/INMATCH list with Surprise me. Agentic United1 was enabled and selected; the actual LIVE header confirmed the same opponent. A clicked Find can be an intermediate selector, not a started game.
+
+First M7 match won2:0:shots4:3,on target2:0,possession55%,370commands425ms. MOVE_TO162,MARK69,PRESS_BALL68,INTERCEPT29,PASS19,CLEAR_OVERRIDE13,SHOOT8,GK_DISTRIBUTE2;RESET0. Role latencies459/448/435/447/438ms,reportedSuccess100%. This is a role-diverse issued-command report and a useful repeat-opponent reference. M3 previously beat the same name1:0and2:0, but its other settings and date differ; no isolated formation-strength conclusion is established. FWD2's438ms report does not prove per-tick Haiku inference. Keep M7 unchanged for repeat controls.

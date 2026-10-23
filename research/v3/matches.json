@@ -765,6 +765,49 @@
       ],
       "initiation": "manual unchanged M6",
       "evidenceCapturedAtUTC": "2026-10-23T22:32:38.108766+00:00"
+    },
+    {
+      "id": "live-22",
+      "setup": "A0-M7-formation121",
+      "opponent": "Agentic United 1",
+      "side": "home",
+      "goalsFor": 2,
+      "goalsAgainst": 0,
+      "shotsFor": 4,
+      "shotsAgainst": 3,
+      "shotsOnTargetFor": 2,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 55,
+      "commands": 370,
+      "averageLatencyMs": 425,
+      "commandCounts": {
+        "MOVE_TO": 162,
+        "MARK": 69,
+        "PRESS_BALL": 68,
+        "INTERCEPT": 29,
+        "PASS": 19,
+        "CLEAR_OVERRIDE": 13,
+        "SHOOT": 8,
+        "GK_DISTRIBUTE": 2
+      },
+      "opponentCommands": 20,
+      "opponentAverageLatencyMs": 2,
+      "roleLatencyMs": {
+        "gk": 459,
+        "def": 448,
+        "mid": 435,
+        "fwd1": 447,
+        "fwd2": 438
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Prior same-name M3 controls differ in multiple settings and time; this first win does not isolate a formation effect. Report FWD2 latency438ms does not establish per-tick Haiku inference."
+      ],
+      "initiation": "manual selected READY opponent; actual viewer header matched selection",
+      "evidenceCapturedAtUTC": "2026-10-23T22:42:50.612652+00:00"
     }
   ],
   "recordingOrder": "Local evidence-capture order; background matches may be appended retrospectively."
