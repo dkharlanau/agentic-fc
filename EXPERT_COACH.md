@@ -31,6 +31,7 @@
 - [HANDOFF.md](HANDOFF.md) — актуальный план, ограничения и указатель на checkpoint; более поздняя датированная запись важнее старой исторической заметки.
 - [Журнал живых матчей](research/v3/matches.json), [серия 01](research/v3/ranked-batch-01.json), [снимки таблицы и сводка сессии](research/v3/run-20261024-sixhours.json).
 - [Тренировочные матчи](research/v3/practice-matches.json), [конфигурации](research/v3/setups.json), [история Runtime](research/v3/runtime-r1.json), [аудит сторон](research/v3/side-audit-20261024.json).
+- [Предложения по статистике](STATISTICS_PROPOSALS.md) — разбор live-53–live-72 и предложения S01–S07 к C01–C03; рассмотреть после текущей серии, без её перезапуска.
 - [Исходный FWD1](research/v3/schema-clean/fwd1.txt), [FWD2](research/v3/schema-clean/fwd2.txt), [GK](research/v3/schema-clean/gk.txt), [анализ счётчиков ударов](research/v3/shots-analysis.json).
 
 Каждое значимое утверждение помечать по смыслу: **наблюдение**, **расчёт**, **гипотеза** или **неизвестно**. Прикладывать путь, диапазон матчей и время/коммит источника. `AI Overview`, комментарий к игре и название коммита не заменяют первичные данные. Старое число не называть текущим.
