@@ -1,0 +1,27 @@
+{
+  "kind": "bounded autonomous run",
+  "startedAtUTC": "2026-10-24T05:53:07Z",
+  "deadlineUTC": "2026-10-24T11:53:07Z",
+  "stopNewMatchesUTC": "2026-10-24T11:43:07Z",
+  "automaticShutdown": false,
+  "initialLeaderboard": {
+    "rank": 10,
+    "played": 51,
+    "wins": 35,
+    "draws": 1,
+    "losses": 15,
+    "goalsFor": 74,
+    "goalsAgainst": 38,
+    "points": 106
+  },
+  "initialSetup": "A0-M7-formation121",
+  "currentTrial": "A0-M9-memory-fwd1",
+  "priorities": [
+    "Preserve portable exact five-role AWS setup before workshop reset",
+    "Validate STM on one role, inspect actual input contract where available",
+    "Experiment serially, report primary statistics and preserve rejected ideas"
+  ],
+  "status": "running",
+  "recoveryKit": "recovery/README.ru.md",
+  "completedReports": []
+}

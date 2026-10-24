@@ -354,7 +354,7 @@
         "commands": 5,
         "activePercent": 100,
         "reportedAverageLatencyMs": 0,
-        "portalFwd2ModelLabel": "Allowed \u00b7 claude-haiku-4-5-20251001-v1:0",
+        "portalFwd2ModelLabel": "Allowed · claude-haiku-4-5-20251001-v1:0",
         "limitation": "UI gate and final model label verified after session-stop procedure;0ms does not demonstrate fresh generation or model speed for all roles."
       }
     },
@@ -415,7 +415,7 @@
         "commands": 5,
         "activePercent": 100,
         "reportedAverageLatencyMs": 0,
-        "portalFwd2ModelLabel": "Allowed \u00b7 claude-haiku-4-5-20251001-v1:0",
+        "portalFwd2ModelLabel": "Allowed · claude-haiku-4-5-20251001-v1:0",
         "sessionResetBeforeThisCheck": false,
         "limitation": "Formation-only change; unchanged Harness configuration inherited M6. UI gate verified, not proof of new generation or real model speed."
       },
@@ -523,7 +523,7 @@
         "commands": 5,
         "activePercent": 100,
         "reportedAverageLatencyMs": 0,
-        "portalFwd2ModelLabel": "Allowed \u00b7 claude-haiku-4-5-20251001-v1:0",
+        "portalFwd2ModelLabel": "Allowed · claude-haiku-4-5-20251001-v1:0",
         "sessionResetBeforeThisCheck": false,
         "limitation": "Formation-only change; unchanged Harness configuration inherited M7. UI gate verified, not proof of new generation or real model speed.",
         "finalCheck": {
@@ -537,6 +537,119 @@
           "limitation": "Unchanged configuration; UI gate only, not proof of new generation or model speed."
         }
       }
+    },
+    {
+      "promptDirectory": "schema-clean",
+      "inferenceConfig": null,
+      "allowedToolsByRole": {
+        "gk": [],
+        "def": [],
+        "mid": [],
+        "fwd1": [],
+        "fwd2": []
+      },
+      "gateway": null,
+      "formation": "1-2-1",
+      "promptSha256": {
+        "def": "86426b2320f5e40e444ebe553b0827b3707ff6f5cd22599478f71e5391c838d9",
+        "fwd1": "ee4c92203e6fcbc86d14329913933ba68d8cd2092947bebd2c66d5ed14c17b15",
+        "fwd2": "03ed589df3ebe560294ac54966bfc27156aa27391c8079dae5aab93ba096a13f",
+        "gk": "43a75e8e85225b14879c7c9b839a7f8b3e5d056d8a841a1a4019b8fc8263cd36",
+        "mid": "7b05fe872d47c532c374390642006759924d84048a61577bf4f3a9bba400c729"
+      },
+      "truncation": {
+        "strategy": "sliding_window",
+        "messagesCount": 10
+      },
+      "modelByRole": {
+        "gk": "global.amazon.nova-2-lite-v1:0",
+        "def": "global.amazon.nova-2-lite-v1:0",
+        "mid": "global.amazon.nova-2-lite-v1:0",
+        "fwd1": "global.amazon.nova-2-lite-v1:0",
+        "fwd2": "global.anthropic.claude-haiku-4-5-20251001-v1:0"
+      },
+      "id": "A0-M9-memory-fwd1",
+      "parent": "A0-M7-formation121",
+      "status": "native_canary_2_of_2_and_ui_fitness_5_of_5_live_trial",
+      "changed": [
+        "FWD1 Memory: disabled -> shared logical STM resource NHITLMatchMemory, actor fwd1, messagesCount10; no other behavioral field changed in GetHarness v14/v15 comparison"
+      ],
+      "awsVersionByRole": {
+        "gk": 13,
+        "def": 19,
+        "mid": 15,
+        "fwd1": 15,
+        "fwd2": 14
+      },
+      "memory": {
+        "resourceName": "NHITLMatchMemory",
+        "eventExpiryDurationDays": 3,
+        "longTermStrategies": [],
+        "attachedRoles": {
+          "fwd1": {
+            "actorId": "fwd1",
+            "messagesCount": 10
+          }
+        },
+        "otherRoles": "explicitly disabled"
+      },
+      "fitness": {
+        "passedPositions": 5,
+        "totalPositions": 5,
+        "commands": 5,
+        "activePercent": 100,
+        "reportedAverageLatencyMs": 0,
+        "capturedAtUTC": "2026-10-24T06:20:30Z",
+        "sessionResetBeforeThisCheck": "Only observed FWD1 scrimmage pos3 stopped after v15 save; other roles unchanged",
+        "limitation": "UI readiness gate, not proof of new generation or real inference speed"
+      },
+      "nativeCanary": {
+        "model": "global.amazon.nova-2-lite-v1:0",
+        "strictJsonPasses": 2,
+        "cases": 2,
+        "turns": [
+          {
+            "fixture": "home clear shot",
+            "command": "SHOOT",
+            "latencyMs": 635,
+            "inputTokens": 1751,
+            "outputTokens": 33
+          },
+          {
+            "fixture": "home teammate possession after stop/reopen of same session",
+            "command": "MOVE_TO",
+            "latencyMs": 690,
+            "inputTokens": 2502,
+            "outputTokens": 36
+          }
+        ],
+        "memoryApiEventCountAfterFirstTurn": 6,
+        "limitations": [
+          "Own synthetic fixture session, not a live match state.",
+          "Memory API write evidence and same-session successful second command do not establish cross-match tactical learning."
+        ]
+      },
+      "verification": {
+        "source": "Read-only AWS CLI GetHarness exports via CloudShell",
+        "capturedAtUTC": "2026-10-24T06:10:45Z",
+        "allFiveSystemPromptsByteExact": true,
+        "fwd1Version14To15BehavioralDiff": [
+          "memory"
+        ],
+        "environment": {
+          "networkMode": "PUBLIC",
+          "idleRuntimeSessionTimeout": 900,
+          "maxLifetime": 28800
+        },
+        "maxIterations": 75,
+        "timeoutSeconds": 3600,
+        "maxTokens": "not set",
+        "tools": [],
+        "skills": [],
+        "hooks": "absent",
+        "executionRole": "unchanged; private binding excluded"
+      },
+      "recoveryBundle": "recovery/bundle.json"
     }
   ]
 }

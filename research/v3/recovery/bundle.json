@@ -1,0 +1,238 @@
+{
+  "schemaVersion": 1,
+  "capturedAtUTC": "2026-10-24T06:10:45Z",
+  "source": "Read-only GetHarness and GetMemory export from the running workshop; generated identifiers excluded.",
+  "region": "us-east-1",
+  "formation": "1-2-1",
+  "profiles": {
+    "baseline-m7": {
+      "setup": "A0-M7-formation121",
+      "memoryRoles": []
+    },
+    "memory-fwd1-m9": {
+      "setup": "A0-M9-memory-fwd1",
+      "memoryRoles": [
+        "fwd1"
+      ],
+      "status": "trial; native JSON canary passed 2/2, portal Fitness 5/5, live validation pending"
+    }
+  },
+  "memory": {
+    "name": "NHITLMatchMemory",
+    "eventExpiryDuration": 3,
+    "memoryStrategies": [],
+    "actorIdByRole": {
+      "fwd1": "fwd1"
+    },
+    "messagesCount": 10
+  },
+  "roles": {
+    "gk": {
+      "harnessName": "ai_gk_agent",
+      "sourceVersion": "13",
+      "promptFile": "../schema-clean/gk.txt",
+      "promptSha256": "43a75e8e85225b14879c7c9b839a7f8b3e5d056d8a841a1a4019b8fc8263cd36",
+      "configuration": {
+        "model": {
+          "bedrockModelConfig": {
+            "modelId": "global.amazon.nova-2-lite-v1:0",
+            "apiFormat": "converse_stream"
+          }
+        },
+        "tools": [],
+        "skills": [],
+        "allowedTools": [],
+        "environmentVariables": {},
+        "truncation": {
+          "strategy": "sliding_window",
+          "config": {
+            "slidingWindow": {
+              "messagesCount": 10
+            }
+          }
+        },
+        "maxIterations": 75,
+        "timeoutSeconds": 3600,
+        "environment": {
+          "agentCoreRuntimeEnvironment": {
+            "lifecycleConfiguration": {
+              "idleRuntimeSessionTimeout": 900,
+              "maxLifetime": 28800
+            },
+            "networkConfiguration": {
+              "networkMode": "PUBLIC"
+            },
+            "filesystemConfigurations": []
+          }
+        }
+      }
+    },
+    "def": {
+      "harnessName": "ai_def_agent",
+      "sourceVersion": "19",
+      "promptFile": "../schema-clean/def.txt",
+      "promptSha256": "86426b2320f5e40e444ebe553b0827b3707ff6f5cd22599478f71e5391c838d9",
+      "configuration": {
+        "model": {
+          "bedrockModelConfig": {
+            "modelId": "global.amazon.nova-2-lite-v1:0",
+            "apiFormat": "converse_stream"
+          }
+        },
+        "tools": [],
+        "skills": [],
+        "allowedTools": [],
+        "environmentVariables": {},
+        "truncation": {
+          "strategy": "sliding_window",
+          "config": {
+            "slidingWindow": {
+              "messagesCount": 10
+            }
+          }
+        },
+        "maxIterations": 75,
+        "timeoutSeconds": 3600,
+        "environment": {
+          "agentCoreRuntimeEnvironment": {
+            "lifecycleConfiguration": {
+              "idleRuntimeSessionTimeout": 900,
+              "maxLifetime": 28800
+            },
+            "networkConfiguration": {
+              "networkMode": "PUBLIC"
+            },
+            "filesystemConfigurations": []
+          }
+        }
+      }
+    },
+    "mid": {
+      "harnessName": "ai_mid_agent",
+      "sourceVersion": "15",
+      "promptFile": "../schema-clean/mid.txt",
+      "promptSha256": "7b05fe872d47c532c374390642006759924d84048a61577bf4f3a9bba400c729",
+      "configuration": {
+        "model": {
+          "bedrockModelConfig": {
+            "modelId": "global.amazon.nova-2-lite-v1:0",
+            "apiFormat": "converse_stream"
+          }
+        },
+        "tools": [],
+        "skills": [],
+        "allowedTools": [],
+        "environmentVariables": {},
+        "truncation": {
+          "strategy": "sliding_window",
+          "config": {
+            "slidingWindow": {
+              "messagesCount": 10
+            }
+          }
+        },
+        "maxIterations": 75,
+        "timeoutSeconds": 3600,
+        "environment": {
+          "agentCoreRuntimeEnvironment": {
+            "lifecycleConfiguration": {
+              "idleRuntimeSessionTimeout": 900,
+              "maxLifetime": 28800
+            },
+            "networkConfiguration": {
+              "networkMode": "PUBLIC"
+            },
+            "filesystemConfigurations": []
+          }
+        }
+      }
+    },
+    "fwd1": {
+      "harnessName": "ai_fwd1_agent",
+      "sourceVersion": "15",
+      "promptFile": "../schema-clean/fwd1.txt",
+      "promptSha256": "ee4c92203e6fcbc86d14329913933ba68d8cd2092947bebd2c66d5ed14c17b15",
+      "configuration": {
+        "model": {
+          "bedrockModelConfig": {
+            "modelId": "global.amazon.nova-2-lite-v1:0",
+            "apiFormat": "converse_stream"
+          }
+        },
+        "tools": [],
+        "skills": [],
+        "allowedTools": [],
+        "environmentVariables": {},
+        "truncation": {
+          "strategy": "sliding_window",
+          "config": {
+            "slidingWindow": {
+              "messagesCount": 10
+            }
+          }
+        },
+        "maxIterations": 75,
+        "timeoutSeconds": 3600,
+        "environment": {
+          "agentCoreRuntimeEnvironment": {
+            "lifecycleConfiguration": {
+              "idleRuntimeSessionTimeout": 900,
+              "maxLifetime": 28800
+            },
+            "networkConfiguration": {
+              "networkMode": "PUBLIC"
+            },
+            "filesystemConfigurations": []
+          }
+        }
+      }
+    },
+    "fwd2": {
+      "harnessName": "ai_fwd2_agent",
+      "sourceVersion": "14",
+      "promptFile": "../schema-clean/fwd2.txt",
+      "promptSha256": "03ed589df3ebe560294ac54966bfc27156aa27391c8079dae5aab93ba096a13f",
+      "configuration": {
+        "model": {
+          "bedrockModelConfig": {
+            "modelId": "global.anthropic.claude-haiku-4-5-20251001-v1:0",
+            "apiFormat": "converse_stream"
+          }
+        },
+        "tools": [],
+        "skills": [],
+        "allowedTools": [],
+        "environmentVariables": {},
+        "truncation": {
+          "strategy": "sliding_window",
+          "config": {
+            "slidingWindow": {
+              "messagesCount": 10
+            }
+          }
+        },
+        "maxIterations": 75,
+        "timeoutSeconds": 3600,
+        "environment": {
+          "agentCoreRuntimeEnvironment": {
+            "lifecycleConfiguration": {
+              "idleRuntimeSessionTimeout": 900,
+              "maxLifetime": 28800
+            },
+            "networkConfiguration": {
+              "networkMode": "PUBLIC"
+            },
+            "filesystemConfigurations": []
+          }
+        }
+      }
+    }
+  },
+  "limitations": [
+    "No IAM roles or policies are included or created. Supply an already authorized role from the new workshop.",
+    "Old generated resource ARNs and runtime IDs must not be reused.",
+    "No raw Memory events, credentials, portal codes or private account identifiers are in this bundle.",
+    "Offline SDK validation is not a successful fresh-account deployment.",
+    "STM retains session context for three days; it does not establish cross-match learning."
+  ]
+}
