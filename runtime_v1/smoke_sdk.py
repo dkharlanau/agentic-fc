@@ -1,4 +1,4 @@
-"""Offline SDK HTTP/shape smoke using fake clients; makes no AWS calls."""
+"""Offline SDK generator/shape smoke using fake clients; makes no AWS calls."""
 import asyncio
 import json
 import os
@@ -8,7 +8,6 @@ from unittest.mock import patch
 
 from botocore.session import get_session
 from botocore.validate import validate_parameters
-from starlette.requests import Request
 from runtime_v1 import main
 from runtime_v1.core import DecisionEngine
 
@@ -43,27 +42,16 @@ async def smoke():
     context = SimpleNamespace(session_id='00000000-0000-0000-0000-000000000001')
     with patch('boto3.client', side_effect=AssertionError('Unexpected AWS client creation')), \
             patch.object(main.app.logger, 'info'):
-        command = await main.invoke(json.loads(case['modelText']), context)
+        chunks = [chunk async for chunk in main.invoke(json.loads(case['modelText']), context)]
+    assert len(chunks) == 1
+    command = json.loads(chunks[0])
     assert command[0]['teamId'] == 1 and command[0]['commandType'] == 'SHOOT'
     assert len(main._memory.calls) == 1
     assert main._memory.calls[0]['sessionId'] == context.session_id
     stored = main._memory.calls[0]['payload'][1]['conversational']
     assert stored['role'] == 'ASSISTANT'
     assert json.loads(stored['content']['text'])['audit']['outcome'] == 'model_choice'
-    body = case['modelText'].encode()
-    async def receive():
-        return {'type': 'http.request', 'body': body, 'more_body': False}
-    request = Request({'type': 'http', 'method': 'POST', 'path': '/invocations',
-                       'headers': [(b'content-type', b'application/json'),
-                                   (b'x-amzn-bedrock-agentcore-runtime-session-id', context.session_id.encode())]},
-                      receive)
-    with patch('boto3.client', side_effect=AssertionError('Unexpected AWS client creation')), \
-            patch.object(main.app.logger, 'info'):
-        response = await main.app._handle_invocation(request)
-    assert response.status_code == 200
-    assert response.media_type == 'application/json'
-    assert json.loads(response.body)[0]['commandType'] == 'SHOOT'
-    print('OFFLINE fake-client SDK HTTP smoke passed: application/json array, AWAY command and shape-valid sampled event; no AWS calls')
+    print('OFFLINE fake-client SDK smoke passed: one streamed AWAY command and shape-valid sampled event; no AWS calls')
 
 
 if __name__ == '__main__':

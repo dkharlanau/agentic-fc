@@ -67,8 +67,7 @@ def memory_sample(payload, commands, audit, session_id):
 
 @app.entrypoint
 async def invoke(payload, context):
-    # A single decision needs one JSON array, not an SSE frame containing a
-    # second JSON string. Keep model work before the completed HTTP response.
+    # Match the official sample's streaming JSON-string response, including teamId.
     session_id = getattr(context, 'session_id', None) or str(uuid.uuid4())
     try:
         commands, audit = await asyncio.to_thread(engine().choose, payload, session_id)
@@ -84,7 +83,7 @@ async def invoke(payload, context):
     audit['memoryOutcome'] = await asyncio.to_thread(memory_sample, payload, commands, audit, session_id)
     audit['buildCommit'] = os.getenv('BUILD_COMMIT', 'local')
     app.logger.info('NHITL_DECISION ' + json.dumps(audit, separators=(',', ':')))
-    return commands
+    yield json.dumps(commands, separators=(',', ':'), allow_nan=False)
 
 
 if __name__ == '__main__':

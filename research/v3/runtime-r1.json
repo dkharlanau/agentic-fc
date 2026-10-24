@@ -1,6 +1,6 @@
 {
   "kind": "Independent Runtime FWD1 pilot; public-safe evidence summary",
-  "status": "AWSv5 READY; five native cases, UI Fitness5/5 and live model choices verified; no strength improvement established",
+  "status": "AWSv6 ready but portalFitness rejected; exactv5 rollback prepared as next runtime version",
   "initialSourceCommit": "7ae12c1e737992f83a10ff5c2cf1497cb2580764",
   "initialArchiveSha256": "21ed279d4831546ff58e0ce3c91744e1d47b4cb5fbcff8ae4e970ba1489274e3",
   "reproducibility": "Local macOS cross-build and CloudShell Linux build produced identical archive SHA256,20610262bytes,2731files",
@@ -124,9 +124,19 @@
     },
     "transportHypothesis": "SDK emits SSE containing a JSON string for async-generator yield json.dumps. Testing one completed application/json array response without tactical changes. Server consumer behavior not accessible.",
     "revision6Candidate": {
-      "status": "LocalHTTPshape check and30core checks passed; not deployed",
+      "status": "Rejected: portal Fitness4/5, FWD1 NO_PARSE",
       "onlyBehaviorChange": "Response transport, retaining v5 decision policy",
-      "archiveSha256": "0114a5a4f2489b9cc021e8ff7730aa7c2c817a3631ef2ead167b6a3f37d387c3"
-    }
+      "archiveSha256": "0114a5a4f2489b9cc021e8ff7730aa7c2c817a3631ef2ead167b6a3f37d387c3",
+      "nativeCases": 5,
+      "nativeElapsedMs": [
+        4097,
+        3010,
+        3463,
+        4115,
+        3398
+      ],
+      "portalMessage": "Return a JSON array on the last data line of the SSE stream; use BedrockAgentCoreApp and yield json.dumps(commands)."
+    },
+    "conclusion": "Completed application/json response is not accepted by portal Fitness. Native decoding gate alone was insufficient. Restore exact v5 SSE and continue separate Harness live-routing audit."
   }
 }
