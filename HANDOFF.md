@@ -1,5 +1,56 @@
 # Agentic FC continuation
 
+## P0 OWNER DIRECTIVE — PLAY FIVE LIVE MATCHES, THEN ANALYZE (24 Oct 2026)
+
+**Read first on resume. This is the owner's newer priority and overrides the
+older one-game-at-a-time experiment instructions in "Next useful work" and
+timestamped notes below.** See [GitHub Issue #6](https://github.com/dkharlanau/agentic-fc/issues/6).
+Do not assume an Issue/PR comment automatically reached the active Codex run.
+
+**Execution loop during the EXISTING authorized session:**
+
+1. **Finish any already running live match first** without altering agents,
+   configuration or game sessions. Respect portal rules and do not run parallel
+   matchmaking. Determine which portal mode actually counts toward the ranking.
+2. Capture an actual **fresh timestamped leaderboard** (rank, points, W/D/L,
+   games played), recent ranked-match history and the exact five-role setup.
+   Save raw screenshots/private identifiers only in ignored `.local/`.
+3. Use a **single verified stable lineup** — original M8 (five original M7
+   Harness roles, formation 1-1-2, Fitness 5/5), unless an objectively better
+   lineup is *already* verified. **Play FIVE completed real leaderboard-eligible
+   matches against other teams consecutively with exactly that lineup.**
+   Do not change prompts/models/GK/FWD1/formation/Runtime within the block.
+4. **Between matches:** only note opponent, HOME/AWAY, outcome, score and
+   available primary stats; start the next eligible match promptly. **No
+   deep postmortem, synthetic tactical rounds, new prompt, redeploy, Practice
+   or model benchmark after each ordinary win or defeat.**
+5. **After all five completed matches:** refresh the leaderboard screenshot.
+   Analyze the entire 5-match block ONCE: change in rank/points, W/D/L,
+   aggregate goals and shots, recurring weaknesses, and reliability. Decide
+   whether to retain setup or test **at most one measured tactical change**
+   for the NEXT block, keeping the previous stable setup as rollback.
+6. Repeat another five-match block (aim for 10–15 additional ranked games
+   overall) if scheduling, access and event constraints permit. When the
+   authorized match-start cutoff arrives, stop starting new matches; summarize
+   any partial block honestly. Never extend the authorized window on your own.
+
+**Only interrupt a five-game block for a critical error or rule issue:**
+Fitness/NO_PARSE/JSON failure, wrong team/player mapping, unsafe commands,
+broken live portal/resources or similar serious reliability failure. A
+normal match loss is **not** a reason to interrupt the cohort.
+
+**Deliverable:** short sanitized per-batch report under `research/v3/` showing
+time, setup, five results, **fresh before/after leaderboard** and changes in
+rank/points; link it from Issue #6 / PR #5. Keep Practice and diagnostics
+separate from live/ranked matches. Do not fabricate screenshots, metrics or
+game completions. If the portal cannot be accessed, record that blocker.
+
+**Until the first batch is complete, defer optional v13/Practice07,
+20-case model rounds and further keeper/forward diagnostics**, except when
+needed to repair a critical game failure. User's objective is to gain
+tournament points through playing more opponents, not to endlessly tune
+between matches.
+
 Same active goal: prepare a fast, reliable tournament team through real matches,
 critical self-interview rounds and reproducible Git history. Work autonomously.
 
