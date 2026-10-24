@@ -1,0 +1,287 @@
+[
+  {
+    "alias": "real-only-01",
+    "summary": {
+      "count": 79,
+      "computeMedianMs": 0.414211,
+      "computeP95Ms": 0.469446,
+      "computeMaxMs": 0.534907,
+      "commands": {
+        "CLEAR_OVERRIDE": 36,
+        "SET_STANCE": 42,
+        "PASS": 1
+      },
+      "reasons": {
+        "MALFORMED_POSITION": 1,
+        "UNKNOWN_POSSESSION": 18,
+        "ROLE_SUPPORT": 15,
+        "ENGINE_RESTART": 16,
+        "KEEP_SHAPE": 27,
+        "NO_SAFE_OUTLET": 1,
+        "SAFE_OUTLET": 1
+      },
+      "frames": {
+        "missing": 1,
+        "keeper_reference_xz": 78
+      },
+      "modelCalls": 0,
+      "buildCommits": [
+        "8b31760"
+      ]
+    },
+    "supportModes": {
+      "missing": 1,
+      "stance": 78
+    },
+    "energy": {
+      "count": 78,
+      "minimum": 0.21752375,
+      "median": 1,
+      "lateMedian": 1,
+      "end": 0.86852556
+    },
+    "actions": {
+      "missing": 1,
+      "FindOpenSpace": 13,
+      "ChaseBall": 20,
+      "InterceptBallCarrier": 5,
+      "AdvanceToGoalWithBall": 3,
+      "MoveToTarget": 12,
+      "CoverZone": 11,
+      "StayNearGoal": 7,
+      "MarkNearestOpponent": 7
+    }
+  },
+  {
+    "alias": "real-only-02",
+    "summary": {
+      "count": 108,
+      "computeMedianMs": 0.404717,
+      "computeP95Ms": 0.484565,
+      "computeMaxMs": 1.013838,
+      "commands": {
+        "CLEAR_OVERRIDE": 61,
+        "SET_STANCE": 42,
+        "INTERCEPT": 2,
+        "PASS": 2,
+        "PRESS_BALL": 1
+      },
+      "reasons": {
+        "MALFORMED_POSITION": 1,
+        "ROLE_SUPPORT": 20,
+        "UNKNOWN_POSSESSION": 31,
+        "KEEP_SHAPE": 22,
+        "ENGINE_RESTART": 28,
+        "NEAREST_FREE_BALL": 2,
+        "SAFE_OUTLET": 2,
+        "SINGLE_LOCAL_PRESS": 1,
+        "NO_SAFE_OUTLET": 1
+      },
+      "frames": {
+        "missing": 1,
+        "keeper_reference_xz": 107
+      },
+      "modelCalls": 0,
+      "buildCommits": [
+        "8b31760"
+      ]
+    },
+    "supportModes": {
+      "missing": 1,
+      "stance": 107
+    },
+    "energy": {
+      "count": 107,
+      "minimum": 0,
+      "median": 0.85256875,
+      "lateMedian": 0.96665037,
+      "end": 1
+    },
+    "actions": {
+      "missing": 1,
+      "FindOpenSpace": 15,
+      "CoverZone": 7,
+      "ChaseBall": 35,
+      "InterceptBallCarrier": 13,
+      "PressureBallCarrier": 3,
+      "MoveToTarget": 16,
+      "AdvanceToGoalWithBall": 5,
+      "TackleBall": 1,
+      "MarkNearestOpponent": 4,
+      "StayNearGoal": 7,
+      "MoveToPredictedBall": 1
+    }
+  },
+  {
+    "alias": "real-only-03",
+    "summary": {
+      "count": 67,
+      "computeMedianMs": 0.542689,
+      "computeP95Ms": 0.677764,
+      "computeMaxMs": 1.296599,
+      "commands": {
+        "CLEAR_OVERRIDE": 36,
+        "SET_STANCE": 25,
+        "PASS": 3,
+        "PRESS_BALL": 2,
+        "INTERCEPT": 1
+      },
+      "reasons": {
+        "MALFORMED_POSITION": 1,
+        "KEEP_SHAPE": 24,
+        "UNKNOWN_POSSESSION": 28,
+        "SAFE_OUTLET": 3,
+        "SINGLE_LOCAL_PRESS": 2,
+        "NO_SAFE_OUTLET": 2,
+        "NEAREST_FREE_BALL": 1,
+        "ENGINE_RESTART": 5,
+        "ROLE_SUPPORT": 1
+      },
+      "frames": {
+        "missing": 1,
+        "keeper_reference_xz": 66
+      },
+      "modelCalls": 0,
+      "buildCommits": [
+        "8b31760"
+      ]
+    },
+    "supportModes": {
+      "missing": 1,
+      "stance": 66
+    },
+    "energy": {
+      "count": 66,
+      "minimum": 0,
+      "median": 0.322483735,
+      "lateMedian": 0.3595348,
+      "end": 0.5595084
+    },
+    "actions": {
+      "missing": 1,
+      "ChaseBall": 18,
+      "AdvanceToGoalWithBall": 7,
+      "InterceptBallCarrier": 28,
+      "PressureBallCarrier": 7,
+      "TackleBall": 1,
+      "CoverZone": 3,
+      "ShootAtGoal": 1,
+      "FindOpenSpace": 1
+    }
+  },
+  {
+    "alias": "real-only-04",
+    "summary": {
+      "count": 84,
+      "computeMedianMs": 0.4008985,
+      "computeP95Ms": 0.478613,
+      "computeMaxMs": 0.504249,
+      "commands": {
+        "CLEAR_OVERRIDE": 45,
+        "SET_STANCE": 38,
+        "PRESS_BALL": 1
+      },
+      "reasons": {
+        "MALFORMED_POSITION": 1,
+        "UNKNOWN_POSSESSION": 22,
+        "KEEP_SHAPE": 30,
+        "ROLE_SUPPORT": 8,
+        "ENGINE_RESTART": 21,
+        "NO_SAFE_OUTLET": 1,
+        "SINGLE_LOCAL_PRESS": 1
+      },
+      "frames": {
+        "missing": 1,
+        "keeper_reference_xz": 83
+      },
+      "modelCalls": 0,
+      "buildCommits": [
+        "8b31760"
+      ]
+    },
+    "supportModes": {
+      "missing": 1,
+      "stance": 83
+    },
+    "energy": {
+      "count": 83,
+      "minimum": 0,
+      "median": 0.7296426,
+      "lateMedian": 1,
+      "end": 1
+    },
+    "actions": {
+      "missing": 1,
+      "InterceptBallCarrier": 16,
+      "ChaseBall": 30,
+      "FindOpenSpace": 6,
+      "MoveToPredictedBall": 3,
+      "PressureBallCarrier": 4,
+      "CoverZone": 3,
+      "AdvanceToGoalWithBall": 2,
+      "StayNearGoal": 8,
+      "MoveToTarget": 7,
+      "MarkNearestOpponent": 3,
+      "PassToTeammate": 1
+    }
+  },
+  {
+    "alias": "real-only-05",
+    "summary": {
+      "count": 67,
+      "computeMedianMs": 0.414038,
+      "computeP95Ms": 0.482508,
+      "computeMaxMs": 0.512233,
+      "commands": {
+        "CLEAR_OVERRIDE": 21,
+        "SET_STANCE": 40,
+        "INTERCEPT": 2,
+        "PASS": 3,
+        "PRESS_BALL": 1
+      },
+      "reasons": {
+        "MALFORMED_POSITION": 1,
+        "UNKNOWN_POSSESSION": 14,
+        "KEEP_SHAPE": 30,
+        "NEAREST_FREE_BALL": 2,
+        "SAFE_OUTLET": 3,
+        "ROLE_SUPPORT": 10,
+        "ENGINE_RESTART": 5,
+        "NO_SAFE_OUTLET": 1,
+        "SINGLE_LOCAL_PRESS": 1
+      },
+      "frames": {
+        "missing": 1,
+        "keeper_reference_xz": 66
+      },
+      "modelCalls": 0,
+      "buildCommits": [
+        "8b31760"
+      ]
+    },
+    "supportModes": {
+      "missing": 1,
+      "stance": 66
+    },
+    "energy": {
+      "count": 66,
+      "minimum": 0,
+      "median": 0.426602545,
+      "lateMedian": 0.11776343,
+      "end": 0
+    },
+    "actions": {
+      "missing": 1,
+      "ChaseBall": 24,
+      "PressureBallCarrier": 3,
+      "InterceptBallCarrier": 8,
+      "StayNearGoal": 7,
+      "CoverZone": 3,
+      "MoveToPredictedBall": 2,
+      "AdvanceToGoalWithBall": 4,
+      "FindOpenSpace": 7,
+      "MarkNearestOpponent": 3,
+      "MoveToTarget": 5
+    }
+  }
+]

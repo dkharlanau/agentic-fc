@@ -1,5 +1,34 @@
 # Agentic FC continuation
 
+## Active checkpoint — 24 Oct, 20:43 UTC
+
+Cohort08 COMPLETE5/5:4W1L,9:5goals,32:21shots,+12pts. Table109P62W3D44L,
+146:99,189pts,rank17. See research/v3/allcash-benchmark/COHORT08.md.
+Owner requires FIVE real games/block; no morePractice/Benchmark. Quota20%at20:39,
+check betweenmatches; <=5%stopnewstarts,finalizeallrecovery+verifiedpush.
+Goalactive, hardend02:38:51UTC25Oct; nonewmanualgamesafter02:28:51.
+
+Currentregistered: fastFWD2revision7/source8b31760,stance, fouroriginalM8,112.
+405exactownresponsesconfirm400stance/5malformedbootstrap,0probe-wide/0models/
+0geometryfail. Noactiveprobe/match atlastfinal; check portalREADY beforechanges.
+Native32/32 andFitness5; drilloldsessionmodewasstale, realgamesverifynewmode.
+PhysicalHOMEFWD2movementsupportedtwointervals frompriorcompleteddiagnostic.
+Noautomaticcolumninversion; reportattributionstillunresolved. Fullnative~105ms,
+not10ms. Energy varies; Apocalypseend0butwon. Currentcandidate remainsfallback.
+
+Nextonecandidate(notimplemented): HOMEFWD2nonsprintingoffballoutletposition,
+onlyknownOURSteampossession+validatedframe, keepbaselineAWAY/uncertain/restart.
+Otherfourmodels/roles/112 andonballguards unchanged. Native/Fitnessthen5realgames,
+neverPractice. Rejectunsafecommand/geometryfailure; rollbackrevision7stance.
+Don'tspendwholewindowonlatencyarchaeology; nonewfoundationmodelchosenblindly.
+
+CloudShelltab17reconnected,input123,cwdnhitl-fast-v2,HEADc880ac2; deployed8b31760.
+Privatepilot-v7andcohort08rawtracesunder.local/ranked-batch-08; sanitizedaudits
+exportedlocally. Portalbindings.local/ranked-batch-08/bindings.json; screenshots
+.local/fwd2-control-20261024/. Preserve tabs7/17/16. RecoveryZIP2859a84...all9sources
+match8b31760; manifestcurrent, freshWorkshopcreationuntested. Existingpower/VPN/
+shutdownunchanged. Nextturncontinuegoal; do notmarkcompletefrompositivecohort.
+
 ## Active checkpoint — 24 Oct, 20:14 UTC
 
 Owner now requires **5 real ranked matches per block**, no more Benchmark/Practice.
