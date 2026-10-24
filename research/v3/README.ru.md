@@ -346,3 +346,10 @@ Fifth M8 game won2:0 without coaching/native probes. Shots8:0,on target2:0,posse
 Sixth M8 game won2:0 with no coaching/native probes. Shots7:2,on target2:0,possession33%,329commands824ms. MOVE166,PRESS128,CLEAR16,INTERCEPT14,MARK3,SHOOT2;RESET0. Role latencies645/968/931/629/909ms,reportedSuccess100%. Earlier M7 beat this opponent1:0 with coaching under different conditions; this repeat does not isolate formation or coaching effects. M8 firstsixoutcomes5wins/1draw.
 
 Fresh cumulative table:rank9,88points,42P29W1D12L,goals60:32(+28). The rendered summary snapshot is stored separately in standings.json; our33 observed reports do not cover every account match. Rank is dynamic.
+
+
+## Live34 unchanged M8:1:0 Amber Oars2; rank8/91points
+
+Seventh M8 game won1:0 without coaching/native probes. Shots7:1,on target1:0,possession36%,264commands787ms. PRESS146,MOVE92,CLEAR15,INTERCEPT9,MARK1,SHOOT1;RESET0. Role latencies594/810/909/611/928ms,reportedSuccess100%. M8 firstsevenoutcomes6wins/1draw, still an uncontrolled series.
+
+Fresh table:rank8,91points,43P30W1D12L,goals61:32(+29). It is tied on points with the seventh team but behind on goal difference; do not call it seventh. Summary remains separately stored.

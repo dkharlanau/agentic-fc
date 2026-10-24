@@ -142,6 +142,28 @@
         "points": 88
       },
       "limitation": "Summary and cumulative leaderboard have different displayed scopes/timing. Own observed reports do not cover every account match. Ranking is dynamic."
+    },
+    {
+      "capturedAtUTC": "2026-10-24T00:41:50.127435+00:00",
+      "teamSummary": {
+        "played": 20,
+        "wins": 14,
+        "draws": 1,
+        "losses": 5,
+        "winRatePercent": 70
+      },
+      "leaderboard": {
+        "rank": 8,
+        "played": 43,
+        "wins": 30,
+        "draws": 1,
+        "losses": 12,
+        "goalsFor": 61,
+        "goalsAgainst": 32,
+        "goalDifference": 29,
+        "points": 91
+      },
+      "limitation": "Rendered summary and cumulative table differ in scope/timing. Rank is dynamic, not a guaranteed final placing."
     }
   ]
 }

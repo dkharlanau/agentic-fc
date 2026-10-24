@@ -1279,6 +1279,47 @@
       "initiation": "manual auto-matched by normal Find after verified M8 gate",
       "evidenceCapturedAtUTC": "2026-10-24T00:35:21.787264+00:00",
       "coaching": []
+    },
+    {
+      "id": "live-34",
+      "setup": "A0-M8-formation112",
+      "opponent": "Amber Oars 2",
+      "side": "home",
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "shotsFor": 7,
+      "shotsAgainst": 1,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 36,
+      "commands": 264,
+      "averageLatencyMs": 787,
+      "commandCounts": {
+        "PRESS_BALL": 146,
+        "MOVE_TO": 92,
+        "CLEAR_OVERRIDE": 15,
+        "INTERCEPT": 9,
+        "MARK": 1,
+        "SHOOT": 1
+      },
+      "opponentCommands": 14,
+      "opponentAverageLatencyMs": 3,
+      "roleLatencyMs": {
+        "gk": 594,
+        "def": 810,
+        "mid": 909,
+        "fwd1": 611,
+        "fwd2": 928
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy."
+      ],
+      "initiation": "manual auto-matched by normal Find after verified M8 gate",
+      "evidenceCapturedAtUTC": "2026-10-24T00:41:49.910446+00:00",
+      "coaching": []
     }
   ],
   "recordingOrder": "Local evidence-capture order; background matches may be appended retrospectively."
