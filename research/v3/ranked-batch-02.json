@@ -1,0 +1,32 @@
+{
+  "kind": "five-game ranked live batch",
+  "status": "running",
+  "setup": "A0-M8-formation112-original-fwd1-v16",
+  "coachVersion": "coach-v1.0",
+  "coachSourceCommit": "9e67ead",
+  "before": {
+    "rank": 14,
+    "played": 76,
+    "wins": 47,
+    "draws": 1,
+    "losses": 28,
+    "goalsFor": 107,
+    "goalsAgainst": 63,
+    "goalDifference": 44,
+    "points": 142,
+    "capturedAtUTC": "2026-10-24T14:03:20Z",
+    "source": "Primary portal leaderboard; AX and screenshot saved privately",
+    "captureTimePrecision": "second"
+  },
+  "reports": [],
+  "targetCompleted": 5,
+  "cutoffUTC": "2026-10-24T17:04:05Z",
+  "deadlineUTC": "2026-10-24T17:14:05Z",
+  "activeOpponent": "FC RAM",
+  "activeSide": "away",
+  "activeInitiation": "incoming",
+  "decision": "Retain originalM8 for this entireblock. Nativev14passed but notbound; incomingmatch startedbefore registration, so defer positionPracticeuntilnextboundary. No model/GK/formation/runtimechange duringblock.",
+  "limitations": [
+    "Firstincomingkickoffnotobserved; originalbindings unchanged. Nativecandidate callscompleted before activebannerobserved; exact kickoff overlap unknown."
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "kind": "Independent Runtime FWD1 pilot; public-safe evidence summary",
-  "status": "M8 fiveHarness restored/Fitness5; HOME raw MOVE units/control verified; position-support candidate local",
+  "status": "OriginalfiveM8Harness retained for rankedbatch02; v14READY/native9passed/unregistered",
   "initialSourceCommit": "7ae12c1e737992f83a10ff5c2cf1497cb2580764",
   "initialArchiveSha256": "21ed279d4831546ff58e0ce3c91744e1d47b4cb5fbcff8ae4e970ba1489274e3",
   "reproducibility": "Local macOS cross-build and CloudShell Linux build produced identical archive SHA256,20610262bytes,2731files",
@@ -31,7 +31,7 @@
   "auditObservation": "STM events were written for both probes, but blob objects were returned as map-style strings rather than structured JSON. The initial automated audit gate therefore failed. Revision stores JSON in typed conversational text fields; it needs native revalidation.",
   "limitations": [
     "Native probes are synthetic or replayed, not live outcome evidence",
-    "R1 is registered only on FWD1; original four Harness remain registered",
+    "Historical one-role R1 trials; currently R1 and GK candidates unregistered while originalfiveHarness play rankedbatch02",
     "No IAM changes",
     "Portal report action counts differ from Runtime response counts; application semantics unresolved"
   ],
@@ -383,7 +383,7 @@
     "hypothesis": "Reduce ball-contact confounding and distinguish raw target from normalized target",
     "archiveSha256": "de7dddef3fa44bfa824849d684c0a1ec3d7dc527bd23d31dcfc356467252e2e0",
     "offlineChecks": 40,
-    "nativeGate": "9cases pending",
+    "nativeGate": "9/9passed; own probes stopped",
     "sourceCommit": "88eb47f",
     "nativeElapsedMs": [
       3702,
@@ -417,13 +417,26 @@
     }
   },
   "revision14Candidate": {
-    "status": "Local only",
+    "status": "READY/native9passed; unregistered; fieldPractice deferred for incominglive68 and fixedbatch02",
     "supportMode": "position",
     "model": "global.amazon.nova-2-lite-v1:0",
     "diagnosticProbe": "off",
     "change": "Offball FWD walking role targets and inverse conversion from canonical to verified raw frame; no guessed movement in unresolved frame",
     "archiveSha256": "516464b636877353d137f097bdbb83912423ffe74421402acbba7a0c00faaa90",
     "offlineChecks": 43,
-    "nativeGate": "9cases pending"
+    "nativeGate": "9/9command/model/own-sessioncleanup passed",
+    "sourceCommit": "e11bad6992d499d02437d7f8ba280b8c6b9e0627",
+    "nativeElapsedMs": [
+      3538,
+      3297,
+      4058,
+      4156,
+      3634,
+      3147,
+      3835,
+      3546,
+      4790
+    ],
+    "ownSessionsStopped": true
   }
 }
