@@ -26,12 +26,134 @@
     "goalsAgainst": 99,
     "savedAt": "2026-10-24T20:39:45.843243+00:00"
   },
-  "games": [],
+  "games": [
+    {
+      "alias": "outlet-live-01",
+      "opponent": "L' Espresso",
+      "side": "HOME",
+      "status": "complete",
+      "initiation": "manual random matchmaking",
+      "startedAt": "2026-10-24T20:48:29.002385+00:00",
+      "completedAt": "2026-10-24T20:51:53.973933+00:00",
+      "result": "win",
+      "score": [
+        1,
+        0
+      ],
+      "shots": [
+        3,
+        3
+      ],
+      "possessionPercent": [
+        37,
+        63
+      ],
+      "reportRoleLatencyMs": {
+        "own": [
+          817,
+          1109,
+          899,
+          895,
+          778
+        ],
+        "opponent": [
+          3,
+          3,
+          2,
+          2,
+          68
+        ]
+      },
+      "successPercent": 100,
+      "reportAverageLatencyMs": [
+        879,
+        14
+      ],
+      "reportCommands": {
+        "own": {
+          "PRESS_BALL": 204,
+          "MOVE_TO": 60,
+          "MARK": 23,
+          "INTERCEPT": 20,
+          "CLEAR_OVERRIDE": 16
+        },
+        "opponent": {
+          "CLEAR_OVERRIDE": 29,
+          "MOVE_TO": 9,
+          "PASS": 7,
+          "INTERCEPT": 2,
+          "PRESS_BALL": 1
+        }
+      }
+    },
+    {
+      "alias": "outlet-live-02",
+      "opponent": "Pandavas",
+      "side": "HOME",
+      "status": "complete",
+      "initiation": "manual random matchmaking",
+      "startedAt": "2026-10-24T20:53:04.158662+00:00",
+      "completedAt": "2026-10-24T20:57:01.472577+00:00",
+      "result": "loss",
+      "score": [
+        0,
+        2
+      ],
+      "shots": [
+        3,
+        5
+      ],
+      "possessionPercent": [
+        47,
+        53
+      ],
+      "reportRoleLatencyMs": {
+        "own": [
+          452,
+          442,
+          450,
+          446,
+          441
+        ],
+        "opponent": [
+          5,
+          3,
+          3,
+          3,
+          77
+        ]
+      },
+      "successPercent": 100,
+      "reportAverageLatencyMs": [
+        464,
+        18
+      ],
+      "reportCommands": {
+        "own": {
+          "MOVE_TO": 214,
+          "INTERCEPT": 55,
+          "PRESS_BALL": 53,
+          "MARK": 16,
+          "CLEAR_OVERRIDE": 15,
+          "SHOOT": 10,
+          "PASS": 6,
+          "GK_DISTRIBUTE": 1
+        },
+        "opponent": {
+          "CLEAR_OVERRIDE": 39,
+          "MOVE_TO": 15,
+          "PASS": 4,
+          "INTERCEPT": 1
+        }
+      }
+    }
+  ],
   "incomingGames": [],
   "gates": {
     "localTests": "13 passed",
     "native": "34/34; warm median104.216ms, max147.518ms; own diagnostic session stopped",
-    "fitness": "5/5 portal; native fresh session candidate checked; live build verification pending"
+    "fitness": "5/5 portal; native fresh session candidate checked; live build verification pending",
+    "liveBuild": "First22responses:21outlet,1malformed bootstrap; source931af03"
   },
   "changeFromPreviousCohort": "Only FWD2 off-ball HOME own-possession outlet positioning; rest unchanged",
   "rollback": "revision7/source8b31760 stance; current source stance retains baseline action policy"
