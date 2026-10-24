@@ -1,0 +1,46 @@
+{
+  "kind": "Tournament preparation hypotheses; candidates are not installed by this file",
+  "baseline": "A0-M7-formation121",
+  "createdAtUTC": "2026-10-24T07:36:00Z",
+  "measurement": {
+    "primary": ["goalsFor", "goalsAgainst", "shotsFor", "shotsAgainst"],
+    "secondary": ["possessionPercent", "verified model choices", "actual state transitions"],
+    "notSuccessByThemselves": ["more possession", "more PASS commands", "more expensive model", "Fitness5/5", "reported100%Success"],
+    "keeperMetricCaveat": "Across46 saved reports with primary stats through live47, shotsOnTargetAgainst equals goalsAgainst in every report, totaling32each. Report counters alone cannot establish save percentage or keeper mechanism.",
+    "sampling": "Verify kickoff setup and HOME/AWAY; preserve opponent and raw private evidence. Uncontrolled opponents confound comparisons. Keep unattributed games outside verified setup cohorts."
+  },
+  "trials": [
+    {
+      "id": "G1-goal-protection",
+      "hypothesis": "Narrow goalkeeper movement and safer outlets reduce empty-goal exposure and immediate turnovers.",
+      "candidate": ["Only challenge a confirmed free ball in a small local goal area when it is safer than holding position", "Retain built-in keeping when already positioned or ball state is ambiguous", "Mirror goal geometry for HOME/AWAY", "Use confirmed own possession before GK_DISTRIBUTE", "Rank receivers by lane and nearby opponent pressure, rather than nearest teammate only"],
+      "nativeChecks": ["HOME/AWAY mirrored central threat", "wide ball outside box must not lure keeper out", "opponent agentId_0 must not count as own possession", "teammate possession must not emit GK_DISTRIBUTE", "blocked nearest outlet versus open diagonal outlet"],
+      "status": "design; not installed",
+      "rejection": "Wrong team/ownership, keeper chases a distant ball, or repeated live increase in dangerous shots/turnovers"
+    },
+    {
+      "id": "E1-economical-press",
+      "hypothesis": "One nearby presser and shorter pressure bursts retain defensive cover and late-match energy.",
+      "candidate": ["Choose one outfield presser from distance, stamina and role-cover cost", "GK is never routine presser", "Use short maintained pressure, then reassess", "Prefer short support movement without sprint when tired", "Keep a central defender behind the ball"],
+      "nativeChecks": ["All five agents independently select the same presser on identical state", "Raw stamina20 and0.2 normalize identically", "Tired forward does not chase across the pitch", "Late deficit permits bounded extra risk without abandoning goalkeeper"],
+      "traceChecks": ["Stamina distributions and sprint fractions over time, when actual fields exist", "Observed pressure duration versus later possession recovery", "Separate state snapshots from causal proof"],
+      "status": "design; only local press/stamina checks exist in R1 pilot"
+    },
+    {
+      "id": "P1-possession-with-purpose",
+      "hypothesis": "Passing into open lanes and supporting on distinct sides preserves possession while producing useful shots.",
+      "candidate": ["Check lane obstruction and receiver pressure before a pass", "Allow a safe backward outlet under pressure", "Do not recycle forever when a quality close shot exists", "Keep one close support option and one player in depth", "FWD1/FWD2 use different lanes"],
+      "nativeChecks": ["Safe backward pass beats blocked forward pass", "Clear close shot remains available", "Unknown holder cannot pass or shoot", "Mirror all progress calculations for AWAY"],
+      "status": "design; R1 validates bounded passes/shots but has not established live improvement"
+    },
+    {
+      "id": "O1-observe-and-switch",
+      "hypothesis": "Reacting to persistent opponent shape is more useful than guessing a strategy from team name or command totals.",
+      "candidate": ["Treat opponent strategy as unknown until several actual state observations support it", "Against a crowded ball side, seek a safe switch to the free side", "Against a high defensive line, consider an open runner behind it", "Against a compact deep block, keep width and offer a cutback", "Use score/time and persistent evidence with minimum dwell time so tactics do not flip each tick"],
+      "traceChecks": ["Observed opponent positions, lastAction, ball side and defensive line", "Missing fields remain unknown", "Switches arise from model-visible evidence; no invented opponent history"],
+      "status": "await verified live Runtime inputs before implementation",
+      "deception": "Create uncertainty through asymmetric support and varying the safe attack route, never through random illegal actions or abandoning shape"
+    }
+  ],
+  "selection": "Start with baseline, change one role or mechanism at a time, preserve rollback. Prefer repeatable legal behavior and observed match outcomes over speculative complexity. A final setup must include exact prompts/models/code hashes, role bindings template, Fitness evidence and restoration instructions."
+}
