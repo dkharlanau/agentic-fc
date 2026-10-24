@@ -1,6 +1,6 @@
 {
   "kind": "Independent Runtime FWD1 pilot; public-safe evidence summary",
-  "status": "AWSv7 READY: exact v5 SSE restored; portal Fitness refresh pending",
+  "status": "AWSv7 exactv5 SSE restored; native5/5 and fresh-session UI Fitness5/5; formation112 live trial",
   "initialSourceCommit": "7ae12c1e737992f83a10ff5c2cf1497cb2580764",
   "initialArchiveSha256": "21ed279d4831546ff58e0ce3c91744e1d47b4cb5fbcff8ae4e970ba1489274e3",
   "reproducibility": "Local macOS cross-build and CloudShell Linux build produced identical archive SHA256,20610262bytes,2731files",
@@ -144,13 +144,35 @@
       ],
       "portalMessage": "Return a JSON array on the last data line of the SSE stream; use BedrockAgentCoreApp and yield json.dumps(commands)."
     },
-    "conclusion": "Completed application/json response is not accepted by portal Fitness. Native decoding gate alone was insufficient. Restore exact v5 SSE and continue separate Harness live-routing audit."
+    "conclusion": "Completed application/json response is not accepted by portal Fitness. Native decoding gate alone was insufficient. Restore exact v5 SSE and continue separate Harness live-routing audit.",
+    "live54": {
+      "sourceCommit": "26b5826",
+      "meaning": "This game session retained completed-JSONv6, not restoredv7",
+      "decisions": 92,
+      "outcomes": {
+        "model_choice": 92
+      },
+      "commands": {
+        "CLEAR_OVERRIDE": 85,
+        "PASS": 7
+      },
+      "inputRejections": 0,
+      "modelLatencyMs": {
+        "p50": 417,
+        "p95": 609,
+        "max": 735
+      },
+      "sampledMemoryWrites": 10,
+      "consecutiveRepeatedGameTimes": 24,
+      "applicationLimit": "PortalFitness rejected this transport asNO_PARSE; model emissions do not prove application"
+    }
   },
   "revision7": {
     "sourceCommit": "a30cdc1",
     "archiveSha256": "8b796c69a88f8a5c5e2f919d70d5f6b86e5c6269dd0a3196cb65cfe912f0ecf3",
     "meaning": "Byte-identical v5 artifact restored after rejected transport experiment",
-    "status": "AWS READY; native rerun completed or finishing; verify private results"
+    "status": "AWS READY; five native cases passed model+command+cleanup gates; fixed Fitness session stopped200 before fresh UI retry",
+    "fitness": "After stopping only the fixed own Fitness session, fresh UI5/5,5commands100%active; formation112 persisted afterreload"
   },
   "keeperCodeCandidate": {
     "status": "Offline only, not installed",

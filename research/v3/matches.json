@@ -2137,6 +2137,72 @@
       ],
       "initiation": "Manual Find clicked after v5 profile binding and UI Fitness5/5",
       "coaching": []
+    },
+    {
+      "id": "live-54",
+      "setup": "unattributed-background",
+      "opponent": "Agentic Arsenal",
+      "side": "away",
+      "goalsFor": 2,
+      "goalsAgainst": 3,
+      "shotsFor": 6,
+      "shotsAgainst": 4,
+      "shotsOnTargetFor": 2,
+      "shotsOnTargetAgainst": 3,
+      "possessionPercent": 41,
+      "commands": 326,
+      "averageLatencyMs": 787,
+      "commandCounts": {
+        "MOVE_TO": 234,
+        "PRESS_BALL": 41,
+        "CLEAR_OVERRIDE": 18,
+        "SHOOT": 17,
+        "PASS": 14,
+        "MARK": 2
+      },
+      "opponentCommands": 12,
+      "opponentAverageLatencyMs": 91,
+      "roleLatencyMs": {
+        "gk": 622,
+        "def": 788,
+        "mid": 1018,
+        "fwd1": 651,
+        "fwd2": 870
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Inbound match overlapped own native readiness probes; exclude from controlled comparisons.",
+        "Last observed formation1-2-1; exact kickoff bindings and timing not observed.",
+        "Portal goal attribution/AI commentary not used to establish mechanism.",
+        "Runtime build correlation confirms stalev6 game session; do not count as v7 SSE trial."
+      ],
+      "lastKnownSavedSetup": "R1 update fromv6toexactv5 rollback in progress around inbound kickoff",
+      "initiation": "Inbound live banner discovered during five-case native rerun after rollback; no Find clicked",
+      "coaching": [],
+      "runtimeEvidence": {
+        "sourceCommit": "26b5826",
+        "meaning": "This game session retained completed-JSONv6, not restoredv7",
+        "decisions": 92,
+        "outcomes": {
+          "model_choice": 92
+        },
+        "commands": {
+          "CLEAR_OVERRIDE": 85,
+          "PASS": 7
+        },
+        "inputRejections": 0,
+        "modelLatencyMs": {
+          "p50": 417,
+          "p95": 609,
+          "max": 735
+        },
+        "sampledMemoryWrites": 10,
+        "consecutiveRepeatedGameTimes": 24,
+        "applicationLimit": "PortalFitness rejected this transport asNO_PARSE; model emissions do not prove application"
+      }
     }
   ],
   "recordingOrder": "Local evidence-capture order; background matches may be appended retrospectively."
