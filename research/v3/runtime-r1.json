@@ -1,6 +1,6 @@
 {
   "kind": "Independent Runtime FWD1 pilot; public-safe evidence summary",
-  "status": "AWSv7 exactv5 SSE restored; native5/5 and fresh-session UI Fitness5/5; formation112 live trial",
+  "status": "R1v7 unregistered for original-FWD1 control on112; bufferedSSEv8 candidate offline",
   "initialSourceCommit": "7ae12c1e737992f83a10ff5c2cf1497cb2580764",
   "initialArchiveSha256": "21ed279d4831546ff58e0ce3c91744e1d47b4cb5fbcff8ae4e970ba1489274e3",
   "reproducibility": "Local macOS cross-build and CloudShell Linux build produced identical archive SHA256,20610262bytes,2731files",
@@ -165,6 +165,22 @@
       "sampledMemoryWrites": 10,
       "consecutiveRepeatedGameTimes": 24,
       "applicationLimit": "PortalFitness rejected this transport asNO_PARSE; model emissions do not prove application"
+    },
+    "defSideAudit": {
+      "scope": "Since09:20UTC",
+      "events": 6,
+      "fitnessEvents": 6,
+      "matchedHome55": 0,
+      "matchedAway54": 0,
+      "matchedAway56": 0,
+      "limit": "Absence of request logs is not proof of every failure mechanism"
+    },
+    "defMetricAudit": {
+      "scope": "CloudWatch namespaceAWS/Bedrock-AgentCore from08:40UTC through currentquery",
+      "invocations": 10,
+      "datapointMinutes": 5,
+      "userErrors": 0,
+      "limit": "Same metric appears in multiple dimension sets; do not sum duplicated series. Counts alone do not establish source or action application."
     }
   },
   "revision7": {
@@ -185,5 +201,13 @@
     ],
     "validation": "38 policy/runtime/observer/keeper checks passed; SDK fake-client streaming shape check passed",
     "archiveSha256": "b9b57cc45657296fa1cf5d0003beab8266e97093cd16bad9859c0e1952bc42e5"
+  },
+  "revision8Candidate": {
+    "status": "Offline only; not deployed",
+    "hypothesis": "Outer async-generator opens SSE response before the model completes. Test a precomputed normal generator returned after awaiting the decision, retaining exact SSE bytes.",
+    "semanticChange": "Response readiness timing, not FWD1 action policy",
+    "fwd1ParityFixtures": 8,
+    "validation": "38 checks and SDK HTTP smoke: model completed before response exists; SSE bytes equal previous format",
+    "archiveSha256": "edd07b839a823fc5b8fc7e3c5184472fbe1e89d79f5c904d65d4172f3898f38f"
   }
 }

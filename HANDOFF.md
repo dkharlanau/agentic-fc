@@ -24,14 +24,13 @@ Keep credentials, account/ARN bindings, raw states, private logs and foreign
 chat out of public Git. The branch is `codex/football-experiments-20261023`;
 draft PR5 is already attached. Preserve unrelated work.
 
-Current focus at09:18UTC: test a transport-only R1 revision before adding tactical
-complexity. V5 generated genuine live choices but two latest games lost0:1/0:2.
-R1 model latency alone was411–497ms; this does not measure action application.
-DEF logs showed Fitness requests and no matching requests for those two games.
-V6 returns one completed JSON array instead of an SSE JSON string, keeping
-v5 policy; AWS READY observed, five native gates in progress. Only FWD1 uses
-R1; the other four remain original M7 Harness. The private checkpoint and
-fresh runtime receipt supersede this snapshot.
+Current focus at09:55UTC: original FWD1v16 restored in the portal for a control on1-1-2, after native/Fitness-valid R1v7 generated choices but still had poor live results. Control live57 HOMEvsGork'n'MorkBoyz is active; read checkpoint. Native-only transportv6(JSON) was rejectedNO_PARSE; v7 restores exactv5SSE. Live54 used stalev6(build-correlated), notv7. Fixed Fitness session was stopped200; thenUI5/5. Live55 manualHOME112lost0:1; backgroundlive56AWAYForza won1:0 and needs build correlation.
+
+A buffered-SSEv8 candidate is prepared: outer async function awaits one decision, then returns a normal generator. SDK emits byte-identicalSSE, but headers now follow model work. HTTP fake-client smoke verifies completed model work before response object and exactSSEbytes. FWD1 prompt/options parity checked8fixtures;38policy/runtime/GK/observer checks pass. This is a hypothesis about eager-header consumption, not a proved cause. Runtimev7 remains untouched; check Git/latest artifact for v8 deployment status.
+
+Separate GK code exists and is offline, not deployed. Current package now includes a dormant GK branch, but FWD1policy remains unchanged. Only0 and3 are accepted by deployer. GK has no PRESS/SHOOT/PASS/RESET, no world-frameMOVE, safe distribution and documented mirrored recovery. Eleven native GKcases are prepared. All raw bindings/private receipts remain under.local.
+
+Execution concern: DEFrequest logs since09:20 show6Fitness events,0matchingHOME55/AWAY54/AWAY56. CloudWatch DEFInvocations since08:40 sums10 over5minutes, errorSum0 (duplicate metric dimension sets must not be added). Portal fourHarness counters remain0. This does not identify the game caller's failure, but five independent CodeRuntimes may be a practical path to verified live calls for all roles. No callerIAM changes. Before expanding, test precomputedSSEv8 and isolatedGK. Future DEF/MID/FWD2 should use coordinate-independentPASS/MARK/PRESS/INTERCEPT/SET_STANCE with single nearest eligible outfield presser, energy guards, central cover and noRESET. Do not invent worldMOVEconversion. Official Tactical guide: SET_STANCE persists until cleared; CLEAR removes own manual override, RESET clears wholeteam. Attacking stance is a candidate to improve offball depth without guessed coordinates; test one mechanism at a time.
 
 `runtime_v1/tactics.py` is a tested **offline observer**, excluded from the
 deployed package. Future integration and synthetic model-round runner are

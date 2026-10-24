@@ -2203,6 +2203,89 @@
         "consecutiveRepeatedGameTimes": 24,
         "applicationLimit": "PortalFitness rejected this transport asNO_PARSE; model emissions do not prove application"
       }
+    },
+    {
+      "id": "live-55",
+      "setup": "R1-FWD1-v7-plus-M7-formation112",
+      "opponent": "Amber Arcs 2",
+      "side": "home",
+      "goalsFor": 0,
+      "goalsAgainst": 1,
+      "shotsFor": 10,
+      "shotsAgainst": 3,
+      "shotsOnTargetFor": 0,
+      "shotsOnTargetAgainst": 1,
+      "possessionPercent": 31,
+      "commands": 12,
+      "averageLatencyMs": 1,
+      "commandCounts": {
+        "CLEAR_OVERRIDE": 12
+      },
+      "opponentCommands": 73,
+      "opponentAverageLatencyMs": 101,
+      "roleLatencyMs": {
+        "gk": 2,
+        "def": 2,
+        "mid": 1,
+        "fwd1": 1,
+        "fwd2": 1
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "One uncontrolled opponent is insufficient to rank a setup.",
+        "Report latency is not the same measurement as model latency."
+      ],
+      "coaching": [],
+      "initiation": "Manual Find after persisted112 and fresh-session Fitness5/5",
+      "lastKnownSavedSetup": "R1-FWD1-v7-plus-M7-formation112"
+    },
+    {
+      "id": "live-56",
+      "setup": "unattributed-background",
+      "opponent": "ForzaRossoneri",
+      "side": "away",
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "shotsFor": 8,
+      "shotsAgainst": 2,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 46,
+      "commands": 330,
+      "averageLatencyMs": 1153,
+      "commandCounts": {
+        "MOVE_TO": 201,
+        "PRESS_BALL": 45,
+        "MARK": 28,
+        "CLEAR_OVERRIDE": 20,
+        "PASS": 12,
+        "INTERCEPT": 10,
+        "GK_DISTRIBUTE": 7,
+        "SHOOT": 7
+      },
+      "opponentCommands": 71,
+      "opponentAverageLatencyMs": 98,
+      "roleLatencyMs": {
+        "gk": 1027,
+        "def": 1004,
+        "mid": 1016,
+        "fwd1": 1034,
+        "fwd2": 1074
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "One uncontrolled opponent is insufficient to rank a setup.",
+        "Report latency is not the same measurement as model latency."
+      ],
+      "coaching": [],
+      "initiation": "Completed background incoming game discovered in history; kickoff not observed",
+      "lastKnownSavedSetup": "R1-FWD1-v7-plus-M7-formation112"
     }
   ],
   "recordingOrder": "Local evidence-capture order; background matches may be appended retrospectively."

@@ -1,4 +1,4 @@
-"""Offline SDK generator/shape smoke using fake clients; makes no AWS calls."""
+"""Offline SDK response-readiness/SSE shape smoke; no AWS calls."""
 import asyncio
 import json
 import os
@@ -8,16 +8,21 @@ from unittest.mock import patch
 
 from botocore.session import get_session
 from botocore.validate import validate_parameters
+from starlette.requests import Request
 from runtime_v1 import main
 from runtime_v1.core import DecisionEngine
 
 
 class FakeModel:
+    def __init__(self):
+        self.completed = 0
+
     def converse(self, **request):
         shape = get_session().get_service_model('bedrock-runtime').operation_model('Converse').input_shape
         validate_parameters(request, shape)
         facts = json.loads(request['messages'][0]['content'][0]['text'])
         choice = next(o['index'] for o in facts['options'] if o['command']['commandType'] == 'SHOOT')
+        self.completed += 1
         return {'output': {'message': {'content': [{'text': json.dumps({'choice': choice})}]}},
                 'usage': {'inputTokens': 100, 'outputTokens': 5}}
 
@@ -42,7 +47,7 @@ async def smoke():
     context = SimpleNamespace(session_id='00000000-0000-0000-0000-000000000001')
     with patch('boto3.client', side_effect=AssertionError('Unexpected AWS client creation')), \
             patch.object(main.app.logger, 'info'):
-        chunks = [chunk async for chunk in main.invoke(json.loads(case['modelText']), context)]
+        chunks = list(await main.invoke(json.loads(case['modelText']), context))
     assert len(chunks) == 1
     command = json.loads(chunks[0])
     assert command[0]['teamId'] == 1 and command[0]['commandType'] == 'SHOOT'
@@ -51,7 +56,24 @@ async def smoke():
     stored = main._memory.calls[0]['payload'][1]['conversational']
     assert stored['role'] == 'ASSISTANT'
     assert json.loads(stored['content']['text'])['audit']['outcome'] == 'model_choice'
-    print('OFFLINE fake-client SDK smoke passed: one streamed AWAY command and shape-valid sampled event; no AWS calls')
+    async def receive():
+        return {'type': 'http.request', 'body': case['modelText'].encode(), 'more_body': False}
+    request = Request({'type': 'http', 'method': 'POST', 'path': '/invocations',
+                       'headers': [(b'content-type', b'application/json'),
+                                   (b'x-amzn-bedrock-agentcore-runtime-session-id', context.session_id.encode())]},
+                      receive)
+    completed_before = main._engine.client.completed
+    with patch('boto3.client', side_effect=AssertionError('Unexpected AWS client creation')), \
+            patch.object(main.app.logger, 'info'):
+        response = await main.app._handle_invocation(request)
+        # The previous outer async-generator implementation returned response
+        # headers with no model work completed. This assertion catches that.
+        assert main._engine.client.completed == completed_before + 1
+        assert response.status_code == 200 and response.media_type == 'text/event-stream'
+        raw = b''.join([part async for part in response.body_iterator])
+    expected = ('data: ' + json.dumps(chunks[0], ensure_ascii=False) + '\n\n').encode()
+    assert raw == expected
+    print('OFFLINE SDK smoke passed: decision complete before response, byte-identical SSE command, valid sampled event; no AWS calls')
 
 
 if __name__ == '__main__':

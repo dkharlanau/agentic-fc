@@ -65,9 +65,15 @@ def memory_sample(payload, commands, audit, session_id):
         return 'error_' + type(error).__name__
 
 
+def command_stream(commands):
+    yield json.dumps(commands, separators=(',', ':'), allow_nan=False)
+
+
 @app.entrypoint
 async def invoke(payload, context):
-    # Match the official sample's streaming JSON-string response, including teamId.
+    # Complete the single decision before handing the SDK its generator. The
+    # SSE data bytes remain the same, but HTTP headers no longer precede model
+    # execution. This isolates eager-header consumption by the game client.
     session_id = getattr(context, 'session_id', None) or str(uuid.uuid4())
     try:
         commands, audit = await asyncio.to_thread(engine().choose, payload, session_id)
@@ -83,7 +89,7 @@ async def invoke(payload, context):
     audit['memoryOutcome'] = await asyncio.to_thread(memory_sample, payload, commands, audit, session_id)
     audit['buildCommit'] = os.getenv('BUILD_COMMIT', 'local')
     app.logger.info('NHITL_DECISION ' + json.dumps(audit, separators=(',', ':')))
-    yield json.dumps(commands, separators=(',', ':'), allow_nan=False)
+    return command_stream(commands)
 
 
 if __name__ == '__main__':

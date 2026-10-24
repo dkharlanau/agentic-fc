@@ -66,3 +66,7 @@ The account-bound receipt, resource IDs, raw game inputs and access codes must s
 GK code offers only safe distribution, documented-frame own-goal recovery/restart movement, and release to built-in goalkeeping. It never offers pressure, a shot, a normal pass or RESET. A receiver needs space and a clear lane; the marked nearest defender is excluded in the mirrored synthetic distribution fixtures. In the observed small-field profile, outgoing coordinate conversion remains unverified, so custom GK movement is unavailable. Native probes and portal Fitness are still required; no goalkeeper live improvement is claimed.
 
 The standalone `tactics.py` observer remains excluded from the deployment source whitelist. Review hypotheses and critical rounds in [`adaptive-plan.ru.md`](../research/v3/adaptive-plan.ru.md).
+
+## Response readiness experiment
+
+The outer async-generator path gives the SDK a stream before model work completes. A proposed revision instead awaits one decision and returns a precomputed normal generator. The SDK still emits the same SSE bytes; response readiness now follows the decision. The fake-client HTTP smoke requires completed model work before a response object is available and checks exact SSE bytes. This tests eager-header consumption by the game client; that client implementation is not accessible and the hypothesis remains unproven until native/Fitness/live checks. FWD1 prompt/options match v5 on the saved parity fixtures.

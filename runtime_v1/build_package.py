@@ -21,6 +21,7 @@ def build(dependencies, archive, manifest):
         raise ValueError('Keep binary deployment archives under .local')
     actual = {d.metadata['Name'].lower().replace('_', '-'): d.version
               for d in distributions(path=[str(dependencies)])}
+    actual = dict(sorted(actual.items()))
     expected = {}
     for line in (ROOT / 'runtime_v1/requirements.lock.txt').read_text().splitlines():
         if line and not line.startswith('#'):
