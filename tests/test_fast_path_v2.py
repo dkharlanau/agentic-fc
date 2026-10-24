@@ -39,6 +39,11 @@ class FastTests(unittest.TestCase):
    player['teamCode']='away' if player['teamCode']=='home' else 'home';player['position']['x']*=-1
   p['gameState']['ball']['possessionTeamCode']='away'
   out,_=FastEngine(4).choose(p);self.assertEqual(out[0]['commandType'],'MOVE_TO');self.assertGreater(out[0]['parameters']['target_x'],0)
+ def test_small_xy_restart_cannot_use_full_size_coordinates(self):
+  p=copy.deepcopy(ev.cases()[8]['input']);p['gameState']['playMode']='KICK_OFF';p['gameState']['ball']['possessionAgentId']='agentId_2'
+  for row in p['gameState']['players']:
+   row['position']['x']/=10;row['position']['y']/=10
+  out,_=FastEngine(4).choose(p);self.assertNotEqual(out[0]['commandType'],'MOVE_TO')
  def test_session_bound_and_separate(self):
   p=ev.cases()[8]['input'];e=FastEngine(4)
   for n in range(80):e.choose(p,str(n))

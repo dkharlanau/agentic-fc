@@ -60,7 +60,9 @@ class FastEngine:
         if state.play_mode=='KICK_OFF' and not state.i_have_ball:
             # The observed Fitness contract uses the documented full-size XY
             # frame. Only that frame supports this own-half restart target.
-            if pid==4 and profile['kind']=='documented_xy':
+            restart_keepers={p.team:p for p in (*state.teammates,*state.opponents) if p.pid==0}
+            known_full_size=set(restart_keepers)=={0,1} and -60<restart_keepers[0].x<-35 and 35<restart_keepers[1].x<60 and all(abs(p.y)<10 for p in restart_keepers.values())
+            if pid==4 and profile['kind']=='documented_xy' and known_full_size:
                 return done('MOVE_TO',{'target_x':-3.0*state.sign,'target_y':8.0,'sprint':False},'DOCUMENTED_RESTART_POSITION')
             return done('SET_STANCE',{'stance':1 if pid==4 else 2 if pid==1 else 0},'RESTART_ROLE') if pid!=0 else done(reason='ENGINE_GOALKEEPER_RESTART')
         if state.play_mode not in ('PLAY_ON','KICK_OFF'):return done(reason='ENGINE_RESTART')
