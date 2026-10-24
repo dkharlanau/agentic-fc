@@ -15,7 +15,7 @@
     "points": 106
   },
   "initialSetup": "A0-M7-formation121",
-  "currentTrial": "OriginalFWD1v16 plus fourM7 Harness,1-1-2; live57won7:0",
+  "currentTrial": "R1v9 bound FWD1 plus fourM7 Harness,formation112; Fitness5/5; attribution concern persists",
   "priorities": [
     "Preserve portable exact five-role AWS setup before workshop reset",
     "Validate STM on one role, inspect actual input contract where available",
@@ -39,7 +39,9 @@
     "live-55",
     "live-56",
     "live-57",
-    "live-58"
+    "live-58",
+    "live-59",
+    "live-60"
   ],
   "singleRoleRecoveryCanary": {
     "created": true,

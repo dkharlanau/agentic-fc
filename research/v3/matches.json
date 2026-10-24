@@ -2374,6 +2374,102 @@
       "initiation": "Incoming banner observed after tactical probes began; no Find clicked",
       "lastKnownSavedSetup": "A0-M8-formation112-original-fwd1-v16",
       "coaching": []
+    },
+    {
+      "id": "live-59",
+      "setup": "R1-FWD1-v9-plus-M7-formation112",
+      "opponent": "Matrix_7",
+      "side": "away",
+      "goalsFor": 0,
+      "goalsAgainst": 1,
+      "shotsFor": 3,
+      "shotsAgainst": 1,
+      "shotsOnTargetFor": 0,
+      "shotsOnTargetAgainst": 1,
+      "possessionPercent": 50,
+      "commands": 317,
+      "averageLatencyMs": 243,
+      "commandCounts": {
+        "MOVE_TO": 185,
+        "MARK": 78,
+        "PASS": 27,
+        "INTERCEPT": 17,
+        "GK_DISTRIBUTE": 6,
+        "CLEAR_OVERRIDE": 4
+      },
+      "opponentCommands": 72,
+      "opponentAverageLatencyMs": 105,
+      "roleLatencyMs": {
+        "gk": 81,
+        "def": 340,
+        "mid": 434,
+        "fwd1": 280,
+        "fwd2": 191
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Own emitted FWD command mix still resembles opponent report column; output teamId omission did not resolve attribution concern. Applied team not established."
+      ],
+      "initiation": "Incoming match; kickoff not observed. R1v9 bound output scope verified in game audit.",
+      "coaching": [],
+      "runtimeEvidence": {
+        "sourceCommit": "5d75b18",
+        "decisions": 67,
+        "commands": {
+          "CLEAR_OVERRIDE": 63,
+          "PASS": 4
+        },
+        "inputRejections": 0,
+        "wireTeamScope": "bound",
+        "modelLatencyMs": {
+          "p50": 413,
+          "p95": 506,
+          "max": 582
+        }
+      }
+    },
+    {
+      "id": "live-60",
+      "setup": "R1-FWD1-v9-plus-M7-formation112",
+      "opponent": "LFC",
+      "side": "away",
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "shotsFor": 9,
+      "shotsAgainst": 0,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 42,
+      "commands": 335,
+      "averageLatencyMs": 247,
+      "commandCounts": {
+        "MOVE_TO": 253,
+        "INTERCEPT": 33,
+        "PRESS_BALL": 22,
+        "PASS": 15,
+        "CLEAR_OVERRIDE": 10,
+        "GK_DISTRIBUTE": 2
+      },
+      "opponentCommands": 74,
+      "opponentAverageLatencyMs": 101,
+      "roleLatencyMs": {
+        "gk": 259,
+        "def": 136,
+        "mid": 238,
+        "fwd1": 274,
+        "fwd2": 108
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy."
+      ],
+      "initiation": "Incoming match; bindingR1v9 unchanged throughout observed game; kickoff not observed",
+      "coaching": []
     }
   ],
   "recordingOrder": "Local evidence-capture order; background matches may be appended retrospectively."

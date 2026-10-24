@@ -31,7 +31,8 @@ def unwrap(payload):
     return {}
 
 
-def legal_options(root, player_id, contact=None, geometry_ready=True, movement_ready=True):
+def legal_options(root, player_id, contact=None, geometry_ready=True, movement_ready=True,
+                  attack_support=False):
     assigned = root.get('myPlayers')
     if isinstance(assigned, list) and player_id not in assigned:
         raise ValueError('Configured player is not assigned by this invocation')
@@ -79,7 +80,10 @@ def legal_options(root, player_id, contact=None, geometry_ready=True, movement_r
             options.append(base)
         elif player_id in (0, 1, 2) and state.ball_status != 'UNKNOWN' and base.command['commandType'] == 'MOVE_TO':
             options.append(base)
-        # FWD off-ball support is delegated to the engine, avoiding repeated fixed movement.
+        if attack_support and player_id == 3 and not state.i_have_ball and \
+                state.ball_status in ('OURS', 'THEIRS', 'FREE') and not options:
+            options.append(cmd(state, 'SET_STANCE', {'stance': 1},
+                               reason='ENGINE_ATTACK_SUPPORT'))
     options.append(clear)
     allowed = root.get('unlockedCommands')
     # The observed live protocol sends []; the official sample does not treat
@@ -100,12 +104,14 @@ def legal_options(root, player_id, contact=None, geometry_ready=True, movement_r
 
 
 class DecisionEngine:
-    def __init__(self, client, model_id, player_id=3, history_limit=6, session_limit=64):
+    def __init__(self, client, model_id, player_id=3, history_limit=6, session_limit=64,
+                 attack_support=False):
         self.client = client
         self.model_id = model_id
         self.player_id = player_id
         self.history_limit = history_limit
         self.session_limit = session_limit
+        self.attack_support = attack_support
         self.sessions = OrderedDict()
         self.calibrations = {}
         self.lock = threading.Lock()
@@ -122,7 +128,8 @@ class DecisionEngine:
         inferred = candidate if supported_contact(candidate, prior_contact) else None
         state, options = legal_options(normalized, self.player_id, inferred,
                                        geometry_ready=profile['kind'] != 'unresolved_3d',
-                                       movement_ready=profile['kind'].startswith('documented_xy'))
+                                       movement_ready=profile['kind'].startswith('documented_xy'),
+                                       attack_support=self.attack_support)
         # A missing legal release command cannot be repaired by inventing an unlocked action.
         if not options:
             raise ValueError('No supported command is unlocked')
@@ -144,7 +151,7 @@ class DecisionEngine:
         try:
             response = self.client.converse(
                 modelId=self.model_id,
-                system=[{'text': ('You control only goalkeeper0. Prefer an offered safe GK_DISTRIBUTE outlet when holding the ball. Never chase a wide ball. If a documented-frame recovery or restart-line option is offered, prefer it; otherwise CLEAR_OVERRIDE keeps built-in goalkeeping. ' if self.player_id == 0 else '') + SELECTOR_PROMPT}],
+                system=[{'text': ('You control only goalkeeper0. Prefer an offered safe GK_DISTRIBUTE outlet when holding the ball. Never chase a wide ball. If a documented-frame recovery or restart-line option is offered, prefer it; otherwise CLEAR_OVERRIDE keeps built-in goalkeeping. ' if self.player_id == 0 else '') + ('Prefer an offered SET_STANCE attack-support option over CLEAR_OVERRIDE when off the ball. This uses engine positioning without guessing movement coordinates. ' if self.attack_support and self.player_id == 3 else '') + SELECTOR_PROMPT}],
                 messages=[{'role': 'user', 'content': [{'text': json.dumps(facts, allow_nan=False)}]}],
                 inferenceConfig={'maxTokens': 32, 'temperature': 0.0})
             text = ''.join(p.get('text', '') for p in response['output']['message']['content'])
@@ -183,5 +190,11 @@ class DecisionEngine:
                  'distanceToGoal': facts['distanceToGoal'], 'selectedCommand': command,
                  'coordinateProfile': profile, 'ownershipEvidence': facts['ownershipEvidence'],
                  'usage': usage,
+                 'supportMode': 'attack' if self.attack_support else 'default',
+                 'previousCommand': root.get('previousCommand'),
+                 'assignedPlayerActions': [
+                     {k: p.get(k) for k in ('teamCode', 'agentId', 'position', 'currentAction', 'lastAction')}
+                     for p in root.get('gameState', {}).get('players', [])
+                     if isinstance(p, dict) and p.get('agentId') == 'agentId_' + str(self.player_id)],
                  'normalizedInputSha256': hashlib.sha256(json.dumps(root, sort_keys=True).encode()).hexdigest()}
         return [command], audit

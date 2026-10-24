@@ -1,6 +1,6 @@
 {
   "kind": "Independent Runtime FWD1 pilot; public-safe evidence summary",
-  "status": "Original five Harness restored while output team-scope concern is isolated",
+  "status": "R1v9 bound output scope registered; attribution concern persists in live59",
   "initialSourceCommit": "7ae12c1e737992f83a10ff5c2cf1497cb2580764",
   "initialArchiveSha256": "21ed279d4831546ff58e0ce3c91744e1d47b4cb5fbcff8ae4e970ba1489274e3",
   "reproducibility": "Local macOS cross-build and CloudShell Linux build produced identical archive SHA256,20610262bytes,2731files",
@@ -238,9 +238,9 @@
       "interpretation": "Possible team attribution/routing mismatch; not established"
     }
   },
-  "currentMainTeam": "Original fiveM7 Harness restored; formation112; live57manualHOME won7:0 with19:0shots. One uncontrolled game is insufficient to establish a causal improvement.",
+  "currentMainTeam": "R1v9 bound FWD1 plus fourM7 Harness,formation112; originalFWD1v16 rollback preserved",
   "revision9Candidate": {
-    "status": "Local only",
+    "status": "READY; native5/5 and fresh portalFitness5/5",
     "onlyBehaviorChange": "Optional bound wire mode omits output teamId; internal own-team/player validation remains",
     "hypothesis": "Workshop prompt schema omits teamId, while own R1 counts resemble opponent forward stats",
     "alternatives": [
@@ -250,6 +250,15 @@
     ],
     "validation": "38checks plus fake-client SDK HTTP explicit/bound formats and sampled audit passed",
     "archiveSha256": "69d30ec1c26c66ff210f00a86623788dd945894db84c1b5996345124269e61f1",
-    "fitness": "Pending deployment/native gate"
+    "fitness": "5/5",
+    "sourceCommit": "5d75b18",
+    "live59": "67 accepted model choices,63CLEAR+4PASS,0inputreject; modelp50=413/p95=506/max582ms; opponent column remains similar. No routing fix established."
+  },
+  "revision10Candidate": {
+    "status": "Local only",
+    "feature": "Optional FWD attack-support stance when known off-ball and no local intervention offered",
+    "audit": "Previous server command and both same-ID player last-actions retained privately; no numeric team inversion",
+    "validation": "39offline checks passed",
+    "archiveSha256": "5dd20ac3f795bcac9770cbf666b12444a1da695f4d568f2c47c202e8e61ac7dc"
   }
 }

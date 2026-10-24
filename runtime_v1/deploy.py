@@ -36,6 +36,10 @@ def plan(args):
                    'BUILD_COMMIT': args.source_commit}
     if args.wire_team_scope != 'explicit':
         environment['WIRE_TEAM_SCOPE'] = args.wire_team_scope
+    if args.fwd_support_stance == 'attack':
+        if args.player_id != 3:
+            raise ValueError('Attack-support experiment is FWD1 only')
+        environment['FWD_SUPPORT_STANCE'] = 'attack'
     if args.memory_id:
         environment.update(MEMORY_ID=args.memory_id,
                            MEMORY_ACTOR_ID='r1_gk' if args.player_id == 0 else 'r1_fwd1',
@@ -146,6 +150,8 @@ def main():
     parser.add_argument('--memory-id')
     parser.add_argument('--wire-team-scope', choices=('explicit', 'bound'), default='explicit',
                         help='Experimental bound mode omits optional output teamId; internal validation remains strict')
+    parser.add_argument('--fwd-support-stance', choices=('default', 'attack'), default='default',
+                        help='Optional engine attack support when no local on-ball/pressure action is available')
     parser.add_argument('--source-commit')
     parser.add_argument('--receipt', type=Path, default=ROOT / '.local/r1/receipt.json')
     parser.add_argument('--update-from-receipt', type=Path,

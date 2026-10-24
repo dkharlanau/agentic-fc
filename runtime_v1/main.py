@@ -26,7 +26,8 @@ def engine():
                                   config=Config(connect_timeout=2, read_timeout=4,
                                                 retries={'max_attempts': 0}))
             _engine = DecisionEngine(client, os.getenv('MODEL_ID', 'global.amazon.nova-2-lite-v1:0'),
-                                     player_id=int(os.getenv('PLAYER_ID', '3')))
+                                     player_id=int(os.getenv('PLAYER_ID', '3')),
+                                     attack_support=os.getenv('FWD_SUPPORT_STANCE') == 'attack')
         return _engine
 
 

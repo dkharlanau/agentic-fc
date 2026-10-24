@@ -42,6 +42,24 @@ class RuntimeTests(unittest.TestCase):
             different, _ = DecisionEngine(alternate, 'test-model').choose(case['modelText'], 'match')
             self.assertEqual(different[0]['commandType'], 'CLEAR_OVERRIDE')
 
+    def test_optional_attack_support_preserves_ownership_press_and_restart_gates(self):
+        for i, expected in ((0, 'SHOOT'), (1, 'SHOOT'), (2, 'SET_STANCE'),
+                            (3, 'MOVE_TO'), (4, 'SET_STANCE'),
+                            (5, 'CLEAR_OVERRIDE'), (6, 'PRESS_BALL')):
+            root = unwrap(self.cases[i]['modelText'])
+            commands, audit = DecisionEngine(Model(), 'test', attack_support=True).choose(root, str(i))
+            self.assertEqual(commands[0]['commandType'], expected)
+            self.assertEqual(commands[0]['playerId'], 3)
+            self.assertEqual(commands[0]['teamId'], root['teamId'])
+            self.assertEqual(audit['supportMode'], 'attack')
+            self.assertEqual(len(audit['assignedPlayerActions']), 2)
+        root = unwrap(self.cases[2]['modelText'])
+        _, original = legal_options(root, 3)
+        self.assertEqual([o.command['commandType'] for o in original], ['CLEAR_OVERRIDE'])
+        root['unlockedCommands'] = ['CLEAR_OVERRIDE']
+        _, limited = legal_options(root, 3, attack_support=True)
+        self.assertEqual([o.command['commandType'] for o in limited], ['CLEAR_OVERRIDE'])
+
     def test_invalid_model_output_and_service_error_release_only_own_player(self):
         for model in (Model('[]'), Model('{"choice":true}'), Model('{"choice":999}'),
                       Model('[{"playerId":4,"commandType":"RESET"}]'), Model(error=TimeoutError())):

@@ -76,3 +76,7 @@ This tests an attribution/routing concern: several own R1 response counts and la
 ## Response readiness experiment
 
 The outer async-generator path gives the SDK a stream before model work completes. A proposed revision instead awaits one decision and returns a precomputed normal generator. The SDK still emits the same SSE bytes; response readiness now follows the decision. The fake-client HTTP smoke requires completed model work before a response object is available and checks exact SSE bytes. This tests eager-header consumption by the game client; that client implementation is not accessible and the hypothesis remains unproven until native/Fitness/live checks. FWD1 prompt/options match v5 on the saved parity fixtures.
+
+## Optional attack-support experiment
+
+`--fwd-support-stance attack` offers FWD1 an engine `SET_STANCE` attack option when ownership is known, the player is off the ball, and no local pressure/interception action is offered. It avoids unverified world-coordinate movement. Restart, possession, stamina and command-unlock gates remain active. The default policy is unchanged. The selector prefers the offered support stance over release, but still makes a genuine bounded choice. Private audit retains the input previous command and both same-ID players last-actions to help distinguish report attribution from applied control. Native/Fitness and matched Practice evidence remain required; no improvement is claimed.
