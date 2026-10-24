@@ -365,3 +365,10 @@ Fresh cumulative table:rank7,94points,44P31W1D12L,goals62:32(+30). This is the c
 ## Live36 unchanged M8:2:0 Spartak Ultimate
 
 Ninth M8 game won2:0 without coaching/native probes. Shots12:0,on target2:0,possession34%,370commands912ms. MOVE114,INTERCEPT87,MARK77,PASS59,CLEAR13,FOLLOW10,GKDIST10;RESET0,SHOOT0. Role latencies833/982/921/998/978ms,reportedSuccess100%. Applied teamshots remain distinct from issuedSHOOT count. M8 firstnineoutcomes8wins/1draw; retain unchanged until the scheduled end.
+
+
+## Live37 unchanged M8:4:1 repeat Spartak; rank7/100points
+
+Tenth M8 game won4:1 without coaching/native probes. Shots7:2,on target4:1,possession45%,475commands912ms. MOVE193,INTERCEPT89,MARK86,PASS79,CLEAR23,GKDIST5;RESET0,SHOOT0. Role latencies816/942/920/959/991ms,reportedSuccess100%. Same opponent name and retained setup yielded another win, but exact opponent execution/settings remain uncontrolled. M8 firsttenoutcomes9wins/1draw, no recorded losses.
+
+Fresh table:rank7,100points,46P33W1D12L,goals68:33(+35). Summary separately stored. Latest AWS version recheck remained13/19/15/14/14 with matching local source hashes; see M8 manifest verification.

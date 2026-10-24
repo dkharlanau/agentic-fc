@@ -466,6 +466,17 @@
             "fwd2": 14
           },
           "result": "All five latest versions unchanged in current Harness table; no config drift observed. Actual live payload still not recovered."
+        },
+        "finalVersionRecheck": {
+          "capturedAtUTC": "2026-10-24T00:56:04.099Z",
+          "awsVersionByRole": {
+            "fwd2": 14,
+            "fwd1": 14,
+            "mid": 15,
+            "def": 19,
+            "gk": 13
+          },
+          "basis": "Latest versions unchanged from previously inspected immutable saved source/model/settings. Local prompt hashes reverified. Actual per-call live payload remains unknown."
         }
       },
       "modelByRole": {

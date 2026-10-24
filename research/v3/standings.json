@@ -186,6 +186,28 @@
         "points": 94
       },
       "limitation": "Different summary/cumulative scopes preserved. Seventh is an observed capture-time position, not a final contest win."
+    },
+    {
+      "capturedAtUTC": "2026-10-24T01:00:52.965671+00:00",
+      "teamSummary": {
+        "played": 20,
+        "wins": 15,
+        "draws": 1,
+        "losses": 4,
+        "winRatePercent": 75
+      },
+      "leaderboard": {
+        "rank": 7,
+        "played": 46,
+        "wins": 33,
+        "draws": 1,
+        "losses": 12,
+        "goalsFor": 68,
+        "goalsAgainst": 33,
+        "goalDifference": 35,
+        "points": 100
+      },
+      "limitation": "Capture-time ranking, not final contest outcome. Summary and table retain separate scopes."
     }
   ]
 }

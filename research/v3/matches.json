@@ -1403,6 +1403,47 @@
       "initiation": "manual auto-matched by normal Find after verified M8 gate",
       "evidenceCapturedAtUTC": "2026-10-24T00:53:52.841746+00:00",
       "coaching": []
+    },
+    {
+      "id": "live-37",
+      "setup": "A0-M8-formation112",
+      "opponent": "Spartak Ultimate",
+      "side": "home",
+      "goalsFor": 4,
+      "goalsAgainst": 1,
+      "shotsFor": 7,
+      "shotsAgainst": 2,
+      "shotsOnTargetFor": 4,
+      "shotsOnTargetAgainst": 1,
+      "possessionPercent": 45,
+      "commands": 475,
+      "averageLatencyMs": 912,
+      "commandCounts": {
+        "MOVE_TO": 193,
+        "INTERCEPT": 89,
+        "MARK": 86,
+        "PASS": 79,
+        "CLEAR_OVERRIDE": 23,
+        "GK_DISTRIBUTE": 5
+      },
+      "opponentCommands": 26,
+      "opponentAverageLatencyMs": 2,
+      "roleLatencyMs": {
+        "gk": 816,
+        "def": 942,
+        "mid": 920,
+        "fwd1": 959,
+        "fwd2": 991
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy."
+      ],
+      "initiation": "manual auto-matched by normal Find after verified M8 gate",
+      "evidenceCapturedAtUTC": "2026-10-24T01:00:52.792979+00:00",
+      "coaching": []
     }
   ],
   "recordingOrder": "Local evidence-capture order; background matches may be appended retrospectively."
