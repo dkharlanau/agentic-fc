@@ -57,7 +57,9 @@ class FastEngine:
         if len(self.sessions)>=64 and session not in self.sessions:self.sessions.pop(next(iter(self.sessions)))
         self.sessions[session]={'calibration':calibration,'contact':candidate}
         if state.ball_status=='UNKNOWN':return done(reason='UNKNOWN_POSSESSION')
-        if state.play_mode!='PLAY_ON':return done(reason='ENGINE_RESTART')
+        if state.play_mode=='KICK_OFF' and not state.i_have_ball:
+            return done('SET_STANCE',{'stance':1 if pid==4 else 2 if pid==1 else 0},'RESTART_ROLE') if pid!=0 else done(reason='ENGINE_GOALKEEPER_RESTART')
+        if state.play_mode not in ('PLAY_ON','KICK_OFF'):return done(reason='ENGINE_RESTART')
         me=state.my;keepers={p.team:p for p in (*state.teammates,*state.opponents) if p.pid==0}
         geometry=profile['kind']!='unresolved_3d' and set(keepers)=={0,1}
         if geometry:
@@ -70,7 +72,7 @@ class FastEngine:
             # Explicit hasBall=false overrides inferred/qualified ownership.
             if me.has_ball is False:return done(reason='CONTRADICTORY_POSSESSION')
             corridor=min((line_distance(o.x,o.y,me.x,me.y,goal.x,0) for o in state.opponents if o.pid!=0),default=span)
-            if pid in (2,3,4) and math.hypot(me.x-goal.x,me.y)<=.20*span and abs(me.y)<=.10*span and corridor>.02*span:
+            if state.play_mode=='PLAY_ON' and pid in (2,3,4) and math.hypot(me.x-goal.x,me.y)<=.20*span and abs(me.y)<=.10*span and corridor>.02*span:
                 return done('SHOOT',{'aim_location':'BL' if goal.y>0 else 'TR','power':.8},'CLOSE_CLEAR_SHOT')
             targets=[]
             for mate in state.teammates:

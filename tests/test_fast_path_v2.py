@@ -29,6 +29,11 @@ class FastTests(unittest.TestCase):
   p=copy.deepcopy(ev.cases()[8]['input']);p['gameState']['ball']['position']['z']=0
   for row in p['gameState']['players']:row['position']={'x':0,'y':0}
   out,_=FastEngine(4).choose(p);self.assertEqual(out[0]['commandType'],'CLEAR_OVERRIDE')
+ def test_kickoff_support_and_no_direct_shot(self):
+  p=copy.deepcopy(ev.cases()[8]['input']);p['gameState']['playMode']='KICK_OFF'
+  out,_=FastEngine(4).choose(p);self.assertEqual(out[0]['commandType'],'PASS')
+  p['gameState']['ball']['possessionAgentId']='agentId_2'
+  out,_=FastEngine(4).choose(p);self.assertEqual(out[0]['commandType'],'SET_STANCE');self.assertEqual(out[0]['parameters']['stance'],1)
  def test_session_bound_and_separate(self):
   p=ev.cases()[8]['input'];e=FastEngine(4)
   for n in range(80):e.choose(p,str(n))

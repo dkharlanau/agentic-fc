@@ -21,7 +21,7 @@ def decode(raw):
  raise ValueError('No complete command array in SSE')
 
 def main():
- ap=argparse.ArgumentParser();ap.add_argument('--apply',action='store_true');ap.add_argument('--source-commit',required=True);args=ap.parse_args()
+ ap=argparse.ArgumentParser();ap.add_argument('--apply',action='store_true');ap.add_argument('--source-commit',required=True);ap.add_argument('--revision',type=int,default=1);args=ap.parse_args()
  hashes={n:hashlib.sha256((ROOT/n).read_bytes()).hexdigest() for n in SOURCES}
  if not args.apply:print(json.dumps({'playerId':4,'source':hashes,'action':'separate Runtime native timing only; no registration'}));return
  import boto3
@@ -42,7 +42,7 @@ def main():
    target='main.py' if name=='fast_path_v2/main.py' else name
    info=zipfile.ZipInfo(target,(2026,1,1,0,0,0));info.create_system=3;info.external_attr=0o100644<<16;info.compress_type=zipfile.ZIP_DEFLATED
    output.writestr(info,(ROOT/name).read_bytes())
- archive=buf.getvalue();sha=hashlib.sha256(archive).hexdigest();key=f'nhitl-fast-v2/{sha}.zip';p=ROOT/'.local/fast-path-v2/pilot.json'
+ archive=buf.getvalue();sha=hashlib.sha256(archive).hexdigest();key=f'nhitl-fast-v2/{sha}.zip';p=ROOT/('.local/fast-path-v2/pilot.json' if args.revision==1 else f'.local/fast-path-v2/pilot-v{args.revision}.json')
  request={'agentRuntimeName':'nhitl_fwd2_fast_v2','roleArn':role,'agentRuntimeArtifact':{'codeConfiguration':{'code':{'s3':{'bucket':bucket,'prefix':key}},'runtime':'PYTHON_3_13','entryPoint':['main.py']}},'networkConfiguration':{'networkMode':'PUBLIC'},'lifecycleConfiguration':{'idleRuntimeSessionTimeout':900,'maxLifetime':28800},'environmentVariables':{'PLAYER_ID':'4','BUILD_COMMIT':args.source_commit},'description':'Isolated deterministic FWD2 native timing pilot; no per-tick LLM; not portal registered'}
  if p.exists():
   receipt=json.loads(p.read_text())
@@ -51,7 +51,12 @@ def main():
  if not receipt.get('uploaded'):
   s3.put_object(Bucket=bucket,Key=key,Body=archive,ExpectedBucketOwner=account,ContentType='application/zip',Metadata={'sha256':sha,'source-commit':args.source_commit});receipt['uploaded']=True;save(p,receipt)
  if 'runtime' not in receipt:
-  r=c.create_agent_runtime(**request,clientToken=receipt['clientToken']);receipt['runtime']={k:r[k] for k in ('agentRuntimeId','agentRuntimeArn')};save(p,receipt)
+  if args.revision==1:r=c.create_agent_runtime(**request,clientToken=receipt['clientToken'])
+  else:
+   prior=json.loads((ROOT/'.local/fast-path-v2/pilot.json').read_text());rid=prior['runtime']['agentRuntimeId'];existing=c.get_agent_runtime(agentRuntimeId=rid)
+   if existing['roleArn']!=role or existing['agentRuntimeName']!=request['agentRuntimeName']:raise ValueError('Different existing Runtime')
+   r=c.update_agent_runtime(agentRuntimeId=rid,**{k:v for k,v in request.items() if k!='agentRuntimeName'},clientToken=receipt['clientToken'])
+  receipt['runtime']={k:r[k] for k in ('agentRuntimeId','agentRuntimeArn')};save(p,receipt)
  for attempt in range(60):
   actual=c.get_agent_runtime(agentRuntimeId=receipt['runtime']['agentRuntimeId']);status=actual['status'];print('STATUS',status,flush=True)
   if status=='READY':break
@@ -64,13 +69,16 @@ def main():
  # No expected action is passed to the Runtime.
  import importlib.util
  spec=importlib.util.spec_from_file_location('compact_eval',ROOT/'research/v3/compact-role-r2/evaluate.py');ev=importlib.util.module_from_spec(spec);spec.loader.exec_module(ev)
- cases=ev.screen_cases();client=boto3.client('bedrock-agentcore',region_name=region,config=Config(connect_timeout=5,read_timeout=60,retries={'max_attempts':0}));sid='nhitl-fast-native-'+str(uuid.uuid4());arn=receipt['runtime']['agentRuntimeArn'];report={'kind':'full native AWS response timings; CloudShell network path, not game server latency','probes':[],'stopped':False}
+ cases=ev.screen_cases()
+ import copy
+ restart=copy.deepcopy(next(x for x in cases if x['id']=='fwd2-teammate-ball-support'));restart['id']='fwd2-kickoff-role';restart['input']['gameState']['playMode']='KICK_OFF';restart['expected']={'types':['SET_STANCE']};cases.append(restart)
+ client=boto3.client('bedrock-agentcore',region_name=region,config=Config(connect_timeout=5,read_timeout=60,retries={'max_attempts':0}));sid='nhitl-fast-native-'+str(uuid.uuid4());arn=receipt['runtime']['agentRuntimeArn'];report={'kind':'full native AWS response timings; CloudShell network path, not game server latency','probes':[],'stopped':False}
  try:
   for repeat in range(2):
    for case in cases:
-    t=time.monotonic();response=client.invoke_agent_runtime(agentRuntimeArn=arn,runtimeSessionId=sid,qualifier='DEFAULT',contentType='application/json',payload=json.dumps({'prompt':json.dumps(case['input'])}).encode());raw=response['response'].read().decode();wall=round((time.monotonic()-t)*1000,3);commands=decode(raw);errors=ev.base.errors(case,json.dumps(commands));row={'case':case['id'],'repeat':repeat,'coldFirstCall':not report['probes'],'elapsedMs':wall,'commands':commands,'errors':errors};report['probes'].append(row);save(p.parent/'native.json',report);print('PROBE',json.dumps(row),flush=True)
+    t=time.monotonic();response=client.invoke_agent_runtime(agentRuntimeArn=arn,runtimeSessionId=sid,qualifier='DEFAULT',contentType='application/json',payload=json.dumps({'prompt':json.dumps(case['input'])}).encode());raw=response['response'].read().decode();wall=round((time.monotonic()-t)*1000,3);commands=decode(raw);errors=ev.base.errors(case,json.dumps(commands));row={'case':case['id'],'repeat':repeat,'coldFirstCall':not report['probes'],'elapsedMs':wall,'commands':commands,'errors':errors};report['probes'].append(row);save(p.parent/('native.json' if args.revision==1 else f'native-v{args.revision}.json'),report);print('PROBE',json.dumps(row),flush=True)
  finally:
-  client.stop_runtime_session(agentRuntimeArn=arn,runtimeSessionId=sid,qualifier='DEFAULT');report['stopped']=True;save(p.parent/'native.json',report)
+  client.stop_runtime_session(agentRuntimeArn=arn,runtimeSessionId=sid,qualifier='DEFAULT');report['stopped']=True;save(p.parent/('native.json' if args.revision==1 else f'native-v{args.revision}.json'),report)
  warm=[r['elapsedMs'] for r in report['probes'] if not r['coldFirstCall']]
- report['summary']={'passed':sum(not r['errors'] for r in report['probes']),'total':len(report['probes']),'warmMedianMs':statistics.median(warm),'warmMaxMs':max(warm),'warmUnder10ms':sum(x<=10 for x in warm),'warmCount':len(warm)};save(p.parent/'native.json',report);print('SUMMARY',json.dumps(report['summary']),flush=True)
+ report['summary']={'passed':sum(not r['errors'] for r in report['probes']),'total':len(report['probes']),'warmMedianMs':statistics.median(warm),'warmMaxMs':max(warm),'warmUnder10ms':sum(x<=10 for x in warm),'warmCount':len(warm)};save(p.parent/('native.json' if args.revision==1 else f'native-v{args.revision}.json'),report);print('SUMMARY',json.dumps(report['summary']),flush=True)
 if __name__=='__main__':main()
