@@ -43,7 +43,12 @@
     "live-59",
     "live-60",
     "live-61",
-    "live-62"
+    "live-62",
+    "live-63",
+    "live-64",
+    "live-65",
+    "live-66",
+    "live-67"
   ],
   "singleRoleRecoveryCanary": {
     "created": true,
@@ -74,16 +79,16 @@
   "windowExtension": "New explicit user request at09:14UTC:8hours from this moment",
   "latestLeaderboard": {
     "rank": 14,
-    "played": 71,
-    "wins": 44,
+    "played": 76,
+    "wins": 47,
     "draws": 1,
-    "losses": 26,
-    "goalsFor": 99,
-    "goalsAgainst": 57,
-    "goalDifference": 42,
-    "points": 133,
-    "capturedAtUTC": "2026-10-24T13:30:00Z",
-    "source": "Primary portal leaderboard; AX and screenshot captured privately",
+    "losses": 28,
+    "goalsFor": 107,
+    "goalsAgainst": 63,
+    "goalDifference": 44,
+    "points": 142,
+    "capturedAtUTC": "2026-10-24T13:54:40Z",
+    "source": "Primary portal leaderboard; AX and screenshot saved privately",
     "captureTimePrecision": "minute"
   },
   "newManualMatchCutoffUTC": "2026-10-24T17:04:05Z",
@@ -135,5 +140,6 @@
       "practiceResult": "2:0",
       "changed": false
     }
-  }
+  },
+  "latestRankedBatch": "ranked-batch-01.json"
 }

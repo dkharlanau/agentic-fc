@@ -68,21 +68,25 @@ Stop only own probe/Fitness sessions, never match sessions. Keep raw states,
 account/resource/session bindings and access codes out of public Git.
 Branch `codex/football-experiments-20261023`; draft PR5 already attached.
 
-## Current verified checkpoint at13:30UTC
+## Current verified checkpoint at13:55UTC
 
-The authoritative current state is original five M8 Harness, formation1-1-2,
-GK13/DEF19/MID15/FWD1v16/FWD2v14; latest Fitness5/5. R1v13 and GK-R2v1
-are READY but UNREGISTERED. v14position remains local-only, not deployed.
-The chronological11:46..13:18 notes below are historical experiment records;
-their unfinished next-actions are deferred by the P0 five-game batch priority.
+Original five M8 Harness, formation1-1-2, GK13/DEF19/MID15/FWD1v16/FWD2v14;
+latest Fitness5/5. R1v13 and GK-R2v1 READY but UNREGISTERED. v14position local
+only, not yet deployed. Lower11:46..13:18 notes are historical, not current.
 
-Fresh leaderboard: rank14,71P44W1D26L,99:57goals,+42,133points at13:30UTC.
-See `ranked-batch-01.json` and the private current-run checkpoint for progress.
-The first batch game live63 was incoming AWAY Divide by Zero, WON3:2,
-shots5:2; live64 HOME Matrix_7 is in progress. Do not mutate saved settings or
-run probes during the match. Continue serial eligible live games to five,
-then refresh leaderboard and perform one cohort-level tactical review.
-No superiority of the runtime/model/keeper candidates has been established.
+Batch01 complete: live63..67,3W0D2L,8:6goals,16:27shots,9points. Leaderboard
+13:54UTC: rank14,76P47W1D28L,107:63goals,+44,142points. All counter changes
+exactly reconcile five live games; Practice excluded. See ranked-batch-01.json.
+No active game after returning to profile; recheck before probes/config changes.
+
+One justified next candidate: FWD1v14 POSITION support, sameNova2Lite, other
+fouroriginal and112 unchanged. Require unusedRuntimeREADY/native9/Fitness5,
+then bounded BenchmarkPractice08. Stop/restore originalFWD1v16 on failure,
+wrong recipient/frame, excessive retreat or worsening attacking support.
+No Micro/GK/formation/observer change alongside this. After bounded validation,
+resume second five-live-game batch promptly using whichever setup is verified;
+one Practice win alone does not establish superiority. Native source must be
+pushed and matching deployment receipt; never stop game sessions.
 
 ## Historical snapshot at11:46UTC
 
