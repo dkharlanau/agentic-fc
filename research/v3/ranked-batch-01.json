@@ -1,0 +1,27 @@
+{
+  "kind": "five-game ranked live batch",
+  "status": "running",
+  "setup": "A0-M8-formation112-original-fwd1-v16",
+  "constraints": "Five original Harness unchanged; no config/model/prompt/practice/redeploy within batch; serial matchmaking",
+  "before": {
+    "rank": 14,
+    "played": 71,
+    "wins": 44,
+    "draws": 1,
+    "losses": 26,
+    "goalsFor": 99,
+    "goalsAgainst": 57,
+    "goalDifference": 42,
+    "points": 133,
+    "capturedAtUTC": "2026-10-24T13:30:00Z",
+    "source": "Primary portal leaderboard; AX and screenshot captured privately",
+    "captureTimePrecision": "minute"
+  },
+  "reports": [],
+  "targetCompleted": 5,
+  "cutoffUTC": "2026-10-24T17:04:05Z",
+  "deadlineUTC": "2026-10-24T17:14:05Z",
+  "activeOpponent": "Divide by Zero",
+  "activeSide": "away",
+  "activeInitiation": "incoming; already running when observed"
+}
