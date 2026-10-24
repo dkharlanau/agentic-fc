@@ -1,0 +1,43 @@
+{
+  "kind": "Experimental R1 deployment package; deployment status recorded separately",
+  "runtime": "PYTHON_3_13",
+  "architecture": "linux-arm64",
+  "entryPoint": [
+    "main.py"
+  ],
+  "archiveSha256": "86728136caef0a2d2e865ca3e4e801860c11f23391e004baf8b8e7c34015fc6b",
+  "archiveBytes": 20727790,
+  "uncompressedBytes": 34705684,
+  "fileCount": 2773,
+  "sourceSha256": {
+    "agentic_fc/__init__.py": "246ba241608bece9b9a1e940dd5401385aeed762ba8306d2e2a0eba7d0556df0",
+    "agentic_fc/state.py": "e58f69207c11e6345a13292b1b18e5e5a2730b870289098f2329a051b62bf65b",
+    "agentic_fc/geometry.py": "5bcef6483b35c0c84089de4382b2d665baea51f1857d55f5a9ab8be5f78302f3",
+    "agentic_fc/policy.py": "94f53ee7715d8523c2e699c42d96fa929844d8769c034de77a1239a7da0f9e69",
+    "runtime_v1/__init__.py": "d6637c179056b2cc42cc2439f1f9eca4b96faae74c22a009204b6201afa24a05",
+    "runtime_v1/core.py": "504f11c2a438dd4280a4540235de5cad7cc9cd2e2298b6160d472c8d6b5e6eca",
+    "runtime_v1/main.py": "65cf2ee3370c5318a34185e3ec5ba5d4d479368e1fe12d42d6541cc3d3d0f050"
+  },
+  "dependencies": {
+    "uvicorn": "0.54.0",
+    "s3transfer": "0.19.3",
+    "botocore": "1.43.118",
+    "click": "8.5.0",
+    "starlette": "1.9.0",
+    "websockets": "17.3",
+    "bedrock-agentcore": "1.25.0",
+    "boto3": "1.43.118",
+    "jmespath": "1.1.0",
+    "urllib3": "2.8.0",
+    "h11": "0.16.0",
+    "pydantic-core": "2.50.1",
+    "python-dateutil": "2.9.0.post0",
+    "annotated-types": "0.8.0",
+    "typing-inspection": "0.4.4",
+    "typing-extensions": "4.16.0",
+    "pydantic": "2.14.1",
+    "anyio": "4.15.1",
+    "six": "1.17.0",
+    "idna": "3.20"
+  }
+}

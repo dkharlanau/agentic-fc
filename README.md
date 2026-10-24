@@ -1,6 +1,6 @@
 # Agentic FC — No Human in the Loop
 
-## Latest: live Harness experiments and setup history (2026-10-23)
+## Latest: live experiments and portable recovery (2026-10-24)
 
 **[Начать с полного H2-разбора на русском](research/v2/README.ru.md)** — tactics, model settings, advanced features, evidence corrections and rollout plan.
 
@@ -8,7 +8,9 @@
 
 **Live experiment history (2026-10-23):** [A0/H2.1/H3 prompts, setup hashes and Fitness investigation](research/v3/README.ru.md). A0-M1 reached verified 5/5 Fitness after scrimmage-session reset and a MID tool restriction. A winning strategy remains to be established by live match evidence.
 
-**Current AWS trial:** [M9: FWD1 short-term Memory](research/v3/setups.json), retaining formation 1-2-1, Haiku 4.5 on FWD2 and Nova 2 Lite on the other four roles. The [schema-clean prompts](research/v3/schema-clean), empty tools and sliding history of 10 messages are unchanged. Only FWD1 now uses STM (actor `fwd1`, 10 messages, three-day TTL, no LTM strategies). Native JSON canaries passed 2/2 and UI Fitness passed 5/5; live benefit is unproven. **[Portable five-role recovery kit](research/v3/recovery/README.ru.md)** preserves the actual AWS configuration and offers baseline M7 plus the M9 memory trial, with private bindings supplied after a workshop reset. [Six-hour run receipt](research/v3/run-20261024-sixhours.json).
+**Current AWS trial:** [M7 / 1-2-1 restored](research/v3/setups.json). Haiku 4.5 remains on FWD2, Nova 2 Lite on the other four roles; [schema-clean prompts](research/v3/schema-clean), empty tools, sliding history10 and disabled Memory are preserved. FWD1 v16 is behavior-identical to pre-Memory v14 and UI Fitness is5/5. The M9/M10 Memory/fresh-resource experiments are retained as unsuccessful live trials; native Memory writes worked, but live-match use was not established. **[Portable five-role recovery kit](research/v3/recovery/README.ru.md)** preserves actual AWS settings and safe creation receipts. [Six-hour run receipt](research/v3/run-20261024-sixhours.json).
+
+**New code candidate:** [R1 bounded model selection Runtime](runtime_v1/README.md) has six passing offline core tests, an SDK streaming smoke check with fake clients, and a Linux ARM64 CodeZip manifest. It has not been deployed or validated live yet. It keeps a genuine Bedrock action choice while code enforces side/player identity and JSON; raw traces and resource bindings remain private.
 
 The [prior M8 session receipt](research/v3/run-20261023-summary.json), [resumed-session receipt](research/v3/run-20261024-resume.json) and [side audit](research/v3/side-audit-20261024.json) distinguish later defeats and the HOME-only historical cohort. [Sonnet FWD1 probes](research/v3/fwd1-sonnet-probes.json) document rejected laboratory alternatives; no Sonnet model or candidate prompt was installed. [Possession probes](research/v3/possession-probes.json), [prompt probes](research/v3/prompt-readiness-probes.json), [direct FWD1 model probes](research/v3/fwd1-direct-model-probes.json) and [native canaries](research/v3/model-probes.json) document trial rationale and limits. [Routing probes](research/v3/routing-probes.json) retain rejected laboratory candidates and input-shape limitations; none of those prompt candidates replaced the saved role prompts. See [setup history](research/v3/setups.json) and [rendered report numbers](research/v3/matches.json).
 

@@ -1738,6 +1738,50 @@
       "initiation": "manual normal Find after single-role restore canary Ready, 13-field saved-config readback with no mismatches, FWD1 registration reload and UI Fitness5/5",
       "coaching": [],
       "evidenceCapturedAtUTC": "2026-10-24T06:37:21.310095+00:00"
+    },
+    {
+      "id": "live-45",
+      "setup": "A0-M9-memory-fwd1",
+      "opponent": "Agentic Arsenal",
+      "side": "home",
+      "goalsFor": 0,
+      "goalsAgainst": 2,
+      "shotsFor": 5,
+      "shotsAgainst": 5,
+      "shotsOnTargetFor": 0,
+      "shotsOnTargetAgainst": 2,
+      "possessionPercent": 51,
+      "commands": 307,
+      "averageLatencyMs": 846,
+      "commandCounts": {
+        "MOVE_TO": 204,
+        "PRESS_BALL": 48,
+        "INTERCEPT": 20,
+        "SHOOT": 15,
+        "CLEAR_OVERRIDE": 11,
+        "GK_DISTRIBUTE": 4,
+        "PASS": 4,
+        "MARK": 1
+      },
+      "opponentCommands": 15,
+      "opponentAverageLatencyMs": 3,
+      "roleLatencyMs": {
+        "gk": 629,
+        "def": 823,
+        "mid": 1076,
+        "fwd1": 673,
+        "fwd2": 870
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Reported15SHOOT commands yielded no primary shots on target. Memory actor/session enumeration after game showed only known probes and scrimmage, not a matching live session. Execution path and inference/fallback use remain unverified."
+      ],
+      "initiation": "manual normal Find after original FWD1 binding restored and profile reloaded; fresh UI Fitness5/5; same original Memory-enabled v15; no saved candidate prompts",
+      "coaching": [],
+      "evidenceCapturedAtUTC": "2026-10-24T07:15:48.732529+00:00"
     }
   ],
   "recordingOrder": "Local evidence-capture order; background matches may be appended retrospectively."

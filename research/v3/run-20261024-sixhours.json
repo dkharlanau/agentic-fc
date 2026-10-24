@@ -15,7 +15,7 @@
     "points": 106
   },
   "initialSetup": "A0-M7-formation121",
-  "currentTrial": "A0-M9-memory-fwd1",
+  "currentTrial": "A0-M7-formation121",
   "priorities": [
     "Preserve portable exact five-role AWS setup before workshop reset",
     "Validate STM on one role, inspect actual input contract where available",
@@ -25,7 +25,8 @@
   "recoveryKit": "recovery/README.ru.md",
   "completedReports": [
     "live-43",
-    "live-44"
+    "live-44",
+    "live-45"
   ],
   "singleRoleRecoveryCanary": {
     "created": true,
@@ -41,5 +42,16 @@
     "profileReloadVerified": true,
     "fitness": "5/5",
     "savedPromptChanged": false
-  }
+  },
+  "memoryTrialOutcome": {
+    "nativeCanary": "strictJSON2/2; writes confirmed",
+    "liveReports": [
+      "live-43",
+      "live-44",
+      "live-45"
+    ],
+    "liveMemoryUse": "not established",
+    "rollback": "Original FWD1 v16 is behavior-identical to pre-Memory v14; UI5/5"
+  },
+  "runtimeCandidate": "runtime_v1; not deployed yet"
 }

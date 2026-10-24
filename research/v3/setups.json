@@ -442,7 +442,24 @@
           "shotsOnTargetFor": 2,
           "shotsOnTargetAgainst": 0
         }
-      ]
+      ],
+      "latestRollbackValidation": {
+        "capturedAtUTC": "2026-10-24T07:15:48.734760+00:00",
+        "fwd1Version": 16,
+        "memory": "disabled",
+        "comparisonSource": "GetHarness v16 vs exported v14 before Memory",
+        "behavioralDifferences": [],
+        "status": "READY",
+        "originalRegistrationRestored": true,
+        "fitness": {
+          "passedPositions": 5,
+          "totalPositions": 5,
+          "commands": 5,
+          "activePercent": 100,
+          "reportedAverageLatencyMs": 0
+        },
+        "scrimmageSession": "Known own FWD1 pos3 returned ResourceNotFound/already terminated on the Harness-routed stop request; UI Fitness then passed. Underlying managed runtime is not a directly callable/stop target."
+      }
     },
     {
       "promptDirectory": "schema-clean",
