@@ -50,12 +50,37 @@ def summarize(events):
                                      'ballPosition', 'distanceToGoal', 'playerStamina',
                                      'ownershipEvidence', 'coordinateProfile')}
                for x in decisions if x.get('commandType') in ('PASS', 'SHOOT', 'GK_DISTRIBUTE')]
+    action_labels = {'CoachSetStance', 'CoachPressBall', 'CoachMoveTo', 'CoachFollowPlayer',
+                     'FindOpenSpace', 'StayNearGoal', 'AdvanceToGoalWithBall', 'DribbleTo',
+                     'CoverZone', 'MoveToTarget', 'CoachPass', 'CoachShoot', 'CoachIntercept'}
+    observations = collections.defaultdict(lambda: {'own': collections.Counter(), 'opponent': collections.Counter()})
+    previous_commands = collections.Counter()
+    for decision in decisions:
+        previous = decision.get('previousCommand')
+        command = previous.get('commandType') if isinstance(previous, dict) else None
+        if command not in {'MOVE_TO', 'PASS', 'SHOOT', 'PRESS_BALL', 'INTERCEPT', 'MARK',
+                           'FOLLOW_PLAYER', 'CLEAR_OVERRIDE', 'SET_STANCE', 'GK_DISTRIBUTE'}:
+            continue
+        previous_commands[command] += 1
+        own_code = {0: 'home', 1: 'away'}.get(decision.get('teamId'))
+        for player in decision.get('assignedPlayerActions', []):
+            if player.get('teamCode') not in ('home', 'away') or own_code is None:
+                continue
+            side = 'own' if player['teamCode'] == own_code else 'opponent'
+            label = player.get('lastAction')
+            observations[command][side][label if label in action_labels else 'OTHER'] += 1
     return {'kind': 'Own Runtime emitted decisions; application by game server not established',
             'decisions': len(decisions), 'inputRejections': rejected,
             'commands': dict(collections.Counter(x.get('commandType') for x in decisions)),
             'phases': dict(collections.Counter(x.get('phase') for x in decisions)),
             'outcomes': dict(collections.Counter(x.get('outcome') for x in decisions)),
             'wireTeamScopes': dict(collections.Counter(x.get('wireTeamScope', 'legacy_explicit') for x in decisions)),
+            'supportModes': dict(collections.Counter(x.get('supportMode', 'legacy_default') for x in decisions)),
+            'serverPreviousCommandCounts': dict(previous_commands),
+            'observedSameIdActionsAfterPreviousCommand': {
+                command: {side: dict(counts) for side, counts in sides.items()}
+                for command, sides in observations.items()},
+            'attributionLimit': 'Previous command is server bookkeeping; lastAction correlations alone do not establish physical recipient or report-column ownership',
             'memoryOutcomes': dict(collections.Counter(x.get('memoryOutcome') for x in decisions)),
             'modelLatencyMs': quantiles([x['modelLatencyMs'] for x in decisions if 'modelLatencyMs' in x]),
             'streamOpenedToDecisionLogMs': quantiles(stream_spans),
