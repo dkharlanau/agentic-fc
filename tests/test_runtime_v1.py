@@ -70,6 +70,9 @@ class RuntimeTests(unittest.TestCase):
         self.assertEqual(commands[0]['playerId'], 3)
         self.assertEqual(commands[0]['teamId'], 1)
         self.assertTrue(audit['coordinateProbeOffered'])
+        wide, wide_audit = DecisionEngine(Model(), 'test', coordinate_probe='own-wide').choose(root, 'wide')
+        self.assertEqual(wide[0]['parameters'], {'target_x': 2.0, 'target_y': 2.8, 'sprint': False})
+        self.assertEqual(wide_audit['coordinateProbeMode'], 'own-wide')
         failed, _ = DecisionEngine(Model(error=TimeoutError()), 'test', coordinate_probe=True).choose(root, 'error')
         self.assertEqual(failed[0]['commandType'], 'CLEAR_OVERRIDE')
         for clock in (7.9, 28, 120):

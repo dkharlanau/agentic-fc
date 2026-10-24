@@ -84,3 +84,5 @@ The outer async-generator path gives the SDK a stream before model work complete
 ## Bounded coordinate diagnostic
 
 `--fwd-coordinate-probe world-target` is an opt-in Practice diagnostic, disabled by default. Only FWD1 in the observed keeper-reference profile is offered a raw small `MOVE_TO` target `(4*attackSign,1.5)` without sprint during elapsed seconds8..28. The model is instructed to select the offered probe; a legal own release remains available on failure. It does not change team IDs or infer a movement conversion. Compare subsequent raw positions and same-ID last-actions before claiming raw or normalized output units. Native/Fitness gates alone cannot establish those units; diagnostic match outcomes must not enter policy-strength comparisons.
+
+A second `--fwd-coordinate-probe own-wide` variant uses `(-2*attackSign,2.8)` in the same bounded window, to reduce ball-contact confounding. First field trace supports own-player control and raw units but is inconclusive because the carrier dribbled through the target region. Restore the working M8 portal bindings between diagnostics; an enabled probe is not a tournament policy.

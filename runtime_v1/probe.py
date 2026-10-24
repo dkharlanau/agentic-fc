@@ -73,7 +73,7 @@ def main():
                 ball['possessionTeamCode'] = 'away'
             cases.append((side, {'id': 'attack-support-' + str(side),
                                  'modelText': json.dumps(support)}, 'SET_STANCE'))
-    if player_id == 3 and env.get('FWD_COORDINATE_PROBE') == 'world-target':
+    if player_id == 3 and env.get('FWD_COORDINATE_PROBE') in ('world-target', 'own-wide'):
         for side in (0, 1):
             diagnostic = copy.deepcopy(observed)
             diagnostic['gameState']['gameTime'] = 10
@@ -83,10 +83,13 @@ def main():
                     player['teamCode'] = 'away' if player['teamCode'] == 'home' else 'home'
                     player['position']['x'] *= -1
                 diagnostic['gameState']['ball']['position']['x'] *= -1
+            wide = env['FWD_COORDINATE_PROBE'] == 'own-wide'
+            x = (-2.0 if wide else 4.0) * (1 if side == 0 else -1)
             cases.append((side, {'id': 'coordinate-probe-' + str(side),
                                  'modelText': json.dumps(diagnostic),
-                                 'expected': {'probeTarget': {'target_x': 4.0 if side == 0 else -4.0,
-                                                              'target_y': 1.5, 'sprint': False}}}, 'MOVE_TO'))
+                                 'expected': {'probeTarget': {'target_x': x,
+                                                              'target_y': 2.8 if wide else 1.5,
+                                                              'sprint': False}}}, 'MOVE_TO'))
     if player_id == 0:
         keeper_cases = json.loads((ROOT / 'research/v3/keeper-g1/fixtures.json').read_text())['cases']
         cases = [(unwrap(c['modelText']).get('teamId'), c, c['expected']['commandType']) for c in keeper_cases]

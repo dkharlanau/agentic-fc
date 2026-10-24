@@ -118,3 +118,19 @@ diagnostic, GKremainsR2v1. No activegame now. Nativeelapsed4049,4009,3985,4076,
 runneropt-in --models micro prepared, NOTrun/installed. DefaultNova/Haiku
 preserved; stoponserviceaccessdenial, noIAMchanges. ModelroundsafterPractice06
 inidlewindowonly. Publiceditslive61/runtime status/benchrunner needpush.
+
+Latest12:27UTC: Practice06completed0:1,shots1:5,pos52%; diagnosticexcluded
+fromstrength. v12build e524verified64choices27CLEAR/24STANCE/10MOVE/1PASS/2INTER,
+0reject,p50=418/p95=560/max1001. OwnHOME3CoachMoveTo at11.72afterfirstMOVE9.7;
+subsequentpositionsapproachraw4,1.5withinabout0.53, thendrift/retreatafterwindow.
+Ballcontact/dribblingconfoundsthis; do NOTsayphysicalteamsareinverted.
+v13localaddsquiet --fwd-coordinate-probe own-wide target(-2*sign,2.8),
+same8..28window/model/boundscope.40checks+SDKsmokepass;archive
+de7dddef3fa44bfa824849d684c0a1ec3d7dc527bd23d31dcfc356467252e2e0.
+NEXT restore BOTHoriginalGK13 andFWD1v16portalARNs whileidle, freshFitness5
+soincominggamesuseworkingM8whilepreparing. ThenidleMicro8nativeoverrides
+(originalFWD1Harness) withlatestbenchrunner; stoponAccessDenied,noaccesschanges.
+Commit/pushv13,Cloudbuild/updateunusedR1receipt12->13 withbound+attack+own-wide,
+native9thenbindonlyFWD1beforeFitness/Practice07; GKoriginalforquietercontrol.
+AfterdiagnosticrestoreM8betweenexperiments. Bewareincominggamescanstartwithout
+consent; checkUIbeforesavedchanges/nativecalls. Currentphaseprivatecheckpoint.

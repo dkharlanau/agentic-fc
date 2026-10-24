@@ -28,7 +28,8 @@ def engine():
             _engine = DecisionEngine(client, os.getenv('MODEL_ID', 'global.amazon.nova-2-lite-v1:0'),
                                      player_id=int(os.getenv('PLAYER_ID', '3')),
                                      attack_support=os.getenv('FWD_SUPPORT_STANCE') == 'attack',
-                                     coordinate_probe=os.getenv('FWD_COORDINATE_PROBE') == 'world-target')
+                                     coordinate_probe=os.getenv('FWD_COORDINATE_PROBE')
+                                         if os.getenv('FWD_COORDINATE_PROBE') in ('world-target', 'own-wide') else False)
         return _engine
 
 

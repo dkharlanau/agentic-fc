@@ -340,6 +340,81 @@
           239.11426
         ]
       }
+    },
+    {
+      "id": "practice-06",
+      "setup": "GK-R2v1-plus-FWD1-v12-coordinate-diagnostic-formation112",
+      "opponent": "The Benchmark FC",
+      "side": "home",
+      "goalsFor": 0,
+      "goalsAgainst": 1,
+      "shotsFor": 1,
+      "shotsAgainst": 5,
+      "shotsOnTargetFor": 0,
+      "shotsOnTargetAgainst": 1,
+      "possessionPercent": 52,
+      "commands": 335,
+      "averageLatencyMs": 787,
+      "commandCounts": {
+        "MOVE_TO": 121,
+        "PRESS_BALL": 113,
+        "INTERCEPT": 39,
+        "PASS": 20,
+        "SHOOT": 20,
+        "CLEAR_OVERRIDE": 16,
+        "GK_DISTRIBUTE": 5,
+        "MARK": 1
+      },
+      "opponentCommands": 123,
+      "opponentAverageLatencyMs": 211,
+      "roleLatencyMs": {
+        "gk": 565,
+        "def": 774,
+        "mid": 856,
+        "fwd1": 586,
+        "fwd2": 773
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Diagnostic outcome excluded from policy-strength comparisons.",
+        "Approach to target occurred near ball and opponents; repeat with quieter target before adopting a movement conversion.",
+        "Opponent reportedMOVE10matches own emittedprobe10, so command-column attribution stays uncertain."
+      ],
+      "mode": "PracticeDiagnostic",
+      "preset": "Balanced",
+      "initiation": "Bounded coordinate probe8..28seconds afterv12native9/Fitness5; GK_R2unchanged; no coach",
+      "coaching": [],
+      "excludeFromStrengthComparison": true,
+      "unityFinalVerified": {
+        "goalsFor": 0,
+        "goalsAgainst": 1,
+        "shotsFor": 1,
+        "shotsAgainst": 5,
+        "shotsOnTargetFor": 0,
+        "shotsOnTargetAgainst": 1,
+        "possessionPercent": 52
+      },
+      "runtimeEvidence": {
+        "sourceCommit": "e52447c",
+        "decisions": 64,
+        "commands": {
+          "CLEAR_OVERRIDE": 27,
+          "SET_STANCE": 24,
+          "MOVE_TO": 10,
+          "PASS": 1,
+          "INTERCEPT": 2
+        },
+        "inputRejects": 0,
+        "modelLatencyMs": {
+          "p50": 418,
+          "p95": 560,
+          "max": 1001
+        },
+        "coordinateObservation": "OwnHOMEplayer3 showsCoachMoveTo after firstMOVE, later approaches rawtarget4,1.5 withinabout0.53; possession/contact affect motion, then retreats after window. This supports raw units/owncontrol, not yet a validated converter."
+      }
     }
   ]
 }

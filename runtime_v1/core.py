@@ -141,7 +141,9 @@ class DecisionEngine:
             # Deliberately raw, small coordinates for a bounded Practice experiment.
             # The resulting player trace must establish units before any converter.
             options.insert(0, cmd(state, 'MOVE_TO',
-                                  {'target_x': 4.0 * state.sign, 'target_y': 1.5, 'sprint': False},
+                                  {'target_x': (-2.0 if self.coordinate_probe == 'own-wide' else 4.0) * state.sign,
+                                   'target_y': 2.8 if self.coordinate_probe == 'own-wide' else 1.5,
+                                   'sprint': False},
                                   reason='CONTROL_UNIT_PROBE'))
         # A missing legal release command cannot be repaired by inventing an unlocked action.
         if not options:
@@ -214,6 +216,8 @@ class DecisionEngine:
                  'usage': usage,
                  'supportMode': 'attack' if self.attack_support else 'default',
                  'coordinateProbeOffered': bool(probe_offered),
+                 'coordinateProbeMode': 'own-wide' if self.coordinate_probe == 'own-wide' else
+                                        'world-target' if self.coordinate_probe else 'off',
                  'previousCommand': root.get('previousCommand'),
                  'assignedPlayerActions': [
                      {k: p.get(k) for k in ('teamCode', 'agentId', 'position', 'currentAction', 'lastAction')}

@@ -368,6 +368,21 @@
       3648
     ],
     "ownSessionsStopped": true,
-    "fitness": "5/5"
+    "fitness": "5/5",
+    "practice06": {
+      "result": "LOSS0:1",
+      "shots": "1:5",
+      "excludedFromStrength": true,
+      "probeMoves": 10,
+      "observation": "OwnHOME3CoachMoveTo at11.72 afterfirstprobe, later withinabout0.53ofraw4,1.5; ballcontact/dribbling confounds unit proof. Opponent also hasCoachMoveTo; labels alone insufficient."
+    }
+  },
+  "revision13Candidate": {
+    "status": "Local only",
+    "onlyMechanismChange": "Quiet own-half wide target(-2*attackSign,2.8) instead of attacking target; same8..28window/scope/model",
+    "hypothesis": "Reduce ball-contact confounding and distinguish raw target from normalized target",
+    "archiveSha256": "de7dddef3fa44bfa824849d684c0a1ec3d7dc527bd23d31dcfc356467252e2e0",
+    "offlineChecks": 40,
+    "nativeGate": "9cases pending"
   }
 }
