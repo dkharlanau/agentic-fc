@@ -58,6 +58,10 @@ class FastEngine:
         self.sessions[session]={'calibration':calibration,'contact':candidate}
         if state.ball_status=='UNKNOWN':return done(reason='UNKNOWN_POSSESSION')
         if state.play_mode=='KICK_OFF' and not state.i_have_ball:
+            # The observed Fitness contract uses the documented full-size XY
+            # frame. Only that frame supports this own-half restart target.
+            if pid==4 and profile['kind']=='documented_xy':
+                return done('MOVE_TO',{'target_x':-3.0*state.sign,'target_y':8.0,'sprint':False},'DOCUMENTED_RESTART_POSITION')
             return done('SET_STANCE',{'stance':1 if pid==4 else 2 if pid==1 else 0},'RESTART_ROLE') if pid!=0 else done(reason='ENGINE_GOALKEEPER_RESTART')
         if state.play_mode not in ('PLAY_ON','KICK_OFF'):return done(reason='ENGINE_RESTART')
         me=state.my;keepers={p.team:p for p in (*state.teammates,*state.opponents) if p.pid==0}

@@ -71,12 +71,21 @@ def main():
  spec=importlib.util.spec_from_file_location('compact_eval',ROOT/'research/v3/compact-role-r2/evaluate.py');ev=importlib.util.module_from_spec(spec);spec.loader.exec_module(ev)
  cases=ev.screen_cases()
  import copy
- restart=copy.deepcopy(next(x for x in cases if x['id']=='fwd2-teammate-ball-support'));restart['id']='fwd2-kickoff-role';restart['input']['gameState']['playMode']='KICK_OFF';restart['expected']={'types':['SET_STANCE']};cases.append(restart)
+ restart=copy.deepcopy(next(x for x in cases if x['id']=='fwd2-teammate-ball-support'));restart['id']='fwd2-kickoff-role';restart['input']['gameState']['playMode']='KICK_OFF';restart['expected']={'types':['MOVE_TO']};cases.append(restart)
+ away=copy.deepcopy(restart);away['id']='fwd2-kickoff-role-away';away['input']['teamId']=1
+ for row in away['input']['gameState']['players']:
+  row['teamCode']='away' if row['teamCode']=='home' else 'home';row['position']['x']*=-1
+ away['input']['gameState']['ball']['possessionTeamCode']='away';away['input']['gameState']['ball']['position']['x']*=-1;cases.append(away)
  client=boto3.client('bedrock-agentcore',region_name=region,config=Config(connect_timeout=5,read_timeout=60,retries={'max_attempts':0}));sid='nhitl-fast-native-'+str(uuid.uuid4());arn=receipt['runtime']['agentRuntimeArn'];report={'kind':'full native AWS response timings; CloudShell network path, not game server latency','probes':[],'stopped':False}
  try:
   for repeat in range(2):
    for case in cases:
-    t=time.monotonic();response=client.invoke_agent_runtime(agentRuntimeArn=arn,runtimeSessionId=sid,qualifier='DEFAULT',contentType='application/json',payload=json.dumps({'prompt':json.dumps(case['input'])}).encode());raw=response['response'].read().decode();wall=round((time.monotonic()-t)*1000,3);commands=decode(raw);errors=ev.base.errors(case,json.dumps(commands));row={'case':case['id'],'repeat':repeat,'coldFirstCall':not report['probes'],'elapsedMs':wall,'commands':commands,'errors':errors};report['probes'].append(row);save(p.parent/('native.json' if args.revision==1 else f'native-v{args.revision}.json'),report);print('PROBE',json.dumps(row),flush=True)
+    t=time.monotonic();response=client.invoke_agent_runtime(agentRuntimeArn=arn,runtimeSessionId=sid,qualifier='DEFAULT',contentType='application/json',payload=json.dumps({'prompt':json.dumps(case['input'])}).encode());raw=response['response'].read().decode();wall=round((time.monotonic()-t)*1000,3);commands=decode(raw);errors=ev.base.errors(case,json.dumps(commands))
+    if case['id'].startswith('fwd2-kickoff-role'):
+     from agentic_fc.policy import valid_command
+     cmd=commands[0] if len(commands)==1 else {};params=cmd.get('parameters',{});sign=1 if case['input']['teamId']==0 else -1
+     errors=[] if valid_command(cmd,4,None) and cmd['commandType']=='MOVE_TO' and set(params)=={'target_x','target_y','sprint'} and params['target_x']*sign<0 and abs(params['target_y'])<15 and params['sprint'] is False else ['invalid_own_half_restart']
+    row={'case':case['id'],'repeat':repeat,'coldFirstCall':not report['probes'],'elapsedMs':wall,'commands':commands,'errors':errors};report['probes'].append(row);save(p.parent/('native.json' if args.revision==1 else f'native-v{args.revision}.json'),report);print('PROBE',json.dumps(row),flush=True)
  finally:
   client.stop_runtime_session(agentRuntimeArn=arn,runtimeSessionId=sid,qualifier='DEFAULT');report['stopped']=True;save(p.parent/('native.json' if args.revision==1 else f'native-v{args.revision}.json'),report)
  warm=[r['elapsedMs'] for r in report['probes'] if not r['coldFirstCall']]

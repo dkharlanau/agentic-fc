@@ -33,7 +33,12 @@ class FastTests(unittest.TestCase):
   p=copy.deepcopy(ev.cases()[8]['input']);p['gameState']['playMode']='KICK_OFF'
   out,_=FastEngine(4).choose(p);self.assertEqual(out[0]['commandType'],'PASS')
   p['gameState']['ball']['possessionAgentId']='agentId_2'
-  out,_=FastEngine(4).choose(p);self.assertEqual(out[0]['commandType'],'SET_STANCE');self.assertEqual(out[0]['parameters']['stance'],1)
+  out,_=FastEngine(4).choose(p);self.assertEqual(out[0]['commandType'],'MOVE_TO');self.assertLess(out[0]['parameters']['target_x'],0);self.assertFalse(out[0]['parameters']['sprint'])
+  p['teamId']=1
+  for player in p['gameState']['players']:
+   player['teamCode']='away' if player['teamCode']=='home' else 'home';player['position']['x']*=-1
+  p['gameState']['ball']['possessionTeamCode']='away'
+  out,_=FastEngine(4).choose(p);self.assertEqual(out[0]['commandType'],'MOVE_TO');self.assertGreater(out[0]['parameters']['target_x'],0)
  def test_session_bound_and_separate(self):
   p=ev.cases()[8]['input'];e=FastEngine(4)
   for n in range(80):e.choose(p,str(n))

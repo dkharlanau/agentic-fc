@@ -9,6 +9,10 @@ Explicit possession permits a short clear shot or safe pass; unknown possession
 returns control to built-in AI. One eligible nearest outfielder presses. Other
 roles cover the middle, keep a link and preserve an attacking outlet. No RESET,
 SLIDE_TACKLE, guessed MOVE_TO, tools, memory writes or per-request Bedrock calls.
+Exception: FWD2 may take a nonsprinting own-half restart position only in the
+observed documented full-size XY Fitness frame. Unknown/live small-field restart
+coordinates are not invented. CLEAR and STANCE both failed active-command Fitness
+in the first two revisions; records must retain those failures.
 
 Known limitations: the inherited small-field X/Z adapter uses goalkeeper anchors
 as goal proxies. Exact goalposts, shot physics and pass range are not surveyed.
