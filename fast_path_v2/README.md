@@ -1,9 +1,13 @@
 # Experimental fast executor
 
-**Not adopted; original M8 restored.** See [result](../research/v3/compact-role-r2/RESULT.md).
-Native22/22 and Fitness5/5 passed; full AWS warm median105ms exceeds10ms.
-The Practice win mostly returned control to engine AI. One incoming ranked loss
-is retained separately. Latest deployed source b99bf77 remains unregistered.
+**Provisionally registered:** corrected pitch-reference source8747a88,revision5,
+only FWD2 alongside four original M8 roles,formation1-1-2. Native28/28,Fitness5/5,
+Practice4:0. Two ranked three-game cohorts:4W1D1L,13:2goals. FullAWS warm median
+103ms still exceeds10ms. See [result](../research/v3/allcash-benchmark/RESULT.md),
+[replication](../research/v3/ranked-batch-07.json), and
+[recovery without the old Workshop](RECOVERY.ru.md). The previous b99bf77 trial
+was rejected and restored; its [negative result](../research/v3/compact-role-r2/RESULT.md)
+remains historical evidence. Do not call this candidate a proven winning setup.
 
 This is a **deterministic** alternative to the failed free-text role prompts.
 No foundation model runs on its tick request path. Five independent role instances

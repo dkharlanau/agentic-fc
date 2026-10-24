@@ -1,5 +1,31 @@
 # Agentic FC continuation
 
+## Active checkpoint — 24 Oct, 19:56 UTC
+
+Goal active, hard end02:38:51UTC25Oct; no manual starts after02:28:51.
+Registered: fastFWD2revision5/source8747a88 plus four originalM8,formation112.
+Do not mistake historical M8-restored text below for current registration.
+Cohort07 complete1W1D1L:Octopus3:1,Octopus0:0OT,AmberGeysers2 0:1OT.
+Table104P58W3D43L,177pts,137:94,rank17. Six current-setup games4W1D1L,13:2.
+[Latest analysis](research/v3/allcash-benchmark/REPLICATION_AND_LATENCY.md).
+
+No next game/probe running at lastREADY observation. Native GKInvokeHarness
+2.39s/1.04s; model897/644ms. Fast full warm101.6/109.2/104.7ms, body<0.3ms.
+GKInvokeAgentRuntime(HarnessARN,prompt-envelope) failedResourceNotFound; game
+server route unknown. Report role/team attribution unresolved, no model change.
+Successful own probes stoppedHTTP200. Compatibility probe confirmed absent.
+CloudShell reconnected, tab17 input107, cwd/home/cloudshell-user, repository at
+nhitl-fast-v2/source8747a88. Audits/helpers private underits .local/allcash-benchmark.
+
+Next: preserve positive geometry correction and ownership safety; one bounded
+physical FWD2 support/action check before choosing a tactical change for next3.
+Two scoreless games make attack quality relevant, but no long-shot-distance proof.
+Don't spend the whole remaining window on latency archaeology. Current candidate
+provisional; exact originalFWD2rollback kept. No all-five wholesale replacement.
+Portable fast builder/recovery added; rebuilt9sources match8747a88,9tests pass.
+Fresh-workshop creation not tested. Existingcaffeinate57249 still live with both
+assertions; no new timer, shutdown, VPN or IAM changes. Preserve tabs7/17/16.
+
 ## Interim checkpoint — 24 Oct, 19:36 UTC
 
 Cohort07 is2/3complete on the same registered revision5fastFWD2+fourM8,112.

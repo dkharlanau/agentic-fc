@@ -1,5 +1,5 @@
 {
-  "status": "cohort06-complete-replication-planned",
+  "status": "two-cohorts-complete-provisional",
   "observedAt": "2026-10-24T18:41:00Z",
   "leaderboard": {
     "allcash": {
@@ -233,5 +233,31 @@
       "goalsAgainst": 237,
       "points": 581
     }
-  }
+  },
+  "afterReplicationLeaderboard": {
+    "own": {
+      "rank": 17,
+      "points": 177,
+      "played": 104,
+      "wins": 58,
+      "draws": 3,
+      "losses": 43,
+      "goalsFor": 137,
+      "goalsAgainst": 94,
+      "savedAt": "2026-10-24T19:41:55.673331+00:00"
+    },
+    "allcash": {
+      "name": "AllCash United",
+      "rank": 1,
+      "points": 590,
+      "played": 259,
+      "wins": 195,
+      "draws": 5,
+      "losses": 59,
+      "goalsFor": 607,
+      "goalsAgainst": 237
+    }
+  },
+  "replication": "../ranked-batch-07.json",
+  "latestAnalysis": "REPLICATION_AND_LATENCY.md"
 }

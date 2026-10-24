@@ -1,8 +1,12 @@
 # Agentic FC — No Human in the Loop
 
-**Final tournament setup, 24 October:** [M8 decision, results and restoration](research/v3/FINAL_SETUP.ru.md).
-Original five Harness, formation1-1-2, final Fitness5/5. Experiments stopped;
-portable recipes include unsuccessful candidates so they can be reviewed later.
+**Current experiment, 24 October:** four original M8 Harness plus fixed-reference
+fast FWD2,formation1-1-2. Two three-game cohorts:4W1D1L,13:2goals,+13points.
+This is provisional;10ms full-path latency and tournament dominance are unachieved.
+See [latest checkpoint](HANDOFF.md), [first cohort](research/v3/allcash-benchmark/RESULT.md),
+[replication](research/v3/ranked-batch-07.json) and [fast FWD2 recovery](fast_path_v2/RECOVERY.ru.md).
+The earlier [M8 decision and restoration](research/v3/FINAL_SETUP.ru.md) is the
+preserved control/rollback, not the current five registrations.
 
 ## Latest: live experiments and portable recovery (2026-10-24)
 

@@ -1,5 +1,8 @@
 # Fixed pitch reference: first ranked cohort
 
+The later [replication and latency diagnosis](REPLICATION_AND_LATENCY.md) adds
+1W1D1L and two scoreless games. Read both before judging the setup.
+
 24 October 2026. Deployed source `8747a88`, fast FWD2 revision5; original M8
 GK/DEF/MID/FWD1 and formation1-1-2 unchanged. This remains a provisional setup.
 

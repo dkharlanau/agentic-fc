@@ -14,7 +14,8 @@ SOURCES = ('agentic_fc/__init__.py', 'agentic_fc/state.py', 'agentic_fc/geometry
            'runtime_v1/keeper.py')
 
 
-def build(dependencies, archive, manifest):
+def build(dependencies, archive, manifest, *, sources=SOURCES,
+          main_source='runtime_v1/main.py', kind='Experimental R1 deployment package; deployment status recorded separately'):
     dependencies = dependencies.resolve()
     archive = archive.resolve()
     if '.local' not in archive.parts:
@@ -47,8 +48,8 @@ def build(dependencies, archive, manifest):
                 raise ValueError(f'Not a Linux ARM64 ELF binary: {relative}')
         files[relative.as_posix()] = path
     source_hashes = {}
-    for name in (*SOURCES, 'runtime_v1/main.py'):
-        target = 'main.py' if name == 'runtime_v1/main.py' else name
+    for name in (*sources, main_source):
+        target = 'main.py' if name == main_source else name
         if target in files:
             raise ValueError(f'Dependency shadows application source: {target}')
         files[target] = ROOT / name
@@ -70,12 +71,13 @@ def build(dependencies, archive, manifest):
             info.external_attr = 0o100644 << 16
             info.compress_type = zipfile.ZIP_DEFLATED
             output.writestr(info, path.read_bytes())
-    report = {'kind': 'Experimental R1 deployment package; deployment status recorded separately',
+    report = {'kind': kind,
               'runtime': 'PYTHON_3_13', 'architecture': 'linux-arm64', 'entryPoint': ['main.py'],
               'archiveSha256': hashlib.sha256(archive.read_bytes()).hexdigest(),
               'archiveBytes': archive.stat().st_size, 'uncompressedBytes': unpacked_size,
               'fileCount': len(files),
               'sourceSha256': source_hashes, 'dependencies': actual}
+    manifest.parent.mkdir(parents=True, exist_ok=True)
     manifest.write_text(json.dumps(report, indent=2) + '\n')
     print(json.dumps({k: report[k] for k in ('archiveSha256', 'archiveBytes', 'fileCount')}))
 
