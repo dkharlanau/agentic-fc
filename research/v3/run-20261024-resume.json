@@ -30,7 +30,14 @@
     "freshFitness": null,
     "newMatchReports": 0,
     "currentStandings": null,
-    "cause": "unresolved; network-policy or portal-side failure not distinguished"
+    "cause": "Unresolved. The observed AWS load-balancer response alone does not distinguish a listener rule, access policy, WAF, or another deployment issue.",
+    "responseHeaders": {
+      "server": "awselb/2.0",
+      "contentType": "text/html",
+      "contentLength": 118,
+      "responseDateUTC": "2026-10-24T05:15:45Z"
+    },
+    "networkObservation": "Chrome DevTools recorded a fresh GET document request returning 403, not a cached game UI error. No login form was loaded."
   },
   "actions": {
     "newHarnessChanges": false,
