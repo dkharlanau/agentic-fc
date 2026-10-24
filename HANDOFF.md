@@ -68,25 +68,31 @@ Stop only own probe/Fitness sessions, never match sessions. Keep raw states,
 account/resource/session bindings and access codes out of public Git.
 Branch `codex/football-experiments-20261023`; draft PR5 already attached.
 
-## Current verified checkpoint at13:55UTC
+## Current verified checkpoint at14:34UTC
 
-Original five M8 Harness, formation1-1-2, GK13/DEF19/MID15/FWD1v16/FWD2v14;
-latest Fitness5/5. R1v13 and GK-R2v1 READY but UNREGISTERED. v14position local
-only, not yet deployed. Lower11:46..13:18 notes are historical, not current.
+Two stable ranked batches finished: live63..72,10games5W1D4L,12:11goals,
+16points. Fresh14:31leaderboard:14th,149points,81P49W2D30L,111:68goals,+43.
+Batch01=3W0D2L9points; batch02=2W1D2L7points. All accountchangesreconciled.
+One severe live69zero-command/high-latency signal; unchangedFitness5passed,
+exactgameDEFlogsabsent, causeunknown. Latergamescommandcountsrecovered.
+ReportRESET18inlive70unattributed; do not assume ownphysicalexecution.
+Live72draw0:0afterOT hasnoSTATS; shot/possession valuesnull, notzero.
 
-Batch01 complete: live63..67,3W0D2L,8:6goals,16:27shots,9points. Leaderboard
-13:54UTC: rank14,76P47W1D28L,107:63goals,+44,142points. All counter changes
-exactly reconcile five live games; Practice excluded. See ranked-batch-01.json.
-No active game after returning to profile; recheck before probes/config changes.
+Coach-v1.0read and decisionsC01/C02/C03 inCOACH_REVIEWS.md. NewAGENTS.md
+requirescoachreadbefore/afterblocks,briefreview andmaxonechange. Readit.
 
-One justified next candidate: FWD1v14 POSITION support, sameNova2Lite, other
-fouroriginal and112 unchanged. Require unusedRuntimeREADY/native9/Fitness5,
-then bounded BenchmarkPractice08. Stop/restore originalFWD1v16 on failure,
-wrong recipient/frame, excessive retreat or worsening attacking support.
-No Micro/GK/formation/observer change alongside this. After bounded validation,
-resume second five-live-game batch promptly using whichever setup is verified;
-one Practice win alone does not establish superiority. Native source must be
-pushed and matching deployment receipt; never stop game sessions.
+Currentonlycandidatechange: FWD1R1v14positionbound inportal; freshFitnessRUNNING.
+OriginalGK13/DEF19/MID15/FWD2v14 unchanged,112,Nova2LiteFWD1,HaikuFWD2.
+R1sourcee11bad6,archive516464b636877353d137f097bdbb83912423ffe74421402acbba7a0c00faaa90,
+READY/native9of9genuinechoice/command/cleanup passed; allownprobesstopped.
+No coordinateprobe, boundwire, supportposition. GKcandidateUNREGISTERED.
+RequireFitness5beforePractice08Benchmark; inspectactualmovement/support,
+thenreturntopoints viaanotherstablefivegameblock usingverifiedsetup.
+Rejectonwrongrecipient/frame/format/regressingsupport; rollbackoriginalFWD1v16
+fromprivatecheckpointandfreshFitness5. NoMicro/GK/formation/observeralongside.
+Noactivegameatbinding, recheckportal beforeprobes/savedchanges. Nextlive73,
+nextPractice08. PR5descriptionthroughlive67; refreshnearfinal. Olderchronological
+notes below arehistorical. Matchcutoff17:04:05Z,end17:14:05Z,noextensions/shutdown.
 
 ## Historical snapshot at11:46UTC
 
