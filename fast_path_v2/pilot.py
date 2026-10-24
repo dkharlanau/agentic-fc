@@ -77,6 +77,16 @@ def main():
  for row in away['input']['gameState']['players']:
   row['teamCode']='away' if row['teamCode']=='home' else 'home';row['position']['x']*=-1
  away['input']['gameState']['ball']['possessionTeamCode']='away';away['input']['gameState']['ball']['position']['x']*=-1;cases.append(away)
+ # Sequence based on a sanitized observed frame. Keeper motion and role binding
+ # are explicit counterfactuals; these are not additional observed match states.
+ observed=json.loads((ROOT/'research/v3/fixtures/observed-live-away-open-play.json').read_text())['decodedState'];observed['myPlayers']=[4]
+ cases.append({'id':'fwd2-observed-frame-role-adapted','role':'fwd2','input':observed,'expected':{'types':['SET_STANCE']}})
+ moved=copy.deepcopy(observed);moved['gameState']['tick']+=1
+ for row in moved['gameState']['players']:
+  if row['agentId']=='agentId_0':row['position']={'x':-3 if row['teamCode']=='home' else 3,'y':2}
+ cases.append({'id':'fwd2-counterfactual-moving-keepers','role':'fwd2','input':moved,'expected':{'types':['SET_STANCE']}})
+ ambiguous=copy.deepcopy(moved);ambiguous['gameState']['tick']+=1;ambiguous['gameState']['ball'].update(position={'x':0,'y':0,'z':0},velocity={'x':0,'y':0,'z':0})
+ cases.append({'id':'fwd2-counterfactual-ambiguous-after-moving-keepers','role':'fwd2','input':ambiguous,'expected':{'types':['CLEAR_OVERRIDE']}})
  client=boto3.client('bedrock-agentcore',region_name=region,config=Config(connect_timeout=5,read_timeout=60,retries={'max_attempts':0}));sid='nhitl-fast-native-'+str(uuid.uuid4());arn=receipt['runtime']['agentRuntimeArn'];report={'kind':'full native AWS response timings; CloudShell network path, not game server latency','probes':[],'stopped':False}
  try:
   for repeat in range(2):

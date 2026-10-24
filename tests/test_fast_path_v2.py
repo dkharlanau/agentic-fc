@@ -48,4 +48,35 @@ class FastTests(unittest.TestCase):
   p=ev.cases()[8]['input'];e=FastEngine(4)
   for n in range(80):e.choose(p,str(n))
   self.assertEqual(len(e.sessions),64)
+ def test_moving_keeper_retains_observed_frame_without_cross_session_guess(self):
+  observed=json.loads((ROOT/'research/v3/fixtures/observed-live-away-open-play.json').read_text())['decodedState']
+  for mirror in (False,True):
+   p=copy.deepcopy(observed);p['myPlayers']=[4]
+   if mirror:
+    p['teamId']=0
+    p['gameState']['ball']['position']['x']*=-1;p['gameState']['ball']['velocity']['x']*=-1
+    for row in p['gameState']['players']:
+     row['teamCode']='away' if row['teamCode']=='home' else 'home'
+     row['position']['x']*=-1;row['velocity']['x']*=-1
+   e=FastEngine(4);before,a=e.choose(p,'match');self.assertEqual(a['reason'],'ROLE_SUPPORT')
+   reference=copy.deepcopy(e.sessions['match']['pitchReference'])
+   q=copy.deepcopy(p);q['gameState']['tick']+=1
+   for row in q['gameState']['players']:
+    if row['agentId']=='agentId_0':row['position']={'x':-3 if row['teamCode']=='home' else 3,'y':2}
+   after,a=e.choose(q,'match');self.assertEqual(a['reason'],'ROLE_SUPPORT');self.assertEqual(after,before)
+   self.assertEqual(e.sessions['match']['pitchReference'],reference)
+   fresh,a=e.choose(q,'unrelated-match');self.assertEqual(fresh[0]['commandType'],'CLEAR_OVERRIDE')
+   self.assertIsNone(e.sessions['unrelated-match']['pitchReference'])
+ def test_keeper_position_does_not_shorten_shot_distance(self):
+  p=copy.deepcopy(ev.cases()[8]['input']);e=FastEngine(4)
+  e.choose(p,'match')
+  for row in p['gameState']['players']:
+   if row['agentId']=='agentId_0' and row['teamCode']=='away':row['position']={'x':30,'y':12}
+  out,a=e.choose(p,'match');self.assertNotEqual(out[0]['commandType'],'SHOOT');self.assertNotEqual(a['reason'],'UNKNOWN_GEOMETRY')
+  # Keeper's new location must not suppress a clear shot near the fixed goal.
+  p['gameState']['players'][4]['position']={'x':40,'y':3};p['gameState']['ball']['position']={'x':40,'y':3}
+  out,a=e.choose(p,'match');self.assertEqual(out[0]['commandType'],'SHOOT')
+  # Losing ownership evidence still prevents a shot despite cached geometry.
+  p['gameState']['ball'].pop('possessionTeamCode');p['gameState']['ball']['position']={'x':0,'y':0}
+  out,a=e.choose(p,'match');self.assertEqual(out[0]['commandType'],'CLEAR_OVERRIDE')
 if __name__=='__main__':unittest.main()

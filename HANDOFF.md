@@ -1,5 +1,18 @@
 # Agentic FC continuation
 
+## Active goal resumed — 24 Oct, 18:44 UTC
+
+Owner renewed autonomous6–8h objective with **three-game blocks**, AllCash United
+as benchmark. Active goal created18:38:51UTC; hard end02:38:51UTC25Oct, stop
+manual starts02:28:51UTC. This supersedes historical stop/five-game instructions
+below. No shutdown/VPN change/new heartbeat. Existing live caffeinate assertions
+verified18:42UTC, no new timer. Previous turn was progress, not goal completion.
+Read coach-v1.0 and current evidence before each block. M8 still registered,
+READY,rank15/164pts/98P; AllCashrank1/563pts/248P. Benchmark and hypotheses in
+research/v3/allcash-benchmark/. Investigate latency attribution and moving-GK
+reference before one isolated correction, native/Fitness/Practice then3livegames.
+Never change active games, preserve private evidence and exact M8 rollback.
+
 ## Live latency experiment closed — 24 Oct, 18:33 UTC
 
 [Result](research/v3/compact-role-r2/RESULT.md), [outcome](research/v3/compact-role-r2/outcome.json).

@@ -1,0 +1,70 @@
+{
+  "status": "investigating",
+  "observedAt": "2026-10-24T18:41:00Z",
+  "leaderboard": {
+    "allcash": {
+      "rank": 1,
+      "played": 248,
+      "wins": 186,
+      "draws": 5,
+      "losses": 57,
+      "points": 563,
+      "goalsFor": 575,
+      "goalsAgainst": 232
+    },
+    "own": {
+      "rank": 15,
+      "played": 98,
+      "wins": 54,
+      "draws": 2,
+      "losses": 42,
+      "points": 164,
+      "goalsFor": 124,
+      "goalsAgainst": 92
+    }
+  },
+  "matchedReport": {
+    "source": "previous fast FWD2 incoming AllCash report, re-supplied by owner",
+    "ownSide": "AWAY",
+    "ownScore": [
+      0,
+      2
+    ],
+    "roleOrder": [
+      "GK",
+      "DEF",
+      "MID",
+      "FWD1",
+      "FWD2"
+    ],
+    "allcashLatencyMs": [
+      2,
+      2,
+      2,
+      1,
+      79
+    ],
+    "ownLatencyMs": [
+      83,
+      84,
+      86,
+      82,
+      82
+    ],
+    "allSuccessPercent": 100,
+    "ownSetup": "M8 four roles plus deterministic FWD2, since rolled back",
+    "caveats": [
+      "Overlapped own Practice",
+      "Report attribution differs from own exact-session audit",
+      "No evidence of opponent model/runtime architecture"
+    ]
+  },
+  "targets": {
+    "endToEndRoleLatencyMs": 10,
+    "cohortGames": 3,
+    "requireFitness": 5,
+    "requireUsefulPhysicalActions": true,
+    "requireCompetitiveImprovement": true
+  },
+  "sourceCommit": "0194b5c750a6c936f0dd5719cce0479a14051bfc"
+}
