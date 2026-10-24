@@ -1,0 +1,136 @@
+{
+  "status": "paused-critical-execution-signal",
+  "ownerAuthorization": "Start a test in real games; one stable five-game cohort",
+  "setup": "M8-original-five-formation112",
+  "coachVersion": "coach-v1.0",
+  "fitness": {
+    "passed": 5,
+    "total": 5,
+    "source": "fresh portal UI",
+    "reportedAverageMs": 0,
+    "zeroLatencyCaveat": "portal displayed0ms; not actual model speed"
+  },
+  "before": {
+    "rank": 15,
+    "points": 164,
+    "played": 94,
+    "wins": 54,
+    "draws": 2,
+    "losses": 38,
+    "goalsFor": 123,
+    "goalsAgainst": 84,
+    "capturedAtUTC": "2026-10-24T17:40:00Z",
+    "captureTimePrecision": "minute"
+  },
+  "targetCompleted": 5,
+  "games": [
+    {
+      "alias": "batch05-game1",
+      "opponent": "LFC",
+      "side": "HOME",
+      "mode": "real-ranked",
+      "origin": "manual-random",
+      "status": "completed",
+      "setup": "M8-original-five-formation112",
+      "startedAtUTC": "2026-10-24T17:41:00Z",
+      "timePrecision": "minute",
+      "outcome": "LOSS",
+      "goalsFor": 0,
+      "goalsAgainst": 2,
+      "shotsFor": 8,
+      "shotsAgainst": 6,
+      "shotsOnTargetFor": 0,
+      "shotsOnTargetAgainst": 2,
+      "possessionPercent": 42,
+      "commandsFor": 370,
+      "commandsAgainst": 9,
+      "latencyAverageMs": 178,
+      "opponentLatencyAverageMs": 3,
+      "roleLatencyMs": [
+        242,
+        139,
+        273,
+        256,
+        137
+      ],
+      "roleSuccessPercent": [
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "opponentRoleLatencyMs": [
+        4,
+        3,
+        3,
+        3,
+        3
+      ],
+      "commandBreakdown": {
+        "MOVE_TO": 303,
+        "INTERCEPT": 29,
+        "PRESS_BALL": 23,
+        "CLEAR_OVERRIDE": 8,
+        "GK_DISTRIBUTE": 4,
+        "PASS": 3
+      },
+      "source": "Primary match report and final viewer; AI Overview excluded",
+      "completedAtUTC": "2026-10-24T17:45:00Z"
+    },
+    {
+      "alias": "batch05-game2",
+      "opponent": "CypherForce Hotshots",
+      "side": "HOME",
+      "mode": "real-ranked",
+      "origin": "manual-random",
+      "status": "completed",
+      "setup": "M8-original-five-formation112",
+      "startedAtUTC": "2026-10-24T17:46:00Z",
+      "timePrecision": "minute",
+      "outcome": "LOSS",
+      "goalsFor": 0,
+      "goalsAgainst": 2,
+      "shotsFor": 1,
+      "shotsAgainst": 7,
+      "shotsOnTargetFor": 0,
+      "shotsOnTargetAgainst": 2,
+      "possessionPercent": 46,
+      "commandsFor": 0,
+      "commandsAgainst": 0,
+      "latencyAverageMs": 11660,
+      "opponentLatencyAverageMs": 7,
+      "roleLatencyMs": [
+        12610,
+        12311,
+        7733,
+        13031,
+        12615
+      ],
+      "roleSuccessPercent": [
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "opponentRoleLatencyMs": [
+        8,
+        7,
+        7,
+        7,
+        7
+      ],
+      "source": "Primary match report; AI Overview excluded",
+      "ownerObservation": "Opponent runner finished from an angle; no replay attribution verified"
+    }
+  ],
+  "rules": [
+    "No changes between games",
+    "No parallel matchmaking or probes",
+    "Stop on critical execution failure",
+    "Rejected role package remains undeployed"
+  ],
+  "pauseReason": "All five role latencies7733..13031ms with0reportedcommands; critical transport/execution/measurement signal, not ordinary defeat. No causal attribution yet.",
+  "completedCount": 2
+}
