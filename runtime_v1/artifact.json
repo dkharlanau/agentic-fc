@@ -5,10 +5,10 @@
   "entryPoint": [
     "main.py"
   ],
-  "archiveSha256": "86728136caef0a2d2e865ca3e4e801860c11f23391e004baf8b8e7c34015fc6b",
-  "archiveBytes": 20727790,
-  "uncompressedBytes": 34705684,
-  "fileCount": 2773,
+  "archiveSha256": "21ed279d4831546ff58e0ce3c91744e1d47b4cb5fbcff8ae4e970ba1489274e3",
+  "archiveBytes": 20610262,
+  "uncompressedBytes": 34371310,
+  "fileCount": 2731,
   "sourceSha256": {
     "agentic_fc/__init__.py": "246ba241608bece9b9a1e940dd5401385aeed762ba8306d2e2a0eba7d0556df0",
     "agentic_fc/state.py": "e58f69207c11e6345a13292b1b18e5e5a2730b870289098f2329a051b62bf65b",

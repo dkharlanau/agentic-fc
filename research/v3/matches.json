@@ -1782,6 +1782,90 @@
       "initiation": "manual normal Find after original FWD1 binding restored and profile reloaded; fresh UI Fitness5/5; same original Memory-enabled v15; no saved candidate prompts",
       "coaching": [],
       "evidenceCapturedAtUTC": "2026-10-24T07:15:48.732529+00:00"
+    },
+    {
+      "id": "live-46",
+      "setup": "A0-M7-formation121",
+      "opponent": "Claude Van Dam",
+      "side": "home",
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "shotsFor": 9,
+      "shotsAgainst": 3,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 53,
+      "commands": 430,
+      "averageLatencyMs": 71,
+      "commandCounts": {
+        "MOVE_TO": 297,
+        "MARK": 60,
+        "PRESS_BALL": 30,
+        "INTERCEPT": 21,
+        "PASS": 9,
+        "CLEAR_OVERRIDE": 8,
+        "GK_DISTRIBUTE": 3,
+        "SHOOT": 2
+      },
+      "opponentCommands": 3,
+      "opponentAverageLatencyMs": 4,
+      "roleLatencyMs": {
+        "gk": 78,
+        "def": 80,
+        "mid": 79,
+        "fwd1": 81,
+        "fwd2": 81
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Rendered primary report statistics; live model execution path remains unverified.",
+        "Uncontrolled opponent; this game alone does not establish policy improvement."
+      ],
+      "coaching": [],
+      "initiation": "Manual Find after original FWD1 v16 matched pre-Memory v14 and Fitness5/5",
+      "evidenceCapturedAtUTC": "2026-10-24T07:32:35.252684+00:00"
+    },
+    {
+      "id": "live-47",
+      "setup": "unattributed-background",
+      "opponent": "Matrix_7",
+      "side": "home",
+      "goalsFor": 3,
+      "goalsAgainst": 0,
+      "shotsFor": 13,
+      "shotsAgainst": 1,
+      "shotsOnTargetFor": 3,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 47,
+      "commands": 384,
+      "averageLatencyMs": 179,
+      "commandCounts": {
+        "MOVE_TO": 270,
+        "MARK": 71,
+        "INTERCEPT": 16,
+        "PRESS_BALL": 15,
+        "CLEAR_OVERRIDE": 10,
+        "GK_DISTRIBUTE": 2
+      },
+      "opponentCommands": 19,
+      "opponentAverageLatencyMs": 2,
+      "roleLatencyMs": {
+        "gk": 81,
+        "def": 244,
+        "mid": 347,
+        "fwd1": 183,
+        "fwd2": 162
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Rendered primary report statistics; live model execution path remains unverified.",
+        "Uncontrolled opponent; this game alone does not establish policy improvement.",
+        "Exclude from verified setup comparisons: kickoff configuration unattributed."
+      ],
+      "coaching": [],
+      "initiation": "Background match appeared while working elsewhere; kickoff and saved setup not observed",
+      "lastKnownSavedSetup": "A0-M7-formation121",
+      "evidenceCapturedAtUTC": "2026-10-24T07:32:35.254233+00:00"
     }
   ],
   "recordingOrder": "Local evidence-capture order; background matches may be appended retrospectively."

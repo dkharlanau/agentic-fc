@@ -1,8 +1,8 @@
 {
   "kind": "bounded autonomous run",
   "startedAtUTC": "2026-10-24T05:53:07Z",
-  "deadlineUTC": "2026-10-24T11:53:07Z",
-  "stopNewMatchesUTC": "2026-10-24T11:43:07Z",
+  "deadlineUTC": "2026-10-24T13:53:07Z",
+  "stopNewMatchesUTC": "2026-10-24T13:43:07Z",
   "automaticShutdown": false,
   "initialLeaderboard": {
     "rank": 10,
@@ -26,7 +26,9 @@
   "completedReports": [
     "live-43",
     "live-44",
-    "live-45"
+    "live-45",
+    "live-46",
+    "live-47"
   ],
   "singleRoleRecoveryCanary": {
     "created": true,
@@ -53,5 +55,6 @@
     "liveMemoryUse": "not established",
     "rollback": "Original FWD1 v16 is behavior-identical to pre-Memory v14; UI5/5"
   },
-  "runtimeCandidate": "runtime_v1; not deployed yet"
+  "runtimeCandidate": "runtime_v1; not deployed yet",
+  "windowExtension": "User requested6-8hours; maximum8hours from original start"
 }

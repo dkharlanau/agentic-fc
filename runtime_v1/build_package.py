@@ -32,6 +32,11 @@ def build(dependencies, archive, manifest):
         relative = path.relative_to(dependencies)
         if not path.is_file() or '__pycache__' in relative.parts or relative.parts[0] == 'bin' or path.suffix == '.pyc':
             continue
+        # Pip writes these installation receipts differently across build hosts.
+        # Runtime metadata (METADATA/WHEEL/licenses) remains available.
+        if any(part.endswith('.dist-info') for part in relative.parts) and path.name in {
+                'RECORD', 'INSTALLER', 'REQUESTED'}:
+            continue
         if path.suffix in ('.dll', '.dylib', '.exe'):
             raise ValueError(f'Unexpected platform binary: {relative}')
         if path.suffix == '.so':
