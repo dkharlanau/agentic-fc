@@ -69,7 +69,17 @@ def memory_sample(payload, commands, audit, session_id):
 async def invoke(payload, context):
     # Match the official sample's streaming JSON-string response, including teamId.
     session_id = getattr(context, 'session_id', None) or str(uuid.uuid4())
-    commands, audit = await asyncio.to_thread(engine().choose, payload, session_id)
+    try:
+        commands, audit = await asyncio.to_thread(engine().choose, payload, session_id)
+    except ValueError as error:
+        root = unwrap(payload)
+        rejected = {'adapter': 'r1', 'outcome': 'rejected_input', 'modelAttempted': False,
+                    'error': str(error), 'rootKeys': sorted(root),
+                    'unlockedCommands': root.get('unlockedCommands'), 'teamId': root.get('teamId'),
+                    'myPlayers': root.get('myPlayers'), 'buildCommit': os.getenv('BUILD_COMMIT', 'local')}
+        rejected['memoryOutcome'] = await asyncio.to_thread(memory_sample, payload, [], rejected, session_id)
+        app.logger.error('NHITL_INPUT_REJECTED ' + json.dumps(rejected, separators=(',', ':')))
+        raise
     audit['memoryOutcome'] = await asyncio.to_thread(memory_sample, payload, commands, audit, session_id)
     audit['buildCommit'] = os.getenv('BUILD_COMMIT', 'local')
     app.logger.info('NHITL_DECISION ' + json.dumps(audit, separators=(',', ':')))

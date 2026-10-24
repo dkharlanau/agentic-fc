@@ -1908,6 +1908,47 @@
         "Primary report statistics, not proof of actual model execution or tactical causation.",
         "Background game may overlap native probe activity; do not treat as controlled experiment."
       ]
+    },
+    {
+      "id": "live-49",
+      "setup": "unattributed-background",
+      "opponent": "Matrix_7",
+      "side": "home",
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "shotsFor": 12,
+      "shotsAgainst": 1,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 30,
+      "commands": 318,
+      "averageLatencyMs": 268,
+      "commandCounts": {
+        "MOVE_TO": 202,
+        "MARK": 79,
+        "INTERCEPT": 13,
+        "PRESS_BALL": 13,
+        "CLEAR_OVERRIDE": 10,
+        "GK_DISTRIBUTE": 1
+      },
+      "opponentCommands": 9,
+      "opponentAverageLatencyMs": 18,
+      "roleLatencyMs": {
+        "gk": 79,
+        "def": 333,
+        "mid": 372,
+        "fwd1": 302,
+        "fwd2": 181
+      },
+      "reportedRoleSuccessPercent": 100,
+      "lastKnownSavedSetup": "R1-FWD1-v3-plus-M7",
+      "initiation": "Portal opened this background match during a repeated Fitness request; no Find was clicked; kickoff binding unverified",
+      "coaching": [],
+      "limitations": [
+        "Exclude from verified setup comparisons: actual kickoff bindings not observed.",
+        "No new R1 non-probe session or NHITL_DECISION log found during a midgame read; this does not establish which setup the game used.",
+        "Primary aggregate report has no shot coordinates or shot-by-shot outcomes."
+      ]
     }
   ],
   "recordingOrder": "Local evidence-capture order; background matches may be appended retrospectively."

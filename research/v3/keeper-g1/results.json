@@ -1,0 +1,775 @@
+{
+  "kind": "Native synthetic goalkeeper probe results, read through CloudShell UI",
+  "status": "Not installed; candidate agreement insufficient",
+  "variants": [
+    {
+      "variant": "baseline-nova",
+      "model": "global.amazon.nova-2-lite-v1:0",
+      "promptSha256": "43a75e8e85225b14879c7c9b839a7f8b3e5d056d8a841a1a4019b8fc8263cd36",
+      "strictJSONCount": 0,
+      "formatPassedAfterOptionalFenceRemoval": 10,
+      "candidateBehaviorAgreementCount": 0,
+      "reportedModelMedianLatencyMs": 572.5,
+      "allOwnSessionsStopped": true,
+      "results": [
+        {
+          "case": "home-recover",
+          "ownSessionStopped": true,
+          "elapsedMs": 2061,
+          "usage": {
+            "inputTokens": 1612,
+            "outputTokens": 40,
+            "totalTokens": 1652
+          },
+          "reportedModelLatencyMs": 624,
+          "commands": [
+            {
+              "commandType": "MOVE_TO",
+              "playerId": 0,
+              "parameters": {
+                "target_x": -10,
+                "target_y": 0,
+                "sprint": false
+              },
+              "duration": 0
+            }
+          ],
+          "strictJSON": false,
+          "formatPassed": true,
+          "candidateBehaviorAgreement": false
+        },
+        {
+          "case": "home-wide",
+          "ownSessionStopped": true,
+          "elapsedMs": 1922,
+          "usage": {
+            "inputTokens": 1604,
+            "outputTokens": 40,
+            "totalTokens": 1644
+          },
+          "reportedModelLatencyMs": 564,
+          "commands": [
+            {
+              "commandType": "MOVE_TO",
+              "playerId": 0,
+              "parameters": {
+                "target_x": -30,
+                "target_y": 30,
+                "sprint": false
+              },
+              "duration": 0
+            }
+          ],
+          "strictJSON": false,
+          "formatPassed": true,
+          "candidateBehaviorAgreement": false
+        },
+        {
+          "case": "home-distribution",
+          "ownSessionStopped": true,
+          "elapsedMs": 2864,
+          "usage": {
+            "inputTokens": 1614,
+            "outputTokens": 39,
+            "totalTokens": 1653
+          },
+          "reportedModelLatencyMs": 514,
+          "commands": [
+            {
+              "commandType": "GK_DISTRIBUTE",
+              "playerId": 0,
+              "parameters": {
+                "target_player_id": 1,
+                "method": "THROW"
+              },
+              "duration": 0
+            }
+          ],
+          "strictJSON": false,
+          "formatPassed": true,
+          "candidateBehaviorAgreement": false
+        },
+        {
+          "case": "home-opponent-keeper",
+          "ownSessionStopped": true,
+          "elapsedMs": 3218,
+          "usage": {
+            "inputTokens": 1613,
+            "outputTokens": 40,
+            "totalTokens": 1653
+          },
+          "reportedModelLatencyMs": 619,
+          "commands": [
+            {
+              "commandType": "MOVE_TO",
+              "playerId": 0,
+              "parameters": {
+                "target_x": -10,
+                "target_y": 6,
+                "sprint": false
+              },
+              "duration": 0
+            }
+          ],
+          "strictJSON": false,
+          "formatPassed": true,
+          "candidateBehaviorAgreement": false
+        },
+        {
+          "case": "away-recover",
+          "ownSessionStopped": true,
+          "elapsedMs": 3163,
+          "usage": {
+            "inputTokens": 1612,
+            "outputTokens": 44,
+            "totalTokens": 1656
+          },
+          "reportedModelLatencyMs": 680,
+          "commands": [
+            {
+              "commandType": "MOVE_TO",
+              "playerId": 0,
+              "parameters": {
+                "target_x": -49,
+                "target_y": 0,
+                "sprint": false
+              },
+              "duration": 0
+            }
+          ],
+          "strictJSON": false,
+          "formatPassed": true,
+          "candidateBehaviorAgreement": false
+        },
+        {
+          "case": "away-wide",
+          "ownSessionStopped": true,
+          "elapsedMs": 1340,
+          "usage": {
+            "inputTokens": 1603,
+            "outputTokens": 40,
+            "totalTokens": 1643
+          },
+          "reportedModelLatencyMs": 620,
+          "commands": [
+            {
+              "commandType": "MOVE_TO",
+              "playerId": 0,
+              "parameters": {
+                "target_x": -50,
+                "target_y": 0,
+                "sprint": false
+              },
+              "duration": 0
+            }
+          ],
+          "strictJSON": false,
+          "formatPassed": true,
+          "candidateBehaviorAgreement": false
+        },
+        {
+          "case": "away-distribution",
+          "ownSessionStopped": true,
+          "elapsedMs": 2943,
+          "usage": {
+            "inputTokens": 1611,
+            "outputTokens": 40,
+            "totalTokens": 1651
+          },
+          "reportedModelLatencyMs": 581,
+          "commands": [
+            {
+              "commandType": "MOVE_TO",
+              "playerId": 0,
+              "parameters": {
+                "target_x": -50,
+                "target_y": 0,
+                "sprint": false
+              },
+              "duration": 0
+            }
+          ],
+          "strictJSON": false,
+          "formatPassed": true,
+          "candidateBehaviorAgreement": false
+        },
+        {
+          "case": "away-opponent-keeper",
+          "ownSessionStopped": true,
+          "elapsedMs": 1252,
+          "usage": {
+            "inputTokens": 1612,
+            "outputTokens": 39,
+            "totalTokens": 1651
+          },
+          "reportedModelLatencyMs": 492,
+          "commands": [
+            {
+              "commandType": "GK_DISTRIBUTE",
+              "playerId": 0,
+              "parameters": {
+                "target_player_id": 1,
+                "method": "THROW"
+              },
+              "duration": 0
+            }
+          ],
+          "strictJSON": false,
+          "formatPassed": true,
+          "candidateBehaviorAgreement": false
+        },
+        {
+          "case": "home-teammate-possession",
+          "ownSessionStopped": true,
+          "elapsedMs": 1315,
+          "usage": {
+            "inputTokens": 1613,
+            "outputTokens": 44,
+            "totalTokens": 1657
+          },
+          "reportedModelLatencyMs": 552,
+          "commands": [
+            {
+              "commandType": "MOVE_TO",
+              "playerId": 0,
+              "parameters": {
+                "target_x": -49,
+                "target_y": 0,
+                "sprint": false
+              },
+              "duration": 0
+            }
+          ],
+          "strictJSON": false,
+          "formatPassed": true,
+          "candidateBehaviorAgreement": false
+        },
+        {
+          "case": "missing-team",
+          "ownSessionStopped": true,
+          "elapsedMs": 32407,
+          "usage": {
+            "inputTokens": 1608,
+            "outputTokens": 44,
+            "totalTokens": 1652
+          },
+          "reportedModelLatencyMs": 561,
+          "commands": [
+            {
+              "commandType": "MOVE_TO",
+              "playerId": 0,
+              "parameters": {
+                "target_x": -49,
+                "target_y": 0,
+                "sprint": false
+              },
+              "duration": 0
+            }
+          ],
+          "strictJSON": false,
+          "formatPassed": true,
+          "candidateBehaviorAgreement": false
+        }
+      ]
+    },
+    {
+      "variant": "g1-nova",
+      "model": "global.amazon.nova-2-lite-v1:0",
+      "promptSha256": "a483d2fd2dfff8920ddd5998b24f073c1bf869804255611768d14df2740dd13f",
+      "strictJSONCount": 8,
+      "formatPassedAfterOptionalFenceRemoval": 10,
+      "candidateBehaviorAgreementCount": 4,
+      "reportedModelMedianLatencyMs": 500,
+      "allOwnSessionsStopped": true,
+      "results": [
+        {
+          "case": "home-recover",
+          "ownSessionStopped": true,
+          "elapsedMs": 1192,
+          "usage": {
+            "inputTokens": 1352,
+            "outputTokens": 27,
+            "totalTokens": 1379
+          },
+          "reportedModelLatencyMs": 481,
+          "commands": [
+            {
+              "commandType": "CLEAR_OVERRIDE",
+              "playerId": 0,
+              "parameters": {},
+              "duration": 0,
+              "teamId": 0
+            }
+          ],
+          "strictJSON": true,
+          "formatPassed": true,
+          "candidateBehaviorAgreement": false
+        },
+        {
+          "case": "home-wide",
+          "ownSessionStopped": true,
+          "elapsedMs": 1364,
+          "usage": {
+            "inputTokens": 1344,
+            "outputTokens": 27,
+            "totalTokens": 1371
+          },
+          "reportedModelLatencyMs": 479,
+          "commands": [
+            {
+              "commandType": "CLEAR_OVERRIDE",
+              "playerId": 0,
+              "parameters": {},
+              "duration": 0,
+              "teamId": 0
+            }
+          ],
+          "strictJSON": true,
+          "formatPassed": true,
+          "candidateBehaviorAgreement": true
+        },
+        {
+          "case": "home-distribution",
+          "ownSessionStopped": true,
+          "elapsedMs": 1565,
+          "usage": {
+            "inputTokens": 1354,
+            "outputTokens": 44,
+            "totalTokens": 1398
+          },
+          "reportedModelLatencyMs": 554,
+          "commands": [
+            {
+              "commandType": "GK_DISTRIBUTE",
+              "playerId": 0,
+              "parameters": {
+                "target_player_id": 1,
+                "method": "THROW"
+              },
+              "duration": 0,
+              "teamId": 0
+            }
+          ],
+          "strictJSON": false,
+          "formatPassed": true,
+          "candidateBehaviorAgreement": false
+        },
+        {
+          "case": "home-opponent-keeper",
+          "ownSessionStopped": true,
+          "elapsedMs": 1316,
+          "usage": {
+            "inputTokens": 1353,
+            "outputTokens": 27,
+            "totalTokens": 1380
+          },
+          "reportedModelLatencyMs": 585,
+          "commands": [
+            {
+              "commandType": "CLEAR_OVERRIDE",
+              "playerId": 0,
+              "parameters": {},
+              "duration": 0,
+              "teamId": 0
+            }
+          ],
+          "strictJSON": true,
+          "formatPassed": true,
+          "candidateBehaviorAgreement": true
+        },
+        {
+          "case": "away-recover",
+          "ownSessionStopped": true,
+          "elapsedMs": 1202,
+          "usage": {
+            "inputTokens": 1352,
+            "outputTokens": 27,
+            "totalTokens": 1379
+          },
+          "reportedModelLatencyMs": 440,
+          "commands": [
+            {
+              "commandType": "CLEAR_OVERRIDE",
+              "playerId": 0,
+              "parameters": {},
+              "duration": 0,
+              "teamId": 1
+            }
+          ],
+          "strictJSON": true,
+          "formatPassed": true,
+          "candidateBehaviorAgreement": false
+        },
+        {
+          "case": "away-wide",
+          "ownSessionStopped": true,
+          "elapsedMs": 1368,
+          "usage": {
+            "inputTokens": 1343,
+            "outputTokens": 27,
+            "totalTokens": 1370
+          },
+          "reportedModelLatencyMs": 543,
+          "commands": [
+            {
+              "commandType": "CLEAR_OVERRIDE",
+              "playerId": 0,
+              "parameters": {},
+              "duration": 0,
+              "teamId": 1
+            }
+          ],
+          "strictJSON": true,
+          "formatPassed": true,
+          "candidateBehaviorAgreement": true
+        },
+        {
+          "case": "away-distribution",
+          "ownSessionStopped": true,
+          "elapsedMs": 1219,
+          "usage": {
+            "inputTokens": 1351,
+            "outputTokens": 27,
+            "totalTokens": 1378
+          },
+          "reportedModelLatencyMs": 492,
+          "commands": [
+            {
+              "commandType": "CLEAR_OVERRIDE",
+              "playerId": 0,
+              "parameters": {},
+              "duration": 0,
+              "teamId": 1
+            }
+          ],
+          "strictJSON": true,
+          "formatPassed": true,
+          "candidateBehaviorAgreement": false
+        },
+        {
+          "case": "away-opponent-keeper",
+          "ownSessionStopped": true,
+          "elapsedMs": 1385,
+          "usage": {
+            "inputTokens": 0,
+            "outputTokens": 0,
+            "totalTokens": 0
+          },
+          "reportedModelLatencyMs": 602,
+          "commands": [
+            {
+              "commandType": "GK_DISTRIBUTE",
+              "playerId": 0,
+              "parameters": {
+                "target_player_id": 1,
+                "method": "THROW"
+              },
+              "duration": 0,
+              "teamId": 0
+            }
+          ],
+          "strictJSON": false,
+          "formatPassed": true,
+          "candidateBehaviorAgreement": false
+        },
+        {
+          "case": "home-teammate-possession",
+          "ownSessionStopped": true,
+          "elapsedMs": 1127,
+          "usage": {
+            "inputTokens": 1353,
+            "outputTokens": 29,
+            "totalTokens": 1382
+          },
+          "reportedModelLatencyMs": 417,
+          "commands": [
+            {
+              "commandType": "CLEAR_OVERRIDE",
+              "playerId": 0,
+              "parameters": {},
+              "duration": 0,
+              "teamId": 0
+            }
+          ],
+          "strictJSON": true,
+          "formatPassed": true,
+          "candidateBehaviorAgreement": true
+        },
+        {
+          "case": "missing-team",
+          "ownSessionStopped": true,
+          "elapsedMs": 1525,
+          "usage": {
+            "inputTokens": 1348,
+            "outputTokens": 27,
+            "totalTokens": 1375
+          },
+          "reportedModelLatencyMs": 508,
+          "commands": [
+            {
+              "commandType": "CLEAR_OVERRIDE",
+              "playerId": 0,
+              "parameters": {},
+              "duration": 0,
+              "teamId": 0
+            }
+          ],
+          "strictJSON": true,
+          "formatPassed": true,
+          "candidateBehaviorAgreement": false
+        }
+      ]
+    },
+    {
+      "variant": "g1-haiku",
+      "model": "global.anthropic.claude-haiku-4-5-20251001-v1:0",
+      "promptSha256": "a483d2fd2dfff8920ddd5998b24f073c1bf869804255611768d14df2740dd13f",
+      "strictJSONCount": 0,
+      "formatPassedAfterOptionalFenceRemoval": 10,
+      "candidateBehaviorAgreementCount": 5,
+      "reportedModelMedianLatencyMs": 1130.5,
+      "allOwnSessionsStopped": true,
+      "results": [
+        {
+          "case": "home-recover",
+          "ownSessionStopped": true,
+          "elapsedMs": 32929,
+          "usage": {
+            "inputTokens": 1706,
+            "outputTokens": 38,
+            "totalTokens": 1744
+          },
+          "reportedModelLatencyMs": 1112,
+          "commands": [
+            {
+              "commandType": "CLEAR_OVERRIDE",
+              "playerId": 0,
+              "parameters": {},
+              "duration": 0,
+              "teamId": 0
+            }
+          ],
+          "strictJSON": false,
+          "formatPassed": true,
+          "candidateBehaviorAgreement": false
+        },
+        {
+          "case": "home-wide",
+          "ownSessionStopped": true,
+          "elapsedMs": 1790,
+          "usage": {
+            "inputTokens": 1690,
+            "outputTokens": 38,
+            "totalTokens": 1728
+          },
+          "reportedModelLatencyMs": 1108,
+          "commands": [
+            {
+              "commandType": "CLEAR_OVERRIDE",
+              "playerId": 0,
+              "parameters": {},
+              "duration": 0,
+              "teamId": 0
+            }
+          ],
+          "strictJSON": false,
+          "formatPassed": true,
+          "candidateBehaviorAgreement": true
+        },
+        {
+          "case": "home-distribution",
+          "ownSessionStopped": true,
+          "elapsedMs": 2053,
+          "usage": {
+            "inputTokens": 1708,
+            "outputTokens": 51,
+            "totalTokens": 1759
+          },
+          "reportedModelLatencyMs": 1329,
+          "commands": [
+            {
+              "commandType": "GK_DISTRIBUTE",
+              "playerId": 0,
+              "parameters": {
+                "target_player_id": 1,
+                "method": "THROW"
+              },
+              "duration": 0,
+              "teamId": 0
+            }
+          ],
+          "strictJSON": false,
+          "formatPassed": true,
+          "candidateBehaviorAgreement": false
+        },
+        {
+          "case": "home-opponent-keeper",
+          "ownSessionStopped": true,
+          "elapsedMs": 1840,
+          "usage": {
+            "inputTokens": 1707,
+            "outputTokens": 38,
+            "totalTokens": 1745
+          },
+          "reportedModelLatencyMs": 1122,
+          "commands": [
+            {
+              "commandType": "CLEAR_OVERRIDE",
+              "playerId": 0,
+              "parameters": {},
+              "duration": 0,
+              "teamId": 0
+            }
+          ],
+          "strictJSON": false,
+          "formatPassed": true,
+          "candidateBehaviorAgreement": true
+        },
+        {
+          "case": "away-recover",
+          "ownSessionStopped": true,
+          "elapsedMs": 2116,
+          "usage": {
+            "inputTokens": 1706,
+            "outputTokens": 38,
+            "totalTokens": 1744
+          },
+          "reportedModelLatencyMs": 1178,
+          "commands": [
+            {
+              "commandType": "CLEAR_OVERRIDE",
+              "playerId": 0,
+              "parameters": {},
+              "duration": 0,
+              "teamId": 1
+            }
+          ],
+          "strictJSON": false,
+          "formatPassed": true,
+          "candidateBehaviorAgreement": false
+        },
+        {
+          "case": "away-wide",
+          "ownSessionStopped": true,
+          "elapsedMs": 1861,
+          "usage": {
+            "inputTokens": 1689,
+            "outputTokens": 38,
+            "totalTokens": 1727
+          },
+          "reportedModelLatencyMs": 1103,
+          "commands": [
+            {
+              "commandType": "CLEAR_OVERRIDE",
+              "playerId": 0,
+              "parameters": {},
+              "duration": 0,
+              "teamId": 1
+            }
+          ],
+          "strictJSON": false,
+          "formatPassed": true,
+          "candidateBehaviorAgreement": true
+        },
+        {
+          "case": "away-distribution",
+          "ownSessionStopped": true,
+          "elapsedMs": 2049,
+          "usage": {
+            "inputTokens": 1705,
+            "outputTokens": 38,
+            "totalTokens": 1743
+          },
+          "reportedModelLatencyMs": 1164,
+          "commands": [
+            {
+              "commandType": "CLEAR_OVERRIDE",
+              "playerId": 0,
+              "parameters": {},
+              "duration": 0,
+              "teamId": 1
+            }
+          ],
+          "strictJSON": false,
+          "formatPassed": true,
+          "candidateBehaviorAgreement": false
+        },
+        {
+          "case": "away-opponent-keeper",
+          "ownSessionStopped": true,
+          "elapsedMs": 1950,
+          "usage": {
+            "inputTokens": 1706,
+            "outputTokens": 38,
+            "totalTokens": 1744
+          },
+          "reportedModelLatencyMs": 1108,
+          "commands": [
+            {
+              "commandType": "CLEAR_OVERRIDE",
+              "playerId": 0,
+              "parameters": {},
+              "duration": 0,
+              "teamId": 1
+            }
+          ],
+          "strictJSON": false,
+          "formatPassed": true,
+          "candidateBehaviorAgreement": true
+        },
+        {
+          "case": "home-teammate-possession",
+          "ownSessionStopped": true,
+          "elapsedMs": 1894,
+          "usage": {
+            "inputTokens": 1707,
+            "outputTokens": 38,
+            "totalTokens": 1745
+          },
+          "reportedModelLatencyMs": 1139,
+          "commands": [
+            {
+              "commandType": "CLEAR_OVERRIDE",
+              "playerId": 0,
+              "parameters": {},
+              "duration": 0,
+              "teamId": 0
+            }
+          ],
+          "strictJSON": false,
+          "formatPassed": true,
+          "candidateBehaviorAgreement": true
+        },
+        {
+          "case": "missing-team",
+          "ownSessionStopped": true,
+          "elapsedMs": 33159,
+          "usage": {
+            "inputTokens": 1701,
+            "outputTokens": 38,
+            "totalTokens": 1739
+          },
+          "reportedModelLatencyMs": 1162,
+          "commands": [
+            {
+              "commandType": "CLEAR_OVERRIDE",
+              "playerId": 0,
+              "parameters": {},
+              "duration": 0,
+              "teamId": 0
+            }
+          ],
+          "strictJSON": false,
+          "formatPassed": true,
+          "candidateBehaviorAgreement": false
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "All30 responses contain valid commands after optional Markdown fence removal; strict JSON recorded separately.",
+    "CandidateBehaviorAgreement measures G1 instructions, not baseline match quality.",
+    "Synthetic possession fields and uncontrolled live inputs limit transfer; no model strength ranking or live improvement established.",
+    "Original initial runner rejected code fences; the responses were not empty."
+  ]
+}

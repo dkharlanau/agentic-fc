@@ -155,6 +155,11 @@ class DecisionEngine:
                  'historyLength': len(history), 'modelAttempted': True,
                  'modelLatencyMs': round((time.monotonic() - model_started) * 1000),
                  'totalLatencyMs': round((time.monotonic() - started) * 1000),
+                 'gameTime': state.game_time, 'scoreFor': facts['scoreFor'], 'scoreAgainst': facts['scoreAgainst'],
+                 'playerPosition': {'x': me.x, 'y': me.y} if me else None,
+                 'playerStamina': me.stamina if me else None,
+                 'ballPosition': {'x': state.ball_x, 'y': state.ball_y},
+                 'distanceToGoal': facts['distanceToGoal'], 'selectedCommand': command,
                  'usage': usage,
                  'normalizedInputSha256': hashlib.sha256(json.dumps(root, sort_keys=True).encode()).hexdigest()}
         return [command], audit

@@ -1,6 +1,6 @@
 {
   "kind": "Independent Runtime FWD1 pilot; public-safe evidence summary",
-  "status": "Registered only in FWD1; initial Fitness4/5; kickoff positioning revision pending",
+  "status": "RegisteredFWD1 v3; UI Fitness5/5; live errors observed; diagnostic revision pending",
   "initialSourceCommit": "7ae12c1e737992f83a10ff5c2cf1497cb2580764",
   "initialArchiveSha256": "21ed279d4831546ff58e0ce3c91744e1d47b4cb5fbcff8ae4e970ba1489274e3",
   "reproducibility": "Local macOS cross-build and CloudShell Linux build produced identical archive SHA256,20610262bytes,2731files",
@@ -62,5 +62,14 @@
     "reason": "FWD1 active commands0/1ticks; require>50%",
     "tip": "Team should use PASS",
     "candidateChange": "Offer a mirrored own-half non-sprint formation position at KICK_OFF; no possession guess"
-  }
+  },
+  "revision3": {
+    "sourceCommit": "de5aed1",
+    "archiveSha256": "704bb0cc5b140fa76a4e3c1d782044ae355b775adf5fe13d1431ef9841d6fe60",
+    "status": "READY",
+    "nativeChecks": "HOMEshot, AWAYshot and HOMEkickoff command+model audit3/3; all own probes stopped",
+    "fitness": "UI5/5,5commands100%active, reportedavg0ms",
+    "live49": "Background1:0win againstMatrix_7; kickoff bindingunattributed. Runtime log session correlated to this match shows ValueError No supported command is unlocked before action selection. Do not count as tactical success."
+  },
+  "shotContextDiagnostics": "Next source revision records rejected raw input privately and numeric position/stamina/distance/time/score for accepted actions; no unsupported command is invented."
 }
