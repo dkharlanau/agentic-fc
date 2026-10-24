@@ -1,0 +1,90 @@
+{
+  "kind": "five-game ranked live batch",
+  "status": "complete; post-batch review saved",
+  "setup": "A0-M8-formation112-original-fwd1-v16",
+  "constraints": "Five original Harness unchanged; no config/model/prompt/practice/redeploy within batch; serial matchmaking",
+  "before": {
+    "rank": 14,
+    "played": 71,
+    "wins": 44,
+    "draws": 1,
+    "losses": 26,
+    "goalsFor": 99,
+    "goalsAgainst": 57,
+    "goalDifference": 42,
+    "points": 133,
+    "capturedAtUTC": "2026-10-24T13:30:00Z",
+    "source": "Primary portal leaderboard; AX and screenshot captured privately",
+    "captureTimePrecision": "minute"
+  },
+  "reports": [
+    "live-63",
+    "live-64",
+    "live-65",
+    "live-66",
+    "live-67"
+  ],
+  "targetCompleted": 5,
+  "cutoffUTC": "2026-10-24T17:04:05Z",
+  "deadlineUTC": "2026-10-24T17:14:05Z",
+  "activeOpponent": null,
+  "activeSide": "away",
+  "activeInitiation": "incoming; already running when observed",
+  "after": {
+    "rank": 14,
+    "played": 76,
+    "wins": 47,
+    "draws": 1,
+    "losses": 28,
+    "goalsFor": 107,
+    "goalsAgainst": 63,
+    "goalDifference": 44,
+    "points": 142,
+    "capturedAtUTC": "2026-10-24T13:54:40Z",
+    "source": "Primary portal leaderboard; AX and screenshot saved privately",
+    "captureTimePrecision": "minute"
+  },
+  "aggregate": {
+    "played": 5,
+    "wins": 3,
+    "draws": 0,
+    "losses": 2,
+    "goalsFor": 8,
+    "goalsAgainst": 6,
+    "goalDifference": 2,
+    "points": 9,
+    "shotsFor": 16,
+    "shotsAgainst": 27,
+    "shotsOnTargetFor": 8,
+    "shotsOnTargetAgainst": 6,
+    "possessionMeanPercent": 41
+  },
+  "leaderboardDelta": {
+    "rank": 0,
+    "points": 9,
+    "played": 5,
+    "wins": 3,
+    "draws": 0,
+    "losses": 2,
+    "goalsFor": 8,
+    "goalsAgainst": 6,
+    "goalDifference": 2
+  },
+  "reconciliation": "Five saved eligible live games exactly explain all before/after account counter changes. Four manual, one incoming. Practice excluded.",
+  "review": {
+    "shotStarvation": "Wins15:6shots; losses1:21shots. One of the losses had53%possession and0shots; raw possession is not a target to maximize by itself.",
+    "latency": "Reported match means1162/246/79/1/80ms; slowest game was won, two80ms-or-faster games lost. No supported single-cause latency explanation; P95 unavailable.",
+    "reliability": "No visible NO_PARSE/JSON error; reported role success100% in all five. Only7commands/1ms in live66 is unexplained; prior physical Runtime evidence makes report attribution unreliable. Success is not proof of applied useful commands.",
+    "shotQuality": "SOT equals goals8:6 again; shot distance and saves unavailable. No long-shot or keeper save-rate claim.",
+    "opponent": "Amber Dragons X generated8:1shots,39%own possession; Neman13:0 despite53%own possession. Need safer progression/support before a keeper swap.",
+    "model": "Micro20/20cyclic choices and259ms median supports a future speed trial only; no current competitive advantage demonstrated. Retain Nova2Lite/Haiku until isolated field comparison.",
+    "formation": "Retain1-1-2 during single-role candidate validation; changing121 simultaneously would confound comparison.",
+    "nextAction": "Bounded position-support candidate onlyFWD1, sameNova2Lite, otherfouroriginal, formation112. RequireunusedRuntimeREADY/native9/Fitness5, then BenchmarkPractice; never change active games. If regression or recipient/frame doubts, restore originalFWD1v16. New model, GK and observer deferred."
+  },
+  "limitations": [
+    "Uncontrolled opponents and mostlyHOMEgames; no causal strength ranking.",
+    "Leaderboard rank remains14 although points increased; competitors played too.",
+    "Screenshots/rawgameidentifiers remain ignored/private.",
+    "Reported actions are not physical execution proof."
+  ]
+}

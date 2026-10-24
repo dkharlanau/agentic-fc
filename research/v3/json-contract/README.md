@@ -1,0 +1,1 @@
+Laboratory candidate: JSON output contract wrapped around the unchanged schema-clean FWD1 tactics. Not installed in a saved AWS Harness. Test with Sonnet 4.6 against the same direct synthetic fixtures; inspect the full visible response, not just the first array.

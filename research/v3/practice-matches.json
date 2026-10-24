@@ -1,0 +1,516 @@
+{
+  "kind": "Explicit Practice selections; kept separate from live match evidence",
+  "matches": [
+    {
+      "id": "practice-01",
+      "setup": "A0-M8-formation112-original-fwd1-v16",
+      "opponent": "The Benchmark FC",
+      "side": "home",
+      "goalsFor": 3,
+      "goalsAgainst": 1,
+      "shotsFor": 8,
+      "shotsAgainst": 6,
+      "shotsOnTargetFor": 3,
+      "shotsOnTargetAgainst": 1,
+      "possessionPercent": 40,
+      "commands": 441,
+      "averageLatencyMs": 811,
+      "commandCounts": {
+        "MOVE_TO": 189,
+        "PRESS_BALL": 133,
+        "SHOOT": 50,
+        "INTERCEPT": 31,
+        "CLEAR_OVERRIDE": 22,
+        "PASS": 13,
+        "MARK": 3
+      },
+      "opponentCommands": 31,
+      "opponentAverageLatencyMs": 3,
+      "roleLatencyMs": {
+        "gk": 562,
+        "def": 891,
+        "mid": 789,
+        "fwd1": 578,
+        "fwd2": 948
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Controlled opponent archetype, not fixed physics random seed.",
+        "Leaderboard effect of Practice not independently checked; exclude from live opponent performance totals."
+      ],
+      "mode": "Practice",
+      "preset": "Balanced",
+      "initiation": "Practice selector TheBenchmarkFC thenSTARTMATCH; originalfiveHarness and112 observed beforestart",
+      "coaching": []
+    },
+    {
+      "id": "practice-02",
+      "setup": "R1-FWD1-v8-plus-M7-formation112",
+      "opponent": "The Benchmark FC",
+      "side": "home",
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "shotsFor": 4,
+      "shotsAgainst": 10,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 50,
+      "commands": 480,
+      "averageLatencyMs": 752,
+      "commandCounts": {
+        "PRESS_BALL": 182,
+        "MOVE_TO": 156,
+        "INTERCEPT": 66,
+        "SHOOT": 37,
+        "PASS": 27,
+        "CLEAR_OVERRIDE": 11,
+        "MARK": 1
+      },
+      "opponentCommands": 103,
+      "opponentAverageLatencyMs": 108,
+      "roleLatencyMs": {
+        "gk": 605,
+        "def": 741,
+        "mid": 876,
+        "fwd1": 590,
+        "fwd2": 797
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Opponent reportedFWD524ms/96commands closely matches ownR1calls; possible team attribution/routing issue not yet established.",
+        "Opponent primarytotals and gameplay vary between Practice runs; no fixed random seed."
+      ],
+      "mode": "Practice",
+      "preset": "Balanced",
+      "initiation": "Same Practice preset after R1v8 binding reload and Fitness5/5; otherfour Harness and112 unchanged",
+      "coaching": [],
+      "runtimeEvidence": {
+        "sourceCommit": "dca5634",
+        "decisions": 97,
+        "commands": {
+          "CLEAR_OVERRIDE": 92,
+          "PASS": 5
+        },
+        "inputRejections": 0,
+        "modelLatencyMs": {
+          "p50": 419,
+          "p95": 519,
+          "max": 847
+        }
+      }
+    },
+    {
+      "id": "practice-03",
+      "setup": "R1-FWD1-v9-bound-plus-M7-formation112",
+      "opponent": "The Benchmark FC",
+      "side": "home",
+      "goalsFor": 3,
+      "goalsAgainst": 0,
+      "shotsFor": 6,
+      "shotsAgainst": 4,
+      "shotsOnTargetFor": 3,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 24,
+      "commands": 405,
+      "averageLatencyMs": 813,
+      "commandCounts": {
+        "MOVE_TO": 141,
+        "PRESS_BALL": 105,
+        "INTERCEPT": 88,
+        "SHOOT": 32,
+        "PASS": 21,
+        "CLEAR_OVERRIDE": 14,
+        "GK_DISTRIBUTE": 3,
+        "FOLLOW_PLAYER": 1
+      },
+      "opponentCommands": 98,
+      "opponentAverageLatencyMs": 107,
+      "roleLatencyMs": {
+        "gk": 583,
+        "def": 981,
+        "mid": 830,
+        "fwd1": 573,
+        "fwd2": 775
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Practice archetype held constant, physics seed not fixed.",
+        "Report agent tables still resemble own R1 under opponent heading; physical recipient not established. Primary stats match separately observed Unity final."
+      ],
+      "mode": "Practice",
+      "preset": "Balanced",
+      "initiation": "Same Benchmark preset, R1v9bound, fourM7Harness and112 observed; no coach",
+      "coaching": [],
+      "unityFinalVerified": {
+        "goalsFor": 3,
+        "goalsAgainst": 0,
+        "shotsFor": 6,
+        "shotsAgainst": 4,
+        "shotsOnTargetFor": 3,
+        "shotsOnTargetAgainst": 0,
+        "possessionPercent": 24
+      },
+      "runtimeEvidence": {
+        "sourceCommit": "5d75b18",
+        "decisions": 80,
+        "commands": {
+          "CLEAR_OVERRIDE": 79,
+          "PASS": 1
+        },
+        "inputRejections": 0,
+        "wireTeamScope": "bound",
+        "modelLatencyMs": {
+          "p50": 415,
+          "p95": 653,
+          "max": 725
+        }
+      }
+    },
+    {
+      "id": "practice-04",
+      "setup": "R1-FWD1-v11-attack-bound-plus-M7-formation112",
+      "opponent": "The Benchmark FC",
+      "side": "home",
+      "goalsFor": 2,
+      "goalsAgainst": 0,
+      "shotsFor": 7,
+      "shotsAgainst": 5,
+      "shotsOnTargetFor": 2,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 36,
+      "commands": 370,
+      "averageLatencyMs": 760,
+      "commandCounts": {
+        "MOVE_TO": 135,
+        "PRESS_BALL": 111,
+        "INTERCEPT": 60,
+        "SHOOT": 30,
+        "PASS": 20,
+        "CLEAR_OVERRIDE": 13,
+        "MARK": 1
+      },
+      "opponentCommands": 46,
+      "opponentAverageLatencyMs": 100,
+      "roleLatencyMs": {
+        "gk": 595,
+        "def": 697,
+        "mid": 776,
+        "fwd1": 573,
+        "fwd2": 775
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Practice archetype held constant, physics seed not fixed.",
+        "Report agent columns remain inconsistent with own issued actions; SET_STANCE absent from both rendered breakdown totals. Primary stats match Unity final.",
+        "One win does not establish that support stance is stronger."
+      ],
+      "mode": "Practice",
+      "preset": "Balanced",
+      "initiation": "Same Benchmark preset,112,fourM7 unchanged; v11native7/Fitness5passed beforestart",
+      "coaching": [],
+      "unityFinalVerified": {
+        "goalsFor": 2,
+        "goalsAgainst": 0,
+        "shotsFor": 7,
+        "shotsAgainst": 5,
+        "shotsOnTargetFor": 2,
+        "shotsOnTargetAgainst": 0,
+        "possessionPercent": 36
+      },
+      "runtimeEvidence": {
+        "sourceCommit": "7a14d1b",
+        "decisions": 75,
+        "commands": {
+          "CLEAR_OVERRIDE": 31,
+          "SET_STANCE": 40,
+          "PASS": 3,
+          "INTERCEPT": 1
+        },
+        "inputRejections": 0,
+        "wireTeamScope": "bound",
+        "modelLatencyMs": {
+          "p50": 406,
+          "p95": 511,
+          "max": 609
+        },
+        "serverPreviousCommandCounts": {
+          "CLEAR_OVERRIDE": 31,
+          "SET_STANCE": 39,
+          "PASS": 3,
+          "INTERCEPT": 1
+        },
+        "applicationObservation": "One server previousINTERCEPT snapshot has ownplayerCoachIntercept while same-IDopponentCoachMoveTo; supports own control for that observation, not all commands."
+      }
+    },
+    {
+      "id": "practice-05",
+      "setup": "GK-R2v1-plus-FWD1-v11-plus-threeM7-formation112",
+      "opponent": "The Benchmark FC",
+      "side": "home",
+      "goalsFor": 0,
+      "goalsAgainst": 0,
+      "shotsFor": null,
+      "shotsAgainst": null,
+      "shotsOnTargetFor": null,
+      "shotsOnTargetAgainst": null,
+      "possessionPercent": null,
+      "commands": 599,
+      "averageLatencyMs": 849,
+      "commandCounts": {
+        "MOVE_TO": 232,
+        "PRESS_BALL": 180,
+        "INTERCEPT": 85,
+        "PASS": 50,
+        "SHOOT": 26,
+        "CLEAR_OVERRIDE": 12,
+        "GK_DISTRIBUTE": 12,
+        "MARK": 2
+      },
+      "opponentCommands": 187,
+      "opponentAverageLatencyMs": 199,
+      "roleLatencyMs": {
+        "gk": 624,
+        "def": 1171,
+        "mid": 946,
+        "fwd1": 660,
+        "fwd2": 819
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Primary STATS table absent in the rendered report; shots/on-target/possession are unknown (null), not zero.",
+        "No primary STATS or Unity final shot table; shot and possession values remain unknown.",
+        "Extra time observed; normal-phase snapshot is not the final clock.",
+        "One draw does not establish a keeper upgrade or weakness."
+      ],
+      "mode": "Practice",
+      "preset": "Balanced",
+      "initiation": "OnlyGK replaced relativePractice04 afternative11/Fitness5; FWD1v11 and112 unchanged",
+      "coaching": [],
+      "unityFinalVerified": {
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "shotStats": "Not displayed in Unity final; primary report STATS absent"
+      },
+      "runtimeEvidence": {
+        "sourceCommit": "7a14d1b",
+        "gk": {
+          "decisions": 118,
+          "commands": {
+            "CLEAR_OVERRIDE": 118
+          },
+          "inputRejections": 0,
+          "modelLatencyMs": {
+            "p50": 415,
+            "p95": 597,
+            "max": 1578
+          }
+        },
+        "fwd1": {
+          "decisions": 119,
+          "commands": {
+            "CLEAR_OVERRIDE": 46,
+            "SET_STANCE": 64,
+            "PASS": 7,
+            "INTERCEPT": 2
+          },
+          "inputRejections": 0,
+          "modelLatencyMs": {
+            "p50": 408,
+            "p95": 508,
+            "max": 650
+          }
+        },
+        "gameTimeRange": [
+          0,
+          239.11426
+        ]
+      }
+    },
+    {
+      "id": "practice-06",
+      "setup": "GK-R2v1-plus-FWD1-v12-coordinate-diagnostic-formation112",
+      "opponent": "The Benchmark FC",
+      "side": "home",
+      "goalsFor": 0,
+      "goalsAgainst": 1,
+      "shotsFor": 1,
+      "shotsAgainst": 5,
+      "shotsOnTargetFor": 0,
+      "shotsOnTargetAgainst": 1,
+      "possessionPercent": 52,
+      "commands": 335,
+      "averageLatencyMs": 787,
+      "commandCounts": {
+        "MOVE_TO": 121,
+        "PRESS_BALL": 113,
+        "INTERCEPT": 39,
+        "PASS": 20,
+        "SHOOT": 20,
+        "CLEAR_OVERRIDE": 16,
+        "GK_DISTRIBUTE": 5,
+        "MARK": 1
+      },
+      "opponentCommands": 123,
+      "opponentAverageLatencyMs": 211,
+      "roleLatencyMs": {
+        "gk": 565,
+        "def": 774,
+        "mid": 856,
+        "fwd1": 586,
+        "fwd2": 773
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Diagnostic outcome excluded from policy-strength comparisons.",
+        "Approach to target occurred near ball and opponents; repeat with quieter target before adopting a movement conversion.",
+        "Opponent reportedMOVE10matches own emittedprobe10, so command-column attribution stays uncertain."
+      ],
+      "mode": "PracticeDiagnostic",
+      "preset": "Balanced",
+      "initiation": "Bounded coordinate probe8..28seconds afterv12native9/Fitness5; GK_R2unchanged; no coach",
+      "coaching": [],
+      "excludeFromStrengthComparison": true,
+      "unityFinalVerified": {
+        "goalsFor": 0,
+        "goalsAgainst": 1,
+        "shotsFor": 1,
+        "shotsAgainst": 5,
+        "shotsOnTargetFor": 0,
+        "shotsOnTargetAgainst": 1,
+        "possessionPercent": 52
+      },
+      "runtimeEvidence": {
+        "sourceCommit": "e52447c",
+        "decisions": 64,
+        "commands": {
+          "CLEAR_OVERRIDE": 27,
+          "SET_STANCE": 24,
+          "MOVE_TO": 10,
+          "PASS": 1,
+          "INTERCEPT": 2
+        },
+        "inputRejects": 0,
+        "modelLatencyMs": {
+          "p50": 418,
+          "p95": 560,
+          "max": 1001
+        },
+        "coordinateObservation": "OwnHOMEplayer3 showsCoachMoveTo after firstMOVE, later approaches rawtarget4,1.5 withinabout0.53; possession/contact affect motion, then retreats after window. This supports raw units/owncontrol, not yet a validated converter."
+      }
+    },
+    {
+      "id": "practice-07",
+      "setup": "R1-FWD1-v13-own-wide-diagnostic-plus-fourM7-formation112",
+      "opponent": "The Benchmark FC",
+      "side": "home",
+      "goalsFor": 2,
+      "goalsAgainst": 0,
+      "shotsFor": 4,
+      "shotsAgainst": 4,
+      "shotsOnTargetFor": 2,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 36,
+      "commands": 369,
+      "averageLatencyMs": 783,
+      "commandCounts": {
+        "MOVE_TO": 144,
+        "PRESS_BALL": 141,
+        "SHOOT": 29,
+        "PASS": 22,
+        "INTERCEPT": 18,
+        "CLEAR_OVERRIDE": 14,
+        "GK_DISTRIBUTE": 1
+      },
+      "opponentCommands": 66,
+      "opponentAverageLatencyMs": 117,
+      "roleLatencyMs": {
+        "gk": 594,
+        "def": 846,
+        "mid": 819,
+        "fwd1": 593,
+        "fwd2": 869
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Diagnostic outcome excluded from policy-strength comparisons.",
+        "Physical HOMEcontrol/rawoutputunits verified in this experiment; AWAY still requires field observation.",
+        "Opponent reportedMOVE10matches own emittedprobe10 despite ownphysicalcontrol, so agent-table attribution is unreliable here."
+      ],
+      "mode": "PracticeDiagnostic",
+      "preset": "Balanced",
+      "initiation": "Quiet own-wide coordinateprobe8..28 afterv13native9/Fitness5; originalGK restored; no coach",
+      "coaching": [],
+      "excludeFromStrengthComparison": true,
+      "unityFinalVerified": {
+        "goalsFor": 2,
+        "goalsAgainst": 0,
+        "shotsFor": 4,
+        "shotsAgainst": 4,
+        "shotsOnTargetFor": 2,
+        "shotsOnTargetAgainst": 0,
+        "possessionPercent": 36
+      },
+      "runtimeEvidence": {
+        "sourceCommit": "88eb47f",
+        "decisions": 73,
+        "commands": {
+          "CLEAR_OVERRIDE": 35,
+          "SET_STANCE": 23,
+          "PASS": 2,
+          "MOVE_TO": 10,
+          "INTERCEPT": 3
+        },
+        "inputRejects": 0,
+        "modelLatencyMs": {
+          "p50": 414,
+          "p95": 607,
+          "max": 1248
+        },
+        "movementUnitEvidence": {
+          "ownHomePlayer": 3,
+          "rawTarget": {
+            "x": -2,
+            "y": 2.8
+          },
+          "consecutiveCoachMoveIntervals": [
+            {
+              "fromGameTime": 10.44,
+              "toGameTime": 12.46,
+              "rawTargetDirectionCosine": 0.9999994130646375,
+              "normalizedAlternativeCosine": 0.8394468958669636
+            },
+            {
+              "fromGameTime": 12.46,
+              "toGameTime": 14.48,
+              "rawTargetDirectionCosine": 0.9999999999983091,
+              "normalizedAlternativeCosine": 0.3901829179172224
+            }
+          ],
+          "visualOwnBlueFwd4WideAtGameTime": 23,
+          "conclusion": "OwnHOMEplayer follows raw movement target. Does not survey goalposts or prove AWAY physical application."
+        }
+      }
+    }
+  ]
+}

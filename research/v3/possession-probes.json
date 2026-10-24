@@ -1,0 +1,184 @@
+{
+  "kind": "Synthetic possession readiness probes through AWS Harness Playground; unsaved per-test prompt/model overrides, live configuration unchanged.",
+  "systemPrompt": "schema-clean/fwd2.txt",
+  "input": "fixtures/derived-fwd2-possession.json",
+  "role": "fwd2",
+  "tools": [],
+  "inferenceConfig": null,
+  "history": "Each invocation used a new session after the preceding test session was stopped.",
+  "results": [
+    {
+      "modelLabel": "Nova 2 Lite",
+      "case": "home-clear-shot",
+      "inputTokens": 1804,
+      "outputTokens": 37,
+      "reportedPlaygroundLatencyMs": 645,
+      "response": [
+        {
+          "commandType": "SHOOT",
+          "playerId": 4,
+          "parameters": {
+            "aim_location": "TR",
+            "power": 0.9
+          },
+          "duration": 0
+        }
+      ],
+      "expectedCommandCategories": [
+        "SHOOT"
+      ],
+      "categoryPassed": true,
+      "formatPassed": true
+    },
+    {
+      "modelLabel": "Nova 2 Lite",
+      "case": "away-clear-shot",
+      "inputTokens": 1802,
+      "outputTokens": 34,
+      "reportedPlaygroundLatencyMs": 600,
+      "response": [
+        {
+          "commandType": "MOVE_TO",
+          "playerId": 4,
+          "parameters": {
+            "target_x": 0,
+            "target_y": 0,
+            "sprint": true
+          },
+          "duration": 0
+        }
+      ],
+      "expectedCommandCategories": [
+        "SHOOT"
+      ],
+      "categoryPassed": false,
+      "formatPassed": true
+    },
+    {
+      "modelLabel": "Nova 2 Lite",
+      "case": "home-teammate-possession",
+      "inputTokens": 1805,
+      "outputTokens": 40,
+      "reportedPlaygroundLatencyMs": 902,
+      "response": [
+        {
+          "commandType": "MOVE_TO",
+          "playerId": 4,
+          "parameters": {
+            "target_x": 35,
+            "target_y": 0,
+            "sprint": true
+          },
+          "duration": 0
+        }
+      ],
+      "expectedCommandCategories": [
+        "MOVE_TO"
+      ],
+      "categoryPassed": true,
+      "formatPassed": true
+    },
+    {
+      "modelLabel": "Nova 2 Lite",
+      "case": "away-clear-shot",
+      "inputTokens": 1802,
+      "outputTokens": 40,
+      "reportedPlaygroundLatencyMs": 627,
+      "response": [
+        {
+          "commandType": "MOVE_TO",
+          "playerId": 4,
+          "parameters": {
+            "target_x": 25,
+            "target_y": 0,
+            "sprint": true
+          },
+          "duration": 0
+        }
+      ],
+      "expectedCommandCategories": [
+        "SHOOT"
+      ],
+      "categoryPassed": false,
+      "formatPassed": true
+    },
+    {
+      "modelLabel": "Claude Haiku 4.5",
+      "case": "away-clear-shot",
+      "inputTokens": 2239,
+      "outputTokens": 43,
+      "reportedPlaygroundLatencyMs": 1347,
+      "response": [
+        {
+          "commandType": "SHOOT",
+          "playerId": 4,
+          "parameters": {
+            "aim_location": "BL",
+            "power": 0.8
+          },
+          "duration": 0
+        }
+      ],
+      "expectedCommandCategories": [
+        "SHOOT"
+      ],
+      "categoryPassed": true,
+      "formatPassed": true
+    },
+    {
+      "modelLabel": "Claude Haiku 4.5",
+      "case": "home-clear-shot",
+      "inputTokens": 2241,
+      "outputTokens": 43,
+      "reportedPlaygroundLatencyMs": 1393,
+      "response": [
+        {
+          "commandType": "SHOOT",
+          "playerId": 4,
+          "parameters": {
+            "aim_location": "BL",
+            "power": 0.9
+          },
+          "duration": 0
+        }
+      ],
+      "expectedCommandCategories": [
+        "SHOOT"
+      ],
+      "categoryPassed": true,
+      "formatPassed": true
+    },
+    {
+      "modelLabel": "Claude Haiku 4.5",
+      "case": "home-teammate-possession",
+      "inputTokens": 2242,
+      "outputTokens": 52,
+      "reportedPlaygroundLatencyMs": 1329,
+      "response": [
+        {
+          "commandType": "MOVE_TO",
+          "playerId": 4,
+          "parameters": {
+            "target_x": 45.0,
+            "target_y": 0.0,
+            "sprint": true
+          },
+          "duration": 0
+        }
+      ],
+      "expectedCommandCategories": [
+        "MOVE_TO"
+      ],
+      "categoryPassed": true,
+      "formatPassed": true
+    }
+  ],
+  "limitations": [
+    "Small, unequal sample counts: Nova home/support1 each, away2; Haiku1 each. Not a model ranking or proof of match advantage.",
+    "Expected command categories are a readiness heuristic on synthetic states with added explicit possession fields. Live input availability is not verified.",
+    "Reported Playground latency is not end-to-end live action latency.",
+    "Prompt and model overrides were used in Playground only, not saved to deployed Harness configuration.",
+    "MOVE_TO can be legal under the role policy; missing the expected SHOOT category is not proof of state-parsing failure. Separate format validity, heuristic category adherence and match value."
+  ],
+  "expectedCategoryIsHeuristic": true
+}

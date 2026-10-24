@@ -1,0 +1,942 @@
+{
+  "kind": "Portable reviewed scouting memory from observed primary match reports",
+  "throughReport": "live-43",
+  "source": "matches.json; not the entire account history",
+  "unknownOpponentReports": [
+    "live-01",
+    "live-02"
+  ],
+  "opponents": [
+    {
+      "opponent": "AWSenal",
+      "observedReports": [
+        "live-07",
+        "live-20",
+        "live-25"
+      ],
+      "sampleSize": 3,
+      "sides": {
+        "home": 3
+      },
+      "setups": {
+        "A0-M3-no-reset-no-tools": 1,
+        "A0-M6-haiku-fwd2": 1,
+        "A0-M7-formation121": 1
+      },
+      "wins": 2,
+      "draws": 0,
+      "losses": 1,
+      "goalsFor": 5,
+      "goalsAgainst": 3,
+      "lastObserved": {
+        "id": "live-25",
+        "setup": "A0-M7-formation121",
+        "side": "home",
+        "goalsFor": 0,
+        "goalsAgainst": 2,
+        "shotsFor": 4,
+        "shotsAgainst": 8,
+        "shotsOnTargetFor": 0,
+        "shotsOnTargetAgainst": 2,
+        "possessionPercent": 61,
+        "commands": 6
+      }
+    },
+    {
+      "opponent": "AWSuoliai",
+      "observedReports": [
+        "live-39"
+      ],
+      "sampleSize": 1,
+      "sides": {
+        "away": 1
+      },
+      "setups": {
+        "unattributed-background": 1
+      },
+      "wins": 0,
+      "draws": 0,
+      "losses": 1,
+      "goalsFor": 0,
+      "goalsAgainst": 1,
+      "lastObserved": {
+        "id": "live-39",
+        "setup": "unattributed-background",
+        "side": "away",
+        "goalsFor": 0,
+        "goalsAgainst": 1,
+        "shotsFor": 2,
+        "shotsAgainst": 5,
+        "shotsOnTargetFor": 0,
+        "shotsOnTargetAgainst": 1,
+        "possessionPercent": 59,
+        "commands": 321
+      }
+    },
+    {
+      "opponent": "AgentCore Fighters",
+      "observedReports": [
+        "live-42"
+      ],
+      "sampleSize": 1,
+      "sides": {
+        "home": 1
+      },
+      "setups": {
+        "A0-M7-formation121": 1
+      },
+      "wins": 1,
+      "draws": 0,
+      "losses": 0,
+      "goalsFor": 2,
+      "goalsAgainst": 0,
+      "lastObserved": {
+        "id": "live-42",
+        "setup": "A0-M7-formation121",
+        "side": "home",
+        "goalsFor": 2,
+        "goalsAgainst": 0,
+        "shotsFor": 13,
+        "shotsAgainst": 1,
+        "shotsOnTargetFor": 2,
+        "shotsOnTargetAgainst": 0,
+        "possessionPercent": 50,
+        "commands": 370
+      }
+    },
+    {
+      "opponent": "Agentic Arsenal",
+      "observedReports": [
+        "live-31"
+      ],
+      "sampleSize": 1,
+      "sides": {
+        "home": 1
+      },
+      "setups": {
+        "A0-M8-formation112": 1
+      },
+      "wins": 1,
+      "draws": 0,
+      "losses": 0,
+      "goalsFor": 2,
+      "goalsAgainst": 1,
+      "lastObserved": {
+        "id": "live-31",
+        "setup": "A0-M8-formation112",
+        "side": "home",
+        "goalsFor": 2,
+        "goalsAgainst": 1,
+        "shotsFor": 13,
+        "shotsAgainst": 3,
+        "shotsOnTargetFor": 2,
+        "shotsOnTargetAgainst": 1,
+        "possessionPercent": 44,
+        "commands": 332
+      }
+    },
+    {
+      "opponent": "Agentic United 1",
+      "observedReports": [
+        "live-06",
+        "live-09",
+        "live-22"
+      ],
+      "sampleSize": 3,
+      "sides": {
+        "home": 3
+      },
+      "setups": {
+        "A0-M3-no-reset-no-tools": 2,
+        "A0-M7-formation121": 1
+      },
+      "wins": 3,
+      "draws": 0,
+      "losses": 0,
+      "goalsFor": 5,
+      "goalsAgainst": 0,
+      "lastObserved": {
+        "id": "live-22",
+        "setup": "A0-M7-formation121",
+        "side": "home",
+        "goalsFor": 2,
+        "goalsAgainst": 0,
+        "shotsFor": 4,
+        "shotsAgainst": 3,
+        "shotsOnTargetFor": 2,
+        "shotsOnTargetAgainst": 0,
+        "possessionPercent": 55,
+        "commands": 370
+      }
+    },
+    {
+      "opponent": "Amber Arcs 2",
+      "observedReports": [
+        "live-18",
+        "live-21"
+      ],
+      "sampleSize": 2,
+      "sides": {
+        "home": 2
+      },
+      "setups": {
+        "A0-M5-schema-clean": 1,
+        "A0-M6-haiku-fwd2": 1
+      },
+      "wins": 1,
+      "draws": 0,
+      "losses": 1,
+      "goalsFor": 2,
+      "goalsAgainst": 3,
+      "lastObserved": {
+        "id": "live-21",
+        "setup": "A0-M6-haiku-fwd2",
+        "side": "home",
+        "goalsFor": 1,
+        "goalsAgainst": 3,
+        "shotsFor": 3,
+        "shotsAgainst": 6,
+        "shotsOnTargetFor": 1,
+        "shotsOnTargetAgainst": 3,
+        "possessionPercent": 36,
+        "commands": 16
+      }
+    },
+    {
+      "opponent": "Amber Oars 2",
+      "observedReports": [
+        "live-34"
+      ],
+      "sampleSize": 1,
+      "sides": {
+        "home": 1
+      },
+      "setups": {
+        "A0-M8-formation112": 1
+      },
+      "wins": 1,
+      "draws": 0,
+      "losses": 0,
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "lastObserved": {
+        "id": "live-34",
+        "setup": "A0-M8-formation112",
+        "side": "home",
+        "goalsFor": 1,
+        "goalsAgainst": 0,
+        "shotsFor": 7,
+        "shotsAgainst": 1,
+        "shotsOnTargetFor": 1,
+        "shotsOnTargetAgainst": 0,
+        "possessionPercent": 36,
+        "commands": 264
+      }
+    },
+    {
+      "opponent": "Apocalypse",
+      "observedReports": [
+        "live-32"
+      ],
+      "sampleSize": 1,
+      "sides": {
+        "home": 1
+      },
+      "setups": {
+        "A0-M8-formation112": 1
+      },
+      "wins": 1,
+      "draws": 0,
+      "losses": 0,
+      "goalsFor": 2,
+      "goalsAgainst": 0,
+      "lastObserved": {
+        "id": "live-32",
+        "setup": "A0-M8-formation112",
+        "side": "home",
+        "goalsFor": 2,
+        "goalsAgainst": 0,
+        "shotsFor": 8,
+        "shotsAgainst": 0,
+        "shotsOnTargetFor": 2,
+        "shotsOnTargetAgainst": 0,
+        "possessionPercent": 53,
+        "commands": 375
+      }
+    },
+    {
+      "opponent": "BOYS753",
+      "observedReports": [
+        "live-16"
+      ],
+      "sampleSize": 1,
+      "sides": {
+        "away": 1
+      },
+      "setups": {
+        "unattributed-M4-M5-transition": 1
+      },
+      "wins": 1,
+      "draws": 0,
+      "losses": 0,
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "lastObserved": {
+        "id": "live-16",
+        "setup": "unattributed-M4-M5-transition",
+        "side": "away",
+        "goalsFor": 1,
+        "goalsAgainst": 0,
+        "shotsFor": 12,
+        "shotsAgainst": 1,
+        "shotsOnTargetFor": 1,
+        "shotsOnTargetAgainst": 0,
+        "possessionPercent": 32,
+        "commands": 9
+      }
+    },
+    {
+      "opponent": "BlackEagle",
+      "observedReports": [
+        "live-19",
+        "live-43"
+      ],
+      "sampleSize": 2,
+      "sides": {
+        "home": 2
+      },
+      "setups": {
+        "A0-M6-haiku-fwd2": 1,
+        "A0-M9-memory-fwd1": 1
+      },
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "goalsFor": 1,
+      "goalsAgainst": 3,
+      "lastObserved": {
+        "id": "live-43",
+        "setup": "A0-M9-memory-fwd1",
+        "side": "home",
+        "goalsFor": 1,
+        "goalsAgainst": 2,
+        "shotsFor": 4,
+        "shotsAgainst": 7,
+        "shotsOnTargetFor": 1,
+        "shotsOnTargetAgainst": 2,
+        "possessionPercent": 60,
+        "commands": 405
+      }
+    },
+    {
+      "opponent": "DarkHorse_AI",
+      "observedReports": [
+        "live-03",
+        "live-13"
+      ],
+      "sampleSize": 2,
+      "sides": {
+        "home": 2
+      },
+      "setups": {
+        "A0-M1": 1,
+        "A0-M4-context10": 1
+      },
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "goalsFor": 4,
+      "goalsAgainst": 1,
+      "lastObserved": {
+        "id": "live-13",
+        "setup": "A0-M4-context10",
+        "side": "home",
+        "goalsFor": 2,
+        "goalsAgainst": 0,
+        "shotsFor": 5,
+        "shotsAgainst": 4,
+        "shotsOnTargetFor": 2,
+        "shotsOnTargetAgainst": 0,
+        "possessionPercent": 35,
+        "commands": 370
+      }
+    },
+    {
+      "opponent": "EPAM Spor",
+      "observedReports": [
+        "live-14"
+      ],
+      "sampleSize": 1,
+      "sides": {
+        "away": 1
+      },
+      "setups": {
+        "A0-M4-context10": 1
+      },
+      "wins": 0,
+      "draws": 0,
+      "losses": 1,
+      "goalsFor": 0,
+      "goalsAgainst": 1,
+      "lastObserved": {
+        "id": "live-14",
+        "setup": "A0-M4-context10",
+        "side": "away",
+        "goalsFor": 0,
+        "goalsAgainst": 1,
+        "shotsFor": 6,
+        "shotsAgainst": 4,
+        "shotsOnTargetFor": 0,
+        "shotsOnTargetAgainst": 1,
+        "possessionPercent": 49,
+        "commands": 7
+      }
+    },
+    {
+      "opponent": "FC LTX",
+      "observedReports": [
+        "live-41"
+      ],
+      "sampleSize": 1,
+      "sides": {
+        "home": 1
+      },
+      "setups": {
+        "A0-M8-formation112": 1
+      },
+      "wins": 0,
+      "draws": 0,
+      "losses": 1,
+      "goalsFor": 1,
+      "goalsAgainst": 2,
+      "lastObserved": {
+        "id": "live-41",
+        "setup": "A0-M8-formation112",
+        "side": "home",
+        "goalsFor": 1,
+        "goalsAgainst": 2,
+        "shotsFor": 3,
+        "shotsAgainst": 6,
+        "shotsOnTargetFor": 1,
+        "shotsOnTargetAgainst": 2,
+        "possessionPercent": 42,
+        "commands": 470
+      }
+    },
+    {
+      "opponent": "Goalpost Shifters",
+      "observedReports": [
+        "live-23",
+        "live-40"
+      ],
+      "sampleSize": 2,
+      "sides": {
+        "away": 2
+      },
+      "setups": {
+        "A0-M7-formation121": 1,
+        "unattributed-background": 1
+      },
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "goalsFor": 1,
+      "goalsAgainst": 5,
+      "lastObserved": {
+        "id": "live-40",
+        "setup": "unattributed-background",
+        "side": "away",
+        "goalsFor": 0,
+        "goalsAgainst": 2,
+        "shotsFor": 4,
+        "shotsAgainst": 10,
+        "shotsOnTargetFor": 0,
+        "shotsOnTargetAgainst": 2,
+        "possessionPercent": 49,
+        "commands": 312
+      }
+    },
+    {
+      "opponent": "Hail Mary",
+      "observedReports": [
+        "live-26",
+        "live-33"
+      ],
+      "sampleSize": 2,
+      "sides": {
+        "home": 2
+      },
+      "setups": {
+        "A0-M7-formation121": 1,
+        "A0-M8-formation112": 1
+      },
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "goalsFor": 3,
+      "goalsAgainst": 0,
+      "lastObserved": {
+        "id": "live-33",
+        "setup": "A0-M8-formation112",
+        "side": "home",
+        "goalsFor": 2,
+        "goalsAgainst": 0,
+        "shotsFor": 7,
+        "shotsAgainst": 2,
+        "shotsOnTargetFor": 2,
+        "shotsOnTargetAgainst": 0,
+        "possessionPercent": 33,
+        "commands": 329
+      }
+    },
+    {
+      "opponent": "Lighting Cloud",
+      "observedReports": [
+        "live-24"
+      ],
+      "sampleSize": 1,
+      "sides": {
+        "home": 1
+      },
+      "setups": {
+        "A0-M7-formation121": 1
+      },
+      "wins": 1,
+      "draws": 0,
+      "losses": 0,
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "lastObserved": {
+        "id": "live-24",
+        "setup": "A0-M7-formation121",
+        "side": "home",
+        "goalsFor": 1,
+        "goalsAgainst": 0,
+        "shotsFor": 10,
+        "shotsAgainst": 0,
+        "shotsOnTargetFor": 1,
+        "shotsOnTargetAgainst": 0,
+        "possessionPercent": 39,
+        "commands": 117
+      }
+    },
+    {
+      "opponent": "Matrix_7",
+      "observedReports": [
+        "live-04",
+        "live-30"
+      ],
+      "sampleSize": 2,
+      "sides": {
+        "home": 2
+      },
+      "setups": {
+        "A0-M3-no-reset-no-tools": 1,
+        "A0-M8-formation112": 1
+      },
+      "wins": 1,
+      "draws": 0,
+      "losses": 1,
+      "goalsFor": 1,
+      "goalsAgainst": 1,
+      "lastObserved": {
+        "id": "live-30",
+        "setup": "A0-M8-formation112",
+        "side": "home",
+        "goalsFor": 1,
+        "goalsAgainst": 0,
+        "shotsFor": 20,
+        "shotsAgainst": 0,
+        "shotsOnTargetFor": 1,
+        "shotsOnTargetAgainst": 0,
+        "possessionPercent": 40,
+        "commands": 543
+      }
+    },
+    {
+      "opponent": "Meerut United",
+      "observedReports": [
+        "live-08",
+        "live-27"
+      ],
+      "sampleSize": 2,
+      "sides": {
+        "home": 2
+      },
+      "setups": {
+        "A0-M3-no-reset-no-tools": 1,
+        "A0-M7-formation121": 1
+      },
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "goalsFor": 3,
+      "goalsAgainst": 1,
+      "lastObserved": {
+        "id": "live-27",
+        "setup": "A0-M7-formation121",
+        "side": "home",
+        "goalsFor": 2,
+        "goalsAgainst": 1,
+        "shotsFor": 12,
+        "shotsAgainst": 3,
+        "shotsOnTargetFor": 2,
+        "shotsOnTargetAgainst": 1,
+        "possessionPercent": 45,
+        "commands": 659
+      }
+    },
+    {
+      "opponent": "Neman Grodno",
+      "observedReports": [
+        "live-17"
+      ],
+      "sampleSize": 1,
+      "sides": {
+        "home": 1
+      },
+      "setups": {
+        "A0-M5-schema-clean": 1
+      },
+      "wins": 0,
+      "draws": 0,
+      "losses": 1,
+      "goalsFor": 1,
+      "goalsAgainst": 2,
+      "lastObserved": {
+        "id": "live-17",
+        "setup": "A0-M5-schema-clean",
+        "side": "home",
+        "goalsFor": 1,
+        "goalsAgainst": 2,
+        "shotsFor": 4,
+        "shotsAgainst": 11,
+        "shotsOnTargetFor": 1,
+        "shotsOnTargetAgainst": 2,
+        "possessionPercent": 57,
+        "commands": 10
+      }
+    },
+    {
+      "opponent": "No Context FC",
+      "observedReports": [
+        "live-05",
+        "live-10",
+        "live-15"
+      ],
+      "sampleSize": 3,
+      "sides": {
+        "home": 3
+      },
+      "setups": {
+        "A0-M3-no-reset-no-tools": 2,
+        "A0-M4-context10": 1
+      },
+      "wins": 3,
+      "draws": 0,
+      "losses": 0,
+      "goalsFor": 6,
+      "goalsAgainst": 0,
+      "lastObserved": {
+        "id": "live-15",
+        "setup": "A0-M4-context10",
+        "side": "home",
+        "goalsFor": 3,
+        "goalsAgainst": 0,
+        "shotsFor": 6,
+        "shotsAgainst": 3,
+        "shotsOnTargetFor": 3,
+        "shotsOnTargetAgainst": 0,
+        "possessionPercent": 20,
+        "commands": 400
+      }
+    },
+    {
+      "opponent": "Octopus",
+      "observedReports": [
+        "live-11"
+      ],
+      "sampleSize": 1,
+      "sides": {
+        "away": 1
+      },
+      "setups": {
+        "unattributed-background": 1
+      },
+      "wins": 1,
+      "draws": 0,
+      "losses": 0,
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "lastObserved": {
+        "id": "live-11",
+        "setup": "unattributed-background",
+        "side": "away",
+        "goalsFor": 1,
+        "goalsAgainst": 0,
+        "shotsFor": 5,
+        "shotsAgainst": 6,
+        "shotsOnTargetFor": 1,
+        "shotsOnTargetAgainst": 0,
+        "possessionPercent": 54,
+        "commands": 335
+      }
+    },
+    {
+      "opponent": "Shalqar United",
+      "observedReports": [
+        "live-28"
+      ],
+      "sampleSize": 1,
+      "sides": {
+        "home": 1
+      },
+      "setups": {
+        "A0-M8-formation112": 1
+      },
+      "wins": 1,
+      "draws": 0,
+      "losses": 0,
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "lastObserved": {
+        "id": "live-28",
+        "setup": "A0-M8-formation112",
+        "side": "home",
+        "goalsFor": 1,
+        "goalsAgainst": 0,
+        "shotsFor": 4,
+        "shotsAgainst": 6,
+        "shotsOnTargetFor": 1,
+        "shotsOnTargetAgainst": 0,
+        "possessionPercent": 42,
+        "commands": 325
+      }
+    },
+    {
+      "opponent": "Singularity FC",
+      "observedReports": [
+        "live-35"
+      ],
+      "sampleSize": 1,
+      "sides": {
+        "home": 1
+      },
+      "setups": {
+        "A0-M8-formation112": 1
+      },
+      "wins": 1,
+      "draws": 0,
+      "losses": 0,
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "lastObserved": {
+        "id": "live-35",
+        "setup": "A0-M8-formation112",
+        "side": "home",
+        "goalsFor": 1,
+        "goalsAgainst": 0,
+        "shotsFor": 9,
+        "shotsAgainst": 4,
+        "shotsOnTargetFor": 1,
+        "shotsOnTargetAgainst": 0,
+        "possessionPercent": 44,
+        "commands": 330
+      }
+    },
+    {
+      "opponent": "Spartak Ultimate",
+      "observedReports": [
+        "live-36",
+        "live-37"
+      ],
+      "sampleSize": 2,
+      "sides": {
+        "home": 2
+      },
+      "setups": {
+        "A0-M8-formation112": 2
+      },
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "goalsFor": 6,
+      "goalsAgainst": 1,
+      "lastObserved": {
+        "id": "live-37",
+        "setup": "A0-M8-formation112",
+        "side": "home",
+        "goalsFor": 4,
+        "goalsAgainst": 1,
+        "shotsFor": 7,
+        "shotsAgainst": 2,
+        "shotsOnTargetFor": 4,
+        "shotsOnTargetAgainst": 1,
+        "possessionPercent": 45,
+        "commands": 475
+      }
+    },
+    {
+      "opponent": "Sporting Lambda",
+      "observedReports": [
+        "live-29"
+      ],
+      "sampleSize": 1,
+      "sides": {
+        "home": 1
+      },
+      "setups": {
+        "A0-M8-formation112": 1
+      },
+      "wins": 0,
+      "draws": 1,
+      "losses": 0,
+      "goalsFor": 0,
+      "goalsAgainst": 0,
+      "lastObserved": {
+        "id": "live-29",
+        "setup": "A0-M8-formation112",
+        "side": "home",
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "shotsFor": null,
+        "shotsAgainst": null,
+        "shotsOnTargetFor": null,
+        "shotsOnTargetAgainst": null,
+        "possessionPercent": null,
+        "commands": 6
+      }
+    },
+    {
+      "opponent": "Team AA",
+      "observedReports": [
+        "live-38"
+      ],
+      "sampleSize": 1,
+      "sides": {
+        "home": 1
+      },
+      "setups": {
+        "A0-M8-formation112": 1
+      },
+      "wins": 1,
+      "draws": 0,
+      "losses": 0,
+      "goalsFor": 3,
+      "goalsAgainst": 0,
+      "lastObserved": {
+        "id": "live-38",
+        "setup": "A0-M8-formation112",
+        "side": "home",
+        "goalsFor": 3,
+        "goalsAgainst": 0,
+        "shotsFor": 7,
+        "shotsAgainst": 0,
+        "shotsOnTargetFor": 3,
+        "shotsOnTargetAgainst": 0,
+        "possessionPercent": 41,
+        "commands": 332
+      }
+    },
+    {
+      "opponent": "The Drunkards",
+      "observedReports": [
+        "live-12"
+      ],
+      "sampleSize": 1,
+      "sides": {
+        "away": 1
+      },
+      "setups": {
+        "unattributed-background": 1
+      },
+      "wins": 1,
+      "draws": 0,
+      "losses": 0,
+      "goalsFor": 2,
+      "goalsAgainst": 1,
+      "lastObserved": {
+        "id": "live-12",
+        "setup": "unattributed-background",
+        "side": "away",
+        "goalsFor": 2,
+        "goalsAgainst": 1,
+        "shotsFor": 7,
+        "shotsAgainst": 6,
+        "shotsOnTargetFor": 2,
+        "shotsOnTargetAgainst": 1,
+        "possessionPercent": 52,
+        "commands": 565
+      }
+    }
+  ],
+  "reviewedLessons": [
+    {
+      "evidence": [
+        "live-41",
+        "live-42",
+        "live-43"
+      ],
+      "observation": "Recent HOME outcomes vary across opponents with high movement volume; possession alone does not ensure shots on target.",
+      "nextHypothesis": "Selective FWD1 intervention: shoot when ownership and range are clear, otherwise often release own override. Validate strict JSON and HOME/AWAY identity before a saved trial.",
+      "status": "unproven laboratory candidate"
+    },
+    {
+      "evidence": [
+        "live-42"
+      ],
+      "observation": "M7 1-2-1 won 2:0 with shots13:1 against AgentCore Fighters.",
+      "limitation": "One uncontrolled game; not evidence that M7 beats M8 generally."
+    },
+    {
+      "evidence": [
+        "live-39",
+        "live-40"
+      ],
+      "observation": "Recovered AWAY losses occurred after an earlier HOME-only strong series.",
+      "limitation": "Kickoff setup attribution unknown; do not count these as verified M8 or infer an isolated side effect."
+    },
+    {
+      "evidence": [
+        "fwd1-sonnet-probes.json"
+      ],
+      "observation": "Larger Sonnet model met tactical categories on three synthetic fixtures but full output was JSON-only in only one.",
+      "decision": "Keep stable saved model while exploring prompts; do not promote by category/array presence alone."
+    },
+    {
+      "evidence": [
+        "recovery/bundle.json"
+      ],
+      "observation": "Portable configuration and exact prompt hashes are stored; generated identifiers are intentionally replaced on restore.",
+      "decision": "Default restore to M7 with explicit disabled Memory; enable Memory as a separate candidate."
+    }
+  ],
+  "limitations": [
+    "Opponent agents may change between games.",
+    "Small, unequal samples and different setups prevent causal opponent-specific strategy claims.",
+    "Command counts and reported Success are not proof of actual model invocation or useful applied actions."
+  ],
+  "operationalLessons": [
+    {
+      "id": "raw-move-home-verified",
+      "evidence": "practice07",
+      "lesson": "Own HOMEplayer3 follows raw MOVE target; two directioncosines>0.999999. Canonical target must be inversely transformed before actual small-field movement.",
+      "limits": "Exact goalposts unmeasured; AWAY physical confirmation pending."
+    },
+    {
+      "id": "agent-table-attribution",
+      "evidence": "practice06/practice07",
+      "lesson": "Reported opponentMOVE counts match own emitted probes while own physical player follows them; do not use command columns as ownership proof."
+    },
+    {
+      "id": "constant-index-eval-control",
+      "evidence": "tactical-model-rounds1.json/tactical-model-orders2.json",
+      "lesson": "Originalalways0 baseline8/8. Cyclicordersbaseline12/20; Nova/Micro each20/20, modelmedians393.5/259ms. No match-strength inference."
+    },
+    {
+      "id": "practice-leaderboard-exclusion",
+      "evidence": "run-20261024-sixhours.json",
+      "lesson": "Accountchanges reconcile exactly to live53..62; afterPractice07 totals remain71P44W1D26L,133points. Practice outcomes stored separately."
+    }
+  ]
+}

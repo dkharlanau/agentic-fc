@@ -1,0 +1,145 @@
+{
+  "schemaVersion": 1,
+  "recordedAtUTC": "2026-10-24T05:43:56.375795+00:00",
+  "retainedSetup": "A0-M7-formation121",
+  "priorReceipt": "run-20261023-summary.json",
+  "sessionMode": "User requested continuation with no automatic shutdown timer.",
+  "workshopAccess": {
+    "dashboard": "accessible",
+    "event": "active",
+    "reentry": "Existing event dashboard reopened successfully; no new resource provisioning."
+  },
+  "awsHarnesses": {
+    "allReady": true,
+    "latestVersionByRole": {
+      "gk": 13,
+      "def": 19,
+      "mid": 15,
+      "fwd1": 14,
+      "fwd2": 14
+    },
+    "versionsChangedSincePriorReceipt": false,
+    "sourceAndModelReverifiedThisResume": false
+  },
+  "footballPortal": {
+    "status": "Restored: existing authenticated Player Portal session loaded successfully",
+    "checkedSurfaces": [
+      "in-app browser root and player page",
+      "native Google Chrome root"
+    ],
+    "freshFitness": {
+      "passedPositions": 5,
+      "totalPositions": 5,
+      "commands": 5,
+      "activePercent": 100,
+      "reportedAverageLatencyMs": 0,
+      "setup": "A0-M7-formation121",
+      "limitation": "UI gate after formation-only change; no scrimmage reset, not proof of fresh generation."
+    },
+    "newMatchReports": 2,
+    "currentStandings": {
+      "rank": 10,
+      "played": 51,
+      "wins": 35,
+      "draws": 1,
+      "losses": 15,
+      "goalsFor": 74,
+      "goalsAgainst": 38,
+      "goalDifference": 36,
+      "points": 106
+    },
+    "initialStatus": "HTTP 403 Forbidden before login form",
+    "initialBlockedResponseHeaders": {
+      "server": "awselb/2.0",
+      "contentType": "text/html",
+      "contentLength": 118,
+      "responseDateUTC": "2026-10-24T05:15:45Z"
+    },
+    "initialBlockedNetworkObservation": "Chrome DevTools recorded a fresh GET document request returning 403, not a cached game UI error. No login form was loaded.",
+    "initialRefusalCause": "Unresolved. The observed AWS load-balancer response alone does not distinguish a listener rule, access policy, WAF, or another deployment issue.",
+    "newlyCapturedHistoricalReports": 2,
+    "totalReportsCapturedThisResume": 4
+  },
+  "actions": {
+    "newHarnessChanges": false,
+    "networkSettingsChanged": false,
+    "credentialsPublished": false
+  },
+  "nextSteps": [
+    "Continue serial live M7 trial with primary report capture; compare separately by side and opponent.",
+    "Do not infer a formation effect from the two different opponents or from the HOME-only historical M8 series.",
+    "Keep Sonnet/JSON-contract candidates laboratory-only unless a new test demonstrates full-response readiness and tactical value."
+  ],
+  "limitations": [
+    "All Ready, UI Fitness and unchanged versions do not prove fresh game-model inference.",
+    "Two resumed manual games against different teams do not establish isolated model or formation improvement.",
+    "The original11-game M8 series was HOME-only; historical away defeats have unverified kickoff configuration.",
+    "Synthetic model probes used explicit possession fields not independently recovered from live calls.",
+    "No model-weight fine-tuning, optimal strategy or contest victory is claimed."
+  ],
+  "currentPhase": "M7_trial_saved_after_two_resumed_manual_matches",
+  "restoration": {
+    "verifiedAtUTC": "2026-10-24T05:25:09.666223+00:00",
+    "vpnChanged": false,
+    "fitness": {
+      "passedPositions": 5,
+      "totalPositions": 5,
+      "commands": 5,
+      "activePercent": 100,
+      "reportedAverageLatencyMs": 0,
+      "limitation": "UI gate, not proof of fresh generation."
+    },
+    "profile": {
+      "formation": "1-1-2",
+      "modelsMatchRetainedM8": true
+    },
+    "recoveredHistoricalReportIds": [
+      "live-39",
+      "live-40"
+    ],
+    "newManualMatch": "live-41 M8HOMEFC LTX1:2overtime, live-42 M7HOMEAgentCoreFighters2:0",
+    "standings": {
+      "rank": 10,
+      "points": 103,
+      "played": 49,
+      "wins": 34,
+      "draws": 1,
+      "losses": 14,
+      "goalsFor": 71,
+      "goalsAgainst": 36
+    },
+    "standingsScope": "Initial restored-access snapshot; latest snapshot is footballPortal.currentStandings."
+  },
+  "startingRetainedSetup": "A0-M8-formation112",
+  "currentTrial": {
+    "id": "A0-M7-formation121",
+    "formation": "1-2-1",
+    "changedFactor": "Starting formation only; models, source prompts, tools, inference config and context unchanged.",
+    "sourceManifest": "setups.json",
+    "profileReloadVerified": true,
+    "modelLabelsMatchManifest": true,
+    "nativeFwd1PlaygroundRestoredNovaAndOriginalPrompt": true,
+    "allOwnSonnetSessionsStopped": true,
+    "newHarnessVersionsCreated": false,
+    "newManualResults": [
+      {
+        "id": "live-41",
+        "setup": "A0-M8-formation112",
+        "opponent": "FC LTX",
+        "side": "home",
+        "goalsFor": 1,
+        "goalsAgainst": 2
+      },
+      {
+        "id": "live-42",
+        "setup": "A0-M7-formation121",
+        "opponent": "AgentCore Fighters",
+        "side": "home",
+        "goalsFor": 2,
+        "goalsAgainst": 0
+      }
+    ],
+    "sonnetProbeRecords": "fwd1-sonnet-probes.json",
+    "sideAudit": "side-audit-20261024.json"
+  }
+}

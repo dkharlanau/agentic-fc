@@ -1,0 +1,52 @@
+{
+  "kind": "Single-sample Playground prompt/model overrides; saved live M6 configuration unchanged.",
+  "input": "fixtures/derived-fwd2-possession.json:away-clear-shot",
+  "sessionPolicy": "Each sample used a new session; both were stopped after completion.",
+  "results": [
+    {
+      "prompt": "compact/fwd2.txt",
+      "model": "global.amazon.nova-2-lite-v1:0",
+      "case": "away-clear-shot",
+      "inputTokens": 1361,
+      "outputTokens": 2,
+      "reportedPlaygroundLatencyMs": 621,
+      "response": [],
+      "formatPassed": false,
+      "expectedCategory": "SHOOT",
+      "expectedCategoryIsHeuristic": true,
+      "categoryPassed": false,
+      "liveStatus": "not installed in this trial"
+    },
+    {
+      "prompt": "identity/fwd2.txt",
+      "model": "global.amazon.nova-2-lite-v1:0",
+      "case": "away-clear-shot",
+      "inputTokens": 2030,
+      "outputTokens": 40,
+      "reportedPlaygroundLatencyMs": 687,
+      "response": [
+        {
+          "commandType": "MOVE_TO",
+          "playerId": 4,
+          "parameters": {
+            "target_x": 0,
+            "target_y": 20,
+            "sprint": false
+          },
+          "duration": 0
+        }
+      ],
+      "formatPassed": true,
+      "expectedCategory": "SHOOT",
+      "expectedCategoryIsHeuristic": true,
+      "categoryPassed": false,
+      "liveStatus": "not installed in this trial"
+    }
+  ],
+  "limitations": [
+    "Synthetic states add explicit ownership fields; availability in live inputs is unverified.",
+    "The compact empty array violates the exact-one-command format.",
+    "Identity-prefixed MOVE_TO is valid JSON/role format; the expected SHOOT category is a tactical heuristic, not proof the model parsed ownership incorrectly.",
+    "No statistical comparison or live-strength improvement is established."
+  ]
+}

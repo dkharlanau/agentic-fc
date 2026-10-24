@@ -1,0 +1,107 @@
+{
+  "kind": "Native Playground selective intervention experiments; no saved live prompt change yet",
+  "model": "global.amazon.nova-2-lite-v1:0",
+  "sessionPolicy": "Fresh own session per case, stopped after each completed case; no live match active during probes",
+  "results": [
+    {
+      "prompt": "fwd1.txt",
+      "promptSha256": "c059bcc94676f45b9c8a11f24c10bb9a2f3ca7210522a76f36a54a6acff595a1",
+      "case": "home-clear-shot",
+      "inputTokens": 1457,
+      "outputTokens": 37,
+      "latencyMs": 591,
+      "response": [
+        {
+          "commandType": "SHOOT",
+          "playerId": 3,
+          "parameters": {
+            "aim_location": "CENTER",
+            "power": 0.9
+          },
+          "duration": 0
+        }
+      ],
+      "fullJsonOnly": true,
+      "exactlyOneOwnCommand": true,
+      "expectedCategory": "SHOOT",
+      "categoryPassed": true
+    },
+    {
+      "prompt": "fwd1.txt",
+      "promptSha256": "c059bcc94676f45b9c8a11f24c10bb9a2f3ca7210522a76f36a54a6acff595a1",
+      "case": "away-clear-shot",
+      "inputTokens": 1455,
+      "outputTokens": 2,
+      "latencyMs": 566,
+      "response": [],
+      "fullJsonOnly": true,
+      "exactlyOneOwnCommand": false,
+      "expectedCategory": "SHOOT",
+      "categoryPassed": false
+    },
+    {
+      "prompt": "../schema-clean/fwd1.txt",
+      "promptSha256": "ee4c92203e6fcbc86d14329913933ba68d8cd2092947bebd2c66d5ed14c17b15",
+      "case": "away-clear-shot",
+      "purpose": "same nested-envelope control after short candidate empty-array failure",
+      "inputTokens": 1787,
+      "outputTokens": 34,
+      "latencyMs": 632,
+      "response": [
+        {
+          "commandType": "MOVE_TO",
+          "playerId": 3,
+          "parameters": {
+            "target_x": -35,
+            "target_y": 8,
+            "sprint": true
+          },
+          "duration": 0
+        }
+      ],
+      "fullJsonOnly": true,
+      "exactlyOneOwnCommand": true,
+      "expectedCategory": "SHOOT",
+      "categoryPassed": false,
+      "limitation": "MOVE_TO is legal under the baseline policy; this alone does not establish an ownership parsing failure."
+    },
+    {
+      "prompt": "fwd1-v2.txt",
+      "promptSha256": "22c9459496de1278373304ef4af378e5c6e56efb8afaaac1968eeb7636341372",
+      "case": "away-clear-shot",
+      "inputTokens": 2231,
+      "outputTokens": 28,
+      "latencyMs": 547,
+      "response": [
+        {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 3,
+          "parameters": {},
+          "duration": 0
+        }
+      ],
+      "fullJsonOnly": true,
+      "exactlyOneOwnCommand": true,
+      "expectedCategory": "SHOOT",
+      "categoryPassed": false
+    }
+  ],
+  "decisions": [
+    {
+      "prompt": "fwd1.txt",
+      "status": "rejected before installation",
+      "reason": "AWAY empty array violates exact-one-command contract; stopped after two probes rather than proceeding to live rollout"
+    },
+    {
+      "prompt": "fwd1-v2.txt",
+      "status": "not installed; stopped after first critical case",
+      "reason": "Valid JSON but did not meet intended clear-shot action on AWAY; no live-strength claim.",
+      "nextApproach": "Investigate official Runtime path: code normalizes side/possession and serializes a bounded genuine model selection."
+    }
+  ],
+  "limitations": [
+    "Synthetic possession fields and expected categories are heuristic, not observed live state or match-strength proof.",
+    "One observed native Fitness kickoff envelope grounds only the envelope and free-ball kickoff input.",
+    "Reported Playground latency does not establish live end-to-end speed."
+  ]
+}
