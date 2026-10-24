@@ -1,0 +1,99 @@
+{
+  "id": "ranked-batch-10",
+  "coachVersion": "coach-v1.0",
+  "status": "running",
+  "targetCompletedGames": 5,
+  "setup": {
+    "sourceCommit": "931af03",
+    "revision": 9,
+    "fwd2Mode": "stance",
+    "otherRoles": "original M8 GK13 DEF19 MID15 FWD1v16",
+    "formation": "1-1-2"
+  },
+  "startedAt": "2026-10-24T21:16:52.095026+00:00",
+  "beforeLeaderboard": {
+    "rank": 17,
+    "points": 195,
+    "played": 114,
+    "wins": 64,
+    "draws": 3,
+    "losses": 47,
+    "goalsFor": 151,
+    "goalsAgainst": 104
+  },
+  "games": [
+    {
+      "alias": "stance-return-01",
+      "opponent": "Soccer",
+      "side": "HOME",
+      "status": "complete",
+      "startedAt": "2026-10-24T21:18:18.096918+00:00",
+      "initiation": "manual random matchmaking",
+      "result": "loss",
+      "score": [
+        0,
+        2
+      ],
+      "shots": [
+        2,
+        9
+      ],
+      "possessionPercent": [
+        46,
+        54
+      ],
+      "reportRoleLatencyMs": {
+        "own": [
+          99,
+          100,
+          114,
+          104,
+          102
+        ],
+        "opponent": [
+          4,
+          3,
+          3,
+          3,
+          73
+        ]
+      },
+      "successPercent": 100,
+      "reportCommands": {
+        "own": {
+          "CLEAR_OVERRIDE": 370
+        },
+        "opponent": {
+          "CLEAR_OVERRIDE": 31,
+          "PASS": 7,
+          "PRESS_BALL": 1
+        }
+      },
+      "completedAt": "2026-10-24T21:21:18.597450+00:00",
+      "runtimeAudit": {
+        "count": 72,
+        "stance": 71,
+        "bootstrap": 1,
+        "computeMedianMs": 0.4242545,
+        "computeMaxMs": 0.761667,
+        "modelCalls": 0,
+        "buildCommit": "931af03",
+        "commands": {
+          "CLEAR_OVERRIDE": 26,
+          "SET_STANCE": 45,
+          "PRESS_BALL": 1
+        }
+      }
+    },
+    {
+      "alias": "stance-return-02",
+      "opponent": "Singularity FC",
+      "side": "HOME",
+      "status": "running",
+      "startedAt": "2026-10-24T21:22:45.408904+00:00",
+      "initiation": "manual random matchmaking"
+    }
+  ],
+  "incomingGames": [],
+  "quotaGuard": "Stop new games at <=5% remaining; finish in-flight and finalize saved recovery."
+}

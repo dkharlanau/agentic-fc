@@ -1,5 +1,14 @@
 # Agentic FC continuation
 
+## Active series10
+
+Revision9 stance/source931af03 verified in first fresh real game:71stance+1bootstrap,
+72responses,0models,CPUmedian.424ms. Soccer L0:2,shots2:9. Second game
+Singularity FC currentlyLIVE, do not deploy/probe. Remaining target3 further
+games after this match. Quota10%, stop new starts<=5%. Series/bindings under
+research/v3/ranked-batch-10.json and private.local/ranked-batch-10.
+Prior turn was progress; restoration saved fb732ae.
+
 ## Current checkpoint — 2026-10-24T21:16:07.810707+00:00
 
 Cohort09 COMPLETE5/5:2W3L,5:5goals,24:32shots,2scoreless.195points/rank17,
