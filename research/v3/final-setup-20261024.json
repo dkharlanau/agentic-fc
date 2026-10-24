@@ -51,7 +51,7 @@
       "configurationSha256": "acdaf451e4d301949ddd47bff8d857c2eb68ae2292112b2cf3760fc9ff4a6c4c"
     }
   },
-  "roleVersionNote": "Current FWD1v16 restored original saved configuration whose export sourceVersion is14; resource-local version differs, prompt/config match.",
+  "roleVersionNote": "Current FWD1v16 uses the prompt/config preserved in the recovery bundle. That bundle records sourceVersion15; baseline-m8 disables the optional memory association. Original pre-memory baseline was v14. Resource-local version numbers are not portable configuration identity.",
   "harnessConfiguration": {
     "bundle": "recovery/bundle.json",
     "tools": [],

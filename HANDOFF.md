@@ -1,5 +1,21 @@
 # Agentic FC continuation
 
+## Bounded offline mission — 24 Oct, 16:54 UTC
+
+The owner requested one win-oriented research/engineering iteration, explicitly
+excluding new live matchmaking, AWS deployment and heartbeat changes. Read the
+[tournament decision](research/v3/TOURNAMENT_DECISION_20261024.md) and its frozen
+evidence/evaluation assets. A remains the saved M8 fallback; B (only formation
+1-2-1, the same five original Harness) is the sole prepared next experiment.
+Its five-game protocol requires separate explicit authorisation and a new bounded
+window. Do not resume batch04, the historical eight-hour loop or the heartbeat.
+
+The latest live verification remains 15:39 UTC below, not a new portal read.
+The mission changes analysis/evaluation and corrects FWD1 export-version prose;
+no agent prompt, model, runtime code, AWS resource or power schedule changed.
+Offline adversarial audit found an unhandled players=null case in the unused R1;
+this is not a demonstrated cause of M8 losses. No autonomous follow-on research.
+
 ## FINAL OWNER DIRECTIVE — 24 Oct, 15:31 UTC
 
 The owner ended exploratory work and requested finalisation using existing
@@ -11,7 +27,9 @@ by tool response and saved configuration. No shutdown or Chrome cleanup.
 Final setup: **M8, original five Harness, formation 1-1-2**. GK/DEF/MID/FWD1
 use Nova 2 Lite; FWD2 uses Haiku 4.5. Original saved prompts, no Memory or tools.
 Current role versions: 13/19/15/16/14. FWD1 v16 has the same saved prompt/config
-as the recovery export's v14; revision numbers are resource-local history.
+as the original baseline. The bundle records sourceVersion15 and baseline-m8
+disables its optional memory association; pre-memory FWD1 was v14. Revision
+numbers are resource-local history, not portable configuration identity.
 Formation persisted after reload and fresh Fitness passed all five at15:39UTC.
 Experimental FWD1 and GK runtimes are unregistered.
 
