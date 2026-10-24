@@ -2810,6 +2810,83 @@
       ],
       "initiation": "manual",
       "batch": "ranked-batch-01"
+    },
+    {
+      "id": "live-68",
+      "setup": "A0-M8-formation112-original-fwd1-v16",
+      "opponent": "FC RAM",
+      "side": "away",
+      "goalsFor": 0,
+      "goalsAgainst": 1,
+      "shotsFor": 3,
+      "shotsAgainst": 7,
+      "shotsOnTargetFor": 0,
+      "shotsOnTargetAgainst": 1,
+      "possessionPercent": 50,
+      "commands": 360,
+      "averageLatencyMs": 76,
+      "commandCounts": {
+        "MOVE_TO": 276,
+        "MARK": 21,
+        "INTERCEPT": 20,
+        "PRESS_BALL": 20,
+        "CLEAR_OVERRIDE": 10,
+        "PASS": 6,
+        "SHOOT": 6,
+        "GK_DISTRIBUTE": 1
+      },
+      "opponentCommands": 3,
+      "opponentAverageLatencyMs": 1,
+      "roleLatencyMs": {
+        "gk": 82,
+        "def": 85,
+        "mid": 79,
+        "fwd1": 83,
+        "fwd2": 79
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy."
+      ],
+      "initiation": "incoming",
+      "batch": "ranked-batch-02",
+      "kickoffObserved": false
+    },
+    {
+      "id": "live-69",
+      "setup": "A0-M8-formation112-original-fwd1-v16",
+      "opponent": "CypherForce Hotshots",
+      "side": "home",
+      "goalsFor": 0,
+      "goalsAgainst": 3,
+      "shotsFor": 0,
+      "shotsAgainst": 12,
+      "shotsOnTargetFor": 0,
+      "shotsOnTargetAgainst": 3,
+      "possessionPercent": 41,
+      "commands": 0,
+      "averageLatencyMs": 13335,
+      "commandCounts": {},
+      "opponentCommands": 0,
+      "opponentAverageLatencyMs": 12,
+      "roleLatencyMs": {
+        "gk": 15754,
+        "def": 15768,
+        "mid": 9565,
+        "fwd1": 16009,
+        "fwd2": 9578
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy."
+      ],
+      "initiation": "manual",
+      "batch": "ranked-batch-02",
+      "criticalReliabilitySignal": "Zero own AND opponent commands; own reportedmean13335ms, role9565..16009ms despite100%success. Rootcauseunconfirmed; severe enough to pause newmatchmaking for Fitness/logread."
     }
   ],
   "recordingOrder": "Local evidence-capture order; background matches may be appended retrospectively."
