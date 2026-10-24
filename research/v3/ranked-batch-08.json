@@ -1,0 +1,45 @@
+{
+  "setup": {
+    "name": "M8 four roles + fixed-reference fast FWD2",
+    "sourceCommit": "8b31760",
+    "formation": "1-1-2",
+    "gk": "original v13",
+    "def": "original v19",
+    "mid": "original v15",
+    "fwd1": "original v16",
+    "fwd2": "fast_path_v2 revision7; stance; no per-tick model"
+  },
+  "coachVersion": "coach-v1.0",
+  "id": "ranked-batch-08",
+  "targetCompletedGames": 5,
+  "ownerDirective": "Five real ranked games then one analysis; no Practice/Benchmark games",
+  "status": "running",
+  "games": [
+    {
+      "alias": "real-only-01",
+      "opponent": "KERON FC",
+      "side": "HOME",
+      "status": "preparing",
+      "initiation": "manual random matchmaking",
+      "startedAt": "2026-10-24T20:13:02.990406+00:00"
+    }
+  ],
+  "incomingGames": [],
+  "preparedAt": "2026-10-24T20:12:32.893562+00:00",
+  "beforeLeaderboard": {
+    "rank": 17,
+    "points": 177,
+    "played": 104,
+    "wins": 58,
+    "draws": 3,
+    "losses": 43,
+    "goalsFor": 137,
+    "goalsAgainst": 94
+  },
+  "gates": {
+    "native": "32/32",
+    "fitness": "5/5",
+    "practice": "No additional Practice allowed or required: baseline commands restored",
+    "fitnessLimit": "Portal5/5; drill logs still reference prior probe-wide session. New native session verifies stance; require genuine game log confirmation."
+  }
+}

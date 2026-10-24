@@ -1,0 +1,67 @@
+{
+  "status": "complete; further Practice prohibited by owner",
+  "sourceCommit": "8b31760",
+  "checkerCommit": "c880ac2",
+  "runtimeRevision": 6,
+  "mode": "probe-wide",
+  "nativeReview": "32/32; original30/32 preserved with exact diagnostic checker correction",
+  "fitness": {
+    "passed": 5,
+    "total": 5,
+    "liveBuildVerified": "8b31760",
+    "modeVerified": "probe-wide"
+  },
+  "practice": {
+    "opponent": "The Benchmark FC",
+    "diagnosticOnly": true,
+    "side": "HOME",
+    "startedAt": "2026-10-24T20:04:55.732095+00:00",
+    "score": [
+      3,
+      0
+    ],
+    "shots": [
+      6,
+      3
+    ],
+    "possessionPercent": [
+      30,
+      70
+    ]
+  },
+  "probeDisabled": true,
+  "restored": {
+    "revision": 7,
+    "sourceCommit": "8b31760",
+    "mode": "stance",
+    "native": "32/32",
+    "fitness": "5/5",
+    "fullNativeWarmMedianMs": 105.039,
+    "fitnessLimit": "5/5 UI; recent drill logs still prior probe-wide. Native fresh session stance verified; fresh ranked session mode pending."
+  },
+  "physicalControl": {
+    "result": "supported for HOME FWD2 in two consecutive open-play intervals; AWAY remains unverified",
+    "gameTimes": [
+      17.740215,
+      19.70026,
+      21.700306
+    ],
+    "ownMovementCosines": [
+      0.9635510692,
+      0.9979775703
+    ],
+    "ownDistanceReduction": [
+      1.5751499567,
+      1.9898825071
+    ],
+    "ownNextActions": [
+      "CoachMoveTo",
+      "CoachMoveTo"
+    ],
+    "opponentSameIdCosines": [
+      -0.8528217603,
+      -0.9876361388
+    ],
+    "limitations": "Other intervals include restart and target reversion; not proof of all-tick control or tactical strength"
+  }
+}

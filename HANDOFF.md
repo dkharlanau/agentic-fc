@@ -1,5 +1,20 @@
 # Agentic FC continuation
 
+## Active checkpoint — 24 Oct, 20:17 UTC
+
+Owner now requires **5 real ranked matches per block**, no more Benchmark/Practice.
+Current cohort08 first game KERON FC HOME preparing; no probes/deployments.
+Registered FWD2 revision7/source8b31760 **stance**, other four M8 and112 unchanged.
+Probe-wide revision6 Practice completed3:0,6:3shots,30%possession; excluded.
+Revision7 native32/32,warmmedian105.039ms,ownprobe stopped. PortalFitness5/5,
+but drill logs stillprobe-wide from reused/old session: fresh game mode needs
+confirmation. Runtime readback/native verify new stance. Do not stop game sessions.
+Current portal binding private .local/ranked-batch-08/bindings.json.
+Private control window exported .local/fwd2-control-20261024/window-trace.json;
+79decisions,7diagnosticMOVE,0models,CPUmedian.558ms. Physical review pending.
+AWS tab17 input50,cwdnhitl-fast-v2,HEADc880ac2. Receiptpilot-v7.json.
+Goal/end/power unchanged. After5games analyzeonecandidate,saveGitHub/recovery.
+
 ## Active checkpoint — 24 Oct, 19:56 UTC
 
 Goal active, hard end02:38:51UTC25Oct; no manual starts after02:28:51.
