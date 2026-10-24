@@ -18,7 +18,8 @@ from runtime_v1.core import SELECTOR_PROMPT, legal_options, unwrap
 from runtime_v1.tactics import observe
 
 MODELS = {'nova': 'global.amazon.nova-2-lite-v1:0',
-          'haiku': 'global.anthropic.claude-haiku-4-5-20251001-v1:0'}
+          'haiku': 'global.anthropic.claude-haiku-4-5-20251001-v1:0',
+          'micro': 'amazon.nova-micro-v1:0'}
 TACTICAL_INSTRUCTION = """tactics describes observed positions, not hidden intent or declared formation. Use the stable mode. SWITCH_OUTLET: prefer an offered safeSwitchTarget pass. HIGH_LINE_OBSERVED: prefer an offered safe progressive pass. DEEP_BLOCK_OBSERVED: safe circulation beats a speculative shot. COVER_CENTER: a forward should not chase a wide deep runner; release routine movement. Reply only {"choice":N}."""
 
 
@@ -101,7 +102,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--harness-arn', required=True)
     parser.add_argument('--output', type=Path, required=True)
-    parser.add_argument('--models', nargs='+', choices=tuple(MODELS), default=list(MODELS))
+    parser.add_argument('--models', nargs='+', choices=tuple(MODELS), default=['nova', 'haiku'])
     parser.add_argument('--cases', nargs='+', choices=tuple(c['id'] for c in scenarios()))
     parser.add_argument('--apply', action='store_true')
     args = parser.parse_args()
@@ -157,6 +158,7 @@ def main():
                     for kind in ('internalServerException', 'validationException', 'runtimeClientError'):
                         if kind in event:
                             row['streamError'] = event[kind]
+                            row['streamErrorKind'] = kind
                 row['elapsedMs'] = round((time.monotonic() - started)*1000)
                 row['rawAnswer'] = answer
                 value = json.loads(answer)
@@ -167,6 +169,8 @@ def main():
                     row['selectedCommand'] = facts['options'][index]['command']
             except Exception as error:
                 row['error'] = type(error).__name__ + ': ' + str(error)
+                response = getattr(error, 'response', {})
+                row['serviceErrorCode'] = response.get('Error', {}).get('Code') if isinstance(response, dict) else None
             finally:
                 try:
                     client.stop_runtime_session(agentRuntimeArn=args.harness_arn, runtimeSessionId=sid,
@@ -180,6 +184,10 @@ def main():
                                                       'elapsedMs', 'stopped', 'error')}), flush=True)
             if not row['stopped']:
                 raise SystemExit('Own-session cleanup needs inspection; do not continue.')
+            if row.get('serviceErrorCode') in ('AccessDeniedException', 'ResourceNotFoundException', 'ValidationException'):
+                raise SystemExit('Model/service access gate failed; stop without changing access or repeating denied calls.')
+            if row.get('streamErrorKind') in ('validationException', 'runtimeClientError'):
+                raise SystemExit('Harness stream service gate failed; inspect one failure before further calls.')
 
 
 if __name__ == '__main__':

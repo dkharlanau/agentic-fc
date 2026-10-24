@@ -2470,6 +2470,93 @@
       ],
       "initiation": "Incoming match; bindingR1v9 unchanged throughout observed game; kickoff not observed",
       "coaching": []
+    },
+    {
+      "id": "live-61",
+      "setup": "GK-R2v1-plus-FWD1-v11-plus-threeM7-formation112",
+      "opponent": "Goalpost Shifters",
+      "side": "away",
+      "goalsFor": 1,
+      "goalsAgainst": 2,
+      "shotsFor": 13,
+      "shotsAgainst": 10,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 2,
+      "possessionPercent": 44,
+      "commands": 522,
+      "averageLatencyMs": 75,
+      "commandCounts": {
+        "MOVE_TO": 313,
+        "PRESS_BALL": 62,
+        "INTERCEPT": 58,
+        "MARK": 32,
+        "SHOOT": 24,
+        "CLEAR_OVERRIDE": 16,
+        "PASS": 15,
+        "GK_DISTRIBUTE": 2
+      },
+      "opponentCommands": 191,
+      "opponentAverageLatencyMs": 199,
+      "roleLatencyMs": {
+        "gk": 73,
+        "def": 74,
+        "mid": 75,
+        "fwd1": 73,
+        "fwd2": 79
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Agent command columns remain inconsistent with own Runtime audit; do not infer physical application from them.",
+        "No stronger keeper or attack effect established from one uncontrolled loss."
+      ],
+      "initiation": "Incoming AWAY match; no runtime/configchanges during observed game; kickoff not observed",
+      "coaching": [],
+      "unityFinalVerified": {
+        "goalsFor": 1,
+        "goalsAgainst": 2,
+        "shotsFor": 13,
+        "shotsAgainst": 10,
+        "shotsOnTargetFor": 1,
+        "shotsOnTargetAgainst": 2,
+        "possessionPercent": 44
+      },
+      "runtimeEvidence": {
+        "sourceCommit": "7a14d1b",
+        "gameTimeRange": [
+          0,
+          209.16786
+        ],
+        "gk": {
+          "decisions": 123,
+          "commands": {
+            "CLEAR_OVERRIDE": 123
+          },
+          "inputRejects": 0,
+          "modelLatencyMs": {
+            "p50": 416,
+            "p95": 637,
+            "max": 917
+          }
+        },
+        "fwd1": {
+          "decisions": 123,
+          "commands": {
+            "CLEAR_OVERRIDE": 50,
+            "SET_STANCE": 68,
+            "PASS": 4,
+            "INTERCEPT": 1
+          },
+          "inputRejects": 0,
+          "modelLatencyMs": {
+            "p50": 414,
+            "p95": 561,
+            "max": 705
+          }
+        }
+      }
     }
   ],
   "recordingOrder": "Local evidence-capture order; background matches may be appended retrospectively."

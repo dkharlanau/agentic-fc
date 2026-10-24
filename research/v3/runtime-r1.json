@@ -330,10 +330,22 @@
       "modelP95Ms": 597,
       "gameTimeEnd": 239.11426,
       "interpretation": "No actual distribution opportunity verified; no stronger goalkeeper effect established"
+    },
+    "live61": {
+      "result": "LOSS1:2afterOT",
+      "shots": "13:10",
+      "genuineChoices": 123,
+      "commands": {
+        "CLEAR_OVERRIDE": 123
+      },
+      "inputRejects": 0,
+      "modelP50Ms": 416,
+      "modelP95Ms": 637,
+      "interpretation": "No better keeper effect established"
     }
   },
   "revision12Candidate": {
-    "status": "Local only",
+    "status": "READY/native9/Fitness5passed; diagnosticPractice06starting",
     "purpose": "Bounded movement-unit and physical-recipient diagnostic, not a strength comparison",
     "windowSeconds": [
       8,
@@ -342,6 +354,20 @@
     "target": "Raw X=4*attackSign,Y=1.5,noSprint,onlyFWD1",
     "default": "Disabled; native9 and Fitness required beforePractice06",
     "offlineChecks": 40,
-    "archiveSha256": "96c2a99999154556b1a12853c6988f9607aaa3e3e527b590bb574f21fe2efc01"
+    "archiveSha256": "96c2a99999154556b1a12853c6988f9607aaa3e3e527b590bb574f21fe2efc01",
+    "sourceCommit": "e52447c",
+    "nativeElapsedMs": [
+      4049,
+      4009,
+      3985,
+      4076,
+      3489,
+      4114,
+      3504,
+      3594,
+      3648
+    ],
+    "ownSessionsStopped": true,
+    "fitness": "5/5"
   }
 }

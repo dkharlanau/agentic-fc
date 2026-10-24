@@ -106,3 +106,15 @@ No converter installed.40offlinechecks+SDKsmokepass. Archive96c2a99999154556b1a1
 Commit/push,Cloudbuild,updateR1receipt11->12 withbound+attack+world-target,
 native9cases thenfreshFitness5beforePractice06. GKremainsv1. Diagnostic
 outcomesmustnotcountasstrength. Exactv11/GKrebuildprofilesin runtime_v1/profiles.json.
+
+Latest12:14UTC: live61AWAYGoalpostShifters lost1:2afterOT209.17sec,13:10shots,
+44%possession; Unityprimarymatchesreport. GK123CLEAR,p50=416/p95=637;
+FWD123choices50CLEAR/68STANCE/4PASS/1INTERCEPT,p50=414/p95=561; bothsource7a14,
+0rejects. No provenkeeper/attackimprovement. Live62next.
+R1v12updatedREADY sourcee52447c/native9of9passed/allownstopped. Oldownfixed
+Fitnesssessionalreadyabsent. FreshFitnessrunning; thenPractice06coordinate
+diagnostic, GKremainsR2v1. No activegame now. Nativeelapsed4049,4009,3985,4076,
+3489,4114,3504,3594,3648ms. MicrocandidateofficialConverse/us-east-1documented;
+runneropt-in --models micro prepared, NOTrun/installed. DefaultNova/Haiku
+preserved; stoponserviceaccessdenial, noIAMchanges. ModelroundsafterPractice06
+inidlewindowonly. Publiceditslive61/runtime status/benchrunner needpush.
