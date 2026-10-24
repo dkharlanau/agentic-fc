@@ -119,5 +119,13 @@
     "No shot distances available; no blanket shot prohibition.",
     "Genuine format/model gates are not strength proof.",
     "No actual systematic late-command rejection was established; Micro/model and keeper changes deferred."
-  ]
+  ],
+  "paceS07": {
+    "snapshotIntervalSeconds": 1740.0,
+    "completedEligibleGames": 5,
+    "pointsGained": 3,
+    "completedGamesPerObservedHour": 10.34,
+    "pointsPerObservedHour": 6.21,
+    "limitation": "Approximate snapshot interval, includes waiting, recording and logged diagnostics; not pure game throughput or causal strength."
+  }
 }

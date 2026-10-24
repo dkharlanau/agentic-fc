@@ -1,0 +1,43 @@
+{
+  "kind": "Five-game ranked formation trial on original five Harness",
+  "status": "ready",
+  "setup": "A0-M7-formation121-original-fwd1-v16",
+  "coachVersion": "coach-v1.0",
+  "proposalsVersion": "proposals-v1.0",
+  "before": {
+    "rank": 14,
+    "played": 88,
+    "wins": 50,
+    "draws": 2,
+    "losses": 36,
+    "goalsFor": 117,
+    "goalsAgainst": 79,
+    "goalDifference": 38,
+    "points": 152,
+    "capturedAtUTC": "2026-10-24T15:29:00Z",
+    "captureTimePrecision": "minute",
+    "source": "Primary portal, private AX and screenshot"
+  },
+  "reports": [],
+  "targetCompleted": 5,
+  "cutoffUTC": "2026-10-24T17:04:05Z",
+  "deadlineUTC": "2026-10-24T17:14:05Z",
+  "singleFactorAgainstControl": "Only formation121 vs originalM8 formation112 in batches01/02; same five Harness versions/prompts/models; independentRuntimecandidates unregistered.",
+  "comparisonLimit": "Previousblock03useddifferentFWD1. This is a one-factor trial relative to originalM8 reference, not adjacent A/B againstv14. Opponents/sidesuncontrolled.",
+  "hypothesis": "Extra midfield support may reduce loss of central cover without starving attack. Mechanism not yet established.",
+  "gates": [
+    "OriginalfiveM8 restored and freshFitness5",
+    "Formation121 persisted across profilereload",
+    "Newformation freshFitness5"
+  ],
+  "rollback": "Originalfive,formation112,freshFitness5",
+  "primaryMetric": "Observedpointspergame",
+  "secondaryMetrics": [
+    "Goalsagainst",
+    "Scorelessgames",
+    "Knownshotstatscoverage",
+    "MedianGD",
+    "Lateleadlossobservations"
+  ],
+  "settingsRule": "No saved changes/probes/Practice/modelcomparison inside fivegameblock except criticalfailure."
+}

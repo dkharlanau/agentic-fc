@@ -1,6 +1,6 @@
 {
   "kind": "Independent Runtime FWD1 pilot; public-safe evidence summary",
-  "status": "OnlyFWD1v14positionbound; originalotherfour,112; native9/Fitness5passed; Practice08preparing",
+  "status": "v14notadoptedafterranked1W4L; originalfiveHarnessrestored,formation121trial; R1/GKunregistered",
   "initialSourceCommit": "7ae12c1e737992f83a10ff5c2cf1497cb2580764",
   "initialArchiveSha256": "21ed279d4831546ff58e0ce3c91744e1d47b4cb5fbcff8ae4e970ba1489274e3",
   "reproducibility": "Local macOS cross-build and CloudShell Linux build produced identical archive SHA256,20610262bytes,2731files",
@@ -417,7 +417,7 @@
     }
   },
   "revision14Candidate": {
-    "status": "READY/native9/Fitness5; onlyFWD1registered; Practice08preparing",
+    "status": "READY butunregistered; native9/Fitness5/Practice3:0; rankedblock1W4L,notadoptedasfinal",
     "supportMode": "position",
     "model": "global.amazon.nova-2-lite-v1:0",
     "diagnosticProbe": "off",
@@ -439,6 +439,7 @@
     ],
     "ownSessionsStopped": true,
     "fitness": "5/5",
-    "registered": true
+    "registered": false,
+    "rankedBatch": "ranked-batch-03.json"
   }
 }

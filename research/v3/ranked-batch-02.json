@@ -126,5 +126,13 @@
     "shotAdvantageDraws": 0,
     "shotAdvantageLosses": 0,
     "limitation": "Descriptive five-game snapshot; uncontrolled opponents and sides, no causal inference."
+  },
+  "paceS07": {
+    "snapshotIntervalSeconds": 1660.0,
+    "completedEligibleGames": 5,
+    "pointsGained": 7,
+    "completedGamesPerObservedHour": 10.84,
+    "pointsPerObservedHour": 15.18,
+    "limitation": "Approximate snapshot interval, includes waiting, recording and logged diagnostics; not pure game throughput or causal strength."
   }
 }

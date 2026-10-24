@@ -3281,6 +3281,43 @@
       "batch": "ranked-batch-03",
       "extraTime": true,
       "unityFinalGameTime": "02:18"
+    },
+    {
+      "id": "live-79",
+      "setup": "M8-fouroriginal-plus-R1v14-position-FWD1-112",
+      "opponent": "Sporting Lambda",
+      "side": "away",
+      "goalsFor": 1,
+      "goalsAgainst": 2,
+      "shotsFor": 5,
+      "shotsAgainst": 4,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 2,
+      "possessionPercent": 47,
+      "commands": 16,
+      "averageLatencyMs": 2,
+      "commandCounts": {
+        "CLEAR_OVERRIDE": 16
+      },
+      "opponentCommands": 94,
+      "opponentAverageLatencyMs": 109,
+      "roleLatencyMs": {
+        "gk": 3,
+        "def": 2,
+        "mid": 2,
+        "fwd1": 2,
+        "fwd2": 2
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy."
+      ],
+      "initiation": "incoming",
+      "mode": "live",
+      "cohort": "Additional incoming after closed batch03, before safe rollback",
+      "rollbackDeferred": true
     }
   ],
   "recordingOrder": "Local evidence-capture order; background matches may be appended retrospectively."
