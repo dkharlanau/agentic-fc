@@ -92,3 +92,7 @@ A second `--fwd-coordinate-probe own-wide` variant uses `(-2*attackSign,2.8)` in
 Practice07 confirmed own HOMEplayer control and raw output units: consecutive movement directions align with the raw target at cosine>0.999999, while the normalized alternative fits worse. This does not survey goalposts or prove AWAY application. Agent command columns attributed own probes to the opponent and remain unreliable.
 
 `--fwd-support-mode position` (alias `--fwd-support-stance`) offers FWD1 nonsprinting role targets only for known off-ball states, after local interception/pressure checks, when farther than4canonical units from the target. The model sees canonical options; selected movement is inversely transformed using the validated keeper-reference profile. Only the observed keeper-anchor range supports this conversion; unknown frames release to the engine. Raw-unit diagnostic and position modes are mutually exclusive. Other roles and model stay unchanged for the field comparison. Native9/Fitness and Practice are pending; no strength claim follows from43offline checks.
+
+## Match audit identity
+
+Use the portal match-record UUID in the Runtime session name (`record-teamN-posN`). The viewer query contains a different Unity game ID. Confirm the actual log-stream name before interpreting an empty lookup; an incorrect ID does not establish absent decisions. Practice08 initially returned zero under the Unity ID, then79decisions under the confirmed record ID. Raw bindings remain private.

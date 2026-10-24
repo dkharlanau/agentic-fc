@@ -15,7 +15,7 @@
     "points": 106
   },
   "initialSetup": "A0-M7-formation121",
-  "currentTrial": "Ranked batch01 on stable original five Harness M8, formation112; candidates unregistered",
+  "currentTrial": "Only FWD1 position-support v14, sameNova2Lite/fouroriginal/112; new rankedbatch03",
   "priorities": [
     "Preserve portable exact five-role AWS setup before workshop reset",
     "Validate STM on one role, inspect actual input contract where available",
@@ -53,7 +53,8 @@
     "live-69",
     "live-70",
     "live-71",
-    "live-72"
+    "live-72",
+    "live-73"
   ],
   "singleRoleRecoveryCanary": {
     "created": true,
@@ -84,17 +85,17 @@
   "windowExtension": "New explicit user request at09:14UTC:8hours from this moment",
   "latestLeaderboard": {
     "rank": 14,
-    "played": 81,
+    "played": 82,
     "wins": 49,
     "draws": 2,
-    "losses": 30,
+    "losses": 31,
     "goalsFor": 111,
-    "goalsAgainst": 68,
-    "goalDifference": 43,
+    "goalsAgainst": 69,
+    "goalDifference": 42,
     "points": 149,
-    "capturedAtUTC": "2026-10-24T14:31:00Z",
+    "capturedAtUTC": "2026-10-24T14:50:00Z",
     "captureTimePrecision": "minute",
-    "source": "Primary portal leaderboard; AX and screenshot saved privately"
+    "source": "Primaryportalbeforebatch03;AXandscreenshotprivate"
   },
   "newManualMatchCutoffUTC": "2026-10-24T17:04:05Z",
   "deadlineLocal": "2026-10-24 20:14:05 Europe/Minsk",

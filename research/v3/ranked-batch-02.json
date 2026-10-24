@@ -45,7 +45,8 @@
     "visibleHarnessLogs": "OnlyDEFdeliverygroupavailable; exactgameUUIDfilterpaginatedreturned0events; genericnewentrieswereFitness. No rootcause established.",
     "settingsChanged": false,
     "decision": "Resume sameM8 for remaining3games; pause again if zero-command/high-latency symptom repeats.",
-    "limitation": "FreshFitness provescurrentreadinessonly, not absenceoftransientgamefailure."
+    "limitation": "FreshFitness provescurrentreadinessonly, not absenceoftransientgamefailure.",
+    "identifierCorrection": "InitialexactlookupusedUnityviewerUUID;repeatedwithcorrectportalrecordUUID at14:50UTC,still0DEF-events. No game-sessionabsenceorrootcauseclaim beyond availableloggroup."
   },
   "after": {
     "rank": 14,

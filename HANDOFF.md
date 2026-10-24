@@ -266,3 +266,18 @@ withsameM8unchanged. Fresh14:03leaderboard14th,142points,76P47W1D28L,
 107:63goals. Savefivegamesthenoneanalysis. Nextmanualreportlive69 afterlive68;
 nextPractice08 afterbatch02. No activegame mutation/probe. PR5description
 refreshed throughlive67; updateagainnearfinal. Latestprivatecheckpointwins.
+
+Latest14:52UTC: Practice08v14won3:0,5:4shots,27%possession. Correctownsession
+auditusesPORTALRECORDUUID,notUnityviewerquerymatchId:79genuinechoices,0rejects,
+45CLEAR/29MOVE/3PASS/2INTERCEPT,modelp50=464/p95=882/max925ms. All29MOVE
+nonSprint/rawframe; ownCoachMoveTo19afterMOVE. Energymedian.922,end.950,
+min.103; nomatchedbaselinecurve,notprovenbetter. EmptyfirstlookupwaswrongID,
+notmissingdecisions. Correctedlive69DEFportalUUIDlookupstill0events.
+Incominglive73AWAYLFC0:1,5:4shots,52%possession, overlappedalreadyrunning
+Practice08. Saveoutsideplannedcohorts;68genuine/0rejects/47MOVE,p95=883ms.
+Fresh14:50LB14th,149points,82P49W2D31L,111:69goals,+42.
+Rankedbatch03NOWRUNNINGsamev14onlyFWD1candidate,fourotheroriginal,112,Nova2Lite.
+Firstlive74incomingAWAYAgenticArsenalcurrentlyactive; allnative/Fitness/Practice
+gatescompletebeforethisgame. No probes/saves/model/formationchangesuntilfive
+completedgamesexceptcriticalfailure. Nextreportlive75afterlive74; nextPractice09.
+COACHv1.0readandreviewedbeforeblock. OriginalFWD1v16exactrollbackprivate.

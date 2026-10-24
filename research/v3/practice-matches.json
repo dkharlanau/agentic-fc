@@ -511,6 +511,91 @@
           "conclusion": "OwnHOMEplayer follows raw movement target. Does not survey goalposts or prove AWAY physical application."
         }
       }
+    },
+    {
+      "id": "practice-08",
+      "setup": "M8-fouroriginal-plus-R1v14-position-FWD1-112",
+      "opponent": "The Benchmark FC",
+      "side": "home",
+      "goalsFor": 3,
+      "goalsAgainst": 0,
+      "shotsFor": 5,
+      "shotsAgainst": 4,
+      "shotsOnTargetFor": 3,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 27,
+      "commands": 405,
+      "averageLatencyMs": 900,
+      "commandCounts": {
+        "MOVE_TO": 181,
+        "PRESS_BALL": 85,
+        "INTERCEPT": 63,
+        "SHOOT": 40,
+        "PASS": 20,
+        "CLEAR_OVERRIDE": 13,
+        "GK_DISTRIBUTE": 3
+      },
+      "opponentCommands": 100,
+      "opponentAverageLatencyMs": 111,
+      "roleLatencyMs": {
+        "gk": 615,
+        "def": 963,
+        "mid": 901,
+        "fwd1": 610,
+        "fwd2": 1052
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Same named Practice preset, uncontrolled seed; one result does not establish policy superiority."
+      ],
+      "mode": "Practice",
+      "preset": "Balanced",
+      "initiation": "Only FWD1 position-support v14 after native9/Fitness5; original other four, formation112, sameNova2Lite; no coach.",
+      "coaching": [],
+      "excludeFromRankedTotals": true,
+      "unityFinalVerified": {
+        "goalsFor": 3,
+        "goalsAgainst": 0,
+        "shotsFor": 5,
+        "shotsAgainst": 4,
+        "shotsOnTargetFor": 3,
+        "shotsOnTargetAgainst": 0,
+        "possessionPercent": 27
+      },
+      "runtimeEvidence": {
+        "sourceCommit": "e11bad6992d499d02437d7f8ba280b8c6b9e0627",
+        "archiveSha256": "516464b636877353d137f097bdbb83912423ffe74421402acbba7a0c00faaa90",
+        "version": 14,
+        "auditStatus": "Correctportalrecordsessionmatched; firstwrongUnityIDlookupreturned0andwasdiscarded",
+        "genuineModelChoices": 79,
+        "inputRejections": 0,
+        "commands": {
+          "CLEAR_OVERRIDE": 45,
+          "MOVE_TO": 29,
+          "PASS": 3,
+          "INTERCEPT": 2
+        },
+        "modelLatencyMs": {
+          "p50": 464,
+          "p95": 882,
+          "max": 925
+        },
+        "ownCoachMoveToAfterMove": 19,
+        "ownCoachInterceptAfterIntercept": 2,
+        "energy": {
+          "normalizedStaminaMin": 0.103355266,
+          "normalizedStaminaMedian": 0.92171845,
+          "normalizedStaminaStartEnd": [
+            0.8690546,
+            0.9496613
+          ],
+          "sprintMoves": 0,
+          "rawFrameMoves": 29,
+          "limitation": "No matched baseline energycurve; no causal energygain claimed."
+        }
+      }
     }
   ]
 }

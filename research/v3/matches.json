@@ -3011,6 +3011,68 @@
       "batch": "ranked-batch-02",
       "extraTime": true,
       "unityFinal": "Finalheader0:0; no Unityshotstats; renderedreportSTATSabsent; retainnull."
+    },
+    {
+      "id": "live-73",
+      "setup": "M8-fouroriginal-plus-R1v14-position-FWD1-112",
+      "opponent": "LFC",
+      "side": "away",
+      "goalsFor": 0,
+      "goalsAgainst": 1,
+      "shotsFor": 5,
+      "shotsAgainst": 4,
+      "shotsOnTargetFor": 0,
+      "shotsOnTargetAgainst": 1,
+      "possessionPercent": 52,
+      "commands": 335,
+      "averageLatencyMs": 261,
+      "commandCounts": {
+        "MOVE_TO": 275,
+        "INTERCEPT": 29,
+        "PRESS_BALL": 17,
+        "PASS": 7,
+        "CLEAR_OVERRIDE": 4,
+        "SHOOT": 2,
+        "GK_DISTRIBUTE": 1
+      },
+      "opponentCommands": 70,
+      "opponentAverageLatencyMs": 129,
+      "roleLatencyMs": {
+        "gk": 235,
+        "def": 198,
+        "mid": 318,
+        "fwd1": 328,
+        "fwd2": 151
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Concurrent automatic incoming game overlapped existingPractice08; preserveeligibleliveoutcome but do not use as clean candidate-controlcomparison."
+      ],
+      "initiation": "incoming",
+      "mode": "live",
+      "cohort": "additional incoming outside plannedfivegameblocks",
+      "concurrentPractice": "Practice08 was already running when this incominggame began; no manual parallelmatchmaking, nativeprobe or configchange.",
+      "excludeFromControlledComparison": true,
+      "runtimeEvidence": {
+        "sourceCommit": "e11bad6992d499d02437d7f8ba280b8c6b9e0627",
+        "version": 14,
+        "genuineModelChoices": 68,
+        "inputRejections": 0,
+        "commands": {
+          "CLEAR_OVERRIDE": 20,
+          "MOVE_TO": 47,
+          "INTERCEPT": 1
+        },
+        "modelLatencyMs": {
+          "p50": 508,
+          "p95": 883,
+          "max": 1179
+        },
+        "supportMode": "position"
+      }
     }
   ],
   "recordingOrder": "Local evidence-capture order; background matches may be appended retrospectively."
