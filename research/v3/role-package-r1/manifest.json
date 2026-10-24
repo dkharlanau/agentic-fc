@@ -1,0 +1,42 @@
+{
+  "experiment": "role-package-r1",
+  "formation": "1-1-2",
+  "baseline": "../final-setup-20261024.json",
+  "changed": [
+    "five system prompts"
+  ],
+  "baselineBundleSha256": "5dedbda8af69b6e4d4424d6f230f21dc74ab2f267ef5ecae26323e88a7eb5f96",
+  "status": "prepared; not competitive evidence",
+  "roles": {
+    "gk": {
+      "playerId": 0,
+      "promptSha256": "102cb9d3147803ce9a2933616bb39ee0710c743064e680400a16bf7952126dde",
+      "modelId": "global.amazon.nova-2-lite-v1:0",
+      "words": 904
+    },
+    "def": {
+      "playerId": 1,
+      "promptSha256": "0adbead4e347831db1602487e2b1dc118affe240a95065e59c6cc1947a18206a",
+      "modelId": "global.amazon.nova-2-lite-v1:0",
+      "words": 933
+    },
+    "mid": {
+      "playerId": 2,
+      "promptSha256": "e96638500f333941b69f7fc45ce0163de6c06643bfcb9fdebdc0a788752336cd",
+      "modelId": "global.amazon.nova-2-lite-v1:0",
+      "words": 932
+    },
+    "fwd1": {
+      "playerId": 3,
+      "promptSha256": "19706176c2feabcd7874df1c4a5c00765400b89fb15575c475f7a204ff53da73",
+      "modelId": "global.amazon.nova-2-lite-v1:0",
+      "words": 941
+    },
+    "fwd2": {
+      "playerId": 4,
+      "promptSha256": "ff355d49405e004c5c8fc0dc85317bcf94208368b6d919b250d0eb056fc47622",
+      "modelId": "global.anthropic.claude-haiku-4-5-20251001-v1:0",
+      "words": 930
+    }
+  }
+}

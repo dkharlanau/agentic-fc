@@ -1,5 +1,26 @@
 # Agentic FC continuation
 
+## Active bounded role-package experiment — 24 Oct, after offline mission
+
+The owner explicitly requested all five role improvements together as one
+experiment, then emphasized coordination, understanding constraints and avoiding
+low-quality shots/turnovers. This new instruction authorizes the bounded
+[role-package-r1 protocol](research/v3/role-package-r1/README.md). Five prompts
+are the bundle; models and formation1-1-2 remain M8. The prior formation121-only
+proposal is deferred. No historical eight-hour loop, heartbeat or power extension.
+
+Prepared locally; live candidate gates are not yet completed. Original M8 remains
+registered. Require actual model21/21, isolated resource readback, no active game,
+candidate registration and Fitness5/5 before one stable five-game cohort.
+Failure or inconclusive evidence returns to original M8. Do not report the
+candidate as working or stronger before obtaining evidence. Keep new results
+separate from the frozen80-report decision audit below.
+
+Fresh portal read this turn: original five,1-1-2,READY TO PLAY. Latest observed
+leaderboard is15th/158points/91P52W2D37L/119:81; two background games since the
+15:39snapshot (Amber Crests2 win0:1 AWAY; Zorja loss0:2 AWAY). These are not
+candidate results. Exact read timestamps are not yet saved with this note.
+
 ## Bounded offline mission — 24 Oct, 16:54 UTC
 
 The owner requested one win-oriented research/engineering iteration, explicitly
