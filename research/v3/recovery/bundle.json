@@ -15,6 +15,12 @@
         "fwd1"
       ],
       "status": "trial; native JSON canary2/2, portal Fitness5/5; live43 lost1:2; live Memory writes not confirmed"
+    },
+    "baseline-m8": {
+      "setup": "A0-M8-formation112",
+      "formation": "1-1-2",
+      "memoryRoles": [],
+      "status": "Same five saved role configs; live57 control7:0 and Practice01Benchmark3:1, not proof of optimality"
     }
   },
   "memory": {

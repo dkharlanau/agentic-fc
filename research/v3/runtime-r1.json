@@ -1,6 +1,6 @@
 {
   "kind": "Independent Runtime FWD1 pilot; public-safe evidence summary",
-  "status": "R1v7 unregistered for original-FWD1 control on112; bufferedSSEv8 candidate offline",
+  "status": "Original five Harness restored while output team-scope concern is isolated",
   "initialSourceCommit": "7ae12c1e737992f83a10ff5c2cf1497cb2580764",
   "initialArchiveSha256": "21ed279d4831546ff58e0ce3c91744e1d47b4cb5fbcff8ae4e970ba1489274e3",
   "reproducibility": "Local macOS cross-build and CloudShell Linux build produced identical archive SHA256,20610262bytes,2731files",
@@ -204,12 +204,52 @@
     "archiveSha256": "b9b57cc45657296fa1cf5d0003beab8266e97093cd16bad9859c0e1952bc42e5"
   },
   "revision8Candidate": {
-    "status": "Offline only; not deployed",
+    "status": "AWSREADY unregistered; five native command/model/cleanup gates passed",
     "hypothesis": "Outer async-generator opens SSE response before the model completes. Test a precomputed normal generator returned after awaiting the decision, retaining exact SSE bytes.",
     "semanticChange": "Response readiness timing, not FWD1 action policy",
     "fwd1ParityFixtures": 8,
     "validation": "38 checks and SDK HTTP smoke: model completed before response exists; SSE bytes equal previous format",
-    "archiveSha256": "edd07b839a823fc5b8fc7e3c5184472fbe1e89d79f5c904d65d4172f3898f38f"
+    "archiveSha256": "edd07b839a823fc5b8fc7e3c5184472fbe1e89d79f5c904d65d4172f3898f38f",
+    "sourceCommit": "dca5634",
+    "nativeElapsedMs": [
+      3524,
+      3059,
+      4067,
+      4083,
+      3014
+    ],
+    "fitness": "Pending after portal binding",
+    "practice02": {
+      "scoreFor": 1,
+      "scoreAgainst": 0,
+      "shotsFor": 4,
+      "shotsAgainst": 10,
+      "runtimeBuild": "dca5634",
+      "emittedCommands": {
+        "CLEAR_OVERRIDE": 92,
+        "PASS": 5
+      },
+      "reportedOpponentCommands": {
+        "CLEAR_OVERRIDE": 97,
+        "PASS": 6
+      },
+      "reportedOpponentFwdLatencyMs": 524,
+      "reportedOwnFwdLatencyMs": 590,
+      "interpretation": "Possible team attribution/routing mismatch; not established"
+    }
   },
-  "currentMainTeam": "Original fiveM7 Harness restored; formation112; live57manualHOME won7:0 with19:0shots. One uncontrolled game is insufficient to establish a causal improvement."
+  "currentMainTeam": "Original fiveM7 Harness restored; formation112; live57manualHOME won7:0 with19:0shots. One uncontrolled game is insufficient to establish a causal improvement.",
+  "revision9Candidate": {
+    "status": "Local only",
+    "onlyBehaviorChange": "Optional bound wire mode omits output teamId; internal own-team/player validation remains",
+    "hypothesis": "Workshop prompt schema omits teamId, while own R1 counts resemble opponent forward stats",
+    "alternatives": [
+      "Report attribution defect",
+      "Output field mapping",
+      "Different opponent/client behavior"
+    ],
+    "validation": "38checks plus fake-client SDK HTTP explicit/bound formats and sampled audit passed",
+    "archiveSha256": "69d30ec1c26c66ff210f00a86623788dd945894db84c1b5996345124269e61f1",
+    "fitness": "Pending deployment/native gate"
+  }
 }

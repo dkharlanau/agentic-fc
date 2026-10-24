@@ -55,6 +55,7 @@ def summarize(events):
             'commands': dict(collections.Counter(x.get('commandType') for x in decisions)),
             'phases': dict(collections.Counter(x.get('phase') for x in decisions)),
             'outcomes': dict(collections.Counter(x.get('outcome') for x in decisions)),
+            'wireTeamScopes': dict(collections.Counter(x.get('wireTeamScope', 'legacy_explicit') for x in decisions)),
             'memoryOutcomes': dict(collections.Counter(x.get('memoryOutcome') for x in decisions)),
             'modelLatencyMs': quantiles([x['modelLatencyMs'] for x in decisions if 'modelLatencyMs' in x]),
             'streamOpenedToDecisionLogMs': quantiles(stream_spans),

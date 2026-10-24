@@ -47,6 +47,7 @@ def main():
     fixtures = json.loads((ROOT / 'research/v3/selective-autonomy/fixtures.json').read_text())['cases']
     env = receipt['identity']['request']['environmentVariables']
     player_id = int(env['PLAYER_ID'])
+    wire_scope = env.get('WIRE_TEAM_SCOPE', 'explicit')
     cases = [(0, fixtures[0], 'SHOOT'), (1, fixtures[1], 'SHOOT'), (0, fixtures[3], 'MOVE_TO')]
     observed = json.loads((ROOT / 'research/v3/fixtures/observed-live-away-open-play.json').read_text())['decodedState']
     cases.append((1, {'id': 'observed-live-open-play', 'modelText': json.dumps({'prompt': json.dumps(observed)})},
@@ -90,8 +91,10 @@ def main():
             record['elapsedMs'] = round((time.monotonic() - started) * 1000)
             commands = decode_commands(raw)
             record['commands'] = commands
+            scope_valid = 'teamId' not in commands[0] if wire_scope == 'bound' else commands[0].get('teamId') == side
+            record['wireTeamScope'] = wire_scope
             record['commandGatePassed'] = len(commands) == 1 and commands[0].get('playerId') == player_id and \
-                commands[0].get('teamId') == side and commands[0].get('commandType') == expected
+                scope_valid and commands[0].get('commandType') == expected
             expectation = case.get('expected', {})
             if record['commandGatePassed'] and 'excludedTarget' in expectation:
                 record['commandGatePassed'] = commands[0]['parameters'].get('target_player_id') != expectation['excludedTarget']

@@ -38,6 +38,15 @@ class FakeControl:
 
 
 class RestoreTests(unittest.TestCase):
+    def test_m8_changes_only_the_portal_formation(self):
+        bundle = restore.load_bundle()
+        baseline = restore.make_plan(bundle, 'baseline-m7', 'ROLE', 'test')
+        m8 = restore.make_plan(bundle, 'baseline-m8', 'ROLE', 'test')
+        self.assertEqual(m8['formation'], '1-1-2')
+        self.assertEqual(baseline['formation'], '1-2-1')
+        self.assertEqual(m8['harnesses'], baseline['harnesses'])
+        self.assertIsNone(m8['memory'])
+
     def test_baseline_explicitly_disables_memory_and_removes_generated_runtime_fields(self):
         plan = restore.make_plan(restore.load_bundle(), 'baseline-m7', 'ROLE', 'test')
         self.assertIsNone(plan['memory'])
@@ -105,7 +114,7 @@ class RestoreTests(unittest.TestCase):
         except ImportError:
             self.skipTest('Optional current botocore is not installed')
         service = get_session().get_service_model('bedrock-agentcore-control')
-        for profile in ('baseline-m7', 'memory-fwd1-m9'):
+        for profile in ('baseline-m7', 'baseline-m8', 'memory-fwd1-m9'):
             plan = restore.make_plan(restore.load_bundle(), profile,
                 'arn:aws:iam::000000000000:role/TestOnly', 'test',
                 'arn:aws:bedrock-agentcore:us-east-1:000000000000:memory/TestOnly-0123456789')

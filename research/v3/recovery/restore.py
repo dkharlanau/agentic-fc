@@ -45,7 +45,8 @@ def make_plan(bundle, profile, role_arn, prefix, memory_arn=None):
     if selected['memoryRoles']:
         memory = {k: bundle['memory'][k] for k in ('eventExpiryDuration', 'memoryStrategies')}
         memory['name'] = f'{prefix}_memory'
-    return {'profile': profile, 'formation': bundle['formation'], 'memory': memory, 'harnesses': requests}
+    return {'profile': profile, 'formation': selected.get('formation', bundle['formation']),
+            'memory': memory, 'harnesses': requests}
 
 
 def atomic_save(path, data):
@@ -121,7 +122,7 @@ def apply_plan(bundle, args, client):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--profile', choices=('baseline-m7', 'memory-fwd1-m9'), default='baseline-m7')
+    parser.add_argument('--profile', choices=('baseline-m7', 'baseline-m8', 'memory-fwd1-m9'), default='baseline-m7')
     parser.add_argument('--region', default='us-east-1')
     parser.add_argument('--prefix', default='nhitl_restore')
     parser.add_argument('--execution-role-arn', default='${NEW_EXECUTION_ROLE_ARN}')

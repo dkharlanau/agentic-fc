@@ -1,0 +1,109 @@
+{
+  "kind": "Explicit Practice selections; kept separate from live match evidence",
+  "matches": [
+    {
+      "id": "practice-01",
+      "setup": "A0-M8-formation112-original-fwd1-v16",
+      "opponent": "The Benchmark FC",
+      "side": "home",
+      "goalsFor": 3,
+      "goalsAgainst": 1,
+      "shotsFor": 8,
+      "shotsAgainst": 6,
+      "shotsOnTargetFor": 3,
+      "shotsOnTargetAgainst": 1,
+      "possessionPercent": 40,
+      "commands": 441,
+      "averageLatencyMs": 811,
+      "commandCounts": {
+        "MOVE_TO": 189,
+        "PRESS_BALL": 133,
+        "SHOOT": 50,
+        "INTERCEPT": 31,
+        "CLEAR_OVERRIDE": 22,
+        "PASS": 13,
+        "MARK": 3
+      },
+      "opponentCommands": 31,
+      "opponentAverageLatencyMs": 3,
+      "roleLatencyMs": {
+        "gk": 562,
+        "def": 891,
+        "mid": 789,
+        "fwd1": 578,
+        "fwd2": 948
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Controlled opponent archetype, not fixed physics random seed.",
+        "Leaderboard effect of Practice not independently checked; exclude from live opponent performance totals."
+      ],
+      "mode": "Practice",
+      "preset": "Balanced",
+      "initiation": "Practice selector TheBenchmarkFC thenSTARTMATCH; originalfiveHarness and112 observed beforestart",
+      "coaching": []
+    },
+    {
+      "id": "practice-02",
+      "setup": "R1-FWD1-v8-plus-M7-formation112",
+      "opponent": "The Benchmark FC",
+      "side": "home",
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "shotsFor": 4,
+      "shotsAgainst": 10,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 50,
+      "commands": 480,
+      "averageLatencyMs": 752,
+      "commandCounts": {
+        "PRESS_BALL": 182,
+        "MOVE_TO": 156,
+        "INTERCEPT": 66,
+        "SHOOT": 37,
+        "PASS": 27,
+        "CLEAR_OVERRIDE": 11,
+        "MARK": 1
+      },
+      "opponentCommands": 103,
+      "opponentAverageLatencyMs": 108,
+      "roleLatencyMs": {
+        "gk": 605,
+        "def": 741,
+        "mid": 876,
+        "fwd1": 590,
+        "fwd2": 797
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Opponent reportedFWD524ms/96commands closely matches ownR1calls; possible team attribution/routing issue not yet established.",
+        "Opponent primarytotals and gameplay vary between Practice runs; no fixed random seed."
+      ],
+      "mode": "Practice",
+      "preset": "Balanced",
+      "initiation": "Same Practice preset after R1v8 binding reload and Fitness5/5; otherfour Harness and112 unchanged",
+      "coaching": [],
+      "runtimeEvidence": {
+        "sourceCommit": "dca5634",
+        "decisions": 97,
+        "commands": {
+          "CLEAR_OVERRIDE": 92,
+          "PASS": 5
+        },
+        "inputRejections": 0,
+        "modelLatencyMs": {
+          "p50": 419,
+          "p95": 519,
+          "max": 847
+        }
+      }
+    }
+  ]
+}

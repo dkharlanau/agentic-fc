@@ -41,6 +41,7 @@ async def smoke():
     main._engine = DecisionEngine(FakeModel(), 'test-model')
     main._memory = FakeMemory()
     os.environ['MEMORY_ID'] = 'TestOnly-0123456789'
+    os.environ['WIRE_TEAM_SCOPE'] = 'explicit'
     os.environ['MEMORY_SAMPLE_EVERY'] = 'invalid-value-tests-safe-default'
     case = json.loads((Path(__file__).resolve().parents[1] /
                        'research/v3/selective-autonomy/fixtures.json').read_text())['cases'][1]
@@ -73,6 +74,18 @@ async def smoke():
         raw = b''.join([part async for part in response.body_iterator])
     expected = ('data: ' + json.dumps(chunks[0], ensure_ascii=False) + '\n\n').encode()
     assert raw == expected
+    with patch.dict(os.environ, {'WIRE_TEAM_SCOPE': 'bound', 'MEMORY_SAMPLE_EVERY': '1'}), \
+            patch('boto3.client', side_effect=AssertionError('Unexpected AWS client creation')), \
+            patch.object(main.app.logger, 'info'):
+        response = await main.app._handle_invocation(request)
+        bound_raw = b''.join([part async for part in response.body_iterator])
+    bound_commands = json.loads(json.loads(bound_raw.decode().split('data: ', 1)[1].strip()))
+    assert len(bound_commands) == 1 and bound_commands[0]['playerId'] == 3
+    assert bound_commands[0]['commandType'] == 'SHOOT' and 'teamId' not in bound_commands[0]
+    stored_bound = json.loads(main._memory.calls[-1]['payload'][1]['conversational']['content']['text'])
+    assert 'teamId' not in stored_bound['commands'][0]
+    assert stored_bound['audit']['teamId'] == 1
+    assert stored_bound['audit']['wireTeamScope'] == 'bound'
     print('OFFLINE SDK smoke passed: decision complete before response, byte-identical SSE command, valid sampled event; no AWS calls')
 
 

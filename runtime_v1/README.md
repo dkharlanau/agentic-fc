@@ -67,6 +67,12 @@ GK code offers only safe distribution, documented-frame own-goal recovery/restar
 
 The standalone `tactics.py` observer remains excluded from the deployment source whitelist. Review hypotheses and critical rounds in [`adaptive-plan.ru.md`](../research/v3/adaptive-plan.ru.md).
 
+## Output team scope experiment
+
+Internal decisions retain the validated input team and assigned player. The optional `--wire-team-scope bound` deployment mode omits `teamId` from the serialized command, following the workshop prompt response schema and relying on the portal's registered-player binding. It does not invert numeric team IDs or permit commands for another player. Explicit output IDs remain the compatibility default until the field comparison is verified.
+
+This tests an attribution/routing concern: several own R1 response counts and latencies resemble the opponent's reported forward. That could be report attribution, a wire-field mapping, or another client behavior. Native shape checks cannot establish the physical recipient. Require Fitness and matched Practice evidence; preserve the original Harness rollback. Audit records distinguish internal `selectedCommand`, actual `wireCommand` and `wireTeamScope`.
+
 ## Response readiness experiment
 
 The outer async-generator path gives the SDK a stream before model work completes. A proposed revision instead awaits one decision and returns a precomputed normal generator. The SDK still emits the same SSE bytes; response readiness now follows the decision. The fake-client HTTP smoke requires completed model work before a response object is available and checks exact SSE bytes. This tests eager-header consumption by the game client; that client implementation is not accessible and the hypothesis remains unproven until native/Fitness/live checks. FWD1 prompt/options match v5 on the saved parity fixtures.

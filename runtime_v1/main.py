@@ -69,6 +69,17 @@ def command_stream(commands):
     yield json.dumps(commands, separators=(',', ':'), allow_nan=False)
 
 
+def wire_commands(commands):
+    mode = os.getenv('WIRE_TEAM_SCOPE', 'explicit')
+    if mode == 'bound':
+        # Internal commands still pass own-team/player validation. The portal
+        # supplies the binding; the workshop's response schema omits teamId.
+        return [{k: v for k, v in command.items() if k != 'teamId'} for command in commands]
+    if mode != 'explicit':
+        raise ValueError('Unsupported wire team scope')
+    return commands
+
+
 @app.entrypoint
 async def invoke(payload, context):
     # Complete the single decision before handing the SDK its generator. The
@@ -86,10 +97,13 @@ async def invoke(payload, context):
         rejected['memoryOutcome'] = await asyncio.to_thread(memory_sample, payload, [], rejected, session_id)
         app.logger.error('NHITL_INPUT_REJECTED ' + json.dumps(rejected, separators=(',', ':')))
         raise
-    audit['memoryOutcome'] = await asyncio.to_thread(memory_sample, payload, commands, audit, session_id)
+    outgoing = wire_commands(commands)
+    audit['wireTeamScope'] = os.getenv('WIRE_TEAM_SCOPE', 'explicit')
+    audit['wireCommand'] = outgoing[0]
+    audit['memoryOutcome'] = await asyncio.to_thread(memory_sample, payload, outgoing, audit, session_id)
     audit['buildCommit'] = os.getenv('BUILD_COMMIT', 'local')
     app.logger.info('NHITL_DECISION ' + json.dumps(audit, separators=(',', ':')))
-    return command_stream(commands)
+    return command_stream(outgoing)
 
 
 if __name__ == '__main__':
