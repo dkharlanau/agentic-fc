@@ -15,7 +15,7 @@
     "points": 106
   },
   "initialSetup": "A0-M7-formation121",
-  "currentTrial": "GK-R2v1 plusFWD1v11 plusthreeM7,112; live61lost1:2 afterOT,13:10shots",
+  "currentTrial": "OriginalfiveM8Harness,112,Fitness5; R1v14position candidate localonly",
   "priorities": [
     "Preserve portable exact five-role AWS setup before workshop reset",
     "Validate STM on one role, inspect actual input contract where available",
@@ -42,7 +42,8 @@
     "live-58",
     "live-59",
     "live-60",
-    "live-61"
+    "live-61",
+    "live-62"
   ],
   "singleRoleRecoveryCanary": {
     "created": true,
@@ -69,9 +70,22 @@
     "liveMemoryUse": "not established",
     "rollback": "Original FWD1 v16 is behavior-identical to pre-Memory v14; UI5/5"
   },
-  "runtimeCandidate": "v7exactv5 SSE restoredREADY; native5/5; UI112Fitness in progress",
+  "runtimeCandidate": "R1v13native9passed; currentlyboundonlyFWD1forFitness/Practice07quietdiagnostic; originalGK",
   "windowExtension": "New explicit user request at09:14UTC:8hours from this moment",
   "latestLeaderboard": {
+    "rank": 13,
+    "played": 71,
+    "wins": 44,
+    "draws": 1,
+    "losses": 26,
+    "goalsFor": 99,
+    "goalsAgainst": 57,
+    "points": 133,
+    "capturedAtUTC": "2026-10-24T12:48:32Z"
+  },
+  "newManualMatchCutoffUTC": "2026-10-24T17:04:05Z",
+  "deadlineLocal": "2026-10-24 20:14:05 Europe/Minsk",
+  "priorLeaderboard": {
     "rank": 10,
     "played": 61,
     "wins": 40,
@@ -82,6 +96,41 @@
     "points": 121,
     "capturedAtUTC": "2026-10-24T09:03:00Z"
   },
-  "newManualMatchCutoffUTC": "2026-10-24T17:04:05Z",
-  "deadlineLocal": "2026-10-24 20:14:05 Europe/Minsk"
+  "practiceLeaderboardAudit": {
+    "observedPracticeGames": 6,
+    "accountDelta": {
+      "played": 10,
+      "wins": 4,
+      "draws": 0,
+      "losses": 6,
+      "goalsFor": 15,
+      "goalsAgainst": 10,
+      "points": 12
+    },
+    "liveReports": "live53..62",
+    "interpretation": "Every change in account counters is exactly reconciled by ten saved live games; six Practice games did not enter those totals in this interval.",
+    "limitation": "Account observation in this workshop interval, not a guarantee about future portal rules.",
+    "individualPractice07Check": {
+      "before": {
+        "played": 71,
+        "wins": 44,
+        "draws": 1,
+        "losses": 26,
+        "goalsFor": 99,
+        "goalsAgainst": 57,
+        "points": 133
+      },
+      "after": {
+        "played": 71,
+        "wins": 44,
+        "draws": 1,
+        "losses": 26,
+        "goalsFor": 99,
+        "goalsAgainst": 57,
+        "points": 133
+      },
+      "practiceResult": "2:0",
+      "changed": false
+    }
+  }
 }

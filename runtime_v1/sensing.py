@@ -28,7 +28,7 @@ def live_coordinates(root, calibration=None):
             return root, {'kind': 'documented_xy_3d' if large_pitch else 'unresolved_3d', 'scale': 1.0}, None
         calibration = {'kind': 'keeper_reference_xz', 'scale': 110 / (ax - hx),
                        'centerX': (hx + ax) / 2, 'homeKeeperAnchorX': hx, 'awayKeeperAnchorX': ax,
-                       'reference': 'Initial keeper positions; exact goalposts/command-coordinate conversion unverified'}
+                       'reference': 'Initial keeper positions are approximate goal anchors; HOME raw MOVE units verified in Practice07, exact goalposts unmeasured'}
     normalized = copy.deepcopy(root)
     ngs = normalized['gameState']
     scale, center = calibration['scale'], calibration['centerX']
@@ -43,6 +43,33 @@ def live_coordinates(root, calibration=None):
                               'y': numeric(bp.get('z')) * scale}
     ngs['ball']['velocity'] = {'x': numeric(bv.get('x')) * scale, 'y': numeric(bv.get('z')) * scale}
     return normalized, dict(calibration), calibration
+
+
+def movement_frame_ready(profile):
+    if profile.get('kind', '').startswith('documented_xy'):
+        return True
+    if profile.get('kind') != 'keeper_reference_xz':
+        return False
+    try:
+        scale, center = float(profile['scale']), float(profile['centerX'])
+        home, away = float(profile['homeKeeperAnchorX']), float(profile['awayKeeperAnchorX'])
+        return all(math.isfinite(x) for x in (scale, center, home, away)) and \
+            -6.5 <= home <= -5.5 and 5.5 <= away <= 6.5 and \
+            abs(scale - 110 / (away - home)) < 1e-6 and abs(center - (home + away) / 2) < 1e-6
+    except (ValueError, TypeError, KeyError, ZeroDivisionError):
+        return False
+
+
+def movement_to_raw(command, profile):
+    result = copy.deepcopy(command)
+    if command['commandType'] != 'MOVE_TO' or profile.get('kind', '').startswith('documented_xy'):
+        return result
+    if not movement_frame_ready(profile):
+        raise ValueError('No validated movement frame')
+    params = result['parameters']
+    params['target_x'] = round(params['target_x'] / profile['scale'] + profile['centerX'], 6)
+    params['target_y'] = round(params['target_y'] / profile['scale'], 6)
+    return result
 
 
 def contact_candidate(root):

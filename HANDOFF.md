@@ -156,3 +156,25 @@ Afterreport, bindonlyFWD1v13→freshFitness5→Practice07quietunitdiagnostic.
 ThenrestoreM8. New20case/modelcyclicbenchmarkNova+Micro40callsNOTRUN;
 constant0baseline12/20. Microoriginal8casesalllegal312.5medianmodelms but
 constant0baseline8/8; donotclaimdiscriminatingquality. Latestpubliceditsneedpush.
+
+Latest13:18UTC: Practice07v13finished2:0,4:4shots,pos36%,diagnosticexcluded.
+OwnHOMEFWD3control/rawMOVEunits VERIFIED: two consecutiveCoachMoveTo intervals
+10.44->12.46->14.48 align withrawtarget(-2,2.8),cosines.9999994/.999999999998,
+versusnormalizedalternative.8394/.3902. OwnblueFWD4wideat23screenshot. No team
+inversion; reportMOVE10underopponentis attribution-unreliable. Goalposts
+remainkeeperproxy, AWAYphysicalnotyetchecked. M8restored again/Fitness5passed.
+Leaguebefore/afterPractice07unchanged71P44W1D26L,99:57goals,133points,rank13.
+Current live63next,Practice08next. Micro/Nova cyclic20eachcompleted alllegal/
+alltarget/all40sessionsstopped; medians259/393.5ms, constant0baseline12/20.
+Public tactical-model-orders2.json safeprojection,sourceD0c328c. MicroNOTinstalled.
+v14POSITION support localready: canonicalrole-targetMOVE whenknownoffball,
+noSprint, distance>4canonical; existingnearpress/onballguards preserved. Inverse
+rawtransform onlyvalidatedkeeperframe; unresolvedreleases. WorldKickoffnow
+movement-guarded; native9 includesrawposition/restart HOME/AWAY.43checks+SDK
+smoke passed. Package516464b636877353d137f097bdbb83912423ffe74421402acbba7a0c00faaa90.
+Commit/pushall,Cloudpull/build,updateunusedR1receipt13->14 withbound,
+--fwd-support-mode position,NOcoordinateprobe, Nova2Lite. Require native9 then
+bindonlyFWD1/Fitness5/Practice08sameBenchmark. GKandotherrolesoriginalM7.
+Do not mixMicro atsame time; later model-onlytrial using samearchive after
+positionfieldtest. M8workingreference remainsmain. Publicshotsanalysisstill
+throughlive60; update nearfinal. PR5description/recoveryprofiles needfinalreview.

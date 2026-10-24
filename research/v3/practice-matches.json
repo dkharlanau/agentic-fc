@@ -415,6 +415,102 @@
         },
         "coordinateObservation": "OwnHOMEplayer3 showsCoachMoveTo after firstMOVE, later approaches rawtarget4,1.5 withinabout0.53; possession/contact affect motion, then retreats after window. This supports raw units/owncontrol, not yet a validated converter."
       }
+    },
+    {
+      "id": "practice-07",
+      "setup": "R1-FWD1-v13-own-wide-diagnostic-plus-fourM7-formation112",
+      "opponent": "The Benchmark FC",
+      "side": "home",
+      "goalsFor": 2,
+      "goalsAgainst": 0,
+      "shotsFor": 4,
+      "shotsAgainst": 4,
+      "shotsOnTargetFor": 2,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 36,
+      "commands": 369,
+      "averageLatencyMs": 783,
+      "commandCounts": {
+        "MOVE_TO": 144,
+        "PRESS_BALL": 141,
+        "SHOOT": 29,
+        "PASS": 22,
+        "INTERCEPT": 18,
+        "CLEAR_OVERRIDE": 14,
+        "GK_DISTRIBUTE": 1
+      },
+      "opponentCommands": 66,
+      "opponentAverageLatencyMs": 117,
+      "roleLatencyMs": {
+        "gk": 594,
+        "def": 846,
+        "mid": 819,
+        "fwd1": 593,
+        "fwd2": 869
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Diagnostic outcome excluded from policy-strength comparisons.",
+        "Physical HOMEcontrol/rawoutputunits verified in this experiment; AWAY still requires field observation.",
+        "Opponent reportedMOVE10matches own emittedprobe10 despite ownphysicalcontrol, so agent-table attribution is unreliable here."
+      ],
+      "mode": "PracticeDiagnostic",
+      "preset": "Balanced",
+      "initiation": "Quiet own-wide coordinateprobe8..28 afterv13native9/Fitness5; originalGK restored; no coach",
+      "coaching": [],
+      "excludeFromStrengthComparison": true,
+      "unityFinalVerified": {
+        "goalsFor": 2,
+        "goalsAgainst": 0,
+        "shotsFor": 4,
+        "shotsAgainst": 4,
+        "shotsOnTargetFor": 2,
+        "shotsOnTargetAgainst": 0,
+        "possessionPercent": 36
+      },
+      "runtimeEvidence": {
+        "sourceCommit": "88eb47f",
+        "decisions": 73,
+        "commands": {
+          "CLEAR_OVERRIDE": 35,
+          "SET_STANCE": 23,
+          "PASS": 2,
+          "MOVE_TO": 10,
+          "INTERCEPT": 3
+        },
+        "inputRejects": 0,
+        "modelLatencyMs": {
+          "p50": 414,
+          "p95": 607,
+          "max": 1248
+        },
+        "movementUnitEvidence": {
+          "ownHomePlayer": 3,
+          "rawTarget": {
+            "x": -2,
+            "y": 2.8
+          },
+          "consecutiveCoachMoveIntervals": [
+            {
+              "fromGameTime": 10.44,
+              "toGameTime": 12.46,
+              "rawTargetDirectionCosine": 0.9999994130646375,
+              "normalizedAlternativeCosine": 0.8394468958669636
+            },
+            {
+              "fromGameTime": 12.46,
+              "toGameTime": 14.48,
+              "rawTargetDirectionCosine": 0.9999999999983091,
+              "normalizedAlternativeCosine": 0.3901829179172224
+            }
+          ],
+          "visualOwnBlueFwd4WideAtGameTime": 23,
+          "conclusion": "OwnHOMEplayer follows raw movement target. Does not survey goalposts or prove AWAY physical application."
+        }
+      }
     }
   ]
 }

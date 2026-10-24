@@ -24,6 +24,8 @@ def save_private(path, data):
 
 
 def plan(args):
+    if args.fwd_support_stance == 'position' and args.fwd_coordinate_probe != 'off':
+        raise ValueError('Disable the raw coordinate probe before enabling position support')
     manifest = json.loads((ROOT / 'runtime_v1/artifact.json').read_text())
     archive = args.archive.read_bytes()
     sha = hashlib.sha256(archive).hexdigest()
@@ -36,10 +38,10 @@ def plan(args):
                    'BUILD_COMMIT': args.source_commit}
     if args.wire_team_scope != 'explicit':
         environment['WIRE_TEAM_SCOPE'] = args.wire_team_scope
-    if args.fwd_support_stance == 'attack':
+    if args.fwd_support_stance != 'default':
         if args.player_id != 3:
             raise ValueError('Attack-support experiment is FWD1 only')
-        environment['FWD_SUPPORT_STANCE'] = 'attack'
+        environment['FWD_SUPPORT_STANCE'] = args.fwd_support_stance
     if args.fwd_coordinate_probe != 'off':
         if args.player_id != 3:
             raise ValueError('Coordinate probe is FWD1 only')
@@ -154,7 +156,8 @@ def main():
     parser.add_argument('--memory-id')
     parser.add_argument('--wire-team-scope', choices=('explicit', 'bound'), default='explicit',
                         help='Experimental bound mode omits optional output teamId; internal validation remains strict')
-    parser.add_argument('--fwd-support-stance', choices=('default', 'attack'), default='default',
+    parser.add_argument('--fwd-support-mode', '--fwd-support-stance', dest='fwd_support_stance',
+                        choices=('default', 'attack', 'position'), default='default',
                         help='Optional engine attack support when no local on-ball/pressure action is available')
     parser.add_argument('--fwd-coordinate-probe', choices=('off', 'world-target', 'own-wide'), default='off',
                         help='Practice-only diagnostic: small raw MOVE target during gameTime8..28')

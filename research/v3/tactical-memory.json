@@ -915,5 +915,28 @@
     "Opponent agents may change between games.",
     "Small, unequal samples and different setups prevent causal opponent-specific strategy claims.",
     "Command counts and reported Success are not proof of actual model invocation or useful applied actions."
+  ],
+  "operationalLessons": [
+    {
+      "id": "raw-move-home-verified",
+      "evidence": "practice07",
+      "lesson": "Own HOMEplayer3 follows raw MOVE target; two directioncosines>0.999999. Canonical target must be inversely transformed before actual small-field movement.",
+      "limits": "Exact goalposts unmeasured; AWAY physical confirmation pending."
+    },
+    {
+      "id": "agent-table-attribution",
+      "evidence": "practice06/practice07",
+      "lesson": "Reported opponentMOVE counts match own emitted probes while own physical player follows them; do not use command columns as ownership proof."
+    },
+    {
+      "id": "constant-index-eval-control",
+      "evidence": "tactical-model-rounds1.json/tactical-model-orders2.json",
+      "lesson": "Originalalways0 baseline8/8. Cyclicordersbaseline12/20; Nova/Micro each20/20, modelmedians393.5/259ms. No match-strength inference."
+    },
+    {
+      "id": "practice-leaderboard-exclusion",
+      "evidence": "run-20261024-sixhours.json",
+      "lesson": "Accountchanges reconcile exactly to live53..62; afterPractice07 totals remain71P44W1D26L,133points. Practice outcomes stored separately."
+    }
   ]
 }

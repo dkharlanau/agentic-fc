@@ -1,6 +1,6 @@
 {
   "kind": "Independent Runtime FWD1 pilot; public-safe evidence summary",
-  "status": "Original five-Harness M8 restored/Fitness5; independent Runtime candidates unregistered during preparation",
+  "status": "M8 fiveHarness restored/Fitness5; HOME raw MOVE units/control verified; position-support candidate local",
   "initialSourceCommit": "7ae12c1e737992f83a10ff5c2cf1497cb2580764",
   "initialArchiveSha256": "21ed279d4831546ff58e0ce3c91744e1d47b4cb5fbcff8ae4e970ba1489274e3",
   "reproducibility": "Local macOS cross-build and CloudShell Linux build produced identical archive SHA256,20610262bytes,2731files",
@@ -396,6 +396,34 @@
       3036,
       3537
     ],
-    "ownProbeSessionsStopped": true
+    "ownProbeSessionsStopped": true,
+    "practice07": {
+      "result": "WIN2:0",
+      "shots": "4:4",
+      "excludedFromStrength": true,
+      "build": "88eb47f",
+      "genuineChoices": 73,
+      "moveProbes": 10,
+      "ownHomeControl": "Verified by own blueFWD4 view and consecutiveCoachMoveTo vectors",
+      "rawTargetVectorCosines": [
+        0.9999994130646375,
+        0.9999999999983091
+      ],
+      "normalizedAlternativeCosines": [
+        0.8394468958669636,
+        0.3901829179172224
+      ],
+      "limitations": "HOME only; keeperanchors proxy, exactposts unmeasured; reportcommandcolumns unreliable"
+    }
+  },
+  "revision14Candidate": {
+    "status": "Local only",
+    "supportMode": "position",
+    "model": "global.amazon.nova-2-lite-v1:0",
+    "diagnosticProbe": "off",
+    "change": "Offball FWD walking role targets and inverse conversion from canonical to verified raw frame; no guessed movement in unresolved frame",
+    "archiveSha256": "516464b636877353d137f097bdbb83912423ffe74421402acbba7a0c00faaa90",
+    "offlineChecks": 43,
+    "nativeGate": "9cases pending"
   }
 }

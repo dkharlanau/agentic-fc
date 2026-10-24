@@ -1,0 +1,1233 @@
+{
+  "kind": "Mirrored synthetic tactical index-choice rounds; no saved configuration changes",
+  "optionPermutations": 3,
+  "constantIndex0Baseline": {
+    "cases": 20,
+    "targetAgreementCount": 12
+  },
+  "models": [
+    {
+      "model": "micro",
+      "cases": 20,
+      "legalChoiceCount": 20,
+      "targetAgreementCount": 20,
+      "allOwnSessionsStopped": true,
+      "reportedModelMedianLatencyMs": 259
+    },
+    {
+      "model": "nova",
+      "cases": 20,
+      "legalChoiceCount": 20,
+      "targetAgreementCount": 20,
+      "allOwnSessionsStopped": true,
+      "reportedModelMedianLatencyMs": 393.5
+    }
+  ],
+  "results": [
+    {
+      "case": "switch-outlet-home:order0",
+      "sourceCase": "switch-outlet-home",
+      "optionOrder": 0,
+      "factsSha256": "36079350570b3a9b646d2f248e8d08183aa20a4895ef503abc3c91217cb7bf2d",
+      "model": "nova",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 3160,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 0
+      },
+      "responseHeadersMs": 2399,
+      "firstTextMs": 3154,
+      "firstJsonPrefixMs": 3155,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 401,
+      "usage": {
+        "inputTokens": 942,
+        "outputTokens": 8,
+        "totalTokens": 950
+      }
+    },
+    {
+      "case": "switch-outlet-home:order1",
+      "sourceCase": "switch-outlet-home",
+      "optionOrder": 1,
+      "factsSha256": "4ecb879d985d2da937b38fad78dffd9593b75817d0dc3c2607ae7e1148c0c7a5",
+      "model": "nova",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 3199,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 0
+      },
+      "responseHeadersMs": 2400,
+      "firstTextMs": 3194,
+      "firstJsonPrefixMs": 3195,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 637,
+      "usage": {
+        "inputTokens": 942,
+        "outputTokens": 8,
+        "totalTokens": 950
+      }
+    },
+    {
+      "case": "switch-outlet-home:order2",
+      "sourceCase": "switch-outlet-home",
+      "optionOrder": 2,
+      "factsSha256": "c406d26782ab9c317cb3ddadef679b85e49538dfa450f6e53161ca172deb65e0",
+      "model": "nova",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 2908,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 0
+      },
+      "responseHeadersMs": 2173,
+      "firstTextMs": 2901,
+      "firstJsonPrefixMs": 2903,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 468,
+      "usage": {
+        "inputTokens": 942,
+        "outputTokens": 7,
+        "totalTokens": 949
+      }
+    },
+    {
+      "case": "switch-outlet-away:order0",
+      "sourceCase": "switch-outlet-away",
+      "optionOrder": 0,
+      "factsSha256": "ddca92fd01a9897a3cb42f74390183bcf881d458c08c5efeaa66bef1120ff301",
+      "model": "nova",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 1823,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 1
+      },
+      "responseHeadersMs": 1239,
+      "firstTextMs": 1818,
+      "firstJsonPrefixMs": 1818,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 501,
+      "usage": {
+        "inputTokens": 942,
+        "outputTokens": 8,
+        "totalTokens": 950
+      }
+    },
+    {
+      "case": "switch-outlet-away:order1",
+      "sourceCase": "switch-outlet-away",
+      "optionOrder": 1,
+      "factsSha256": "89e66da457881fe3c57d2aa379aa75ac56e4d0210a3dcf7f0ba3a4c10d03e0d3",
+      "model": "nova",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 1716,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 1
+      },
+      "responseHeadersMs": 1263,
+      "firstTextMs": 1711,
+      "firstJsonPrefixMs": 1712,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 354,
+      "usage": {
+        "inputTokens": 942,
+        "outputTokens": 8,
+        "totalTokens": 950
+      }
+    },
+    {
+      "case": "switch-outlet-away:order2",
+      "sourceCase": "switch-outlet-away",
+      "optionOrder": 2,
+      "factsSha256": "74574fb083cac31006b6d1b7d69761c9cb0b31b77a0477cc24c38fb10f391ebd",
+      "model": "nova",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 2736,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 1
+      },
+      "responseHeadersMs": 2012,
+      "firstTextMs": 2733,
+      "firstJsonPrefixMs": 2733,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 379,
+      "usage": {
+        "inputTokens": 942,
+        "outputTokens": 8,
+        "totalTokens": 950
+      }
+    },
+    {
+      "case": "high-line-home:order0",
+      "sourceCase": "high-line-home",
+      "optionOrder": 0,
+      "factsSha256": "7f410fb127f59932ff7fc6579328f0d7cbad81d9bb696973057c332929c38839",
+      "model": "nova",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 1901,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 0
+      },
+      "responseHeadersMs": 1356,
+      "firstTextMs": 1895,
+      "firstJsonPrefixMs": 1896,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 398,
+      "usage": {
+        "inputTokens": 939,
+        "outputTokens": 8,
+        "totalTokens": 947
+      }
+    },
+    {
+      "case": "high-line-home:order1",
+      "sourceCase": "high-line-home",
+      "optionOrder": 1,
+      "factsSha256": "0f84349995cff83f1daef332d632f7d115c6b02a614718f6760e2daf1c00edbb",
+      "model": "nova",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 2221,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 0
+      },
+      "responseHeadersMs": 1690,
+      "firstTextMs": 2205,
+      "firstJsonPrefixMs": 2206,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 381,
+      "usage": {
+        "inputTokens": 939,
+        "outputTokens": 8,
+        "totalTokens": 947
+      }
+    },
+    {
+      "case": "high-line-home:order2",
+      "sourceCase": "high-line-home",
+      "optionOrder": 2,
+      "factsSha256": "fdbe351226320b777264cd355cc92cafddff5cd6d3f019031c17f40f20f837bd",
+      "model": "nova",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 1692,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 0
+      },
+      "responseHeadersMs": 1215,
+      "firstTextMs": 1688,
+      "firstJsonPrefixMs": 1689,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 382,
+      "usage": {
+        "inputTokens": 939,
+        "outputTokens": 8,
+        "totalTokens": 947
+      }
+    },
+    {
+      "case": "high-line-away:order0",
+      "sourceCase": "high-line-away",
+      "optionOrder": 0,
+      "factsSha256": "c57b30c9e4d92f762c36b696ef2a8ee9e3dcc2207f91a43fa4db11a0ec272947",
+      "model": "nova",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 3169,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 1
+      },
+      "responseHeadersMs": 2472,
+      "firstTextMs": 3164,
+      "firstJsonPrefixMs": 3165,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 382,
+      "usage": {
+        "inputTokens": 939,
+        "outputTokens": 8,
+        "totalTokens": 947
+      }
+    },
+    {
+      "case": "high-line-away:order1",
+      "sourceCase": "high-line-away",
+      "optionOrder": 1,
+      "factsSha256": "f358c91aa2709c903e2b53baeee3af84c836988247acce771c0edde491471408",
+      "model": "nova",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 3124,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 1
+      },
+      "responseHeadersMs": 2433,
+      "firstTextMs": 3110,
+      "firstJsonPrefixMs": 3110,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 389,
+      "usage": {
+        "inputTokens": 939,
+        "outputTokens": 8,
+        "totalTokens": 947
+      }
+    },
+    {
+      "case": "high-line-away:order2",
+      "sourceCase": "high-line-away",
+      "optionOrder": 2,
+      "factsSha256": "6941eda26f5768f9c517e3760c8eca9a880f3889dec4165c628430070c903ac2",
+      "model": "nova",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 2356,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 1
+      },
+      "responseHeadersMs": 1898,
+      "firstTextMs": 2352,
+      "firstJsonPrefixMs": 2353,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 357,
+      "usage": {
+        "inputTokens": 939,
+        "outputTokens": 8,
+        "totalTokens": 947
+      }
+    },
+    {
+      "case": "deep-block-home:order0",
+      "sourceCase": "deep-block-home",
+      "optionOrder": 0,
+      "factsSha256": "cba04a77aeda2f4b736c3027092069c6964f66bab7595c61173b7a32f00b2041",
+      "model": "nova",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 1286,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 0
+      },
+      "responseHeadersMs": 815,
+      "firstTextMs": 1277,
+      "firstJsonPrefixMs": 1278,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 380,
+      "usage": {
+        "inputTokens": 941,
+        "outputTokens": 8,
+        "totalTokens": 949
+      }
+    },
+    {
+      "case": "deep-block-home:order1",
+      "sourceCase": "deep-block-home",
+      "optionOrder": 1,
+      "factsSha256": "de6639689e052ba20d9a8a6086cb7a776a6237d5d6d4f24fdddb69867edcc663",
+      "model": "nova",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 2962,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 0
+      },
+      "responseHeadersMs": 2261,
+      "firstTextMs": 2947,
+      "firstJsonPrefixMs": 2948,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 413,
+      "usage": {
+        "inputTokens": 941,
+        "outputTokens": 7,
+        "totalTokens": 948
+      }
+    },
+    {
+      "case": "deep-block-home:order2",
+      "sourceCase": "deep-block-home",
+      "optionOrder": 2,
+      "factsSha256": "f7b67a30ca68a14980886994a0f488d1e0a819679f4662e7ba0bf11dd329ee69",
+      "model": "nova",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 32247,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 0
+      },
+      "responseHeadersMs": 31738,
+      "firstTextMs": 32241,
+      "firstJsonPrefixMs": 32243,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 432,
+      "usage": {
+        "inputTokens": 941,
+        "outputTokens": 8,
+        "totalTokens": 949
+      }
+    },
+    {
+      "case": "deep-block-away:order0",
+      "sourceCase": "deep-block-away",
+      "optionOrder": 0,
+      "factsSha256": "db149e0a0b9fcc7b1b4e50ed8262abf6881cd76910f4602b52a61aab7c8dfe9d",
+      "model": "nova",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 1088,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 1
+      },
+      "responseHeadersMs": 678,
+      "firstTextMs": 1084,
+      "firstJsonPrefixMs": 1084,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 362,
+      "usage": {
+        "inputTokens": 941,
+        "outputTokens": 8,
+        "totalTokens": 949
+      }
+    },
+    {
+      "case": "deep-block-away:order1",
+      "sourceCase": "deep-block-away",
+      "optionOrder": 1,
+      "factsSha256": "cfa67b3d6d5240b42a66565eede8e24432da7d9585718fe1bd3aeaf327210cb4",
+      "model": "nova",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 1216,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 1
+      },
+      "responseHeadersMs": 784,
+      "firstTextMs": 1211,
+      "firstJsonPrefixMs": 1212,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 376,
+      "usage": {
+        "inputTokens": 941,
+        "outputTokens": 8,
+        "totalTokens": 949
+      }
+    },
+    {
+      "case": "deep-block-away:order2",
+      "sourceCase": "deep-block-away",
+      "optionOrder": 2,
+      "factsSha256": "fecbfbd8fea851d764c57eab8cf3480e69f468441ddfa4b02236f9f6a6666330",
+      "model": "nova",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 1241,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 1
+      },
+      "responseHeadersMs": 702,
+      "firstTextMs": 1234,
+      "firstJsonPrefixMs": 1234,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 484,
+      "usage": {
+        "inputTokens": 941,
+        "outputTokens": 8,
+        "totalTokens": 949
+      }
+    },
+    {
+      "case": "corner-cover-home:order0",
+      "sourceCase": "corner-cover-home",
+      "optionOrder": 0,
+      "factsSha256": "4df6a0415c1e0e20713f2d17622f816e6f595f90900db3a7b482f2dc2e075f79",
+      "model": "nova",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 1345,
+      "selectedCommand": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 3,
+        "parameters": {},
+        "duration": 0,
+        "teamId": 0
+      },
+      "responseHeadersMs": 772,
+      "firstTextMs": 1303,
+      "firstJsonPrefixMs": 1329,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 479,
+      "usage": {
+        "inputTokens": 645,
+        "outputTokens": 8,
+        "totalTokens": 653
+      }
+    },
+    {
+      "case": "corner-cover-away:order0",
+      "sourceCase": "corner-cover-away",
+      "optionOrder": 0,
+      "factsSha256": "0790cef47d2164daa3e38c495b8c8ac83a6e8bec981f37f1e6e8cbda26098800",
+      "model": "nova",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 1171,
+      "selectedCommand": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 3,
+        "parameters": {},
+        "duration": 0,
+        "teamId": 1
+      },
+      "responseHeadersMs": 676,
+      "firstTextMs": 1165,
+      "firstJsonPrefixMs": 1167,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 444,
+      "usage": {
+        "inputTokens": 645,
+        "outputTokens": 8,
+        "totalTokens": 653
+      }
+    },
+    {
+      "case": "switch-outlet-home:order0",
+      "sourceCase": "switch-outlet-home",
+      "optionOrder": 0,
+      "factsSha256": "36079350570b3a9b646d2f248e8d08183aa20a4895ef503abc3c91217cb7bf2d",
+      "model": "micro",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 1109,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 0
+      },
+      "responseHeadersMs": 645,
+      "firstTextMs": 1069,
+      "firstJsonPrefixMs": 1104,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 340,
+      "usage": {
+        "inputTokens": 961,
+        "outputTokens": 6,
+        "totalTokens": 967
+      }
+    },
+    {
+      "case": "switch-outlet-home:order1",
+      "sourceCase": "switch-outlet-home",
+      "optionOrder": 1,
+      "factsSha256": "4ecb879d985d2da937b38fad78dffd9593b75817d0dc3c2607ae7e1148c0c7a5",
+      "model": "micro",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 1027,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 0
+      },
+      "responseHeadersMs": 755,
+      "firstTextMs": 991,
+      "firstJsonPrefixMs": 1021,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 227,
+      "usage": {
+        "inputTokens": 961,
+        "outputTokens": 6,
+        "totalTokens": 967
+      }
+    },
+    {
+      "case": "switch-outlet-home:order2",
+      "sourceCase": "switch-outlet-home",
+      "optionOrder": 2,
+      "factsSha256": "c406d26782ab9c317cb3ddadef679b85e49538dfa450f6e53161ca172deb65e0",
+      "model": "micro",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 1186,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 0
+      },
+      "responseHeadersMs": 814,
+      "firstTextMs": 1139,
+      "firstJsonPrefixMs": 1179,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 285,
+      "usage": {
+        "inputTokens": 961,
+        "outputTokens": 6,
+        "totalTokens": 967
+      }
+    },
+    {
+      "case": "switch-outlet-away:order0",
+      "sourceCase": "switch-outlet-away",
+      "optionOrder": 0,
+      "factsSha256": "ddca92fd01a9897a3cb42f74390183bcf881d458c08c5efeaa66bef1120ff301",
+      "model": "micro",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 1115,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 1
+      },
+      "responseHeadersMs": 778,
+      "firstTextMs": 1080,
+      "firstJsonPrefixMs": 1108,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 257,
+      "usage": {
+        "inputTokens": 961,
+        "outputTokens": 6,
+        "totalTokens": 967
+      }
+    },
+    {
+      "case": "switch-outlet-away:order1",
+      "sourceCase": "switch-outlet-away",
+      "optionOrder": 1,
+      "factsSha256": "89e66da457881fe3c57d2aa379aa75ac56e4d0210a3dcf7f0ba3a4c10d03e0d3",
+      "model": "micro",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 1247,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 1
+      },
+      "responseHeadersMs": 666,
+      "firstTextMs": 1215,
+      "firstJsonPrefixMs": 1241,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 524,
+      "usage": {
+        "inputTokens": 961,
+        "outputTokens": 6,
+        "totalTokens": 967
+      }
+    },
+    {
+      "case": "switch-outlet-away:order2",
+      "sourceCase": "switch-outlet-away",
+      "optionOrder": 2,
+      "factsSha256": "74574fb083cac31006b6d1b7d69761c9cb0b31b77a0477cc24c38fb10f391ebd",
+      "model": "micro",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 1170,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 1
+      },
+      "responseHeadersMs": 816,
+      "firstTextMs": 1120,
+      "firstJsonPrefixMs": 1148,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 263,
+      "usage": {
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      }
+    },
+    {
+      "case": "high-line-home:order0",
+      "sourceCase": "high-line-home",
+      "optionOrder": 0,
+      "factsSha256": "7f410fb127f59932ff7fc6579328f0d7cbad81d9bb696973057c332929c38839",
+      "model": "micro",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 1140,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 0
+      },
+      "responseHeadersMs": 796,
+      "firstTextMs": 1129,
+      "firstJsonPrefixMs": 1131,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 252,
+      "usage": {
+        "inputTokens": 965,
+        "outputTokens": 6,
+        "totalTokens": 971
+      }
+    },
+    {
+      "case": "high-line-home:order1",
+      "sourceCase": "high-line-home",
+      "optionOrder": 1,
+      "factsSha256": "0f84349995cff83f1daef332d632f7d115c6b02a614718f6760e2daf1c00edbb",
+      "model": "micro",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 1130,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 0
+      },
+      "responseHeadersMs": 788,
+      "firstTextMs": 1098,
+      "firstJsonPrefixMs": 1123,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 261,
+      "usage": {
+        "inputTokens": 965,
+        "outputTokens": 6,
+        "totalTokens": 971
+      }
+    },
+    {
+      "case": "high-line-home:order2",
+      "sourceCase": "high-line-home",
+      "optionOrder": 2,
+      "factsSha256": "fdbe351226320b777264cd355cc92cafddff5cd6d3f019031c17f40f20f837bd",
+      "model": "micro",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 1165,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 0
+      },
+      "responseHeadersMs": 763,
+      "firstTextMs": 1080,
+      "firstJsonPrefixMs": 1158,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 320,
+      "usage": {
+        "inputTokens": 965,
+        "outputTokens": 6,
+        "totalTokens": 971
+      }
+    },
+    {
+      "case": "high-line-away:order0",
+      "sourceCase": "high-line-away",
+      "optionOrder": 0,
+      "factsSha256": "c57b30c9e4d92f762c36b696ef2a8ee9e3dcc2207f91a43fa4db11a0ec272947",
+      "model": "micro",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 32054,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 1
+      },
+      "responseHeadersMs": 31721,
+      "firstTextMs": 32013,
+      "firstJsonPrefixMs": 32045,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 244,
+      "usage": {
+        "inputTokens": 965,
+        "outputTokens": 6,
+        "totalTokens": 971
+      }
+    },
+    {
+      "case": "high-line-away:order1",
+      "sourceCase": "high-line-away",
+      "optionOrder": 1,
+      "factsSha256": "f358c91aa2709c903e2b53baeee3af84c836988247acce771c0edde491471408",
+      "model": "micro",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 1083,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 1
+      },
+      "responseHeadersMs": 719,
+      "firstTextMs": 1068,
+      "firstJsonPrefixMs": 1074,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 317,
+      "usage": {
+        "inputTokens": 965,
+        "outputTokens": 6,
+        "totalTokens": 971
+      }
+    },
+    {
+      "case": "high-line-away:order2",
+      "sourceCase": "high-line-away",
+      "optionOrder": 2,
+      "factsSha256": "6941eda26f5768f9c517e3760c8eca9a880f3889dec4165c628430070c903ac2",
+      "model": "micro",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 1018,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 1
+      },
+      "responseHeadersMs": 703,
+      "firstTextMs": 979,
+      "firstJsonPrefixMs": 1012,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 255,
+      "usage": {
+        "inputTokens": 965,
+        "outputTokens": 6,
+        "totalTokens": 971
+      }
+    },
+    {
+      "case": "deep-block-home:order0",
+      "sourceCase": "deep-block-home",
+      "optionOrder": 0,
+      "factsSha256": "cba04a77aeda2f4b736c3027092069c6964f66bab7595c61173b7a32f00b2041",
+      "model": "micro",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 944,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 0
+      },
+      "responseHeadersMs": 660,
+      "firstTextMs": 912,
+      "firstJsonPrefixMs": 939,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 233,
+      "usage": {
+        "inputTokens": 966,
+        "outputTokens": 6,
+        "totalTokens": 972
+      }
+    },
+    {
+      "case": "deep-block-home:order1",
+      "sourceCase": "deep-block-home",
+      "optionOrder": 1,
+      "factsSha256": "de6639689e052ba20d9a8a6086cb7a776a6237d5d6d4f24fdddb69867edcc663",
+      "model": "micro",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 1011,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 0
+      },
+      "responseHeadersMs": 679,
+      "firstTextMs": 975,
+      "firstJsonPrefixMs": 1006,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 251,
+      "usage": {
+        "inputTokens": 966,
+        "outputTokens": 6,
+        "totalTokens": 972
+      }
+    },
+    {
+      "case": "deep-block-home:order2",
+      "sourceCase": "deep-block-home",
+      "optionOrder": 2,
+      "factsSha256": "f7b67a30ca68a14980886994a0f488d1e0a819679f4662e7ba0bf11dd329ee69",
+      "model": "micro",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 1004,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 0
+      },
+      "responseHeadersMs": 700,
+      "firstTextMs": 968,
+      "firstJsonPrefixMs": 999,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 252,
+      "usage": {
+        "inputTokens": 966,
+        "outputTokens": 6,
+        "totalTokens": 972
+      }
+    },
+    {
+      "case": "deep-block-away:order0",
+      "sourceCase": "deep-block-away",
+      "optionOrder": 0,
+      "factsSha256": "db149e0a0b9fcc7b1b4e50ed8262abf6881cd76910f4602b52a61aab7c8dfe9d",
+      "model": "micro",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 1050,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 2,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 1
+      },
+      "responseHeadersMs": 672,
+      "firstTextMs": 1020,
+      "firstJsonPrefixMs": 1045,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 251,
+      "usage": {
+        "inputTokens": 966,
+        "outputTokens": 6,
+        "totalTokens": 972
+      }
+    },
+    {
+      "case": "deep-block-away:order1",
+      "sourceCase": "deep-block-away",
+      "optionOrder": 1,
+      "factsSha256": "cfa67b3d6d5240b42a66565eede8e24432da7d9585718fe1bd3aeaf327210cb4",
+      "model": "micro",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 1190,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 1
+      },
+      "responseHeadersMs": 851,
+      "firstTextMs": 1154,
+      "firstJsonPrefixMs": 1182,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 256,
+      "usage": {
+        "inputTokens": 966,
+        "outputTokens": 6,
+        "totalTokens": 972
+      }
+    },
+    {
+      "case": "deep-block-away:order2",
+      "sourceCase": "deep-block-away",
+      "optionOrder": 2,
+      "factsSha256": "fecbfbd8fea851d764c57eab8cf3480e69f468441ddfa4b02236f9f6a6666330",
+      "model": "micro",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 1161,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 1
+      },
+      "responseHeadersMs": 828,
+      "firstTextMs": 1128,
+      "firstJsonPrefixMs": 1155,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 267,
+      "usage": {
+        "inputTokens": 966,
+        "outputTokens": 6,
+        "totalTokens": 972
+      }
+    },
+    {
+      "case": "corner-cover-home:order0",
+      "sourceCase": "corner-cover-home",
+      "optionOrder": 0,
+      "factsSha256": "4df6a0415c1e0e20713f2d17622f816e6f595f90900db3a7b482f2dc2e075f79",
+      "model": "micro",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 1117,
+      "selectedCommand": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 3,
+        "parameters": {},
+        "duration": 0,
+        "teamId": 0
+      },
+      "responseHeadersMs": 710,
+      "firstTextMs": 1083,
+      "firstJsonPrefixMs": 1111,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 364,
+      "usage": {
+        "inputTokens": 628,
+        "outputTokens": 6,
+        "totalTokens": 634
+      }
+    },
+    {
+      "case": "corner-cover-away:order0",
+      "sourceCase": "corner-cover-away",
+      "optionOrder": 0,
+      "factsSha256": "0790cef47d2164daa3e38c495b8c8ac83a6e8bec981f37f1e6e8cbda26098800",
+      "model": "micro",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 1046,
+      "selectedCommand": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 3,
+        "parameters": {},
+        "duration": 0,
+        "teamId": 1
+      },
+      "responseHeadersMs": 713,
+      "firstTextMs": 1011,
+      "firstJsonPrefixMs": 1038,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 274,
+      "usage": {
+        "inputTokens": 628,
+        "outputTokens": 6,
+        "totalTokens": 634
+      }
+    }
+  ],
+  "limitations": [
+    "Target agreement reflects the proposed policy, not an independent measure of match strength.",
+    "Small synthetic scenarios per model do not establish a general model ranking.",
+    "Original option order allowed a constant index0 to meet every target; use cyclic orders to challenge index bias.",
+    "Wall time includes native Harness/session overhead; reported model latency is separate.",
+    "A first JSON prefix can be followed by more text; it is diagnostic timing, not final output validity.",
+    "These are synthetic choice checks, not football self-play or live outcome evidence."
+  ],
+  "provenance": {
+    "sourceCommit": "d0c328c0c71c03fb0b98f812c39d2ed06b60e5ce",
+    "modelIds": {
+      "nova": "global.amazon.nova-2-lite-v1:0",
+      "micro": "amazon.nova-micro-v1:0"
+    },
+    "savedConfigurationChanged": false,
+    "selectorPromptSha256": "6bfcacc6c3dcf0fbac01c6cb7dcbd1e28876d9e3d1f633731b2304f8cf3c7e96"
+  }
+}

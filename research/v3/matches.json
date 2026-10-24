@@ -2557,6 +2557,59 @@
           }
         }
       }
+    },
+    {
+      "id": "live-62",
+      "setup": "A0-M8-formation112-original-fwd1-v16",
+      "opponent": "Claude Van Dam",
+      "side": "away",
+      "goalsFor": 3,
+      "goalsAgainst": 0,
+      "shotsFor": 8,
+      "shotsAgainst": 5,
+      "shotsOnTargetFor": 3,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 37,
+      "commands": 410,
+      "averageLatencyMs": 75,
+      "commandCounts": {
+        "MOVE_TO": 338,
+        "PRESS_BALL": 21,
+        "PASS": 19,
+        "INTERCEPT": 13,
+        "CLEAR_OVERRIDE": 12,
+        "GK_DISTRIBUTE": 5,
+        "MARK": 1,
+        "SHOOT": 1
+      },
+      "opponentCommands": 9,
+      "opponentAverageLatencyMs": 1,
+      "roleLatencyMs": {
+        "gk": 79,
+        "def": 80,
+        "mid": 81,
+        "fwd1": 85,
+        "fwd2": 79
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Possible overlap with unregistered R1native probes near kickoff; exact kickoff time not recovered.",
+        "SavedHarness binding and portal stats do not establish actual model inference."
+      ],
+      "initiation": "Incoming AWAY after both independentRuntime slots restored to originals andFitness5; no saved changes during game; kickoff not observed",
+      "coaching": [],
+      "unityFinalVerified": {
+        "goalsFor": 3,
+        "goalsAgainst": 0,
+        "shotsFor": 8,
+        "shotsAgainst": 5,
+        "shotsOnTargetFor": 3,
+        "shotsOnTargetAgainst": 0,
+        "possessionPercent": 37
+      }
     }
   ],
   "recordingOrder": "Local evidence-capture order; background matches may be appended retrospectively."

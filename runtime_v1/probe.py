@@ -48,10 +48,14 @@ def main():
     env = receipt['identity']['request']['environmentVariables']
     player_id = int(env['PLAYER_ID'])
     wire_scope = env.get('WIRE_TEAM_SCOPE', 'explicit')
+    support_mode = env.get('FWD_SUPPORT_STANCE', 'default')
     cases = [(0, fixtures[0], 'SHOOT'), (1, fixtures[1], 'SHOOT'), (0, fixtures[3], 'MOVE_TO')]
     observed = json.loads((ROOT / 'research/v3/fixtures/observed-live-away-open-play.json').read_text())['decodedState']
-    cases.append((1, {'id': 'observed-live-open-play', 'modelText': json.dumps({'prompt': json.dumps(observed)})},
-                  'SET_STANCE' if env.get('FWD_SUPPORT_STANCE') == 'attack' else 'CLEAR_OVERRIDE'))
+    observed_case = {'id': 'observed-live-open-play', 'modelText': json.dumps({'prompt': json.dumps(observed)})}
+    if support_mode == 'position':
+        observed_case['expected'] = {'probeTarget': {'target_x': -2.369475, 'target_y': -2.179356, 'sprint': False}}
+    cases.append((1, observed_case,
+                  'MOVE_TO' if support_mode == 'position' else 'SET_STANCE' if support_mode == 'attack' else 'CLEAR_OVERRIDE'))
     close = copy.deepcopy(observed)
     player = next(p for p in close['gameState']['players'] if p['teamCode'] == 'away' and p['agentId'] == 'agentId_3')
     player.update(position={'x': -4.2, 'y': 0.1}, velocity={'x': -1, 'y': 0}, lastAction='AdvanceToGoalWithBall')
@@ -73,6 +77,30 @@ def main():
                 ball['possessionTeamCode'] = 'away'
             cases.append((side, {'id': 'attack-support-' + str(side),
                                  'modelText': json.dumps(support)}, 'SET_STANCE'))
+    if player_id == 3 and support_mode == 'position':
+        for side in (0, 1):
+            support = copy.deepcopy(unwrap(fixtures[2]['modelText']))
+            restart = copy.deepcopy(observed)
+            restart['gameState']['playMode'] = 'KICK_OFF'
+            if side == 1:
+                support['teamId'] = 1
+                for player in support['gameState']['players']:
+                    player['teamCode'] = 'away' if player['teamCode'] == 'home' else 'home'
+                    player['position']['x'] *= -1
+                support['gameState']['ball']['position']['x'] *= -1
+                support['gameState']['ball']['possessionTeamCode'] = 'away'
+            else:
+                restart['teamId'] = 0
+                for player in restart['gameState']['players']:
+                    player['teamCode'] = 'away' if player['teamCode'] == 'home' else 'home'
+                    player['position']['x'] *= -1
+                restart['gameState']['ball']['position']['x'] *= -1
+            cases.append((side, {'id': 'position-support-' + str(side), 'modelText': json.dumps(support),
+                                 'expected': {'probeTarget': {'target_x': 36.0 if side == 0 else -36.0,
+                                                              'target_y': -10.0, 'sprint': False}}}, 'MOVE_TO'))
+            cases.append((side, {'id': 'world-restart-' + str(side), 'modelText': json.dumps(restart),
+                                 'expected': {'probeTarget': {'target_x': -.354720 if side == 0 else .354720,
+                                                              'target_y': -.871743, 'sprint': False}}}, 'MOVE_TO'))
     if player_id == 3 and env.get('FWD_COORDINATE_PROBE') in ('world-target', 'own-wide'):
         for side in (0, 1):
             diagnostic = copy.deepcopy(observed)
