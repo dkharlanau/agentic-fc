@@ -10,33 +10,33 @@
   "roles": {
     "gk": {
       "playerId": 0,
-      "promptSha256": "a7e09482e6bb5aa17618dead15283305788ba5819d2bd0da7a18f36df08266b4",
+      "promptSha256": "ba8cc43c1c39dca4dbb5b9e18f721419b554901730248bfe9d9b9ed3a6796e92",
       "modelId": "global.amazon.nova-2-lite-v1:0",
-      "words": 623
+      "words": 681
     },
     "def": {
       "playerId": 1,
-      "promptSha256": "1fdcbb787f155d3f6f8384b673b1519bb33f4bbb0ee7e83d23c439d7b5191e7a",
+      "promptSha256": "1051b151fbe84f464bdc78583b867bbe6a1ef5c0ed4d5ed1e304aca948daf637",
       "modelId": "global.amazon.nova-2-lite-v1:0",
-      "words": 652
+      "words": 710
     },
     "mid": {
       "playerId": 2,
-      "promptSha256": "fcf61511fa98d2beb2fad6a3d90e9c7447d85b4cb4e9c1cd544672a16b652437",
+      "promptSha256": "ad0d332cd118326e6d3c27b101d21ae5d962f8a3309b61696964e15d25c62c73",
       "modelId": "global.amazon.nova-2-lite-v1:0",
-      "words": 651
+      "words": 709
     },
     "fwd1": {
       "playerId": 3,
-      "promptSha256": "47d309218724d9db3077e148925fa1fe3969de8d1dcd537611e637dbb74b2847",
+      "promptSha256": "396916c49d1e2a44b52c85d6cc197a29a084846fd65abb96109f1209c85cebb2",
       "modelId": "global.amazon.nova-2-lite-v1:0",
-      "words": 660
+      "words": 718
     },
     "fwd2": {
       "playerId": 4,
-      "promptSha256": "2839ae6a7c340f7467271249e7b846662baa4ea5d00148c34146fdf8802766e9",
+      "promptSha256": "7a08ee74e4b501d393e8b92d98955190432a5d589fbcef5b82501aaa2615b16f",
       "modelId": "global.anthropic.claude-haiku-4-5-20251001-v1:0",
-      "words": 649
+      "words": 707
     }
   }
 }

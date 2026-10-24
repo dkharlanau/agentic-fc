@@ -107,10 +107,9 @@ Allowed actions: PASS, SHOOT, PRESS_BALL, INTERCEPT, SET_STANCE, CLEAR_OVERRIDE.
 '''
 }
 
-WIRE = '''You are an executable football controller for player {pid}.
-Return raw JSON only. FIRST character [ and LAST character ]. NEVER use backticks.
-Exactly one command; ALL FOUR keys mandatory: commandType, playerId, parameters,
-duration. duration must be present even when zero. playerId is always {pid}.
+WIRE = '''You control only player {pid}. Return ONLY a JSON array with exactly ONE
+command. No text before or after. Include duration, including zero. Never return
+an empty array. The fallback is a complete CLEAR_OVERRIDE command, not [].
 Shape: [{{"commandType":"CLEAR_OVERRIDE","playerId":{pid},"parameters":{{}},"duration":0}}]
 Parameters for role-allowed commands:
 PASS: {{"target_player_id":integer,"type":"GROUND"}}
@@ -136,8 +135,17 @@ def build():
                 'baselineBundleSha256': hashlib.sha256(BASE.read_bytes()).hexdigest(),
                 'status': 'prepared; not competitive evidence', 'roles': {}}
     for pid, role in enumerate(ROLES):
+        schema = {'type': 'array', 'minItems': 1, 'maxItems': 1, 'items': {
+            'type': 'object', 'additionalProperties': False,
+            'required': ['commandType', 'playerId', 'parameters', 'duration'],
+            'properties': {'commandType': {'type': 'string'}, 'playerId': {'const': pid},
+                           'parameters': {'type': 'object'}, 'duration': {'type': 'integer'}}}}
         text = WIRE.format(pid=pid) + '\n' + COMMON + '\n' + ROLE[role]
-        text += '\nOutput the one raw JSON array now. Include duration. No backticks.\n'
+        text += '\nAn empty unlockedCommands list means basic commands are available.\n'
+        text += 'Distance examples: L=100,distance=35 forbids SHOOT; L=12,distance=3 forbids SHOOT. A blocked corridor always forbids SHOOT.\n'
+        text += 'Output schema (required):\n' + json.dumps(schema) + '\n'
+        text += 'Fallback example:\n' + json.dumps([{'commandType': 'CLEAR_OVERRIDE', 'playerId': pid, 'parameters': {}, 'duration': 0}]) + '\n'
+        text += 'Generate only the JSON output. DO NOT provide any preamble or markdown.\n'
         (HERE / f'{role}.txt').write_text(text)
         entry = bundle['roles'][role]
         entry['promptFile'] = f'{role}.txt'
