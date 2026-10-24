@@ -372,3 +372,12 @@ Ninth M8 game won2:0 without coaching/native probes. Shots12:0,on target2:0,poss
 Tenth M8 game won4:1 without coaching/native probes. Shots7:2,on target4:1,possession45%,475commands912ms. MOVE193,INTERCEPT89,MARK86,PASS79,CLEAR23,GKDIST5;RESET0,SHOOT0. Role latencies816/942/920/959/991ms,reportedSuccess100%. Same opponent name and retained setup yielded another win, but exact opponent execution/settings remain uncontrolled. M8 firsttenoutcomes9wins/1draw, no recorded losses.
 
 Fresh table:rank7,100points,46P33W1D12L,goals68:33(+35). Summary separately stored. Latest AWS version recheck remained13/19/15/14/14 with matching local source hashes; see M8 manifest verification.
+
+
+## Live38 final manual game:3:0 Team AA; retained M8
+
+The last requested M8 game won3:0 without coaching/native probes. Shots7:0,on target3:0,possession41%,332commands893ms:PRESS138,MOVE137,INTERCEPT34,CLEAR22,SHOOT1;RESET0. Role latencies595/1114/910/651/857ms,reportedSuccess100%. No further manual games were requested.
+
+Final operator snapshot:rank7,103points,47P34W1D12L,goals71:33(+38). M8 observed series:11games,10wins/1draw/0losses,goals19:2. These uncontrolled observations do not prove an optimal strategy or contest victory. All38observed reports, complete configuration/source hashes, rejected probes and separate cumulative/summary scopes are retained.
+
+Final unchanged-profile Fitness passed5/5 again:5commands100%active0ms,fourNova and oneAllowedHaiku,formation1-1-2. No scrimmage reset was repeated for this check; fresh generation/model speed is not established. Latest immutable AWS versions remained13/19/15/14/14. [Session receipt](run-20261023-summary.json) contains the retained portable configuration, final gate, cohort and limits. No model-weight fine-tuning or offline controller deployment is claimed.

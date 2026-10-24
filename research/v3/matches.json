@@ -1444,6 +1444,46 @@
       "initiation": "manual auto-matched by normal Find after verified M8 gate",
       "evidenceCapturedAtUTC": "2026-10-24T01:00:52.792979+00:00",
       "coaching": []
+    },
+    {
+      "id": "live-38",
+      "setup": "A0-M8-formation112",
+      "opponent": "Team AA",
+      "side": "home",
+      "goalsFor": 3,
+      "goalsAgainst": 0,
+      "shotsFor": 7,
+      "shotsAgainst": 0,
+      "shotsOnTargetFor": 3,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 41,
+      "commands": 332,
+      "averageLatencyMs": 893,
+      "commandCounts": {
+        "PRESS_BALL": 138,
+        "MOVE_TO": 137,
+        "INTERCEPT": 34,
+        "CLEAR_OVERRIDE": 22,
+        "SHOOT": 1
+      },
+      "opponentCommands": 23,
+      "opponentAverageLatencyMs": 2,
+      "roleLatencyMs": {
+        "gk": 595,
+        "def": 1114,
+        "mid": 910,
+        "fwd1": 651,
+        "fwd2": 857
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy."
+      ],
+      "initiation": "last manual auto-match requested before scheduling cutoff",
+      "evidenceCapturedAtUTC": "2026-10-24T01:08:50.201238+00:00",
+      "coaching": []
     }
   ],
   "recordingOrder": "Local evidence-capture order; background matches may be appended retrospectively."

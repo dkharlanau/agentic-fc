@@ -442,7 +442,7 @@
       },
       "id": "A0-M8-formation112",
       "parent": "A0-M7-formation121",
-      "status": "verified_ui_fitness_5_of_5_after_formation_change",
+      "status": "retained_after_observed_live_series_and_final_ui_fitness_5_of_5",
       "truncation": {
         "strategy": "sliding_window",
         "messagesCount": 10
@@ -501,7 +501,17 @@
         "reportedAverageLatencyMs": 0,
         "portalFwd2ModelLabel": "Allowed \u00b7 claude-haiku-4-5-20251001-v1:0",
         "sessionResetBeforeThisCheck": false,
-        "limitation": "Formation-only change; unchanged Harness configuration inherited M7. UI gate verified, not proof of new generation or real model speed."
+        "limitation": "Formation-only change; unchanged Harness configuration inherited M7. UI gate verified, not proof of new generation or real model speed.",
+        "finalCheck": {
+          "passedPositions": 5,
+          "totalPositions": 5,
+          "commands": 5,
+          "activePercent": 100,
+          "reportedAverageLatencyMs": 0,
+          "capturedAtUTC": "2026-10-24T01:09:12.894698+00:00",
+          "sessionResetBeforeThisCheck": false,
+          "limitation": "Unchanged configuration; UI gate only, not proof of new generation or model speed."
+        }
       }
     }
   ]

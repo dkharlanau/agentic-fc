@@ -208,6 +208,28 @@
         "points": 100
       },
       "limitation": "Capture-time ranking, not final contest outcome. Summary and table retain separate scopes."
+    },
+    {
+      "capturedAtUTC": "2026-10-24T01:08:50.390194+00:00",
+      "teamSummary": {
+        "played": 20,
+        "wins": 15,
+        "draws": 1,
+        "losses": 4,
+        "winRatePercent": 75
+      },
+      "leaderboard": {
+        "rank": 7,
+        "played": 47,
+        "wins": 34,
+        "draws": 1,
+        "losses": 12,
+        "goalsFor": 71,
+        "goalsAgainst": 33,
+        "goalDifference": 38,
+        "points": 103
+      },
+      "limitation": "Final operator snapshot, not final contest placing. Observed38reports and cumulative47played have different scopes."
     }
   ]
 }

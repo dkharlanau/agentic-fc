@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "recordedAtUTC": "2026-10-24T01:10:21.181393+00:00",
+  "retainedSetup": "A0-M8-formation112",
+  "configuration": {
+    "formation": "1-1-2",
+    "modelByRole": {
+      "gk": "global.amazon.nova-2-lite-v1:0",
+      "def": "global.amazon.nova-2-lite-v1:0",
+      "mid": "global.amazon.nova-2-lite-v1:0",
+      "fwd1": "global.amazon.nova-2-lite-v1:0",
+      "fwd2": "global.anthropic.claude-haiku-4-5-20251001-v1:0"
+    },
+    "awsVersionByRole": {
+      "gk": 13,
+      "def": 19,
+      "mid": 15,
+      "fwd1": 14,
+      "fwd2": 14
+    },
+    "promptDirectory": "schema-clean",
+    "promptSha256": {
+      "def": "86426b2320f5e40e444ebe553b0827b3707ff6f5cd22599478f71e5391c838d9",
+      "fwd1": "ee4c92203e6fcbc86d14329913933ba68d8cd2092947bebd2c66d5ed14c17b15",
+      "fwd2": "03ed589df3ebe560294ac54966bfc27156aa27391c8079dae5aab93ba096a13f",
+      "gk": "43a75e8e85225b14879c7c9b839a7f8b3e5d056d8a841a1a4019b8fc8263cd36",
+      "mid": "7b05fe872d47c532c374390642006759924d84048a61577bf4f3a9bba400c729"
+    },
+    "allowedToolsByRole": {
+      "gk": [],
+      "def": [],
+      "mid": [],
+      "fwd1": [],
+      "fwd2": []
+    },
+    "inferenceConfig": null,
+    "truncation": {
+      "strategy": "sliding_window",
+      "messagesCount": 10
+    },
+    "memory": [],
+    "gateway": null
+  },
+  "finalFitness": {
+    "passedPositions": 5,
+    "totalPositions": 5,
+    "commands": 5,
+    "activePercent": 100,
+    "reportedAverageLatencyMs": 0,
+    "capturedAtUTC": "2026-10-24T01:09:12.894698+00:00",
+    "sessionResetBeforeThisCheck": false,
+    "limitation": "Unchanged configuration; UI gate only, not proof of new generation or model speed."
+  },
+  "observedReports": 38,
+  "retainedSetupSeries": {
+    "games": 11,
+    "wins": 10,
+    "draws": 1,
+    "losses": 0,
+    "goalsFor": 19,
+    "goalsAgainst": 2,
+    "matchIds": [
+      "live-28",
+      "live-29",
+      "live-30",
+      "live-31",
+      "live-32",
+      "live-33",
+      "live-34",
+      "live-35",
+      "live-36",
+      "live-37",
+      "live-38"
+    ],
+    "scope": "Observed manual M8 games, not an isolated controlled estimate of formation/model strength."
+  },
+  "lastStandingsSnapshot": {
+    "capturedAtUTC": "2026-10-24T01:08:50.390194+00:00",
+    "teamSummary": {
+      "played": 20,
+      "wins": 15,
+      "draws": 1,
+      "losses": 4,
+      "winRatePercent": 75
+    },
+    "leaderboard": {
+      "rank": 7,
+      "played": 47,
+      "wins": 34,
+      "draws": 1,
+      "losses": 12,
+      "goalsFor": 71,
+      "goalsAgainst": 33,
+      "goalDifference": 38,
+      "points": 103
+    },
+    "limitation": "Final operator snapshot, not final contest placing. Observed38reports and cumulative47played have different scopes."
+  },
+  "history": {
+    "repository": "https://github.com/dkharlanau/agentic-fc",
+    "branch": "codex/football-experiments-20261023",
+    "pullRequest": "https://github.com/dkharlanau/agentic-fc/pull/5"
+  },
+  "modelDecision": "Retain Nova FWD1: direct-input Nova passed3/3 strictJSON-only, Haiku2/3 despite3/3 expected tactical categories. Haiku remains onlyFWD2.",
+  "rejectedLaboratoryCandidates": [
+    "team-routing",
+    "gk-routing",
+    "command-guard",
+    "FWD1 Haiku upgrade"
+  ],
+  "validation": {
+    "parserFocusedTestsPassed": 4,
+    "priorRenderedReportRegressionsPassed": 7,
+    "currentPromptHashesVerified": true,
+    "latestImmutableVersionsUnchanged": true
+  },
+  "limitations": [
+    "Tournament victory, optimal strategy and causal model/formation gain are not established.",
+    "Per-tick live invocation payload and useful application of every issued command were not recovered.",
+    "Reported low latency/Success100%/Fitness do not prove active LLM generation; primary stats missing inlive29 remainnull.",
+    "No model-weight fine-tuning or offline Python-controller deployment is claimed.",
+    "RESET recurred despite saved prohibition; no hard output enforcement was verified.",
+    "Current snapshot rank can change after this record."
+  ]
+}
