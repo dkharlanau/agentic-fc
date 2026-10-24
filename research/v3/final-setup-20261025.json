@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 2,
+  "status": "selected-working-checkpoint-not-proven-optimal",
+  "savedAtUTC": "2026-10-24T21:44:47.767478+00:00",
+  "setup": "four-original-M8-plus-fast-FWD2-stance",
+  "formation": "1-1-2",
+  "roles": {
+    "gk": {
+      "registeredKind": "original Harness",
+      "currentVersion": "13",
+      "exportSourceVersion": "13",
+      "modelId": "global.amazon.nova-2-lite-v1:0",
+      "promptFile": "research/v3/schema-clean/gk.txt",
+      "promptSha256": "43a75e8e85225b14879c7c9b839a7f8b3e5d056d8a841a1a4019b8fc8263cd36",
+      "configurationSha256": "dffba3d7e6e03a63510440520eedef2e03ebb951adee0222692ac963a2038e86"
+    },
+    "def": {
+      "registeredKind": "original Harness",
+      "currentVersion": "19",
+      "exportSourceVersion": "19",
+      "modelId": "global.amazon.nova-2-lite-v1:0",
+      "promptFile": "research/v3/schema-clean/def.txt",
+      "promptSha256": "86426b2320f5e40e444ebe553b0827b3707ff6f5cd22599478f71e5391c838d9",
+      "configurationSha256": "dffba3d7e6e03a63510440520eedef2e03ebb951adee0222692ac963a2038e86"
+    },
+    "mid": {
+      "registeredKind": "original Harness",
+      "currentVersion": "15",
+      "exportSourceVersion": "15",
+      "modelId": "global.amazon.nova-2-lite-v1:0",
+      "promptFile": "research/v3/schema-clean/mid.txt",
+      "promptSha256": "7b05fe872d47c532c374390642006759924d84048a61577bf4f3a9bba400c729",
+      "configurationSha256": "dffba3d7e6e03a63510440520eedef2e03ebb951adee0222692ac963a2038e86"
+    },
+    "fwd1": {
+      "registeredKind": "original Harness",
+      "currentVersion": "16",
+      "exportSourceVersion": "15",
+      "modelId": "global.amazon.nova-2-lite-v1:0",
+      "promptFile": "research/v3/schema-clean/fwd1.txt",
+      "promptSha256": "ee4c92203e6fcbc86d14329913933ba68d8cd2092947bebd2c66d5ed14c17b15",
+      "configurationSha256": "dffba3d7e6e03a63510440520eedef2e03ebb951adee0222692ac963a2038e86"
+    },
+    "fwd2": {
+      "registeredKind": "AgentCore code Runtime",
+      "runtimeRevision": 9,
+      "sourceCommit": "931af03",
+      "playerId": 4,
+      "mode": "stance",
+      "modelId": null,
+      "modelCallsPerTick": 0,
+      "sourceFile": "fast_path_v2/engine.py",
+      "artifactManifest": "fast_path_v2/artifact.json"
+    }
+  },
+  "originalFwd2Rollback": {
+    "registeredKind": "original Harness",
+    "currentVersion": "14",
+    "exportSourceVersion": "14",
+    "modelId": "global.anthropic.claude-haiku-4-5-20251001-v1:0",
+    "promptFile": "research/v3/schema-clean/fwd2.txt",
+    "promptSha256": "03ed589df3ebe560294ac54966bfc27156aa27391c8079dae5aab93ba096a13f",
+    "configurationSha256": "acdaf451e4d301949ddd47bff8d857c2eb68ae2292112b2cf3760fc9ff4a6c4c"
+  },
+  "evidence": {
+    "native": "research/v3/fwd2-outlet/rollback-native.json",
+    "nativePassed": 34,
+    "fitness": "5/5",
+    "freshRealGames": "research/v3/ranked-batch-10.json",
+    "exactOwnAudits": "research/v3/stance-return-audits.json",
+    "allFiveModesVerified": true,
+    "ownResponses": 394,
+    "stanceResponses": 389,
+    "safeBootstrapResponses": 5,
+    "modelCalls": 0,
+    "leaderboard": {
+      "rank": 17,
+      "points": 201,
+      "played": 119,
+      "wins": 66,
+      "draws": 3,
+      "losses": 50,
+      "goalsFor": 157,
+      "goalsAgainst": 110
+    }
+  },
+  "recovery": {
+    "originalHarnessInstructions": "research/v3/recovery/README.ru.md",
+    "fastRuntimeInstructions": "fast_path_v2/RECOVERY.ru.md",
+    "harnessProfile": "baseline-m8",
+    "sourceCommit": "931af03",
+    "archiveSha256": "ef9b7c704e1d8fb011fae6ea55e5239d2ac54f64c76afc0ef439dc76d5aea226",
+    "fullFreshAccountRestoreVerified": false
+  },
+  "operations": {
+    "remainingQuotaPercent": 5,
+    "newMatchesAllowed": false,
+    "reason": "Owner quota guard reached; finish saves only",
+    "activeMatch": false,
+    "automaticShutdown": false,
+    "noNewAutomations": true
+  },
+  "limitations": [
+    "Winning tournament and reaching final not established",
+    "Full AWS warm median105ms; <=10ms not achieved",
+    "Role attribution in report remains inconsistent",
+    "All latest controlled games HOME; AWAY not verified",
+    "No weight training or automatic cross-match learning",
+    "Fresh account complete restore untested"
+  ]
+}

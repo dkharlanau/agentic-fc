@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "status": "selected-and-restored",
+  "status": "historical-superseded",
   "selectedAtUTC": "2026-10-24T15:39:00Z",
   "setup": "A0-M8-formation112",
   "formation": "1-1-2",
@@ -137,5 +137,6 @@
     "Aggregate reports do not measure shot distance or keeper save probability.",
     "No trained weights or automatic cross-match learning.",
     "Full five-role restore in a fresh account remains untested."
-  ]
+  ],
+  "supersededBy": "final-setup-20261025.json"
 }

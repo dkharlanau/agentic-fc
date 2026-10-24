@@ -1,5 +1,34 @@
 # Agentic FC continuation
 
+## FINAL QUOTA CHECKPOINT — 2026-10-24T21:44:47.767478+00:00
+
+Owner quota guard reached:5% remaining. DO NOT start matches or experiments.
+All in-flight games finished, portal READY TO PLAY, no active game observed.
+Goal not achieved: final/winning/<=10ms remain unproven. This is quota finalization,
+not success or a user-requested pause. Do not consume reserve on repeated status.
+Resume substantive work only with changed quota or explicit owner steering.
+
+Selected working setup:4originalM8 + fastFWD2 stance/source931af03/revision9,
+formation112. Native34/34/stoppedtrue/Fitness5/5; all5 fresh real sessions verified.
+Cohort10:2W3L,6:6goals,22:32shots. Soccer0:2,Singularity0:1,
+AgentCore Fighters2:1,Tik&Taka1:2OT,LFC3:0.394exactresponses389stance+5bootstrap,
+0modelcalls. Table119P66W3D50L157:110,201points,rank17. No extra incoming games.
+Last two cohorts are2W3L each; previous4W1L is not representative proof.
+
+Canonical selected manifest research/v3/final-setup-20261025.json and
+FINAL_SETUP.ru.md. Old20261024manifest explicitly historical-superseded.
+Recovery includes original5Harness/profilebaseline-m8 then fastFWD2replacement;
+newaccount full restore untested. Archive/source hashes verified prior checkpoint.
+Public Git excludes credentials/raw states/ARNs/screenshots; private.local retained.
+CloudShelltab17 reconnected,input107,cwdnhitl-fast-v2,HEAD931af03.
+Portal7 MY TEAM READY,workshop16. Private cohort10bindings/screenshots in
+.local/ranked-batch-10; completeaudits onCloudShell, publicsummary exported.
+
+Next genuine improvement after resume: trace own GK/DEF/MID/FWD1 live invocation
+and physical effect. Report counters/columns are not a reliable substitute.
+Do not introduce a new model or all-role rewrite without this evidence.
+No newPractice/Benchmark, no new automation, no shutdown, VPN unchanged.
+
 ## Active series10
 
 Revision9 stance/source931af03 verified in first fresh real game:71stance+1bootstrap,
