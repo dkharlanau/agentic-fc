@@ -86,5 +86,26 @@
     "Leaderboard rank remains14 although points increased; competitors played too.",
     "Screenshots/rawgameidentifiers remain ignored/private.",
     "Reported actions are not physical execution proof."
-  ]
+  ],
+  "stabilityS01": {
+    "sourceReports": [
+      "live-63",
+      "live-64",
+      "live-65",
+      "live-66",
+      "live-67"
+    ],
+    "completeShotStats": 5,
+    "scorelessGames": 1,
+    "losses": 2,
+    "oneGoalLosses": 2,
+    "medianGoalDifference": 1,
+    "goalsShareFromLargestWin": 0.375,
+    "largestWinReport": "live-63",
+    "shotAdvantageGames": 3,
+    "shotAdvantageWins": 3,
+    "shotAdvantageDraws": 0,
+    "shotAdvantageLosses": 0,
+    "limitation": "Descriptive five-game snapshot; uncontrolled opponents and sides, no causal inference."
+  }
 }

@@ -3157,6 +3157,130 @@
       "initiation": "manual",
       "batch": "ranked-batch-03",
       "earlyScoreObserved": "2:0at30seconds; final2:3"
+    },
+    {
+      "id": "live-76",
+      "setup": "M8-fouroriginal-plus-R1v14-position-FWD1-112",
+      "opponent": "Amber Crests 2",
+      "side": "home",
+      "goalsFor": 0,
+      "goalsAgainst": 1,
+      "shotsFor": 4,
+      "shotsAgainst": 7,
+      "shotsOnTargetFor": 0,
+      "shotsOnTargetAgainst": 1,
+      "possessionPercent": 46,
+      "commands": 308,
+      "averageLatencyMs": 779,
+      "commandCounts": {
+        "MOVE_TO": 255,
+        "INTERCEPT": 32,
+        "SHOOT": 9,
+        "CLEAR_OVERRIDE": 8,
+        "PASS": 3,
+        "GK_DISTRIBUTE": 1
+      },
+      "opponentCommands": 70,
+      "opponentAverageLatencyMs": 124,
+      "roleLatencyMs": {
+        "gk": 875,
+        "def": 794,
+        "mid": 861,
+        "fwd1": 754,
+        "fwd2": 779
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy."
+      ],
+      "initiation": "manual",
+      "batch": "ranked-batch-03"
+    },
+    {
+      "id": "live-77",
+      "setup": "M8-fouroriginal-plus-R1v14-position-FWD1-112",
+      "opponent": "(〃￣︶￣)人(￣︶￣〃)",
+      "side": "home",
+      "goalsFor": 2,
+      "goalsAgainst": 1,
+      "shotsFor": 2,
+      "shotsAgainst": 2,
+      "shotsOnTargetFor": 2,
+      "shotsOnTargetAgainst": 1,
+      "possessionPercent": 39,
+      "commands": 396,
+      "averageLatencyMs": 1123,
+      "commandCounts": {
+        "MOVE_TO": 221,
+        "PRESS_BALL": 93,
+        "RESET": 41,
+        "CLEAR_OVERRIDE": 15,
+        "INTERCEPT": 13,
+        "MARK": 7,
+        "SHOOT": 6
+      },
+      "opponentCommands": 91,
+      "opponentAverageLatencyMs": 113,
+      "roleLatencyMs": {
+        "gk": 867,
+        "def": 1076,
+        "mid": 1149,
+        "fwd1": 881,
+        "fwd2": 1192
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "ReporttableRESET41 is not attributed to the code-guarded R1; physicalissuer unknown, preserveknownreportattributionlimitation."
+      ],
+      "initiation": "manual",
+      "batch": "ranked-batch-03"
+    },
+    {
+      "id": "live-78",
+      "setup": "M8-fouroriginal-plus-R1v14-position-FWD1-112",
+      "opponent": "LFC",
+      "side": "away",
+      "goalsFor": 1,
+      "goalsAgainst": 2,
+      "shotsFor": 7,
+      "shotsAgainst": 6,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 2,
+      "possessionPercent": 38,
+      "commands": 430,
+      "averageLatencyMs": 228,
+      "commandCounts": {
+        "MOVE_TO": 342,
+        "INTERCEPT": 27,
+        "PRESS_BALL": 25,
+        "CLEAR_OVERRIDE": 18,
+        "PASS": 15,
+        "GK_DISTRIBUTE": 3
+      },
+      "opponentCommands": 99,
+      "opponentAverageLatencyMs": 123,
+      "roleLatencyMs": {
+        "gk": 223,
+        "def": 214,
+        "mid": 255,
+        "fwd1": 251,
+        "fwd2": 127
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy."
+      ],
+      "initiation": "incoming",
+      "batch": "ranked-batch-03",
+      "extraTime": true,
+      "unityFinalGameTime": "02:18"
     }
   ],
   "recordingOrder": "Local evidence-capture order; background matches may be appended retrospectively."

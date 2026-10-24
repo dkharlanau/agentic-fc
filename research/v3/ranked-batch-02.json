@@ -105,5 +105,26 @@
     "lateGame": "Singularityscoredafter2:0lead; ownstillwon2:1. No supported keeperculprit or savepercentage.",
     "combinedStableBatches": "10games5W1D4L,12:11goals,16points;133→149points,rank14unchanged. Opponents/sidesuncontrolled.",
     "nextAction": "OnlyFWD1v14position support. AlreadyunusedREADY/native9passed/allownstopped; recheckidle, bindoneFWD1, requireFitness5thenPractice08Benchmark andobservedmovement. Otherfouroriginal,112,Nova2Liteunchanged. RestoreoriginalFWD1v16 onformat/frame/recipient/regression; noGK/model/formation/observerchange."
+  },
+  "stabilityS01": {
+    "sourceReports": [
+      "live-68",
+      "live-69",
+      "live-70",
+      "live-71",
+      "live-72"
+    ],
+    "completeShotStats": 4,
+    "scorelessGames": 3,
+    "losses": 2,
+    "oneGoalLosses": 1,
+    "medianGoalDifference": 0,
+    "goalsShareFromLargestWin": 0.5,
+    "largestWinReport": "live-70",
+    "shotAdvantageGames": 2,
+    "shotAdvantageWins": 2,
+    "shotAdvantageDraws": 0,
+    "shotAdvantageLosses": 0,
+    "limitation": "Descriptive five-game snapshot; uncontrolled opponents and sides, no causal inference."
   }
 }
