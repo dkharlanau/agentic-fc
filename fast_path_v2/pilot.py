@@ -2,9 +2,10 @@
 """CloudShell-only isolated FWD2 timing pilot; never registers a portal agent.
 Reuses an existing execution role, bucket and reviewed dependency archive.
 """
-import argparse,hashlib,io,json,statistics,time,uuid,zipfile
+import argparse,hashlib,io,json,statistics,time,uuid,zipfile,sys
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT))
 SOURCES=('agentic_fc/__init__.py','agentic_fc/state.py','agentic_fc/geometry.py','agentic_fc/policy.py','runtime_v1/__init__.py','runtime_v1/sensing.py','fast_path_v2/__init__.py','fast_path_v2/engine.py','fast_path_v2/main.py')
 
 def save(p,obj):p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(obj,indent=2,default=str)+'\n');p.chmod(0o600)
