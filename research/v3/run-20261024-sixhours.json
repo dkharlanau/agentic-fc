@@ -1,8 +1,8 @@
 {
   "kind": "bounded autonomous run",
   "startedAtUTC": "2026-10-24T05:53:07Z",
-  "deadlineUTC": "2026-10-24T13:53:07Z",
-  "stopNewMatchesUTC": "2026-10-24T13:43:07Z",
+  "deadlineUTC": "2026-10-24T17:14:05Z",
+  "stopNewMatchesUTC": "2026-10-24T17:04:05Z",
   "automaticShutdown": false,
   "initialLeaderboard": {
     "rank": 10,
@@ -15,7 +15,7 @@
     "points": 106
   },
   "initialSetup": "A0-M7-formation121",
-  "currentTrial": "A0-M7-formation121",
+  "currentTrial": "R1-FWD1-v5-plus-M7",
   "priorities": [
     "Preserve portable exact five-role AWS setup before workshop reset",
     "Validate STM on one role, inspect actual input contract where available",
@@ -31,7 +31,9 @@
     "live-47",
     "live-48",
     "live-49",
-    "live-50"
+    "live-50",
+    "live-51",
+    "live-52"
   ],
   "singleRoleRecoveryCanary": {
     "created": true,
@@ -58,17 +60,19 @@
     "liveMemoryUse": "not established",
     "rollback": "Original FWD1 v16 is behavior-identical to pre-Memory v14; UI5/5"
   },
-  "runtimeCandidate": "AWSR1v4; actuallive protocolcaptured; v5adapter localpending",
-  "windowExtension": "User requested6-8hours; maximum8hours from original start",
+  "runtimeCandidate": "AWSR1v5, five native gates and UI Fitness5/5; 69 live model choices verified in live52",
+  "windowExtension": "New explicit user request at09:14UTC:8hours from this moment",
   "latestLeaderboard": {
     "rank": 10,
-    "played": 58,
-    "wins": 39,
+    "played": 61,
+    "wins": 40,
     "draws": 1,
-    "losses": 18,
-    "goalsFor": 82,
-    "goalsAgainst": 44,
-    "points": 118,
-    "capturedAtUTC": "2026-10-24T08:02:00Z"
-  }
+    "losses": 20,
+    "goalsFor": 84,
+    "goalsAgainst": 47,
+    "points": 121,
+    "capturedAtUTC": "2026-10-24T09:03:00Z"
+  },
+  "newManualMatchCutoffUTC": "2026-10-24T17:04:05Z",
+  "deadlineLocal": "2026-10-24 20:14:05 Europe/Minsk"
 }

@@ -1996,6 +1996,147 @@
         "Live error-path Memory capture is operational evidence, not successful model action selection.",
         "Primary STATS have no per-shot distance/outcome table."
       ]
+    },
+    {
+      "id": "live-51",
+      "setup": "unattributed-background",
+      "opponent": "Amber Horns 2",
+      "side": "home",
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "shotsFor": 7,
+      "shotsAgainst": 2,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 45,
+      "commands": 306,
+      "averageLatencyMs": 754,
+      "commandCounts": {
+        "PRESS_BALL": 138,
+        "RESET": 63,
+        "MARK": 50,
+        "INTERCEPT": 32,
+        "CLEAR_OVERRIDE": 15,
+        "MOVE_TO": 7,
+        "SHOOT": 1
+      },
+      "opponentCommands": 26,
+      "opponentAverageLatencyMs": 18,
+      "roleLatencyMs": {
+        "gk": 628,
+        "def": 734,
+        "mid": 894,
+        "fwd1": 566,
+        "fwd2": 849
+      },
+      "reportedRoleSuccessPercent": 100,
+      "lastKnownSavedSetup": "R1-FWD1-diagnostic-v4-plus-M7",
+      "coaching": [],
+      "initiation": "Already completed in background history; no Find clicked; kickoff not observed",
+      "limitations": [
+        "Exclude from controlled setup comparisons.",
+        "Team report includes63RESET commands; per-role model or fallback origin is not established.",
+        "R1v4 still had the observed live contract mismatch; no successful R1 decision claimed.",
+        "Possession and command counts do not establish tactical causation."
+      ]
+    },
+    {
+      "id": "live-52",
+      "setup": "unattributed-background",
+      "opponent": "Meerut United",
+      "side": "home",
+      "goalsFor": 0,
+      "goalsAgainst": 1,
+      "shotsFor": 5,
+      "shotsAgainst": 2,
+      "shotsOnTargetFor": 0,
+      "shotsOnTargetAgainst": 1,
+      "possessionPercent": 41,
+      "commands": 332,
+      "averageLatencyMs": 73,
+      "commandCounts": {
+        "MOVE_TO": 264,
+        "PRESS_BALL": 22,
+        "INTERCEPT": 19,
+        "PASS": 15,
+        "CLEAR_OVERRIDE": 7,
+        "GK_DISTRIBUTE": 5
+      },
+      "opponentCommands": 73,
+      "opponentAverageLatencyMs": 94,
+      "roleLatencyMs": {
+        "gk": 86,
+        "def": 84,
+        "mid": 79,
+        "fwd1": 84,
+        "fwd2": 82
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Exact kickoff bindings of the other four roles were not observed.",
+        "CloudWatch decision totals differ from portal command totals; issued Runtime responses are not proof that each was applied.",
+        "Observed opponent corner positioning reported by user in extra time; no replay coordinates captured to identify the exact pattern."
+      ],
+      "lastKnownSavedSetup": "R1-FWD1-v5-plus-M7",
+      "initiation": "Inbound game; Preparing observed after native probes; no Find clicked",
+      "coaching": [],
+      "runtimeEvidence": {
+        "sourceCommit": "41ae5e4",
+        "decisionCount": 69,
+        "modelChoices": 69,
+        "inputRejections": 0,
+        "commands": {
+          "CLEAR_OVERRIDE": 67,
+          "PASS": 2
+        },
+        "modelLatencyMedianMs": 411,
+        "phaseCounts": {
+          "FREE": 20,
+          "UNKNOWN": 24,
+          "THEIRS": 12,
+          "OURS": 13
+        }
+      }
+    },
+    {
+      "id": "live-53",
+      "setup": "R1-FWD1-v5-plus-M7",
+      "opponent": "Sporting Lambda",
+      "side": "home",
+      "goalsFor": 0,
+      "goalsAgainst": 2,
+      "shotsFor": 3,
+      "shotsAgainst": 6,
+      "shotsOnTargetFor": 0,
+      "shotsOnTargetAgainst": 2,
+      "possessionPercent": 63,
+      "commands": 8,
+      "averageLatencyMs": 1,
+      "commandCounts": {
+        "CLEAR_OVERRIDE": 8
+      },
+      "opponentCommands": 91,
+      "opponentAverageLatencyMs": 97,
+      "roleLatencyMs": {
+        "gk": 2,
+        "def": 2,
+        "mid": 1,
+        "fwd1": 1,
+        "fwd2": 1
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Portal counted8CLEAR and reportedFWD1ms; this is not model or end-to-end Runtime latency.",
+        "No per-shot distance/outcome table available."
+      ],
+      "initiation": "Manual Find clicked after v5 profile binding and UI Fitness5/5",
+      "coaching": []
     }
   ],
   "recordingOrder": "Local evidence-capture order; background matches may be appended retrospectively."

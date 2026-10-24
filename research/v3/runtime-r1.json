@@ -1,6 +1,6 @@
 {
   "kind": "Independent Runtime FWD1 pilot; public-safe evidence summary",
-  "status": "AWSv4 live contract captured; protocol/sensing revision5 ready locally, not deployed yet",
+  "status": "AWSv5 READY; five native cases, UI Fitness5/5 and live model choices verified; no strength improvement established",
   "initialSourceCommit": "7ae12c1e737992f83a10ff5c2cf1497cb2580764",
   "initialArchiveSha256": "21ed279d4831546ff58e0ce3c91744e1d47b4cb5fbcff8ae4e970ba1489274e3",
   "reproducibility": "Local macOS cross-build and CloudShell Linux build produced identical archive SHA256,20610262bytes,2731files",
@@ -30,10 +30,10 @@
   ],
   "auditObservation": "STM events were written for both probes, but blob objects were returned as map-style strings rather than structured JSON. The initial automated audit gate therefore failed. Revision stores JSON in typed conversational text fields; it needs native revalidation.",
   "limitations": [
-    "Native probes are synthetic, not live games",
-    "No live performance improvement established",
-    "Original five-Harness M7 portal configuration remains registered",
-    "No IAM changes"
+    "Native probes are synthetic or replayed, not live outcome evidence",
+    "R1 is registered only on FWD1; original four Harness remain registered",
+    "No IAM changes",
+    "Portal report action counts differ from Runtime response counts; application semantics unresolved"
   ],
   "revisionSourceCommit": "a401d6c",
   "revisionArchiveSha256": "271e027b40f0cb77767f4a4e03f03b17f9bb2f627bd063498acda01183b5e661",
@@ -79,12 +79,54 @@
     "nativeChecks": "3/3 command and Memory model-audit gates; own sessions stopped",
     "live50": "AWAY vsPrashanthPokkula lost1:2; actual error-path STM snapshot captured OPEN_PLAY,unlockedCommands[],3Dball and2Dplayers. No successful R1 decision claimed."
   },
-  "revision5Proposal": {
-    "status": "Local only",
+  "revision5": {
+    "status": "AWS READY",
     "adapter": "OPEN_PLAY alias; empty unlock list interpreted as no supplied basic restriction; observed keeper-reference XZ normalization; bounded contact/motion ownership inference",
     "coordinateLimit": "Keeper proxy, not surveyed goalposts; outgoing coordinate conversion remains unverified",
     "ownershipLimit": "Inferred, not server-confirmed; contested/contradictory input releases control",
     "validation": "30 policy/runtime unit checks and fake-client SDK shape/stream smoke passed",
-    "nativeLiveReadiness": "Pending deployment and native5case gate"
+    "nativeLiveReadiness": "Pending deployment and native5case gate",
+    "sourceCommit": "41ae5e4",
+    "archiveSha256": "8b796c69a88f8a5c5e2f919d70d5f6b86e5c6269dd0a3196cb65cfe912f0ecf3",
+    "nativeChecks": "5/5 command and accepted-model audit gates; all own probe sessions stopped",
+    "nativeElapsedMs": [
+      4689,
+      3651,
+      3515,
+      3073,
+      4152
+    ],
+    "fitness": "UI5/5,5commands100%active",
+    "live52": {
+      "sourceCommit": "41ae5e4",
+      "decisionCount": 69,
+      "modelChoices": 69,
+      "inputRejections": 0,
+      "commands": {
+        "CLEAR_OVERRIDE": 67,
+        "PASS": 2
+      },
+      "modelLatencyMedianMs": 411,
+      "phaseCounts": {
+        "FREE": 20,
+        "UNKNOWN": 24,
+        "THEIRS": 12,
+        "OURS": 13
+      }
+    }
+  },
+  "executionAudit": {
+    "defLiveCorrelation": "From08:40UTC, logged2Fitness InvokeHarness requests,0matching live52 or53 requests; does not prove all other roles failed.",
+    "r1Live52ModelLatencyMs": {
+      "median": 411,
+      "p95": 486,
+      "max": 497
+    },
+    "transportHypothesis": "SDK emits SSE containing a JSON string for async-generator yield json.dumps. Testing one completed application/json array response without tactical changes. Server consumer behavior not accessible.",
+    "revision6Candidate": {
+      "status": "LocalHTTPshape check and30core checks passed; not deployed",
+      "onlyBehaviorChange": "Response transport, retaining v5 decision policy",
+      "archiveSha256": "0114a5a4f2489b9cc021e8ff7730aa7c2c817a3631ef2ead167b6a3f37d387c3"
+    }
   }
 }
