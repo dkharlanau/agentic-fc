@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "recordedAtUTC": "2026-10-24T05:14:33.051922+00:00",
+  "retainedSetup": "A0-M8-formation112",
+  "priorReceipt": "run-20261023-summary.json",
+  "sessionMode": "User requested continuation with no automatic shutdown timer.",
+  "workshopAccess": {
+    "dashboard": "accessible",
+    "event": "active",
+    "reentry": "Existing event dashboard reopened successfully; no new resource provisioning."
+  },
+  "awsHarnesses": {
+    "allReady": true,
+    "latestVersionByRole": {
+      "gk": 13,
+      "def": 19,
+      "mid": 15,
+      "fwd1": 14,
+      "fwd2": 14
+    },
+    "versionsChangedSincePriorReceipt": false,
+    "sourceAndModelReverifiedThisResume": false
+  },
+  "footballPortal": {
+    "status": "HTTP 403 Forbidden before login form",
+    "checkedSurfaces": [
+      "in-app browser root and player page",
+      "native Google Chrome root"
+    ],
+    "freshFitness": null,
+    "newMatchReports": 0,
+    "currentStandings": null,
+    "cause": "unresolved; network-policy or portal-side failure not distinguished"
+  },
+  "actions": {
+    "newHarnessChanges": false,
+    "networkSettingsChanged": false,
+    "credentialsPublished": false
+  },
+  "nextSteps": [
+    "Restore ordinary Player Portal access without changing network settings unless newly authorized.",
+    "Verify registered team, formation and fresh UI Fitness before scheduling a match.",
+    "Continue serial live matches from M8; preserve reports and change one tactical factor at a time."
+  ],
+  "limitations": [
+    "All Ready and unchanged versions do not prove fresh successful game invocations.",
+    "Prior Fitness 5/5, rank 7 and 103 points belong to the earlier receipt and were not refreshed.",
+    "No resumed match or improvement is claimed."
+  ]
+}

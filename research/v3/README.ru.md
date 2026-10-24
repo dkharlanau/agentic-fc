@@ -381,3 +381,10 @@ The last requested M8 game won3:0 without coaching/native probes. Shots7:0,on ta
 Final operator snapshot:rank7,103points,47P34W1D12L,goals71:33(+38). M8 observed series:11games,10wins/1draw/0losses,goals19:2. These uncontrolled observations do not prove an optimal strategy or contest victory. All38observed reports, complete configuration/source hashes, rejected probes and separate cumulative/summary scopes are retained.
 
 Final unchanged-profile Fitness passed5/5 again:5commands100%active0ms,fourNova and oneAllowedHaiku,formation1-1-2. No scrimmage reset was repeated for this check; fresh generation/model speed is not established. Latest immutable AWS versions remained13/19/15/14/14. [Session receipt](run-20261023-summary.json) contains the retained portable configuration, final gate, cohort and limits. No model-weight fine-tuning or offline controller deployment is claimed.
+
+
+## Resumed session on 2026-10-24: AWS intact; Player Portal HTTP 403
+
+Reopened the existing active workshop event after reboot. The five AWS Harnesses remain Ready at versions13/19/15/14/14 (GK/DEF/MID/FWD1/FWD2), matching the retained M8 receipt. This was a status/version-table check, not a fresh source/model or invocation audit. No Harness configuration was changed.
+
+The Player Portal returns HTTP403 before the login form in both the in-app browser and native Google Chrome. Reentering the workshop did not restore game access. The cause remains unresolved; network settings were left unchanged as requested. No new match, Fitness result or standings snapshot was obtained. Prior7thplace/103points and5/5 must not be presented as refreshed. Continue without an automatic shutdown timer. See [resume receipt](run-20261024-resume.json); raw access evidence stays local and ignored.
