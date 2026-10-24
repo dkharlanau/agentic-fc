@@ -1,6 +1,20 @@
 # Agentic FC continuation
 
-## Pending candidate — 24 Oct, 20:45 UTC
+## Current continuation — 24 Oct, 21:05 UTC
+
+Cohort09 revision8 outlet/source931af03 remains active. First three real games:
+L' Espresso W1:0; Pandavas L0:2; FC Zukko L0:1 (shots0:10). Fourth against
+FantasyFootball is in progress. Do not deploy/probe during match. Fifth pending.
+Latest quota14% remaining; <=5% stop new starts and finalize recovery/push.
+Exact third-session audit:65 responses,15 outlet MOVE_TO,one PASS,zero models,
+CPU median0.43134ms/max1.063938ms,source931af03. Portal own row only8 CLEAR
+and2–3ms is inconsistent with this audit; attribution unresolved, not a proven
+speed win or critical runtime failure. Other4 original M8/formation112 unchanged.
+Native34/34 andFitness5/5 already verified. Baseline stance recovery preserved.
+Public results research/v3/ranked-batch-09.json; private bindings/screenshots
+.local/ranked-batch-09. CloudShelltab17/input50,portal7; preserve both.
+
+## Historical candidate preparation — 24 Oct, 20:45 UTC
 
 Previousgoalturn progress: cohort08completed4W1L/saved9abc3b2.
 Now HOMEFWD2outlet implemented/source931af03,pushed.13localtests pass.

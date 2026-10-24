@@ -146,6 +146,82 @@
           "INTERCEPT": 1
         }
       }
+    },
+    {
+      "alias": "outlet-live-03",
+      "opponent": "FC Zukko",
+      "side": "HOME",
+      "status": "complete",
+      "initiation": "manual random matchmaking",
+      "completedAt": "2026-10-24T21:01:37.080474+00:00",
+      "result": "loss",
+      "score": [
+        0,
+        1
+      ],
+      "shots": [
+        0,
+        10
+      ],
+      "possessionPercent": [
+        48,
+        52
+      ],
+      "reportRoleLatencyMs": {
+        "own": [
+          3,
+          2,
+          2,
+          2,
+          2
+        ],
+        "opponent": [
+          4,
+          4,
+          3,
+          3,
+          70
+        ]
+      },
+      "successPercent": 100,
+      "reportAverageLatencyMs": [
+        1,
+        17
+      ],
+      "reportCommands": {
+        "own": {
+          "CLEAR_OVERRIDE": 8
+        },
+        "opponent": {
+          "CLEAR_OVERRIDE": 24,
+          "MOVE_TO": 15,
+          "PASS": 5
+        }
+      },
+      "observation": "Own report unusually shows only eight clear commands; exact runtime audit required before next game.",
+      "runtimeAudit": {
+        "count": 65,
+        "computeMedianMs": 0.43134,
+        "computeP95Ms": 0.49771,
+        "computeMaxMs": 1.063938,
+        "commands": {
+          "CLEAR_OVERRIDE": 17,
+          "SET_STANCE": 32,
+          "PASS": 1,
+          "MOVE_TO": 15
+        },
+        "outletMoves": 15,
+        "modelCalls": 0,
+        "buildCommit": "931af03"
+      }
+    },
+    {
+      "alias": "outlet-live-04",
+      "opponent": "FantasyFootball",
+      "side": "HOME",
+      "status": "running",
+      "initiation": "manual random matchmaking",
+      "startedAt": "2026-10-24T21:02:08.260998+00:00"
     }
   ],
   "incomingGames": [],
