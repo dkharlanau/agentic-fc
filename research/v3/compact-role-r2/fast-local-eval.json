@@ -18,7 +18,7 @@
       "errors": [],
       "audit": {
         "reason": "SAFE_OUTLET",
-        "computeMs": 0.164667,
+        "computeMs": 0.136167,
         "modelAttempted": false,
         "policy": "fast_path_v2"
       }
@@ -36,7 +36,7 @@
       "errors": [],
       "audit": {
         "reason": "UNKNOWN_POSSESSION",
-        "computeMs": 0.074333,
+        "computeMs": 0.081459,
         "modelAttempted": false,
         "policy": "fast_path_v2"
       }
@@ -57,7 +57,7 @@
       "errors": [],
       "audit": {
         "reason": "SAFE_OUTLET",
-        "computeMs": 0.101709,
+        "computeMs": 0.1125,
         "modelAttempted": false,
         "policy": "fast_path_v2"
       }
@@ -75,7 +75,7 @@
       "errors": [],
       "audit": {
         "reason": "UNKNOWN_POSSESSION",
-        "computeMs": 0.080334,
+        "computeMs": 0.074875,
         "modelAttempted": false,
         "policy": "fast_path_v2"
       }
@@ -96,7 +96,7 @@
       "errors": [],
       "audit": {
         "reason": "SAFE_OUTLET",
-        "computeMs": 0.099375,
+        "computeMs": 0.10775,
         "modelAttempted": false,
         "policy": "fast_path_v2"
       }
@@ -114,7 +114,7 @@
       "errors": [],
       "audit": {
         "reason": "UNKNOWN_POSSESSION",
-        "computeMs": 0.071,
+        "computeMs": 0.072375,
         "modelAttempted": false,
         "policy": "fast_path_v2"
       }
@@ -135,7 +135,7 @@
       "errors": [],
       "audit": {
         "reason": "SAFE_OUTLET",
-        "computeMs": 0.10275,
+        "computeMs": 0.115792,
         "modelAttempted": false,
         "policy": "fast_path_v2"
       }
@@ -153,7 +153,7 @@
       "errors": [],
       "audit": {
         "reason": "UNKNOWN_POSSESSION",
-        "computeMs": 0.079,
+        "computeMs": 0.070583,
         "modelAttempted": false,
         "policy": "fast_path_v2"
       }
@@ -174,7 +174,7 @@
       "errors": [],
       "audit": {
         "reason": "SAFE_OUTLET",
-        "computeMs": 0.1095,
+        "computeMs": 0.112041,
         "modelAttempted": false,
         "policy": "fast_path_v2"
       }
@@ -192,7 +192,7 @@
       "errors": [],
       "audit": {
         "reason": "UNKNOWN_POSSESSION",
-        "computeMs": 0.074417,
+        "computeMs": 0.073834,
         "modelAttempted": false,
         "policy": "fast_path_v2"
       }
@@ -213,7 +213,7 @@
       "errors": [],
       "audit": {
         "reason": "CLOSE_CLEAR_SHOT",
-        "computeMs": 0.077625,
+        "computeMs": 0.079917,
         "modelAttempted": false,
         "policy": "fast_path_v2"
       }
@@ -234,7 +234,7 @@
       "errors": [],
       "audit": {
         "reason": "SAFE_OUTLET",
-        "computeMs": 0.112375,
+        "computeMs": 0.109125,
         "modelAttempted": false,
         "policy": "fast_path_v2"
       }
@@ -255,7 +255,7 @@
       "errors": [],
       "audit": {
         "reason": "SAFE_OUTLET",
-        "computeMs": 0.10575,
+        "computeMs": 0.109209,
         "modelAttempted": false,
         "policy": "fast_path_v2"
       }
@@ -275,7 +275,7 @@
       "errors": [],
       "audit": {
         "reason": "KEEP_SHAPE",
-        "computeMs": 0.077833,
+        "computeMs": 0.07925,
         "modelAttempted": false,
         "policy": "fast_path_v2"
       }
@@ -293,7 +293,7 @@
       "errors": [],
       "audit": {
         "reason": "MALFORMED",
-        "computeMs": 0.001209,
+        "computeMs": 0.001334,
         "modelAttempted": false,
         "policy": "fast_path_v2"
       }
@@ -311,7 +311,7 @@
       "errors": [],
       "audit": {
         "reason": "UNASSIGNED",
-        "computeMs": 0.009084,
+        "computeMs": 0.009834,
         "modelAttempted": false,
         "policy": "fast_path_v2"
       }
@@ -332,7 +332,7 @@
       "errors": [],
       "audit": {
         "reason": "SAFE_OUTLET",
-        "computeMs": 0.112667,
+        "computeMs": 0.10925,
         "modelAttempted": false,
         "policy": "fast_path_v2"
       }
@@ -353,7 +353,7 @@
       "errors": [],
       "audit": {
         "reason": "SAFE_OUTLET",
-        "computeMs": 0.109292,
+        "computeMs": 0.099209,
         "modelAttempted": false,
         "policy": "fast_path_v2"
       }
@@ -374,7 +374,7 @@
       "errors": [],
       "audit": {
         "reason": "SAFE_OUTLET",
-        "computeMs": 0.098792,
+        "computeMs": 0.099208,
         "modelAttempted": false,
         "policy": "fast_path_v2"
       }
@@ -395,7 +395,7 @@
       "errors": [],
       "audit": {
         "reason": "SAFE_OUTLET",
-        "computeMs": 0.099209,
+        "computeMs": 0.099709,
         "modelAttempted": false,
         "policy": "fast_path_v2"
       }
@@ -416,7 +416,7 @@
       "errors": [],
       "audit": {
         "reason": "SAFE_OUTLET",
-        "computeMs": 0.10625,
+        "computeMs": 0.096917,
         "modelAttempted": false,
         "policy": "fast_path_v2"
       }
@@ -434,7 +434,7 @@
       "errors": [],
       "audit": {
         "reason": "UNKNOWN_POSSESSION",
-        "computeMs": 0.075167,
+        "computeMs": 0.074208,
         "modelAttempted": false,
         "policy": "fast_path_v2"
       }
@@ -452,7 +452,7 @@
       "errors": [],
       "audit": {
         "reason": "UNKNOWN_POSSESSION",
-        "computeMs": 0.06425,
+        "computeMs": 0.071167,
         "modelAttempted": false,
         "policy": "fast_path_v2"
       }
@@ -470,7 +470,7 @@
       "errors": [],
       "audit": {
         "reason": "UNKNOWN_POSSESSION",
-        "computeMs": 0.066792,
+        "computeMs": 0.063792,
         "modelAttempted": false,
         "policy": "fast_path_v2"
       }
@@ -488,7 +488,7 @@
       "errors": [],
       "audit": {
         "reason": "UNKNOWN_POSSESSION",
-        "computeMs": 0.063042,
+        "computeMs": 0.070375,
         "modelAttempted": false,
         "policy": "fast_path_v2"
       }
@@ -506,7 +506,7 @@
       "errors": [],
       "audit": {
         "reason": "UNKNOWN_POSSESSION",
-        "computeMs": 0.064042,
+        "computeMs": 0.069959,
         "modelAttempted": false,
         "policy": "fast_path_v2"
       }
@@ -516,9 +516,15 @@
     "passed": 26,
     "total": 26,
     "timingSamples": 10000,
-    "localWallMedianMs": 0.10043750000000001,
-    "localWallP95Ms": 0.131667,
-    "localWallMaxMs": 0.225583,
+    "localWallMedianMs": 0.0990415,
+    "localWallP95Ms": 0.130375,
+    "localWallMaxMs": 3.210875,
     "under10ms": 10000
+  },
+  "sourceSha256": {
+    "fast_path_v2/engine.py": "df0dd38aaf22db0f89f5c5f8ab9c04a13b980ee6d64681533fd9efe049ffb511",
+    "runtime_v1/sensing.py": "74a8d38db31806ed8e5b426ae16ce4e3692830e2bfa08583f62744dd339cfe1e",
+    "agentic_fc/state.py": "37729e42408e71d62525876ba79199c5d1dbf5b9526b8c91c05f996dac151690",
+    "agentic_fc/geometry.py": "5bcef6483b35c0c84089de4382b2d665baea51f1857d55f5a9ab8be5f78302f3"
   }
 }

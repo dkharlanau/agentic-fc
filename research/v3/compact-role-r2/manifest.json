@@ -1,5 +1,5 @@
 {
-  "status": "candidate; model gate required before deployment",
+  "status": "rejected-before-Harness-deployment",
   "formation": "1-1-2",
   "latencyTargetMs": 10,
   "latencyTargetVerified": false,
@@ -29,5 +29,7 @@
       "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
       "words": 276
     }
-  }
+  },
+  "modelComparisonCalls": 36,
+  "winner": null
 }

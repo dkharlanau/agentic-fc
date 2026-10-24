@@ -1,5 +1,36 @@
 # Agentic FC continuation
 
+## Live latency experiment closed — 24 Oct, 18:33 UTC
+
+[Result](research/v3/compact-role-r2/RESULT.md), [outcome](research/v3/compact-role-r2/outcome.json).
+Original M8 is restored:five original Harness,112,Nova2Lite x4,Haiku FWD2.
+Fresh restored Fitness5/5 at18:29UTC; final API readback all five config/prompt
+settings unchanged. Exact versions13/19/15/16/14. Fast FWD2 unregistered, own
+Fitness session stopped. Its unused AWS Runtime/code artifact remain available;
+no ranked/game sessions were stopped or deleted. No10ms end-to-end claim.
+
+Batch05 ended2/5 on critical11.66s all-role/zero-command report. Two manual losses
+plus incoming baseline Octopus loss and pilot AllCash loss reconcile94→98games,
+164→164points,123:84→124:92. Latest saved table18:29:25UTC:15th,164pts,
+98P54W2D42L. Practice1:0 is excluded from these real results.
+
+Five compact role prompt candidates updated and rejected:36actual Converse
+calls, Nova0/9,Haiku0/9,Sonnet3/9,Micro1/9; none<=10ms. None installed.
+Fast deterministic FWD2 (no per-tick model) latest deployed b99bf77 passed22/22
+native andFitness5 after two documented startup failures, won Benchmark1:0/6:5
+shots, lost incoming AWAY AllCash0:2/5:9 during Practice. Full AWS warm median
+105ms; own compute<1ms in both games. Practice62responses59CLEAR/3STANCE;
+AllCash75responses35CLEAR/38STANCE/2PASS. Not adopted. Report attribution and
+shared latency spike unresolved; do not claim winner, wrong-player routing,
+LLM training or a completed five-game cohort. No automatic next experiment.
+
+One proposed next correction:verify pinned pitch reference versus moving GK
+before more live tests. It is not implemented. Preserve ownership safety.
+Private evidence/bindings:`.local/live-test-20261024/`. AWS private receipts:
+CloudShell `/home/cloudshell-user/nhitl-fast-v2/.local/fast-path-v2/`.
+Source/pilot code and negative results retained in Git. AWS login refreshed via
+existing Workshop, no new terms/IAM. No heartbeat, power timer or old8h loop.
+
 ## Role-package experiment rejected — 24 Oct, 17:29 UTC
 
 The owner-authorized five-role prompt package was prepared and tested with real

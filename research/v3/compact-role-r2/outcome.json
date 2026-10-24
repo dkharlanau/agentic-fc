@@ -1,0 +1,153 @@
+{
+  "status": "rejected-and-M8-restored",
+  "liveCohort": {
+    "completed": 2,
+    "target": 5,
+    "wins": 0,
+    "draws": 0,
+    "losses": 2,
+    "goalsFor": 0,
+    "goalsAgainst": 4,
+    "shotsFor": 9,
+    "shotsAgainst": 13,
+    "stopReason": "Critical11.66s all-role latency/zero-command report"
+  },
+  "separateIncoming": {
+    "opponent": "Octopus",
+    "outcome": "LOSS",
+    "goalsFor": 1,
+    "goalsAgainst": 2
+  },
+  "promptModels": {
+    "calls": 36,
+    "nova2": {
+      "passed": 0,
+      "total": 9,
+      "medianMs": 571
+    },
+    "haiku": {
+      "passed": 0,
+      "total": 9,
+      "medianMs": 1478
+    },
+    "sonnet": {
+      "passed": 3,
+      "total": 9,
+      "medianMs": 1548
+    },
+    "micro": {
+      "passed": 1,
+      "total": 9,
+      "medianMs": 441
+    },
+    "selectedWinner": null,
+    "installedPrompts": false
+  },
+  "fastPilot": {
+    "kind": "Deterministic; no per-tick model call",
+    "playerId": 4,
+    "sourceCommit": "b99bf77",
+    "native": {
+      "passed": 22,
+      "total": 22,
+      "warmMedianMs": 105.055,
+      "warmMaxMs": 178.934,
+      "warmUnder10ms": 0
+    },
+    "fitness": {
+      "failedTrials": 2,
+      "latestPassed": 5,
+      "latestTotal": 5,
+      "firstReason": "CLEAR_OVERRIDE at kickoff is not active",
+      "secondReason": "SET_STANCE at kickoff is not active",
+      "fix": "Nonsprinting own-half MOVE only for verified documented full-size XY frame"
+    },
+    "practice": {
+      "outcome": "WIN",
+      "score": "1:0",
+      "shots": "6:5",
+      "possessionPercent": 25,
+      "roleLatencyMs": [
+        603,
+        765,
+        923,
+        774,
+        755
+      ],
+      "reportedSuccessPercent": [
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "reportedTeamAverageMs": 936,
+      "source": "Primary report; not attribution proof"
+    },
+    "rankedGames": 1,
+    "goal10msVerified": false,
+    "ranked": {
+      "origin": "incoming during Practice",
+      "opponent": "AllCash United",
+      "side": "AWAY",
+      "outcome": "LOSS",
+      "score": "0:2",
+      "shots": "5:9",
+      "reportedFwd2LatencyMs": 82
+    },
+    "audits": {
+      "practice": {
+        "count": 62,
+        "computeMedianMs": 0.39186699999999997,
+        "computeP95Ms": 0.45608,
+        "computeMaxMs": 0.516254,
+        "commands": {
+          "CLEAR_OVERRIDE": 59,
+          "SET_STANCE": 3
+        },
+        "reasons": {
+          "MALFORMED_POSITION": 1,
+          "KEEP_SHAPE": 3,
+          "UNKNOWN_GEOMETRY": 39,
+          "UNKNOWN_POSSESSION": 19
+        },
+        "modelCalls": 0
+      },
+      "allcash": {
+        "count": 75,
+        "computeMedianMs": 0.403771,
+        "computeP95Ms": 0.469204,
+        "computeMaxMs": 0.982739,
+        "commands": {
+          "CLEAR_OVERRIDE": 35,
+          "SET_STANCE": 38,
+          "PASS": 2
+        },
+        "reasons": {
+          "MALFORMED_POSITION": 1,
+          "UNKNOWN_POSSESSION": 21,
+          "ROLE_SUPPORT": 19,
+          "KEEP_SHAPE": 19,
+          "UNKNOWN_GEOMETRY": 1,
+          "ENGINE_RESTART": 12,
+          "SAFE_OUTLET": 2
+        },
+        "modelCalls": 0
+      }
+    },
+    "adopted": false,
+    "unregistered": true,
+    "deployedResourceRetained": true
+  },
+  "baseline": "Original M8 retained in private rollback",
+  "coachVersion": "coach-v1.0",
+  "final": {
+    "setup": "OriginalM8-five-Harness-formation112",
+    "fitnessPassed": 5,
+    "fitnessTotal": 5,
+    "points": 164,
+    "played": 98,
+    "rank": 15,
+    "candidatePromptsInstalled": false
+  }
+}

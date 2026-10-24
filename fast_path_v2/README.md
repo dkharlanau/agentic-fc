@@ -1,5 +1,10 @@
 # Experimental fast executor
 
+**Not adopted; original M8 restored.** See [result](../research/v3/compact-role-r2/RESULT.md).
+Native22/22 and Fitness5/5 passed; full AWS warm median105ms exceeds10ms.
+The Practice win mostly returned control to engine AI. One incoming ranked loss
+is retained separately. Latest deployed source b99bf77 remains unregistered.
+
 This is a **deterministic** alternative to the failed free-text role prompts.
 No foundation model runs on its tick request path. Five independent role instances
 can parse the same state; there is no central orchestrator or hidden network call.
