@@ -1,6 +1,6 @@
 {
   "kind": "five-game ranked live batch",
-  "status": "running;2/5; resumed unchanged after bounded reliability check",
+  "status": "complete;reviewsaved;unchangedM8",
   "setup": "A0-M8-formation112-original-fwd1-v16",
   "coachVersion": "coach-v1.0",
   "coachSourceCommit": "9e67ead",
@@ -20,7 +20,10 @@
   },
   "reports": [
     "live-68",
-    "live-69"
+    "live-69",
+    "live-70",
+    "live-71",
+    "live-72"
   ],
   "targetCompleted": 5,
   "cutoffUTC": "2026-10-24T17:04:05Z",
@@ -30,7 +33,10 @@
   "activeInitiation": "incoming",
   "decision": "Retain originalM8 for this entireblock. Nativev14passed but notbound; incomingmatch startedbefore registration, so defer positionPracticeuntilnextboundary. No model/GK/formation/runtimechange duringblock.",
   "limitations": [
-    "Firstincomingkickoffnotobserved; originalbindings unchanged. Nativecandidate callscompleted before activebannerobserved; exact kickoff overlap unknown."
+    "PrimarySTATSabsentforlive72; entirecohortshotaggregatesnull,knownsubtotal4/5separate.",
+    "Reportedlatencyisnotmodel-or-endtoendlatency; P95unavailable.",
+    "No causalcomparisonagainstuncontrolledopponents.",
+    "No newsettingswithinfivegames; reliabilityinterruptiondidnotchangeconfiguration."
   ],
   "interruption": "Zero own AND opponent commands; own reportedmean13335ms, role9565..16009ms despite100%success. Rootcauseunconfirmed; severe enough to pause newmatchmaking for Fitness/logread.",
   "reliabilityFollowup": {
@@ -40,5 +46,63 @@
     "settingsChanged": false,
     "decision": "Resume sameM8 for remaining3games; pause again if zero-command/high-latency symptom repeats.",
     "limitation": "FreshFitness provescurrentreadinessonly, not absenceoftransientgamefailure."
+  },
+  "after": {
+    "rank": 14,
+    "played": 81,
+    "wins": 49,
+    "draws": 2,
+    "losses": 30,
+    "goalsFor": 111,
+    "goalsAgainst": 68,
+    "goalDifference": 43,
+    "points": 149,
+    "capturedAtUTC": "2026-10-24T14:31:00Z",
+    "captureTimePrecision": "minute",
+    "source": "Primary portal leaderboard; AX and screenshot saved privately"
+  },
+  "aggregate": {
+    "played": 5,
+    "wins": 2,
+    "draws": 1,
+    "losses": 2,
+    "goalsFor": 4,
+    "goalsAgainst": 5,
+    "goalDifference": -1,
+    "points": 7,
+    "pointsPerGame": 1.4,
+    "shotsFor": null,
+    "shotsAgainst": null,
+    "shotsOnTargetFor": null,
+    "shotsOnTargetAgainst": null,
+    "knownShotStatsMatches": 4,
+    "shotsKnownSubtotalFor": 15,
+    "shotsKnownSubtotalAgainst": 22,
+    "sotKnownSubtotalFor": 4,
+    "sotKnownSubtotalAgainst": 5,
+    "meanPossessionKnownPercent": 41.25,
+    "medianReportedMatchLatencyMs": 96,
+    "perCallP95LatencyMs": null
+  },
+  "leaderboardDelta": {
+    "rank": 0,
+    "points": 7,
+    "played": 5,
+    "wins": 2,
+    "draws": 1,
+    "losses": 2,
+    "goalsFor": 4,
+    "goalsAgainst": 5,
+    "goalDifference": -1
+  },
+  "reconciliation": "All five savedeligible livegames explain all accountcounterchanges; oneincoming,fourmanual,noadditionalgames. Practiceexcluded.",
+  "review": {
+    "attack": "Wins12:3shots; losses3:19shots. Shotstarvation recurs acrosssameconfiguration. Drawshotstats unavailable, never treataszero.",
+    "reliability": "live69 zeroown/opponentcommands and13335ms mean required shortpause; unchangedFitness5passed; exactgameDEFlogsabsent, rootcauseunknown. Followinggames336/405/595commands and1316/72/96ms, symptomnotrepeated.",
+    "attribution": "live70 reports18RESETdespite savedpromptsforbiddingRESET. PriorphysicalHOMEproof showed commandcolumnswronglyattributed; cannotassign causalityfromtablealone. KeepfutureRuntimecodeguard.",
+    "energy": "SavedUnityframe around103sec inlive70 showsFWD4lowenergy; singlequalitativeobservation, no quantifiedstaminacurve or causalclaim.",
+    "lateGame": "Singularityscoredafter2:0lead; ownstillwon2:1. No supported keeperculprit or savepercentage.",
+    "combinedStableBatches": "10games5W1D4L,12:11goals,16points;133→149points,rank14unchanged. Opponents/sidesuncontrolled.",
+    "nextAction": "OnlyFWD1v14position support. AlreadyunusedREADY/native9passed/allownstopped; recheckidle, bindoneFWD1, requireFitness5thenPractice08Benchmark andobservedmovement. Otherfouroriginal,112,Nova2Liteunchanged. RestoreoriginalFWD1v16 onformat/frame/recipient/regression; noGK/model/formation/observerchange."
   }
 }
