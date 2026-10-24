@@ -353,3 +353,10 @@ Fresh cumulative table:rank9,88points,42P29W1D12L,goals60:32(+28). The rendered 
 Seventh M8 game won1:0 without coaching/native probes. Shots7:1,on target1:0,possession36%,264commands787ms. PRESS146,MOVE92,CLEAR15,INTERCEPT9,MARK1,SHOOT1;RESET0. Role latencies594/810/909/611/928ms,reportedSuccess100%. M8 firstsevenoutcomes6wins/1draw, still an uncontrolled series.
 
 Fresh table:rank8,91points,43P30W1D12L,goals61:32(+29). It is tied on points with the seventh team but behind on goal difference; do not call it seventh. Summary remains separately stored.
+
+
+## Live35 unchanged M8:1:0 Singularity FC; rank7/94points
+
+Eighth M8 game won1:0 without coaching/native probes. Shots9:4,on target1:0,possession44%,330commands74ms. MOVE142,CLEAR125,PRESS40,MARK20,PASS3;RESET0. Role latencies80/83/80/75/81ms,reportedSuccess100%. Opponent issued only4CLEAR commands2ms despite its previously captured8W2D1L record. Prior win record does not establish that opponent models actively ran in this game. M8 firsteightoutcomes7wins/1draw.
+
+Fresh cumulative table:rank7,94points,44P31W1D12L,goals62:32(+30). This is the current observed position, not a contest victory. Summary stored separately.

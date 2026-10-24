@@ -1320,6 +1320,47 @@
       "initiation": "manual auto-matched by normal Find after verified M8 gate",
       "evidenceCapturedAtUTC": "2026-10-24T00:41:49.910446+00:00",
       "coaching": []
+    },
+    {
+      "id": "live-35",
+      "setup": "A0-M8-formation112",
+      "opponent": "Singularity FC",
+      "side": "home",
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "shotsFor": 9,
+      "shotsAgainst": 4,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 44,
+      "commands": 330,
+      "averageLatencyMs": 74,
+      "commandCounts": {
+        "MOVE_TO": 142,
+        "CLEAR_OVERRIDE": 125,
+        "PRESS_BALL": 40,
+        "MARK": 20,
+        "PASS": 3
+      },
+      "opponentCommands": 4,
+      "opponentAverageLatencyMs": 2,
+      "roleLatencyMs": {
+        "gk": 80,
+        "def": 83,
+        "mid": 80,
+        "fwd1": 75,
+        "fwd2": 81
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Opponent issued only4CLEAR commands2ms; its previous high win record does not establish active model execution in this match."
+      ],
+      "initiation": "manual auto-matched by normal Find after verified M8 gate",
+      "evidenceCapturedAtUTC": "2026-10-24T00:47:15.033152+00:00",
+      "coaching": []
     }
   ],
   "recordingOrder": "Local evidence-capture order; background matches may be appended retrospectively."
