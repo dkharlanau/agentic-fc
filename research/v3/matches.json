@@ -2329,6 +2329,51 @@
       ],
       "initiation": "Manual Find after originalFWD1Harness restored,112 persisted and UI Fitness5/5",
       "coaching": []
+    },
+    {
+      "id": "live-58",
+      "setup": "unattributed-background",
+      "opponent": "Zorja",
+      "side": "away",
+      "goalsFor": 0,
+      "goalsAgainst": 1,
+      "shotsFor": 3,
+      "shotsAgainst": 8,
+      "shotsOnTargetFor": 0,
+      "shotsOnTargetAgainst": 1,
+      "possessionPercent": 50,
+      "commands": 335,
+      "averageLatencyMs": 440,
+      "commandCounts": {
+        "MOVE_TO": 188,
+        "PRESS_BALL": 94,
+        "MARK": 12,
+        "CLEAR_OVERRIDE": 11,
+        "INTERCEPT": 11,
+        "SHOOT": 11,
+        "PASS": 6,
+        "GK_DISTRIBUTE": 2
+      },
+      "opponentCommands": 10,
+      "opponentAverageLatencyMs": 1,
+      "roleLatencyMs": {
+        "gk": 431,
+        "def": 405,
+        "mid": 584,
+        "fwd1": 408,
+        "fwd2": 330
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Overlapped own invocation-only model benchmark on registeredFWD1Harness; exclude from controlled comparisons.",
+        "No saved model/prompt changes were made; exact kickoff snapshot not observed."
+      ],
+      "initiation": "Incoming banner observed after tactical probes began; no Find clicked",
+      "lastKnownSavedSetup": "A0-M8-formation112-original-fwd1-v16",
+      "coaching": []
     }
   ],
   "recordingOrder": "Local evidence-capture order; background matches may be appended retrospectively."

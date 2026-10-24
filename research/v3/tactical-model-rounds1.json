@@ -1,0 +1,457 @@
+{
+  "kind": "Mirrored synthetic tactical index-choice rounds; no saved configuration changes",
+  "models": [
+    {
+      "model": "haiku",
+      "cases": 8,
+      "legalChoiceCount": 8,
+      "targetAgreementCount": 8,
+      "allOwnSessionsStopped": true,
+      "reportedModelMedianLatencyMs": 796
+    },
+    {
+      "model": "nova",
+      "cases": 8,
+      "legalChoiceCount": 8,
+      "targetAgreementCount": 8,
+      "allOwnSessionsStopped": true,
+      "reportedModelMedianLatencyMs": 414.5
+    }
+  ],
+  "results": [
+    {
+      "case": "switch-outlet-home",
+      "model": "nova",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 2921,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 0
+      },
+      "responseHeadersMs": null,
+      "firstTextMs": null,
+      "firstJsonPrefixMs": null,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 428,
+      "usage": {
+        "inputTokens": 942,
+        "outputTokens": 8,
+        "totalTokens": 950
+      }
+    },
+    {
+      "case": "switch-outlet-away",
+      "model": "nova",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 1230,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 1
+      },
+      "responseHeadersMs": null,
+      "firstTextMs": null,
+      "firstJsonPrefixMs": null,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 399,
+      "usage": {
+        "inputTokens": 942,
+        "outputTokens": 8,
+        "totalTokens": 950
+      }
+    },
+    {
+      "case": "high-line-home",
+      "model": "nova",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 3202,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 0
+      },
+      "responseHeadersMs": null,
+      "firstTextMs": null,
+      "firstJsonPrefixMs": null,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 726,
+      "usage": {
+        "inputTokens": 939,
+        "outputTokens": 8,
+        "totalTokens": 947
+      }
+    },
+    {
+      "case": "high-line-away",
+      "model": "nova",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 3015,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 1
+      },
+      "responseHeadersMs": null,
+      "firstTextMs": null,
+      "firstJsonPrefixMs": null,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 434,
+      "usage": {
+        "inputTokens": 939,
+        "outputTokens": 8,
+        "totalTokens": 947
+      }
+    },
+    {
+      "case": "deep-block-home",
+      "model": "nova",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 3340,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 0
+      },
+      "responseHeadersMs": null,
+      "firstTextMs": null,
+      "firstJsonPrefixMs": null,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 389,
+      "usage": {
+        "inputTokens": 941,
+        "outputTokens": 8,
+        "totalTokens": 949
+      }
+    },
+    {
+      "case": "deep-block-away",
+      "model": "nova",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 4162,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 1
+      },
+      "responseHeadersMs": null,
+      "firstTextMs": null,
+      "firstJsonPrefixMs": null,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 341,
+      "usage": {
+        "inputTokens": 941,
+        "outputTokens": 8,
+        "totalTokens": 949
+      }
+    },
+    {
+      "case": "corner-cover-home",
+      "model": "nova",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 1853,
+      "selectedCommand": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 3,
+        "parameters": {},
+        "duration": 0,
+        "teamId": 0
+      },
+      "responseHeadersMs": null,
+      "firstTextMs": null,
+      "firstJsonPrefixMs": null,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 401,
+      "usage": {
+        "inputTokens": 645,
+        "outputTokens": 8,
+        "totalTokens": 653
+      }
+    },
+    {
+      "case": "corner-cover-away",
+      "model": "nova",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 3206,
+      "selectedCommand": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 3,
+        "parameters": {},
+        "duration": 0,
+        "teamId": 1
+      },
+      "responseHeadersMs": null,
+      "firstTextMs": null,
+      "firstJsonPrefixMs": null,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 467,
+      "usage": {
+        "inputTokens": 645,
+        "outputTokens": 8,
+        "totalTokens": 653
+      }
+    },
+    {
+      "case": "switch-outlet-home",
+      "model": "haiku",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 3573,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 0
+      },
+      "responseHeadersMs": null,
+      "firstTextMs": null,
+      "firstJsonPrefixMs": null,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 801,
+      "usage": {
+        "inputTokens": 1014,
+        "outputTokens": 9,
+        "totalTokens": 1023
+      }
+    },
+    {
+      "case": "switch-outlet-away",
+      "model": "haiku",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 2154,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 1
+      },
+      "responseHeadersMs": null,
+      "firstTextMs": null,
+      "firstJsonPrefixMs": null,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 816,
+      "usage": {
+        "inputTokens": 1014,
+        "outputTokens": 9,
+        "totalTokens": 1023
+      }
+    },
+    {
+      "case": "high-line-home",
+      "model": "haiku",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 26577,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 0
+      },
+      "responseHeadersMs": null,
+      "firstTextMs": null,
+      "firstJsonPrefixMs": null,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 791,
+      "usage": {
+        "inputTokens": 1011,
+        "outputTokens": 8,
+        "totalTokens": 1019
+      }
+    },
+    {
+      "case": "high-line-away",
+      "model": "haiku",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 26760,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 1
+      },
+      "responseHeadersMs": null,
+      "firstTextMs": null,
+      "firstJsonPrefixMs": null,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 871,
+      "usage": {
+        "inputTokens": 1011,
+        "outputTokens": 8,
+        "totalTokens": 1019
+      }
+    },
+    {
+      "case": "deep-block-home",
+      "model": "haiku",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 32565,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 0
+      },
+      "responseHeadersMs": null,
+      "firstTextMs": null,
+      "firstJsonPrefixMs": null,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 756,
+      "usage": {
+        "inputTokens": 1015,
+        "outputTokens": 8,
+        "totalTokens": 1023
+      }
+    },
+    {
+      "case": "deep-block-away",
+      "model": "haiku",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 32906,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 1
+      },
+      "responseHeadersMs": null,
+      "firstTextMs": null,
+      "firstJsonPrefixMs": null,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 878,
+      "usage": {
+        "inputTokens": 1015,
+        "outputTokens": 9,
+        "totalTokens": 1024
+      }
+    },
+    {
+      "case": "corner-cover-home",
+      "model": "haiku",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 1651,
+      "selectedCommand": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 3,
+        "parameters": {},
+        "duration": 0,
+        "teamId": 0
+      },
+      "responseHeadersMs": null,
+      "firstTextMs": null,
+      "firstJsonPrefixMs": null,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 767,
+      "usage": {
+        "inputTokens": 681,
+        "outputTokens": 9,
+        "totalTokens": 690
+      }
+    },
+    {
+      "case": "corner-cover-away",
+      "model": "haiku",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 1646,
+      "selectedCommand": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 3,
+        "parameters": {},
+        "duration": 0,
+        "teamId": 1
+      },
+      "responseHeadersMs": null,
+      "firstTextMs": null,
+      "firstJsonPrefixMs": null,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 782,
+      "usage": {
+        "inputTokens": 681,
+        "outputTokens": 9,
+        "totalTokens": 690
+      }
+    }
+  ],
+  "limitations": [
+    "Target agreement reflects the proposed policy, not an independent measure of match strength.",
+    "Eight small scenarios per model do not establish a general model ranking.",
+    "Wall time includes native Harness/session overhead; reported model latency is separate.",
+    "A first JSON prefix can be followed by more text; it is diagnostic timing, not final output validity.",
+    "These are synthetic choice checks, not football self-play or live outcome evidence."
+  ],
+  "sourceCommit": "f3eb554811df715171e79ef7945fc005518e7d1a",
+  "systemPromptSha256": "6bfcacc6c3dcf0fbac01c6cb7dcbd1e28876d9e3d1f633731b2304f8cf3c7e96",
+  "modelIds": {
+    "nova": "global.amazon.nova-2-lite-v1:0",
+    "haiku": "global.anthropic.claude-haiku-4-5-20251001-v1:0"
+  },
+  "decision": "No target-agreement gain forHaiku on these8cases; retainNova for the bounded fast selector. ExistingFWD2 model remains unchanged pending live comparison."
+}

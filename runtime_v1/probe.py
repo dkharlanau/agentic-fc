@@ -83,6 +83,8 @@ def main():
             response = client.invoke_agent_runtime(agentRuntimeArn=arn, runtimeSessionId=sid,
                                                    qualifier='DEFAULT', contentType='application/json',
                                                    payload=case['modelText'].encode())
+            record['headersElapsedMs'] = round((time.monotonic() - started) * 1000)
+            record['responseContentType'] = response.get('contentType')
             raw = response['response'].read().decode()
             record['responseStream'] = raw
             record['elapsedMs'] = round((time.monotonic() - started) * 1000)
