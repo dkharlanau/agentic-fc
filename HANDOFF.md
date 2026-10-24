@@ -44,3 +44,7 @@ Do not equate Fitness5/5, reported100%Success, issued commands, possession or
 synthetic rounds with live strength. AIOverview is not causal evidence. Preserve
 primary numeric report tables and explicit unknowns. Shot reports currently
 lack per-shot distance/outcome data; long-shot miss rates cannot be established.
+
+Update10:10UTC: live57 control finished7:0, shots19:0, possession19%, command545(437INTERCEPT,0SHOOT), reportedavg470ms. OriginalfiveHarness plus112 remain main team. Inboundlive58AWAYvsZorja portal6239347a-0551-4901-a84f-9ac051549c6b started during native tactical model rounds, so record overlap. NoFindclicked. The first16-case benchmark now finished; all16legal and target-aligned, all own sessions stopped. Nova8cases nativewall~1.2–4.2s. Haiku highline/deepblock4cases26–33s while other4~1.6–3.6s; inspect metadata before attributing model latency. Originalrunner did not record first-content timing; newsource records headers/firsttext/firstJSONprefix and persists inflightID before calling. Needexport with model_rounds_summary.py (newlocalfile) through visibleCloudShell and save whitelisted results. Bothmodels8/8small synthetic labels are not a general match ranking.
+
+Officialworkshop DeploytoAWSHarness tab explicitly says use HarnessARN, not underlyingRuntimeARN. It is a supported path. Missinglogs do not prove broken routing or authorizeIAMchanges. No arbitrary replacements of the working main team. The7:0control is a useful champion candidate; keep it asrollback while testingbufferedSSE.

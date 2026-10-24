@@ -181,7 +181,8 @@
       "datapointMinutes": 5,
       "userErrors": 0,
       "limit": "Same metric appears in multiple dimension sets; do not sum duplicated series. Counts alone do not establish source or action application."
-    }
+    },
+    "officialHarnessGuide": "Workshop Deploy toAWS, Harness tab explicitly requiresHarnessARN rather than managed RuntimeARN and states it is supported. Missing live logs/counters do not justify replacing it with the underlying managed RuntimeARN or changingIAM."
   },
   "revision7": {
     "sourceCommit": "a30cdc1",
@@ -209,5 +210,6 @@
     "fwd1ParityFixtures": 8,
     "validation": "38 checks and SDK HTTP smoke: model completed before response exists; SSE bytes equal previous format",
     "archiveSha256": "edd07b839a823fc5b8fc7e3c5184472fbe1e89d79f5c904d65d4172f3898f38f"
-  }
+  },
+  "currentMainTeam": "Original fiveM7 Harness restored; formation112; live57manualHOME won7:0 with19:0shots. One uncontrolled game is insufficient to establish a causal improvement."
 }

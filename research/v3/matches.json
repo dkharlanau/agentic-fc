@@ -2286,6 +2286,49 @@
       "coaching": [],
       "initiation": "Completed background incoming game discovered in history; kickoff not observed",
       "lastKnownSavedSetup": "R1-FWD1-v7-plus-M7-formation112"
+    },
+    {
+      "id": "live-57",
+      "setup": "A0-M8-formation112-original-fwd1-v16",
+      "opponent": "Gork \u2019n\u2019 Mork Boyz",
+      "side": "home",
+      "goalsFor": 7,
+      "goalsAgainst": 0,
+      "shotsFor": 19,
+      "shotsAgainst": 0,
+      "shotsOnTargetFor": 7,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 19,
+      "commands": 545,
+      "averageLatencyMs": 470,
+      "commandCounts": {
+        "INTERCEPT": 437,
+        "CLEAR_OVERRIDE": 36,
+        "MOVE_TO": 31,
+        "PRESS_BALL": 31,
+        "GK_DISTRIBUTE": 5,
+        "MARK": 3,
+        "FOLLOW_PLAYER": 2
+      },
+      "opponentCommands": 44,
+      "opponentAverageLatencyMs": 2,
+      "roleLatencyMs": {
+        "gk": 453,
+        "def": 484,
+        "mid": 539,
+        "fwd1": 398,
+        "fwd2": 509
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Single uncontrolled opponent; do not attribute7:0 exclusively to the FWD1 rollback.",
+        "545command decisions include0SHOOT while primaryshots19/goals7; command mix does not explain physical shot origins."
+      ],
+      "initiation": "Manual Find after originalFWD1Harness restored,112 persisted and UI Fitness5/5",
+      "coaching": []
     }
   ],
   "recordingOrder": "Local evidence-capture order; background matches may be appended retrospectively."

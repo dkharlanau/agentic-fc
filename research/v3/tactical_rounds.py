@@ -102,12 +102,13 @@ def main():
     parser.add_argument('--harness-arn', required=True)
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--models', nargs='+', choices=tuple(MODELS), default=list(MODELS))
+    parser.add_argument('--cases', nargs='+', choices=tuple(c['id'] for c in scenarios()))
     parser.add_argument('--apply', action='store_true')
     args = parser.parse_args()
     if '.local' not in args.output.resolve().parts:
         parser.error('Keep native responses and bindings private under .local')
     if not args.apply:
-        print(f'Plan:{8*len(args.models)}synthetic choice calls via own invocation-only overrides; stop every own session.')
+        print(f'Plan:{len(args.cases or scenarios())*len(args.models)}synthetic choice calls via own invocation-only overrides; stop every own session.')
         return
     import boto3
     from botocore.config import Config
@@ -117,9 +118,16 @@ def main():
     args.output.parent.mkdir(parents=True, exist_ok=True)
     for model in args.models:
         for case in scenarios():
+            if args.cases and case['id'] not in args.cases:
+                continue
             facts = facts_for(case)
             sid = 'nhitl-tactical-round-' + str(uuid.uuid4())
             row = {'case': case['id'], 'model': model, 'sessionId': sid, 'stopped': False}
+            report['rounds'].append(row)
+            # Persist the in-flight ID before invocation so a failed terminal
+            # can recover only this own probe, never guess a game session.
+            args.output.write_text(json.dumps(report, indent=2) + '\n')
+            args.output.chmod(0o600)
             started = time.monotonic()
             try:
                 response = client.invoke_harness(harnessArn=args.harness_arn, qualifier='DEFAULT',
@@ -129,10 +137,21 @@ def main():
                     model={'bedrockModelConfig': {'modelId': MODELS[model], 'apiFormat': 'converse_stream',
                                                   'maxTokens': 32, 'temperature': 0.0}},
                     tools=[], allowedTools=[], skills=[], maxIterations=1, timeoutSeconds=20)
+                row['responseHeadersMs'] = round((time.monotonic() - started)*1000)
                 answer = ''
                 for event in response['stream']:
                     if 'contentBlockDelta' in event:
-                        answer += event['contentBlockDelta']['delta'].get('text', '')
+                        delta = event['contentBlockDelta']['delta'].get('text', '')
+                        answer += delta
+                        if delta and 'firstTextMs' not in row:
+                            row['firstTextMs'] = round((time.monotonic() - started)*1000)
+                        try:
+                            prefix = json.loads(answer)
+                            if isinstance(prefix, dict) and type(prefix.get('choice')) is int and \
+                                    0 <= prefix['choice'] < len(facts['options']) and 'firstJsonPrefixMs' not in row:
+                                row['firstJsonPrefixMs'] = round((time.monotonic() - started)*1000)
+                        except ValueError:
+                            pass
                     if 'metadata' in event:
                         row['metadata'] = event['metadata']
                     for kind in ('internalServerException', 'validationException', 'runtimeClientError'):
@@ -155,7 +174,6 @@ def main():
                     row['stopped'] = True
                 except Exception as error:
                     row['stopError'] = type(error).__name__ + ': ' + str(error)
-                report['rounds'].append(row)
                 args.output.write_text(json.dumps(report, indent=2) + '\n')
                 args.output.chmod(0o600)
             print(json.dumps({k: row.get(k) for k in ('case', 'model', 'legalChoice', 'targetAgreement',
