@@ -1199,6 +1199,45 @@
       "initiation": "manual auto-matched by normal Find after verified M8 gate",
       "evidenceCapturedAtUTC": "2026-10-24T00:15:50.072402+00:00",
       "coaching": []
+    },
+    {
+      "id": "live-32",
+      "setup": "A0-M8-formation112",
+      "opponent": "Apocalypse",
+      "side": "home",
+      "goalsFor": 2,
+      "goalsAgainst": 0,
+      "shotsFor": 8,
+      "shotsAgainst": 0,
+      "shotsOnTargetFor": 2,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 53,
+      "commands": 375,
+      "averageLatencyMs": 499,
+      "commandCounts": {
+        "MOVE_TO": 367,
+        "CLEAR_OVERRIDE": 8
+      },
+      "opponentCommands": 16,
+      "opponentAverageLatencyMs": 3,
+      "roleLatencyMs": {
+        "gk": 519,
+        "def": 514,
+        "mid": 503,
+        "fwd1": 500,
+        "fwd2": 517
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Only MOVE_TO/CLEAR_OVERRIDE issued in this report despite8teamshots/2goals. This does not establish which live policy generated applied scoring actions.",
+        "No native test or coaching instruction overlapped this game."
+      ],
+      "initiation": "manual auto-matched by normal Find after verified M8 gate",
+      "evidenceCapturedAtUTC": "2026-10-24T00:28:10.864430+00:00",
+      "coaching": []
     }
   ],
   "recordingOrder": "Local evidence-capture order; background matches may be appended retrospectively."
