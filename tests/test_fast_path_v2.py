@@ -100,4 +100,32 @@ class FastTests(unittest.TestCase):
   p['gameState']['ball'].pop('possessionTeamCode');p['gameState']['ball'].pop('possessionAgentId');p['gameState']['ball']['position']={'x':0,'y':0,'z':0};p['gameState']['ball']['velocity']={'x':0,'y':0,'z':0}
   out,a=e.choose(p,'new');self.assertEqual(out[0]['commandType'],'CLEAR_OVERRIDE')
   with self.assertRaises(ValueError):FastEngine(3,'probe-wide')
+ def test_outlet_only_home_offball_known_frame(self):
+  away=json.loads((ROOT/'research/v3/fixtures/observed-live-away-open-play.json').read_text())['decodedState'];away['myPlayers']=[4]
+  base,_=FastEngine(4).choose(away);out,_=FastEngine(4,'outlet').choose(away);self.assertEqual(out,base)
+  p=copy.deepcopy(away);p['teamId']=0
+  p['gameState']['ball']['position']['x']*=-1;p['gameState']['ball']['velocity']['x']*=-1
+  for row in p['gameState']['players']:
+   row['teamCode']='away' if row['teamCode']=='home' else 'home';row['position']['x']*=-1;row['velocity']['x']*=-1
+  out,a=FastEngine(4,'outlet').choose(p);self.assertEqual(a['reason'],'PASSING_OUTLET_POSITION')
+  params=out[0]['parameters'];self.assertFalse(params['sprint']);self.assertLess(abs(params['target_x']),3);self.assertLess(abs(params['target_y']),1.7)
+  # Occupied receiving points must not be forced merely to produce a MOVE.
+  q=copy.deepcopy(p)
+  opponents=[row for row in q['gameState']['players'] if row['teamCode']=='away' and row['agentId']!='agentId_0']
+  for row,y in zip(opponents,(-abs(params['target_y']),abs(params['target_y']))):row['position']={'x':params['target_x'],'y':y}
+  out,a=FastEngine(4,'outlet').choose(q);self.assertNotEqual(a['reason'],'PASSING_OUTLET_POSITION')
+  # Ownership, restart and role gates must dominate positional support.
+  for mode in ('RESETTING','KICK_OFF'):
+   q=copy.deepcopy(p);q['gameState']['playMode']=mode
+   out,a=FastEngine(4,'outlet').choose(q);self.assertNotEqual(a['reason'],'PASSING_OUTLET_POSITION')
+  for team,holder in [('home','agentId_4'),('away','agentId_2')]:
+   q=copy.deepcopy(p);q['gameState']['ball'].update(possessionTeamCode=team,possessionAgentId=holder)
+   out,a=FastEngine(4,'outlet').choose(q);self.assertNotEqual(a['reason'],'PASSING_OUTLET_POSITION')
+  q=copy.deepcopy(p);q['myPlayers']=[3]
+  out,a=FastEngine(4,'outlet').choose(q);self.assertEqual(a['reason'],'UNASSIGNED')
+  with self.assertRaises(ValueError):FastEngine(3,'outlet')
+ def test_outlet_unknown_state_preserves_baseline(self):
+  raw=json.loads((ROOT/'research/v3/fixtures/observed-live-away-open-play.json').read_text())['decodedState'];raw['myPlayers']=[4];raw['teamId']=0
+  raw['gameState']['ball'].pop('possessionTeamCode',None);raw['gameState']['ball'].pop('possessionAgentId',None);raw['gameState']['ball']['position']={'x':0,'y':0,'z':0};raw['gameState']['ball']['velocity']={'x':0,'y':0,'z':0}
+  out,a=FastEngine(4,'outlet').choose(raw);self.assertEqual(out[0]['commandType'],'CLEAR_OVERRIDE')
 if __name__=='__main__':unittest.main()

@@ -29,7 +29,7 @@ def control_probe_errors(case, commands):
  return [] if commands==[expected] else ['invalid_bounded_control_probe']
 
 def main():
- ap=argparse.ArgumentParser();ap.add_argument('--apply',action='store_true');ap.add_argument('--source-commit',required=True);ap.add_argument('--revision',type=int,default=1);ap.add_argument('--support-mode',choices=('stance','probe-wide'),default='stance');args=ap.parse_args()
+ ap=argparse.ArgumentParser();ap.add_argument('--apply',action='store_true');ap.add_argument('--source-commit',required=True);ap.add_argument('--revision',type=int,default=1);ap.add_argument('--support-mode',choices=('stance','probe-wide','outlet'),default='stance');args=ap.parse_args()
  hashes={n:hashlib.sha256((ROOT/n).read_bytes()).hexdigest() for n in SOURCES}
  if not args.apply:print(json.dumps({'playerId':4,'source':hashes,'action':'separate Runtime native timing only; no registration'}));return
  import boto3
@@ -99,6 +99,11 @@ def main():
  cases.append({'id':'fwd2-bounded-control-window','role':'fwd2','input':probe,'expected':{'types':['MOVE_TO' if args.support_mode=='probe-wide' else 'SET_STANCE']}})
  probe_end=copy.deepcopy(probe);probe_end['gameState']['gameTime']=28
  cases.append({'id':'fwd2-control-window-ended','role':'fwd2','input':probe_end,'expected':{'types':['SET_STANCE']}})
+ home=copy.deepcopy(observed);home['teamId']=0
+ home['gameState']['ball']['position']['x']*=-1;home['gameState']['ball']['velocity']['x']*=-1
+ for row in home['gameState']['players']:
+  row['teamCode']='away' if row['teamCode']=='home' else 'home';row['position']['x']*=-1;row['velocity']['x']*=-1
+ cases.append({'id':'fwd2-home-outlet','role':'fwd2','input':home,'expected':{'types':['MOVE_TO' if args.support_mode=='outlet' else 'SET_STANCE']}})
  client=boto3.client('bedrock-agentcore',region_name=region,config=Config(connect_timeout=5,read_timeout=60,retries={'max_attempts':0}));sid='nhitl-fast-native-'+str(uuid.uuid4());arn=receipt['runtime']['agentRuntimeArn'];report={'kind':'full native AWS response timings; CloudShell network path, not game server latency','probes':[],'stopped':False}
  try:
   for repeat in range(2):
@@ -110,6 +115,10 @@ def main():
      errors=[] if valid_command(cmd,4,None) and cmd['commandType']=='MOVE_TO' and set(params)=={'target_x','target_y','sprint'} and params['target_x']*sign<0 and abs(params['target_y'])<15 and params['sprint'] is False else ['invalid_own_half_restart']
     if case['id']=='fwd2-bounded-control-window' and args.support_mode=='probe-wide':
      errors=control_probe_errors(case,commands)
+    if case['id']=='fwd2-home-outlet' and args.support_mode=='outlet':
+     from agentic_fc.policy import valid_command
+     cmd=commands[0] if len(commands)==1 else {};params=cmd.get('parameters',{})
+     errors=[] if valid_command(cmd,4,None) and cmd['commandType']=='MOVE_TO' and cmd['duration']==0 and set(params)=={'target_x','target_y','sprint'} and -1.31<=params['target_x']<=3 and 1<=abs(params['target_y'])<=1.7 and params['sprint'] is False else ['invalid_home_outlet']
     row={'case':case['id'],'repeat':repeat,'coldFirstCall':not report['probes'],'elapsedMs':wall,'commands':commands,'errors':errors};report['probes'].append(row);save(p.parent/('native.json' if args.revision==1 else f'native-v{args.revision}.json'),report);print('PROBE',json.dumps(row),flush=True)
  finally:
   client.stop_runtime_session(agentRuntimeArn=arn,runtimeSessionId=sid,qualifier='DEFAULT');report['stopped']=True;save(p.parent/('native.json' if args.revision==1 else f'native-v{args.revision}.json'),report)

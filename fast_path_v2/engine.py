@@ -7,7 +7,7 @@ import time
 from dataclasses import replace
 from agentic_fc.state import parse_payload
 from agentic_fc.geometry import line_distance
-from runtime_v1.sensing import live_coordinates, contact_candidate, supported_contact
+from runtime_v1.sensing import live_coordinates, contact_candidate, supported_contact, movement_frame_ready, movement_to_raw
 
 
 def pitch_reference(profile, keepers, previous=None):
@@ -47,7 +47,7 @@ def unwrap(payload):
 class FastEngine:
     def __init__(self,player_id,support_mode='stance'):
         if type(player_id) is not int or player_id not in range(5):raise ValueError('player_id')
-        if support_mode not in ('stance','probe-wide'):raise ValueError('support_mode')
+        if support_mode not in ('stance','probe-wide','outlet'):raise ValueError('support_mode')
         if support_mode!='stance' and player_id!=4:raise ValueError('FWD2-only mode')
         self.pid=player_id
         self.support_mode=support_mode
@@ -135,6 +135,28 @@ class FastEngine:
                 return done('GK_DISTRIBUTE' if pid==0 else 'PASS',{'target_player_id':receiver,**({'method':'THROW' if dist(me,next(p for p in state.teammates if p.pid==receiver))<.25*span else 'KICK'} if pid==0 else {'type':'GROUND'})},'SAFE_OUTLET')
             return done(reason='NO_SAFE_OUTLET')
         if pid==0:return done(reason='ENGINE_GOALKEEPER')
+        if self.support_mode=='outlet' and state.side==0 and state.ball_status=='OURS' and \
+                state.holder is not None and state.holder[0]==state.side and \
+                profile['kind']=='keeper_reference_xz' and movement_frame_ready(profile):
+            # Only HOME physical coordinates have been verified. Offer a lateral
+            # outlet behind the ball, while retaining a midfield escape route.
+            # This is a tactical hypothesis, not a calibrated optimal position.
+            forward=next((p for p in state.teammates if p.pid==3),None)
+            occupied_y=forward.y if forward and abs(forward.y)>.04*span else state.ball_y
+            tx=max(-.10*span,min(.23*span,state.ball_x-.07*span))
+            preferred=(-1 if occupied_y>=0 else 1)*.12*span
+            options=[]
+            for y in (preferred,-preferred):
+                space=min((math.hypot(o.x-tx,o.y-y) for o in state.opponents),default=span)
+                lane=min((line_distance(o.x,o.y,state.ball_x,state.ball_y,tx,y) for o in state.opponents),default=span)
+                if space>.04*span:
+                    value=min(space,.12*span)+min(lane,.08*span)-.1*math.hypot(me.x-tx,me.y-y)+(.03*span if y==preferred else 0)
+                    options.append((value,y))
+            ty=max(options)[1] if options else me.y
+            if options and math.hypot(me.x-tx,me.y-ty)>.045*span:
+                move=movement_to_raw({'commandType':'MOVE_TO','playerId':pid,
+                    'parameters':{'target_x':tx,'target_y':ty,'sprint':False},'duration':0},profile)
+                return done('MOVE_TO',move['parameters'],'PASSING_OUTLET_POSITION')
         if state.ball_status=='OURS':return done('SET_STANCE',{'stance':2 if pid==1 else 1 if pid==4 else 0},'ROLE_SUPPORT')
         bx,by=state.ball_x,state.ball_y
         eligible=[]
