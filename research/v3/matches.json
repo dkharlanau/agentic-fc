@@ -3073,6 +3073,90 @@
         },
         "supportMode": "position"
       }
+    },
+    {
+      "id": "live-74",
+      "setup": "M8-fouroriginal-plus-R1v14-position-FWD1-112",
+      "opponent": "Agentic Arsenal",
+      "side": "away",
+      "goalsFor": 0,
+      "goalsAgainst": 1,
+      "shotsFor": 8,
+      "shotsAgainst": 1,
+      "shotsOnTargetFor": 0,
+      "shotsOnTargetAgainst": 1,
+      "possessionPercent": 54,
+      "commands": 331,
+      "averageLatencyMs": 872,
+      "commandCounts": {
+        "MOVE_TO": 246,
+        "PRESS_BALL": 36,
+        "INTERCEPT": 18,
+        "SHOOT": 12,
+        "CLEAR_OVERRIDE": 7,
+        "PASS": 6,
+        "FOLLOW_PLAYER": 5,
+        "MARK": 1
+      },
+      "opponentCommands": 73,
+      "opponentAverageLatencyMs": 116,
+      "roleLatencyMs": {
+        "gk": 657,
+        "def": 911,
+        "mid": 1034,
+        "fwd1": 675,
+        "fwd2": 893
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy."
+      ],
+      "initiation": "incoming",
+      "batch": "ranked-batch-03",
+      "kickoffObserved": false
+    },
+    {
+      "id": "live-75",
+      "setup": "M8-fouroriginal-plus-R1v14-position-FWD1-112",
+      "opponent": "Amber Geysers 2",
+      "side": "home",
+      "goalsFor": 2,
+      "goalsAgainst": 3,
+      "shotsFor": 3,
+      "shotsAgainst": 6,
+      "shotsOnTargetFor": 2,
+      "shotsOnTargetAgainst": 3,
+      "possessionPercent": 38,
+      "commands": 474,
+      "averageLatencyMs": 811,
+      "commandCounts": {
+        "PRESS_BALL": 198,
+        "MOVE_TO": 119,
+        "CLEAR_OVERRIDE": 87,
+        "MARK": 56,
+        "INTERCEPT": 12,
+        "FOLLOW_PLAYER": 2
+      },
+      "opponentCommands": 128,
+      "opponentAverageLatencyMs": 123,
+      "roleLatencyMs": {
+        "gk": 632,
+        "def": 925,
+        "mid": 902,
+        "fwd1": 617,
+        "fwd2": 911
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy."
+      ],
+      "initiation": "manual",
+      "batch": "ranked-batch-03",
+      "earlyScoreObserved": "2:0at30seconds; final2:3"
     }
   ],
   "recordingOrder": "Local evidence-capture order; background matches may be appended retrospectively."

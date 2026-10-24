@@ -18,7 +18,10 @@
     "captureTimePrecision": "minute",
     "source": "Primaryportalbeforebatch03;AXandscreenshotprivate"
   },
-  "reports": [],
+  "reports": [
+    "live-74",
+    "live-75"
+  ],
   "targetCompleted": 5,
   "deadlineUTC": "2026-10-24T17:14:05Z",
   "cutoffUTC": "2026-10-24T17:04:05Z",
