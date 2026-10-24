@@ -10,7 +10,8 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCES = ('agentic_fc/__init__.py', 'agentic_fc/state.py', 'agentic_fc/geometry.py',
-           'agentic_fc/policy.py', 'runtime_v1/__init__.py', 'runtime_v1/core.py', 'runtime_v1/sensing.py')
+           'agentic_fc/policy.py', 'runtime_v1/__init__.py', 'runtime_v1/core.py', 'runtime_v1/sensing.py',
+           'runtime_v1/keeper.py')
 
 
 def build(dependencies, archive, manifest):

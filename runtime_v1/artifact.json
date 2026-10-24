@@ -5,18 +5,19 @@
   "entryPoint": [
     "main.py"
   ],
-  "archiveSha256": "8b796c69a88f8a5c5e2f919d70d5f6b86e5c6269dd0a3196cb65cfe912f0ecf3",
-  "archiveBytes": 20612869,
-  "uncompressedBytes": 34379542,
-  "fileCount": 2732,
+  "archiveSha256": "b9b57cc45657296fa1cf5d0003beab8266e97093cd16bad9859c0e1952bc42e5",
+  "archiveBytes": 20613951,
+  "uncompressedBytes": 34381843,
+  "fileCount": 2733,
   "sourceSha256": {
     "agentic_fc/__init__.py": "246ba241608bece9b9a1e940dd5401385aeed762ba8306d2e2a0eba7d0556df0",
     "agentic_fc/state.py": "37729e42408e71d62525876ba79199c5d1dbf5b9526b8c91c05f996dac151690",
     "agentic_fc/geometry.py": "5bcef6483b35c0c84089de4382b2d665baea51f1857d55f5a9ab8be5f78302f3",
     "agentic_fc/policy.py": "94f53ee7715d8523c2e699c42d96fa929844d8769c034de77a1239a7da0f9e69",
     "runtime_v1/__init__.py": "d6637c179056b2cc42cc2439f1f9eca4b96faae74c22a009204b6201afa24a05",
-    "runtime_v1/core.py": "b966595e0a2f87a555caa970219444519ebfc9e0800d9d3252dd89b664704bef",
+    "runtime_v1/core.py": "4e27d2607ac56c832ef54d5f5837303fad3b12b53f699d32c80bd7763f9a77fb",
     "runtime_v1/sensing.py": "bb7ba94eea8cda5b666fe65cb56169761cf6ff4fb1fea9253b09c7691e6869c2",
+    "runtime_v1/keeper.py": "d5ac803e3fd9e218756995db96df3a1ac955028a3fe1e160f62704279bad1e25",
     "runtime_v1/main.py": "29c4d866d4d662070fa13ede4ec35fd2f04aa0e790dcb0914a35a35ddd1b0b81"
   },
   "dependencies": {

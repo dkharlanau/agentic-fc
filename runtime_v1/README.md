@@ -1,6 +1,6 @@
 # R1: bounded model selection Runtime pilot
 
-Experimental FWD1 adapter. It is separate from the saved five-Harness team. Deployment and match outcomes belong in `research/v3`; local checks do not establish live strength.
+Experimental FWD1 adapter and separate offline GK candidate. It is separate from the saved five-Harness team. Deployment and match outcomes belong in `research/v3`; local checks do not establish live strength.
 
 The code unwraps the input, resolves HOME/AWAY and possession, computes a small legal action set, and asks Nova 2 Lite to choose an index. The model genuinely selects among actions: it can choose a shot or release control on the same state. Code owns player/team IDs, parameters, unlocked-command checks and JSON serialization. Model/API/format failures release only the assigned player's override. There is no rule-only fast path for valid invocations and no shell/browser/tool chain.
 
@@ -58,3 +58,11 @@ For an explicit revision of the same existing Runtime, preserve its prior receip
 `probe.py --receipt PRIVATE_READY_RECEIPT --output .local/r1/native-probes.json --apply` runs fresh synthetic HOME/AWAY sessions, reads returned commands and sampled audit events, and stops its own sessions in `finally`. Without `--apply` it only describes the plan. Sampled inputs and decisions use JSON text in conversational event fields: the initial blob-object trial was stored by this service as a map-style string, so it did not satisfy the structured audit gate.
 
 The account-bound receipt, resource IDs, raw game inputs and access codes must stay private. A successful create or Fitness is not evidence of tactical improvement.
+
+## Separate goalkeeper candidate
+
+`--player-id0 --name nhitl_gk_r2` creates a separate experimental goalkeeper Runtime; it must not replace the FWD1 Runtime. The same reviewed source archive can be used, but each role has an isolated environment, session and STM actor. Only0 and3 are accepted by the deployer; same-Runtime updates cannot change player identity.
+
+GK code offers only safe distribution, documented-frame own-goal recovery/restart movement, and release to built-in goalkeeping. It never offers pressure, a shot, a normal pass or RESET. A receiver needs space and a clear lane; the marked nearest defender is excluded in the mirrored synthetic distribution fixtures. In the observed small-field profile, outgoing coordinate conversion remains unverified, so custom GK movement is unavailable. Native probes and portal Fitness are still required; no goalkeeper live improvement is claimed.
+
+The standalone `tactics.py` observer remains excluded from the deployment source whitelist. Review hypotheses and critical rounds in [`adaptive-plan.ru.md`](../research/v3/adaptive-plan.ru.md).

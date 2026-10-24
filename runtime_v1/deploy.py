@@ -35,7 +35,9 @@ def plan(args):
     environment = {'PLAYER_ID': str(args.player_id), 'MODEL_ID': args.model_id,
                    'BUILD_COMMIT': args.source_commit}
     if args.memory_id:
-        environment.update(MEMORY_ID=args.memory_id, MEMORY_ACTOR_ID='r1_fwd1', MEMORY_SAMPLE_EVERY='10')
+        environment.update(MEMORY_ID=args.memory_id,
+                           MEMORY_ACTOR_ID='r1_gk' if args.player_id == 0 else 'r1_fwd1',
+                           MEMORY_SAMPLE_EVERY='10')
     request = {'agentRuntimeName': args.name, 'roleArn': args.execution_role_arn,
                'agentRuntimeArtifact': {'codeConfiguration': {
                    'code': {'s3': {'bucket': args.bucket, 'prefix': f'nhitl-r1/{sha}.zip'}},
@@ -66,7 +68,8 @@ def apply(args, request, sha, archive):
         prior = json.loads(args.update_from_receipt.read_text())
         old = prior['identity']['request']
         if not prior.get('verifiedReady') or prior['identity']['region'] != args.region or \
-                old['agentRuntimeName'] != request['agentRuntimeName'] or old['roleArn'] != request['roleArn']:
+                old['agentRuntimeName'] != request['agentRuntimeName'] or old['roleArn'] != request['roleArn'] or \
+                old['environmentVariables'].get('PLAYER_ID') != request['environmentVariables']['PLAYER_ID']:
             raise ValueError('Update requires the verified prior receipt for this same runtime name/role/region')
         current = control.get_agent_runtime(agentRuntimeId=prior['runtime']['agentRuntimeId'])
         if current['roleArn'] != request['roleArn'] or current['agentRuntimeName'] != request['agentRuntimeName']:
@@ -132,8 +135,9 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--archive', type=Path, default=ROOT / '.local/r1/deployment.zip')
     parser.add_argument('--region', default='us-east-1')
-    parser.add_argument('--name', default='nhitl_fwd1_r1')
-    parser.add_argument('--player-id', type=int, choices=[3], default=3, help='Only the FWD1 pilot is validated for this package')
+    parser.add_argument('--name')
+    parser.add_argument('--player-id', type=int, choices=[0, 3], default=3,
+                        help='FWD1 pilot or separate experimental GK candidate; native and portal gates required')
     parser.add_argument('--model-id', default='global.amazon.nova-2-lite-v1:0')
     parser.add_argument('--bucket', default='${WORKSHOP_CODE_BUCKET}')
     parser.add_argument('--execution-role-arn', default='${NEW_EXECUTION_ROLE_ARN}')
@@ -144,6 +148,8 @@ def main():
                         help='Explicitly update the same existing Runtime; use a NEW output receipt for each revision')
     parser.add_argument('--apply', action='store_true')
     args = parser.parse_args()
+    if not args.name:
+        args.name = 'nhitl_gk_r2' if args.player_id == 0 else 'nhitl_fwd1_r1'
     if not args.source_commit:
         args.source_commit = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip()
     request, sha, archive = plan(args)

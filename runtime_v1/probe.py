@@ -6,10 +6,13 @@ import json
 from pathlib import Path
 import time
 import uuid
+import sys
 
 from deploy import save_private
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+from runtime_v1.core import unwrap
 
 
 def decode_commands(raw):
@@ -42,6 +45,8 @@ def main():
     if not receipt.get('verifiedReady'):
         parser.error('Require a verified READY deployment receipt')
     fixtures = json.loads((ROOT / 'research/v3/selective-autonomy/fixtures.json').read_text())['cases']
+    env = receipt['identity']['request']['environmentVariables']
+    player_id = int(env['PLAYER_ID'])
     cases = [(0, fixtures[0], 'SHOOT'), (1, fixtures[1], 'SHOOT'), (0, fixtures[3], 'MOVE_TO')]
     observed = json.loads((ROOT / 'research/v3/fixtures/observed-live-away-open-play.json').read_text())['decodedState']
     cases.append((1, {'id': 'observed-live-open-play', 'modelText': json.dumps({'prompt': json.dumps(observed)})},
@@ -53,15 +58,20 @@ def main():
                                      velocity={'x': -1, 'y': 0, 'z': 0}, isFree=False, possessionAgentId='agentId_3')
     cases.append((1, {'id': 'synthetic-world-contact-close-shot',
                       'modelText': json.dumps({'prompt': json.dumps(close)})}, 'SHOOT'))
+    if player_id == 0:
+        keeper_cases = json.loads((ROOT / 'research/v3/keeper-g1/fixtures.json').read_text())['cases']
+        cases = [(unwrap(c['modelText']).get('teamId'), c, c['expected']['commandType']) for c in keeper_cases]
+        kickoff = unwrap(fixtures[3]['modelText'])
+        kickoff['myPlayers'] = [0]
+        cases.append((0, {'id': 'home-keeper-kickoff', 'modelText': json.dumps(kickoff)}, 'MOVE_TO'))
     if not args.apply:
-        print('Plan:5synthetic/replayed states including observed live protocol and a world-frame shot hypothesis; stop own sessions.')
+        print(f'Plan:{len(cases)}synthetic/replayed states for player{player_id}; stop own sessions.')
         return
     import boto3
     from botocore.config import Config
     client = boto3.client('bedrock-agentcore', region_name=receipt['identity']['region'],
                           config=Config(connect_timeout=5, read_timeout=90, retries={'max_attempts': 0}))
     arn = receipt['runtime']['agentRuntimeArn']
-    env = receipt['identity']['request']['environmentVariables']
     result = {'kind': 'Native synthetic Runtime probes; not live match evidence', 'probes': []}
     for side, case, expected in cases:
         sid = 'nhitl-r1-probe-' + str(uuid.uuid4())
@@ -78,8 +88,13 @@ def main():
             record['elapsedMs'] = round((time.monotonic() - started) * 1000)
             commands = decode_commands(raw)
             record['commands'] = commands
-            record['commandGatePassed'] = len(commands) == 1 and commands[0].get('playerId') == 3 and \
+            record['commandGatePassed'] = len(commands) == 1 and commands[0].get('playerId') == player_id and \
                 commands[0].get('teamId') == side and commands[0].get('commandType') == expected
+            expectation = case.get('expected', {})
+            if record['commandGatePassed'] and 'excludedTarget' in expectation:
+                record['commandGatePassed'] = commands[0]['parameters'].get('target_player_id') != expectation['excludedTarget']
+            if record['commandGatePassed'] and 'targetHemisphere' in expectation:
+                record['commandGatePassed'] = commands[0]['parameters'].get('target_x', 0) * expectation['targetHemisphere'] > 40
             if env.get('MEMORY_ID'):
                 events = client.list_events(memoryId=env['MEMORY_ID'], actorId=env['MEMORY_ACTOR_ID'],
                                             sessionId=sid, includePayloads=True, maxResults=20)
