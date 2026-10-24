@@ -1,3 +1,10 @@
+## Decision after five real games
+
+Not promoted: 2W/3L, goals5:5, shots24:32, two scoreless games. The previous
+stance cohort was4W/1L, but opponents differ. Return stance; retain this source
+and artifact only as a reproducible rejected experiment. See ../ranked-batch-09.json
+and audits.json. 406 exact own responses,66 outlet moves,zero model calls.
+
 # FWD2 passing outlet candidate
 
 Opt-in FWD2_MODE=outlet; defaultstance remains the rollback. Only HOME FWD2,

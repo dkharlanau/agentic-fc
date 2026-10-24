@@ -1,5 +1,32 @@
 # Agentic FC continuation
 
+## Current checkpoint — 2026-10-24T21:16:07.810707+00:00
+
+Cohort09 COMPLETE5/5:2W3L,5:5goals,24:32shots,2scoreless.195points/rank17,
+114P64W3D47L151:104. Five matched games explain exact account deltas.
+Outlet not promoted. Returned stance via source931af03/revision9; fourM8/112
+unchanged. AWS READY exact readback, native34/34, own probe stoppedtrue,
+warm105.301ms median/134.873max. Portal Fitness5/5, READY; no active match.
+Fresh real-game verification of revision9 stance still required. Do NOT claim
+10ms transport or finalist. Current source stance preserves baseline policy.
+
+406 exact own cohort09 responses:401outlet+5bootstrap,66outletMOVE_TO,zero
+models,CPUmedians0.408–0.572ms. Public audits/results saved. Report attribution
+remains inconsistent, no automatic team-column inversion. No Practice.
+
+Remaining quota11%; <=5% no new starts, finish in-flight and finalize/push.
+Goal remains active; hardend02:38:51UTC25Oct/laststart02:28:51. Next useful step:
+five real games on restored stance, verify first fresh session, no new candidate
+until cohort completes. Existing power/VPN settings unchanged.
+
+Recovery current manifest931af03 verified against archive ef9b7c7... and all9
+Git source hashes. Archive .local/fast-path-v2/outlet-candidate.zip contains same
+code for both modes; set FWD2_MODE=stance. Baseline older8b31760 preserved in
+Git history; original M8 recovery intact. New-account end-to-end still untested.
+CloudShelltab17/input50,cwdnhitl-fast-v2,HEAD931af03,pilot-v9/native-v9.json.
+Portal7 MY TEAM Fitness5/5; workshop16. Preserve these tabs for continuation.
+Private .local/ranked-batch-09/bindings.json/screenshots, raw audits onCloudShell.
+
 ## Current continuation — 24 Oct, 21:05 UTC
 
 Cohort09 revision8 outlet/source931af03 remains active. First three real games:

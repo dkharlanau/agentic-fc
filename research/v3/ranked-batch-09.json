@@ -13,7 +13,7 @@
   "id": "ranked-batch-09",
   "targetCompletedGames": 5,
   "ownerDirective": "Five real games then review; no Practice/Benchmark",
-  "status": "running",
+  "status": "complete",
   "preparedAt": "2026-10-24T20:46:53.603210+00:00",
   "beforeLeaderboard": {
     "rank": 17,
@@ -219,9 +219,116 @@
       "alias": "outlet-live-04",
       "opponent": "FantasyFootball",
       "side": "HOME",
-      "status": "running",
+      "status": "complete",
       "initiation": "manual random matchmaking",
-      "startedAt": "2026-10-24T21:02:08.260998+00:00"
+      "startedAt": "2026-10-24T21:02:08.260998+00:00",
+      "completedAt": "2026-10-24T21:07:43.909881+00:00",
+      "result": "loss",
+      "score": [
+        1,
+        2
+      ],
+      "shots": [
+        8,
+        14
+      ],
+      "possessionPercent": [
+        44,
+        56
+      ],
+      "overtime": true,
+      "reportRoleLatencyMs": {
+        "own": [
+          2,
+          2,
+          1,
+          1,
+          1
+        ],
+        "opponent": [
+          3,
+          3,
+          3,
+          2,
+          70
+        ]
+      },
+      "successPercent": 100,
+      "reportAverageLatencyMs": [
+        1,
+        17
+      ],
+      "reportCommands": {
+        "own": {
+          "CLEAR_OVERRIDE": 17
+        },
+        "opponent": {
+          "CLEAR_OVERRIDE": 72,
+          "MOVE_TO": 15,
+          "PRESS_BALL": 5,
+          "PASS": 4,
+          "INTERCEPT": 3
+        }
+      }
+    },
+    {
+      "alias": "outlet-live-05",
+      "opponent": "ERTT",
+      "side": "HOME",
+      "status": "complete",
+      "initiation": "manual random matchmaking",
+      "startedAt": "2026-10-24T21:09:04.422736+00:00",
+      "completedAt": "2026-10-24T21:12:45.386436+00:00",
+      "result": "win",
+      "score": [
+        3,
+        0
+      ],
+      "shots": [
+        10,
+        0
+      ],
+      "possessionPercent": [
+        38,
+        62
+      ],
+      "reportRoleLatencyMs": {
+        "own": [
+          1200,
+          1078,
+          938,
+          1053,
+          1114
+        ],
+        "opponent": [
+          3,
+          2,
+          2,
+          2,
+          77
+        ]
+      },
+      "successPercent": 100,
+      "reportAverageLatencyMs": [
+        1116,
+        15
+      ],
+      "reportCommands": {
+        "own": {
+          "PRESS_BALL": 193,
+          "MARK": 72,
+          "CLEAR_OVERRIDE": 20,
+          "INTERCEPT": 13,
+          "GK_DISTRIBUTE": 10,
+          "MOVE_TO": 1
+        },
+        "opponent": {
+          "CLEAR_OVERRIDE": 58,
+          "MOVE_TO": 12,
+          "PASS": 5,
+          "PRESS_BALL": 1
+        }
+      }
     }
   ],
   "incomingGames": [],
@@ -232,5 +339,50 @@
     "liveBuild": "First22responses:21outlet,1malformed bootstrap; source931af03"
   },
   "changeFromPreviousCohort": "Only FWD2 off-ball HOME own-possession outlet positioning; rest unchanged",
-  "rollback": "revision7/source8b31760 stance; current source stance retains baseline action policy"
+  "rollback": "revision7/source8b31760 stance; current source stance retains baseline action policy",
+  "summary": {
+    "wins": 2,
+    "draws": 0,
+    "losses": 3,
+    "goals": [
+      5,
+      5
+    ],
+    "shots": [
+      24,
+      32
+    ],
+    "scorelessGames": 2,
+    "cleanSheets": 2,
+    "pointsPerGame": 1.2
+  },
+  "afterLeaderboard": {
+    "rank": 17,
+    "points": 195,
+    "played": 114,
+    "wins": 64,
+    "draws": 3,
+    "losses": 47,
+    "goalsFor": 151,
+    "goalsAgainst": 104,
+    "savedAt": "2026-10-24T21:13:19.286799+00:00"
+  },
+  "accountDelta": {
+    "played": 5,
+    "points": 6,
+    "goalsFor": 5,
+    "goalsAgainst": 5,
+    "extraIncomingGamesObserved": 0
+  },
+  "decision": "Do not promote outlet. Return stance baseline after exact audits; opponent mix prevents causal harm claim.",
+  "rollbackVerified": {
+    "sourceCommit": "931af03",
+    "revision": 9,
+    "mode": "stance",
+    "nativePassed": 34,
+    "nativeTotal": 34,
+    "nativeSessionStopped": true,
+    "fitness": "5/5",
+    "freshRealSession": "pending"
+  }
 }
