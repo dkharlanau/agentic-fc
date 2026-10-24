@@ -48,6 +48,9 @@ async def smoke():
     assert command[0]['teamId'] == 1 and command[0]['commandType'] == 'SHOOT'
     assert len(main._memory.calls) == 1
     assert main._memory.calls[0]['sessionId'] == context.session_id
+    stored = main._memory.calls[0]['payload'][1]['conversational']
+    assert stored['role'] == 'ASSISTANT'
+    assert json.loads(stored['content']['text'])['audit']['outcome'] == 'model_choice'
     print('OFFLINE fake-client SDK smoke passed: one streamed AWAY command and shape-valid sampled event; no AWS calls')
 
 

@@ -45,4 +45,8 @@ Omit `--memory-id` to disable sampled AWS writes. Credentials use the standard A
 
 Before portal registration, invoke native HOME and AWAY possession probes and require valid own-team commands plus genuine accepted model choices, not just a release fallback. Stop only those own probe sessions. Then replace only FWD1 with the independent Runtime ARN, reload, require Fitness5/5, and play one live match. Preserve all original Harness ARNs privately for rollback. Review primary statistics and sampled events before expanding to more roles.
 
+For an explicit revision of the same existing Runtime, preserve its prior receipt and pass `--update-from-receipt .local/r1/receipt.json --receipt .local/r1/revision2.json`. Build, commit and push the new source first. The helper verifies the existing name/role/region and saves a separate resumable update receipt; it does not replace the original record. Re-run native probes on the new receipt before registration.
+
+`probe.py --receipt PRIVATE_READY_RECEIPT --output .local/r1/native-probes.json --apply` runs fresh synthetic HOME/AWAY sessions, reads returned commands and sampled audit events, and stops its own sessions in `finally`. Without `--apply` it only describes the plan. Sampled inputs and decisions use JSON text in conversational event fields: the initial blob-object trial was stored by this service as a map-style string, so it did not satisfy the structured audit gate.
+
 The account-bound receipt, resource IDs, raw game inputs and access codes must stay private. A successful create or Fitness is not evidence of tactical improvement.

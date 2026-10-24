@@ -72,8 +72,14 @@ def main():
                 events = client.list_events(memoryId=env['MEMORY_ID'], actorId=env['MEMORY_ACTOR_ID'],
                                             sessionId=sid, includePayloads=True, maxResults=20)
                 record['memoryEvents'] = json.loads(json.dumps(events['events'], default=str))
-                audits = [p['blob']['audit'] for e in events['events'] for p in e.get('payload', [])
-                          if isinstance(p.get('blob'), dict) and 'audit' in p['blob']]
+                audits = []
+                for event in events['events']:
+                    for payload in event.get('payload', []):
+                        conversation = payload.get('conversational', {})
+                        if conversation.get('role') == 'ASSISTANT':
+                            decoded = json.loads(conversation['content']['text'])
+                            if isinstance(decoded.get('audit'), dict):
+                                audits.append(decoded['audit'])
                 record['acceptedModelChoiceVerified'] = any(a.get('outcome') == 'model_choice' and
                     a.get('commandType') == 'SHOOT' and a.get('modelAttempted') is True for a in audits)
         except Exception as error:

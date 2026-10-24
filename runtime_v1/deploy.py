@@ -61,6 +61,16 @@ def apply(args, request, sha, archive):
     if not args.execution_role_arn.startswith(f'arn:aws:iam::{account}:role/'):
         raise ValueError('Use an existing execution role in this workshop account')
     control = session.client('bedrock-agentcore-control')
+    prior = None
+    if args.update_from_receipt:
+        prior = json.loads(args.update_from_receipt.read_text())
+        old = prior['identity']['request']
+        if not prior.get('verifiedReady') or prior['identity']['region'] != args.region or \
+                old['agentRuntimeName'] != request['agentRuntimeName'] or old['roleArn'] != request['roleArn']:
+            raise ValueError('Update requires the verified prior receipt for this same runtime name/role/region')
+        current = control.get_agent_runtime(agentRuntimeId=prior['runtime']['agentRuntimeId'])
+        if current['roleArn'] != request['roleArn'] or current['agentRuntimeName'] != request['agentRuntimeName']:
+            raise ValueError('Existing Runtime identity differs from its prior receipt')
     identity = {'region': args.region, 'request': request, 'archiveSha256': sha}
     if args.receipt.exists():
         receipt = json.loads(args.receipt.read_text())
@@ -68,7 +78,11 @@ def apply(args, request, sha, archive):
             raise ValueError('Receipt is for a different immutable creation plan')
     else:
         receipt = {'identity': identity, 'clientToken': str(uuid.uuid4())}
+        if prior:
+            receipt['updateFrom'] = prior['runtime']
         save_private(args.receipt, receipt)
+    if receipt.get('updateFrom') != (prior['runtime'] if prior else None):
+        raise ValueError('Resume with the same prior update receipt')
     if args.memory_id:
         memory = control.get_memory(memoryId=args.memory_id)['memory']
         if memory['status'].upper() != 'ACTIVE' or memory.get('strategies'):
@@ -83,7 +97,12 @@ def apply(args, request, sha, archive):
         receipt['artifactUploaded'] = True
         save_private(args.receipt, receipt)
     if 'runtime' not in receipt:
-        created = control.create_agent_runtime(**request, clientToken=receipt['clientToken'])
+        if prior:
+            update = {key: value for key, value in request.items() if key != 'agentRuntimeName'}
+            created = control.update_agent_runtime(agentRuntimeId=prior['runtime']['agentRuntimeId'],
+                                                   **update, clientToken=receipt['clientToken'])
+        else:
+            created = control.create_agent_runtime(**request, clientToken=receipt['clientToken'])
         receipt['runtime'] = {k: created[k] for k in ('agentRuntimeId', 'agentRuntimeArn')}
         save_private(args.receipt, receipt)
     runtime_id = receipt['runtime']['agentRuntimeId']
@@ -121,6 +140,8 @@ def main():
     parser.add_argument('--memory-id')
     parser.add_argument('--source-commit')
     parser.add_argument('--receipt', type=Path, default=ROOT / '.local/r1/receipt.json')
+    parser.add_argument('--update-from-receipt', type=Path,
+                        help='Explicitly update the same existing Runtime; use a NEW output receipt for each revision')
     parser.add_argument('--apply', action='store_true')
     args = parser.parse_args()
     if not args.source_commit:
@@ -135,6 +156,8 @@ def main():
         parser.error('--apply requires the existing execution role ARN')
     if not re.fullmatch(r'[a-z0-9][a-z0-9.-]{1,61}[a-z0-9]', args.bucket):
         parser.error('--apply requires the existing workshop code bucket')
+    if args.update_from_receipt and args.update_from_receipt.resolve() == args.receipt.resolve():
+        parser.error('Preserve the prior receipt; use a new --receipt path for the update')
     apply(args, request, sha, archive)
 
 

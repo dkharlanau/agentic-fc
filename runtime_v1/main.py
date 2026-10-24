@@ -56,7 +56,10 @@ def memory_sample(payload, commands, audit, session_id):
         _memory.create_event(memoryId=memory_id,
                              actorId=os.getenv('MEMORY_ACTOR_ID', 'r1_fwd1'),
                              sessionId=session_id, eventTimestamp=datetime.now(timezone.utc),
-                             payload=[{'blob': {'input': unwrap(payload), 'commands': commands, 'audit': audit}}])
+                             payload=[{'conversational': {'role': 'USER', 'content': {
+                                 'text': json.dumps({'input': unwrap(payload)}, separators=(',', ':'))}}},
+                                      {'conversational': {'role': 'ASSISTANT', 'content': {
+                                 'text': json.dumps({'commands': commands, 'audit': audit}, separators=(',', ':'))}}}])
         return 'written'
     except Exception as error:
         return 'error_' + type(error).__name__
