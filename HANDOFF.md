@@ -1,14 +1,19 @@
 # Agentic FC continuation
 
-## Active checkpoint — 24 Oct, 20:17 UTC
+## Active checkpoint — 24 Oct, 20:14 UTC
 
 Owner now requires **5 real ranked matches per block**, no more Benchmark/Practice.
+Owner added quota guard: check Codex remaining between matches; at <=5% do not
+start new games. Finish in-flight game, save all safe configs/results/recovery to
+GitHub, verify remote commit, and finalize checkpoint. At20:14UTC 25% remained.
+Start finalization earlier if needed; reserve enough quota for verified recovery.
 Current cohort08 first game KERON FC HOME preparing; no probes/deployments.
 Registered FWD2 revision7/source8b31760 **stance**, other four M8 and112 unchanged.
 Probe-wide revision6 Practice completed3:0,6:3shots,30%possession; excluded.
 Revision7 native32/32,warmmedian105.039ms,ownprobe stopped. PortalFitness5/5,
 but drill logs stillprobe-wide from reused/old session: fresh game mode needs
-confirmation. Runtime readback/native verify new stance. Do not stop game sessions.
+confirmation. Update20:15UTC: genuine game first17 responses confirm16 stance
+and1 malformed bootstrap/no mode, zero probe-wide. Runtime readback/native verify stance. Do not stop game sessions.
 Current portal binding private .local/ranked-batch-08/bindings.json.
 Private control window exported .local/fwd2-control-20261024/window-trace.json;
 79decisions,7diagnosticMOVE,0models,CPUmedian.558ms. Physical review pending.

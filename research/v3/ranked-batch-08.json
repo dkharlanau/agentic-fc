@@ -19,7 +19,7 @@
       "alias": "real-only-01",
       "opponent": "KERON FC",
       "side": "HOME",
-      "status": "preparing",
+      "status": "live",
       "initiation": "manual random matchmaking",
       "startedAt": "2026-10-24T20:13:02.990406+00:00"
     }
@@ -40,6 +40,7 @@
     "native": "32/32",
     "fitness": "5/5",
     "practice": "No additional Practice allowed or required: baseline commands restored",
-    "fitnessLimit": "Portal5/5; drill logs still reference prior probe-wide session. New native session verifies stance; require genuine game log confirmation."
+    "fitnessLimit": "Portal5/5; drill logs still reference prior probe-wide session. New native session verifies stance; require genuine game log confirmation.",
+    "freshGameMode": "real-only-01 first17 audited responses:16 stance,1 malformed initial state without mode; no probe-wide"
   }
 }
