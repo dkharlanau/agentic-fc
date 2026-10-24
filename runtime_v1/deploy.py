@@ -40,6 +40,10 @@ def plan(args):
         if args.player_id != 3:
             raise ValueError('Attack-support experiment is FWD1 only')
         environment['FWD_SUPPORT_STANCE'] = 'attack'
+    if args.fwd_coordinate_probe == 'world-target':
+        if args.player_id != 3:
+            raise ValueError('Coordinate probe is FWD1 only')
+        environment['FWD_COORDINATE_PROBE'] = 'world-target'
     if args.memory_id:
         environment.update(MEMORY_ID=args.memory_id,
                            MEMORY_ACTOR_ID='r1_gk' if args.player_id == 0 else 'r1_fwd1',
@@ -152,6 +156,8 @@ def main():
                         help='Experimental bound mode omits optional output teamId; internal validation remains strict')
     parser.add_argument('--fwd-support-stance', choices=('default', 'attack'), default='default',
                         help='Optional engine attack support when no local on-ball/pressure action is available')
+    parser.add_argument('--fwd-coordinate-probe', choices=('off', 'world-target'), default='off',
+                        help='Practice-only diagnostic: small raw MOVE target during gameTime8..28')
     parser.add_argument('--source-commit')
     parser.add_argument('--receipt', type=Path, default=ROOT / '.local/r1/receipt.json')
     parser.add_argument('--update-from-receipt', type=Path,

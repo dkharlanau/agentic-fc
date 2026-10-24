@@ -105,13 +105,14 @@ def legal_options(root, player_id, contact=None, geometry_ready=True, movement_r
 
 class DecisionEngine:
     def __init__(self, client, model_id, player_id=3, history_limit=6, session_limit=64,
-                 attack_support=False):
+                 attack_support=False, coordinate_probe=False):
         self.client = client
         self.model_id = model_id
         self.player_id = player_id
         self.history_limit = history_limit
         self.session_limit = session_limit
         self.attack_support = attack_support
+        self.coordinate_probe = coordinate_probe
         self.sessions = OrderedDict()
         self.calibrations = {}
         self.lock = threading.Lock()
@@ -130,6 +131,18 @@ class DecisionEngine:
                                        geometry_ready=profile['kind'] != 'unresolved_3d',
                                        movement_ready=profile['kind'].startswith('documented_xy'),
                                        attack_support=self.attack_support)
+        allowed = root.get('unlockedCommands')
+        probe_offered = self.coordinate_probe and self.player_id == 3 and state.my is not None and \
+            state.side in (0, 1) and state.play_mode == 'PLAY_ON' and 8 <= state.game_time < 28 and \
+            profile['kind'] == 'keeper_reference_xz' and \
+            any(o.command['commandType'] == 'CLEAR_OVERRIDE' for o in options) and \
+            (not isinstance(allowed, list) or not allowed or 'MOVE_TO' in allowed)
+        if probe_offered:
+            # Deliberately raw, small coordinates for a bounded Practice experiment.
+            # The resulting player trace must establish units before any converter.
+            options.insert(0, cmd(state, 'MOVE_TO',
+                                  {'target_x': 4.0 * state.sign, 'target_y': 1.5, 'sprint': False},
+                                  reason='CONTROL_UNIT_PROBE'))
         # A missing legal release command cannot be repaired by inventing an unlocked action.
         if not options:
             raise ValueError('No supported command is unlocked')
@@ -155,6 +168,8 @@ class DecisionEngine:
                 'When ENGINE_ATTACK_SUPPORT is offered, choose its SET_STANCE attack option rather than CLEAR_OVERRIDE. '
                 'It keeps built-in positioning active without guessing movement coordinates. '
                 'Use CLEAR_OVERRIDE for uncertainty or when no useful intervention is offered.')
+        if probe_offered:
+            selector += ' A CONTROL_UNIT_PROBE is offered for this bounded diagnostic window: choose that MOVE_TO option. Trust its supplied coordinates and do not alter them.'
         try:
             response = self.client.converse(
                 modelId=self.model_id,
@@ -198,6 +213,7 @@ class DecisionEngine:
                  'coordinateProfile': profile, 'ownershipEvidence': facts['ownershipEvidence'],
                  'usage': usage,
                  'supportMode': 'attack' if self.attack_support else 'default',
+                 'coordinateProbeOffered': bool(probe_offered),
                  'previousCommand': root.get('previousCommand'),
                  'assignedPlayerActions': [
                      {k: p.get(k) for k in ('teamCode', 'agentId', 'position', 'currentAction', 'lastAction')}

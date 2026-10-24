@@ -60,6 +60,35 @@ class RuntimeTests(unittest.TestCase):
         _, limited = legal_options(root, 3, attack_support=True)
         self.assertEqual([o.command['commandType'] for o in limited], ['CLEAR_OVERRIDE'])
 
+    def test_coordinate_probe_is_bounded_opt_in_and_keeps_safe_release(self):
+        root = json.loads(Path('research/v3/fixtures/observed-live-away-open-play.json').read_text())['decodedState']
+        root['gameState']['gameTime'] = 10
+        engine = DecisionEngine(Model(), 'test', coordinate_probe=True)
+        commands, audit = engine.choose(root, 'diagnostic')
+        self.assertEqual(commands[0]['parameters'],
+                         {'target_x': -4.0, 'target_y': 1.5, 'sprint': False})
+        self.assertEqual(commands[0]['playerId'], 3)
+        self.assertEqual(commands[0]['teamId'], 1)
+        self.assertTrue(audit['coordinateProbeOffered'])
+        failed, _ = DecisionEngine(Model(error=TimeoutError()), 'test', coordinate_probe=True).choose(root, 'error')
+        self.assertEqual(failed[0]['commandType'], 'CLEAR_OVERRIDE')
+        for clock in (7.9, 28, 120):
+            root['gameState']['gameTime'] = clock
+            commands, audit = engine.choose(root, 'diagnostic')
+            self.assertFalse(audit['coordinateProbeOffered'])
+            self.assertNotEqual(commands[0]['commandType'], 'MOVE_TO')
+        root['gameState']['gameTime'] = 10
+        root['unlockedCommands'] = ['CLEAR_OVERRIDE']
+        commands, audit = engine.choose(root, 'restricted')
+        self.assertFalse(audit['coordinateProbeOffered'])
+        self.assertEqual(commands[0]['commandType'], 'CLEAR_OVERRIDE')
+        root['unlockedCommands'] = ['MOVE_TO']
+        with self.assertRaises(ValueError):
+            engine.choose(root, 'no-release')
+        root['unlockedCommands'] = []
+        _, audit = DecisionEngine(Model(), 'test').choose(root, 'default')
+        self.assertFalse(audit['coordinateProbeOffered'])
+
     def test_invalid_model_output_and_service_error_release_only_own_player(self):
         for model in (Model('[]'), Model('{"choice":true}'), Model('{"choice":999}'),
                       Model('[{"playerId":4,"commandType":"RESET"}]'), Model(error=TimeoutError())):

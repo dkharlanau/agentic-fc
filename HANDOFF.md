@@ -92,3 +92,17 @@ Raw evidence is private under `.local/aws-20261024-sixhours` locally and
 Keep meaningful commentary at least every60seconds; do not spend minutes on
 internal analysis between actions. Never claim a top-team/learning effect that
 has not been measured.
+
+Latest11:56UTC: GKnative11/Fitness5passed; Practice05draw0:0 afterextraTime
+239.114sec, primarySTATSabsent, Unityfinalhasnoshottable. Storeallshot/possession
+valuesnull, notzero. GK118genuineCLEARchoices,p50=415/p95=597,max1578ms;
+FWD119choices46CLEAR/64STANCE/7PASS/2INTERCEPT,p50=408/p95=508,max650.
+No inputrejects on either. No keeper improvement established. Both currently
+registered; threeotherM7Harness unchanged. No activegame. NextPractice06.
+v12local opt-in --fwd-coordinate-probe world-target offers onlyFWD3 smallraw
+MOVE_TO(4*attackSign,1.5,noSprint) forgameTime8..28, thenoldpolicy. Purpose:
+resolve outgoingmovementunits andphysicalrecipient usingrawposition/lastAction.
+No converter installed.40offlinechecks+SDKsmokepass. Archive96c2a99999154556b1a12853c6988f9607aaa3e3e527b590bb574f21fe2efc01.
+Commit/push,Cloudbuild,updateR1receipt11->12 withbound+attack+world-target,
+native9cases thenfreshFitness5beforePractice06. GKremainsv1. Diagnostic
+outcomesmustnotcountasstrength. Exactv11/GKrebuildprofilesin runtime_v1/profiles.json.

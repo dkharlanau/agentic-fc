@@ -253,6 +253,93 @@
         },
         "applicationObservation": "One server previousINTERCEPT snapshot has ownplayerCoachIntercept while same-IDopponentCoachMoveTo; supports own control for that observation, not all commands."
       }
+    },
+    {
+      "id": "practice-05",
+      "setup": "GK-R2v1-plus-FWD1-v11-plus-threeM7-formation112",
+      "opponent": "The Benchmark FC",
+      "side": "home",
+      "goalsFor": 0,
+      "goalsAgainst": 0,
+      "shotsFor": null,
+      "shotsAgainst": null,
+      "shotsOnTargetFor": null,
+      "shotsOnTargetAgainst": null,
+      "possessionPercent": null,
+      "commands": 599,
+      "averageLatencyMs": 849,
+      "commandCounts": {
+        "MOVE_TO": 232,
+        "PRESS_BALL": 180,
+        "INTERCEPT": 85,
+        "PASS": 50,
+        "SHOOT": 26,
+        "CLEAR_OVERRIDE": 12,
+        "GK_DISTRIBUTE": 12,
+        "MARK": 2
+      },
+      "opponentCommands": 187,
+      "opponentAverageLatencyMs": 199,
+      "roleLatencyMs": {
+        "gk": 624,
+        "def": 1171,
+        "mid": 946,
+        "fwd1": 660,
+        "fwd2": 819
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Primary STATS table absent in the rendered report; shots/on-target/possession are unknown (null), not zero.",
+        "No primary STATS or Unity final shot table; shot and possession values remain unknown.",
+        "Extra time observed; normal-phase snapshot is not the final clock.",
+        "One draw does not establish a keeper upgrade or weakness."
+      ],
+      "mode": "Practice",
+      "preset": "Balanced",
+      "initiation": "OnlyGK replaced relativePractice04 afternative11/Fitness5; FWD1v11 and112 unchanged",
+      "coaching": [],
+      "unityFinalVerified": {
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "shotStats": "Not displayed in Unity final; primary report STATS absent"
+      },
+      "runtimeEvidence": {
+        "sourceCommit": "7a14d1b",
+        "gk": {
+          "decisions": 118,
+          "commands": {
+            "CLEAR_OVERRIDE": 118
+          },
+          "inputRejections": 0,
+          "modelLatencyMs": {
+            "p50": 415,
+            "p95": 597,
+            "max": 1578
+          }
+        },
+        "fwd1": {
+          "decisions": 119,
+          "commands": {
+            "CLEAR_OVERRIDE": 46,
+            "SET_STANCE": 64,
+            "PASS": 7,
+            "INTERCEPT": 2
+          },
+          "inputRejections": 0,
+          "modelLatencyMs": {
+            "p50": 408,
+            "p95": 508,
+            "max": 650
+          }
+        },
+        "gameTimeRange": [
+          0,
+          239.11426
+        ]
+      }
     }
   ]
 }

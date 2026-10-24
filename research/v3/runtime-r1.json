@@ -238,7 +238,7 @@
       "interpretation": "Possible team attribution/routing mismatch; not established"
     }
   },
-  "currentMainTeam": "R1v11 bound attack-support FWD1 plus fourM7Harness,formation112; original five-Harness M8 rollback preserved",
+  "currentMainTeam": "GK-R2v1 plusFWD1-R1v11 plus threeoriginalM7Harness,formation112; both independent native/Fitness passed; keeper strength unestablished",
   "revision9Candidate": {
     "status": "READY; native5/5 and fresh portalFitness5/5",
     "onlyBehaviorChange": "Optional bound wire mode omits output teamId; internal own-team/player validation remains",
@@ -297,7 +297,7 @@
     }
   },
   "goalkeeperCandidate": {
-    "status": "READY/native11of11 passed; GKslot registered; freshFitnessrunning",
+    "status": "READY/native11/Fitness5; Practice05draw0:0,shotstatsmissing",
     "sourceCommit": "7a14d1b",
     "playerId": 0,
     "model": "global.amazon.nova-2-lite-v1:0",
@@ -316,6 +316,32 @@
       4168,
       3447
     ],
-    "ownSessionsStopped": true
+    "ownSessionsStopped": true,
+    "fitness": "5/5",
+    "practice05": {
+      "result": "DRAW0:0",
+      "primaryStats": null,
+      "genuineChoices": 118,
+      "commands": {
+        "CLEAR_OVERRIDE": 118
+      },
+      "inputRejects": 0,
+      "modelP50Ms": 415,
+      "modelP95Ms": 597,
+      "gameTimeEnd": 239.11426,
+      "interpretation": "No actual distribution opportunity verified; no stronger goalkeeper effect established"
+    }
+  },
+  "revision12Candidate": {
+    "status": "Local only",
+    "purpose": "Bounded movement-unit and physical-recipient diagnostic, not a strength comparison",
+    "windowSeconds": [
+      8,
+      28
+    ],
+    "target": "Raw X=4*attackSign,Y=1.5,noSprint,onlyFWD1",
+    "default": "Disabled; native9 and Fitness required beforePractice06",
+    "offlineChecks": 40,
+    "archiveSha256": "96c2a99999154556b1a12853c6988f9607aaa3e3e527b590bb574f21fe2efc01"
   }
 }

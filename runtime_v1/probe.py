@@ -73,6 +73,20 @@ def main():
                 ball['possessionTeamCode'] = 'away'
             cases.append((side, {'id': 'attack-support-' + str(side),
                                  'modelText': json.dumps(support)}, 'SET_STANCE'))
+    if player_id == 3 and env.get('FWD_COORDINATE_PROBE') == 'world-target':
+        for side in (0, 1):
+            diagnostic = copy.deepcopy(observed)
+            diagnostic['gameState']['gameTime'] = 10
+            if side == 0:
+                diagnostic['teamId'] = 0
+                for player in diagnostic['gameState']['players']:
+                    player['teamCode'] = 'away' if player['teamCode'] == 'home' else 'home'
+                    player['position']['x'] *= -1
+                diagnostic['gameState']['ball']['position']['x'] *= -1
+            cases.append((side, {'id': 'coordinate-probe-' + str(side),
+                                 'modelText': json.dumps(diagnostic),
+                                 'expected': {'probeTarget': {'target_x': 4.0 if side == 0 else -4.0,
+                                                              'target_y': 1.5, 'sprint': False}}}, 'MOVE_TO'))
     if player_id == 0:
         keeper_cases = json.loads((ROOT / 'research/v3/keeper-g1/fixtures.json').read_text())['cases']
         cases = [(unwrap(c['modelText']).get('teamId'), c, c['expected']['commandType']) for c in keeper_cases]
@@ -114,6 +128,8 @@ def main():
                 record['commandGatePassed'] = commands[0]['parameters'].get('target_player_id') != expectation['excludedTarget']
             if record['commandGatePassed'] and 'targetHemisphere' in expectation:
                 record['commandGatePassed'] = commands[0]['parameters'].get('target_x', 0) * expectation['targetHemisphere'] > 40
+            if record['commandGatePassed'] and 'probeTarget' in expectation:
+                record['commandGatePassed'] = commands[0]['parameters'] == expectation['probeTarget']
             if env.get('MEMORY_ID'):
                 events = client.list_events(memoryId=env['MEMORY_ID'], actorId=env['MEMORY_ACTOR_ID'],
                                             sessionId=sid, includePayloads=True, maxResults=20)

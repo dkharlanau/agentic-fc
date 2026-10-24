@@ -1,6 +1,6 @@
 # R1: bounded model selection Runtime pilot
 
-Experimental FWD1 adapter and separate offline GK candidate. It is separate from the saved five-Harness team. Deployment and match outcomes belong in `research/v3`; local checks do not establish live strength.
+Experimental FWD1 adapter and separate GK candidate. They are separate from the saved five-Harness team. Deployment and match outcomes belong in `research/v3`; local checks do not establish live strength. Exact experimental build/config recipes are in [profiles.json](profiles.json); original M8 remains the recovery reference.
 
 The code unwraps the input, resolves HOME/AWAY and possession, computes a small legal action set, and asks Nova 2 Lite to choose an index. The model genuinely selects among actions: it can choose a shot or release control on the same state. Code owns player/team IDs, parameters, unlocked-command checks and JSON serialization. Model/API/format failures release only the assigned player's override. There is no rule-only fast path for valid invocations and no shell/browser/tool chain.
 
@@ -61,7 +61,7 @@ The account-bound receipt, resource IDs, raw game inputs and access codes must s
 
 ## Separate goalkeeper candidate
 
-`--player-id0 --name nhitl_gk_r2` creates a separate experimental goalkeeper Runtime; it must not replace the FWD1 Runtime. The same reviewed source archive can be used, but each role has an isolated environment, session and STM actor. Only0 and3 are accepted by the deployer; same-Runtime updates cannot change player identity.
+`--player-id 0 --name nhitl_gk_r2` creates a separate experimental goalkeeper Runtime; it must not replace the FWD1 Runtime. The same reviewed source archive can be used, but each role has an isolated environment, session and STM actor. Only0 and3 are accepted by the deployer; same-Runtime updates cannot change player identity. Its first native11/11 and portal Fitness5/5 gates passed; matched Practice is pending. These gates do not establish better shot prevention or saves.
 
 GK code offers only safe distribution, documented-frame own-goal recovery/restart movement, and release to built-in goalkeeping. It never offers pressure, a shot, a normal pass or RESET. A receiver needs space and a clear lane; the marked nearest defender is excluded in the mirrored synthetic distribution fixtures. In the observed small-field profile, outgoing coordinate conversion remains unverified, so custom GK movement is unavailable. Native probes and portal Fitness are still required; no goalkeeper live improvement is claimed.
 
@@ -80,3 +80,7 @@ The outer async-generator path gives the SDK a stream before model work complete
 ## Optional attack-support experiment
 
 `--fwd-support-stance attack` offers FWD1 an engine `SET_STANCE` attack option when ownership is known, the player is off the ball, and no local pressure/interception action is offered. It avoids unverified world-coordinate movement. Restart, possession, stamina and command-unlock gates remain active. The default policy is unchanged. The selector prefers the offered support stance over release, but still makes a genuine bounded choice. Private audit retains the input previous command and both same-ID players last-actions to help distinguish report attribution from applied control. Native/Fitness and matched Practice evidence remain required; no improvement is claimed.
+
+## Bounded coordinate diagnostic
+
+`--fwd-coordinate-probe world-target` is an opt-in Practice diagnostic, disabled by default. Only FWD1 in the observed keeper-reference profile is offered a raw small `MOVE_TO` target `(4*attackSign,1.5)` without sprint during elapsed seconds8..28. The model is instructed to select the offered probe; a legal own release remains available on failure. It does not change team IDs or infer a movement conversion. Compare subsequent raw positions and same-ID last-actions before claiming raw or normalized output units. Native/Fitness gates alone cannot establish those units; diagnostic match outcomes must not enter policy-strength comparisons.
