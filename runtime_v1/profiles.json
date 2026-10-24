@@ -35,6 +35,30 @@
         "Practice05draw0:0; primaryshotstatsmissing"
       ],
       "strength": "118genuineClear choices and no input rejects in first field game; no verified keeper improvement"
+    },
+    "fwd1-position-v14": {
+      "name": "nhitl_fwd1_r1",
+      "playerId": 3,
+      "sourceCommit": "e11bad6992d499d02437d7f8ba280b8c6b9e0627",
+      "archiveSha256": "516464b636877353d137f097bdbb83912423ffe74421402acbba7a0c00faaa90",
+      "archiveBytes": 20615902,
+      "archiveFiles": 2733,
+      "modelId": "global.amazon.nova-2-lite-v1:0",
+      "wireTeamScope": "bound",
+      "fwdSupportMode": "position",
+      "fwdCoordinateProbe": "off",
+      "memoryActor": "r1_fwd1",
+      "nativeCases": 9,
+      "registered": false,
+      "verified": [
+        "READY",
+        "native9/9",
+        "Fitness5/5",
+        "Practice08WIN3:0",
+        "79actualPracticechoices/0inputrejects/29nonsprintMOVEs"
+      ],
+      "rankedBatch": "research/v3/ranked-batch-03.json",
+      "strength": "Not adopted:1W4L,5:8goals,3points in5games; uncontrolled opponents/sides. Final is originalM8."
     }
   },
   "memory": {
@@ -46,7 +70,7 @@
   },
   "restoreOrder": [
     "Restore original five Harness with baseline-m8 recovery profile first",
-    "Build the exact sourceCommit using locked Linux ARM64 dependencies; require archiveSha256 match",
+    "Resolve selected profile sourceCommit/archiveSha256 overrides, then build exact source using locked LinuxARM64 dependencies; require archive match",
     "Use the new workshop existing role and bucket; optionally create the same bounded STM shape",
     "Deploy each experimental profile to a separate Runtime and private receipt",
     "Require its native command/model/cleanup gates before replacing only that portal role",
@@ -57,5 +81,6 @@
     "Do not carry old AWS ARNs, session IDs, access codes or credentials into a new workshop",
     "Recheck current model availability and service behavior after a workshop reset",
     "Reported agent command columns do not establish physical team attribution"
-  ]
+  ],
+  "sourceResolution": "Each profile may override sourceCommit/archiveSha256; otherwise use the top-level historical v11/GK build."
 }

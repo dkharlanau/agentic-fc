@@ -1,6 +1,6 @@
 {
   "kind": "Independent Runtime FWD1 pilot; public-safe evidence summary",
-  "status": "v14notadoptedafterranked1W4L; originalfiveHarnessrestored,formation121trial; R1/GKunregistered",
+  "status": "Final originalM8 restored,112,Fitness5; experimentalFWD1v14/GK unregistered,not adopted",
   "initialSourceCommit": "7ae12c1e737992f83a10ff5c2cf1497cb2580764",
   "initialArchiveSha256": "21ed279d4831546ff58e0ce3c91744e1d47b4cb5fbcff8ae4e970ba1489274e3",
   "reproducibility": "Local macOS cross-build and CloudShell Linux build produced identical archive SHA256,20610262bytes,2731files",
@@ -238,7 +238,7 @@
       "interpretation": "Possible team attribution/routing mismatch; not established"
     }
   },
-  "currentMainTeam": "OriginalGK13/DEF19/MID15/FWD1v16/FWD2v14 on112; Nova2Lite0..3/Haiku4.5role4",
+  "currentMainTeam": "OriginalGK13/DEF19/MID15/FWD1v16/FWD2v14,112; Nova2Lite0..3/Haiku4.5role4",
   "revision9Candidate": {
     "status": "READY; native5/5 and fresh portalFitness5/5",
     "onlyBehaviorChange": "Optional bound wire mode omits output teamId; internal own-team/player validation remains",

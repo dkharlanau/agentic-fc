@@ -1,6 +1,6 @@
 # R1: bounded model selection Runtime pilot
 
-Experimental FWD1 adapter and separate GK candidate. They are separate from the saved five-Harness team. Deployment and match outcomes belong in `research/v3`; local checks do not establish live strength. Exact experimental build/config recipes are in [profiles.json](profiles.json); original M8 remains the recovery reference.
+Experimental FWD1 adapter and separate GK candidate. Both are unregistered in the final tournament lineup. Deployment and match outcomes belong in `research/v3`; local checks do not establish live strength. Exact experimental build/config recipes are in [profiles.json](profiles.json); original M8 is the final recovery reference. The v14 position candidate passed native9/Fitness5 and Practice3:0, then scored only3points in its five-game ranked block; it was not adopted. Historical sections below describe individual revisions, not the current registered lineup.
 
 The code unwraps the input, resolves HOME/AWAY and possession, computes a small legal action set, and asks Nova 2 Lite to choose an index. The model genuinely selects among actions: it can choose a shot or release control on the same state. Code owns player/team IDs, parameters, unlocked-command checks and JSON serialization. Model/API/format failures release only the assigned player's override. There is no rule-only fast path for valid invocations and no shell/browser/tool chain.
 

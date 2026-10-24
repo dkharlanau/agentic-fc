@@ -1,5 +1,36 @@
 # Agentic FC continuation
 
+## FINAL OWNER DIRECTIVE — 24 Oct, 15:31 UTC
+
+The owner ended exploratory work and requested finalisation using existing
+evidence. This supersedes the five-game loop and original eight-hour window
+below. **Do not resume experiments, probes, deployments or manual matchmaking
+without a new human instruction.** The existing heartbeat is PAUSED, verified
+by tool response and saved configuration. No shutdown or Chrome cleanup.
+
+Final setup: **M8, original five Harness, formation 1-1-2**. GK/DEF/MID/FWD1
+use Nova 2 Lite; FWD2 uses Haiku 4.5. Original saved prompts, no Memory or tools.
+Current role versions: 13/19/15/16/14. FWD1 v16 has the same saved prompt/config
+as the recovery export's v14; revision numbers are resource-local history.
+Formation persisted after reload and fresh Fitness passed all five at15:39UTC.
+Experimental FWD1 and GK runtimes are unregistered.
+
+The already-running live80 finished1:0 against Mobile United FC, shots6:6.
+Formation121 trial ended at **1/5 by owner instruction**, not a complete cohort.
+Final leaderboard snapshot15:39UTC: **14th,155points,89P51W2D36L,118:79,+39**.
+M8 stable controls:10games5W1D4L,16points. FWD1v14 candidate:5games1W4L,
+3points; not adopted. Opponents/sides were uncontrolled; M8 is a supported
+final choice, not a proven global optimum or tournament-winning guarantee.
+
+Start with [final setup](research/v3/FINAL_SETUP.ru.md) and
+[machine-readable manifest](research/v3/final-setup-20261024.json).
+Restore explicitly with `--profile baseline-m8`; full fresh-account restore
+remains unverified. Preserve private receipts under ignored `.local/`.
+Git branch `codex/football-experiments-20261023`, draft PR5; do not auto-merge.
+The original bounded awake timer may expire normally; display sleep allowed.
+
+## Historical instructions and checkpoints — superseded where conflicting
+
 ## P0 OWNER DIRECTIVE — PLAY FIVE LIVE MATCHES, THEN ANALYZE (24 Oct 2026)
 
 **Read first on resume. This is the owner's newer priority and overrides the

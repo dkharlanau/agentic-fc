@@ -1,37 +1,38 @@
 {
   "kind": "Recorded portal counters; not a shot-distance model",
   "source": "research/v3/matches.json",
-  "sourceSha256": "86c4d221d1d23141d65f0cb1cf3763d71aba5b57481619a001171e75caf4c202",
-  "throughReport": "live-60",
+  "sourceSha256": "2696e9d18e68df7707b29dab065a2c3a5bf0c27bda7e36d6037b8eb72c7d27d3",
+  "throughReport": "live-80",
   "coverage": {
-    "recordedReports": 60,
-    "completeShotReports": 59,
+    "recordedReports": 80,
+    "completeShotReports": 78,
     "missingShotReports": [
-      "live-29"
+      "live-29",
+      "live-72"
     ],
     "scope": "Saved reports only; not the entire account match history"
   },
   "allCompleteReports": {
-    "reports": 59,
-    "shotsFor": 420,
-    "shotsOnTargetFor": 79,
-    "goalsFor": 79,
-    "notMarkedOnTarget": 341,
-    "portalOnTargetSharePercent": 18.81,
-    "shotsAgainst": 227,
-    "shotsOnTargetAgainst": 43,
-    "goalsAgainst": 43
+    "reports": 78,
+    "shotsFor": 512,
+    "shotsOnTargetFor": 102,
+    "goalsFor": 102,
+    "notMarkedOnTarget": 410,
+    "portalOnTargetSharePercent": 19.922,
+    "shotsAgainst": 327,
+    "shotsOnTargetAgainst": 67,
+    "goalsAgainst": 67
   },
   "attributedSetupReports": {
-    "reports": 46,
-    "shotsFor": 341,
-    "shotsOnTargetFor": 65,
-    "goalsFor": 65,
-    "notMarkedOnTarget": 276,
-    "portalOnTargetSharePercent": 19.062,
-    "shotsAgainst": 168,
-    "shotsOnTargetAgainst": 32,
-    "goalsAgainst": 32
+    "reports": 65,
+    "shotsFor": 433,
+    "shotsOnTargetFor": 88,
+    "goalsFor": 88,
+    "notMarkedOnTarget": 345,
+    "portalOnTargetSharePercent": 20.323,
+    "shotsAgainst": 268,
+    "shotsOnTargetAgainst": 56,
+    "goalsAgainst": 56
   },
   "backgroundUnattributedReports": {
     "reports": 13,
@@ -122,6 +123,17 @@
       "shotsOnTargetAgainst": 6,
       "goalsAgainst": 6
     },
+    "A0-M7-formation121-original-fwd1-v16": {
+      "reports": 1,
+      "shotsFor": 6,
+      "shotsOnTargetFor": 1,
+      "goalsFor": 1,
+      "notMarkedOnTarget": 5,
+      "portalOnTargetSharePercent": 16.667,
+      "shotsAgainst": 6,
+      "shotsOnTargetAgainst": 0,
+      "goalsAgainst": 0
+    },
     "A0-M8-formation112": {
       "reports": 11,
       "shotsFor": 97,
@@ -134,15 +146,15 @@
       "goalsAgainst": 4
     },
     "A0-M8-formation112-original-fwd1-v16": {
-      "reports": 1,
-      "shotsFor": 19,
-      "shotsOnTargetFor": 7,
-      "goalsFor": 7,
-      "notMarkedOnTarget": 12,
-      "portalOnTargetSharePercent": 36.842,
-      "shotsAgainst": 0,
-      "shotsOnTargetAgainst": 0,
-      "goalsAgainst": 0
+      "reports": 11,
+      "shotsFor": 58,
+      "shotsOnTargetFor": 22,
+      "goalsFor": 22,
+      "notMarkedOnTarget": 36,
+      "portalOnTargetSharePercent": 37.931,
+      "shotsAgainst": 54,
+      "shotsOnTargetAgainst": 11,
+      "goalsAgainst": 11
     },
     "A0-M9-memory-fwd1": {
       "reports": 2,
@@ -154,6 +166,17 @@
       "shotsAgainst": 12,
       "shotsOnTargetAgainst": 4,
       "goalsAgainst": 4
+    },
+    "GK-R2v1-plus-FWD1-v11-plus-threeM7-formation112": {
+      "reports": 1,
+      "shotsFor": 13,
+      "shotsOnTargetFor": 1,
+      "goalsFor": 1,
+      "notMarkedOnTarget": 12,
+      "portalOnTargetSharePercent": 7.692,
+      "shotsAgainst": 10,
+      "shotsOnTargetAgainst": 2,
+      "goalsAgainst": 2
     },
     "H2.1": {
       "reports": 1,
@@ -176,6 +199,17 @@
       "shotsAgainst": 5,
       "shotsOnTargetAgainst": 0,
       "goalsAgainst": 0
+    },
+    "M8-fouroriginal-plus-R1v14-position-FWD1-112": {
+      "reports": 7,
+      "shotsFor": 34,
+      "shotsOnTargetFor": 6,
+      "goalsFor": 6,
+      "notMarkedOnTarget": 28,
+      "portalOnTargetSharePercent": 17.647,
+      "shotsAgainst": 30,
+      "shotsOnTargetAgainst": 11,
+      "goalsAgainst": 11
     },
     "R1-FWD1-v5-plus-M7": {
       "reports": 1,
@@ -268,7 +302,14 @@
       "live-55",
       "live-57",
       "live-59",
-      "live-60"
+      "live-60",
+      "live-63",
+      "live-64",
+      "live-65",
+      "live-70",
+      "live-75",
+      "live-78",
+      "live-79"
     ]
   },
   "shotDistanceAnalysis": {

@@ -2,7 +2,7 @@
   "kind": "bounded autonomous run",
   "startedAtUTC": "2026-10-24T05:53:07Z",
   "deadlineUTC": "2026-10-24T17:14:05Z",
-  "stopNewMatchesUTC": "2026-10-24T17:04:05Z",
+  "stopNewMatchesUTC": "2026-10-24T15:31:00Z",
   "automaticShutdown": false,
   "initialLeaderboard": {
     "rank": 10,
@@ -15,13 +15,13 @@
     "points": 106
   },
   "initialSetup": "A0-M7-formation121",
-  "currentTrial": "Original five Harness,formation121, freshFitness5; candidateR1/GK bothunregistered",
+  "currentTrial": null,
   "priorities": [
     "Preserve portable exact five-role AWS setup before workshop reset",
     "Validate STM on one role, inspect actual input contract where available",
     "Experiment serially, report primary statistics and preserve rejected ideas"
   ],
-  "status": "running",
+  "status": "finalized-at-owner-request",
   "recoveryKit": "recovery/README.ru.md",
   "completedReports": [
     "live-43",
@@ -60,7 +60,8 @@
     "live-76",
     "live-77",
     "live-78",
-    "live-79"
+    "live-79",
+    "live-80"
   ],
   "singleRoleRecoveryCanary": {
     "created": true,
@@ -87,23 +88,23 @@
     "liveMemoryUse": "not established",
     "rollback": "Original FWD1 v16 is behavior-identical to pre-Memory v14; UI5/5"
   },
-  "runtimeCandidate": "R1v13 READY unregistered; v14position local only",
+  "runtimeCandidate": "FWD1R1v14 and GKR2v1 both READY but unregistered; neither adopted",
   "windowExtension": "New explicit user request at09:14UTC:8hours from this moment",
   "latestLeaderboard": {
     "rank": 14,
-    "played": 88,
-    "wins": 50,
+    "played": 89,
+    "wins": 51,
     "draws": 2,
     "losses": 36,
-    "goalsFor": 117,
+    "goalsFor": 118,
     "goalsAgainst": 79,
-    "goalDifference": 38,
-    "points": 152,
-    "capturedAtUTC": "2026-10-24T15:29:00Z",
+    "goalDifference": 39,
+    "points": 155,
+    "capturedAtUTC": "2026-10-24T15:39:00Z",
     "captureTimePrecision": "minute",
-    "source": "Primary portal, private AX and screenshot"
+    "source": "Fresh primary portal row; private AX and screenshot"
   },
-  "newManualMatchCutoffUTC": "2026-10-24T17:04:05Z",
+  "newManualMatchCutoffUTC": "2026-10-24T15:31:00Z",
   "deadlineLocal": "2026-10-24 20:14:05 Europe/Minsk",
   "priorLeaderboard": {
     "rank": 10,
@@ -153,7 +154,7 @@
       "changed": false
     }
   },
-  "latestRankedBatch": "ranked-batch-03.json",
+  "latestRankedBatch": "ranked-batch-04.json",
   "stableRankedBatches": {
     "reports": "live63..72",
     "played": 10,
@@ -165,5 +166,17 @@
     "pointsGained": 16,
     "rankBefore": 14,
     "rankAfter": 14
+  },
+  "finalizedAtUTC": "2026-10-24T15:39:00Z",
+  "finalSetup": "A0-M8-formation112",
+  "heartbeatStatus": "PAUSED",
+  "ownerFinalisationAtUTC": "2026-10-24T15:31:00Z",
+  "finalFitness": {
+    "passed": 5,
+    "total": 5,
+    "capturedAtUTC": "2026-10-24T15:39:00Z",
+    "formationReadbackAfterReload": "1-1-2",
+    "reportedAverageLatencyMs": 0,
+    "limitation": "Portal counter; not measured model inference latency"
   }
 }

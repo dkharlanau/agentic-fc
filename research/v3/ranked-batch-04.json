@@ -1,6 +1,6 @@
 {
   "kind": "Five-game ranked formation trial on original five Harness",
-  "status": "ready",
+  "status": "owner-ended-partial",
   "setup": "A0-M7-formation121-original-fwd1-v16",
   "coachVersion": "coach-v1.0",
   "proposalsVersion": "proposals-v1.0",
@@ -18,7 +18,9 @@
     "captureTimePrecision": "minute",
     "source": "Primary portal, private AX and screenshot"
   },
-  "reports": [],
+  "reports": [
+    "live-80"
+  ],
   "targetCompleted": 5,
   "cutoffUTC": "2026-10-24T17:04:05Z",
   "deadlineUTC": "2026-10-24T17:14:05Z",
@@ -39,5 +41,33 @@
     "MedianGD",
     "Lateleadlossobservations"
   ],
-  "settingsRule": "No saved changes/probes/Practice/modelcomparison inside fivegameblock except criticalfailure."
+  "settingsRule": "No saved changes/probes/Practice/modelcomparison inside fivegameblock except criticalfailure.",
+  "completedCount": 1,
+  "after": {
+    "rank": 14,
+    "played": 89,
+    "wins": 51,
+    "draws": 2,
+    "losses": 36,
+    "goalsFor": 118,
+    "goalsAgainst": 79,
+    "goalDifference": 39,
+    "points": 155,
+    "capturedAtUTC": "2026-10-24T15:39:00Z",
+    "captureTimePrecision": "minute",
+    "source": "Fresh primary portal row; private AX and screenshot"
+  },
+  "stopReason": "Owner directed finalisation at15:31UTC; finish the already-running game, no remaining four experimental games.",
+  "partialSummary": {
+    "played": 1,
+    "wins": 1,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 1,
+    "goalsAgainst": 0,
+    "shotsFor": 6,
+    "shotsAgainst": 6,
+    "pointsGained": 3
+  },
+  "decision": "Single uncontrolled win does not establish formation superiority; final restore originalM8 formation112"
 }

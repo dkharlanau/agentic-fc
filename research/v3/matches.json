@@ -3318,6 +3318,47 @@
       "mode": "live",
       "cohort": "Additional incoming after closed batch03, before safe rollback",
       "rollbackDeferred": true
+    },
+    {
+      "id": "live-80",
+      "setup": "A0-M7-formation121-original-fwd1-v16",
+      "opponent": "Mobile United FC",
+      "side": "home",
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "shotsFor": 6,
+      "shotsAgainst": 6,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 51,
+      "commands": 343,
+      "averageLatencyMs": 637,
+      "commandCounts": {
+        "PRESS_BALL": 180,
+        "MOVE_TO": 111,
+        "SHOOT": 39,
+        "CLEAR_OVERRIDE": 11,
+        "INTERCEPT": 2
+      },
+      "opponentCommands": 15,
+      "opponentAverageLatencyMs": 3,
+      "roleLatencyMs": {
+        "gk": 2,
+        "def": 2,
+        "mid": 1121,
+        "fwd1": 1138,
+        "fwd2": 1074
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy."
+      ],
+      "initiation": "manual",
+      "mode": "live",
+      "batch": "ranked-batch-04",
+      "completedBeforeFinalRollback": true
     }
   ],
   "recordingOrder": "Local evidence-capture order; background matches may be appended retrospectively."

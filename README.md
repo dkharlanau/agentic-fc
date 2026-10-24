@@ -1,5 +1,9 @@
 # Agentic FC — No Human in the Loop
 
+**Final tournament setup, 24 October:** [M8 decision, results and restoration](research/v3/FINAL_SETUP.ru.md).
+Original five Harness, formation1-1-2, final Fitness5/5. Experiments stopped;
+portable recipes include unsuccessful candidates so they can be reviewed later.
+
 ## Latest: live experiments and portable recovery (2026-10-24)
 
 **[Начать с полного H2-разбора на русском](research/v2/README.ru.md)** — tactics, model settings, advanced features, evidence corrections and rollout plan.
