@@ -68,7 +68,23 @@ Stop only own probe/Fitness sessions, never match sessions. Keep raw states,
 account/resource/session bindings and access codes out of public Git.
 Branch `codex/football-experiments-20261023`; draft PR5 already attached.
 
-## Current at11:46UTC
+## Current verified checkpoint at13:30UTC
+
+The authoritative current state is original five M8 Harness, formation1-1-2,
+GK13/DEF19/MID15/FWD1v16/FWD2v14; latest Fitness5/5. R1v13 and GK-R2v1
+are READY but UNREGISTERED. v14position remains local-only, not deployed.
+The chronological11:46..13:18 notes below are historical experiment records;
+their unfinished next-actions are deferred by the P0 five-game batch priority.
+
+Fresh leaderboard: rank14,71P44W1D26L,99:57goals,+42,133points at13:30UTC.
+See `ranked-batch-01.json` and the private current-run checkpoint for progress.
+The first batch game live63 was incoming AWAY Divide by Zero, WON3:2,
+shots5:2; live64 HOME Matrix_7 is in progress. Do not mutate saved settings or
+run probes during the match. Continue serial eligible live games to five,
+then refresh leaderboard and perform one cohort-level tactical review.
+No superiority of the runtime/model/keeper candidates has been established.
+
+## Historical snapshot at11:46UTC
 
 Formation1-1-2. FWD1 independent R1v11, Nova2Lite, bound output scope,
 optional attack-support stance enabled. Other four original M7 Harness unchanged:

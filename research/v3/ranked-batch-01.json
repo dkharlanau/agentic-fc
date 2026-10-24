@@ -17,11 +17,13 @@
     "source": "Primary portal leaderboard; AX and screenshot captured privately",
     "captureTimePrecision": "minute"
   },
-  "reports": [],
+  "reports": [
+    "live-63"
+  ],
   "targetCompleted": 5,
   "cutoffUTC": "2026-10-24T17:04:05Z",
   "deadlineUTC": "2026-10-24T17:14:05Z",
-  "activeOpponent": "Divide by Zero",
+  "activeOpponent": null,
   "activeSide": "away",
   "activeInitiation": "incoming; already running when observed"
 }

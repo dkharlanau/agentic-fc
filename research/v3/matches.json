@@ -2290,7 +2290,7 @@
     {
       "id": "live-57",
       "setup": "A0-M8-formation112-original-fwd1-v16",
-      "opponent": "Gork \u2019n\u2019 Mork Boyz",
+      "opponent": "Gork ’n’ Mork Boyz",
       "side": "home",
       "goalsFor": 7,
       "goalsAgainst": 0,
@@ -2610,6 +2610,48 @@
         "shotsOnTargetAgainst": 0,
         "possessionPercent": 37
       }
+    },
+    {
+      "id": "live-63",
+      "setup": "A0-M8-formation112-original-fwd1-v16",
+      "opponent": "Divide by Zero",
+      "side": "away",
+      "goalsFor": 3,
+      "goalsAgainst": 2,
+      "shotsFor": 5,
+      "shotsAgainst": 2,
+      "shotsOnTargetFor": 3,
+      "shotsOnTargetAgainst": 2,
+      "possessionPercent": 34,
+      "commands": 393,
+      "averageLatencyMs": 1162,
+      "commandCounts": {
+        "MOVE_TO": 249,
+        "PRESS_BALL": 58,
+        "PASS": 39,
+        "MARK": 22,
+        "CLEAR_OVERRIDE": 20,
+        "INTERCEPT": 5
+      },
+      "opponentCommands": 15,
+      "opponentAverageLatencyMs": 1,
+      "roleLatencyMs": {
+        "gk": 790,
+        "def": 1193,
+        "mid": 1194,
+        "fwd1": 1229,
+        "fwd2": 1169
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy."
+      ],
+      "initiation": "incoming",
+      "batch": "ranked-batch-01",
+      "completedAtUTC": "2026-10-24T13:32:00Z",
+      "captureTimePrecision": "minute"
     }
   ],
   "recordingOrder": "Local evidence-capture order; background matches may be appended retrospectively."
