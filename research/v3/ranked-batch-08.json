@@ -19,9 +19,176 @@
       "alias": "real-only-01",
       "opponent": "KERON FC",
       "side": "HOME",
-      "status": "live",
+      "status": "complete",
       "initiation": "manual random matchmaking",
-      "startedAt": "2026-10-24T20:13:02.990406+00:00"
+      "startedAt": "2026-10-24T20:13:02.990406+00:00",
+      "completedAt": "2026-10-24T20:17:40.489582+00:00",
+      "result": "loss",
+      "score": [
+        1,
+        2
+      ],
+      "shots": [
+        6,
+        9
+      ],
+      "possessionPercent": [
+        48,
+        52
+      ],
+      "reportRoleLatencyMs": {
+        "own": [
+          1130,
+          2,
+          1509,
+          992,
+          1288
+        ],
+        "opponent": [
+          3,
+          3,
+          3,
+          3,
+          73
+        ]
+      },
+      "successPercent": 100,
+      "reportAverageLatencyMs": [
+        1109,
+        16
+      ],
+      "reportCommands": {
+        "own": {
+          "PRESS_BALL": 186,
+          "CLEAR_OVERRIDE": 12,
+          "MARK": 6,
+          "INTERCEPT": 1
+        },
+        "opponent": {
+          "CLEAR_OVERRIDE": 47,
+          "PASS": 3
+        }
+      }
+    },
+    {
+      "alias": "real-only-02",
+      "opponent": "Octopus",
+      "side": "HOME",
+      "status": "complete",
+      "initiation": "manual random matchmaking",
+      "startedAt": "2026-10-24T20:18:05.538445+00:00",
+      "completedAt": "2026-10-24T20:24:32.579485+00:00",
+      "result": "win",
+      "score": [
+        3,
+        2
+      ],
+      "shots": [
+        5,
+        5
+      ],
+      "possessionPercent": [
+        61,
+        39
+      ],
+      "overtime": true,
+      "reportRoleLatencyMs": {
+        "own": [
+          82,
+          79,
+          80,
+          80,
+          76
+        ],
+        "opponent": [
+          3,
+          3,
+          3,
+          2,
+          77
+        ]
+      },
+      "successPercent": 100,
+      "reportAverageLatencyMs": [
+        80,
+        17
+      ],
+      "reportCommands": {
+        "own": {
+          "MOVE_TO": 396,
+          "INTERCEPT": 44,
+          "MARK": 31,
+          "PRESS_BALL": 30,
+          "CLEAR_OVERRIDE": 20,
+          "PASS": 17,
+          "SHOOT": 4,
+          "GK_DISTRIBUTE": 3
+        },
+        "opponent": {
+          "CLEAR_OVERRIDE": 79,
+          "PASS": 5,
+          "INTERCEPT": 2,
+          "PRESS_BALL": 1
+        }
+      }
+    },
+    {
+      "alias": "real-only-03",
+      "opponent": "Couch Potato United",
+      "side": "HOME",
+      "status": "complete",
+      "initiation": "manual random matchmaking",
+      "startedAt": "2026-10-24T20:25:51.880485+00:00",
+      "completedAt": "2026-10-24T20:29:06.377172+00:00",
+      "result": "win",
+      "score": [
+        1,
+        0
+      ],
+      "shots": [
+        12,
+        0
+      ],
+      "possessionPercent": [
+        23,
+        77
+      ],
+      "reportRoleLatencyMs": {
+        "own": [
+          948,
+          900,
+          1327,
+          990,
+          972
+        ],
+        "opponent": [
+          3,
+          3,
+          3,
+          2,
+          81
+        ]
+      },
+      "successPercent": 100,
+      "reportAverageLatencyMs": [
+        1145,
+        20
+      ],
+      "reportCommands": {
+        "own": {
+          "MOVE_TO": 140,
+          "PRESS_BALL": 125,
+          "MARK": 33,
+          "CLEAR_OVERRIDE": 12,
+          "INTERCEPT": 25
+        },
+        "opponent": {
+          "CLEAR_OVERRIDE": 41,
+          "PASS": 4,
+          "PRESS_BALL": 2,
+          "INTERCEPT": 1
+        }
+      }
     }
   ],
   "incomingGames": [],
