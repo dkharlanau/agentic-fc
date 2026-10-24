@@ -1,0 +1,141 @@
+{
+  "kind": "FWD1 Sonnet4.6 direct synthetic probes; saved M8 unchanged",
+  "recordedAtUTC": "2026-10-24T05:33:48.259041+00:00",
+  "fixture": "fixtures/derived-fwd1-direct-possession.json",
+  "promptVerifiedAgainstLocalFile": true,
+  "results": [
+    {
+      "id": "sonnet-fwd1-home-clear-shot",
+      "case": "home-clear-shot",
+      "prompt": "schema-clean/fwd1.txt",
+      "model": "global.anthropic.claude-sonnet-4-6",
+      "inputShape": "direct modelText",
+      "inputTokens": 1994,
+      "outputTokens": 37,
+      "reportedPlaygroundLatencyMs": 1061,
+      "response": [
+        {
+          "commandType": "SHOOT",
+          "playerId": 3,
+          "parameters": {
+            "aim_location": "TR",
+            "power": 0.9
+          },
+          "duration": 0
+        }
+      ],
+      "fullResponseJsonOnly": true,
+      "visibleTextBlocks": 1,
+      "normalizedRenderedAssistantTextSha256": "8378e328452f6b0dbd914109063020fc60bf4ac91c625dea9c4f4b03b7c71994",
+      "expectedCategory": "SHOOT",
+      "expectedCategoryIsHeuristic": true,
+      "categoryPassed": true,
+      "sessionStopped": true,
+      "installedChange": false
+    },
+    {
+      "id": "sonnet-fwd1-away-clear-shot",
+      "case": "away-clear-shot",
+      "prompt": "schema-clean/fwd1.txt",
+      "model": "global.anthropic.claude-sonnet-4-6",
+      "inputShape": "direct modelText",
+      "inputTokens": 1992,
+      "outputTokens": 363,
+      "reportedPlaygroundLatencyMs": 4687,
+      "response": [
+        {
+          "commandType": "SHOOT",
+          "playerId": 3,
+          "parameters": {
+            "aim_location": "TR",
+            "power": 0.9
+          },
+          "duration": 0
+        }
+      ],
+      "fullResponseJsonOnly": false,
+      "visibleTextBlocks": 10,
+      "normalizedRenderedAssistantTextSha256": "95dbe425beb7454fca6b70de6761047d3c7b0345317a51d5f29881381ae8869f",
+      "expectedCategory": "SHOOT",
+      "expectedCategoryIsHeuristic": true,
+      "categoryPassed": true,
+      "sessionStopped": true,
+      "installedChange": false
+    },
+    {
+      "id": "sonnet-fwd1-home-teammate-possession",
+      "case": "home-teammate-possession",
+      "prompt": "schema-clean/fwd1.txt",
+      "model": "global.anthropic.claude-sonnet-4-6",
+      "inputShape": "direct modelText",
+      "inputTokens": 1995,
+      "outputTokens": 299,
+      "reportedPlaygroundLatencyMs": 4272,
+      "response": [
+        {
+          "commandType": "MOVE_TO",
+          "playerId": 3,
+          "parameters": {
+            "target_x": 42.0,
+            "target_y": -8.0,
+            "sprint": true
+          },
+          "duration": 0
+        }
+      ],
+      "fullResponseJsonOnly": false,
+      "visibleTextBlocks": 13,
+      "normalizedRenderedAssistantTextSha256": "53d59af9613aa05ca10510d73cb48a3c92beb90bbcae9a5a53a2e5fd4b3c4eb2",
+      "expectedCategory": "MOVE_TO",
+      "expectedCategoryIsHeuristic": true,
+      "categoryPassed": true,
+      "sessionStopped": true,
+      "installedChange": false
+    }
+  ],
+  "summary": {
+    "strictJsonOnlyPassed": 1,
+    "expectedTacticalCategoryPassed": 3,
+    "totalCases": 3,
+    "decision": "Unchanged prompt Sonnet is ineligible for live trial due to full-response format failures."
+  },
+  "limitations": [
+    "Single sample per synthetic state; not a model-strength benchmark.",
+    "Direct synthetic possession fields are not a captured live invocation payload.",
+    "Action category is a tactical heuristic; it does not prove useful live application.",
+    "Only extracted command arrays, text-block counts and normalized-rendered-text hashes are published; explanatory model text stays private.",
+    "Sonnet was only a Playground override. No saved Harness model or prompt was changed."
+  ],
+  "contractCandidate": {
+    "prompt": "json-contract/fwd1.txt",
+    "promptSha256": "892c97611df1073eba7a98456cb51aa8854e5180b5830030db47d44e5176b32d",
+    "case": "away-clear-shot",
+    "model": "global.anthropic.claude-sonnet-4-6",
+    "inputShape": "direct modelText",
+    "inputTokens": 2139,
+    "outputTokens": 47,
+    "reportedPlaygroundLatencyMs": 4593,
+    "response": [
+      {
+        "commandType": "MOVE_TO",
+        "playerId": 3,
+        "parameters": {
+          "target_x": 20.0,
+          "target_y": 0.0,
+          "sprint": true
+        },
+        "duration": 0
+      }
+    ],
+    "fullResponseJsonOnly": true,
+    "visibleTextBlocks": 1,
+    "normalizedRenderedAssistantTextSha256": "1c2a9e358153c3af837793deb344fcdf8265c1aa3cbb93509f6609692f51de86",
+    "expectedCategory": "SHOOT",
+    "expectedCategoryIsHeuristic": true,
+    "categoryPassed": false,
+    "sessionStopped": true,
+    "installedChange": false,
+    "decision": "Stop after first diagnostic sample: output format passed but chose MOVE_TO x+20 instead of expected AWAY clear-shot SHOOT. No tactical/latency gain demonstrated; candidate not installed.",
+    "limitation": "One stochastic sample does not prove a causal effect of the guard or a directional bug."
+  }
+}

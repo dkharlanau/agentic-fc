@@ -1484,6 +1484,182 @@
       "initiation": "last manual auto-match requested before scheduling cutoff",
       "evidenceCapturedAtUTC": "2026-10-24T01:08:50.201238+00:00",
       "coaching": []
+    },
+    {
+      "id": "live-39",
+      "setup": "unattributed-background",
+      "opponent": "AWSuoliai",
+      "side": "away",
+      "goalsFor": 0,
+      "goalsAgainst": 1,
+      "shotsFor": 2,
+      "shotsAgainst": 5,
+      "shotsOnTargetFor": 0,
+      "shotsOnTargetAgainst": 1,
+      "possessionPercent": 59,
+      "commands": 321,
+      "averageLatencyMs": 326,
+      "commandCounts": {
+        "MOVE_TO": 208,
+        "MARK": 47,
+        "PRESS_BALL": 38,
+        "PASS": 14,
+        "CLEAR_OVERRIDE": 10,
+        "SHOOT": 3,
+        "INTERCEPT": 1
+      },
+      "opponentCommands": 12,
+      "opponentAverageLatencyMs": 1,
+      "roleLatencyMs": {
+        "gk": 473,
+        "def": 129,
+        "mid": 347,
+        "fwd1": 285,
+        "fwd2": 314
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Exact Harness versions/formation at kickoff and initiator were not captured. M8 is the last known saved setup, not a verified kickoff attribution; excluded from the manually verified M8 series."
+      ],
+      "lastKnownSavedSetup": "A0-M8-formation112",
+      "initiation": "Appeared in history after session shutdown; not manually initiated in resumed session.",
+      "evidenceCapturedAtUTC": "2026-10-24T05:23:37.779638+00:00",
+      "coaching": []
+    },
+    {
+      "id": "live-40",
+      "setup": "unattributed-background",
+      "opponent": "Goalpost Shifters",
+      "side": "away",
+      "goalsFor": 0,
+      "goalsAgainst": 2,
+      "shotsFor": 4,
+      "shotsAgainst": 10,
+      "shotsOnTargetFor": 0,
+      "shotsOnTargetAgainst": 2,
+      "possessionPercent": 49,
+      "commands": 312,
+      "averageLatencyMs": 79,
+      "commandCounts": {
+        "MOVE_TO": 180,
+        "PRESS_BALL": 51,
+        "INTERCEPT": 35,
+        "MARK": 16,
+        "CLEAR_OVERRIDE": 13,
+        "SHOOT": 12,
+        "PASS": 4,
+        "GK_DISTRIBUTE": 1
+      },
+      "opponentCommands": 8,
+      "opponentAverageLatencyMs": 1,
+      "roleLatencyMs": {
+        "gk": 80,
+        "def": 84,
+        "mid": 83,
+        "fwd1": 78,
+        "fwd2": 84
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Exact Harness versions/formation at kickoff and initiator were not captured. M8 is the last known saved setup, not a verified kickoff attribution; excluded from the manually verified M8 series."
+      ],
+      "lastKnownSavedSetup": "A0-M8-formation112",
+      "initiation": "Appeared in history after session shutdown; not manually initiated in resumed session.",
+      "evidenceCapturedAtUTC": "2026-10-24T05:23:37.779933+00:00",
+      "coaching": []
+    },
+    {
+      "id": "live-41",
+      "setup": "A0-M8-formation112",
+      "opponent": "FC LTX",
+      "side": "home",
+      "goalsFor": 1,
+      "goalsAgainst": 2,
+      "shotsFor": 3,
+      "shotsAgainst": 6,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 2,
+      "possessionPercent": 42,
+      "commands": 470,
+      "averageLatencyMs": 707,
+      "commandCounts": {
+        "MOVE_TO": 349,
+        "INTERCEPT": 35,
+        "PASS": 34,
+        "PRESS_BALL": 28,
+        "CLEAR_OVERRIDE": 12,
+        "MARK": 10,
+        "GK_DISTRIBUTE": 2
+      },
+      "opponentCommands": 16,
+      "opponentAverageLatencyMs": 3,
+      "roleLatencyMs": {
+        "gk": 566,
+        "def": 740,
+        "mid": 792,
+        "fwd1": 769,
+        "fwd2": 810
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "No saved Harness configuration change, coaching or native model probe during this game. Prior11-game M8 series was HOME-only and this is an additional HOME loss."
+      ],
+      "extraTime": true,
+      "initiation": "manual normal Find after restored M8 profile and fresh UI Fitness5/5",
+      "coaching": [],
+      "evidenceCapturedAtUTC": "2026-10-24T05:30:11.832262+00:00"
+    },
+    {
+      "id": "live-42",
+      "setup": "A0-M7-formation121",
+      "opponent": "AgentCore Fighters",
+      "side": "home",
+      "goalsFor": 2,
+      "goalsAgainst": 0,
+      "shotsFor": 13,
+      "shotsAgainst": 1,
+      "shotsOnTargetFor": 2,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 50,
+      "commands": 370,
+      "averageLatencyMs": 82,
+      "commandCounts": {
+        "MOVE_TO": 265,
+        "INTERCEPT": 43,
+        "PRESS_BALL": 19,
+        "CLEAR_OVERRIDE": 14,
+        "PASS": 14,
+        "SHOOT": 8,
+        "GK_DISTRIBUTE": 7
+      },
+      "opponentCommands": 8,
+      "opponentAverageLatencyMs": 2,
+      "roleLatencyMs": {
+        "gk": 79,
+        "def": 92,
+        "mid": 79,
+        "fwd1": 83,
+        "fwd2": 82
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Formation-only return to M7; no saved Harness changes, coaching or native probes during game. Different uncontrolled opponent from live41; no isolated formation-effect claim."
+      ],
+      "initiation": "manual normal Find after saved/reloaded1-2-1 and fresh UI Fitness5/5",
+      "coaching": [],
+      "evidenceCapturedAtUTC": "2026-10-24T05:42:55.807672+00:00"
     }
   ],
   "recordingOrder": "Local evidence-capture order; background matches may be appended retrospectively."

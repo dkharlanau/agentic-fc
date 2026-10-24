@@ -390,3 +390,34 @@ Reopened the existing active workshop event after reboot. The five AWS Harnesses
 The Player Portal returns HTTP403 before the login form in both the in-app browser and native Google Chrome. Reentering the workshop did not restore game access. The cause remains unresolved; network settings were left unchanged as requested. No new match, Fitness result or standings snapshot was obtained. Prior7thplace/103points and5/5 must not be presented as refreshed. Continue without an automatic shutdown timer. See [resume receipt](run-20261024-resume.json); raw access evidence stays local and ignored.
 
 A further Chrome DevTools network check recorded a fresh document GET with HTTP403 at2026-10-24T05:15:45Z. Response headers identify `Server: awselb/2.0`, `Content-Type: text/html`, length118. This locates the observed refusal at the AWS load-balancer response, before portal login; it does not identify the blocking rule or prove a particular network cause. No access-policy, VPN or agent changes were made.
+
+
+## Access restored; two additional away defeats recovered
+
+The Player Portal subsequently loaded normally without a VPN/settings change. Existing team session and M8 profile were present:formation1-1-2,fourNova2Lite and oneHaiku4.5. A fresh UI Fitness check passed5/5 (5commands100%active0ms); this remains a UI readiness gate rather than proof of new generation. First restored standings:rank10,103points,49P34W1D14L,goals71:36(+35). Summary20P14W1D5L70% has a different scope.
+
+Recovered history reports live39/40 are away losses:AWSuoliai0:1 (shots2:5,SOT0:1,possession59%,321commands326ms) andGoalpostShifters0:2 (shots4:10,SOT0:2,possession49%,312commands79ms). Opponents issued respectively12CLEAR at1ms and8CLEAR at1ms. These observations do not establish active model inference or a fallback mechanism. Our issuedSHOOT counts3/12 differ from primary applied shots2/4. Both games had zero shots on target, but precise causes and individual role actions are not recovered.
+
+Neither game was initiated in the resumed session; exact kickoff versions/formation were not captured. Record them as unattributed-background with M8 as last-known saved setup, and exclude them from the11-game manually verified M8 cohort. The former10W1D remains a bounded historical series, not a claim of an ongoing undefeated streak. A new unchanged-M8 manual home game againstFC LTX was started after the restored Fitness check. Its result is pending and it cannot directly test the away-side hypothesis.
+
+A [side-stratified audit](side-audit-20261024.json) of the40observed reports found31HOME games (25W1D5L,goals47:14) and9AWAY games (4W0D5L,goals8:10). Most importantly, all11games in the retained M8 manual series wereHOME. There is no verified AWAY M8 sample in that series. These settings/opponent mixtures do not isolate a side effect; the newly recovered defeats motivate mirrored role tests rather than proving an away-direction bug. Missing primarySOT inlive29 is counted as unavailable, notzero.
+
+
+## Live41 restored M8:1:2 FC LTX in overtime
+
+New manually initiated HOME game after the restored UI5/5 lost1:2 in overtime without coaching, saved configuration changes or concurrent native probes. Shots3:6,SOT1:2,possession42%,470commands707ms:MOVE349,INTERCEPT35,PASS34,PRESS28,CLEAR12,MARK10,GKDIST2;SHOOT0,RESET0. Rolelatency566/740/792/769/810ms,reportedSuccess100%. FC LTX issued16commands3ms (CLEAR9,PASS7). Thus an away-direction issue alone cannot explain all recent defeats. Original11-game HOME M8 cohort remains a historical slice; addinglive41 gives12verifiedHOMEgames10W1D1L,goals20:4.
+
+## Sonnet4.6 FWD1 comparison and JSON-contract candidate rejected
+
+Three separate stopped Playground sessions used the same schema-clean/fwd1 source and existing direct synthetic states. Sonnet chose expectedSHOOT/SHOOT/MOVE categories3/3, but complete JSON-only responses1/3:HOME1061ms,AWAY4687ms,teammate4272ms. The latter two contained explanatory text. This fails the full-response command contract despite sensible extracted actions.
+
+A laboratory-only json-contract/fwd1 candidate reinforced a whole-response JSON contract without changing the underlying tactics. Its firstAWAY sample produced validJSON but MOVE_TO x+20 rather than the expectedSHOOT, at4593ms. This single stochastic result does not establish a causal guard effect, but offers no demonstrated improvement, so the diagnostic stopped early. No saved Harness model/prompt was changed. All4ownsessions stopped. See [probe records](fwd1-sonnet-probes.json); explanatory text remains private.
+
+
+## M7 formation-only retest:live42 wins2:0 AgentCore Fighters
+
+After rejecting the Sonnet alternatives, restored the FWD1 Playground from its saved Harness and verified Nova plus the exact schema-clean source and an empty session. No saved Harness model/prompt change occurred. Returned starting formation1-1-2 to1-2-1 (existing M7), confirmed persistence after profile reload and UI5/5 again; no scrimmage reset was repeated for the formation-only change.
+
+A new normalFind HOME game againstAgentCoreFighters won2:0 without coaching or concurrent native probes. Primary shots13:1,SOT2:0,possession50%,370commands82ms:MOVE265,INTERCEPT43,PRESS19,CLEAR14,PASS14,SHOOT8,GKDIST7;RESET0. Rolelatencies79/92/79/83/82ms,reportedSuccess100%. Opponent8commands2ms (CLEAR4,PASS4) does not establish active model execution. This one win against a different opponent does not prove1-2-1 superior to1-1-2. Keep M7 as the current live trial; retained source models/prompts/tools/context remain unchanged.
+
+Fresh table afterlive42:rank10,106points,51P35W1D15L,goals74:38(+36). Summary20P14W1D5L70% is separately scoped. There are now42observed reports. Current saved trial isM7/1-2-1 with UI5/5; first-cycleM8 receipt remains historical. The resumed batch contains one loss and one win against different opponents, not an isolated improvement estimate.

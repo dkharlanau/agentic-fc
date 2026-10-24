@@ -418,7 +418,31 @@
         "portalFwd2ModelLabel": "Allowed \u00b7 claude-haiku-4-5-20251001-v1:0",
         "sessionResetBeforeThisCheck": false,
         "limitation": "Formation-only change; unchanged Harness configuration inherited M6. UI gate verified, not proof of new generation or real model speed."
-      }
+      },
+      "retests": [
+        {
+          "recordedAtUTC": "2026-10-24T05:37:20.217832+00:00",
+          "previousSetup": "A0-M8-formation112",
+          "trigger": "Three recent account losses, including verified HOME live41; Sonnet FWD1 alternatives failed readiness checks.",
+          "changedFactors": [
+            "Starting formation1-1-2 ->1-2-1; no saved Harness changes."
+          ],
+          "profileReloadVerified": true,
+          "fitnessPassedPositions": 5,
+          "fitnessCommands": 5,
+          "fitnessReportedAverageLatencyMs": 0,
+          "scrimmageReset": false,
+          "nativeFwd1PlaygroundRestored": true,
+          "matchId": "live-42",
+          "outcome": "win2:0",
+          "limitation": "Starting positions only; unchanged role prompts. Uncontrolled opponent prevents isolated formation-effect claim.",
+          "reportId": "live-42",
+          "shotsFor": 13,
+          "shotsAgainst": 1,
+          "shotsOnTargetFor": 2,
+          "shotsOnTargetAgainst": 0
+        }
+      ]
     },
     {
       "promptDirectory": "schema-clean",

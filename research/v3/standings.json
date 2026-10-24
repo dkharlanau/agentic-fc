@@ -230,6 +230,50 @@
         "points": 103
       },
       "limitation": "Final operator snapshot, not final contest placing. Observed38reports and cumulative47played have different scopes."
+    },
+    {
+      "capturedAtUTC": "2026-10-24T05:24:12.520692+00:00",
+      "teamSummary": {
+        "played": 20,
+        "wins": 14,
+        "draws": 1,
+        "losses": 5,
+        "winRatePercent": 70
+      },
+      "leaderboard": {
+        "rank": 10,
+        "played": 49,
+        "wins": 34,
+        "draws": 1,
+        "losses": 14,
+        "goalsFor": 71,
+        "goalsAgainst": 36,
+        "goalDifference": 35,
+        "points": 103
+      },
+      "limitation": "First restored-access snapshot. Two additional defeats appeared since prior session; historical kickoff configuration unverified. Summary and cumulative scopes differ; current rank is dynamic."
+    },
+    {
+      "capturedAtUTC": "2026-10-24T05:43:56.375795+00:00",
+      "teamSummary": {
+        "played": 20,
+        "wins": 14,
+        "draws": 1,
+        "losses": 5,
+        "winRatePercent": 70
+      },
+      "leaderboard": {
+        "rank": 10,
+        "played": 51,
+        "wins": 35,
+        "draws": 1,
+        "losses": 15,
+        "goalsFor": 74,
+        "goalsAgainst": 38,
+        "goalDifference": 36,
+        "points": 106
+      },
+      "limitation": "After restored-session live41 loss and live42 win. Distinct summary/cumulative scopes; dynamic rank, not final contest outcome."
     }
   ]
 }
