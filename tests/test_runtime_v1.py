@@ -72,6 +72,9 @@ class RuntimeTests(unittest.TestCase):
             legal_options(root, 3)
         root['myPlayers'] = [3]
         root['unlockedCommands'] = []
+        commands, _ = DecisionEngine(Model(), 'test-model').choose(root, 'empty-live-list')
+        self.assertEqual(commands[0]['commandType'], 'SHOOT')
+        root['unlockedCommands'] = ['UNSUPPORTED_COMMAND']
         with self.assertRaises(ValueError):
             DecisionEngine(Model(), 'test-model').choose(root, 'no-commands')
         _, kickoff_options = legal_options(unwrap(self.cases[3]['modelText']), 3)
@@ -101,6 +104,69 @@ class RuntimeTests(unittest.TestCase):
         self.assertIsNone(audit['teamId'])
         self.assertEqual(commands[0]['commandType'], 'CLEAR_OVERRIDE')
         self.assertNotIn('teamId', commands[0])
+
+    def test_observed_live_open_play_empty_unlocks_and_xz_frame(self):
+        root = json.loads(Path('research/v3/fixtures/observed-live-away-open-play.json').read_text())['decodedState']
+        model = Model()
+        command, audit = DecisionEngine(model, 'test-model').choose(root, 'actual-live')
+        self.assertEqual(audit['coordinateProfile']['kind'], 'keeper_reference_xz')
+        self.assertEqual(audit['phase'], 'OURS')
+        self.assertEqual(audit['ownershipEvidence'], 'contact_and_motion_inference')
+        self.assertEqual(command[0]['teamId'], 1)
+        self.assertEqual(command[0]['commandType'], 'CLEAR_OVERRIDE')
+        scale = audit['coordinateProfile']['scale']
+        self.assertAlmostEqual(audit['ballPosition']['y'], root['gameState']['ball']['position']['z'] * scale)
+        self.assertEqual(root['gameState']['playMode'], 'OPEN_PLAY')
+
+    def test_world_contact_shot_is_inferred_and_contradictions_remain_unknown(self):
+        root = json.loads(Path('research/v3/fixtures/observed-live-away-open-play.json').read_text())['decodedState']
+        gs = root['gameState']
+        player = next(p for p in gs['players'] if p['teamCode'] == 'away' and p['agentId'] == 'agentId_3')
+        player.update(position={'x': -4.2, 'y': 0.1}, velocity={'x': -1, 'y': 0}, lastAction='AdvanceToGoalWithBall')
+        gs['ball'].update(position={'x': -4.42, 'y': 0.14, 'z': 0.1},
+                          velocity={'x': -1, 'y': 0, 'z': 0}, isFree=False, possessionAgentId='agentId_3')
+        commands, audit = DecisionEngine(Model(), 'test-model').choose(root, 'close-shot')
+        self.assertEqual(commands[0]['commandType'], 'SHOOT')
+        self.assertEqual(audit['ownershipEvidence'], 'contact_and_motion_inference')
+        player['hasBall'] = False
+        commands, audit = DecisionEngine(Model(), 'test-model').choose(root, 'contradiction')
+        self.assertEqual(commands[0]['commandType'], 'CLEAR_OVERRIDE')
+        player.pop('hasBall')
+        opponent = next(p for p in gs['players'] if p['teamCode'] == 'home' and p['agentId'] == 'agentId_3')
+        opponent['position'] = {'x': -4.42, 'y': 0.1}
+        commands, audit = DecisionEngine(Model(), 'test-model').choose(root, 'contested')
+        self.assertEqual(commands[0]['commandType'], 'CLEAR_OVERRIDE')
+
+    def test_world_reference_is_pinned_and_session_bounded(self):
+        root = json.loads(Path('research/v3/fixtures/observed-live-away-open-play.json').read_text())['decodedState']
+        engine = DecisionEngine(Model(), 'test-model', session_limit=1)
+        _, first = engine.choose(root, 'one')
+        for p in root['gameState']['players']:
+            if p['agentId'] == 'agentId_0':
+                p['position']['x'] = 0
+                p['lastAction'] = 'CoachMoveTo'
+        _, second = engine.choose(root, 'one')
+        self.assertEqual(first['coordinateProfile'], second['coordinateProfile'])
+        commands, third = engine.choose(root, 'two')
+        self.assertEqual(third['coordinateProfile']['kind'], 'unresolved_3d')
+        self.assertEqual(commands[0]['commandType'], 'CLEAR_OVERRIDE')
+        self.assertNotIn('one', engine.calibrations)
+
+    def test_live_frame_mirrors_team_identity_without_changing_ground_axis(self):
+        root = json.loads(Path('research/v3/fixtures/observed-live-away-open-play.json').read_text())['decodedState']
+        _, away = DecisionEngine(Model(), 'test-model').choose(root, 'away')
+        root['teamId'] = 0
+        for p in root['gameState']['players']:
+            p['teamCode'] = 'away' if p['teamCode'] == 'home' else 'home'
+            p['position']['x'] *= -1
+            p['velocity']['x'] *= -1
+        root['gameState']['ball']['position']['x'] *= -1
+        root['gameState']['ball']['velocity']['x'] *= -1
+        _, home = DecisionEngine(Model(), 'test-model').choose(root, 'home')
+        self.assertEqual(home['phase'], away['phase'])
+        self.assertEqual(home['teamId'], 0)
+        self.assertAlmostEqual(home['distanceToGoal'], away['distanceToGoal'])
+        self.assertAlmostEqual(home['ballPosition']['y'], away['ballPosition']['y'])
 
 
 if __name__ == '__main__':

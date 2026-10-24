@@ -1,0 +1,220 @@
+{
+  "kind": "Observed live AWAY input; semantic fixture with names/chat/transport identifiers removed",
+  "sourceReport": "live-50",
+  "decodedState": {
+    "gameState": {
+      "tick": 10549,
+      "gameTime": 106.594124,
+      "playMode": "OPEN_PLAY",
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "ball": {
+        "position": {
+          "x": -0.6259029,
+          "y": 0.14291042,
+          "z": -1.0906866
+        },
+        "velocity": {
+          "x": -0.9889368,
+          "y": 0,
+          "z": 0.14833726
+        },
+        "isFree": false,
+        "possessionAgentId": "agentId_2"
+      },
+      "players": [
+        {
+          "agentId": "agentId_0",
+          "teamCode": "home",
+          "position": {
+            "x": -5.9654136,
+            "y": -0.19654073
+          },
+          "velocity": {
+            "x": 0,
+            "y": 0
+          },
+          "orientation": 207.22592,
+          "stamina": 1,
+          "currentAction": "IDLE",
+          "lastAction": "StayNearGoal",
+          "speed": 0,
+          "isSprinting": false
+        },
+        {
+          "agentId": "agentId_1",
+          "teamCode": "home",
+          "position": {
+            "x": 0.7466979,
+            "y": 0.24462216
+          },
+          "velocity": {
+            "x": -0.9941527,
+            "y": 0.107983
+          },
+          "orientation": 276.19904,
+          "stamina": 1,
+          "currentAction": "MOVING",
+          "lastAction": "MarkNearestOpponent",
+          "speed": 1,
+          "isSprinting": false
+        },
+        {
+          "agentId": "agentId_2",
+          "teamCode": "home",
+          "position": {
+            "x": 0.3594319,
+            "y": -1.1899207
+          },
+          "velocity": {
+            "x": 0,
+            "y": 0
+          },
+          "orientation": 298.32053,
+          "stamina": 0.15855406,
+          "currentAction": "IDLE",
+          "lastAction": "ChaseBall",
+          "speed": 0,
+          "isSprinting": false
+        },
+        {
+          "agentId": "agentId_3",
+          "teamCode": "home",
+          "position": {
+            "x": 1.2613685,
+            "y": 0.089110106
+          },
+          "velocity": {
+            "x": -0.9529956,
+            "y": 0.30298412
+          },
+          "orientation": 287.63693,
+          "stamina": 1,
+          "currentAction": "MOVING",
+          "lastAction": "CoverZone",
+          "speed": 1,
+          "isSprinting": false
+        },
+        {
+          "agentId": "agentId_4",
+          "teamCode": "home",
+          "position": {
+            "x": 0.5353503,
+            "y": -0.9724339
+          },
+          "velocity": {
+            "x": -1.3589153,
+            "y": -0.3355858
+          },
+          "orientation": 256.24527,
+          "stamina": 0.008040585,
+          "currentAction": "TACKLING",
+          "lastAction": "CoachPressBall",
+          "speed": 1.3997388,
+          "isSprinting": false
+        },
+        {
+          "agentId": "agentId_0",
+          "teamCode": "away",
+          "position": {
+            "x": 6.021047,
+            "y": -0.1915817
+          },
+          "velocity": {
+            "x": 0,
+            "y": 0
+          },
+          "orientation": 218.36688,
+          "stamina": 1,
+          "currentAction": "IDLE",
+          "lastAction": "StayNearGoal",
+          "speed": 0,
+          "isSprinting": false
+        },
+        {
+          "agentId": "agentId_1",
+          "teamCode": "away",
+          "position": {
+            "x": 4.2339993,
+            "y": -0.034946226
+          },
+          "velocity": {
+            "x": 0,
+            "y": 0
+          },
+          "orientation": 278.81085,
+          "stamina": 1,
+          "currentAction": "IDLE",
+          "lastAction": "FindOpenSpace",
+          "speed": 0,
+          "isSprinting": false
+        },
+        {
+          "agentId": "agentId_2",
+          "teamCode": "away",
+          "position": {
+            "x": -0.4085098,
+            "y": -1.1188511
+          },
+          "velocity": {
+            "x": -0.9889368,
+            "y": 0.14833726
+          },
+          "orientation": 278.53058,
+          "stamina": 1,
+          "currentAction": "TACKLING",
+          "lastAction": "AdvanceToGoalWithBall",
+          "speed": 0.99999994,
+          "isSprinting": false
+        },
+        {
+          "agentId": "agentId_3",
+          "teamCode": "away",
+          "position": {
+            "x": 0.85321313,
+            "y": 1.0347583
+          },
+          "velocity": {
+            "x": -1.4009788,
+            "y": 0.535965
+          },
+          "orientation": 290.9351,
+          "stamina": 0.222667,
+          "currentAction": "MOVING",
+          "lastAction": "FindOpenSpace",
+          "speed": 1.5,
+          "isSprinting": true
+        },
+        {
+          "agentId": "agentId_4",
+          "teamCode": "away",
+          "position": {
+            "x": -1.2798676,
+            "y": 1.3662953
+          },
+          "velocity": {
+            "x": -1.3866564,
+            "y": 0.57200015
+          },
+          "orientation": 292.4163,
+          "stamina": 0.58801717,
+          "currentAction": "MOVING",
+          "lastAction": "FindOpenSpace",
+          "speed": 1.5,
+          "isSprinting": true
+        }
+      ]
+    },
+    "teamId": 1,
+    "myPlayers": [
+      3
+    ],
+    "unlockedCommands": []
+  },
+  "limitations": [
+    "One observed snapshot, not calibrated field geometry or possession ground truth",
+    "Ball has3Dposition while players have2Dpositions; coordinate interpretation requires validation"
+  ]
+}

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Invoke own synthetic shot/restart sessions and stop them; retain evidence privately."""
 import argparse
+import copy
 import json
 from pathlib import Path
 import time
@@ -42,8 +43,18 @@ def main():
         parser.error('Require a verified READY deployment receipt')
     fixtures = json.loads((ROOT / 'research/v3/selective-autonomy/fixtures.json').read_text())['cases']
     cases = [(0, fixtures[0], 'SHOOT'), (1, fixtures[1], 'SHOOT'), (0, fixtures[3], 'MOVE_TO')]
+    observed = json.loads((ROOT / 'research/v3/fixtures/observed-live-away-open-play.json').read_text())['decodedState']
+    cases.append((1, {'id': 'observed-live-open-play', 'modelText': json.dumps({'prompt': json.dumps(observed)})},
+                  'CLEAR_OVERRIDE'))
+    close = copy.deepcopy(observed)
+    player = next(p for p in close['gameState']['players'] if p['teamCode'] == 'away' and p['agentId'] == 'agentId_3')
+    player.update(position={'x': -4.2, 'y': 0.1}, velocity={'x': -1, 'y': 0}, lastAction='AdvanceToGoalWithBall')
+    close['gameState']['ball'].update(position={'x': -4.42, 'y': 0.14, 'z': 0.1},
+                                     velocity={'x': -1, 'y': 0, 'z': 0}, isFree=False, possessionAgentId='agentId_3')
+    cases.append((1, {'id': 'synthetic-world-contact-close-shot',
+                      'modelText': json.dumps({'prompt': json.dumps(close)})}, 'SHOOT'))
     if not args.apply:
-        print('Plan: HOME/AWAY close shots plus HOME restart; private response/audit; stop own sessions in finally.')
+        print('Plan:5synthetic/replayed states including observed live protocol and a world-frame shot hypothesis; stop own sessions.')
         return
     import boto3
     from botocore.config import Config

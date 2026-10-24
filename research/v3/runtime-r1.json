@@ -1,6 +1,6 @@
 {
   "kind": "Independent Runtime FWD1 pilot; public-safe evidence summary",
-  "status": "RegisteredFWD1 v3; UI Fitness5/5; live errors observed; diagnostic revision pending",
+  "status": "AWSv4 live contract captured; protocol/sensing revision5 ready locally, not deployed yet",
   "initialSourceCommit": "7ae12c1e737992f83a10ff5c2cf1497cb2580764",
   "initialArchiveSha256": "21ed279d4831546ff58e0ce3c91744e1d47b4cb5fbcff8ae4e970ba1489274e3",
   "reproducibility": "Local macOS cross-build and CloudShell Linux build produced identical archive SHA256,20610262bytes,2731files",
@@ -71,5 +71,20 @@
     "fitness": "UI5/5,5commands100%active, reportedavg0ms",
     "live49": "Background1:0win againstMatrix_7; kickoff bindingunattributed. Runtime log session correlated to this match shows ValueError No supported command is unlocked before action selection. Do not count as tactical success."
   },
-  "shotContextDiagnostics": "Next source revision records rejected raw input privately and numeric position/stamina/distance/time/score for accepted actions; no unsupported command is invented."
+  "shotContextDiagnostics": "Next source revision records rejected raw input privately and numeric position/stamina/distance/time/score for accepted actions; no unsupported command is invented.",
+  "revision4": {
+    "sourceCommit": "0bfe524",
+    "archiveSha256": "19d9e8f910bd5d8a7b332b9648432aca69f09116c649640c16bc7061fc487224",
+    "status": "READY",
+    "nativeChecks": "3/3 command and Memory model-audit gates; own sessions stopped",
+    "live50": "AWAY vsPrashanthPokkula lost1:2; actual error-path STM snapshot captured OPEN_PLAY,unlockedCommands[],3Dball and2Dplayers. No successful R1 decision claimed."
+  },
+  "revision5Proposal": {
+    "status": "Local only",
+    "adapter": "OPEN_PLAY alias; empty unlock list interpreted as no supplied basic restriction; observed keeper-reference XZ normalization; bounded contact/motion ownership inference",
+    "coordinateLimit": "Keeper proxy, not surveyed goalposts; outgoing coordinate conversion remains unverified",
+    "ownershipLimit": "Inferred, not server-confirmed; contested/contradictory input releases control",
+    "validation": "30 policy/runtime unit checks and fake-client SDK shape/stream smoke passed",
+    "nativeLiveReadiness": "Pending deployment and native5case gate"
+  }
 }

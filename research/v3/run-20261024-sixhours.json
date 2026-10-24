@@ -30,7 +30,8 @@
     "live-46",
     "live-47",
     "live-48",
-    "live-49"
+    "live-49",
+    "live-50"
   ],
   "singleRoleRecoveryCanary": {
     "created": true,
@@ -57,7 +58,7 @@
     "liveMemoryUse": "not established",
     "rollback": "Original FWD1 v16 is behavior-identical to pre-Memory v14; UI5/5"
   },
-  "runtimeCandidate": "AWSR1v3 FWD1; UI5/5; live unlocked-command contract error being diagnosed",
+  "runtimeCandidate": "AWSR1v4; actuallive protocolcaptured; v5adapter localpending",
   "windowExtension": "User requested6-8hours; maximum8hours from original start",
   "latestLeaderboard": {
     "rank": 10,

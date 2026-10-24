@@ -1949,6 +1949,53 @@
         "No new R1 non-probe session or NHITL_DECISION log found during a midgame read; this does not establish which setup the game used.",
         "Primary aggregate report has no shot coordinates or shot-by-shot outcomes."
       ]
+    },
+    {
+      "id": "live-50",
+      "setup": "unattributed-background",
+      "opponent": "Prashanth Pokkula",
+      "side": "away",
+      "goalsFor": 1,
+      "goalsAgainst": 2,
+      "shotsFor": 2,
+      "shotsAgainst": 6,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 2,
+      "possessionPercent": 65,
+      "commands": 382,
+      "averageLatencyMs": 861,
+      "commandCounts": {
+        "MOVE_TO": 136,
+        "GK_DISTRIBUTE": 60,
+        "PRESS_BALL": 53,
+        "RESET": 52,
+        "SHOOT": 34,
+        "PASS": 23,
+        "CLEAR_OVERRIDE": 17,
+        "INTERCEPT": 4,
+        "FOLLOW_PLAYER": 2,
+        "MARK": 1
+      },
+      "opponentCommands": 17,
+      "opponentAverageLatencyMs": 17,
+      "roleLatencyMs": {
+        "gk": 596,
+        "def": 916,
+        "mid": 863,
+        "fwd1": 588,
+        "fwd2": 755
+      },
+      "reportedRoleSuccessPercent": 100,
+      "lastKnownSavedSetup": "R1-FWD1-diagnostic-v4-plus-M7",
+      "coaching": [],
+      "initiation": "Discovered inbound live banner; no Find clicked; watched through completion",
+      "runtimeEvidence": "Own R1 STM diagnostic session matched this game. Live normalized input has OPEN_PLAY,empty unlockedCommands and3Dball/2Dplayers; R1 rejected supported-action selection before model invocation.",
+      "limitations": [
+        "Kickoff configuration of other slots and formation not directly observed; exclude from controlled setup comparisons.",
+        "Team report includes52RESET commands; the per-role origin is not established.",
+        "Live error-path Memory capture is operational evidence, not successful model action selection.",
+        "Primary STATS have no per-shot distance/outcome table."
+      ]
     }
   ],
   "recordingOrder": "Local evidence-capture order; background matches may be appended retrospectively."
