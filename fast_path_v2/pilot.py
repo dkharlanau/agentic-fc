@@ -22,7 +22,7 @@ def decode(raw):
  raise ValueError('No complete command array in SSE')
 
 def main():
- ap=argparse.ArgumentParser();ap.add_argument('--apply',action='store_true');ap.add_argument('--source-commit',required=True);ap.add_argument('--revision',type=int,default=1);args=ap.parse_args()
+ ap=argparse.ArgumentParser();ap.add_argument('--apply',action='store_true');ap.add_argument('--source-commit',required=True);ap.add_argument('--revision',type=int,default=1);ap.add_argument('--support-mode',choices=('stance','probe-wide'),default='stance');args=ap.parse_args()
  hashes={n:hashlib.sha256((ROOT/n).read_bytes()).hexdigest() for n in SOURCES}
  if not args.apply:print(json.dumps({'playerId':4,'source':hashes,'action':'separate Runtime native timing only; no registration'}));return
  import boto3
@@ -45,6 +45,7 @@ def main():
    output.writestr(info,(ROOT/name).read_bytes())
  archive=buf.getvalue();sha=hashlib.sha256(archive).hexdigest();key=f'nhitl-fast-v2/{sha}.zip';p=ROOT/('.local/fast-path-v2/pilot.json' if args.revision==1 else f'.local/fast-path-v2/pilot-v{args.revision}.json')
  request={'agentRuntimeName':'nhitl_fwd2_fast_v2','roleArn':role,'agentRuntimeArtifact':{'codeConfiguration':{'code':{'s3':{'bucket':bucket,'prefix':key}},'runtime':'PYTHON_3_13','entryPoint':['main.py']}},'networkConfiguration':{'networkMode':'PUBLIC'},'lifecycleConfiguration':{'idleRuntimeSessionTimeout':900,'maxLifetime':28800},'environmentVariables':{'PLAYER_ID':'4','BUILD_COMMIT':args.source_commit},'description':'Isolated deterministic FWD2 native timing pilot; no per-tick LLM; not portal registered'}
+ if args.support_mode!='stance':request['environmentVariables']['FWD2_MODE']=args.support_mode
  if p.exists():
   receipt=json.loads(p.read_text())
   if receipt['request']!=request:raise ValueError('Existing immutable pilot has a different source/request')
@@ -87,6 +88,10 @@ def main():
  cases.append({'id':'fwd2-counterfactual-moving-keepers','role':'fwd2','input':moved,'expected':{'types':['SET_STANCE']}})
  ambiguous=copy.deepcopy(moved);ambiguous['gameState']['tick']+=1;ambiguous['gameState']['ball'].update(position={'x':0,'y':0,'z':0},velocity={'x':0,'y':0,'z':0})
  cases.append({'id':'fwd2-counterfactual-ambiguous-after-moving-keepers','role':'fwd2','input':ambiguous,'expected':{'types':['CLEAR_OVERRIDE']}})
+ probe=copy.deepcopy(observed);probe['gameState']['gameTime']=12
+ cases.append({'id':'fwd2-bounded-control-window','role':'fwd2','input':probe,'expected':{'types':['MOVE_TO' if args.support_mode=='probe-wide' else 'SET_STANCE']}})
+ probe_end=copy.deepcopy(probe);probe_end['gameState']['gameTime']=28
+ cases.append({'id':'fwd2-control-window-ended','role':'fwd2','input':probe_end,'expected':{'types':['SET_STANCE']}})
  client=boto3.client('bedrock-agentcore',region_name=region,config=Config(connect_timeout=5,read_timeout=60,retries={'max_attempts':0}));sid='nhitl-fast-native-'+str(uuid.uuid4());arn=receipt['runtime']['agentRuntimeArn'];report={'kind':'full native AWS response timings; CloudShell network path, not game server latency','probes':[],'stopped':False}
  try:
   for repeat in range(2):

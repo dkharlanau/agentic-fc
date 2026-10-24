@@ -79,4 +79,25 @@ class FastTests(unittest.TestCase):
   # Losing ownership evidence still prevents a shot despite cached geometry.
   p['gameState']['ball'].pop('possessionTeamCode');p['gameState']['ball']['position']={'x':0,'y':0}
   out,a=e.choose(p,'match');self.assertEqual(out[0]['commandType'],'CLEAR_OVERRIDE')
+ def test_fwd2_probe_is_opt_in_bounded_and_mirrored(self):
+  raw=json.loads((ROOT/'research/v3/fixtures/observed-live-away-open-play.json').read_text())['decodedState']
+  for side in (0,1):
+   p=copy.deepcopy(raw);p['myPlayers']=[4];p['gameState']['gameTime']=12
+   if side==0:
+    p['teamId']=0;p['gameState']['ball']['position']['x']*=-1;p['gameState']['ball']['velocity']['x']*=-1
+    for row in p['gameState']['players']:
+     row['teamCode']='away' if row['teamCode']=='home' else 'home';row['position']['x']*=-1;row['velocity']['x']*=-1
+   out,a=FastEngine(4).choose(p);self.assertNotEqual(out[0]['commandType'],'MOVE_TO')
+   e=FastEngine(4,'probe-wide');out,a=e.choose(p)
+   self.assertEqual(a['reason'],'FWD2_CONTROL_PROBE');self.assertEqual(out[0]['parameters'],{'target_x':-2.0 if side==0 else 2.0,'target_y':2.8,'sprint':False})
+   self.assertIn('ownPlayer',a);self.assertIn('opponentSameId',a)
+   for t in (7.99,28,40):
+    p['gameState']['gameTime']=t;out,a=e.choose(p);self.assertNotEqual(a['reason'],'FWD2_CONTROL_PROBE')
+ def test_probe_cannot_take_ball_or_unknown_ownership(self):
+  p=json.loads((ROOT/'research/v3/fixtures/observed-live-away-open-play.json').read_text())['decodedState'];p['myPlayers']=[4];p['gameState']['gameTime']=12
+  e=FastEngine(4,'probe-wide');p['gameState']['ball'].update(possessionTeamCode='away',possessionAgentId='agentId_4')
+  out,a=e.choose(p);self.assertNotEqual(a['reason'],'FWD2_CONTROL_PROBE')
+  p['gameState']['ball'].pop('possessionTeamCode');p['gameState']['ball'].pop('possessionAgentId');p['gameState']['ball']['position']={'x':0,'y':0,'z':0};p['gameState']['ball']['velocity']={'x':0,'y':0,'z':0}
+  out,a=e.choose(p,'new');self.assertEqual(out[0]['commandType'],'CLEAR_OVERRIDE')
+  with self.assertRaises(ValueError):FastEngine(3,'probe-wide')
 if __name__=='__main__':unittest.main()

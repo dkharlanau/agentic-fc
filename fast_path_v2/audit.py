@@ -20,7 +20,11 @@ def main():
     ap.add_argument('--alias', required=True)
     ap.add_argument('--since', required=True)
     ap.add_argument('--output', type=Path, required=True)
+    ap.add_argument('--private-trace', action='store_true',
+                    help='Include own/opponent positions only in an ignored .local output')
     args = ap.parse_args()
+    if args.private_trace and '.local' not in args.output.resolve().parts:
+        raise ValueError('Raw position trace must stay under .local')
     import boto3
     receipt = json.loads(args.receipt.read_text())
     rid = receipt['runtime']['agentRuntimeId']
@@ -31,7 +35,9 @@ def main():
     rows = []
     fields = ('reason', 'computeMs', 'modelAttempted', 'policy', 'buildCommit',
               'command', 'frame', 'pitchReferenceReady', 'possession', 'playMode',
-              'inferredPossession')
+              'inferredPossession', 'gameTime', 'supportMode')
+    if args.private_trace:
+        fields += ('ownPlayer', 'opponentSameId')
     for page in logs.get_paginator('filter_log_events').paginate(
             logGroupName=group, startTime=start, filterPattern='"NHITL_FAST"'):
         for event in page.get('events', []):

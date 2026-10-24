@@ -4,7 +4,7 @@ import os
 from bedrock_agentcore.runtime import BedrockAgentCoreApp
 from fast_path_v2.engine import FastEngine
 app=BedrockAgentCoreApp()
-engine=FastEngine(int(os.environ.get('PLAYER_ID','4')))
+engine=FastEngine(int(os.environ.get('PLAYER_ID','4')),os.environ.get('FWD2_MODE','stance'))
 
 def stream(commands):
     yield json.dumps(commands,separators=(',',':'),allow_nan=False)

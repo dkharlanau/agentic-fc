@@ -45,9 +45,12 @@ def unwrap(payload):
 
 
 class FastEngine:
-    def __init__(self,player_id):
+    def __init__(self,player_id,support_mode='stance'):
         if type(player_id) is not int or player_id not in range(5):raise ValueError('player_id')
+        if support_mode not in ('stance','probe-wide'):raise ValueError('support_mode')
+        if support_mode!='stance' and player_id!=4:raise ValueError('FWD2-only mode')
         self.pid=player_id
+        self.support_mode=support_mode
         self.sessions={}
 
     def choose(self,payload,session='test'):
@@ -82,7 +85,14 @@ class FastEngine:
         reference=pitch_reference(profile,keepers,previous.get('pitchReference'))
         facts.update(frame=profile['kind'],pitchReferenceReady=reference is not None,
                      possession=state.ball_status,playMode=state.play_mode,
-                     inferredPossession=bool(inferred))
+                     inferredPossession=bool(inferred),gameTime=state.game_time,
+                     supportMode=self.support_mode)
+        own_code='home' if state.side==0 else 'away'
+        for label,code in (('ownPlayer',own_code),('opponentSameId','away' if state.side==0 else 'home')):
+            raw=next((p for p in gs['players'] if p.get('teamCode')==code and p.get('agentId')==f'agentId_{pid}'),None)
+            if raw:
+                facts[label]={'position':raw['position'],'lastAction':raw.get('lastAction'),
+                              'currentAction':raw.get('currentAction'),'stamina':raw.get('stamina')}
         self.sessions[session]={'calibration':calibration,'contact':candidate,'pitchReference':reference}
         if state.ball_status=='UNKNOWN':return done(reason='UNKNOWN_POSSESSION')
         if state.play_mode=='KICK_OFF' and not state.i_have_ball:
@@ -99,6 +109,12 @@ class FastEngine:
         own_x=reference['homeX' if state.side==0 else 'awayX']
         goal_x=reference['awayX' if state.side==0 else 'homeX']
         span=abs(goal_x-own_x);sign=state.sign;goalkeeper=keepers[1-state.side]
+        if self.support_mode=='probe-wide' and profile['kind']=='keeper_reference_xz' and \
+                state.play_mode=='PLAY_ON' and 8<=state.game_time<28 and not state.i_have_ball:
+            # Bounded Practice diagnostic, deliberately using the same raw-unit
+            # target whose HOME FWD1 movement was previously observed. FWD2 and
+            # AWAY application are not assumed until the new trace verifies them.
+            return done('MOVE_TO',{'target_x':-2.0*sign,'target_y':2.8,'sprint':False},'FWD2_CONTROL_PROBE')
         def dist(a,b):return math.hypot(a.x-b.x,a.y-b.y)
         if state.i_have_ball:
             # Explicit hasBall=false overrides inferred/qualified ownership.
