@@ -14,7 +14,7 @@
       "memoryRoles": [
         "fwd1"
       ],
-      "status": "trial; native JSON canary passed 2/2, portal Fitness 5/5, live validation pending"
+      "status": "trial; native JSON canary2/2, portal Fitness5/5; live43 lost1:2; live Memory writes not confirmed"
     }
   },
   "memory": {

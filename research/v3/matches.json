@@ -1660,6 +1660,84 @@
       "initiation": "manual normal Find after saved/reloaded1-2-1 and fresh UI Fitness5/5",
       "coaching": [],
       "evidenceCapturedAtUTC": "2026-10-24T05:42:55.807672+00:00"
+    },
+    {
+      "id": "live-43",
+      "setup": "A0-M9-memory-fwd1",
+      "opponent": "BlackEagle",
+      "side": "home",
+      "goalsFor": 1,
+      "goalsAgainst": 2,
+      "shotsFor": 4,
+      "shotsAgainst": 7,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 2,
+      "possessionPercent": 60,
+      "commands": 405,
+      "averageLatencyMs": 72,
+      "commandCounts": {
+        "MOVE_TO": 353,
+        "INTERCEPT": 26,
+        "CLEAR_OVERRIDE": 13,
+        "PASS": 9,
+        "PRESS_BALL": 4
+      },
+      "opponentCommands": 23,
+      "opponentAverageLatencyMs": 2,
+      "roleLatencyMs": {
+        "gk": 88,
+        "def": 81,
+        "mid": 90,
+        "fwd1": 89,
+        "fwd2": 76
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "FWD1 Memory writes verified in native synthetic canary, but no matching live session observed in STM immediately after game. Actual live execution path remains unverified; do not attribute outcome to Memory."
+      ],
+      "initiation": "manual normal Find after Memory-only FWD1 v15 update, exact GetHarness comparison, own probe/scrimmage reset and UI Fitness5/5",
+      "coaching": [],
+      "evidenceCapturedAtUTC": "2026-10-24T06:26:12.122799+00:00"
+    },
+    {
+      "id": "live-44",
+      "setup": "A0-M10-fresh-fwd1-memory",
+      "opponent": "AWSenal",
+      "side": "home",
+      "goalsFor": 0,
+      "goalsAgainst": 2,
+      "shotsFor": 3,
+      "shotsAgainst": 9,
+      "shotsOnTargetFor": 0,
+      "shotsOnTargetAgainst": 2,
+      "possessionPercent": 59,
+      "commands": 9,
+      "averageLatencyMs": 2,
+      "commandCounts": {
+        "CLEAR_OVERRIDE": 9
+      },
+      "opponentCommands": 18,
+      "opponentAverageLatencyMs": 3,
+      "roleLatencyMs": {
+        "gk": 2,
+        "def": 2,
+        "mid": 2,
+        "fwd1": 2,
+        "fwd2": 1
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Only9 CLEAR_OVERRIDE commands for the entire team, reported2ms average; native Memory events stop at scrimmage. Inference/fallback path not established. Fresh resource identity and different uncontrolled opponent confound comparison with M9."
+      ],
+      "initiation": "manual normal Find after single-role restore canary Ready, 13-field saved-config readback with no mismatches, FWD1 registration reload and UI Fitness5/5",
+      "coaching": [],
+      "evidenceCapturedAtUTC": "2026-10-24T06:37:21.310095+00:00"
     }
   ],
   "recordingOrder": "Local evidence-capture order; background matches may be appended retrospectively."

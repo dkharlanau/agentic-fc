@@ -650,6 +650,82 @@
         "executionRole": "unchanged; private binding excluded"
       },
       "recoveryBundle": "recovery/bundle.json"
+    },
+    {
+      "promptDirectory": "schema-clean",
+      "inferenceConfig": null,
+      "allowedToolsByRole": {
+        "gk": [],
+        "def": [],
+        "mid": [],
+        "fwd1": [],
+        "fwd2": []
+      },
+      "gateway": null,
+      "formation": "1-2-1",
+      "promptSha256": {
+        "def": "86426b2320f5e40e444ebe553b0827b3707ff6f5cd22599478f71e5391c838d9",
+        "fwd1": "ee4c92203e6fcbc86d14329913933ba68d8cd2092947bebd2c66d5ed14c17b15",
+        "fwd2": "03ed589df3ebe560294ac54966bfc27156aa27391c8079dae5aab93ba096a13f",
+        "gk": "43a75e8e85225b14879c7c9b839a7f8b3e5d056d8a841a1a4019b8fc8263cd36",
+        "mid": "7b05fe872d47c532c374390642006759924d84048a61577bf4f3a9bba400c729"
+      },
+      "truncation": {
+        "strategy": "sliding_window",
+        "messagesCount": 10
+      },
+      "modelByRole": {
+        "gk": "global.amazon.nova-2-lite-v1:0",
+        "def": "global.amazon.nova-2-lite-v1:0",
+        "mid": "global.amazon.nova-2-lite-v1:0",
+        "fwd1": "global.amazon.nova-2-lite-v1:0",
+        "fwd2": "global.anthropic.claude-haiku-4-5-20251001-v1:0"
+      },
+      "id": "A0-M10-fresh-fwd1-memory",
+      "parent": "A0-M9-memory-fwd1",
+      "status": "fresh_single_role_restore_ready_and_ui_fitness_5_of_5_live_trial",
+      "changed": [
+        "Only FWD1 registration replaced with a newly created Harness containing the same behavior fields as original v15; fresh resource identity and provisioning are confounders."
+      ],
+      "awsVersionByRole": {
+        "gk": 13,
+        "def": 19,
+        "mid": 15,
+        "fwd1": 1,
+        "fwd2": 14
+      },
+      "memory": {
+        "resourceName": "NHITLMatchMemory",
+        "eventExpiryDurationDays": 3,
+        "longTermStrategies": [],
+        "attachedRoles": {
+          "fwd1": {
+            "actorId": "fwd1",
+            "messagesCount": 10
+          }
+        },
+        "otherRoles": "explicitly disabled"
+      },
+      "fitness": {
+        "passedPositions": 5,
+        "totalPositions": 5,
+        "commands": 5,
+        "activePercent": 100,
+        "reportedAverageLatencyMs": 0,
+        "capturedAtUTC": "2026-10-24T06:31:06.410507+00:00",
+        "sessionResetBeforeThisCheck": false,
+        "limitation": "Fresh FWD1 resource identity, registration persisted after profile reload, all positions passed; UI readiness is not live inference proof."
+      },
+      "verification": {
+        "source": "CreateHarness from the saved private FWD1 export through CloudShell, then GetHarness read-back",
+        "capturedAtUTC": "2026-10-24T06:31:06.410150+00:00",
+        "status": "READY",
+        "comparedRequestFields": 13,
+        "mismatches": [],
+        "behavioralSettings": "Same as original FWD1 v15: same execution role, prompt, model, tools, limits, environment settings and existing Memory binding",
+        "scope": "One role restored in the same account; not a full five-role or fresh-account restore test"
+      },
+      "recoveryBundle": "recovery/bundle.json"
     }
   ]
 }

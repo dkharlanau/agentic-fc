@@ -23,5 +23,23 @@
   ],
   "status": "running",
   "recoveryKit": "recovery/README.ru.md",
-  "completedReports": []
+  "completedReports": [
+    "live-43",
+    "live-44"
+  ],
+  "singleRoleRecoveryCanary": {
+    "created": true,
+    "status": "READY",
+    "readbackComparedFields": 13,
+    "mismatches": [],
+    "portalFitness": "5/5",
+    "liveReport": "live-44",
+    "scope": "Same-account single-role creation; full five-role restore script and fresh-account restore remain unverified"
+  },
+  "originalFwd1Restored": {
+    "registered": true,
+    "profileReloadVerified": true,
+    "fitness": "5/5",
+    "savedPromptChanged": false
+  }
 }
