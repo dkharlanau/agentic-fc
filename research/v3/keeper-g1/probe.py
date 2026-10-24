@@ -3,6 +3,7 @@
 import argparse
 import hashlib
 import json
+import re
 from pathlib import Path
 import sys
 import time
@@ -29,6 +30,17 @@ def assess(commands, case):
     if expected.get('teamIdAbsent'):
         agreement = agreement and 'teamId' not in c
     return {'formatPassed': fmt, 'candidateBehaviorAgreement': bool(agreement)}
+
+
+def parse_answer(text):
+    """Track strict JSON separately from a single Markdown code fence."""
+    try:
+        return json.loads(text), True
+    except ValueError:
+        fenced = re.fullmatch(r'\s*```(?:json)?\s*(.*?)\s*```\s*', text, re.S)
+        if not fenced:
+            raise
+        return json.loads(fenced.group(1)), False
 
 
 def main():
@@ -83,7 +95,8 @@ def main():
                         row['streamError'] = event[kind]
             row['elapsedMs'] = round((time.monotonic() - started) * 1000)
             row['modelText'] = text
-            commands = json.loads(text)
+            commands, strict = parse_answer(text)
+            row['strictJSON'] = strict
             row['commands'] = commands
             row.update(assess(commands, case))
         except Exception as error:

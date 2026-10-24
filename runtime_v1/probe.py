@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Invoke two own synthetic sessions and stop them; retain raw evidence privately."""
+"""Invoke own synthetic shot/restart sessions and stop them; retain evidence privately."""
 import argparse
 import json
 from pathlib import Path
@@ -40,9 +40,10 @@ def main():
     receipt = json.loads(args.receipt.read_text())
     if not receipt.get('verifiedReady'):
         parser.error('Require a verified READY deployment receipt')
-    cases = json.loads((ROOT / 'research/v3/selective-autonomy/fixtures.json').read_text())['cases'][:2]
+    fixtures = json.loads((ROOT / 'research/v3/selective-autonomy/fixtures.json').read_text())['cases']
+    cases = [(0, fixtures[0], 'SHOOT'), (1, fixtures[1], 'SHOOT'), (0, fixtures[3], 'MOVE_TO')]
     if not args.apply:
-        print('Plan: native HOME/AWAY close-shot probes, private response/audit, stop own sessions in finally.')
+        print('Plan: HOME/AWAY close shots plus HOME restart; private response/audit; stop own sessions in finally.')
         return
     import boto3
     from botocore.config import Config
@@ -51,9 +52,9 @@ def main():
     arn = receipt['runtime']['agentRuntimeArn']
     env = receipt['identity']['request']['environmentVariables']
     result = {'kind': 'Native synthetic Runtime probes; not live match evidence', 'probes': []}
-    for side, case in enumerate(cases):
+    for side, case, expected in cases:
         sid = 'nhitl-r1-probe-' + str(uuid.uuid4())
-        record = {'side': side, 'sessionId': sid, 'expected': 'SHOOT', 'stopped': False}
+        record = {'case': case['id'], 'side': side, 'sessionId': sid, 'expected': expected, 'stopped': False}
         result['probes'].append(record)
         save_private(args.output, result)
         started = time.monotonic()
@@ -67,7 +68,7 @@ def main():
             commands = decode_commands(raw)
             record['commands'] = commands
             record['commandGatePassed'] = len(commands) == 1 and commands[0].get('playerId') == 3 and \
-                commands[0].get('teamId') == side and commands[0].get('commandType') == 'SHOOT'
+                commands[0].get('teamId') == side and commands[0].get('commandType') == expected
             if env.get('MEMORY_ID'):
                 events = client.list_events(memoryId=env['MEMORY_ID'], actorId=env['MEMORY_ACTOR_ID'],
                                             sessionId=sid, includePayloads=True, maxResults=20)
@@ -81,7 +82,7 @@ def main():
                             if isinstance(decoded.get('audit'), dict):
                                 audits.append(decoded['audit'])
                 record['acceptedModelChoiceVerified'] = any(a.get('outcome') == 'model_choice' and
-                    a.get('commandType') == 'SHOOT' and a.get('modelAttempted') is True for a in audits)
+                    a.get('commandType') == expected and a.get('modelAttempted') is True for a in audits)
         except Exception as error:
             record['error'] = type(error).__name__ + ': ' + str(error)
         finally:
@@ -91,7 +92,7 @@ def main():
             except Exception as error:
                 record['stopError'] = type(error).__name__ + ': ' + str(error)
             save_private(args.output, result)
-        print(json.dumps({k: record.get(k) for k in ('side', 'elapsedMs', 'commandGatePassed',
+        print(json.dumps({k: record.get(k) for k in ('case', 'side', 'elapsedMs', 'commandGatePassed',
                           'acceptedModelChoiceVerified', 'stopped', 'error')}, default=str), flush=True)
     if not all(p.get('commandGatePassed') and p.get('acceptedModelChoiceVerified') and p['stopped']
                for p in result['probes']):

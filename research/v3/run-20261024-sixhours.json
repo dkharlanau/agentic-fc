@@ -28,7 +28,8 @@
     "live-44",
     "live-45",
     "live-46",
-    "live-47"
+    "live-47",
+    "live-48"
   ],
   "singleRoleRecoveryCanary": {
     "created": true,
@@ -55,6 +56,6 @@
     "liveMemoryUse": "not established",
     "rollback": "Original FWD1 v16 is behavior-identical to pre-Memory v14; UI5/5"
   },
-  "runtimeCandidate": "runtime_v1; not deployed yet",
+  "runtimeCandidate": "runtime_v1 AWS READYv2; FWD1 registered; initialFitness4/5; kickoff fix pending",
   "windowExtension": "User requested6-8hours; maximum8hours from original start"
 }

@@ -1,14 +1,66 @@
 {
   "kind": "Independent Runtime FWD1 pilot; public-safe evidence summary",
-  "status": "READY in AWS; not registered in portal; audit encoding revision pending",
+  "status": "Registered only in FWD1; initial Fitness4/5; kickoff positioning revision pending",
   "initialSourceCommit": "7ae12c1e737992f83a10ff5c2cf1497cb2580764",
   "initialArchiveSha256": "21ed279d4831546ff58e0ce3c91744e1d47b4cb5fbcff8ae4e970ba1489274e3",
   "reproducibility": "Local macOS cross-build and CloudShell Linux build produced identical archive SHA256,20610262bytes,2731files",
-  "savedReadback": {"status": "READY", "role": "matched", "artifact": "matched", "network": "matched", "environment": "matched", "lifecycle": "matched"},
+  "savedReadback": {
+    "status": "READY",
+    "role": "matched",
+    "artifact": "matched",
+    "network": "matched",
+    "environment": "matched",
+    "lifecycle": "matched"
+  },
   "nativeProbes": [
-    {"side": "home", "command": "SHOOT", "ownPlayerAndTeam": true, "elapsedMsIncludingColdStartAndMemory": 3620, "ownSessionStopped": true},
-    {"side": "away", "command": "SHOOT", "ownPlayerAndTeam": true, "elapsedMsIncludingColdStartAndMemory": 4174, "ownSessionStopped": true}
+    {
+      "side": "home",
+      "command": "SHOOT",
+      "ownPlayerAndTeam": true,
+      "elapsedMsIncludingColdStartAndMemory": 3620,
+      "ownSessionStopped": true
+    },
+    {
+      "side": "away",
+      "command": "SHOOT",
+      "ownPlayerAndTeam": true,
+      "elapsedMsIncludingColdStartAndMemory": 4174,
+      "ownSessionStopped": true
+    }
   ],
   "auditObservation": "STM events were written for both probes, but blob objects were returned as map-style strings rather than structured JSON. The initial automated audit gate therefore failed. Revision stores JSON in typed conversational text fields; it needs native revalidation.",
-  "limitations": ["Native probes are synthetic, not live games", "No live performance improvement established", "Original five-Harness M7 portal configuration remains registered", "No IAM changes"]
+  "limitations": [
+    "Native probes are synthetic, not live games",
+    "No live performance improvement established",
+    "Original five-Harness M7 portal configuration remains registered",
+    "No IAM changes"
+  ],
+  "revisionSourceCommit": "a401d6c",
+  "revisionArchiveSha256": "271e027b40f0cb77767f4a4e03f03b17f9bb2f627bd063498acda01183b5e661",
+  "revisionNativeProbes": [
+    {
+      "side": "home",
+      "command": "SHOOT",
+      "ownPlayerAndTeam": true,
+      "acceptedModelChoiceVerifiedInMemory": true,
+      "elapsedMsIncludingColdStartAndMemory": 4795,
+      "ownSessionStopped": true
+    },
+    {
+      "side": "away",
+      "command": "SHOOT",
+      "ownPlayerAndTeam": true,
+      "acceptedModelChoiceVerifiedInMemory": true,
+      "elapsedMsIncludingColdStartAndMemory": 4062,
+      "ownSessionStopped": true
+    }
+  ],
+  "fitnessInitial": {
+    "passed": 4,
+    "total": 5,
+    "failedRole": "fwd1",
+    "reason": "FWD1 active commands0/1ticks; require>50%",
+    "tip": "Team should use PASS",
+    "candidateChange": "Offer a mirrored own-half non-sprint formation position at KICK_OFF; no possession guess"
+  }
 }

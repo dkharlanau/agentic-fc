@@ -1866,6 +1866,48 @@
       "initiation": "Background match appeared while working elsewhere; kickoff and saved setup not observed",
       "lastKnownSavedSetup": "A0-M7-formation121",
       "evidenceCapturedAtUTC": "2026-10-24T07:32:35.254233+00:00"
+    },
+    {
+      "id": "live-48",
+      "setup": "unattributed-background",
+      "opponent": "AWSuoliai",
+      "side": "away",
+      "goalsFor": 2,
+      "goalsAgainst": 0,
+      "shotsFor": 5,
+      "shotsAgainst": 6,
+      "shotsOnTargetFor": 2,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 51,
+      "commands": 367,
+      "averageLatencyMs": 256,
+      "commandCounts": {
+        "MOVE_TO": 241,
+        "MARK": 44,
+        "PRESS_BALL": 29,
+        "PASS": 22,
+        "CLEAR_OVERRIDE": 15,
+        "SHOOT": 11,
+        "GK_DISTRIBUTE": 5
+      },
+      "opponentCommands": 12,
+      "opponentAverageLatencyMs": 1,
+      "roleLatencyMs": {
+        "gk": 431,
+        "def": 95,
+        "mid": 206,
+        "fwd1": 276,
+        "fwd2": 254
+      },
+      "reportedRoleSuccessPercent": 100,
+      "initiation": "Discovered already completed in portal history; kickoff and saved setup not observed",
+      "lastKnownSavedSetup": "A0-M7-formation121",
+      "coaching": [],
+      "limitations": [
+        "Exclude from verified setup cohorts: kickoff was not observed.",
+        "Primary report statistics, not proof of actual model execution or tactical causation.",
+        "Background game may overlap native probe activity; do not treat as controlled experiment."
+      ]
     }
   ],
   "recordingOrder": "Local evidence-capture order; background matches may be appended retrospectively."

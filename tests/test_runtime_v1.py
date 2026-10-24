@@ -75,7 +75,12 @@ class RuntimeTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             DecisionEngine(Model(), 'test-model').choose(root, 'no-commands')
         _, kickoff_options = legal_options(unwrap(self.cases[3]['modelText']), 3)
-        self.assertEqual([o.command['commandType'] for o in kickoff_options], ['CLEAR_OVERRIDE'])
+        self.assertEqual([o.command['commandType'] for o in kickoff_options], ['MOVE_TO', 'CLEAR_OVERRIDE'])
+        kickoff = unwrap(self.cases[3]['modelText'])
+        kickoff['teamId'] = 1
+        _, away_options = legal_options(kickoff, 3)
+        self.assertEqual(away_options[0].command['parameters'],
+                         {'target_x': 3, 'target_y': -8, 'sprint': False})
 
     def test_history_is_bounded_isolated_and_chat_is_not_sent_to_model(self):
         model = Model()
