@@ -360,3 +360,8 @@ Fresh table:rank8,91points,43P30W1D12L,goals61:32(+29). It is tied on points wit
 Eighth M8 game won1:0 without coaching/native probes. Shots9:4,on target1:0,possession44%,330commands74ms. MOVE142,CLEAR125,PRESS40,MARK20,PASS3;RESET0. Role latencies80/83/80/75/81ms,reportedSuccess100%. Opponent issued only4CLEAR commands2ms despite its previously captured8W2D1L record. Prior win record does not establish that opponent models actively ran in this game. M8 firsteightoutcomes7wins/1draw.
 
 Fresh cumulative table:rank7,94points,44P31W1D12L,goals62:32(+30). This is the current observed position, not a contest victory. Summary stored separately.
+
+
+## Live36 unchanged M8:2:0 Spartak Ultimate
+
+Ninth M8 game won2:0 without coaching/native probes. Shots12:0,on target2:0,possession34%,370commands912ms. MOVE114,INTERCEPT87,MARK77,PASS59,CLEAR13,FOLLOW10,GKDIST10;RESET0,SHOOT0. Role latencies833/982/921/998/978ms,reportedSuccess100%. Applied teamshots remain distinct from issuedSHOOT count. M8 firstnineoutcomes8wins/1draw; retain unchanged until the scheduled end.
