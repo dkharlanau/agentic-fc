@@ -42,8 +42,8 @@ def main():
     if not args.source_bindings or '.local' not in args.receipt.resolve().parts:
         parser.error('--apply requires --source-bindings and a private .local receipt')
     evaluation = json.loads((HERE / 'model-eval.json').read_text())
-    if evaluation['summary']['passed'] != 21 or evaluation['summary']['total'] != 21:
-        raise ValueError('Real-model prerequisite must pass all 21 cases')
+    if evaluation['summary']['passed'] != 26 or evaluation['summary']['total'] != 26:
+        raise ValueError('Real-model prerequisite must pass all 21 cases plus 5 stale-context cases')
     for row in evaluation['results']:
         if row['promptSha256'] != bundle['roles'][row['role']]['promptSha256'] or row['errors']:
             raise ValueError('Evaluation is stale or contains failures')

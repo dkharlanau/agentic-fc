@@ -140,12 +140,37 @@ def errors(case, text):
     return bad
 
 
+def context_cases():
+    suite = cases()
+    result = []
+    for owned, ambiguous in zip(suite[:10:2], suite[1:10:2]):
+        case = copy.deepcopy(ambiguous)
+        case['id'] += '-stale-context'
+        pid = ROLES.index(case['role'])
+        previous = [{'commandType': 'GK_DISTRIBUTE' if pid == 0 else 'PASS', 'playerId': pid,
+                     'parameters': ({'target_player_id': 2, 'method': 'THROW'} if pid == 0 else
+                                    {'target_player_id': 4 if pid != 4 else 2, 'type': 'GROUND'}), 'duration': 0}]
+        history = []
+        for tick in range(5996, 6000):
+            old = copy.deepcopy(owned['input'])
+            old['gameState']['tick'] = tick
+            history += [{'role': 'user', 'content': [{'text': json.dumps(old)}]},
+                        {'role': 'assistant', 'content': [{'text': json.dumps(previous)}]}]
+        case['history'] = history
+        result.append(case)
+    return result
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--invoke', action='store_true')
+    parser.add_argument('--with-context', action='store_true')
+    parser.add_argument('--baseline', action='store_true')
     parser.add_argument('--output', type=Path, default=HERE / 'model-eval.json')
     args = parser.parse_args()
     suite = cases()
+    if args.with_context:
+        suite += context_cases()
     if not args.invoke:
         print(json.dumps(suite, indent=2))
         return
@@ -156,12 +181,12 @@ def main():
               'startedAtEpoch': time.time(), 'results': []}
     for case in suite:
         role = case['role']
-        prompt = (HERE / f'{role}.txt').read_text()
+        prompt = ((HERE.parent / 'schema-clean' if args.baseline else HERE) / f'{role}.txt').read_text()
         started = time.monotonic()
         response = client.converse(
             modelId=bundle['roles'][role]['configuration']['model']['bedrockModelConfig']['modelId'],
             system=[{'text': prompt}],
-            messages=[{'role': 'user', 'content': [{'text': json.dumps(case['input'])}]}],
+            messages=case.get('history', []) + [{'role': 'user', 'content': [{'text': json.dumps(case['input'])}]}],
             inferenceConfig={'maxTokens': 300, 'temperature': 0})
         text = ''.join(part.get('text', '') for part in response['output']['message']['content'])
         row = {'id': case['id'], 'role': role, 'promptSha256': hashlib.sha256(prompt.encode()).hexdigest(),
@@ -169,7 +194,7 @@ def main():
                'requestWallMs': round(1000 * (time.monotonic() - started)), 'usage': response.get('usage')}
         report['results'].append(row)
         args.output.write_text(json.dumps(report, indent=2) + '\n')
-        print(json.dumps({k: row[k] for k in ('id', 'errors', 'requestWallMs', 'output')}), flush=True)
+        print(json.dumps({k: row[k] for k in ('id', 'errors', 'requestWallMs', 'output', 'usage')}), flush=True)
     latencies = [r['requestWallMs'] for r in report['results']]
     report['summary'] = {'passed': sum(not r['errors'] for r in report['results']), 'total': len(suite),
                          'requestWallMedianMs': statistics.median(latencies), 'requestWallMaxMs': max(latencies),

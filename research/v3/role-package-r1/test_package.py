@@ -57,6 +57,15 @@ class PackageTests(unittest.TestCase):
                         dict(commandType='CLEAR_OVERRIDE', playerId=1, parameters={}, duration=0)]:
             self.assertTrue(evaluate.errors(case, json.dumps([command])))
 
+    def test_stale_context_does_not_contain_the_answer(self):
+        cases = evaluate.context_cases()
+        self.assertEqual(len(cases), 5)
+        for case in cases:
+            self.assertEqual(len(case['history']), 8)
+            self.assertEqual(case['history'][-1]['role'], 'assistant')
+            self.assertNotIn('CLEAR_OVERRIDE', case['history'][-1]['content'][0]['text'])
+            self.assertEqual(case['expected']['types'], ['CLEAR_OVERRIDE'])
+
 
 if __name__ == '__main__':
     unittest.main()
