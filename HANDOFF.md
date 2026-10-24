@@ -1,5 +1,14 @@
 # Agentic FC continuation
 
+## Interim checkpoint — 24 Oct, 19:36 UTC
+
+Cohort07 is2/3complete on the same registered revision5fastFWD2+fourM8,112.
+Two manualHOME games againstOctopus:win3:1(shots8:2),draw0:0afterovertime.
+Draw report has noSTATS section; shots/possession remain null. No setup changes.
+Third ranked game remains. Owner reinforced periodicGitHub saves andlatency goal.
+After the third game:read-only role/call-route attribution check andonecohortreview.
+No new model/prompt/deployment until the block finishes. See ranked-batch-07.json.
+
 ## Active checkpoint — 24 Oct, 19:23 UTC
 
 Goal remains active, hard end02:38:51UTC25Oct; no manual starts after02:28:51.
