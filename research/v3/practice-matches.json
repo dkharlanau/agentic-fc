@@ -174,6 +174,85 @@
           "max": 725
         }
       }
+    },
+    {
+      "id": "practice-04",
+      "setup": "R1-FWD1-v11-attack-bound-plus-M7-formation112",
+      "opponent": "The Benchmark FC",
+      "side": "home",
+      "goalsFor": 2,
+      "goalsAgainst": 0,
+      "shotsFor": 7,
+      "shotsAgainst": 5,
+      "shotsOnTargetFor": 2,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 36,
+      "commands": 370,
+      "averageLatencyMs": 760,
+      "commandCounts": {
+        "MOVE_TO": 135,
+        "PRESS_BALL": 111,
+        "INTERCEPT": 60,
+        "SHOOT": 30,
+        "PASS": 20,
+        "CLEAR_OVERRIDE": 13,
+        "MARK": 1
+      },
+      "opponentCommands": 46,
+      "opponentAverageLatencyMs": 100,
+      "roleLatencyMs": {
+        "gk": 595,
+        "def": 697,
+        "mid": 776,
+        "fwd1": 573,
+        "fwd2": 775
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Practice archetype held constant, physics seed not fixed.",
+        "Report agent columns remain inconsistent with own issued actions; SET_STANCE absent from both rendered breakdown totals. Primary stats match Unity final.",
+        "One win does not establish that support stance is stronger."
+      ],
+      "mode": "Practice",
+      "preset": "Balanced",
+      "initiation": "Same Benchmark preset,112,fourM7 unchanged; v11native7/Fitness5passed beforestart",
+      "coaching": [],
+      "unityFinalVerified": {
+        "goalsFor": 2,
+        "goalsAgainst": 0,
+        "shotsFor": 7,
+        "shotsAgainst": 5,
+        "shotsOnTargetFor": 2,
+        "shotsOnTargetAgainst": 0,
+        "possessionPercent": 36
+      },
+      "runtimeEvidence": {
+        "sourceCommit": "7a14d1b",
+        "decisions": 75,
+        "commands": {
+          "CLEAR_OVERRIDE": 31,
+          "SET_STANCE": 40,
+          "PASS": 3,
+          "INTERCEPT": 1
+        },
+        "inputRejections": 0,
+        "wireTeamScope": "bound",
+        "modelLatencyMs": {
+          "p50": 406,
+          "p95": 511,
+          "max": 609
+        },
+        "serverPreviousCommandCounts": {
+          "CLEAR_OVERRIDE": 31,
+          "SET_STANCE": 39,
+          "PASS": 3,
+          "INTERCEPT": 1
+        },
+        "applicationObservation": "One server previousINTERCEPT snapshot has ownplayerCoachIntercept while same-IDopponentCoachMoveTo; supports own control for that observation, not all commands."
+      }
     }
   ]
 }

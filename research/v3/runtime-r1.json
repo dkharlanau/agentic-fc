@@ -1,6 +1,6 @@
 {
   "kind": "Independent Runtime FWD1 pilot; public-safe evidence summary",
-  "status": "R1v11 optional attack-support native7passed; fresh Fitnessrunning",
+  "status": "R1v11 registered/native7/Fitness5/Practice04win2:0; isolated GK creation pending",
   "initialSourceCommit": "7ae12c1e737992f83a10ff5c2cf1497cb2580764",
   "initialArchiveSha256": "21ed279d4831546ff58e0ce3c91744e1d47b4cb5fbcff8ae4e970ba1489274e3",
   "reproducibility": "Local macOS cross-build and CloudShell Linux build produced identical archive SHA256,20610262bytes,2731files",
@@ -238,7 +238,7 @@
       "interpretation": "Possible team attribution/routing mismatch; not established"
     }
   },
-  "currentMainTeam": "R1v9 bound FWD1 plus fourM7 Harness,formation112; originalFWD1v16 rollback preserved",
+  "currentMainTeam": "R1v11 bound attack-support FWD1 plus fourM7Harness,formation112; original five-Harness M8 rollback preserved",
   "revision9Candidate": {
     "status": "READY; native5/5 and fresh portalFitness5/5",
     "onlyBehaviorChange": "Optional bound wire mode omits output teamId; internal own-team/player validation remains",
@@ -284,6 +284,38 @@
     ],
     "ownProbeSessionsStopped": true,
     "fitness": "5/5",
-    "practice": "Practice04 versus same Benchmarkpreset active; no coach"
+    "practice": "Practice04 versus same Benchmarkpreset active; no coach",
+    "practice04": {
+      "result": "WIN2:0",
+      "shots": "7:5",
+      "genuineModelChoices": 75,
+      "modelP50Ms": 406,
+      "modelP95Ms": 511,
+      "stanceCommands": 40,
+      "applicationObservation": "OwnCoachIntercept aligns with own previousINTERCEPT once; reports still require attribution caution",
+      "strength": "No superiority established versus v9control3:0/6:4shots; uncontrolled seed"
+    }
+  },
+  "goalkeeperCandidate": {
+    "status": "READY/native11of11 passed; GKslot registered; freshFitnessrunning",
+    "sourceCommit": "7a14d1b",
+    "playerId": 0,
+    "model": "global.amazon.nova-2-lite-v1:0",
+    "nativeGate": "11cases pending",
+    "changes": "No IAM changes; separate Runtime and STM actor",
+    "nativeElapsedMs": [
+      3063,
+      4076,
+      3703,
+      4101,
+      3494,
+      3595,
+      2996,
+      3682,
+      3088,
+      4168,
+      3447
+    ],
+    "ownSessionsStopped": true
   }
 }
