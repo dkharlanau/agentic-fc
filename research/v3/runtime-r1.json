@@ -1,6 +1,6 @@
 {
   "kind": "Independent Runtime FWD1 pilot; public-safe evidence summary",
-  "status": "R1v11 registered/native7/Fitness5/Practice04win2:0; isolated GK creation pending",
+  "status": "Original five-Harness M8 restored/Fitness5; independent Runtime candidates unregistered during preparation",
   "initialSourceCommit": "7ae12c1e737992f83a10ff5c2cf1497cb2580764",
   "initialArchiveSha256": "21ed279d4831546ff58e0ce3c91744e1d47b4cb5fbcff8ae4e970ba1489274e3",
   "reproducibility": "Local macOS cross-build and CloudShell Linux build produced identical archive SHA256,20610262bytes,2731files",
@@ -238,7 +238,7 @@
       "interpretation": "Possible team attribution/routing mismatch; not established"
     }
   },
-  "currentMainTeam": "GK-R2v1 plusFWD1-R1v11 plus threeoriginalM7Harness,formation112; both independent native/Fitness passed; keeper strength unestablished",
+  "currentMainTeam": "OriginalGK13/DEF19/MID15/FWD1v16/FWD2v14 on112; Nova2Lite0..3/Haiku4.5role4",
   "revision9Candidate": {
     "status": "READY; native5/5 and fresh portalFitness5/5",
     "onlyBehaviorChange": "Optional bound wire mode omits output teamId; internal own-team/player validation remains",
@@ -378,11 +378,24 @@
     }
   },
   "revision13Candidate": {
-    "status": "Local only",
+    "status": "READY/native9of9; unregistered; bind deferred for incominglive62",
     "onlyMechanismChange": "Quiet own-half wide target(-2*attackSign,2.8) instead of attacking target; same8..28window/scope/model",
     "hypothesis": "Reduce ball-contact confounding and distinguish raw target from normalized target",
     "archiveSha256": "de7dddef3fa44bfa824849d684c0a1ec3d7dc527bd23d31dcfc356467252e2e0",
     "offlineChecks": 40,
-    "nativeGate": "9cases pending"
+    "nativeGate": "9cases pending",
+    "sourceCommit": "88eb47f",
+    "nativeElapsedMs": [
+      3702,
+      3499,
+      4105,
+      3003,
+      3523,
+      3671,
+      3697,
+      3036,
+      3537
+    ],
+    "ownProbeSessionsStopped": true
   }
 }

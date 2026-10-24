@@ -11,7 +11,7 @@ def summarize(raw):
     for row in raw['rounds']:
         metadata = row.get('metadata', {})
         rows.append({key: row.get(key) for key in
-                     ('case', 'model', 'legalChoice', 'targetAgreement', 'elapsedMs', 'selectedCommand',
+                     ('case', 'sourceCase', 'optionOrder', 'factsSha256', 'model', 'legalChoice', 'targetAgreement', 'elapsedMs', 'selectedCommand',
                       'responseHeadersMs', 'firstTextMs', 'firstJsonPrefixMs')}
                     | {'ownSessionStopped': row.get('stopped', False),
                        'reportedModelLatencyMs': metadata.get('metrics', {}).get('latencyMs'),
@@ -26,9 +26,12 @@ def summarize(raw):
                        'allOwnSessionsStopped': all(r['ownSessionStopped'] for r in selected),
                        'reportedModelMedianLatencyMs': statistics.median(latency) if latency else None})
     return {'kind': 'Mirrored synthetic tactical index-choice rounds; no saved configuration changes',
+            'optionPermutations': raw.get('optionPermutations', 1),
+            'constantIndex0Baseline': raw.get('constantIndex0Baseline'),
             'models': models, 'results': rows,
             'limitations': ['Target agreement reflects the proposed policy, not an independent measure of match strength.',
-                           'Eight small scenarios per model do not establish a general model ranking.',
+                           'Small synthetic scenarios per model do not establish a general model ranking.',
+                           'Original option order allowed a constant index0 to meet every target; use cyclic orders to challenge index bias.',
                            'Wall time includes native Harness/session overhead; reported model latency is separate.',
                            'A first JSON prefix can be followed by more text; it is diagnostic timing, not final output validity.',
                            'These are synthetic choice checks, not football self-play or live outcome evidence.']}

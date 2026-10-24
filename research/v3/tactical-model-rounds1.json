@@ -445,7 +445,8 @@
     "Eight small scenarios per model do not establish a general model ranking.",
     "Wall time includes native Harness/session overhead; reported model latency is separate.",
     "A first JSON prefix can be followed by more text; it is diagnostic timing, not final output validity.",
-    "These are synthetic choice checks, not football self-play or live outcome evidence."
+    "These are synthetic choice checks, not football self-play or live outcome evidence.",
+    "Methodology review: always selecting index0 passes all eight original cases; original target agreement is not discriminating evidence of decision quality. Latency/format observations remain descriptive."
   ],
   "sourceCommit": "f3eb554811df715171e79ef7945fc005518e7d1a",
   "systemPromptSha256": "6bfcacc6c3dcf0fbac01c6cb7dcbd1e28876d9e3d1f633731b2304f8cf3c7e96",
@@ -453,5 +454,9 @@
     "nova": "global.amazon.nova-2-lite-v1:0",
     "haiku": "global.anthropic.claude-haiku-4-5-20251001-v1:0"
   },
-  "decision": "No target-agreement gain forHaiku on these8cases; retainNova for the bounded fast selector. ExistingFWD2 model remains unchanged pending live comparison."
+  "decision": "No target-agreement gain forHaiku on these8cases; retainNova for the bounded fast selector. ExistingFWD2 model remains unchanged pending live comparison.",
+  "constantIndex0Baseline": {
+    "cases": 8,
+    "targetAgreementCount": 8
+  }
 }

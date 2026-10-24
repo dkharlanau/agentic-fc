@@ -134,3 +134,25 @@ Commit/pushv13,Cloudbuild/updateunusedR1receipt12->13 withbound+attack+own-wide,
 native9thenbindonlyFWD1beforeFitness/Practice07; GKoriginalforquietercontrol.
 AfterdiagnosticrestoreM8betweenexperiments. Bewareincominggamescanstartwithout
 consent; checkUIbeforesavedchanges/nativecalls. Currentphaseprivatecheckpoint.
+
+Latest12:35UTC: FullM8(originalfiveHarness,112) restored andfreshFitness5passed.
+R1/GK bothUNREGISTERED. Micro8nativeindexchoices onoriginalFWDHarness alllegal/
+target, allsessionsstopped, reportedmodelmedian312.5ms vsoldNova414.5/Haiku796.
+Publicsafe report tactical-micro-round1.json exported; NOTinstalled in team.
+CRITICAL evalreview: constantindex0 also passes8/8originalscenarios; annotate
+oldreports, do not claimmodelqualityrankingfromthis. New --option-permutations3
+keepssameactions/rotatesindex;20cases/model, constant0baseline12/20. Nova+Micro
+40callplan prepared butNEVERrun duringgame; no saves/IAM.
+R1v13unusedREADY(source88eb47f,quietown-wide,boundscope,Nova2Lite);native9
+running. NextbindonlyFWD1forPractice07afterpass/Fitness; GKoriginalstays.
+Observe early8..28seconddiagnostic promptly viaScreenshots+allrawsame-IDaudit.
+AfterPractice07restoreM8betweenexperiments. Nativebenchnewsource editsneedpush.
+
+Latest12:39UTC: v13READY/native9of9passed/allownstopped;UNREGISTERED. Binding
+deferred because incominglive62AWAYClaudeVanDam began onoriginalfiveM8,112.
+PrivatecheckpointhasgameID; do not mutatebindings/runtime duringthisgame.
+R1/GK remainunregistered. M8currentlyleading0:2fromcommentary(notfinal).
+Afterreport, bindonlyFWD1v13→freshFitness5→Practice07quietunitdiagnostic.
+ThenrestoreM8. New20case/modelcyclicbenchmarkNova+Micro40callsNOTRUN;
+constant0baseline12/20. Microoriginal8casesalllegal312.5medianmodelms but
+constant0baseline8/8; donotclaimdiscriminatingquality. Latestpubliceditsneedpush.

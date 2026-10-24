@@ -6,6 +6,7 @@ match simulations or independent measures of football strength.
 """
 import argparse
 import copy
+import hashlib
 import json
 from pathlib import Path
 import sys
@@ -98,32 +99,51 @@ def target_agreement(facts, index):
     return True
 
 
+def rotate_options(facts, offset):
+    facts = copy.deepcopy(facts)
+    options = facts['options']
+    offset %= len(options)
+    facts['options'] = options[offset:] + options[:offset]
+    for index, option in enumerate(facts['options']):
+        option['index'] = index
+    return facts
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--harness-arn', required=True)
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--models', nargs='+', choices=tuple(MODELS), default=['nova', 'haiku'])
     parser.add_argument('--cases', nargs='+', choices=tuple(c['id'] for c in scenarios()))
+    parser.add_argument('--option-permutations', type=int, choices=(1, 3), default=1,
+                        help='Three cyclic orders challenge constant-index shortcuts; singleton cases run once')
     parser.add_argument('--apply', action='store_true')
     args = parser.parse_args()
     if '.local' not in args.output.resolve().parts:
         parser.error('Keep native responses and bindings private under .local')
+    plans = [(case, offset) for case in scenarios() if not args.cases or case['id'] in args.cases
+             for offset in range(min(args.option_permutations, len(facts_for(case)['options'])))]
     if not args.apply:
-        print(f'Plan:{len(args.cases or scenarios())*len(args.models)}synthetic choice calls via own invocation-only overrides; stop every own session.')
+        print(f'Plan:{len(plans)*len(args.models)}synthetic choice calls via own invocation-only overrides; stop every own session.')
         return
     import boto3
     from botocore.config import Config
     client = boto3.client('bedrock-agentcore', region_name='us-east-1',
                           config=Config(connect_timeout=5, read_timeout=40, retries={'max_attempts': 0}))
-    report = {'kind': 'Synthetic tactical target agreement, not match quality or self-play', 'rounds': []}
+    report = {'kind': 'Synthetic tactical target agreement, not match quality or self-play',
+              'optionPermutations': args.option_permutations,
+              'constantIndex0Baseline': {'cases': len(plans), 'targetAgreementCount': sum(
+                  target_agreement(rotate_options(facts_for(case), offset), 0) for case, offset in plans)},
+              'rounds': []}
     args.output.parent.mkdir(parents=True, exist_ok=True)
     for model in args.models:
-        for case in scenarios():
-            if args.cases and case['id'] not in args.cases:
-                continue
-            facts = facts_for(case)
+        for case, offset in plans:
+            facts = rotate_options(facts_for(case), offset)
             sid = 'nhitl-tactical-round-' + str(uuid.uuid4())
-            row = {'case': case['id'], 'model': model, 'sessionId': sid, 'stopped': False}
+            row = {'case': case['id'] + (':order' + str(offset) if args.option_permutations > 1 else ''),
+                   'sourceCase': case['id'], 'optionOrder': offset,
+                   'factsSha256': hashlib.sha256(json.dumps(facts, sort_keys=True).encode()).hexdigest(),
+                   'model': model, 'sessionId': sid, 'stopped': False}
             report['rounds'].append(row)
             # Persist the in-flight ID before invocation so a failed terminal
             # can recover only this own probe, never guess a game session.
