@@ -51,7 +51,7 @@ def main():
     cases = [(0, fixtures[0], 'SHOOT'), (1, fixtures[1], 'SHOOT'), (0, fixtures[3], 'MOVE_TO')]
     observed = json.loads((ROOT / 'research/v3/fixtures/observed-live-away-open-play.json').read_text())['decodedState']
     cases.append((1, {'id': 'observed-live-open-play', 'modelText': json.dumps({'prompt': json.dumps(observed)})},
-                  'CLEAR_OVERRIDE'))
+                  'SET_STANCE' if env.get('FWD_SUPPORT_STANCE') == 'attack' else 'CLEAR_OVERRIDE'))
     close = copy.deepcopy(observed)
     player = next(p for p in close['gameState']['players'] if p['teamCode'] == 'away' and p['agentId'] == 'agentId_3')
     player.update(position={'x': -4.2, 'y': 0.1}, velocity={'x': -1, 'y': 0}, lastAction='AdvanceToGoalWithBall')

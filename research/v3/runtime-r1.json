@@ -255,10 +255,22 @@
     "live59": "67 accepted model choices,63CLEAR+4PASS,0inputreject; modelp50=413/p95=506/max582ms; opponent column remains similar. No routing fix established."
   },
   "revision10Candidate": {
-    "status": "Local only",
+    "status": "READY/native5of7target gates; no Practice",
     "feature": "Optional FWD attack-support stance when known off-ball and no local intervention offered",
     "audit": "Previous server command and both same-ID player last-actions retained privately; no numeric team inversion",
     "validation": "39offline checks passed",
-    "archiveSha256": "5dd20ac3f795bcac9770cbf666b12444a1da695f4d568f2c47c202e8e61ac7dc"
+    "archiveSha256": "5dd20ac3f795bcac9770cbf666b12444a1da695f4d568f2c47c202e8e61ac7dc",
+    "sourceCommit": "32047c9",
+    "nativeFindings": [
+      "Observed live replay correctly returned newly offered SET_STANCE; test still expected old CLEAR.",
+      "HOMEsupport returned legal CLEAR instead of intended SET_STANCE; AWAY choseSET_STANCE.",
+      "All seven own probe sessions stopped."
+    ]
+  },
+  "revision11Candidate": {
+    "status": "Local only",
+    "change": "Replace conflicting generic routine-clear instruction in optional attack-support selector; update replay expectation for that mode",
+    "archiveSha256": "8554b6aa9189c3bbefe9ed100fd494261a85212777250106b500770e587efb81",
+    "offlineChecks": 39
   }
 }

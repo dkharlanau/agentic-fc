@@ -148,10 +148,17 @@ class DecisionEngine:
         outcome = 'model_choice'
         usage = {}
         model_started = time.monotonic()
+        selector = SELECTOR_PROMPT
+        if self.attack_support and self.player_id == 3:
+            selector = selector.replace(
+                'CLEAR_OVERRIDE lets built-in football AI act; it is useful for routine support and uncertainty during PLAY_ON.',
+                'When ENGINE_ATTACK_SUPPORT is offered, choose its SET_STANCE attack option rather than CLEAR_OVERRIDE. '
+                'It keeps built-in positioning active without guessing movement coordinates. '
+                'Use CLEAR_OVERRIDE for uncertainty or when no useful intervention is offered.')
         try:
             response = self.client.converse(
                 modelId=self.model_id,
-                system=[{'text': ('You control only goalkeeper0. Prefer an offered safe GK_DISTRIBUTE outlet when holding the ball. Never chase a wide ball. If a documented-frame recovery or restart-line option is offered, prefer it; otherwise CLEAR_OVERRIDE keeps built-in goalkeeping. ' if self.player_id == 0 else '') + ('Prefer an offered SET_STANCE attack-support option over CLEAR_OVERRIDE when off the ball. This uses engine positioning without guessing movement coordinates. ' if self.attack_support and self.player_id == 3 else '') + SELECTOR_PROMPT}],
+                system=[{'text': ('You control only goalkeeper0. Prefer an offered safe GK_DISTRIBUTE outlet when holding the ball. Never chase a wide ball. If a documented-frame recovery or restart-line option is offered, prefer it; otherwise CLEAR_OVERRIDE keeps built-in goalkeeping. ' if self.player_id == 0 else '') + selector}],
                 messages=[{'role': 'user', 'content': [{'text': json.dumps(facts, allow_nan=False)}]}],
                 inferenceConfig={'maxTokens': 32, 'temperature': 0.0})
             text = ''.join(p.get('text', '') for p in response['output']['message']['content'])
