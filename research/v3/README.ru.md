@@ -339,3 +339,10 @@ A possible runtime output filter was investigated in [AWS lifecycle-hook documen
 ## Live32 unchanged M8:2:0 Apocalypse
 
 Fifth M8 game won2:0 without coaching/native probes. Shots8:0,on target2:0,possession53%,375commands499ms:MOVE367,CLEAR8,allothercategories0. Role latencies519/514/503/500/517ms,reportedSuccess100%. The report contains onlyMOVE/CLEAR despite two goals and8teamshots; actual applied scoring actions and per-call payload remain unverified. M8 firstfiveoutcomes4wins/1draw. Retain the unchanged working setup for the remaining live series; no new model/prompt changes planned before the deadline without a concrete issue.
+
+
+## Live33 unchanged M8:2:0 Hail Mary; rank9/88points
+
+Sixth M8 game won2:0 with no coaching/native probes. Shots7:2,on target2:0,possession33%,329commands824ms. MOVE166,PRESS128,CLEAR16,INTERCEPT14,MARK3,SHOOT2;RESET0. Role latencies645/968/931/629/909ms,reportedSuccess100%. Earlier M7 beat this opponent1:0 with coaching under different conditions; this repeat does not isolate formation or coaching effects. M8 firstsixoutcomes5wins/1draw.
+
+Fresh cumulative table:rank9,88points,42P29W1D12L,goals60:32(+28). The rendered summary snapshot is stored separately in standings.json; our33 observed reports do not cover every account match. Rank is dynamic.

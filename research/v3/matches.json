@@ -1238,6 +1238,47 @@
       "initiation": "manual auto-matched by normal Find after verified M8 gate",
       "evidenceCapturedAtUTC": "2026-10-24T00:28:10.864430+00:00",
       "coaching": []
+    },
+    {
+      "id": "live-33",
+      "setup": "A0-M8-formation112",
+      "opponent": "Hail Mary",
+      "side": "home",
+      "goalsFor": 2,
+      "goalsAgainst": 0,
+      "shotsFor": 7,
+      "shotsAgainst": 2,
+      "shotsOnTargetFor": 2,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 33,
+      "commands": 329,
+      "averageLatencyMs": 824,
+      "commandCounts": {
+        "MOVE_TO": 166,
+        "PRESS_BALL": 128,
+        "CLEAR_OVERRIDE": 16,
+        "INTERCEPT": 14,
+        "MARK": 3,
+        "SHOOT": 2
+      },
+      "opponentCommands": 13,
+      "opponentAverageLatencyMs": 3,
+      "roleLatencyMs": {
+        "gk": 645,
+        "def": 968,
+        "mid": 931,
+        "fwd1": 629,
+        "fwd2": 909
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy."
+      ],
+      "initiation": "manual auto-matched by normal Find after verified M8 gate",
+      "evidenceCapturedAtUTC": "2026-10-24T00:35:21.787264+00:00",
+      "coaching": []
     }
   ],
   "recordingOrder": "Local evidence-capture order; background matches may be appended retrospectively."
