@@ -133,7 +133,7 @@ def build():
     manifest = {'experiment': 'role-package-r1', 'formation': '1-1-2',
                 'baseline': '../final-setup-20261024.json', 'changed': ['five system prompts'],
                 'baselineBundleSha256': hashlib.sha256(BASE.read_bytes()).hexdigest(),
-                'status': 'prepared; not competitive evidence', 'roles': {}}
+                'status': 'definition only; consult outcome.json before any deployment', 'roles': {}}
     for pid, role in enumerate(ROLES):
         schema = {'type': 'array', 'minItems': 1, 'maxItems': 1, 'items': {
             'type': 'object', 'additionalProperties': False,

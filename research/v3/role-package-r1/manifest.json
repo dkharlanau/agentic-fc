@@ -6,7 +6,7 @@
     "five system prompts"
   ],
   "baselineBundleSha256": "5dedbda8af69b6e4d4424d6f230f21dc74ab2f267ef5ecae26323e88a7eb5f96",
-  "status": "prepared; not competitive evidence",
+  "status": "definition only; consult outcome.json before any deployment",
   "roles": {
     "gk": {
       "playerId": 0,

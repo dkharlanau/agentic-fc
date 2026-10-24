@@ -1,6 +1,26 @@
 # Agentic FC continuation
 
-## Active bounded role-package experiment — 24 Oct, after offline mission
+## Role-package experiment rejected — 24 Oct, 17:29 UTC
+
+The owner-authorized five-role prompt package was prepared and tested with real
+Bedrock calls. All three revisions failed:0/21,3/26,2/26. See
+[result](research/v3/role-package-r1/RESULT.md). **Do not deploy these prompts.**
+No candidate resource/registration/Fitness/ranked match was started. Original
+M8 remains the operational setup; models, history, formation and IAM unchanged.
+The five-game cohort never began because its prerequisite failed. No heartbeat,
+power timer or historical autonomous loop was resumed.
+
+The owner emphasized latency. Context probes found stale passes and roughly
+3x input growth, but no causal diagnosis of live losses. Fast opponent
+ForzaMilan13 (2–3ms) lost0:2, shots0:9; own report818ms/369commands versus
+opponent2ms/13commands. Do not treat fast/success100% counters as useful execution.
+Latest observed table15th/161points/93P53W2D38L/121:84. Four background games
+since the saved89P checkpoint reconcile exactly; none used the candidate.
+The proposed next step is code-checked compact model choices with end-to-end
+timing, not another unchecked expansion of all five prompts. It is not yet
+implemented or tested as a winning setup. No automatic follow-on experiment.
+
+## Superseded start of bounded role-package experiment
 
 The owner explicitly requested all five role improvements together as one
 experiment, then emphasized coordination, understanding constraints and avoiding
@@ -9,7 +29,7 @@ low-quality shots/turnovers. This new instruction authorizes the bounded
 are the bundle; models and formation1-1-2 remain M8. The prior formation121-only
 proposal is deferred. No historical eight-hour loop, heartbeat or power extension.
 
-Prepared locally; live candidate gates are not yet completed. Original M8 remains
+At the start: prepared locally; live candidate gates were not yet completed. Original M8 remains
 registered. Require actual model21/21, isolated resource readback, no active game,
 candidate registration and Fitness5/5 before one stable five-game cohort.
 Failure or inconclusive evidence returns to original M8. Do not report the

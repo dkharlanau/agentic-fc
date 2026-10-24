@@ -1,5 +1,10 @@
 # Coordinated role package R1
 
+**Outcome: rejected before deployment.** Read [RESULT.md](RESULT.md) and
+`outcome.json`. Three real-model revisions failed; latest2/26. The creation
+script was not applied and original M8 remains registered. The protocol below
+records the intended gates, not completed deployment or match steps.
+
 Owner-authorized bundled experiment on 24 October 2026, following “сделай все за
 раз как эксперимент” and the request for coordinated, informed decisions.
 This supersedes the earlier offline-only mission for this bounded package.
@@ -34,9 +39,9 @@ No trained weights or automatic cross-match learning are claimed.
 
 1. Build prompts/portable bundle; run local contract tests. The baseline bundle
    remains byte-for-byte unchanged. Save hashes before model calls.
-2. Evaluate all 21 counterfactual situations with the actual assigned models via
+2. Evaluate all 21 counterfactual situations plus five stale-context cases with the actual assigned models via
    visible CloudShell. Expectations are never in the model request. Require
-   21/21; failures block registration. These calls are not Harness/football tests.
+   26/26; failures block registration. These calls are not Harness/football tests.
 3. Only after passing, clone five isolated Harness with the existing execution
    role. Read back every prompt/config and verify the originals still match M8.
 4. Check no active game; register all five as one intended lineup. Registration
@@ -63,7 +68,7 @@ not mutated; new results belong to this experiment's own journal.
 Local: `python3 research/v3/role-package-r1/build.py`, then
 `python3 -m unittest discover -s research/v3/role-package-r1 -p 'test_*.py'`.
 
-Visible AWS CloudShell only: `python3 research/v3/role-package-r1/evaluate.py --invoke`.
+Visible AWS CloudShell only: `python3 research/v3/role-package-r1/evaluate.py --invoke --with-context`.
 After actual model gates, `deploy.py --apply --source-bindings .local/.../bindings.json`
 creates candidate resources and stores private receipts. No local AWS calls.
 `deploy.py` without `--apply` is an offline plan. No credentials/ARNs in public Git.
