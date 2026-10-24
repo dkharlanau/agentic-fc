@@ -1,5 +1,24 @@
 # Agentic FC continuation
 
+## Active checkpoint — 24 Oct, 19:23 UTC
+
+Goal remains active, hard end02:38:51UTC25Oct; no manual starts after02:28:51.
+Current registered setup is **four original M8 roles + fast FWD2 revision5**,
+source8747a88,formation1-1-2. This supersedes the restored-M8 notes below.
+Fitness5/5, native28/28, Practice4:0. Ranked cohort06 completed3/3: three wins,
+10:0goals,29:4shots,+9points. Fresh table101P57W2D42L,173pts,134:92,rank16.
+AllCash1st,256P581pts. See [result](research/v3/allcash-benchmark/RESULT.md).
+
+Retain provisionally for cohort07, three games unchanged. No new model/prompt
+or formation change. Confirm READY/current binding and fresh start snapshot.
+Audit241rankedresponses:0UNKNOWN_GEOMETRY,CPUmedian0.409–0.552ms,zeroLLMcalls.
+FullAWSnative~103ms; report attribution unresolved,10msgoal unachieved.
+All3HOME/nonleaders; historicalM8also beatForza2:0, so no causal win claim.
+Exact rollback remains originalFWD2v14 in `.local/live-test-20261024/`.
+Private current evidence `.local/allcash-benchmark-20261024/`; CloudShell
+`nhitl-fast-v2` at8747a88, pilot receipt `.local/fast-path-v2/pilot-v5.json`.
+Do not stop ranked sessions or probe/deploy during a game. Preserve tabs7/17/16.
+
 ## Active goal resumed — 24 Oct, 18:44 UTC
 
 Owner renewed autonomous6–8h objective with **three-game blocks**, AllCash United
