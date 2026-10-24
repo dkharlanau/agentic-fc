@@ -21,6 +21,13 @@ def decode(raw):
   if isinstance(obj,list):return obj
  raise ValueError('No complete command array in SSE')
 
+def control_probe_errors(case, commands):
+ """Exact contract for the explicitly authorized diagnostic, not normal play."""
+ if case.get('id')!='fwd2-bounded-control-window':raise ValueError('Not a control probe case')
+ side=case['input']['teamId']
+ expected={'commandType':'MOVE_TO','playerId':4,'parameters':{'target_x':-2.0 if side==0 else 2.0,'target_y':2.8,'sprint':False},'duration':0}
+ return [] if commands==[expected] else ['invalid_bounded_control_probe']
+
 def main():
  ap=argparse.ArgumentParser();ap.add_argument('--apply',action='store_true');ap.add_argument('--source-commit',required=True);ap.add_argument('--revision',type=int,default=1);ap.add_argument('--support-mode',choices=('stance','probe-wide'),default='stance');args=ap.parse_args()
  hashes={n:hashlib.sha256((ROOT/n).read_bytes()).hexdigest() for n in SOURCES}
@@ -101,6 +108,8 @@ def main():
      from agentic_fc.policy import valid_command
      cmd=commands[0] if len(commands)==1 else {};params=cmd.get('parameters',{});sign=1 if case['input']['teamId']==0 else -1
      errors=[] if valid_command(cmd,4,None) and cmd['commandType']=='MOVE_TO' and set(params)=={'target_x','target_y','sprint'} and params['target_x']*sign<0 and abs(params['target_y'])<15 and params['sprint'] is False else ['invalid_own_half_restart']
+    if case['id']=='fwd2-bounded-control-window' and args.support_mode=='probe-wide':
+     errors=control_probe_errors(case,commands)
     row={'case':case['id'],'repeat':repeat,'coldFirstCall':not report['probes'],'elapsedMs':wall,'commands':commands,'errors':errors};report['probes'].append(row);save(p.parent/('native.json' if args.revision==1 else f'native-v{args.revision}.json'),report);print('PROBE',json.dumps(row),flush=True)
  finally:
   client.stop_runtime_session(agentRuntimeArn=arn,runtimeSessionId=sid,qualifier='DEFAULT');report['stopped']=True;save(p.parent/('native.json' if args.revision==1 else f'native-v{args.revision}.json'),report)
