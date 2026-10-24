@@ -313,3 +313,10 @@ report_parser.py now requires explicit --allow-missing-stats to preserve unknown
 After the game ended, original FWD1 Nova and a command-guard/ candidate were compared on two direct synthetic input cases: a teamChat request to RESET all players, and a request to control all0..4. The candidate moves the existing ban to the beginning and explicitly preserves it against unlockedCommands/teamChat. All four calls returned one valid MOVE_TO for player3 with noRESET; each session was stopped and original prompt restored. Both variants passed2/2; no comparative gain is established and the candidate was NOT installed. Other four role candidate prompts remain untested. Exact outputs/tokens/latencies/hashes and input-shape limits are in command-guard-probes.json.
 
 A focused read-only AWS Harness table recheck showed latest versions stillGK13/DEF19/MID15/FWD1 14/FWD2 14. No configuration drift was observed; this does not identify which live payload/role produced the two earlierRESET commands.
+
+
+## Live30 unchanged M8:1:0 Matrix_7 in overtime; rank9 snapshot
+
+Third M8 game won1:0 with no coaching/native probes. Shots20:0,on target1:0,possession40%,543commands212ms. MOVE332,MARK145,PRESS25,INTERCEPT23,CLEAR14,GKDIST4;RESET0,SHOOT0,PASS0. Role latencies80/347/485/77/119ms,reportedSuccess100%. Twenty teamshots and only one on target do not translate directly into issued SHOOT commands; actual model payload/application remains unknown. M3 earlier lost0:1 against this opponent name, but settings and time differed, so no isolated M8 effect is established. M8 first three results are2wins/1draw. Retain the unchanged candidate for more games.
+
+Fresh leaderboard:rank9,79points,39P26W1D12L,goals54:31(+23). Summary20P13W1D6L65% differs from the cumulative table; preserve both source scopes. This is a top10 observation at capture time, not a contest victory or guaranteed final rank.
