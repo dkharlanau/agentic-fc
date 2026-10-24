@@ -1,48 +1,48 @@
 {
   "kind": "Recorded portal counters; not a shot-distance model",
   "source": "research/v3/matches.json",
-  "sourceSha256": "67a757dfd29a00849a981ef251af2eb399bb1ca24129e9f4840ea3e9c21e24aa",
-  "throughReport": "live-49",
+  "sourceSha256": "86c4d221d1d23141d65f0cb1cf3763d71aba5b57481619a001171e75caf4c202",
+  "throughReport": "live-60",
   "coverage": {
-    "recordedReports": 49,
-    "completeShotReports": 48,
+    "recordedReports": 60,
+    "completeShotReports": 59,
     "missingShotReports": [
       "live-29"
     ],
     "scope": "Saved reports only; not the entire account match history"
   },
   "allCompleteReports": {
-    "reports": 48,
-    "shotsFor": 345,
-    "shotsOnTargetFor": 66,
-    "goalsFor": 66,
-    "notMarkedOnTarget": 279,
-    "portalOnTargetSharePercent": 19.13,
-    "shotsAgainst": 193,
+    "reports": 59,
+    "shotsFor": 420,
+    "shotsOnTargetFor": 79,
+    "goalsFor": 79,
+    "notMarkedOnTarget": 341,
+    "portalOnTargetSharePercent": 18.81,
+    "shotsAgainst": 227,
+    "shotsOnTargetAgainst": 43,
+    "goalsAgainst": 43
+  },
+  "attributedSetupReports": {
+    "reports": 46,
+    "shotsFor": 341,
+    "shotsOnTargetFor": 65,
+    "goalsFor": 65,
+    "notMarkedOnTarget": 276,
+    "portalOnTargetSharePercent": 19.062,
+    "shotsAgainst": 168,
     "shotsOnTargetAgainst": 32,
     "goalsAgainst": 32
   },
-  "attributedSetupReports": {
-    "reports": 41,
-    "shotsFor": 297,
-    "shotsOnTargetFor": 57,
-    "goalsFor": 57,
-    "notMarkedOnTarget": 240,
-    "portalOnTargetSharePercent": 19.192,
-    "shotsAgainst": 158,
-    "shotsOnTargetAgainst": 28,
-    "goalsAgainst": 28
-  },
   "backgroundUnattributedReports": {
-    "reports": 7,
-    "shotsFor": 48,
-    "shotsOnTargetFor": 9,
-    "goalsFor": 9,
-    "notMarkedOnTarget": 39,
-    "portalOnTargetSharePercent": 18.75,
-    "shotsAgainst": 35,
-    "shotsOnTargetAgainst": 4,
-    "goalsAgainst": 4
+    "reports": 13,
+    "shotsFor": 79,
+    "shotsOnTargetFor": 14,
+    "goalsFor": 14,
+    "notMarkedOnTarget": 65,
+    "portalOnTargetSharePercent": 17.722,
+    "shotsAgainst": 59,
+    "shotsOnTargetAgainst": 11,
+    "goalsAgainst": 11
   },
   "byRecordedSetup": {
     "A0-M1": {
@@ -133,6 +133,17 @@
       "shotsOnTargetAgainst": 4,
       "goalsAgainst": 4
     },
+    "A0-M8-formation112-original-fwd1-v16": {
+      "reports": 1,
+      "shotsFor": 19,
+      "shotsOnTargetFor": 7,
+      "goalsFor": 7,
+      "notMarkedOnTarget": 12,
+      "portalOnTargetSharePercent": 36.842,
+      "shotsAgainst": 0,
+      "shotsOnTargetAgainst": 0,
+      "goalsAgainst": 0
+    },
     "A0-M9-memory-fwd1": {
       "reports": 2,
       "shotsFor": 9,
@@ -166,6 +177,39 @@
       "shotsOnTargetAgainst": 0,
       "goalsAgainst": 0
     },
+    "R1-FWD1-v5-plus-M7": {
+      "reports": 1,
+      "shotsFor": 3,
+      "shotsOnTargetFor": 0,
+      "goalsFor": 0,
+      "notMarkedOnTarget": 3,
+      "portalOnTargetSharePercent": 0.0,
+      "shotsAgainst": 6,
+      "shotsOnTargetAgainst": 2,
+      "goalsAgainst": 2
+    },
+    "R1-FWD1-v7-plus-M7-formation112": {
+      "reports": 1,
+      "shotsFor": 10,
+      "shotsOnTargetFor": 0,
+      "goalsFor": 0,
+      "notMarkedOnTarget": 10,
+      "portalOnTargetSharePercent": 0.0,
+      "shotsAgainst": 3,
+      "shotsOnTargetAgainst": 1,
+      "goalsAgainst": 1
+    },
+    "R1-FWD1-v9-plus-M7-formation112": {
+      "reports": 2,
+      "shotsFor": 12,
+      "shotsOnTargetFor": 1,
+      "goalsFor": 1,
+      "notMarkedOnTarget": 11,
+      "portalOnTargetSharePercent": 8.333,
+      "shotsAgainst": 1,
+      "shotsOnTargetAgainst": 1,
+      "goalsAgainst": 1
+    },
     "unattributed-M4-M5-transition": {
       "reports": 1,
       "shotsFor": 12,
@@ -178,15 +222,15 @@
       "goalsAgainst": 0
     },
     "unattributed-background": {
-      "reports": 7,
-      "shotsFor": 48,
-      "shotsOnTargetFor": 9,
-      "goalsFor": 9,
-      "notMarkedOnTarget": 39,
-      "portalOnTargetSharePercent": 18.75,
-      "shotsAgainst": 35,
-      "shotsOnTargetAgainst": 4,
-      "goalsAgainst": 4
+      "reports": 13,
+      "shotsFor": 79,
+      "shotsOnTargetFor": 14,
+      "goalsFor": 14,
+      "notMarkedOnTarget": 65,
+      "portalOnTargetSharePercent": 17.722,
+      "shotsAgainst": 59,
+      "shotsOnTargetAgainst": 11,
+      "goalsAgainst": 11
     }
   },
   "counterObservations": {
@@ -218,7 +262,13 @@
       "live-43",
       "live-44",
       "live-47",
-      "live-49"
+      "live-49",
+      "live-52",
+      "live-53",
+      "live-55",
+      "live-57",
+      "live-59",
+      "live-60"
     ]
   },
   "shotDistanceAnalysis": {

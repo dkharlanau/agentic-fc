@@ -104,6 +104,76 @@
           "max": 847
         }
       }
+    },
+    {
+      "id": "practice-03",
+      "setup": "R1-FWD1-v9-bound-plus-M7-formation112",
+      "opponent": "The Benchmark FC",
+      "side": "home",
+      "goalsFor": 3,
+      "goalsAgainst": 0,
+      "shotsFor": 6,
+      "shotsAgainst": 4,
+      "shotsOnTargetFor": 3,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 24,
+      "commands": 405,
+      "averageLatencyMs": 813,
+      "commandCounts": {
+        "MOVE_TO": 141,
+        "PRESS_BALL": 105,
+        "INTERCEPT": 88,
+        "SHOOT": 32,
+        "PASS": 21,
+        "CLEAR_OVERRIDE": 14,
+        "GK_DISTRIBUTE": 3,
+        "FOLLOW_PLAYER": 1
+      },
+      "opponentCommands": 98,
+      "opponentAverageLatencyMs": 107,
+      "roleLatencyMs": {
+        "gk": 583,
+        "def": 981,
+        "mid": 830,
+        "fwd1": 573,
+        "fwd2": 775
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Practice archetype held constant, physics seed not fixed.",
+        "Report agent tables still resemble own R1 under opponent heading; physical recipient not established. Primary stats match separately observed Unity final."
+      ],
+      "mode": "Practice",
+      "preset": "Balanced",
+      "initiation": "Same Benchmark preset, R1v9bound, fourM7Harness and112 observed; no coach",
+      "coaching": [],
+      "unityFinalVerified": {
+        "goalsFor": 3,
+        "goalsAgainst": 0,
+        "shotsFor": 6,
+        "shotsAgainst": 4,
+        "shotsOnTargetFor": 3,
+        "shotsOnTargetAgainst": 0,
+        "possessionPercent": 24
+      },
+      "runtimeEvidence": {
+        "sourceCommit": "5d75b18",
+        "decisions": 80,
+        "commands": {
+          "CLEAR_OVERRIDE": 79,
+          "PASS": 1
+        },
+        "inputRejections": 0,
+        "wireTeamScope": "bound",
+        "modelLatencyMs": {
+          "p50": 415,
+          "p95": 653,
+          "max": 725
+        }
+      }
     }
   ]
 }

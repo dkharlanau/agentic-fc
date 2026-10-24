@@ -59,6 +59,20 @@ def main():
                                      velocity={'x': -1, 'y': 0, 'z': 0}, isFree=False, possessionAgentId='agentId_3')
     cases.append((1, {'id': 'synthetic-world-contact-close-shot',
                       'modelText': json.dumps({'prompt': json.dumps(close)})}, 'SHOOT'))
+    if player_id == 3 and env.get('FWD_SUPPORT_STANCE') == 'attack':
+        for side in (0, 1):
+            support = copy.deepcopy(unwrap(fixtures[2]['modelText']))
+            if side:
+                support['teamId'] = 1
+                support['gameState']['modeTeamId'] = 1
+                for player in support['gameState']['players']:
+                    player['teamCode'] = 'away' if player['teamCode'] == 'home' else 'home'
+                    player['position']['x'] *= -1
+                ball = support['gameState']['ball']
+                ball['position']['x'] *= -1
+                ball['possessionTeamCode'] = 'away'
+            cases.append((side, {'id': 'attack-support-' + str(side),
+                                 'modelText': json.dumps(support)}, 'SET_STANCE'))
     if player_id == 0:
         keeper_cases = json.loads((ROOT / 'research/v3/keeper-g1/fixtures.json').read_text())['cases']
         cases = [(unwrap(c['modelText']).get('teamId'), c, c['expected']['commandType']) for c in keeper_cases]
