@@ -16,7 +16,7 @@ Energy and opponent quality vary; no causal improvement is claimed beforehand.
 
 Local13tests passed, including baseline scenarios, ownership, HOME/AWAY, restart,
 role and occupied-target guards. Native34/Fitness5 required before five REAL games.
-No Practice/Benchmark per owner. AWS/current registration not changed yet.
+No Practice/Benchmark per owner. AWSrevision8READY/native34/34/Fitness5/5; realfive-gamecohort09started.
 Rollback mode=stance withsource8b31760/revision7; save native receipt and new
 source separately. Recovery builder can use this artifact manifest; for recreation
 setPLAYER_ID=4,FWD2_MODE=outlet only when deliberately restoring this experiment.

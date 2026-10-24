@@ -1,0 +1,596 @@
+{
+  "kind": "full native AWS response timings; CloudShell network path, not game server latency",
+  "probes": [
+    {
+      "case": "fwd2-own-ball-far",
+      "repeat": 0,
+      "coldFirstCall": true,
+      "elapsedMs": 3421.844,
+      "commands": [
+        {
+          "commandType": "PASS",
+          "playerId": 4,
+          "parameters": {
+            "target_player_id": 3,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-ambiguous-owner",
+      "repeat": 0,
+      "coldFirstCall": false,
+      "elapsedMs": 97.91,
+      "commands": [
+        {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-close-blocked-pass",
+      "repeat": 0,
+      "coldFirstCall": false,
+      "elapsedMs": 113.182,
+      "commands": [
+        {
+          "commandType": "PASS",
+          "playerId": 4,
+          "parameters": {
+            "target_player_id": 3,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-wrong-player-binding",
+      "repeat": 0,
+      "coldFirstCall": false,
+      "elapsedMs": 105.649,
+      "commands": [
+        {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-own-ball-far-away",
+      "repeat": 0,
+      "coldFirstCall": false,
+      "elapsedMs": 108.756,
+      "commands": [
+        {
+          "commandType": "PASS",
+          "playerId": 4,
+          "parameters": {
+            "target_player_id": 3,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-ambiguous-owner-stale-context",
+      "repeat": 0,
+      "coldFirstCall": false,
+      "elapsedMs": 114.503,
+      "commands": [
+        {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-close-open-shot",
+      "repeat": 0,
+      "coldFirstCall": false,
+      "elapsedMs": 97.185,
+      "commands": [
+        {
+          "commandType": "SHOOT",
+          "playerId": 4,
+          "parameters": {
+            "aim_location": "TR",
+            "power": 0.8
+          },
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-teammate-ball-support",
+      "repeat": 0,
+      "coldFirstCall": false,
+      "elapsedMs": 99.887,
+      "commands": [
+        {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 1
+          },
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-low-energy-cover",
+      "repeat": 0,
+      "coldFirstCall": false,
+      "elapsedMs": 147.518,
+      "commands": [
+        {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 0
+          },
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-kickoff-role",
+      "repeat": 0,
+      "coldFirstCall": false,
+      "elapsedMs": 103.582,
+      "commands": [
+        {
+          "commandType": "MOVE_TO",
+          "playerId": 4,
+          "parameters": {
+            "target_x": -3,
+            "target_y": 8,
+            "sprint": false
+          },
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-kickoff-role-away",
+      "repeat": 0,
+      "coldFirstCall": false,
+      "elapsedMs": 101.754,
+      "commands": [
+        {
+          "commandType": "MOVE_TO",
+          "playerId": 4,
+          "parameters": {
+            "target_x": 3,
+            "target_y": 8,
+            "sprint": false
+          },
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-observed-frame-role-adapted",
+      "repeat": 0,
+      "coldFirstCall": false,
+      "elapsedMs": 98.58,
+      "commands": [
+        {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 1
+          },
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-counterfactual-moving-keepers",
+      "repeat": 0,
+      "coldFirstCall": false,
+      "elapsedMs": 117.689,
+      "commands": [
+        {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 1
+          },
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-counterfactual-ambiguous-after-moving-keepers",
+      "repeat": 0,
+      "coldFirstCall": false,
+      "elapsedMs": 92.428,
+      "commands": [
+        {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-bounded-control-window",
+      "repeat": 0,
+      "coldFirstCall": false,
+      "elapsedMs": 107.15,
+      "commands": [
+        {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 1
+          },
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-control-window-ended",
+      "repeat": 0,
+      "coldFirstCall": false,
+      "elapsedMs": 97.081,
+      "commands": [
+        {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 1
+          },
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-home-outlet",
+      "repeat": 0,
+      "coldFirstCall": false,
+      "elapsedMs": 109.771,
+      "commands": [
+        {
+          "commandType": "MOVE_TO",
+          "playerId": 4,
+          "parameters": {
+            "target_x": -0.213149,
+            "target_y": 1.438375,
+            "sprint": false
+          },
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-own-ball-far",
+      "repeat": 1,
+      "coldFirstCall": false,
+      "elapsedMs": 94.455,
+      "commands": [
+        {
+          "commandType": "PASS",
+          "playerId": 4,
+          "parameters": {
+            "target_player_id": 3,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-ambiguous-owner",
+      "repeat": 1,
+      "coldFirstCall": false,
+      "elapsedMs": 110.84,
+      "commands": [
+        {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-close-blocked-pass",
+      "repeat": 1,
+      "coldFirstCall": false,
+      "elapsedMs": 106.914,
+      "commands": [
+        {
+          "commandType": "PASS",
+          "playerId": 4,
+          "parameters": {
+            "target_player_id": 3,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-wrong-player-binding",
+      "repeat": 1,
+      "coldFirstCall": false,
+      "elapsedMs": 91.531,
+      "commands": [
+        {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-own-ball-far-away",
+      "repeat": 1,
+      "coldFirstCall": false,
+      "elapsedMs": 96.721,
+      "commands": [
+        {
+          "commandType": "PASS",
+          "playerId": 4,
+          "parameters": {
+            "target_player_id": 3,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-ambiguous-owner-stale-context",
+      "repeat": 1,
+      "coldFirstCall": false,
+      "elapsedMs": 101.653,
+      "commands": [
+        {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-close-open-shot",
+      "repeat": 1,
+      "coldFirstCall": false,
+      "elapsedMs": 109.02,
+      "commands": [
+        {
+          "commandType": "SHOOT",
+          "playerId": 4,
+          "parameters": {
+            "aim_location": "TR",
+            "power": 0.8
+          },
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-teammate-ball-support",
+      "repeat": 1,
+      "coldFirstCall": false,
+      "elapsedMs": 113.153,
+      "commands": [
+        {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 1
+          },
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-low-energy-cover",
+      "repeat": 1,
+      "coldFirstCall": false,
+      "elapsedMs": 104.588,
+      "commands": [
+        {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 0
+          },
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-kickoff-role",
+      "repeat": 1,
+      "coldFirstCall": false,
+      "elapsedMs": 104.181,
+      "commands": [
+        {
+          "commandType": "MOVE_TO",
+          "playerId": 4,
+          "parameters": {
+            "target_x": -3,
+            "target_y": 8,
+            "sprint": false
+          },
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-kickoff-role-away",
+      "repeat": 1,
+      "coldFirstCall": false,
+      "elapsedMs": 114.554,
+      "commands": [
+        {
+          "commandType": "MOVE_TO",
+          "playerId": 4,
+          "parameters": {
+            "target_x": 3,
+            "target_y": 8,
+            "sprint": false
+          },
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-observed-frame-role-adapted",
+      "repeat": 1,
+      "coldFirstCall": false,
+      "elapsedMs": 104.216,
+      "commands": [
+        {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 1
+          },
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-counterfactual-moving-keepers",
+      "repeat": 1,
+      "coldFirstCall": false,
+      "elapsedMs": 120.66,
+      "commands": [
+        {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 1
+          },
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-counterfactual-ambiguous-after-moving-keepers",
+      "repeat": 1,
+      "coldFirstCall": false,
+      "elapsedMs": 101.271,
+      "commands": [
+        {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-bounded-control-window",
+      "repeat": 1,
+      "coldFirstCall": false,
+      "elapsedMs": 101.128,
+      "commands": [
+        {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 1
+          },
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-control-window-ended",
+      "repeat": 1,
+      "coldFirstCall": false,
+      "elapsedMs": 93.184,
+      "commands": [
+        {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 1
+          },
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-home-outlet",
+      "repeat": 1,
+      "coldFirstCall": false,
+      "elapsedMs": 113.148,
+      "commands": [
+        {
+          "commandType": "MOVE_TO",
+          "playerId": 4,
+          "parameters": {
+            "target_x": -0.213149,
+            "target_y": 1.438375,
+            "sprint": false
+          },
+          "duration": 0
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "stopped": true,
+  "summary": {
+    "passed": 34,
+    "total": 34,
+    "warmMedianMs": 104.216,
+    "warmMaxMs": 147.518,
+    "warmUnder10ms": 0,
+    "warmCount": 33
+  }
+}

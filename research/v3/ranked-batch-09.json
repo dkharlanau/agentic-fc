@@ -1,0 +1,38 @@
+{
+  "setup": {
+    "name": "M8 four roles + fixed-reference fast FWD2",
+    "sourceCommit": "931af03",
+    "formation": "1-1-2",
+    "gk": "original v13",
+    "def": "original v19",
+    "mid": "original v15",
+    "fwd1": "original v16",
+    "fwd2": "fast_path_v2 revision8; HOME outlet; no per-tick model"
+  },
+  "coachVersion": "coach-v1.0",
+  "id": "ranked-batch-09",
+  "targetCompletedGames": 5,
+  "ownerDirective": "Five real games then review; no Practice/Benchmark",
+  "status": "running",
+  "preparedAt": "2026-10-24T20:46:53.603210+00:00",
+  "beforeLeaderboard": {
+    "rank": 17,
+    "points": 189,
+    "played": 109,
+    "wins": 62,
+    "draws": 3,
+    "losses": 44,
+    "goalsFor": 146,
+    "goalsAgainst": 99,
+    "savedAt": "2026-10-24T20:39:45.843243+00:00"
+  },
+  "games": [],
+  "incomingGames": [],
+  "gates": {
+    "localTests": "13 passed",
+    "native": "34/34; warm median104.216ms, max147.518ms; own diagnostic session stopped",
+    "fitness": "5/5 portal; native fresh session candidate checked; live build verification pending"
+  },
+  "changeFromPreviousCohort": "Only FWD2 off-ball HOME own-possession outlet positioning; rest unchanged",
+  "rollback": "revision7/source8b31760 stance; current source stance retains baseline action policy"
+}

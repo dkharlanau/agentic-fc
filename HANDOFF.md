@@ -1,5 +1,20 @@
 # Agentic FC continuation
 
+## Pending candidate — 24 Oct, 20:45 UTC
+
+Previousgoalturn progress: cohort08completed4W1L/saved9abc3b2.
+Now HOMEFWD2outlet implemented/source931af03,pushed.13localtests pass.
+AWS revision8modeoutlet READY/native34/34/stoppedtrue. Fitness5/5passed.
+Firstrealcohort09matchmakingnowrunning; donotprobe/deploy. CloudShelltab17,input50.
+PortalREADY beforeupdate. Do notduplicate orstartmatchuntilnativecomplete/Fitness.
+OtherfourM8/112 unchanged. AWSrepoHEAD931af03. Currentpilot receiptpilot-v8.json.
+Newmode onlyknownownpossession/HOME/validatedrawframe; boundednonsprinting
+passingoutlet, occupiedtargetsrejected. AWAY/restart/unknown/onball baseline.
+Baselineartifact/recoverymanifest8b31760 retained; candidatemani under
+research/v3/fwd2-outlet/artifact.json. Native/Fitnessverified; exactnewlivebuildnotyetverified.
+Next5realgamescohort09 aftergates; noPractice. Rollback931af03mode stance
+(commandsbaseline), or exactsource8b31760. Quota19%atturnstart, guard<=5%.
+
 ## Active checkpoint — 24 Oct, 20:43 UTC
 
 Cohort08 COMPLETE5/5:4W1L,9:5goals,32:21shots,+12pts. Table109P62W3D44L,
