@@ -455,7 +455,18 @@
       "verification": {
         "inheritedHarnessConfiguration": "verified M6/M7 versions13/19/15/14/14; no Harness edit for this candidate",
         "profileFormationAfterDone": "1-1-2",
-        "profileReloadVerification": "1-1-2 confirmed in reloaded profile"
+        "profileReloadVerification": "1-1-2 confirmed in reloaded profile",
+        "versionTableRecheckAfterResetReport": {
+          "capturedAtUTC": "2026-10-24T00:01:21.784621+00:00",
+          "awsVersionByRole": {
+            "gk": 13,
+            "def": 19,
+            "mid": 15,
+            "fwd1": 14,
+            "fwd2": 14
+          },
+          "result": "All five latest versions unchanged in current Harness table; no config drift observed. Actual live payload still not recovered."
+        }
       },
       "modelByRole": {
         "gk": "global.amazon.nova-2-lite-v1:0",

@@ -1067,6 +1067,46 @@
       "evidenceCapturedAtUTC": "2026-10-23T23:51:54.863746+00:00",
       "overtime": true,
       "coaching": []
+    },
+    {
+      "id": "live-29",
+      "setup": "A0-M8-formation112",
+      "opponent": "Sporting Lambda",
+      "side": "home",
+      "goalsFor": 0,
+      "goalsAgainst": 0,
+      "shotsFor": null,
+      "shotsAgainst": null,
+      "shotsOnTargetFor": null,
+      "shotsOnTargetAgainst": null,
+      "possessionPercent": null,
+      "commands": 6,
+      "averageLatencyMs": 1,
+      "commandCounts": {
+        "CLEAR_OVERRIDE": 6
+      },
+      "opponentCommands": 7,
+      "opponentAverageLatencyMs": 2,
+      "roleLatencyMs": {
+        "gk": 2,
+        "def": 2,
+        "mid": 1,
+        "fwd1": 1,
+        "fwd2": 1
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Primary STATS table absent in the rendered report; shots/on-target/possession are unknown (null), not zero.",
+        "Viewer header remainedLIVE after full-time commentary; reload of the same viewer confirmed Draw0:0.",
+        "No RESET in this six-command report does not establish model-policy compliance or inference."
+      ],
+      "initiation": "manual auto-matched by normal Find after verified M8 gate",
+      "evidenceCapturedAtUTC": "2026-10-24T00:01:21.784621+00:00",
+      "overtime": true,
+      "coaching": []
     }
   ],
   "recordingOrder": "Local evidence-capture order; background matches may be appended retrospectively."

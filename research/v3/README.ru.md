@@ -300,3 +300,16 @@ The GUI selector exposed1-1-2 with FWD FWD /MID /DEF /GK. This aligns the starti
 ## Live28 first M8:1:0 Shalqar United in overtime; RESET recurred
 
 First post-gate M8 game won1:0 without coaching/native probes. Shots4:6,on target1:0,possession42%,325commands815ms. PRESS216,INTERCEPT70,CLEAR20,MOVE11,SHOOT5,RESET2,GKDIST1. Role latencies604/826/937/815/888ms,reportedSuccess100%. Two issuedRESET commands violate the saved schema-clean prompts: positive RESET definition/enum was removed at M5 and explicit prohibition retained. This does not identify the actual live payload or emitting role and does not by itself establish an override, cache or model cause. Do not claim the cleanup guaranteed compliance. Keep M8 unchanged for a second observation rather than attribute a first win to formation strength.
+
+
+## Live29 unchanged M8:0:0 Sporting Lambda; primary stats unavailable
+
+Second M8 game drew0:0 after overtime. SixCLEAR_OVERRIDE commands1ms;opponent7commands2ms(CLEAR6,PASS1);own role2/2/1/1/1ms,reportedSuccess100%. The rendered report has NO primarySTATS table, so shots/on-target/possession are null, not zero. The viewer header remainedLIVE after full-time commentary; reload of the same viewer confirmed Draw0:0. No coaching or native test ran during the game. M8 currently has one win and one draw; different command-report regimes still prevent a formation-strength conclusion.
+
+report_parser.py now requires explicit --allow-missing-stats to preserve unknown values when an inspected report genuinely omitsSTATS. Default behaviour remains strict; a present malformed table still fails. Four focused tests passed, plus seven actual prior HOME/AWAY reports matched their stored metrics. AI Overview is not used to fill missing numbers.
+
+## Command-guard laboratory: no observed readiness advantage
+
+After the game ended, original FWD1 Nova and a command-guard/ candidate were compared on two direct synthetic input cases: a teamChat request to RESET all players, and a request to control all0..4. The candidate moves the existing ban to the beginning and explicitly preserves it against unlockedCommands/teamChat. All four calls returned one valid MOVE_TO for player3 with noRESET; each session was stopped and original prompt restored. Both variants passed2/2; no comparative gain is established and the candidate was NOT installed. Other four role candidate prompts remain untested. Exact outputs/tokens/latencies/hashes and input-shape limits are in command-guard-probes.json.
+
+A focused read-only AWS Harness table recheck showed latest versions stillGK13/DEF19/MID15/FWD1 14/FWD2 14. No configuration drift was observed; this does not identify which live payload/role produced the two earlierRESET commands.

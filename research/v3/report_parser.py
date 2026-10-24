@@ -19,7 +19,7 @@ ACTIONS = {
 }
 
 
-def parse_report(raw, team, opponent, side):
+def parse_report(raw, team, opponent, side, *, allow_missing_stats=False):
     lines = re.findall(r"^\s*(?:[+~]\s*)?\d+ text (.*)$", raw, re.M)
     text = re.sub(r"\s+", " ", " ".join(lines))
     home, away = (team, opponent) if side == "home" else (opponent, team)
@@ -30,12 +30,15 @@ def parse_report(raw, team, opponent, side):
     stats = re.search(r"STATS\s+(\d+)%\s+Possession\s+(\d+)%\s+"
                       r"(\d+)\s+Shots\s+(\d+)\s+(\d+)\s+Shots on target\s+(\d+)", text)
     if not stats:
-        raise ValueError("Primary STATS table missing")
-    values = list(map(int, stats.groups()))
-    if not 99 <= values[0] + values[1] <= 101:
-        raise ValueError("Possession values are inconsistent")
-    if values[4] > values[2] or values[5] > values[3]:
-        raise ValueError("Shots on target exceed shots")
+        if not allow_missing_stats or re.search(r"\bSTATS\b", text):
+            raise ValueError("Primary STATS table missing or malformed")
+        values = [None] * 6
+    else:
+        values = list(map(int, stats.groups()))
+        if not 99 <= values[0] + values[1] <= 101:
+            raise ValueError("Possession values are inconsistent")
+        if values[4] > values[2] or values[5] > values[3]:
+            raise ValueError("Shots on target exceed shots")
     own = 0 if side == "home" else 1
     other = 1 - own
     goals = list(map(int, score.groups()))
@@ -104,14 +107,20 @@ def main():
     parser.add_argument("--id", required=True)
     parser.add_argument("--setup", required=True)
     parser.add_argument("--output", type=Path)
+    parser.add_argument("--allow-missing-stats", action="store_true",
+                        help="Record absent primary STATS values as null after UI verification")
     args = parser.parse_args()
     data = {"id": args.id, "setup": args.setup,
-            **parse_report(args.evidence.read_text(), args.team, args.opponent, args.side)}
+            **parse_report(args.evidence.read_text(), args.team, args.opponent, args.side,
+                           allow_missing_stats=args.allow_missing_stats)}
     data["limitations"] = [
         "Extracted from the rendered report; no inference/fallback mechanism is established.",
         "Reported Success and issued commands do not prove useful application of every action.",
         "Uncontrolled live opponent; one game does not establish a stronger policy.",
     ]
+    if data["shotsFor"] is None:
+        data["limitations"].append(
+            "Primary STATS table absent in the rendered report; shots/on-target/possession are unknown (null), not zero.")
     output = json.dumps(data, indent=2) + "\n"
     if args.output:
         args.output.write_text(output)
