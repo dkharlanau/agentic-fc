@@ -320,3 +320,17 @@ A focused read-only AWS Harness table recheck showed latest versions stillGK13/D
 Third M8 game won1:0 with no coaching/native probes. Shots20:0,on target1:0,possession40%,543commands212ms. MOVE332,MARK145,PRESS25,INTERCEPT23,CLEAR14,GKDIST4;RESET0,SHOOT0,PASS0. Role latencies80/347/485/77/119ms,reportedSuccess100%. Twenty teamshots and only one on target do not translate directly into issued SHOOT commands; actual model payload/application remains unknown. M3 earlier lost0:1 against this opponent name, but settings and time differed, so no isolated M8 effect is established. M8 first three results are2wins/1draw. Retain the unchanged candidate for more games.
 
 Fresh leaderboard:rank9,79points,39P26W1D12L,goals54:31(+23). Summary20P13W1D6L65% differs from the cumulative table; preserve both source scopes. This is a top10 observation at capture time, not a contest victory or guaranteed final rank.
+
+
+## Live31 unchanged M8:2:1 Agentic Arsenal; RESET5
+
+Fourth M8 game won2:1 after trailing0:1. A possible Shout intervention was considered, but no field was visible in the current viewer and no instruction was sent. No native probe or Harness change during the game. Shots13:3,on target2:1,possession44%,332commands858ms. MOVE151,PRESS80,FOLLOW33,SHOOT25,CLEAR12,PASS10,INTERCEPT9,GKDIST6,RESET5,MARK1. Role latencies655/926/1032/677/916ms,reportedSuccess100%. The RESET recurrence remains unexplained; the saved source ban is not a hard execution guarantee. Overtime was not independently captured. M8 first four outcomes are3wins/1draw.
+
+
+## Direct FWD1 model comparison: retain Nova; no M9 deployed
+
+After live31 finished, the same schema-clean/fwd1.txt was tested with Nova and a Playground-only Haiku override on three direct JSON inputs. Nova:HOME SHOOT724ms,AWAY validCLEAR655ms,teammate MOVE611ms. Haiku:HOME SHOOT1364ms,AWAY SHOOT3119ms,teammate MOVE1397ms. Expected action categories are tactical heuristics, not proof of parsing or match quality; both models produced player3 command arrays in all cases.
+
+The initial array-only reading missed a material format violation: the Haiku AWAY reply appended a Reasoning section and seven extra visible text blocks. Therefore Haiku matched3/3 expected categories but only2/3 strict JSON-only contracts; Nova matched2/3 categories and3/3 contracts. The hypothetical FWD1 Haiku upgrade was rejected and no M9 installed. All six test sessions were stopped; saved M8 remained unchanged. The complete-text evaluator also rechecked22routing+4command-guard snapshots: each had one full JSON text block matching its stored array. This was a focused audit, not all historical probes. See fwd1-direct-model-probes.json for hashes/tokens/outputs and input/format limits; extra reasoning is not published.
+
+A possible runtime output filter was investigated in [AWS lifecycle-hook documentation](https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness-lifecycle-hooks.html). Documented hooks operate at invocation/tool boundaries; after_invocation runs after completion and cannot retract streamed output. These hooks therefore do not provide the proposed post-response RESET-text rewrite in the current tool-free setup. This is an applicability conclusion, not a tested hook deployment. No Lambda, permissions, tools or hooks were added.

@@ -1151,6 +1151,54 @@
       "evidenceCapturedAtUTC": "2026-10-24T00:07:57.349278+00:00",
       "overtime": true,
       "coaching": []
+    },
+    {
+      "id": "live-31",
+      "setup": "A0-M8-formation112",
+      "opponent": "Agentic Arsenal",
+      "side": "home",
+      "goalsFor": 2,
+      "goalsAgainst": 1,
+      "shotsFor": 13,
+      "shotsAgainst": 3,
+      "shotsOnTargetFor": 2,
+      "shotsOnTargetAgainst": 1,
+      "possessionPercent": 44,
+      "commands": 332,
+      "averageLatencyMs": 858,
+      "commandCounts": {
+        "MOVE_TO": 151,
+        "PRESS_BALL": 80,
+        "FOLLOW_PLAYER": 33,
+        "SHOOT": 25,
+        "CLEAR_OVERRIDE": 12,
+        "PASS": 10,
+        "INTERCEPT": 9,
+        "GK_DISTRIBUTE": 6,
+        "RESET": 5,
+        "MARK": 1
+      },
+      "opponentCommands": 12,
+      "opponentAverageLatencyMs": 2,
+      "roleLatencyMs": {
+        "gk": 655,
+        "def": 926,
+        "mid": 1032,
+        "fwd1": 677,
+        "fwd2": 916
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Shout field was not visible in this viewer; no coaching instruction was sent.",
+        "Five issued RESET commands recur despite unchanged saved ban/positive-enum cleanup. Actual emitting role/live payload not recovered.",
+        "Overtime status was not independently captured; no overtime boolean is inferred from the goal timeline."
+      ],
+      "initiation": "manual auto-matched by normal Find after verified M8 gate",
+      "evidenceCapturedAtUTC": "2026-10-24T00:15:50.072402+00:00",
+      "coaching": []
     }
   ],
   "recordingOrder": "Local evidence-capture order; background matches may be appended retrospectively."
