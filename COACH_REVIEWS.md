@@ -512,3 +512,16 @@ config readback and fresh Fitness 5/5 отсутствуют. Workshop CloudShel
 Responsible AI Policy, AUP и Event Terms перед восстановлением Workshop.
 Пять рейтинговых матчей P01 допустимы только после всех указанных gates.
 См. `research/v3/ranked-batch-12-analysis.ru.md`.
+
+
+## 2026-10-25 — batch13 review after P01 rejection
+
+Coach-v1.0 reviewed after five unchanged-baseline ranked games: 3W/0D/2L, 7:6, 9 points. See `research/v3/ranked-batch-13-analysis.ru.md`. This series is not an evaluation of P01: paired screening failed its decision/quality/deadline gates, candidate was not installed, and fresh baseline Fitness was 5/5.
+
+**C01 — baseline retained as control, no superiority claim.** Five matches against random opponents do not establish that this setup is stronger. Post-series portal snapshot is rank16/151 played/268 points, but no immediately preceding table snapshot exists; cohort movement is unknown.
+
+**C02 — insufficient evidence, investigate chance quality.** The team had 31 shots and 7 on target across the series; losses had 1/24 on target, wins 6/22. Distances and event-level chance context are unavailable. Keep shot policy unchanged pending evidence; do not claim long shots caused misses.
+
+**C03 — insufficient evidence.** Six goals conceded across two losses do not isolate GK or formation responsibility. No event timeline or save attribution was available.
+
+**Latency — diagnostic priority.** Match-average reports ranged from 64 to 3934 ms at unchanged configuration; three of five exceeded one second. Dinamo Minsk was won at 3934 ms, while BlackEagle was won at 64 ms, so this small set does not demonstrate a direct outcome relationship. Reported 100% success is not timeliness. Next step: read-only per-invocation timestamp correlation from harness entry to applied command, while idle. Do not change models/prompts based on these aggregates. The 43 team-level RESET commands in Agentic Arsenal cannot be attributed to a role.

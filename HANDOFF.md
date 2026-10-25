@@ -1,29 +1,12 @@
 # Agentic FC continuation
 
-## Current checkpoint — 2026-10-25 (after batch 12)
+## Current checkpoint — 2026-10-25 (after ranked batch 13)
 
-Batch12 is complete: 10/10 real ranked matches, 6W/0D/4L, 16:7. Analysis:
-`research/v3/ranked-batch-12-analysis.ru.md`. The ten-match leaderboard delta
-is verified separately; one later incoming Amber Dragons X match (0:2 loss)
-is saved outside the cohort in `research/v3/ranked-batch-12.json` and excluded
-from those ten-game deltas. No active match was visible in the current portal;
-the shown report is complete.
+Batch13: five completed real ranked matches on the unchanged baseline, 3W/0D/2L, 7:6 goals, 9 points. Detailed safe summary: `research/v3/ranked-batch-13.json`; review: `research/v3/ranked-batch-13-analysis.ru.md`. Portal verified READY TO PLAY after the fifth match; no active match. Current team page showed formation 1-1-2 and the completed results. Post-series table snapshot: rank16, 151 played, 268 points. There was no immediately preceding leaderboard snapshot, so the cohort's table delta is unknown.
 
-P01 remains uninstalled and ineligible: the paired screen and exact live config
-readback have not run, and there is no fresh candidate Fitness. AWS Workshop
-CloudShell session expired and local AWS credentials are unavailable. Workshop
-join requires accepting Responsible AI Policy, AUP, and Event Terms; explicit
-owner consent is still pending. Do not accept terms without that consent. Do
-not start the requested five P01 matches until screening, deadline gate, exact
-readback, and fresh Fitness 5/5 all pass. Current Codex usage check: 13% used,
-87% remaining. Keep this research checkpoint separate from the live AWS setup.
-Revalidated after continuation: AWS tab still says session expired; AWS CLI is
-not installed. The local paired plan regenerated successfully (156 requests,
-zero executed); its private request/response artifacts stay under `.local`.
+P01 was screened in the restored Workshop session and FAILED its paired-screen decision/quality/deadline gates. It was never installed. Baseline remained selected; its fresh Fitness passed 5/5 before this five-game series. Do not describe these matches as P01 results. No live settings changed during the series. AWS terms were accepted by the owner. CloudShell held private screening artifacts; no credentials, raw states, ARNs, account/session IDs, or match IDs belong in Git.
 
-The batch12 base setup remains four original M8 Nova2Lite Harnesses plus FWD2
-stance rev9/source931af03, formation1-1-2. Do not use the additional incoming
-match as part of the 10-game cohort or as evidence for P01.
+The five report-average latencies were 64, 3934, 2405, 1036 and 865 ms; they are inconsistent across matches and are not per-invocation measurements. Next useful work: while idle, correlate one invocation's timestamps through response application, using read-only telemetry. Do not switch model/prompt/formation until the cause and a candidate pass their gates. Check Codex quota before any further batch; at <=5% remaining, start no new match, finish in-flight work, checkpoint safe results, and verify the remote.
 
 ## Current checkpoint — 2026-10-25T07:02:19.911385+00:00
 
