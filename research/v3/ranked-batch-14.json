@@ -2,9 +2,13 @@
   "id": "ranked-batch-14",
   "status": "in_progress",
   "targetCompletedGames": 5,
-  "completedGames": 1,
+  "completedGames": 2,
   "setup": "unchanged live baseline, FWD1v16, existing FWD2 fast path, formation 1-1-2",
-  "preflight": {"portalState": "READY TO PLAY", "freshFitness": "5/5 PASS", "p01Installed": false},
+  "preflight": {
+    "portalState": "READY TO PLAY",
+    "freshFitness": "5/5 PASS",
+    "p01Installed": false
+  },
   "games": [
     {
       "opponent": "Divide by Zero",
@@ -15,11 +19,57 @@
       "shotsOnTarget": "1-0",
       "teamAverageLatencyMs": 978,
       "teamCommands": 275,
-      "roleLatencyMs": [767, 1018, 1085, 981, 870],
+      "roleLatencyMs": [
+        767,
+        1018,
+        1085,
+        981,
+        870
+      ],
       "successPct": "100% all roles",
-      "actions": {"MOVE": 178, "PRESS": 52, "MARK": 19, "PASS": 11, "CLEAR": 10, "SHOOT": 3, "INTERCEPT": 2},
+      "actions": {
+        "MOVE": 178,
+        "PRESS": 52,
+        "MARK": 19,
+        "PASS": 11,
+        "CLEAR": 10,
+        "SHOOT": 3,
+        "INTERCEPT": 2
+      },
       "observation": "Match report says MID scored at minute 1; report interpretation only, not event-level causal proof."
+    },
+    {
+      "opponent": "BOYS753",
+      "result": "LOSS",
+      "score": "0-1",
+      "possessionPct": 44,
+      "shots": "5-7",
+      "shotsOnTarget": "0-1",
+      "teamAverageLatencyMs": 240,
+      "teamCommands": 335,
+      "roleLatencyMs": [
+        107,
+        248,
+        232,
+        286,
+        266
+      ],
+      "successPct": "100% all roles",
+      "actions": {
+        "MOVE": 222,
+        "PRESS": 39,
+        "MARK": 21,
+        "INTERCEPT": 18,
+        "CLEAR": 11,
+        "PASS": 11,
+        "SHOOT": 11,
+        "GK_DIST": 2
+      },
+      "observation": "Opponent MID scored at minute 1 according to match report."
     }
   ],
-  "limitations": ["Series is incomplete; no tactical conclusions until five games complete.", "Latencies are rounded report averages, not per-call traces."]
+  "limitations": [
+    "Series is incomplete; no tactical conclusions until five games complete.",
+    "Latencies are rounded report averages, not per-call traces."
+  ]
 }
