@@ -1,7 +1,7 @@
 {
   "id": "ranked-batch-11",
   "coachVersion": "coach-v1.0",
-  "status": "complete-awaiting-analysis",
+  "status": "complete",
   "targetCompletedGames": 10,
   "setup": {
     "sourceCommit": "931af03",
@@ -512,12 +512,13 @@
   "analysisGate": "Open: all ten cohort games complete",
   "setupSnapshot": "research/v3/cohort-setup-20261025.json",
   "operations": {
-    "remainingQuotaPercent": 4,
-    "newMatchesAllowed": true,
+    "remainingQuotaPercentAtCohortStart": 4,
+    "newMatchesAllowed": false,
     "reason": "Owner explicitly authorized ten real matches in batches and deferred analysis until cohort completion",
     "activeMatch": false,
     "automaticShutdown": false,
     "noNewAutomations": true
   },
+  "analysis": "research/v3/ranked-batch-11-analysis.ru.md",
   "completedGames": 10
 }
