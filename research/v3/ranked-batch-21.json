@@ -1,8 +1,8 @@
 {
   "id": "ranked-batch-21",
-  "status": "in-progress-4of5",
+  "status": "completed-5of5",
   "targetCompletedGames": 5,
-  "completedGames": 4,
+  "completedGames": 5,
   "setup": "registered baseline, formation 1-1-2; GK/DEF/MID/FWD4 show global.amazon.nova-2-lite-v1:0; FWD5 remains existing fast path, model not verified",
   "preflight": {
     "portalState": "leaderboard loaded; no active match alert; READY TO PLAY",
@@ -414,6 +414,83 @@
         "Octopus reported 51 commands: CLEAR47 (92%), PASS2, INTERCEPT1, PRESS1; mean17ms and role means4/3/3/3/83ms. All roles 100% success.",
         "Octopus row moved from 107 to 108 played, 61 to 62 losses, and goals122-164 to123-166, consistent with this 2-1 loss."
       ]
+    },
+    {
+      "opponent": "Amber Auroras 2",
+      "opponentLeaderboardBeforeObserved": null,
+      "result": "LOSS",
+      "score": "2-3",
+      "finish": "full time",
+      "homeAway": "HOME",
+      "possessionPct": "32-68",
+      "shots": "8-4",
+      "shotsOnTarget": "2-3",
+      "teamAverageLatencyMs": 1,
+      "teamCommands": 28,
+      "roleLatencyMs": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "successPct": "100% all roles",
+      "actions": {
+        "CLEAR": 28
+      },
+      "goals": [
+        {
+          "minute": "1'",
+          "scorer": "Amber Auroras 2 FWD 4"
+        },
+        {
+          "minute": "1'",
+          "scorer": "Amber Auroras 2 MID 3"
+        },
+        {
+          "minute": "1'",
+          "scorer": "No Human in the Loop MID 3"
+        },
+        {
+          "minute": "2'",
+          "scorer": "Amber Auroras 2 FWD 4"
+        },
+        {
+          "minute": "2'",
+          "scorer": "No Human in the Loop MID 3"
+        }
+      ],
+      "opponentReport": {
+        "teamAverageLatencyMs": 16,
+        "teamCommands": 74,
+        "roleLatencyMs": [
+          3,
+          2,
+          2,
+          2,
+          70
+        ],
+        "successPct": "100% all roles",
+        "actions": {
+          "CLEAR": 55,
+          "PASS": 17,
+          "PRESS": 2
+        },
+        "leaderboardAfterMatch": null,
+        "leaderboardBeforeObserved": null,
+        "comparisonNote": "Amber Auroras 2 was not visible in the top48 leaderboard snapshot. Rank and row movement are unknown."
+      },
+      "reportAiOverview": "The report remained at Generating summary; no AI-generated explanation was used.",
+      "liveCommentaryObservations": [
+        "Commentary stated 'A change of plan from No Human in the Loop’s agents'; no coach prompt was sent by us, and no policy change was verified."
+      ],
+      "observations": [
+        "Lost 2-3. The match final screen and report show 32% possession, 8 shots and 2 on target for us; Amber Auroras 2 had 68%, 4 shots and 3 on target.",
+        "Our report lists only 28 commands, all CLEAR, mean1ms and 1ms for every role, with 100% success. This sharply differs from the preceding four reports; cause unknown.",
+        "Amber Auroras 2 reported 74 commands: CLEAR55 (74%), PASS17 (23%), PRESS2; mean16ms, role means3/2/2/2/70ms, all roles 100% success.",
+        "Despite the report showing only CLEAR actions, the match UI reports 8 shots and 2 on target for us. Do not reconcile these differing metrics without source evidence.",
+        "No leaderboard row for Amber Auroras 2 was observed; ranking and standings movement remain unknown."
+      ]
     }
   ],
   "note": "Play five real ranked matches, one at a time, unchanged baseline. Capture opponent match reports and visible standings, then analyze at 5/5. No benchmarks or practice games.",
@@ -452,5 +529,43 @@
     "draws": 6,
     "losses": 69,
     "goals": "264-155"
+  },
+  "leaderboardAfterGame5": {
+    "rank": 10,
+    "played": 194,
+    "points": 360,
+    "wins": 118,
+    "draws": 6,
+    "losses": 70,
+    "goals": "266-158"
+  },
+  "batchAnalysis": {
+    "record": "2W-0D-3L",
+    "goalAggregate": "9-7",
+    "ownShotsAggregate": "29-22",
+    "ownShotsOnTargetAggregate": "9-7",
+    "meanPossessionPct": 43.8,
+    "ownReportedMeanLatencyMs": [
+      75,
+      77,
+      825,
+      79,
+      1
+    ],
+    "ownLatencySummaryMs": {
+      "median": 77,
+      "mean": 211.4,
+      "note": "Arithmetic report mean distorted upward by 825ms; final 1ms report is an anomaly, not proof of native-fast reliable decisions."
+    },
+    "opponentLatencySummaryMs": {
+      "mean": 16.2,
+      "median": 16
+    },
+    "opponentClearCommands": 251,
+    "opponentTotalCommands": 297,
+    "opponentClearSharePct": 84.5,
+    "ownReportedCommands": 1661,
+    "keyFinding": "In 4/5 reports our role success was 100%, but only game 5 showed 1ms all-role latency, 28 commands consisting only of CLEAR while the game UI reported 8 shots. Source cause unknown. Reported command counts are not a reliable proxy for live match action or quality in this sample.",
+    "causality": "Observational five-match cohort; no causal claims about prompts/model/formation. The baseline was unchanged."
   }
 }

@@ -835,3 +835,16 @@ goals122-164 to123-166, consistent with this match. Our row #10 now 193 played,
 requests a bounded L02 deployment attempt at safe idle; honor current match
 cohort first, then inspect candidate and admission evidence without changing
 setup until cohort closes.
+
+Batch21 closed 5/5 on unchanged baseline: The Drunkards 1-2 L, FC LTX 0-1 L,
+Amber Crests 2 4-0 W, Octopus 2-1 W, Amber Auroras 2 2-3 L (2W/3L, goals
+9:7). Final row #10, 194 played, 360 pts, 118W/6D/70L, goals266:158, +108.
+Across reports our shots were 29:22, on-target 9:7, mean possession43.8%.
+Our reported role success was 100% in all games. Mean team report latencies were
+75/77/825/79/1ms (median77, arithmetic mean211.4); the 825ms and especially
+the final 1ms / 28-command all-CLEAR report make latency/action telemetry
+inconsistent, cause unknown. Final match UI simultaneously reported 8 shots
+and 2 on-target for us. Opponent commands totaled 297 with CLEAR251 (84.5%),
+mean latency16.2ms; opponents were Clear-heavy across the cohort. These are
+observations only, not evidence of a causal strategy effect. Full game and
+opponent details: `research/v3/ranked-batch-21.json`.
