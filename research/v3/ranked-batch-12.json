@@ -3,7 +3,7 @@
   "coachVersion": "coach-v1.0",
   "status": "running",
   "targetCompletedGames": 10,
-  "completedGames": 3,
+  "completedGames": 4,
   "createdAtUTC": "2026-10-25T07:02:19.911385+00:00",
   "setup": {
     "sourceCommit": "931af03",
@@ -249,7 +249,73 @@
       },
       "dataQualityNotes": [
         "Final viewer header and match report show 1:0 WIN; generated commentary says ends 1:1. Commentary is not used as score evidence."
-      ]
+      ],
+      "scoreVerifiedInMatchHistory": true
+    },
+    {
+      "alias": "batch12-live-04",
+      "opponent": "ERTT",
+      "side": "HOME",
+      "status": "complete",
+      "initiation": "manual random matchmaking",
+      "liveObservedAtUTC": "2026-10-25T07:20:54.022Z",
+      "matchReport": "https://agentic-football.aws.dev/matches/1aec125e-7d2e-4037-9dbc-6b4f2b7d61d8/report",
+      "scoreFor": 2,
+      "scoreAgainst": 3,
+      "result": "LOSS",
+      "completedAtObserved": "2026-10-25T07:26:38.735562+00:00",
+      "rawReportFacts": {
+        "possessionPct": 49,
+        "shotsFor": 5,
+        "shotsAgainst": 5,
+        "shotsOnTargetFor": 2,
+        "shotsOnTargetAgainst": 3,
+        "teamAverageLatencyMs": 1048,
+        "teamCommands": 284,
+        "opponentAverageLatencyMs": 17,
+        "opponentCommands": 73,
+        "agentLatencyMs": [
+          1283,
+          987,
+          921,
+          1050,
+          1123
+        ],
+        "opponentAgentLatencyMs": [
+          3,
+          3,
+          3,
+          2,
+          78
+        ],
+        "teamCommandCounts": {
+          "PRESS_BALL": 148,
+          "MARK": 52,
+          "INTERCEPT": 51,
+          "CLEAR_OVERRIDE": 28,
+          "MOVE_TO": 4,
+          "GK_DISTRIBUTE": 1
+        },
+        "opponentCommandCounts": {
+          "CLEAR_OVERRIDE": 68,
+          "PRESS_BALL": 3,
+          "PASS": 2
+        },
+        "agentSuccessPct": [
+          100,
+          100,
+          100,
+          100,
+          100
+        ],
+        "opponentAgentSuccessPct": [
+          100,
+          100,
+          100,
+          100,
+          100
+        ]
+      }
     }
   ],
   "ownerDirective": "Ten real games per cohort; analyze only after all ten complete",
@@ -259,7 +325,7 @@
     "activeMatch": false,
     "automaticShutdown": false,
     "quotaGuardPercent": 5,
-    "remainingQuotaPercentLastCheck": 94
+    "remainingQuotaPercentLastCheck": 93
   },
   "ownerScope": "This branch plays real matches, collects data and observations, pushes GitHub checkpoints, and changes lineup/setup only on explicit request."
 }
