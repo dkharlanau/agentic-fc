@@ -1,5 +1,28 @@
 # Agentic FC continuation
 
+## Research-only checkpoint — 2026-10-25 07:22 UTC
+
+Branch `codex/model-prompt-lab-20261025`, worktree `agentic-fc-research`.
+Owner scope: develop a stronger candidate offline; live play runs separately
+and the owner transfers proposals. No AWS changes, model calls, matches or
+live-worktree edits. Historical game windows below do not authorize new games.
+
+Completed: series11 reports3/7/9 versus seven controls; exact invocation traces
+unavailable, root cause unresolved. Replayed155 archived responses with per-role
+p50/p95, validity, decision agreement and missing coverage;100synthetic fixtures.
+See [research lab](research/v3/model-prompt-lab/README.ru.md).11lab tests plus
+13existing FastEngine tests pass; identical regeneration from another cwd verified.
+
+Next candidate P01: ONLY one FWD1 prompt line resolving distance-only versus
+close/clear shot priority; Nova2Lite, other roles and112 unchanged. Exact patch
+and rollback in lab/candidate. Mandatory explicit-ownership draft rejected:
+two saved physical inputs lack possessionTeamCode and hasBall. Micro remains
+queued, not proven. New inference=0; native/Fitness=not run; promotion=false.
+Paired plan:24synthetic+2observed inputs,2prompts,3repeats=156requests; not executed.
+Requires allowed idle-window inference, native/readback and fresh Fitness5/5
+BEFORE any ranked pilot. D01 FWD2 timing is a separate optional diagnostic,
+never bundle with P01. No automatic transmission, merge or deployment.
+
 ## FINAL QUOTA CHECKPOINT — 2026-10-24T21:44:47.767478+00:00
 
 Owner quota guard reached:5% remaining. DO NOT start matches or experiments.

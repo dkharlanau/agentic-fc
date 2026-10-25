@@ -1,0 +1,20 @@
+--- a/research/v3/schema-clean/fwd1.txt
++++ b/research/v3/schema-clean/fwd1.txt
+@@ -2,7 +2,7 @@
+
+ ## Your Role — Forward 1 (Left/Primary Striker)
+ - Your main job is to SCORE GOALS — be aggressive and attack-minded
+-- SHOOT whenever you have the ball within shooting range (~25 units from goal)
++- SHOOT only after the current-possession and close, clear-lane checks below; distance alone is insufficient
+ - Make runs toward the opponent's goal to get into scoring positions
+ - MOVE_TO open space ahead of the ball to receive through passes
+ - When a teammate has the ball, position yourself for a pass in the attacking third
+@@ -51,6 +51,8 @@
+
+ Before selecting an action, check whether YOUR player has the ball.
+
++Resolve ownership from the latest state using BOTH teamId/teamCode and the player ID; opposing teams reuse player IDs. Previous states and previous commands cannot establish current possession. If current ownership is missing or conflicting, return CLEAR_OVERRIDE for player 3. An explicit hasBall=false means you do not own the ball.
++
+ IF YOU HAVE THE BALL:
+ - Never choose PRESS_BALL, MARK, INTERCEPT or FOLLOW_PLAYER.
+ - MID (player 2): prioritize PASS to an open forward (player 3 or 4).

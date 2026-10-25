@@ -1,0 +1,80 @@
+--- a/fast_path_v2/main.py
++++ b/fast_path_v2/main.py
+@@ -1,20 +1,71 @@
+-"""Low-latency experimental role executor. No foundation-model call in request path."""
++"""Proposed opt-in FWD2 timing only. Not deployed; Fitness required."""
+ import json
+ import os
++import time
++import uuid
+ from bedrock_agentcore.runtime import BedrockAgentCoreApp
+-from fast_path_v2.engine import FastEngine
++from fast_path_v2.engine import FastEngine, unwrap
+ app=BedrockAgentCoreApp()
+ engine=FastEngine(int(os.environ.get('PLAYER_ID','4')),os.environ.get('FWD2_MODE','stance'))
++TRACE_TIMING = os.environ.get('TRACE_TIMING', '0') == '1'
+
+-def stream(commands):
+-    yield json.dumps(commands,separators=(',',':'),allow_nan=False)
++
++def safe_log(prefix, value):
++    # Diagnostics must not turn a valid decision into a failed request.
++    try:
++        app.logger.info(prefix + json.dumps(value,separators=(',',':'),allow_nan=False))
++    except Exception:
++        pass
++
++
++def stream(commands, trace=None):
++    # Same serialization and generator response contract as the saved baseline.
++    text = json.dumps(commands,separators=(',',':'),allow_nan=False)
++    if trace is None:
++        yield text
++        return
++    serialized = time.perf_counter_ns()
++    before_yield_unix = time.time_ns()
++    before_yield = time.perf_counter_ns()
++    yield text
++    # The consumer may never resume the generator. This event is best effort.
++    # Yield/resume are local handoff boundaries, NOT network receipt or apply.
++    resumed = time.perf_counter_ns()
++    safe_log('NHITL_TIMING ', {
++        'schemaVersion': 1, 'traceId': trace['traceId'], 'stage': 'yield_resumed',
++        'serializedAfterEntryMs': (serialized-trace['entryMonoNs'])/1e6,
++        'beforeYieldUnixNs': before_yield_unix,
++        'beforeYieldAfterEntryMs': (before_yield-trace['entryMonoNs'])/1e6,
++        'yieldResumeWaitMs': (resumed-before_yield)/1e6,
++        'wireBytes': len(text.encode('utf-8')),
++        'networkReceivedUnixNs': None, 'serverAppliedUnixNs': None})
++
+
+ @app.entrypoint
+ async def invoke(payload,context):
++    entry_mono = time.perf_counter_ns() if TRACE_TIMING else None
++    entry_unix = time.time_ns() if TRACE_TIMING else None
+     commands,audit=engine.choose(payload,getattr(context,'session_id',None) or 'default')
++    chosen = time.perf_counter_ns() if TRACE_TIMING else None
+     audit['buildCommit']=os.environ.get('BUILD_COMMIT','local')
+     audit['command']=commands[0]
+-    app.logger.info('NHITL_FAST '+json.dumps(audit,separators=(',',':')))
+-    return stream(commands)
++    if not TRACE_TIMING:
++        app.logger.info('NHITL_FAST '+json.dumps(audit,separators=(',',':')))
++        return stream(commands)
++    root = unwrap(payload)
++    gs = root.get('gameState')
++    tick = gs.get('tick') if isinstance(gs,dict) else None
++    side = root.get('teamId')
++    trace = {'traceId': uuid.uuid4().hex, 'entryMonoNs': entry_mono}
++    audit['timing'] = {
++        'schemaVersion': 1, 'traceId': trace['traceId'], 'stage': 'decision_ready',
++        'entryUnixNs': entry_unix, 'chooseWallMs': (chosen-entry_mono)/1e6,
++        'inputTick': tick if type(tick) is int else None,
++        'inputSide': side if type(side) is int and side in (0,1) else None,
++        'configuredPlayerId': engine.pid,
++        'modelMs': None, 'toolMs': None, 'gameTickUnixNs': None}
++    safe_log('NHITL_FAST ', audit)
++    return stream(commands,trace)
++
+
+ if __name__=='__main__':app.run()

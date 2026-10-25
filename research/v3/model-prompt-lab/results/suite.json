@@ -1,0 +1,1290 @@
+[
+  {
+    "id": "gk-own-ball-far-home",
+    "role": "gk",
+    "inputSha256": "905976599a9bc764ce0d63d52f767b5a4913cd67a6edd0fc02a981102664299e",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "GK_DISTRIBUTE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "gk-own-ball-far-away",
+    "role": "gk",
+    "inputSha256": "6858c1ea09324f5b628e9eef4e1df2ed02bc93977683537c5e70f48964f3e7f8",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "GK_DISTRIBUTE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "gk-ambiguous-owner-home",
+    "role": "gk",
+    "inputSha256": "eacd1315246060205d051249a37946cc2cbd65bfb2a50b7b263637dcc68d8c57",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "CLEAR_OVERRIDE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "gk-ambiguous-owner-away",
+    "role": "gk",
+    "inputSha256": "a6949166dfb66a2f576532552797a0c4e0c3a1e7740bc37de660550b4d854e32",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "CLEAR_OVERRIDE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "gk-reject-marked-defender-home",
+    "role": "gk",
+    "inputSha256": "bb282cd62e9ad74f4ac0cfd3409c1e48d2c394bafba1f2d88d12331b22a71e43",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "GK_DISTRIBUTE"
+      ],
+      "forbiddenReceiver": 1
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "gk-reject-marked-defender-away",
+    "role": "gk",
+    "inputSha256": "97ae3d7f9acfe5cc8f8a574b93e52bae2708d59dd003879cae7771b9dde83e2f",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "GK_DISTRIBUTE"
+      ],
+      "forbiddenReceiver": 1
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "gk-ambiguous-owner-stale-context-home",
+    "role": "gk",
+    "inputSha256": "eacd1315246060205d051249a37946cc2cbd65bfb2a50b7b263637dcc68d8c57",
+    "historySha256": "700d516cd486d51b1103b114f15dd809c9717b82ebe9dd7313bcd65dc92954e7",
+    "expected": {
+      "types": [
+        "CLEAR_OVERRIDE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "gk-ambiguous-owner-stale-context-away",
+    "role": "gk",
+    "inputSha256": "a6949166dfb66a2f576532552797a0c4e0c3a1e7740bc37de660550b4d854e32",
+    "historySha256": "852e11a1cef483ab27214ba8fa6a93234e59a531a76e5489b30149ec2496f88e",
+    "expected": {
+      "types": [
+        "CLEAR_OVERRIDE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "gk-central-runner-home",
+    "role": "gk",
+    "inputSha256": "c2daaaf4406c6e5a6ed7f0d0d261bddff8621589f22529c70de996a0506b59a1",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "forbiddenTypes": [
+        "PASS",
+        "SHOOT",
+        "GK_DISTRIBUTE",
+        "PRESS_BALL",
+        "MARK"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "gk-central-runner-away",
+    "role": "gk",
+    "inputSha256": "77bd6595bc08b416227530694a8a64a8a628e7f197ffa64ab593f1c43d12b651",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "forbiddenTypes": [
+        "PASS",
+        "SHOOT",
+        "GK_DISTRIBUTE",
+        "PRESS_BALL",
+        "MARK"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "gk-wide-corner-run-home",
+    "role": "gk",
+    "inputSha256": "a6a1a50bb0a49e6ce04e58616d01eb36acb13fcad02d50a441a1b1448ad45a2f",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "forbiddenTypes": [
+        "PASS",
+        "SHOOT",
+        "GK_DISTRIBUTE",
+        "PRESS_BALL",
+        "MARK"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "gk-wide-corner-run-away",
+    "role": "gk",
+    "inputSha256": "a1c60ce5589fede15d9a008d607c9b989c9ded3d3caca6174d38e79efc45a89f",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "forbiddenTypes": [
+        "PASS",
+        "SHOOT",
+        "GK_DISTRIBUTE",
+        "PRESS_BALL",
+        "MARK"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "gk-low-energy-opponent-home",
+    "role": "gk",
+    "inputSha256": "17d2f4b7b5891c4e956a8bd10b81b7ce3cc1d8a4e7db71fbebddbedf0d6d585d",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "forbiddenTypes": [
+        "PASS",
+        "SHOOT",
+        "GK_DISTRIBUTE",
+        "PRESS_BALL",
+        "MARK",
+        "PRESS_BALL"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "gk-low-energy-opponent-away",
+    "role": "gk",
+    "inputSha256": "19896f71889519dd61a37eb5c230e0e3b59b105b284103efaddf150ddd566dbe",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "forbiddenTypes": [
+        "PASS",
+        "SHOOT",
+        "GK_DISTRIBUTE",
+        "PRESS_BALL",
+        "MARK",
+        "PRESS_BALL"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "gk-malformed-players-home",
+    "role": "gk",
+    "inputSha256": "1884790f5fe61a9179267d5a5b55e887614bbe5a772105986e528525037a7e2c",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "CLEAR_OVERRIDE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "gk-malformed-players-away",
+    "role": "gk",
+    "inputSha256": "1e9f51ff48ed1cc709cf9a099d200f103b13a18b66396d095eaf1883b481de6a",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "CLEAR_OVERRIDE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "gk-wrong-player-binding-home",
+    "role": "gk",
+    "inputSha256": "5d5024e35b5a140736c6d021f110da3e6c30662059d45a13cc079442c59c14ca",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "CLEAR_OVERRIDE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "gk-wrong-player-binding-away",
+    "role": "gk",
+    "inputSha256": "d97ebff77e1154762b74ab9f4d82781d7e1cb58089fb0f78744da86236f82024",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "CLEAR_OVERRIDE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "def-own-ball-far-home",
+    "role": "def",
+    "inputSha256": "f66e75629e33f91dbfea68af2badd2a4113cd5302c32fae7b3aaef7bec41c098",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "PASS"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "def-own-ball-far-away",
+    "role": "def",
+    "inputSha256": "a6aaf7b62b3977e521d24ee5b4e436887aaddfc4389bc0b06db6f5ab7212f470",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "PASS"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "def-ambiguous-owner-home",
+    "role": "def",
+    "inputSha256": "bf78e08b91abc7965c92815ab0288e9405183f6812ecb509fd4d7fe88d179db3",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "CLEAR_OVERRIDE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "def-ambiguous-owner-away",
+    "role": "def",
+    "inputSha256": "78821e7f663b2df906e0f7fcfadbda1c1f6fe5cffaa4deb6e39700009c22fac1",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "CLEAR_OVERRIDE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "def-ambiguous-owner-stale-context-home",
+    "role": "def",
+    "inputSha256": "bf78e08b91abc7965c92815ab0288e9405183f6812ecb509fd4d7fe88d179db3",
+    "historySha256": "477bc1248ab6f87b28d9b183744c23712cd01658f713d2eac975a28d1390ecf5",
+    "expected": {
+      "types": [
+        "CLEAR_OVERRIDE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "def-ambiguous-owner-stale-context-away",
+    "role": "def",
+    "inputSha256": "78821e7f663b2df906e0f7fcfadbda1c1f6fe5cffaa4deb6e39700009c22fac1",
+    "historySha256": "ef50cafaf942a9329b9447e191f31dd52016402849a3caa502ba318b227620da",
+    "expected": {
+      "types": [
+        "CLEAR_OVERRIDE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "def-central-runner-home",
+    "role": "def",
+    "inputSha256": "231ef47e67346071d86778f86a98d450210f15102f50eb5bea6af61a274f7a89",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "forbiddenTypes": [
+        "PASS",
+        "SHOOT",
+        "GK_DISTRIBUTE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "def-central-runner-away",
+    "role": "def",
+    "inputSha256": "dddc5621d152aacc8bac56b924c2f8686f70926b5ceeae0ed84d2d6fd5de4ef7",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "forbiddenTypes": [
+        "PASS",
+        "SHOOT",
+        "GK_DISTRIBUTE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "def-wide-corner-run-home",
+    "role": "def",
+    "inputSha256": "d1ec730084aeb7bc0b7b36eee8fc40ad67e3637c2474c8930baa8d52a3cf2f3f",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "forbiddenTypes": [
+        "PASS",
+        "SHOOT",
+        "GK_DISTRIBUTE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "def-wide-corner-run-away",
+    "role": "def",
+    "inputSha256": "f4bee397563d8bc4b3ee09679eba1b851a0b707ccc1bb08fb2c90d9e3b2bdeca",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "forbiddenTypes": [
+        "PASS",
+        "SHOOT",
+        "GK_DISTRIBUTE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "def-low-energy-opponent-home",
+    "role": "def",
+    "inputSha256": "d54bbee78362de937d48aebd08f491cf7c63dd78814639ba51ff639e12358b7e",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "forbiddenTypes": [
+        "PASS",
+        "SHOOT",
+        "GK_DISTRIBUTE",
+        "PRESS_BALL"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "def-low-energy-opponent-away",
+    "role": "def",
+    "inputSha256": "341b5cffab6f2ff2b351091eca6027ae768890a8ff1142a04d15b5471f11ee4e",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "forbiddenTypes": [
+        "PASS",
+        "SHOOT",
+        "GK_DISTRIBUTE",
+        "PRESS_BALL"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "def-malformed-players-home",
+    "role": "def",
+    "inputSha256": "a735dfb5456c7b1375343bacfab74c3df25a8ccf3b16dea454b1b6bc98e2321c",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "CLEAR_OVERRIDE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "def-malformed-players-away",
+    "role": "def",
+    "inputSha256": "e130feedd53ceb128aa96a0ec3f33e78065f5faeea575f6b7dfb23ec0e89c696",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "CLEAR_OVERRIDE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "def-wrong-player-binding-home",
+    "role": "def",
+    "inputSha256": "72f70b59443c8bad0fb227b491bb7f6c576c71b46dd799b4733d3aa3558abe3a",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "CLEAR_OVERRIDE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "def-wrong-player-binding-away",
+    "role": "def",
+    "inputSha256": "1dab86090c8ed1c7953f92b5e84913143b7911e89ba134e5daac85af992c6de7",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "CLEAR_OVERRIDE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "mid-own-ball-far-home",
+    "role": "mid",
+    "inputSha256": "a5e59da88981c19695fe83c46a74c566e7c880d14ff3242f30c8636a2e836f46",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "PASS"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "mid-own-ball-far-away",
+    "role": "mid",
+    "inputSha256": "1569832bfcd5d25ea55a4bede41bd789f186e297e6a4434d80f0d25ddb6342e0",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "PASS"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "mid-ambiguous-owner-home",
+    "role": "mid",
+    "inputSha256": "33bddc85cd63e40ace3bc3960c79e2cb2132448554e8b493e4c838fc95d27afe",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "CLEAR_OVERRIDE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "mid-ambiguous-owner-away",
+    "role": "mid",
+    "inputSha256": "1bba7784427f03188abf7f5c744a245cb533a3e05e10db90d46433b7aa7860b3",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "CLEAR_OVERRIDE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "mid-malformed-players-home",
+    "role": "mid",
+    "inputSha256": "a6c8be96008ed240c1c4f021a5a8e13087312b501b935e940c55ed131491a69c",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "CLEAR_OVERRIDE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "mid-malformed-players-away",
+    "role": "mid",
+    "inputSha256": "73476124999f2a252c745d48d95fa02b21677cded3bab53e514dd03350631d93",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "CLEAR_OVERRIDE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "mid-ambiguous-owner-stale-context-home",
+    "role": "mid",
+    "inputSha256": "33bddc85cd63e40ace3bc3960c79e2cb2132448554e8b493e4c838fc95d27afe",
+    "historySha256": "4e12cd173bcb06809a3bf60eaca15b41f6a6e60517d569e9fa47bec338cc5ccc",
+    "expected": {
+      "types": [
+        "CLEAR_OVERRIDE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "mid-ambiguous-owner-stale-context-away",
+    "role": "mid",
+    "inputSha256": "1bba7784427f03188abf7f5c744a245cb533a3e05e10db90d46433b7aa7860b3",
+    "historySha256": "a6dfe915dc248a53e37d0976d77cfda09540bf151d1ae77982dd14fd70f5b5a2",
+    "expected": {
+      "types": [
+        "CLEAR_OVERRIDE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "mid-central-runner-home",
+    "role": "mid",
+    "inputSha256": "2364df2a0394d017be7b84575ad501c1aba1d3a62192677b3901f7087a0a72a1",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "forbiddenTypes": [
+        "PASS",
+        "SHOOT",
+        "GK_DISTRIBUTE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "mid-central-runner-away",
+    "role": "mid",
+    "inputSha256": "21d72db75b133f10351c8885ccbc7dde2326275c30207beae84ba99d72548bbf",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "forbiddenTypes": [
+        "PASS",
+        "SHOOT",
+        "GK_DISTRIBUTE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "mid-wide-corner-run-home",
+    "role": "mid",
+    "inputSha256": "f85f4f6338c53e42a461efa818378f3e09a5eccaf1cf160b71fa228099b6342f",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "forbiddenTypes": [
+        "PASS",
+        "SHOOT",
+        "GK_DISTRIBUTE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "mid-wide-corner-run-away",
+    "role": "mid",
+    "inputSha256": "5f594306f056325afc11f35cb4a1e7be351fe9cd3f2725c686195648feb5d09a",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "forbiddenTypes": [
+        "PASS",
+        "SHOOT",
+        "GK_DISTRIBUTE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "mid-low-energy-opponent-home",
+    "role": "mid",
+    "inputSha256": "643f9d19f82da4789cbebaa3a356139c5a17cc91ba84a9cd32d8f5821686dcb7",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "forbiddenTypes": [
+        "PASS",
+        "SHOOT",
+        "GK_DISTRIBUTE",
+        "PRESS_BALL"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "mid-low-energy-opponent-away",
+    "role": "mid",
+    "inputSha256": "14e9b6bdaff868c97fd69db86c17b4b5ddae00a33b9926af06902410d52ad7f5",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "forbiddenTypes": [
+        "PASS",
+        "SHOOT",
+        "GK_DISTRIBUTE",
+        "PRESS_BALL"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "mid-wrong-player-binding-home",
+    "role": "mid",
+    "inputSha256": "dfca3996c50dc77e597cb0822991b4bc5cec2b7b3ca5e2be81716242a00155ec",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "CLEAR_OVERRIDE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "mid-wrong-player-binding-away",
+    "role": "mid",
+    "inputSha256": "45c2483613cc336000aaf7bb209c52e6cca7a70f494b25573dca585b4f4999e3",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "CLEAR_OVERRIDE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "mid-positive-clear-shot-home",
+    "role": "mid",
+    "inputSha256": "48fcc8cb08e21b194441ca1f8cc28c643012d1baf0056b88ae0ead07a96dbf7f",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "SHOOT"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "mid-positive-clear-shot-away",
+    "role": "mid",
+    "inputSha256": "38f31905d0f5fa7ae11255c9106d3e82b49ff05de61aaf6bd3c72695fc798123",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "SHOOT"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "mid-blocked-shot-home",
+    "role": "mid",
+    "inputSha256": "537a7819f727e7d2859b4cc0098d067a11568d57349e251769ddef9a9ba3b4a8",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "PASS"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "mid-blocked-shot-away",
+    "role": "mid",
+    "inputSha256": "0756215e131b011ad30eaf844f1919d15b86401435d9d0a89c3d906aba64b2af",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "PASS"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "fwd1-own-ball-far-home",
+    "role": "fwd1",
+    "inputSha256": "631abb2960bd2093c34d573c5e2e864e2fa3c2c18ddb848b97acb2ac48e13ecb",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "PASS"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "fwd1-own-ball-far-away",
+    "role": "fwd1",
+    "inputSha256": "d3ac088961a67d0c6046174e0cf9d8e734a5deffc3c291048e3f6a95e12babac",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "PASS"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "fwd1-ambiguous-owner-home",
+    "role": "fwd1",
+    "inputSha256": "d5754102a07f3549e6c4de36aafd65bb454e033265bdabe2ce86322434fdba11",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "CLEAR_OVERRIDE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "fwd1-ambiguous-owner-away",
+    "role": "fwd1",
+    "inputSha256": "8103ac1327585ccb9ef5ffac6539636ffaa99ba48b2a6923971a24006670406b",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "CLEAR_OVERRIDE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "fwd1-close-open-shot-home",
+    "role": "fwd1",
+    "inputSha256": "c663b649503c08bbe8abe907c94509bfd60d1e031df2cca0e9ecd5579d248c19",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "SHOOT"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "fwd1-close-open-shot-away",
+    "role": "fwd1",
+    "inputSha256": "8e44d88c55399f0bce6bbd76b7af37b8e21d6db1a5236f92763dfe5787650f98",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "SHOOT"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "fwd1-low-energy-cover-home",
+    "role": "fwd1",
+    "inputSha256": "c38a6e5d7d1db1ca3e046462435286844218a0b6b152cd08537772e51f9f94d1",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "forbiddenTypes": [
+        "PRESS_BALL",
+        "SHOOT",
+        "PASS"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "fwd1-low-energy-cover-away",
+    "role": "fwd1",
+    "inputSha256": "6e6a1176eb49f7977023c9591dfd7fa75632b777116bc0b7698b419679cfd633",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "forbiddenTypes": [
+        "PRESS_BALL",
+        "SHOOT",
+        "PASS"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "fwd1-ambiguous-owner-stale-context-home",
+    "role": "fwd1",
+    "inputSha256": "d5754102a07f3549e6c4de36aafd65bb454e033265bdabe2ce86322434fdba11",
+    "historySha256": "21805d2f7d3c110fdb599a5d8d1f4f90e49bc972c9694c6c53352334b88e2c46",
+    "expected": {
+      "types": [
+        "CLEAR_OVERRIDE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "fwd1-ambiguous-owner-stale-context-away",
+    "role": "fwd1",
+    "inputSha256": "8103ac1327585ccb9ef5ffac6539636ffaa99ba48b2a6923971a24006670406b",
+    "historySha256": "734f43b10f043ae42e2e3929d6d736938b58ed81fb27c4f383cac66eeaf8138d",
+    "expected": {
+      "types": [
+        "CLEAR_OVERRIDE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "fwd1-central-runner-home",
+    "role": "fwd1",
+    "inputSha256": "878ec83c7db9ed79f319ea451f138d57097d608532dda34af81ae7ed37c72ee8",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "forbiddenTypes": [
+        "PASS",
+        "SHOOT",
+        "GK_DISTRIBUTE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "fwd1-central-runner-away",
+    "role": "fwd1",
+    "inputSha256": "b82e621dd88dcc577a2c7e97c1b08ad6b2ece2d1450aed0b4bf186a0acd0a852",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "forbiddenTypes": [
+        "PASS",
+        "SHOOT",
+        "GK_DISTRIBUTE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "fwd1-wide-corner-run-home",
+    "role": "fwd1",
+    "inputSha256": "8f5e717163c533235deddb4b1dab228436114e28df9c51e0e01f293b4eda5346",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "forbiddenTypes": [
+        "PASS",
+        "SHOOT",
+        "GK_DISTRIBUTE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "fwd1-wide-corner-run-away",
+    "role": "fwd1",
+    "inputSha256": "fae60663e27c8b9c29a7a35ff97176c57718d0e297eed23abdbdb340c40c1903",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "forbiddenTypes": [
+        "PASS",
+        "SHOOT",
+        "GK_DISTRIBUTE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "fwd1-low-energy-opponent-home",
+    "role": "fwd1",
+    "inputSha256": "18097cc392973d9f8c4ae221b34c00db0d064d9ca741b06da96050e0eb22a6c4",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "forbiddenTypes": [
+        "PASS",
+        "SHOOT",
+        "GK_DISTRIBUTE",
+        "PRESS_BALL"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "fwd1-low-energy-opponent-away",
+    "role": "fwd1",
+    "inputSha256": "b618cf473e6d042a0280ad91bd5526c1831792a2ccf783519cd7f08e85425038",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "forbiddenTypes": [
+        "PASS",
+        "SHOOT",
+        "GK_DISTRIBUTE",
+        "PRESS_BALL"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "fwd1-malformed-players-home",
+    "role": "fwd1",
+    "inputSha256": "b4d88915fbf1cc8ac30d79a7fd5c13be5831f8a7c3d01ddc498d35c410248baa",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "CLEAR_OVERRIDE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "fwd1-malformed-players-away",
+    "role": "fwd1",
+    "inputSha256": "bf4d2f606d41f9303cdbff7324417b99260edeb49965422ad5ace00060934c2d",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "CLEAR_OVERRIDE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "fwd1-wrong-player-binding-home",
+    "role": "fwd1",
+    "inputSha256": "64116d64d7010e88a4eac369f323e1d4a9951a694cdbe0b4b9d90b8676a98a01",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "CLEAR_OVERRIDE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "fwd1-wrong-player-binding-away",
+    "role": "fwd1",
+    "inputSha256": "a723ef471884b49def90a7c677fa4ae913e1245e2935113d1f34480383ea7e0c",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "CLEAR_OVERRIDE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "fwd1-positive-clear-shot-home",
+    "role": "fwd1",
+    "inputSha256": "87c7c5d2b213e2db3149139c54db0aa71d171a79108b05e2b6cd887c5ad41d89",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "SHOOT"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "fwd1-positive-clear-shot-away",
+    "role": "fwd1",
+    "inputSha256": "b2b74e3695fe18b4cfbb322c87967552c05e71008086930b9db7351a71273661",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "SHOOT"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "fwd1-blocked-shot-home",
+    "role": "fwd1",
+    "inputSha256": "afde19dc7e22cb6c8e80989eec1d9345324214a42be3cc3be605eb0274953900",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "PASS"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "fwd1-blocked-shot-away",
+    "role": "fwd1",
+    "inputSha256": "2c5c5bc85fe00a312fec83fac74bb64d2d0c7bbe46b40885fcf3846244cb118b",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "PASS"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "fwd2-own-ball-far-home",
+    "role": "fwd2",
+    "inputSha256": "d966ac8924f0382e99cce164eff200906ef1dfd2ba621e185c4427f5d2d58639",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "PASS"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "fwd2-own-ball-far-away",
+    "role": "fwd2",
+    "inputSha256": "538a09b075983e74deb76c0a6cac2171dfd960a8956a7a1b1814669abcacbec7",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "PASS"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "fwd2-ambiguous-owner-home",
+    "role": "fwd2",
+    "inputSha256": "e74c2421a4b63f56340f6910fa07190c43f044f5bbea75addf36b7c4a07083cb",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "CLEAR_OVERRIDE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "fwd2-ambiguous-owner-away",
+    "role": "fwd2",
+    "inputSha256": "6c4c47af504d98b51bcc6862097259aea643f3dfd2e31d0c624153d7f0a24105",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "CLEAR_OVERRIDE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "fwd2-close-blocked-pass-home",
+    "role": "fwd2",
+    "inputSha256": "801ecb79c6fcafb3237794d4f6fd1b84a0f7e2432cb6d4e7a13138693172e8fb",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "PASS"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "fwd2-close-blocked-pass-away",
+    "role": "fwd2",
+    "inputSha256": "4ee323bab26c8d0de562bdf73d5f14233f673361900ee4b53a97795722eb9659",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "PASS"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "fwd2-wrong-player-binding-home",
+    "role": "fwd2",
+    "inputSha256": "2e608dc2f39b4f142b03dfc23ff3b918c6dd9369833303e33853fc1cd77bdeb2",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "CLEAR_OVERRIDE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "fwd2-wrong-player-binding-away",
+    "role": "fwd2",
+    "inputSha256": "f56f7fbf78d8d405da6b4261aa4a67d9fbce178d3926e07d6c2ec3b3f79a0030",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "CLEAR_OVERRIDE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "fwd2-ambiguous-owner-stale-context-home",
+    "role": "fwd2",
+    "inputSha256": "e74c2421a4b63f56340f6910fa07190c43f044f5bbea75addf36b7c4a07083cb",
+    "historySha256": "43894c81254bf3e31c3c4d83f9d2d42ca88f694c60fe799c1f8405125d4e1211",
+    "expected": {
+      "types": [
+        "CLEAR_OVERRIDE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "fwd2-ambiguous-owner-stale-context-away",
+    "role": "fwd2",
+    "inputSha256": "6c4c47af504d98b51bcc6862097259aea643f3dfd2e31d0c624153d7f0a24105",
+    "historySha256": "3609267fc2f247801de6e0df823d1fa31f1d2badfdfc0c7ee557823bf3059b56",
+    "expected": {
+      "types": [
+        "CLEAR_OVERRIDE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "fwd2-central-runner-home",
+    "role": "fwd2",
+    "inputSha256": "ad54780b36d1dbbaf4993589c2e042078be3b3822429a185dea43a3d682ddef2",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "forbiddenTypes": [
+        "PASS",
+        "SHOOT",
+        "GK_DISTRIBUTE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "fwd2-central-runner-away",
+    "role": "fwd2",
+    "inputSha256": "3a3e97525329a358fc031bc6eee54083948187f60e0e2a31807ae49bb8596b1c",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "forbiddenTypes": [
+        "PASS",
+        "SHOOT",
+        "GK_DISTRIBUTE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "fwd2-wide-corner-run-home",
+    "role": "fwd2",
+    "inputSha256": "3fe5e9abb35542c40cafb0902201baa2a16da1e9b4b9c35fd1226b3f38475c78",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "forbiddenTypes": [
+        "PASS",
+        "SHOOT",
+        "GK_DISTRIBUTE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "fwd2-wide-corner-run-away",
+    "role": "fwd2",
+    "inputSha256": "cce641cebcb5668e1fa136fdff13ca0186067a39d391eb46b0a665188c6b2cb5",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "forbiddenTypes": [
+        "PASS",
+        "SHOOT",
+        "GK_DISTRIBUTE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "fwd2-low-energy-opponent-home",
+    "role": "fwd2",
+    "inputSha256": "763f358d6125ca18da7932eec730567f40b4786f91dc369a8b394b698af8e70f",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "forbiddenTypes": [
+        "PASS",
+        "SHOOT",
+        "GK_DISTRIBUTE",
+        "PRESS_BALL"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "fwd2-low-energy-opponent-away",
+    "role": "fwd2",
+    "inputSha256": "e73c57963466ceb16aed44236186d1d0f5f2b1b1f392055045bc076dbee82865",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "forbiddenTypes": [
+        "PASS",
+        "SHOOT",
+        "GK_DISTRIBUTE",
+        "PRESS_BALL"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "fwd2-malformed-players-home",
+    "role": "fwd2",
+    "inputSha256": "ddb4572d5d0500def459ac8a9e92dcd4d15c5db85ac1d72781ba3fb0fb0c3c9f",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "CLEAR_OVERRIDE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "fwd2-malformed-players-away",
+    "role": "fwd2",
+    "inputSha256": "e479642d75f4585fc3d8ad6deedb92ba9933c2968eee84cf4a216997be611038",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "CLEAR_OVERRIDE"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "fwd2-positive-clear-shot-home",
+    "role": "fwd2",
+    "inputSha256": "8fd1979fd5ddc8d4771881c6e5939511b18afe017a5d82f55483e50b0bbd8585",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "SHOOT"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "fwd2-positive-clear-shot-away",
+    "role": "fwd2",
+    "inputSha256": "ff2294bcec82dcb32de8af22be6ad5c8cafcf3dfaf22c351b2dc1d2313b47796",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "SHOOT"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "fwd2-blocked-shot-home",
+    "role": "fwd2",
+    "inputSha256": "801ecb79c6fcafb3237794d4f6fd1b84a0f7e2432cb6d4e7a13138693172e8fb",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "PASS"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  },
+  {
+    "id": "fwd2-blocked-shot-away",
+    "role": "fwd2",
+    "inputSha256": "4ee323bab26c8d0de562bdf73d5f14233f673361900ee4b53a97795722eb9659",
+    "historySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected": {
+      "types": [
+        "PASS"
+      ]
+    },
+    "provenance": "synthetic counterfactual; decision labels are hypotheses"
+  }
+]

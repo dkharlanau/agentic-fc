@@ -1,0 +1,472 @@
+{
+  "source": "research/v3/ranked-batch-11.json",
+  "sourceSha256": "1cb82a1b7e0995d591d566f52e088b964e6e94b92111bd8ae90880795a76b3e1",
+  "unit": "one rounded report average per match/role; NOT per-call samples",
+  "controlAliases": [
+    "stance-live-01",
+    "stance-live-02",
+    "stance-live-04",
+    "stance-live-05",
+    "stance-live-06",
+    "stance-live-08",
+    "stance-live-10"
+  ],
+  "controlTeamAverageMs": {
+    "n": 7,
+    "p50": 572.0,
+    "p95": 902.5,
+    "max": 949
+  },
+  "controlRoleAverageMs": {
+    "gk": {
+      "n": 7,
+      "p50": 80.0,
+      "p95": 730.3,
+      "max": 793
+    },
+    "def": {
+      "n": 7,
+      "p50": 87.0,
+      "p95": 911.3,
+      "max": 968
+    },
+    "mid": {
+      "n": 7,
+      "p50": 932.0,
+      "p95": 1117.0,
+      "max": 1162
+    },
+    "fwd1": {
+      "n": 7,
+      "p50": 619.0,
+      "p95": 960.6,
+      "max": 975
+    },
+    "fwd2": {
+      "n": 7,
+      "p50": 786.0,
+      "p95": 886.1,
+      "max": 896
+    }
+  },
+  "controlCommandsMedian": 364,
+  "rows": [
+    {
+      "alias": "stance-live-01",
+      "reportTeamAverageMs": 73,
+      "reportCommands": 370,
+      "reportRoleAverageMs": {
+        "gk": 80,
+        "def": 76,
+        "mid": 76,
+        "fwd1": 77,
+        "fwd2": 76
+      },
+      "opponentReportRoleAverageMs": {
+        "gk": 4,
+        "def": 3,
+        "mid": 3,
+        "fwd1": 3,
+        "fwd2": 75
+      },
+      "foldVsControlMedian": {
+        "gk": 1.0,
+        "def": 0.874,
+        "mid": 0.082,
+        "fwd1": 0.124,
+        "fwd2": 0.097
+      },
+      "stageTimingsMs": {
+        "tickToEntry": null,
+        "harness": null,
+        "model": null,
+        "tools": null,
+        "compute": null,
+        "serialization": null,
+        "publication": null,
+        "serverApply": null,
+        "endToEnd": null
+      },
+      "exactInvocationTraceAvailableLocally": false,
+      "interpretation": "report_control_only"
+    },
+    {
+      "alias": "stance-live-02",
+      "reportTeamAverageMs": 81,
+      "reportCommands": 364,
+      "reportRoleAverageMs": {
+        "gk": 77,
+        "def": 87,
+        "mid": 86,
+        "fwd1": 83,
+        "fwd2": 83
+      },
+      "opponentReportRoleAverageMs": {
+        "gk": 3,
+        "def": 2,
+        "mid": 2,
+        "fwd1": 2,
+        "fwd2": 75
+      },
+      "foldVsControlMedian": {
+        "gk": 0.963,
+        "def": 1.0,
+        "mid": 0.092,
+        "fwd1": 0.134,
+        "fwd2": 0.106
+      },
+      "stageTimingsMs": {
+        "tickToEntry": null,
+        "harness": null,
+        "model": null,
+        "tools": null,
+        "compute": null,
+        "serialization": null,
+        "publication": null,
+        "serverApply": null,
+        "endToEnd": null
+      },
+      "exactInvocationTraceAvailableLocally": false,
+      "interpretation": "report_control_only"
+    },
+    {
+      "alias": "stance-live-03",
+      "reportTeamAverageMs": 2410,
+      "reportCommands": 230,
+      "reportRoleAverageMs": {
+        "gk": 2870,
+        "def": 2983,
+        "mid": 2548,
+        "fwd1": 1637,
+        "fwd2": 1786
+      },
+      "opponentReportRoleAverageMs": {
+        "gk": 3,
+        "def": 3,
+        "mid": 3,
+        "fwd1": 2,
+        "fwd2": 86
+      },
+      "foldVsControlMedian": {
+        "gk": 35.875,
+        "def": 34.287,
+        "mid": 2.734,
+        "fwd1": 2.645,
+        "fwd2": 2.272
+      },
+      "stageTimingsMs": {
+        "tickToEntry": null,
+        "harness": null,
+        "model": null,
+        "tools": null,
+        "compute": null,
+        "serialization": null,
+        "publication": null,
+        "serverApply": null,
+        "endToEnd": null
+      },
+      "exactInvocationTraceAvailableLocally": false,
+      "interpretation": "anomalous_report"
+    },
+    {
+      "alias": "stance-live-04",
+      "reportTeamAverageMs": 766,
+      "reportCommands": 423,
+      "reportRoleAverageMs": {
+        "gk": 577,
+        "def": 751,
+        "mid": 932,
+        "fwd1": 619,
+        "fwd2": 863
+      },
+      "opponentReportRoleAverageMs": {
+        "gk": 3,
+        "def": 2,
+        "mid": 2,
+        "fwd1": 2,
+        "fwd2": 77
+      },
+      "foldVsControlMedian": {
+        "gk": 7.213,
+        "def": 8.632,
+        "mid": 1.0,
+        "fwd1": 1.0,
+        "fwd2": 1.098
+      },
+      "stageTimingsMs": {
+        "tickToEntry": null,
+        "harness": null,
+        "model": null,
+        "tools": null,
+        "compute": null,
+        "serialization": null,
+        "publication": null,
+        "serverApply": null,
+        "endToEnd": null
+      },
+      "exactInvocationTraceAvailableLocally": false,
+      "interpretation": "report_control_only"
+    },
+    {
+      "alias": "stance-live-05",
+      "reportTeamAverageMs": 949,
+      "reportCommands": 276,
+      "reportRoleAverageMs": {
+        "gk": 793,
+        "def": 968,
+        "mid": 1162,
+        "fwd1": 975,
+        "fwd2": 846
+      },
+      "opponentReportRoleAverageMs": {
+        "gk": 4,
+        "def": 3,
+        "mid": 3,
+        "fwd1": 3,
+        "fwd2": 77
+      },
+      "foldVsControlMedian": {
+        "gk": 9.912,
+        "def": 11.126,
+        "mid": 1.247,
+        "fwd1": 1.575,
+        "fwd2": 1.076
+      },
+      "stageTimingsMs": {
+        "tickToEntry": null,
+        "harness": null,
+        "model": null,
+        "tools": null,
+        "compute": null,
+        "serialization": null,
+        "publication": null,
+        "serverApply": null,
+        "endToEnd": null
+      },
+      "exactInvocationTraceAvailableLocally": false,
+      "interpretation": "report_control_only"
+    },
+    {
+      "alias": "stance-live-06",
+      "reportTeamAverageMs": 794,
+      "reportCommands": 358,
+      "reportRoleAverageMs": {
+        "gk": 584,
+        "def": 779,
+        "mid": 944,
+        "fwd1": 656,
+        "fwd2": 896
+      },
+      "opponentReportRoleAverageMs": {
+        "gk": 3,
+        "def": 3,
+        "mid": 3,
+        "fwd1": 3,
+        "fwd2": 81
+      },
+      "foldVsControlMedian": {
+        "gk": 7.3,
+        "def": 8.954,
+        "mid": 1.013,
+        "fwd1": 1.06,
+        "fwd2": 1.14
+      },
+      "stageTimingsMs": {
+        "tickToEntry": null,
+        "harness": null,
+        "model": null,
+        "tools": null,
+        "compute": null,
+        "serialization": null,
+        "publication": null,
+        "serverApply": null,
+        "endToEnd": null
+      },
+      "exactInvocationTraceAvailableLocally": false,
+      "interpretation": "report_control_only"
+    },
+    {
+      "alias": "stance-live-07",
+      "reportTeamAverageMs": 2277,
+      "reportCommands": 219,
+      "reportRoleAverageMs": {
+        "gk": 2933,
+        "def": 3100,
+        "mid": 2603,
+        "fwd1": 1675,
+        "fwd2": 1647
+      },
+      "opponentReportRoleAverageMs": {
+        "gk": 5,
+        "def": 5,
+        "mid": 4,
+        "fwd1": 4,
+        "fwd2": 82
+      },
+      "foldVsControlMedian": {
+        "gk": 36.663,
+        "def": 35.632,
+        "mid": 2.793,
+        "fwd1": 2.706,
+        "fwd2": 2.095
+      },
+      "stageTimingsMs": {
+        "tickToEntry": null,
+        "harness": null,
+        "model": null,
+        "tools": null,
+        "compute": null,
+        "serialization": null,
+        "publication": null,
+        "serverApply": null,
+        "endToEnd": null
+      },
+      "exactInvocationTraceAvailableLocally": false,
+      "interpretation": "anomalous_report"
+    },
+    {
+      "alias": "stance-live-08",
+      "reportTeamAverageMs": 393,
+      "reportCommands": 370,
+      "reportRoleAverageMs": {
+        "gk": 77,
+        "def": 82,
+        "mid": 551,
+        "fwd1": 540,
+        "fwd2": 578
+      },
+      "opponentReportRoleAverageMs": {
+        "gk": 3,
+        "def": 2,
+        "mid": 2,
+        "fwd1": 2,
+        "fwd2": 72
+      },
+      "foldVsControlMedian": {
+        "gk": 0.963,
+        "def": 0.943,
+        "mid": 0.591,
+        "fwd1": 0.872,
+        "fwd2": 0.735
+      },
+      "stageTimingsMs": {
+        "tickToEntry": null,
+        "harness": null,
+        "model": null,
+        "tools": null,
+        "compute": null,
+        "serialization": null,
+        "publication": null,
+        "serverApply": null,
+        "endToEnd": null
+      },
+      "exactInvocationTraceAvailableLocally": false,
+      "interpretation": "report_control_only"
+    },
+    {
+      "alias": "stance-live-09",
+      "reportTeamAverageMs": 1,
+      "reportCommands": 16,
+      "reportRoleAverageMs": {
+        "gk": 3,
+        "def": 2,
+        "mid": 2,
+        "fwd1": 2,
+        "fwd2": 2
+      },
+      "opponentReportRoleAverageMs": {
+        "gk": 4,
+        "def": 4,
+        "mid": 3,
+        "fwd1": 3,
+        "fwd2": 70
+      },
+      "foldVsControlMedian": {
+        "gk": 0.037,
+        "def": 0.023,
+        "mid": 0.002,
+        "fwd1": 0.003,
+        "fwd2": 0.003
+      },
+      "stageTimingsMs": {
+        "tickToEntry": null,
+        "harness": null,
+        "model": null,
+        "tools": null,
+        "compute": null,
+        "serialization": null,
+        "publication": null,
+        "serverApply": null,
+        "endToEnd": null
+      },
+      "exactInvocationTraceAvailableLocally": false,
+      "interpretation": "anomalous_report"
+    },
+    {
+      "alias": "stance-live-10",
+      "reportTeamAverageMs": 572,
+      "reportCommands": 301,
+      "reportRoleAverageMs": {
+        "gk": 2,
+        "def": 1,
+        "mid": 1012,
+        "fwd1": 927,
+        "fwd2": 786
+      },
+      "opponentReportRoleAverageMs": {
+        "gk": 3,
+        "def": 2,
+        "mid": 2,
+        "fwd1": 2,
+        "fwd2": 71
+      },
+      "foldVsControlMedian": {
+        "gk": 0.025,
+        "def": 0.011,
+        "mid": 1.086,
+        "fwd1": 1.498,
+        "fwd2": 1.0
+      },
+      "stageTimingsMs": {
+        "tickToEntry": null,
+        "harness": null,
+        "model": null,
+        "tools": null,
+        "compute": null,
+        "serialization": null,
+        "publication": null,
+        "serverApply": null,
+        "endToEnd": null
+      },
+      "exactInvocationTraceAvailableLocally": false,
+      "interpretation": "report_control_only"
+    }
+  ],
+  "rootCause": "not_identifiable_from_available_evidence",
+  "hypotheses": [
+    {
+      "id": "L01",
+      "hypothesis": "shared invocation/queue/publication delay in 3 and 7",
+      "status": "compatible, not established",
+      "missing": "matched provider/request/server timestamps"
+    },
+    {
+      "id": "L02",
+      "hypothesis": "report attribution or mixed paths",
+      "status": "compatible; no automatic side inversion",
+      "missing": "exact own role/session-to-report join"
+    },
+    {
+      "id": "L03",
+      "hypothesis": "fallback/non-invocation or incomplete report in 9",
+      "status": "compatible, not established",
+      "missing": "attempt/success/fallback counts and full-body receipts"
+    },
+    {
+      "id": "L04",
+      "hypothesis": "model alone explains all five role spikes",
+      "status": "unsupported by report; FWD2 configured without a model",
+      "missing": "actual build and routing verification in these games"
+    }
+  ]
+}
