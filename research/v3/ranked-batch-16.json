@@ -2,7 +2,7 @@
   "id": "ranked-batch-16",
   "status": "in-progress-owner-resumed-baseline-while-L02-prepares",
   "targetCompletedGames": 5,
-  "completedGames": 3,
+  "completedGames": 4,
   "setup": "unchanged live baseline, FWD1v16, existing FWD2 fast path, formation 1-1-2",
   "preflight": {
     "portalState": "READY TO PLAY",
@@ -147,6 +147,61 @@
         "Report lists goals at 1' MID 3, 1' FWD 4, 2' FWD 4 twice, and 2' MID 3; attributed totals are MID 3 twice and FWD 4 three times.",
         "No opponent formation, pass completion, field locations, or event-by-event defensive context was available. Role award attribution is ambiguous in the report and omitted."
       ]
+    },
+    {
+      "opponent": "Amber Arcs 2",
+      "result": "WIN",
+      "score": "2-1 (sudden death)",
+      "possessionPct": "40-60",
+      "shots": "5-5",
+      "shotsOnTarget": "2-1",
+      "teamAverageLatencyMs": 1,
+      "teamCommands": 15,
+      "roleLatencyMs": [
+        2,
+        2,
+        1,
+        1,
+        1
+      ],
+      "successPct": "100% all roles",
+      "actions": {
+        "CLEAR": 15
+      },
+      "opponentReport": {
+        "teamAverageLatencyMs": 14,
+        "teamCommands": 52,
+        "roleLatencyMs": [
+          4,
+          3,
+          3,
+          2,
+          67
+        ],
+        "successPct": "100% all roles",
+        "actions": {
+          "CLEAR": 36,
+          "PASS": 9,
+          "PRESS": 4,
+          "INTERCEPT": 3
+        },
+        "leaderboardAfterMatch": {
+          "rank": 37,
+          "played": 63,
+          "points": 108,
+          "wins": 36,
+          "draws": 0,
+          "losses": 27,
+          "goals": "85-61",
+          "goalDifference": 24
+        }
+      },
+      "observations": [
+        "No Human in the Loop won 2-1 in sudden death. Match report gave Amber Arcs 2 60% possession and 5 shots (1 on target), compared with our 40%, 5 shots (2 on target).",
+        "Amber Arcs 2 report mix: CLEAR 36/52 (69%), PASS 9 (17%), PRESS 4 (8%), INTERCEPT 3 (6%). The report does not provide formation, pass completion, locations, or defensive sequence.",
+        "Leaderboard after the match lists Amber Arcs 2 at rank 37: 63 played, 36W/0D/27L, 85:61 goals, 108 points. It was rank37 with 62 played, 36W/0D/26L before this game, consistent with the reported 2-1 loss.",
+        "This report is internally inconsistent: our command breakdown totals 15, while the award says FWD 5 had 41 commands. It also reports 1ms team average with only CLEAR commands despite three listed goals. Preserve the values as displayed, but exclude them from latency/action conclusions pending a better data source."
+      ]
     }
   ],
   "leaderboardAfterGame2": {
@@ -158,11 +213,12 @@
     "losses": 63,
     "goals": "224-141"
   },
-  "continuationNote": "Owner requested continued live ranked play and opponent data collection. L02 failed its first-session native latency gate and is not installed; continue only on the verified baseline until a new candidate passes all gates. Capture both teams’ report metrics and mark unavailable tactical fields unknown.",
+  "continuationNote": "One final baseline game remains in batch16 (4/5). Continue collecting both teams’ reports and exact leaderboard rows. L02 is not installed; prioritize a new release only after all gates pass.",
   "limitations": [
     "Series incomplete at 3/5; no conclusions until the block finishes.",
     "HOME/random matchmaking; setup remains unchanged.",
-    "Opponent action labels and aggregate reports do not establish tactical intent or command effectiveness."
+    "Opponent action labels and aggregate reports do not establish tactical intent or command effectiveness.",
+    "Amber Arcs 2 report has a cross-field inconsistency (15 team commands vs 41 FWD5 award commands), so do not use its latency or action breakdown as performance proof."
   ],
   "leaderboardAfterGame3": {
     "rank": 13,
@@ -172,5 +228,14 @@
     "draws": 5,
     "losses": 63,
     "goals": "229-141"
+  },
+  "leaderboardAfterGame4": {
+    "rank": 13,
+    "played": 168,
+    "points": 305,
+    "wins": 100,
+    "draws": 5,
+    "losses": 63,
+    "goals": "231-142"
   }
 }

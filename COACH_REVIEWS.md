@@ -611,3 +611,20 @@ locations. Our low-possession win and perfect 5/5 shot-on-target conversion are
 one match only; do not tune the policy from this result alone. The very low
 reported Shalqar latency and our 980 ms team average do not establish a causal
 latency effect. Full sanitized row: `research/v3/ranked-batch-16.json` (3/5).
+
+## 2026-10-25 — ranked match vs Amber Arcs 2; sudden-death profile
+
+No Human in the Loop won 2:1 in sudden death. The report shows 40–60
+possession, 5–5 shots and 2–1 on target. Amber Arcs 2 used CLEAR 36/52 (69%),
+PASS 9/52 (17%), PRESS 4/52 (8%), INTERCEPT 3/52 (6%); role latencies were
+4/3/3/2/67 ms. Their leaderboard row after the loss was rank37, 63 games,
+108 points, 36W/0D/27L, goals85:61. The preceding snapshot had 62 games,
+36W/0D/26L, goals84:59, so the table delta matches the reported 2:1 defeat.
+
+**Data-quality warning.** Our report fields conflict: 15 total commands and
+CLEAR-only breakdown, but the FWD5 award claims 41 commands. The 1 ms team
+average is also unusually low compared with our other unchanged-setup reports.
+Keep the displayed values for audit, but exclude this match's own command mix
+and latency from tactical or speed conclusions. Amber's action profile is more
+coherent, but its success and tactical purpose remain unknown. See the 4/5
+series row in `research/v3/ranked-batch-16.json`.
