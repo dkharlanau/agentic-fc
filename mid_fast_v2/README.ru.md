@@ -23,6 +23,13 @@ AWS выделяет отдельную среду новой сессии, по
 не гарантирует быстрый первый запрос реального матча:
 [изоляция сессий](https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/runtime-sessions.html).
 
+Игровому оператору передана дополнительная настройка `platformVersion=V2`:
+она восстанавливает подготовленный snapshot вместо полной инициализации среды
+каждый раз. Это часть исправления запуска, а не тактическая правка. Сравнение
+L01/V1 с L02/V2 не отделит эффект упаковки от эффекта платформы. Создание
+snapshot занимает несколько минут; `READY` обязателен до native. Гарантии
+дедлайна нет: [платформа V2](https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/runtime-how-it-works.html).
+
 ## Единственное изменение
 
 Новый `main.py` использует stdlib HTTP, `/ping` и `/invocations`, порт 8080.
@@ -42,6 +49,12 @@ AWS разрешает собственный HTTP-сервер для CodeZip:
 Сырые данные, координаты и session IDs не логируются. Замеры boot не включают
 создание microVM/Python launcher; wall native включает весь запрос. Лог пишется
 после отправки ответа. Сопоставлять `payloadSha256` с приватным native receipt.
+
+На V2 **не интерпретировать `processAgeAtHandlerMs` как время cold-start**:
+reference до snapshot не измеряет restore. `importMs`/`readyMs` характеризуют
+подготовку snapshot, остальные durations внутри запроса остаются пригодны.
+Первый full native wall остаётся обязательным внешним измерением.
+[Правила измерения после restore](https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/runtime-v2-optimize.html).
 
 ## Воспроизведение офлайн
 
@@ -67,10 +80,10 @@ Python3.13/Linux и игровое применение ещё не провер
 
 1. В отдельном checkout этого точного commit собрать архив командой выше.
    Сверить SHA256 с `mid_fast_v2/artifact.json`. Создать **отдельный** Runtime L02
-   по схеме L01: CodeZip/PYTHON_3_13/`main.py`, HTTP, существующие role/bucket,
+   по схеме L01: CodeZip/PYTHON_3_13/`main.py`, HTTP, `platformVersion=V2`, существующие role/bucket,
    network PUBLIC, idle900/maxLifetime28800. Environment ровно PLAYER_ID=2,
    MID_AUDIT=1, BUILD_COMMIT=точный commit. IAM не расширять.
-2. Readback READY, archive, role/network/lifecycle/env. Приватный binding JSON:
+2. Readback READY, platformVersion V2, archive, role/network/lifecycle/env. Приватный binding JSON:
    region/runtimeId/runtimeArn/buildCommit, путь `.local/mid-fast-v2/binding.json`.
    До native PASS новая привязка MID не выполняется.
 3. Запустить все 224 запроса с шестью НОВЫМИ сессиями. Сохранить первые ответы,

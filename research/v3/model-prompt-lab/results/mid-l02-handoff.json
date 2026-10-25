@@ -1,0 +1,23 @@
+{
+  "candidate": "L02-mid-stdlib-runtime",
+  "policy": "L01-mid-safe-outlet-v1",
+  "sourceCommit": "53a409b51297781db512b694df0cb627dd14a951",
+  "archiveSha256": "10dedb7c3cadd4074e09dfc3fc4bad0e6d058c84838147aab1d11d60542cfcd3",
+  "platformRequested": "V2",
+  "date": "2026-10-25",
+  "ownerAuthorizedDeployAfterChecks": true,
+  "ownerAuthorizedMessageToGameChat": true,
+  "messageDelivered": true,
+  "operatorAcknowledged": true,
+  "operatorReported": "Ada baseline match finished; isolated L02 is CREATING on V2; original MID binding preserved",
+  "sourceOfStatus": "game operator commentary; not an independent AWS readback",
+  "native": null,
+  "fitness": null,
+  "registered": false,
+  "promotion": false,
+  "localChecks": 23,
+  "localArchiveReplayPassed": 224,
+  "githubCI": "both workflows passed for sourceCommit",
+  "archiveByteIdenticalRebuild": true,
+  "note": "Handoff progress only. A later exact native/Fitness/binding receipt supersedes this snapshot."
+}
