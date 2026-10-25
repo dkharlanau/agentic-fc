@@ -1,6 +1,12 @@
 {
   "id": "P01-fwd1-shot-priority-v1",
-  "status": "prepared_not_inferred_not_fitness_tested",
+  "status": "rejected_at_paired_screen_reported_by_game_flow",
+  "liveScreeningEvidence": {
+    "sourceCommit": "cbde2741594864155feb48eb289ff4e35ef0be04",
+    "path": "research/v3/ranked-batch-13.json",
+    "rawReceiptsRegraded": false,
+    "nextAction": "Retrieve failed-screen receipts; do not repeat or install unchanged P01"
+  },
   "sourceBaseline": "research/v3/cohort-setup-20261025.json",
   "sourceBaselineSha256": "9d1d13ef1d60c864e9a8ae9dcc26c8b915422db19136674cbd82a78122016069",
   "change": "FWD1 prompt only: remove conflicting distance-only instruction; no new ownership field requirement",
@@ -15,7 +21,8 @@
     "MID15 Nova2Lite",
     "FWD2 stance rev9 source931af03"
   ],
-  "freshModelCalls": 0,
+  "freshModelCalls": null,
+  "newModelCallsByResearch": 0,
   "fitnessResult": null,
   "eligibleForPromotion": false,
   "rollback": {

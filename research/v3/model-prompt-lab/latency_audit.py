@@ -13,6 +13,7 @@ import subprocess
 import lab
 
 LIVE_COMMIT = '3cdf5a76e5e87b103c631f829af80983f6991667'
+UPDATE_COMMIT = 'cbde2741594864155feb48eb289ff4e35ef0be04'
 HERE = Path(__file__).resolve().parent
 
 
@@ -25,7 +26,7 @@ def build():
                if commit else (lab.ROOT / path).read_bytes())
         sources.append({'path': path, 'gitCommit': commit,
                         'sha256': hashlib.sha256(raw).hexdigest()})
-        return json.loads(raw)
+        return json.loads(raw) if name.endswith('.json') else raw.decode()
 
     fresh = []
     specs = [('possession-probes.json', 'fwd2'),
@@ -129,6 +130,44 @@ def build():
                         'truncation': c['truncation'], 'maxIterations': c['maxIterations'],
                         'timeoutSeconds': c['timeoutSeconds'], 'toolCount': len(c['tools']),
                         'inferenceConfig': c['model']['bedrockModelConfig'].get('inferenceConfig')})
+    latest = read('ranked-batch-13.json', UPDATE_COMMIT)
+    ongoing = read('ranked-batch-14.json', UPDATE_COMMIT)
+    read('ranked-batch-13-analysis.ru.md', UPDATE_COMMIT)
+    checkpoint = subprocess.check_output(['git', 'show', UPDATE_COMMIT + ':HANDOFF.md'], cwd=lab.ROOT)
+    sources.append({'path': 'HANDOFF.md', 'gitCommit': UPDATE_COMMIT,
+                    'sha256': hashlib.sha256(checkpoint).hexdigest()})
+    games13 = []
+    for i, game in enumerate(latest['games']):
+        score = [int(n) for n in game['score'].split('-')]
+        shots = [int(n) for n in game['shots'].split('-')]
+        on_target = [int(n) for n in game['shotsOnTarget'].split('-')]
+        games13.append({'alias': 'batch13-game-' + str(i + 1), 'result': game['result'],
+                        'scoreFor': score[0], 'scoreAgainst': score[1],
+                        'shotsFor': shots[0], 'shotsAgainst': shots[1],
+                        'onTargetFor': on_target[0], 'onTargetAgainst': on_target[1],
+                        'teamReportMeanMs': game['teamAverageLatencyMs'],
+                        'roleReportMeansMs': game['roleLatencyMs'],
+                        'teamCommands': game['teamCommands'], 'actionsReported': game['actions']})
+    result_groups = {}
+    for result in ('WIN', 'LOSS'):
+        rows = [g for g in games13 if g['result'] == result]
+        result_groups[result] = {k: sum(g[k] for g in rows) for k in
+                                ('shotsFor', 'onTargetFor', 'scoreFor', 'scoreAgainst')}
+        result_groups[result]['games'] = len(rows)
+    update = {'sourceCommit': UPDATE_COMMIT,
+              'p01': {'status': 'rejected_at_paired_screen_reported_by_game_flow',
+                      'sourceStatement': latest['preflight']['p01'], 'installed': latest['setup']['p01Installed'],
+                      'rawReceiptsAvailableLocally': False, 'testedRequestHashesVerified': False,
+                      'caseFailures': None, 'fullResponseP50Ms': None, 'fullResponseP95Ms': None,
+                      'numberOfExecutedModelCalls': None, 'independentlyRegraded': False,
+                      'eligibleForPromotion': False},
+              'batch13': {'games': games13, 'byResultRecomputed': result_groups,
+                          'medianOfFiveReportMeansMs': lab.percentile([g['teamReportMeanMs'] for g in games13], .5),
+                          'roleMeansOver1000Reference': sum(v > 1000 for g in games13 for v in g['roleReportMeansMs']),
+                          'fullResponseP95Ms': None},
+              'batch14': {'status': ongoing['status'], 'completedGames': ongoing['completedGames'],
+                          'target': ongoing['targetCompletedGames'], 'setup': ongoing['setup']},
+              'nextStep': 'Existing exact trace and P01 receipt export; no repeat P01 unchanged or candidate series'}
     return {'kind': 'Offline archived MOVE/latency audit; no fresh inference',
             'quantiles': 'Hyndman-Fan type 7; tiny, unequal samples, no causal model ranking',
             'deadline': {'1000MsUsedOnlyAsReference': True, 'verifiedGameEnforcement': None},
@@ -142,6 +181,7 @@ def build():
             'batch12': {'sourceCommit': LIVE_COMMIT, 'completedGames': len(batch_rows),
                         'additionalIncomingMatchesExcluded': True, 'games': batch_rows},
             'savedOriginalHarnessConfiguration': configs,
+            'latestLiveUpdate': update,
             'currentLiveReadback': None, 'modelCallsExecuted': 0, 'promotionEligible': False}
 
 

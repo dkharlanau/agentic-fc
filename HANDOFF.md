@@ -1,5 +1,29 @@
 # Agentic FC continuation
 
+## Latest live evidence supersedes the P01 proposal — 2026-10-25
+
+At final read-only sync, live branch advanced tocbde274: batch13 COMPLETE3W2L,
+7:6; batch14 already2/5 on unchanged baseline. Do not alter/restart that series.
+P01 FAILED paired decision/quality/deadline gates and was never installed,
+according to the live checkpoint. Raw screening receipts remain on CloudShell,
+not available locally; exact cases/request hashes/p95/counts not independently
+regraded. P01 is no longer the next candidate; do not repeat its old plan unchanged.
+Manifest generation now preserves rejection. P01 prompt/patch/plan stay archived.
+
+Owner priority clarified: low full latency and fewer losses under pressure.
+P03 DEF andP04 MID patches remain queued, untested. First tactical hypothesis is
+safe MID outlet; local function alternativeL01 is design/features only, NOT an
+agent diff. No new candidate eligible. Get failed-screen receipts and existing
+role/tick traces, then choose one experiment; Fitness required before promotion.
+Read updated DECISION_LATENCY, PLAYER_UPDATES and GAME_FLOW_REQUEST in lab.
+
+Pinned batch13 recomputation: median of5 report means1036ms;12/25 role means>1s,
+not per-call p95. Losses1/9 shots on target,4 conceded; wins6/22,2 conceded.
+Live coach text1/24 and6 conceded in losses is arithmetically wrong; do not reuse.
+43 RESET in last game's aggregate needs exact role/side attribution, not blame.
+No AWS/model calls/matches/live edits by research. Historical notes below retain
+previous evidence states and are superseded by this entry.
+
 ## Offline latency / player update — 2026-10-25
 
 Owner's current baseline series: four complete,3W1L,6:3; fifth pending per latest

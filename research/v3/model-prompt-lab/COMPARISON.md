@@ -1,5 +1,7 @@
 # Offline model/prompt comparison — 25 October 2026
 
+Current status: live P01 paired screening was reported FAILED and P01 was not installed. Raw screening receipts are not available locally; see DECISION_LATENCY.ru.md. The archived comparison below is a different evidence set.
+
 155 archived responses; **zero new inference calls**. 109 full responses are regraded; 40 selector commands are reconstructed; six FWD1 format results rely on the saved full-message audit. The latter receipt intentionally omits full assistant text.
 
 Validity = saved command schema (or the selector index contract). Usable = valid AND agrees with the scenario’s tactical label. Labels are hypotheses, not physical football quality. p50/p95 use type-7 interpolation; n is small and there is one response per case, without independent repetitions. The 20 selector rows comprise eight underlying scenarios with cyclic option orders.
@@ -63,6 +65,6 @@ Five stale-context cases added in v2/v3 are excluded here to preserve paired cas
 - FWD2 compact screen: Micro is fastest, but only 1/9 usable; Sonnet 3/9; Nova2 and Haiku 0/9. Current FWD2 is deterministic and none of these is a justified replacement.
 - Stale-context PASS repeats in DEF/MID/FWD1 in both r1-v2/v3 survive as syntactically valid mistakes. A prompt guard is a testable hypothesis, not a demonstrated fix to the live M8.
 - Fast invalid replies do not count as good latency. results/comparison.json includes usable-only latency, evaluable-decision denominators and the original stricter policy-gate results.
-- All unmeasured role/model/prompt cells remain not_measured with null percentiles in the coverage matrix. New 100-case suite has NO model results.
+- All unmeasured role/model/prompt cells remain not_measured with null percentiles in this archived coverage matrix. Live P01 screening of a subset is tracked separately; its receipts are not embedded here.
 
 Sources, source/prompt hashes, per-case recomputed failures, quantile definition and all coverage cells: [comparison.json](results/comparison.json). Replay: `python3 research/v3/model-prompt-lab/lab.py`.

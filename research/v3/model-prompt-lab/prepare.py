@@ -67,9 +67,15 @@ def prepare():
     timing_after=(HERE/'candidate/main.py').read_text()
     (HERE/'candidate/fwd2-timing.patch').write_text(patch_for('fast_path_v2/main.py',timing_before,timing_after))
     baseline=json.loads((lab.V3/'cohort-setup-20261025.json').read_text())
+    live=json.loads((HERE/'results/move-latency-audit.json').read_text())['latestLiveUpdate']
+    assert live['p01']['eligibleForPromotion'] is False
     assert lab.file_sha(lab.ROOT/target)==baseline['agents']['fwd1']['promptSha256']
     manifest={
-        'id':'P01-fwd1-shot-priority-v1','status':'prepared_not_inferred_not_fitness_tested',
+        'id':'P01-fwd1-shot-priority-v1','status':live['p01']['status'],
+        'liveScreeningEvidence':{'sourceCommit':live['sourceCommit'],
+                                'path':'research/v3/ranked-batch-13.json',
+                                'rawReceiptsRegraded':False,
+                                'nextAction':'Retrieve failed-screen receipts; do not repeat or install unchanged P01'},
         'sourceBaseline':'research/v3/cohort-setup-20261025.json',
         'sourceBaselineSha256':lab.file_sha(lab.V3/'cohort-setup-20261025.json'),
         'change':'FWD1 prompt only: remove conflicting distance-only instruction; no new ownership field requirement',
@@ -78,7 +84,7 @@ def prepare():
         'promptAfterSha256':lab.file_sha(HERE/'candidate/fwd1-shot-priority-v1.txt'),
         'modelId':'global.amazon.nova-2-lite-v1:0','formation':'1-1-2',
         'unchangedRoles':['GK13 Nova2Lite','DEF19 Nova2Lite','MID15 Nova2Lite','FWD2 stance rev9 source931af03'],
-        'freshModelCalls':0,'fitnessResult':None,'eligibleForPromotion':False,
+        'freshModelCalls':None,'newModelCallsByResearch':0,'fitnessResult':None,'eligibleForPromotion':False,
         'rollback':{'fwd1Version':'16','promptFile':target,'promptSha256':lab.file_sha(lab.ROOT/target),
                     'modelId':'global.amazon.nova-2-lite-v1:0','requireFreshFitness':True},
         'gates':['Same-input baseline/candidate FWD1 inference: 24 synthetic and 2 observed inputs, 3 repeats, interleaved, isolated allowed idle window',
@@ -103,6 +109,9 @@ def prepare():
     # Readable tables use the exact generated JSON as the source of every number.
     report=json.loads((HERE/'results/comparison.json').read_text())
     rows=['# Offline model/prompt comparison — 25 October 2026','',
+          'Current status: live P01 paired screening was reported FAILED and P01 was not installed. '
+          'Raw screening receipts are not available locally; see DECISION_LATENCY.ru.md. '
+          'The archived comparison below is a different evidence set.','',
           '155 archived responses; **zero new inference calls**. 109 full responses are regraded; '
           '40 selector commands are reconstructed; six FWD1 format results rely on the saved full-message audit. '
           'The latter receipt intentionally omits full assistant text.','',
@@ -130,7 +139,7 @@ def prepare():
              '- FWD2 compact screen: Micro is fastest, but only 1/9 usable; Sonnet 3/9; Nova2 and Haiku 0/9. Current FWD2 is deterministic and none of these is a justified replacement.',
              '- Stale-context PASS repeats in DEF/MID/FWD1 in both r1-v2/v3 survive as syntactically valid mistakes. A prompt guard is a testable hypothesis, not a demonstrated fix to the live M8.',
              '- Fast invalid replies do not count as good latency. results/comparison.json includes usable-only latency, evaluable-decision denominators and the original stricter policy-gate results.',
-             '- All unmeasured role/model/prompt cells remain not_measured with null percentiles in the coverage matrix. New 100-case suite has NO model results.', '',
+             '- All unmeasured role/model/prompt cells remain not_measured with null percentiles in this archived coverage matrix. Live P01 screening of a subset is tracked separately; its receipts are not embedded here.', '',
              'Sources, source/prompt hashes, per-case recomputed failures, quantile definition and all coverage cells: [comparison.json](results/comparison.json). '
              'Replay: `python3 research/v3/model-prompt-lab/lab.py`.']
     (HERE/'COMPARISON.md').write_text('\n'.join(rows)+'\n')
