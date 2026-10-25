@@ -673,3 +673,18 @@ C03: P03 DEF отложен; остальных четырёх и1-1-2 сохр�
 Одно следующее изменение — L01 только после native/Fitness; rollback MID15,
 точный baseline binding и свежий Fitness5/5. Детали и воспроизведение:
 [mid_fast_v1/README](mid_fast_v1/README.ru.md), [запрос](research/v3/model-prompt-lab/GAME_FLOW_REQUEST.ru.md).
+
+## 2026-10-25 — L01 MID native screen and incoming match
+
+The live EPAM Spor match completed 1:3 before native screening began. The portal
+showed the previous MID binding and formation 1-1-2; this match is not an L01
+evaluation. No shot, possession, or event timeline data was captured here.
+
+L01 produced 224/224 complete valid native decisions, but failed the predeclared
+latency gate: six first-in-session calls took 2.37–3.42 s against the official
+1 s budget; overall p95 was 145.238 ms and later-session p95 127.029 ms. Those
+warm calls do not erase first-call misses. All six probe sessions were stopped.
+Fitness was not run and L01 was not registered. See
+`research/v3/model-prompt-lab/results/mid-l01-native-screen-20261025.json`.
+Investigate cold-start/session behaviour as a new experiment; do not weaken the
+gate or change the active lineup based on these data.
