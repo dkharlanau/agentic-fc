@@ -1,11 +1,11 @@
 {
   "id": "ranked-batch-18",
-  "status": "in-progress-3of5",
+  "status": "in-progress-4of5",
   "targetCompletedGames": 5,
-  "completedGames": 3,
+  "completedGames": 4,
   "setup": "unchanged registered baseline, formation 1-1-2; existing FWD5 fast path; no L02 candidate installed",
   "preflight": {
-    "portalState": "three matches completed; no active match visible after the third report",
+    "portalState": "four matches completed; a fifth may be queued automatically by the portal",
     "freshFitness": "not rerun; no candidate or configuration change",
     "formation": "1-1-2",
     "candidateInstalled": false
@@ -167,33 +167,64 @@
         "Our report shows role latency 2/2/2/1/1ms and team mean 2ms, but it conflicts with recent comparable reports and command totals; latency and action counts are excluded from analysis pending corroboration.",
         "FC Zukko was not present in the loaded top-48 standings rows; rank and pre/post leaderboard change are unknown."
       ]
+    },
+    {
+      "opponent": "Human Override Disab",
+      "result": "LOSS",
+      "score": "0-1",
+      "possessionPct": "46-54",
+      "shots": "4-2",
+      "shotsOnTarget": "0-1",
+      "teamAverageLatencyMs": 1590,
+      "teamCommands": 310,
+      "roleLatencyMs": [1273, 1183, 1880, 1202, 1491],
+      "successPct": "100% all roles",
+      "actions": {"MOVE": 193, "PRESS": 67, "PASS": 26, "INTERCEPT": 11, "CLEAR": 10, "GK_DIST": 3},
+      "goals": [{"minute": "2'", "scorer": "Human Override Disab DEF (Bastion)"}],
+      "opponentReport": {
+        "teamAverageLatencyMs": 19,
+        "teamCommands": 31,
+        "roleLatencyMs": [3, 2, 2, 2, 83],
+        "successPct": "100% all roles",
+        "actions": {"CLEAR": 28, "INTERCEPT": 1, "PASS": 1, "PRESS": 1},
+        "leaderboardAfterMatch": {"rank": 43, "played": 88, "points": 87, "wins": 28, "draws": 3, "losses": 57, "goals": "80-142", "goalDifference": -62},
+        "leaderboardBeforeObserved": null
+      },
+      "reportAiOverview": "Generated report says Human Override Disab held 54% possession and used CLEAR_OVERRIDE to shut down buildup; it describes our MOVE-heavy play as uncoordinated. This is generated commentary, not verified event-level causality.",
+      "observations": [
+        "No Human in the Loop had 46% possession, 4 shots and 0 on target; Human Override Disab had 54%, 2 shots and 1 on target, scoring at 2'.",
+        "Our 310 commands sum to MOVE 193 (62%), PRESS 67 (22%), PASS 26 (8%), INTERCEPT 11 (4%), CLEAR 10 (3%) and GK_DIST 3 (1%); no SHOOT command appears despite 4 shots. Team mean latency was 1590ms and role means 1273/1183/1880/1202/1491ms. All roles reported 100% success.",
+        "Human Override Disab reported CLEAR 28/31 (90%) and 19ms team mean; role means were 3/2/2/2/83ms. All roles reported 100% success.",
+        "This is the cohort's first loss and first report with a four-digit own team mean. No independent timeout or invocation audit was captured; the delay cause remains unknown.",
+        "Human Override Disab appeared rank43, 88 played, 87 points, 28W/3D/57L, goals80-142 after the match. No prior snapshot was captured, so the full row is not assigned to this result."
+      ]
     }
   ],
-  "leaderboardAfterGame2": {
+  "leaderboardAfterGame4": {
     "rank": 12,
-    "played": 177,
+    "played": 178,
     "points": 327,
     "wins": 107,
     "draws": 6,
-    "losses": 64,
-    "goals": "243-144"
+    "losses": 65,
+    "goals": "243-145"
   },
   "seriesAnalysis": {
-    "record": "3W/0D/0L so far",
-    "goals": "6-1",
+    "record": "3W/0D/1L so far",
+    "goals": "6-2",
     "points": 9,
     "leaderboardDelta": {
       "rank": "12 to 12",
-      "played": "174 to 177",
+      "played": "174 to 178",
       "points": "318 to 327",
       "wins": "+3",
       "draws": "+0",
-      "losses": "+0",
-      "goals": "237-143 to 243-144"
+      "losses": "+1",
+      "goals": "237-143 to 243-145"
     },
-    "opponentPatterns": "All three opponents in the partial cohort list CLEAR as their most frequent action (Feyenoord 42/49, Hallucination FC2 43/54, FC Zukko 38/48). This repeated label is an observation across three matches, not proof of common tactics or successful defensive clears.",
-    "latencyReview": "Our report averages are 73ms and 75ms in two matches; FC Zukko's report showed anomalous 2ms and is excluded. The <=10ms goal is not established. Opponent team means were 14-16ms, but FWD5 values were 70-74ms. These are summary values, not full response-time distributions or independent timeout audits.",
-    "decision": "Partial cohort only; do not change setup based on these three wins. Continue unchanged configuration through five completed matches, then analyze the cohort."
+    "opponentPatterns": "All four opponents' reports list CLEAR as the most frequent action (79-90%). This repeats a label, not proof of common tactics or successful defensive clears.",
+    "latencyReview": "Our coherent report means were 73ms and 75ms in the first two matches; FC Zukko's 2ms was internally inconsistent and excluded. Human Override Disab report shows 1590ms, with role means 1183-1880ms. The <=10ms goal is unmet. Opponent means were 14-19ms while FWD5 values were 70-83ms. These are report summaries, not independent timeout audits.",
+    "decision": "The 0-1 loss coincides with 1590ms average and zero shots on target while MOVE was 62% of reported commands. This is a diagnostic lead, not causal proof; keep setup unchanged mid-cohort. Finish game five, then review latency and shot-generation evidence."
   },
-  "note": "The first two games appeared in the portal's real-match flow after batch17; the third was started by selecting Surprise me from ready ranked teams. Configuration remained unchanged throughout. No match identifiers, credentials, ARNs, account IDs, or raw states are recorded."
+  "note": "The first two games appeared in the portal's real-match flow after batch17; the third was started by selecting Surprise me from ready ranked teams; the fourth appeared automatically. Configuration remained unchanged throughout. No match identifiers, credentials, ARNs, account IDs, or raw states are recorded."
 }
