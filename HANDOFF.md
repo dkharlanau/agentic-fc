@@ -733,12 +733,12 @@ usage last read 24% used. No active game at this checkpoint. Continue one game
 at a time, capture reports/opponent details, and analyze only after 5/5. No
 practice, benchmarks, candidate install, or configuration changes.
 
-Batch19 game1 is complete: FootballCore 0:1 loss, report latency 2434ms, 36%
-possession, 10:2 shots and 1:0 on target. FootballCore logged 21/22 CLEAR
-(95%) and 18ms average. Our post-game row is #12, 180 played, 330 points,
-108W/6D/66L, goals244:147. These details are recorded in
+Batch19 game1 is complete: No Human in the Loop beat FootballCore 1:0, with
+2434ms report latency, 36% possession, 10:2 shots and 1:0 on target.
+FootballCore logged 21/22 CLEAR (95%) and 18ms average. Our post-game row was
+#12, 180 played, 330 points, 108W/6D/66L, goals244:147. These details are in
 `research/v3/ranked-batch-19.json`; the 2.4s team latency is unexplained, not
-yet attributed to model, service, or network. Continue batch unchanged.
+attributed to model, service, or network.
 
 Batch19 game2 is ERTT 0:1, a win: 53% possession, 4:6 shots, 1:0 on target;
 our report mean 1172ms, 169/185 commands PRESS (91%); ERTT had CLEAR27/30
@@ -753,3 +753,9 @@ Cloud had 17ms and CLEAR17/19 (89%). Standings after match: #10, 182 played,
 336 points, 110W/6D/66L, goals247:147. This is the third consecutive report
 above 1s own latency; root cause still unknown. Batch19 is 3/5; continue without
 configuration changes. See `research/v3/ranked-batch-19.json`.
+
+Batch19 game4: Points Donors 0:2, win; 46% possession, 3:8 shots, 2:0 on
+target. Our 332-command report showed 456ms, led by INTERCEPT244 and SHOOT27;
+Points Donors had CLEAR37/40 (93%) and 17ms. Leaderboard #10, 183 played, 339
+points, 111W/6D/66L, goals249:147. Batch19 is 4/5. Keep setup unchanged through
+the final game; full report is in `research/v3/ranked-batch-19.json`.

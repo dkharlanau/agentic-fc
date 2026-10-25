@@ -1,11 +1,11 @@
 {
   "id": "ranked-batch-19",
-  "status": "in-progress-3of5",
+  "status": "in-progress-4of5",
   "targetCompletedGames": 5,
-  "completedGames": 3,
+  "completedGames": 4,
   "setup": "registered baseline, formation 1-1-2; GK/DEF/MID/FWD4 show global.amazon.nova-2-lite-v1:0; FWD5 remains existing fast path, model not verified",
   "preflight": {
-    "portalState": "three matches completed; check for active queue before continuing",
+    "portalState": "four matches completed; check for active queue before continuing",
     "freshFitness": "not rerun; continuing same registered baseline",
     "formation": "1-1-2",
     "candidateInstalled": false
@@ -115,10 +115,45 @@
         "Both goals were attributed to MID3 at 2'. This is the third report in this new cohort with own team mean above 1s; cause is unknown and no independent timeout audit was captured.",
         "Lighting Cloud was not visible in the loaded top48 rows. Our post-match leaderboard showed rank10, 182 played, 336 points, 110W/6D/66L and goals247-147: +1 win, +3 points, +2 goals scored from game2."
       ]
+    },
+    {
+      "opponent": "Points Donors",
+      "result": "WIN",
+      "score": "2-0",
+      "possessionPct": "46-54",
+      "shots": "3-8",
+      "shotsOnTarget": "2-0",
+      "teamAverageLatencyMs": 456,
+      "teamCommands": 332,
+      "roleLatencyMs": [435, 450, 440, 460, 454],
+      "successPct": "100% all roles",
+      "actions": {"INTERCEPT": 244, "MOVE": 42, "SHOOT": 27, "CLEAR": 8, "PRESS": 5, "GK_DIST": 3, "PASS": 3},
+      "goals": [
+        {"minute": "1'", "scorer": "MID 3"},
+        {"minute": "1'", "scorer": "MID 3"}
+      ],
+      "opponentReport": {
+        "teamAverageLatencyMs": 17,
+        "teamCommands": 40,
+        "roleLatencyMs": [3, 2, 2, 2, 77],
+        "successPct": "100% all roles",
+        "actions": {"CLEAR": 37, "PASS": 2, "PRESS": 1},
+        "leaderboardAfterMatch": null,
+        "leaderboardRank": "not visible in loaded top 48 rows"
+      },
+      "reportAiOverview": "The report remained at 'Generating summary'; no AI-generated explanation was used.",
+      "observations": [
+        "No Human in the Loop won 2-0 with 46% possession, 3 shots and 2 on target; Points Donors had 54%, 8 shots and 0 on target.",
+        "Our 332 commands sum to INTERCEPT244 (73%), MOVE42 (13%), SHOOT27 (8%), CLEAR8, PRESS5, GK_DIST3 and PASS3. Team mean latency was 456ms; role values 435/450/440/460/454ms. All roles reported 100% success.",
+        "Points Donors reported CLEAR37/40 (93%), PASS2 and PRESS1, with 17ms team mean and role means3/2/2/2/77ms. All roles reported 100% success.",
+        "Both goals were attributed to MID3 at 1'. This report has lower own average latency than the prior three games in this cohort; no cause for the difference is established.",
+        "Points Donors was not visible in the loaded top48 rows. Our post-match leaderboard showed rank10, 183 played, 339 points, 111W/6D/66L and goals249-147: +1 win, +3 points and +2 goals scored from game3."
+      ]
     }
   ],
   "leaderboardAfterGame1": {"rank": 12, "played": 180, "points": 330, "wins": 108, "draws": 6, "losses": 66, "goals": "244-147"},
   "leaderboardAfterGame2": {"rank": 10, "played": 181, "points": 333, "wins": 109, "draws": 6, "losses": 66, "goals": "245-147"},
   "leaderboardAfterGame3": {"rank": 10, "played": 182, "points": 336, "wins": 110, "draws": 6, "losses": 66, "goals": "247-147"},
+  "leaderboardAfterGame4": {"rank": 10, "played": 183, "points": 339, "wins": 111, "draws": 6, "losses": 66, "goals": "249-147"},
   "note": "Collect five consecutive real ranked matches with the setup unchanged. Capture each official report and opponent profile, then analyze at 5/5. No benchmarks or practice games."
 }
