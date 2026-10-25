@@ -810,3 +810,24 @@ which is not an independent timeout or runtime-health audit. We should first
 investigate report-count/latency discrepancies, then compare the next candidate
 only through its specified preflight gates. No prompt/model/formation changes
 were made in this cohort.
+
+## 2026-10-25 — ranked batch21 complete; five opponent reports
+
+The unchanged baseline finished 2W/3L, 9:7 goals, and added six points across
+five games. The row stayed #10, moving from 189 games/354 points/257:151 to 194
+games/360 points/266:158. Reports give 29:22 shots, 9:7 on target and 43.8%
+mean possession. Opponent reports total 251 CLEAR actions out of 297 commands
+(84.5%); all five were clearance-heavy, but labels do not identify intent or
+success. Opponent mean report latency was 16.2ms (median16); ours was 75, 77,
+825, 79 and 1ms (median77). Four role tables reported 100% success throughout,
+which does not establish timely or tactically useful decisions.
+
+The fifth report is a serious telemetry inconsistency: our 28 commands were
+all CLEAR and every role showed 1ms, while the match screen/report showed eight
+shots and two on target. In game two, six SHOOT labels corresponded to one shot;
+in game three, four SHOOT labels corresponded to six shots. Treat command
+breakdowns as an imperfect activity view, not a complete trace. Cause of the
+one-millisecond report is unknown. A further L02 attempt should wait for a new
+measured artifact and a clean native/Fitness/config-readback gate; the previous
+exact archive failed its cold-start gate. This five-match cohort is descriptive
+and too small for causal strategy claims. Full rows: `research/v3/ranked-batch-21.json`.
