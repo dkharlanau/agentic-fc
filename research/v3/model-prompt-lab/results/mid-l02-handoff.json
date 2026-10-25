@@ -9,9 +9,9 @@
   "ownerAuthorizedMessageToGameChat": true,
   "messageDelivered": true,
   "operatorAcknowledged": true,
-  "operatorReported": "Ada baseline match finished; isolated L02 is CREATING on V2; original MID binding preserved",
+  "operatorReported": "L02/V2 native FAIL: 224 valid replies, overall p95 approximately 150ms, six first calls approximately 1.9-3.1s; no binding or Fitness; new baseline match started",
   "sourceOfStatus": "game operator commentary; not an independent AWS readback",
-  "native": null,
+  "native": {"platform": "V2", "passed": false, "source": "operator commentary; exact receipt export pending", "receivedReported": 224, "validReported": 224, "lateFirstCallsReported": 6},
   "fitness": null,
   "registered": false,
   "promotion": false,
@@ -19,5 +19,6 @@
   "localArchiveReplayPassed": 224,
   "githubCI": "both workflows passed for sourceCommit",
   "archiveByteIdenticalRebuild": true,
+  "nextCheck": "Identical L02 archive on V1; handed off, not yet measured; require unchanged full native/Fitness gates",
   "note": "Handoff progress only. A later exact native/Fitness/binding receipt supersedes this snapshot."
 }

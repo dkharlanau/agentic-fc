@@ -5,10 +5,17 @@ against 1s deadline. Never registered; Fitness not run. EPAM played baseline.
 Receipt: research/v3/model-prompt-lab/results/mid-l01-native-screen-20261025.json.
 Owner explicitly requests autonomous corrections and release handoff after gates.
 
+UPDATE: game operator reports L02/V2 native FAIL, all224 valid but all6 first
+responses about1.9–3.1s. No MID binding or Fitness. Exact stage/receipt export
+pending. Next handed-off check is the IDENTICAL L02 archive on V1 (new isolated
+runtime/sessions/output); no new policy. Another baseline match is underway,
+so the operator waits for a free boundary. Do not mistake the prepared code
+or overall p95~150ms for promotion. See mid-l02-handoff.json in results.
+
 L02 prepared in mid_fast_v2/README.ru.md: same L01 policy/source hashes, stdlib
 HTTP/SSE adapter instead of SDK/dependencies. Archive 16,499 bytes instead of
 20,613,452. 23 focused tests and extracted archive 224/224 replay pass; local
-process startup is not AWS startup. Native/Fitness pending, not deployed.
+process startup is not AWS startup. V2 native failed; V1/Fitness pending, unregistered.
 Use --candidate L02 with native_probe.py and grade_native.py; archive hash is
 strictly candidate-bound. First responses remain mandatory; no deadline weakening.
 Only game operator owns AWS/portal. At idle series boundary: isolated Runtime,
