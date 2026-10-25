@@ -11,14 +11,14 @@ Research evidence is in the adjacent research repository at
 `research/v3/model-prompt-lab/results/mid-l02-native-screen-20261025.json`.
 
 Batch16 baseline was complete 4W/0D/1L, 11:3. Batch17 is underway, unchanged
-baseline, 2/5 complete: Le Masia 0:2 and Amber Arcs 2 0:1. In both games the
-opponent had most possession (70%, 59%) but fewer on-target shots (0, 0); we
-scored twice in the first and once from 2 shots in the second. Le Masia used
-CLEAR on 37/41 commands (90%); Amber used it on 36/50 (72%), similar to its
-prior observed 36/52 (69%). Amber's own-side latency/command fields conflict
-with its FWD5 award and prior reports; exclude them from comparison. Table is
-rank13, 171 played, 311 points. Detailed rows/caveats:
-`research/v3/ranked-batch-17.json`. The portal was checked idle and READY TO PLAY,
+baseline, 3/5 complete: Le Masia 0:2 W, Amber Arcs 2 1:0 W, Agents United 0:0 D.
+Current score 3:0, record 2W/1D, rank13 / 172 played / 312 points. Le Masia
+used CLEAR on 37/41 commands (90%); Amber used CLEAR 36/50 (72%), similar to its
+prior observed 36/52 (69%). Amber's own-side report fields conflict and are
+excluded from latency/action comparison. Agents United drew with 555/600 MOVE
+commands, only 2 SHOOT; its report has no shots/possession stats. Record this as
+a candidate hypothesis for post-series review, not a mid-series change. Detailed
+rows/caveats: `research/v3/ranked-batch-17.json`. The portal was checked idle and READY TO PLAY,
 formation 1-1-2. Continue real ranked matches on this unchanged approved lineup,
 recording each opponent's report/profile and caveats. Finish each five-game
 cohort before analyzing or changing a candidate. Check quota between matches;

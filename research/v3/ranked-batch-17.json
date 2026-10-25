@@ -1,8 +1,8 @@
 {
   "id": "ranked-batch-17",
-  "status": "in-progress-2of5-baseline",
+  "status": "in-progress-3of5-baseline",
   "targetCompletedGames": 5,
-  "completedGames": 2,
+  "completedGames": 3,
   "setup": "unchanged registered baseline, formation 1-1-2; existing FWD5 fast path; no L02 candidate installed",
   "preflight": {
     "portalState": "READY TO PLAY before search; match completed",
@@ -156,6 +156,59 @@
         "Amber Arcs 2 current leaderboard row: rank36, 66 played, 114 points, 38W/0D/28L, goals90-65. The row is three matches beyond the last saved observation; do not assign its full delta to this match.",
         "The report says all agents were 100% successful. Formation, pass completion, locations, and event-level defensive sequence remain unavailable."
       ]
+    },
+    {
+      "opponent": "Agents United",
+      "result": "DRAW",
+      "score": "0-0",
+      "possessionPct": null,
+      "shots": null,
+      "shotsOnTarget": null,
+      "teamAverageLatencyMs": 430,
+      "teamCommands": 600,
+      "roleLatencyMs": [
+        75,
+        72,
+        612,
+        658,
+        645
+      ],
+      "successPct": "100% all roles",
+      "actions": {
+        "MOVE": 555,
+        "PASS": 28,
+        "PRESS": 9,
+        "GK_DIST": 4,
+        "CLEAR": 2,
+        "SHOOT": 2
+      },
+      "opponentReport": {
+        "teamAverageLatencyMs": 17,
+        "teamCommands": 39,
+        "roleLatencyMs": [
+          3,
+          2,
+          2,
+          2,
+          68
+        ],
+        "successPct": "100% all roles",
+        "actions": {
+          "CLEAR": 30,
+          "PASS": 6,
+          "PRESS": 2,
+          "INTERCEPT": 1
+        },
+        "leaderboardRank": "not visible in the loaded top 48 rows"
+      },
+      "reportAiOverview": "Generated report says our team dominated possession through 555 MOVE_TO commands but lacked finishing; Agents United defended with 30 CLEAR_OVERRIDEs. It recommends more shooting and pass sequences. The page did not show a possession/shots/target stats panel, so those values remain unknown; AI commentary is not a verified tactical trace.",
+      "observations": [
+        "The match ended 0-0 after extra time. The report did not display possession, shots, or shots on target; retain them as unknown.",
+        "Our 600 reported commands sum to 555 MOVE (93%), 28 PASS (5%), 9 PRESS (2%), 4 GK_DIST, 2 CLEAR and 2 SHOOT. This is the clearest evidence in the sample that movement commands dominated, but it does not reveal whether moves were useful or where shots occurred.",
+        "Agents United used CLEAR for 30/39 commands (77%), PASS 6, PRESS 2, INTERCEPT 1. Live commentary described patient buildup and probing for a gap; this is one observed match, not necessarily their fixed style.",
+        "Our team average was 430ms (roles 75/72/612/658/645); opponent average 17ms (roles 3/2/2/2/68). All roles reported 100% success.",
+        "Generated coach advice suggests increasing SHOOT and PASS after a move-heavy 0-0. Keep this as a hypothesis for evaluation after the five-match series; do not change the current lineup mid-series."
+      ]
     }
   ],
   "leaderboardAfterGame1": {
@@ -168,13 +221,22 @@
     "goals": "233-143"
   },
   "seriesAnalysis": null,
-  "note": "Two completed games of the five-game baseline cohort. No setup changes or cohort-level analysis before five games; preserve report inconsistencies.",
+  "note": "Three completed games of the five-game baseline cohort: 2W/1D/0L, score 3-0. No setup changes or cohort-level analysis before five games; game3 has no possession/shots stats in the report.",
   "leaderboardAfterGame2": {
     "rank": 13,
     "played": 171,
     "points": 311,
     "wins": 102,
     "draws": 5,
+    "losses": 64,
+    "goals": "234-143"
+  },
+  "leaderboardAfterGame3": {
+    "rank": 13,
+    "played": 172,
+    "points": 312,
+    "wins": 102,
+    "draws": 6,
     "losses": 64,
     "goals": "234-143"
   }
