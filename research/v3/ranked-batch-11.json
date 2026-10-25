@@ -295,7 +295,7 @@
       "alias": "stance-live-07",
       "opponent": "FootballCore",
       "side": "HOME",
-      "status": "preparing",
+      "status": "running",
       "initiation": "manual random matchmaking",
       "matchReport": "https://agentic-football.aws.dev/matches/862c811e-8294-4df0-b3ff-890ae1a01304/report"
     }
