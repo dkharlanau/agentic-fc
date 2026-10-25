@@ -1,7 +1,7 @@
 {
   "id": "ranked-batch-12",
   "coachVersion": "coach-v1.0",
-  "status": "complete-awaiting-analysis",
+  "status": "complete",
   "targetCompletedGames": 10,
   "completedGames": 10,
   "createdAtUTC": "2026-10-25T07:02:19.911385+00:00",
@@ -752,7 +752,75 @@
     "activeMatch": false,
     "automaticShutdown": false,
     "quotaGuardPercent": 5,
-    "remainingQuotaPercentLastCheck": 89
+    "remainingQuotaPercentLastCheck": 87
   },
-  "ownerScope": "This branch plays real matches, collects data and observations, pushes GitHub checkpoints, and changes lineup/setup only on explicit request."
+  "ownerScope": "This branch plays real matches, collects data and observations, pushes GitHub checkpoints, and changes lineup/setup only on explicit request.",
+  "analysis": "research/v3/ranked-batch-12-analysis.ru.md",
+  "additionalIncomingMatches": [
+    {
+      "alias": "post-batch12-incoming-01",
+      "opponent": "Amber Dragons X",
+      "status": "complete",
+      "includedInCohort": false,
+      "scoreFor": 0,
+      "scoreAgainst": 2,
+      "result": "LOSS",
+      "rawReportFacts": {
+        "possessionPct": 44,
+        "shotsFor": 2,
+        "shotsAgainst": 6,
+        "shotsOnTargetFor": 0,
+        "shotsOnTargetAgainst": 2,
+        "teamAverageLatencyMs": 76,
+        "teamCommands": 370,
+        "opponentAverageLatencyMs": 15,
+        "opponentCommands": 39,
+        "agentLatencyMs": [
+          75,
+          79,
+          76,
+          75,
+          77
+        ],
+        "opponentAgentLatencyMs": [
+          2,
+          1,
+          1,
+          1,
+          71
+        ],
+        "teamCommandCounts": {
+          "MOVE_TO": 273,
+          "CLEAR_OVERRIDE": 48,
+          "PRESS_BALL": 20,
+          "INTERCEPT": 15,
+          "PASS": 7,
+          "SHOOT": 6,
+          "GK_DISTRIBUTE": 1
+        },
+        "opponentCommandCounts": {
+          "CLEAR_OVERRIDE": 33,
+          "PASS": 5,
+          "PRESS_BALL": 1
+        },
+        "agentSuccessPct": [
+          100,
+          100,
+          100,
+          100,
+          100
+        ],
+        "opponentAgentSuccessPct": [
+          100,
+          100,
+          100,
+          100,
+          100
+        ]
+      },
+      "dataQualityNotes": [
+        "Read from the portal report after cohort12; kept separate from the completed ten-game cohort."
+      ]
+    }
+  ]
 }

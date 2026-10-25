@@ -1,5 +1,27 @@
 # Agentic FC continuation
 
+## Current checkpoint — 2026-10-25 (after batch 12)
+
+Batch12 is complete: 10/10 real ranked matches, 6W/0D/4L, 16:7. Analysis:
+`research/v3/ranked-batch-12-analysis.ru.md`. The ten-match leaderboard delta
+is verified separately; one later incoming Amber Dragons X match (0:2 loss)
+is saved outside the cohort in `research/v3/ranked-batch-12.json` and excluded
+from those ten-game deltas. No active match was visible in the current portal;
+the shown report is complete.
+
+P01 remains uninstalled and ineligible: the paired screen and exact live config
+readback have not run, and there is no fresh candidate Fitness. AWS Workshop
+CloudShell session expired and local AWS credentials are unavailable. Workshop
+join requires accepting Responsible AI Policy, AUP, and Event Terms; explicit
+owner consent is still pending. Do not accept terms without that consent. Do
+not start the requested five P01 matches until screening, deadline gate, exact
+readback, and fresh Fitness 5/5 all pass. Current Codex usage check: 13% used,
+87% remaining. Keep this research checkpoint separate from the live AWS setup.
+
+The batch12 base setup remains four original M8 Nova2Lite Harnesses plus FWD2
+stance rev9/source931af03, formation1-1-2. Do not use the additional incoming
+match as part of the 10-game cohort or as evidence for P01.
+
 ## Current checkpoint — 2026-10-25T07:02:19.911385+00:00
 
 Quota at batch12 start: 1% used / 99% remaining; after game5: 9% used / 91% remaining. Historical 5% stop below is superseded by changed quota and owner continuation. Latest owner cohort size is TEN real games, overriding older five-game notes. No shutdown or VPN change.
