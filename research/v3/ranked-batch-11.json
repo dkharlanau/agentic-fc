@@ -1,7 +1,7 @@
 {
   "id": "ranked-batch-11",
   "coachVersion": "coach-v1.0",
-  "status": "running",
+  "status": "complete-awaiting-analysis",
   "targetCompletedGames": 10,
   "setup": {
     "sourceCommit": "931af03",
@@ -448,9 +448,56 @@
       "alias": "stance-live-10",
       "opponent": "Mobile United FC",
       "side": "HOME",
-      "status": "running",
+      "status": "complete",
       "initiation": "manual random matchmaking",
-      "matchReport": "https://agentic-football.aws.dev/matches/f5efc679-8ebc-42d7-b37c-f36c53108729/report"
+      "matchReport": "https://agentic-football.aws.dev/matches/f5efc679-8ebc-42d7-b37c-f36c53108729/report",
+      "result": "WIN",
+      "scoreFor": 2,
+      "scoreAgainst": 1,
+      "rawReportFacts": {
+        "possessionPct": 29,
+        "shotsFor": 10,
+        "shotsAgainst": 2,
+        "shotsOnTargetFor": 2,
+        "shotsOnTargetAgainst": 1,
+        "teamAverageLatencyMs": 572,
+        "teamCommands": 301,
+        "opponentAverageLatencyMs": 15,
+        "opponentCommands": 77,
+        "agentLatencyMs": [
+          2,
+          1,
+          1012,
+          927,
+          786
+        ],
+        "opponentAgentLatencyMs": [
+          3,
+          2,
+          2,
+          2,
+          71
+        ],
+        "teamCommandBreakdownPct": {
+          "press": 58,
+          "move": 30,
+          "clear": 8,
+          "shoot": 3,
+          "intercept": 2
+        },
+        "opponentCommandBreakdownPct": {
+          "clear": 75,
+          "pass": 22,
+          "intercept": 1,
+          "press": 1
+        },
+        "goalsObserved": [
+          "FWD 4 No Human in the Loop (1)",
+          "MID 2 Mobile United FC (1)",
+          "MID 3 No Human in the Loop (2)"
+        ]
+      },
+      "completedAtObserved": "2026-10-25T09:04:00Z"
     }
   ],
   "incomingGamesObservedBeforeSeries": {
@@ -462,15 +509,15 @@
     ]
   },
   "ownerDirective": "Ten real games per cohort; analyze only after all ten complete",
-  "analysisGate": "After game 10 only",
+  "analysisGate": "Open: all ten cohort games complete",
   "setupSnapshot": "research/v3/cohort-setup-20261025.json",
   "operations": {
     "remainingQuotaPercent": 4,
     "newMatchesAllowed": true,
     "reason": "Owner explicitly authorized ten real matches in batches and deferred analysis until cohort completion",
-    "activeMatch": true,
+    "activeMatch": false,
     "automaticShutdown": false,
     "noNewAutomations": true
   },
-  "completedGames": 9
+  "completedGames": 10
 }
