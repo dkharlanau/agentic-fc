@@ -796,3 +796,12 @@ MID/FWD ~1s. Opponent means were 15-25ms (median17). All report success values
 were 100%; no independent timeout audit was available. Codex allowance last
 checked after game3 at 24% used; check again before another cohort. No setup
 changes were made; do not infer tactical causality from this five-game sample.
+
+Batch21 opened after batch20 closed 5/5 and the portal leaderboard showed no
+active-match notice. Current row #9, 189 played, 354 points, 116W/6D/67L,
+goals257:151; baseline formation1-1-2 confirmed on team page. No candidate is
+ready: P01 research manifest reports rejection at paired screening; the newly
+merged main branch only adds native-latency diagnostics, not a gameplay release.
+Continue one real ranked game at a time on unchanged baseline, capture opponent
+reports/visible leaderboard rows, analyze only after 5/5, and check quota at the
+boundary. See `research/v3/ranked-batch-21.json`.

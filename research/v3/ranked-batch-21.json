@@ -1,0 +1,25 @@
+{
+  "id": "ranked-batch-21",
+  "status": "in-progress-0of5",
+  "targetCompletedGames": 5,
+  "completedGames": 0,
+  "setup": "registered baseline, formation 1-1-2; GK/DEF/MID/FWD4 show global.amazon.nova-2-lite-v1:0; FWD5 remains existing fast path, model not verified",
+  "preflight": {
+    "portalState": "leaderboard loaded; no active match alert; READY TO PLAY",
+    "formation": "1-1-2",
+    "candidateInstalled": false,
+    "candidateStatus": "P01 manifest on research branch reports rejected at paired screen; no eligible release is ready. New main merge is native-latency diagnostics only.",
+    "liveConfigChanged": false
+  },
+  "beforeLeaderboard": {
+    "rank": 9,
+    "played": 189,
+    "points": 354,
+    "wins": 116,
+    "draws": 6,
+    "losses": 67,
+    "goals": "257-151"
+  },
+  "games": [],
+  "note": "Play five real ranked matches, one at a time, unchanged baseline. Capture opponent match reports and visible standings, then analyze at 5/5. No benchmarks or practice games."
+}
