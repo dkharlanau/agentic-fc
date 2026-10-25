@@ -1,0 +1,53 @@
+{
+  "id": "ranked-batch-11",
+  "coachVersion": "coach-v1.0",
+  "status": "running",
+  "targetCompletedGames": 10,
+  "setup": {
+    "sourceCommit": "931af03",
+    "revision": 9,
+    "fwd2Mode": "stance",
+    "otherRoles": "original M8 GK13 DEF19 MID15 FWD1v16",
+    "formation": "1-1-2"
+  },
+  "startedAt": "2026-10-25T06:06:07.322049+00:00",
+  "beforeLeaderboard": {
+    "rank": 19,
+    "points": 211,
+    "played": 124,
+    "wins": 69,
+    "draws": 4,
+    "losses": 51,
+    "goalsFor": 162,
+    "goalsAgainst": 112
+  },
+  "games": [
+    {
+      "alias": "stance-live-01",
+      "opponent": "Singularity FC",
+      "side": "HOME",
+      "status": "running",
+      "startedAt": "2026-10-25T06:07:09.282022+00:00",
+      "initiation": "manual random matchmaking"
+    }
+  ],
+  "incomingGamesObservedBeforeSeries": {
+    "winsInStreak": 3,
+    "recentHistory": [
+      "Soccer 2-0 win",
+      "Gork ’n’ Mork Boyz 2-1 win",
+      "Le Masia 1-0 win"
+    ]
+  },
+  "ownerDirective": "Ten real games per cohort; analyze only after all ten complete",
+  "analysisGate": "After game 10 only",
+  "setupSnapshot": "research/v3/cohort-setup-20261025.json",
+  "operations": {
+    "remainingQuotaPercent": 4,
+    "newMatchesAllowed": true,
+    "reason": "Owner explicitly authorized ten real matches in batches and deferred analysis until cohort completion",
+    "activeMatch": true,
+    "automaticShutdown": false,
+    "noNewAutomations": true
+  }
+}
