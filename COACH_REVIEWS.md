@@ -1,3 +1,14 @@
+## 2026-10-25 — L02 rejected before game deployment
+
+L02 on both V2 and V1 returned 224/224 valid responses but failed the hard
+1-second first-call gate (6/6 late on each platform). The V1 response headers
+consumed nearly all of the first-call wall time; measured application handling
+was around 1 ms, and Python import/readiness 168–236 ms. This shows where the
+measured delay was not, but does not prove which AWS/network stage caused it.
+No Fitness or candidate matches; live lineup and 1-1-2 remain unchanged. Keep
+playing on the registered baseline while diagnosing end-to-end invoke/session
+latency. Full sanitized receipt is in the research checkout.
+
 ## 2026-10-24T21:44:47.767478+00:00 — серия10 и порог сохранения
 
 Coach-v1.0 C01–C03 сверены. Пять HOME игр на revision9 stance:2W3L,6:6голы,

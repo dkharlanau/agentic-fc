@@ -1,3 +1,22 @@
+# Agentic FC — live continuation checkpoint, 2026-10-25
+
+L02 native screens are complete on V2 and V1. Both failed the 1s first-call
+gate: six of six first-session calls late on each platform, despite 224/224
+valid full-contract replies. V1 headers consumed nearly the complete 1.28–1.34s
+wall; application work was ~1ms and Python import/readiness 168–236ms. This
+locates the delay before response headers, but not the exact platform/network
+component. No Fitness, L02 binding, or candidate match. The current registered
+baseline remains unchanged. Do not repeat this identical archive blindly.
+Research evidence is in the adjacent research repository at
+`research/v3/model-prompt-lab/results/mid-l02-native-screen-20261025.json`.
+
+Batch16 baseline is complete 4W/0D/1L, 11:3; latest observed table position
+#13 (169 played, 305 points). The portal was checked idle and READY TO PLAY,
+formation 1-1-2. Continue real ranked matches on this unchanged approved lineup,
+recording each opponent's report/profile and caveats. Finish each five-game
+cohort before analyzing or changing a candidate. Check quota between matches;
+stop new matches at 5% remaining and checkpoint to GitHub.
+
 # Agentic FC continuation
 
 ## Latest checkpoint — 2026-10-25, batch16 complete and opponent profiles
