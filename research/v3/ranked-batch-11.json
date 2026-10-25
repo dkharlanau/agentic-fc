@@ -397,9 +397,52 @@
       "alias": "stance-live-09",
       "opponent": "Neman Grodno",
       "side": "HOME",
-      "status": "running",
+      "status": "complete",
       "initiation": "manual random matchmaking",
-      "matchReport": "https://agentic-football.aws.dev/matches/3495aa57-d26a-4aee-ad54-2d4c46a9cec0/report"
+      "matchReport": "https://agentic-football.aws.dev/matches/3495aa57-d26a-4aee-ad54-2d4c46a9cec0/report",
+      "result": "WIN",
+      "scoreFor": 2,
+      "scoreAgainst": 1,
+      "rawReportFacts": {
+        "possessionPct": 55,
+        "shotsFor": 3,
+        "shotsAgainst": 7,
+        "shotsOnTargetFor": 2,
+        "shotsOnTargetAgainst": 1,
+        "teamAverageLatencyMs": 1,
+        "teamCommands": 16,
+        "opponentAverageLatencyMs": 15,
+        "opponentCommands": 52,
+        "agentLatencyMs": [
+          3,
+          2,
+          2,
+          2,
+          2
+        ],
+        "opponentAgentLatencyMs": [
+          4,
+          4,
+          3,
+          3,
+          70
+        ],
+        "teamCommandBreakdownPct": {
+          "clear": 100
+        },
+        "opponentCommandBreakdownPct": {
+          "clear": 85,
+          "pass": 8,
+          "press": 6,
+          "intercept": 2
+        },
+        "goalsObserved": [
+          "MID 3 No Human in the Loop (1)",
+          "Joe B FWD Neman Grodno (1)",
+          "MID 3 No Human in the Loop (2)"
+        ]
+      },
+      "completedAtObserved": "2026-10-25T08:34:00Z"
     }
   ],
   "incomingGamesObservedBeforeSeries": {
@@ -421,5 +464,5 @@
     "automaticShutdown": false,
     "noNewAutomations": true
   },
-  "completedGames": 8
+  "completedGames": 9
 }
