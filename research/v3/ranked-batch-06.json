@@ -1,0 +1,257 @@
+{
+  "id": "ranked-batch-06",
+  "status": "complete",
+  "targetCompletedGames": 3,
+  "ownerDirective": "Renewed goal: three ranked matches then one analysis",
+  "startedAt": "2026-10-24T18:58:46.580472+00:00",
+  "setup": {
+    "name": "M8 four roles + fixed-reference fast FWD2",
+    "sourceCommit": "8747a88",
+    "formation": "1-1-2",
+    "gk": "original v13",
+    "def": "original v19",
+    "mid": "original v15",
+    "fwd1": "original v16",
+    "fwd2": "fast_path_v2 revision5; deterministic"
+  },
+  "coachVersion": "coach-v1.0",
+  "gates": {
+    "native": "28/28",
+    "fitness": "5/5",
+    "practice": "win4:0,shots6:2",
+    "physicalLimit": "Own FWD5 movement and team attacks observed; individual command effects not causally attributed"
+  },
+  "beforeLeaderboard": {
+    "rank": 15,
+    "points": 164,
+    "played": 98,
+    "wins": 54,
+    "draws": 2,
+    "losses": 42,
+    "goalsFor": 124,
+    "goalsAgainst": 92,
+    "snapshot": "allcash-benchmark/benchmark.json freshPrePilotLeaderboard"
+  },
+  "benchmark": "AllCash United; portal matches ready opponents at random, no opponent selector",
+  "games": [
+    {
+      "alias": "fixed-reference-live-01",
+      "opponent": "WKS MUCHOB\u00d3R WROC\u0141AW",
+      "side": "HOME",
+      "initiation": "manual random matchmaking",
+      "status": "complete",
+      "startedAt": "2026-10-24T18:58:46.580472+00:00",
+      "result": "win",
+      "score": [
+        4,
+        0
+      ],
+      "shots": [
+        8,
+        2
+      ],
+      "possessionPercent": [
+        26,
+        74
+      ],
+      "completedAt": "2026-10-24T19:03:27.508073+00:00",
+      "reportRoleLatencyMs": {
+        "own": [
+          554,
+          500,
+          518,
+          503,
+          514
+        ],
+        "opponent": [
+          4,
+          3,
+          3,
+          3,
+          76
+        ]
+      },
+      "successPercent": 100,
+      "reportCommands": {
+        "own": {
+          "MOVE_TO": 233,
+          "PRESS_BALL": 158,
+          "CLEAR_OVERRIDE": 27,
+          "INTERCEPT": 20,
+          "MARK": 2
+        },
+        "opponent": {
+          "CLEAR_OVERRIDE": 43,
+          "PASS": 15,
+          "PRESS_BALL": 2
+        }
+      },
+      "reportAverageLatencyMs": [
+        511,
+        15
+      ]
+    },
+    {
+      "alias": "fixed-reference-live-02",
+      "opponent": "ForzaMilan13",
+      "side": "HOME",
+      "initiation": "manual random matchmaking",
+      "status": "complete",
+      "startedAt": "2026-10-24T19:04:55.622450+00:00",
+      "result": "win",
+      "score": [
+        2,
+        0
+      ],
+      "shots": [
+        8,
+        0
+      ],
+      "possessionPercent": [
+        46,
+        54
+      ],
+      "completedAt": "2026-10-24T19:09:11.806877+00:00",
+      "reportRoleLatencyMs": {
+        "own": [
+          601,
+          921,
+          869,
+          654,
+          910
+        ],
+        "opponent": [
+          3,
+          2,
+          2,
+          2,
+          83
+        ]
+      },
+      "successPercent": 100,
+      "reportCommands": {
+        "own": {
+          "MOVE_TO": 209,
+          "MARK": 60,
+          "INTERCEPT": 51,
+          "CLEAR_OVERRIDE": 18,
+          "PASS": 18,
+          "GK_DISTRIBUTE": 5,
+          "Follow (UI label)": 9
+        },
+        "opponent": {
+          "CLEAR_OVERRIDE": 48,
+          "PASS": 7
+        }
+      },
+      "reportAverageLatencyMs": [
+        790,
+        17
+      ]
+    },
+    {
+      "alias": "fixed-reference-live-03",
+      "opponent": "Amber Horns 2",
+      "side": "HOME",
+      "initiation": "manual random matchmaking",
+      "status": "complete",
+      "startedAt": "2026-10-24T19:10:51.921254+00:00",
+      "result": "win",
+      "score": [
+        4,
+        0
+      ],
+      "shots": [
+        13,
+        2
+      ],
+      "possessionPercent": [
+        36,
+        64
+      ],
+      "completedAt": "2026-10-24T19:15:45.580680+00:00",
+      "reportRoleLatencyMs": {
+        "own": [
+          601,
+          1006,
+          992,
+          590,
+          860
+        ],
+        "opponent": [
+          3,
+          3,
+          2,
+          2,
+          74
+        ]
+      },
+      "successPercent": 100,
+      "reportCommands": {
+        "own": {
+          "MOVE_TO": 209,
+          "PRESS_BALL": 156,
+          "Reset (UI label)": 37,
+          "CLEAR_OVERRIDE": 22,
+          "INTERCEPT": 11,
+          "Follow (UI label)": 2,
+          "SHOOT": 2
+        },
+        "opponent": {
+          "CLEAR_OVERRIDE": 64,
+          "PASS": 3,
+          "INTERCEPT": 2,
+          "PRESS_BALL": 2
+        }
+      },
+      "reportAverageLatencyMs": [
+        840,
+        18
+      ]
+    }
+  ],
+  "incomingGames": [],
+  "afterLeaderboard": {
+    "rank": 16,
+    "points": 173,
+    "played": 101,
+    "wins": 57,
+    "draws": 2,
+    "losses": 42,
+    "goalsFor": 134,
+    "goalsAgainst": 92,
+    "savedAt": "2026-10-24T19:19:09.176822+00:00"
+  },
+  "summary": {
+    "wins": 3,
+    "draws": 0,
+    "losses": 0,
+    "goals": [
+      10,
+      0
+    ],
+    "shots": [
+      29,
+      4
+    ],
+    "pointsGained": 9,
+    "pointsPerGame": 3,
+    "unexplainedLeaderboardDelta": 0,
+    "allHome": true,
+    "scorelessGames": 0,
+    "cleanSheets": 3,
+    "largestWinGoalShare": 0.4
+  },
+  "decision": {
+    "action": "retain provisionally for a three-game replication",
+    "nextChange": null,
+    "rollback": "original FWD2 v14 and same other four original M8 roles; formation 1-1-2; Fitness5/5",
+    "limits": [
+      "All HOME against nonleaders; uncontrolled opponent sample",
+      "ForzaMilan13 was also beaten2:0 under previous M8",
+      "Own FWD2 audit does not match report team command/latency labels",
+      "No end-to-end10ms or tournament dominance achieved"
+    ]
+  },
+  "audit": "allcash-benchmark/ranked-audits.json"
+}

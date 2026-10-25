@@ -1,0 +1,270 @@
+{
+  "targetCompletedGames": 3,
+  "ownerDirective": "Renewed goal: three ranked matches then one analysis",
+  "setup": {
+    "name": "M8 four roles + fixed-reference fast FWD2",
+    "sourceCommit": "8747a88",
+    "formation": "1-1-2",
+    "gk": "original v13",
+    "def": "original v19",
+    "mid": "original v15",
+    "fwd1": "original v16",
+    "fwd2": "fast_path_v2 revision5; deterministic"
+  },
+  "coachVersion": "coach-v1.0",
+  "gates": {
+    "native": "28/28",
+    "fitness": "5/5",
+    "practice": "win4:0,shots6:2",
+    "physicalLimit": "Own FWD5 movement and team attacks observed; individual command effects not causally attributed"
+  },
+  "benchmark": "AllCash United; portal matches ready opponents at random, no opponent selector",
+  "id": "ranked-batch-07",
+  "status": "complete",
+  "preparedAt": "2026-10-24T19:22:32.701847+00:00",
+  "beforeLeaderboard": {
+    "rank": 16,
+    "points": 173,
+    "played": 101,
+    "wins": 57,
+    "draws": 2,
+    "losses": 42,
+    "goalsFor": 134,
+    "goalsAgainst": 92,
+    "savedAt": "2026-10-24T19:19:09.176822+00:00"
+  },
+  "games": [
+    {
+      "alias": "replication-live-01",
+      "opponent": "Octopus",
+      "side": "HOME",
+      "status": "complete",
+      "initiation": "manual random matchmaking",
+      "startedAt": "2026-10-24T19:23:00.674806+00:00",
+      "completedAt": "2026-10-24T19:28:23.171961+00:00",
+      "result": "win",
+      "score": [
+        3,
+        1
+      ],
+      "shots": [
+        8,
+        2
+      ],
+      "possessionPercent": [
+        44,
+        56
+      ],
+      "reportRoleLatencyMs": {
+        "own": [
+          80,
+          81,
+          83,
+          81,
+          88
+        ],
+        "opponent": [
+          3,
+          3,
+          2,
+          2,
+          80
+        ]
+      },
+      "successPercent": 100,
+      "reportAverageLatencyMs": [
+        86,
+        20
+      ],
+      "reportCommands": {
+        "own": {
+          "MOVE_TO": 321,
+          "INTERCEPT": 41,
+          "PRESS_BALL": 23,
+          "CLEAR_OVERRIDE": 19,
+          "MARK": 16,
+          "PASS": 16,
+          "GK_DISTRIBUTE": 3,
+          "SHOOT": 1
+        },
+        "opponent": {
+          "CLEAR_OVERRIDE": 60,
+          "PASS": 8,
+          "PRESS_BALL": 5
+        }
+      }
+    },
+    {
+      "alias": "replication-live-02",
+      "opponent": "Octopus",
+      "side": "HOME",
+      "status": "complete",
+      "initiation": "manual random matchmaking",
+      "startedAt": "2026-10-24T19:29:06.088029+00:00",
+      "completedAt": "2026-10-24T19:35:30.260153+00:00",
+      "result": "draw",
+      "score": [
+        0,
+        0
+      ],
+      "shots": null,
+      "possessionPercent": null,
+      "overtime": true,
+      "statsUnavailable": "Final report contains no STATS section; no final pitch summary captured",
+      "reportRoleLatencyMs": {
+        "own": [
+          74,
+          76,
+          72,
+          76,
+          74
+        ],
+        "opponent": [
+          3,
+          2,
+          2,
+          2,
+          75
+        ]
+      },
+      "successPercent": 100,
+      "reportAverageLatencyMs": [
+        74,
+        16
+      ],
+      "reportCommands": {
+        "own": {
+          "MOVE_TO": 443,
+          "INTERCEPT": 38,
+          "PRESS_BALL": 35,
+          "PASS": 31,
+          "MARK": 28,
+          "CLEAR_OVERRIDE": 13,
+          "SHOOT": 8,
+          "GK_DISTRIBUTE": 4
+        },
+        "opponent": {
+          "CLEAR_OVERRIDE": 44,
+          "PASS": 10,
+          "PRESS_BALL": 3,
+          "INTERCEPT": 1
+        }
+      }
+    },
+    {
+      "alias": "replication-live-03",
+      "opponent": "Amber Geysers 2",
+      "side": "HOME",
+      "status": "complete",
+      "initiation": "manual random matchmaking",
+      "startedAt": "2026-10-24T19:36:46.106920+00:00",
+      "completedAt": "2026-10-24T19:41:28.327776+00:00",
+      "result": "loss",
+      "score": [
+        0,
+        1
+      ],
+      "shots": [
+        11,
+        2
+      ],
+      "possessionPercent": [
+        27,
+        73
+      ],
+      "overtime": true,
+      "reportRoleLatencyMs": {
+        "own": [
+          621,
+          975,
+          1183,
+          650,
+          976
+        ],
+        "opponent": [
+          4,
+          4,
+          3,
+          3,
+          82
+        ]
+      },
+      "successPercent": 100,
+      "reportAverageLatencyMs": [
+        912,
+        20
+      ],
+      "reportCommands": {
+        "own": {
+          "PRESS_BALL": 217,
+          "MOVE_TO": 88,
+          "CLEAR_OVERRIDE": 12,
+          "INTERCEPT": 2
+        },
+        "opponent": {
+          "CLEAR_OVERRIDE": 26,
+          "PASS": 3,
+          "PRESS_BALL": 3
+        }
+      }
+    }
+  ],
+  "incomingGames": [],
+  "afterLeaderboard": {
+    "rank": 17,
+    "points": 177,
+    "played": 104,
+    "wins": 58,
+    "draws": 3,
+    "losses": 43,
+    "goalsFor": 137,
+    "goalsAgainst": 94,
+    "savedAt": "2026-10-24T19:41:55.673331+00:00"
+  },
+  "changeFromPreviousCohort": null,
+  "objective": "Replicate cohort06 on the unchanged configuration; report attribution unresolved",
+  "summary": {
+    "wins": 1,
+    "draws": 1,
+    "losses": 1,
+    "goals": [
+      3,
+      2
+    ],
+    "shotsKnownSubtotal": [
+      19,
+      4
+    ],
+    "shotsCoverageGames": 2,
+    "shotsTotal": null,
+    "pointsGained": 4,
+    "pointsPerGame": 1.3333333333333333,
+    "unexplainedLeaderboardDelta": 0,
+    "allHome": true,
+    "scorelessGames": 2,
+    "cleanSheets": 1
+  },
+  "leaderBenchmarkAfter": {
+    "name": "AllCash United",
+    "rank": 1,
+    "points": 590,
+    "played": 259,
+    "wins": 195,
+    "draws": 5,
+    "losses": 59,
+    "goalsFor": 607,
+    "goalsAgainst": 237
+  },
+  "audit": "allcash-benchmark/replication-audits.json",
+  "decision": {
+    "action": "retain provisionally during bounded call-route/latency diagnosis",
+    "nextPolicyChange": null,
+    "rollback": "original FWD2v14 with four original M8 and formation1-1-2; Fitness5/5",
+    "limits": [
+      "Two consecutive scoreless games",
+      "One shot total unavailable in report; do not replace with zero",
+      "All six current-setup gamesHOME; opponent selection uncontrolled",
+      "Report attribution unresolved; native Harness route diagnostic follows between blocks"
+    ]
+  }
+}

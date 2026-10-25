@@ -1,0 +1,195 @@
+{
+  "id": "ranked-batch-14",
+  "status": "complete",
+  "targetCompletedGames": 5,
+  "completedGames": 5,
+  "setup": "unchanged live baseline, FWD1v16, existing FWD2 fast path, formation 1-1-2",
+  "preflight": {
+    "portalState": "READY TO PLAY",
+    "freshFitness": "5/5 PASS",
+    "p01Installed": false
+  },
+  "games": [
+    {
+      "opponent": "Divide by Zero",
+      "result": "WIN",
+      "score": "1-0",
+      "possessionPct": 45,
+      "shots": "2-3",
+      "shotsOnTarget": "1-0",
+      "teamAverageLatencyMs": 978,
+      "teamCommands": 275,
+      "roleLatencyMs": [
+        767,
+        1018,
+        1085,
+        981,
+        870
+      ],
+      "successPct": "100% all roles",
+      "actions": {
+        "MOVE": 178,
+        "PRESS": 52,
+        "MARK": 19,
+        "PASS": 11,
+        "CLEAR": 10,
+        "SHOOT": 3,
+        "INTERCEPT": 2
+      },
+      "observation": "Match report says MID scored at minute 1; report interpretation only, not event-level causal proof."
+    },
+    {
+      "opponent": "BOYS753",
+      "result": "LOSS",
+      "score": "0-1",
+      "possessionPct": 44,
+      "shots": "5-7",
+      "shotsOnTarget": "0-1",
+      "teamAverageLatencyMs": 240,
+      "teamCommands": 335,
+      "roleLatencyMs": [
+        107,
+        248,
+        232,
+        286,
+        266
+      ],
+      "successPct": "100% all roles",
+      "actions": {
+        "MOVE": 222,
+        "PRESS": 39,
+        "MARK": 21,
+        "INTERCEPT": 18,
+        "CLEAR": 11,
+        "PASS": 11,
+        "SHOOT": 11,
+        "GK_DIST": 2
+      },
+      "observation": "Opponent MID scored at minute 1 according to match report."
+    },
+    {
+      "opponent": "BOYS753",
+      "result": "WIN",
+      "score": "1-0",
+      "possessionPct": 54,
+      "shots": "6-9",
+      "shotsOnTarget": "1-0",
+      "teamAverageLatencyMs": 252,
+      "teamCommands": 390,
+      "roleLatencyMs": [
+        103,
+        193,
+        194,
+        224,
+        234
+      ],
+      "successPct": "100% all roles",
+      "actions": {
+        "MOVE": 261,
+        "PRESS": 47,
+        "MARK": 23,
+        "INTERCEPT": 21,
+        "CLEAR": 13,
+        "PASS": 11,
+        "SHOOT": 10,
+        "GK_DIST": 4
+      },
+      "observation": "MID scored at minute 3 per match report; match appears to have reached sudden death based on live commentary."
+    },
+    {
+      "opponent": "BOYS753",
+      "result": "LOSS",
+      "score": "0-2",
+      "possessionPct": 51,
+      "shots": "2-8",
+      "shotsOnTarget": "0-2",
+      "teamAverageLatencyMs": 193,
+      "teamCommands": 375,
+      "roleLatencyMs": [
+        87,
+        240,
+        215,
+        283,
+        284
+      ],
+      "successPct": "100% all roles",
+      "actions": {
+        "MOVE": 239,
+        "PRESS": 45,
+        "INTERCEPT": 28,
+        "MARK": 27,
+        "CLEAR": 15,
+        "PASS": 10,
+        "SHOOT": 10,
+        "GK_DIST": 1
+      },
+      "observations": [
+        "Match report lists opponent goals at 1 minute (scorer unknown) and 2 minutes (DEF)."
+      ]
+    }
+  ],
+  "limitations": [
+    "All matches were HOME with random matchmaking; opponent strength and match state were not controlled.",
+    "Three matches were against BOYS753; this gives repeated observations, not a controlled experiment.",
+    "Latencies are rounded report averages, not per-call traces.",
+    "Shot distances and event-level chance context are unavailable; no conclusion about long-shot accuracy.",
+    "Reported success is not response timeliness."
+  ],
+  "aggregate": {
+    "record": "2W-0D-3L",
+    "goals": "2-5",
+    "points": 6,
+    "shots": "17-34",
+    "shotsOnTarget": "2-5",
+    "averagePossessionPct": 48.8,
+    "teamCommands": 1734,
+    "actions": {
+      "MOVE": 1114,
+      "PRESS": 188,
+      "MARK": 137,
+      "PASS": 49,
+      "CLEAR": 60,
+      "SHOOT": 40,
+      "INTERCEPT": 138,
+      "GK_DIST": 8
+    },
+    "teamAverageLatencyMs": {
+      "values": [
+        978,
+        240,
+        252,
+        193,
+        93
+      ],
+      "mean": 351.2,
+      "median": 240,
+      "above1000msGames": 0
+    },
+    "roleLatencyObservations": {
+      "count": 25,
+      "above1000ms": 2
+    },
+    "successPct": "100% reported, not a timeliness measure"
+  },
+  "leaderboard": {
+    "before": {
+      "rank": 16,
+      "played": 151,
+      "points": 268,
+      "wins": 88,
+      "draws": 4,
+      "losses": 59,
+      "goals": "204-131"
+    },
+    "after": {
+      "rank": 15,
+      "played": 156,
+      "points": 274,
+      "wins": 90,
+      "draws": 4,
+      "losses": 62,
+      "goals": "206-136"
+    },
+    "delta": "+5 played, +2 wins, +3 losses, +6 points, +2 goals for, +5 against, rank 16 to 15"
+  }
+}

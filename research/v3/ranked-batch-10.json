@@ -1,0 +1,348 @@
+{
+  "id": "ranked-batch-10",
+  "coachVersion": "coach-v1.0",
+  "status": "complete",
+  "targetCompletedGames": 5,
+  "setup": {
+    "sourceCommit": "931af03",
+    "revision": 9,
+    "fwd2Mode": "stance",
+    "otherRoles": "original M8 GK13 DEF19 MID15 FWD1v16",
+    "formation": "1-1-2"
+  },
+  "startedAt": "2026-10-24T21:16:52.095026+00:00",
+  "beforeLeaderboard": {
+    "rank": 17,
+    "points": 195,
+    "played": 114,
+    "wins": 64,
+    "draws": 3,
+    "losses": 47,
+    "goalsFor": 151,
+    "goalsAgainst": 104
+  },
+  "games": [
+    {
+      "alias": "stance-return-01",
+      "opponent": "Soccer",
+      "side": "HOME",
+      "status": "complete",
+      "startedAt": "2026-10-24T21:18:18.096918+00:00",
+      "initiation": "manual random matchmaking",
+      "result": "loss",
+      "score": [
+        0,
+        2
+      ],
+      "shots": [
+        2,
+        9
+      ],
+      "possessionPercent": [
+        46,
+        54
+      ],
+      "reportRoleLatencyMs": {
+        "own": [
+          99,
+          100,
+          114,
+          104,
+          102
+        ],
+        "opponent": [
+          4,
+          3,
+          3,
+          3,
+          73
+        ]
+      },
+      "successPercent": 100,
+      "reportCommands": {
+        "own": {
+          "CLEAR_OVERRIDE": 370
+        },
+        "opponent": {
+          "CLEAR_OVERRIDE": 31,
+          "PASS": 7,
+          "PRESS_BALL": 1
+        }
+      },
+      "completedAt": "2026-10-24T21:21:18.597450+00:00",
+      "runtimeAudit": {
+        "count": 72,
+        "stance": 71,
+        "bootstrap": 1,
+        "computeMedianMs": 0.4242545,
+        "computeMaxMs": 0.761667,
+        "modelCalls": 0,
+        "buildCommit": "931af03",
+        "commands": {
+          "CLEAR_OVERRIDE": 26,
+          "SET_STANCE": 45,
+          "PRESS_BALL": 1
+        }
+      }
+    },
+    {
+      "alias": "stance-return-02",
+      "opponent": "Singularity FC",
+      "side": "HOME",
+      "status": "complete",
+      "startedAt": "2026-10-24T21:22:45.408904+00:00",
+      "initiation": "manual random matchmaking",
+      "result": "loss",
+      "score": [
+        0,
+        1
+      ],
+      "shots": [
+        1,
+        8
+      ],
+      "possessionPercent": [
+        51,
+        49
+      ],
+      "reportRoleLatencyMs": {
+        "own": [
+          86,
+          85,
+          86,
+          92,
+          82
+        ],
+        "opponent": [
+          4,
+          4,
+          3,
+          3,
+          77
+        ]
+      },
+      "successPercent": 100,
+      "reportCommands": {
+        "own": {
+          "MOVE_TO": 143,
+          "CLEAR_OVERRIDE": 98,
+          "PRESS_BALL": 58,
+          "MARK": 29,
+          "SHOOT": 6,
+          "PASS": 1
+        },
+        "opponent": {
+          "CLEAR_OVERRIDE": 36,
+          "PASS": 4,
+          "PRESS_BALL": 1
+        }
+      },
+      "completedAt": "2026-10-24T21:26:18.419319+00:00"
+    },
+    {
+      "alias": "stance-return-03",
+      "opponent": "AgentCore Fighters",
+      "side": "HOME",
+      "status": "complete",
+      "startedAt": "2026-10-24T21:27:35.018609+00:00",
+      "initiation": "manual random matchmaking",
+      "result": "win",
+      "score": [
+        2,
+        1
+      ],
+      "shots": [
+        8,
+        5
+      ],
+      "possessionPercent": [
+        41,
+        59
+      ],
+      "reportRoleLatencyMs": {
+        "own": [
+          83,
+          77,
+          81,
+          83,
+          81
+        ],
+        "opponent": [
+          3,
+          3,
+          3,
+          3,
+          78
+        ]
+      },
+      "successPercent": 100,
+      "reportCommands": {
+        "own": {
+          "MOVE_TO": 278,
+          "INTERCEPT": 70,
+          "PRESS_BALL": 21,
+          "CLEAR_OVERRIDE": 15,
+          "SHOOT": 12,
+          "GK_DISTRIBUTE": 5,
+          "PASS": 4
+        },
+        "opponent": {
+          "CLEAR_OVERRIDE": 49,
+          "PASS": 4,
+          "PRESS_BALL": 1
+        }
+      },
+      "completedAt": "2026-10-24T21:31:23.177315+00:00"
+    },
+    {
+      "alias": "stance-return-04",
+      "opponent": "Tik&Taka",
+      "side": "HOME",
+      "status": "complete",
+      "startedAt": "2026-10-24T21:32:40.157223+00:00",
+      "initiation": "manual random matchmaking",
+      "result": "loss",
+      "score": [
+        1,
+        2
+      ],
+      "shots": [
+        6,
+        5
+      ],
+      "possessionPercent": [
+        38,
+        62
+      ],
+      "overtime": true,
+      "reportRoleLatencyMs": {
+        "own": [
+          724,
+          1157,
+          1116,
+          1129,
+          1148
+        ],
+        "opponent": [
+          4,
+          3,
+          3,
+          3,
+          76
+        ]
+      },
+      "successPercent": 100,
+      "reportCommands": {
+        "own": {
+          "MOVE_TO": 398,
+          "PRESS_BALL": 45,
+          "CLEAR_OVERRIDE": 20,
+          "PASS": 18,
+          "MARK": 13,
+          "GK_DISTRIBUTE": 7,
+          "SHOOT": 3,
+          "INTERCEPT": 1
+        },
+        "opponent": {
+          "CLEAR_OVERRIDE": 47,
+          "PASS": 10,
+          "INTERCEPT": 1,
+          "PRESS_BALL": 1,
+          "SHOOT": 1
+        }
+      },
+      "completedAt": "2026-10-24T21:37:25.679473+00:00"
+    },
+    {
+      "alias": "stance-return-05",
+      "opponent": "LFC",
+      "side": "HOME",
+      "status": "complete",
+      "startedAt": "2026-10-24T21:38:46.127816+00:00",
+      "initiation": "manual random matchmaking",
+      "result": "win",
+      "score": [
+        3,
+        0
+      ],
+      "shots": [
+        5,
+        5
+      ],
+      "possessionPercent": [
+        38,
+        62
+      ],
+      "reportRoleLatencyMs": {
+        "own": [
+          195,
+          97,
+          228,
+          252,
+          157
+        ],
+        "opponent": [
+          4,
+          3,
+          3,
+          3,
+          73
+        ]
+      },
+      "successPercent": 100,
+      "reportCommands": {
+        "own": {
+          "MOVE_TO": 322,
+          "INTERCEPT": 37,
+          "PRESS_BALL": 26,
+          "CLEAR_OVERRIDE": 14,
+          "PASS": 4,
+          "GK_DISTRIBUTE": 1,
+          "SHOOT": 1
+        },
+        "opponent": {
+          "CLEAR_OVERRIDE": 39,
+          "PASS": 17,
+          "PRESS_BALL": 1
+        }
+      },
+      "completedAt": "2026-10-24T21:42:21.439708+00:00"
+    }
+  ],
+  "incomingGames": [],
+  "quotaGuard": "Stop new games at <=5% remaining; finish in-flight and finalize saved recovery.",
+  "summary": {
+    "wins": 2,
+    "draws": 0,
+    "losses": 3,
+    "goals": [
+      6,
+      6
+    ],
+    "shots": [
+      22,
+      32
+    ],
+    "scorelessGames": 2,
+    "cleanSheets": 1,
+    "pointsPerGame": 1.2
+  },
+  "afterLeaderboard": {
+    "rank": 17,
+    "points": 201,
+    "played": 119,
+    "wins": 66,
+    "draws": 3,
+    "losses": 50,
+    "goalsFor": 157,
+    "goalsAgainst": 110,
+    "savedAt": "2026-10-24T21:42:56.100479+00:00"
+  },
+  "accountDelta": {
+    "played": 5,
+    "points": 6,
+    "goalsFor": 6,
+    "goalsAgainst": 6,
+    "extraIncomingGamesObserved": 0
+  }
+}

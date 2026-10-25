@@ -1,0 +1,182 @@
+{
+  "kind": "bounded autonomous run",
+  "startedAtUTC": "2026-10-24T05:53:07Z",
+  "deadlineUTC": "2026-10-24T17:14:05Z",
+  "stopNewMatchesUTC": "2026-10-24T15:31:00Z",
+  "automaticShutdown": false,
+  "initialLeaderboard": {
+    "rank": 10,
+    "played": 51,
+    "wins": 35,
+    "draws": 1,
+    "losses": 15,
+    "goalsFor": 74,
+    "goalsAgainst": 38,
+    "points": 106
+  },
+  "initialSetup": "A0-M7-formation121",
+  "currentTrial": null,
+  "priorities": [
+    "Preserve portable exact five-role AWS setup before workshop reset",
+    "Validate STM on one role, inspect actual input contract where available",
+    "Experiment serially, report primary statistics and preserve rejected ideas"
+  ],
+  "status": "finalized-at-owner-request",
+  "recoveryKit": "recovery/README.ru.md",
+  "completedReports": [
+    "live-43",
+    "live-44",
+    "live-45",
+    "live-46",
+    "live-47",
+    "live-48",
+    "live-49",
+    "live-50",
+    "live-51",
+    "live-52",
+    "live-53",
+    "live-54",
+    "live-55",
+    "live-56",
+    "live-57",
+    "live-58",
+    "live-59",
+    "live-60",
+    "live-61",
+    "live-62",
+    "live-63",
+    "live-64",
+    "live-65",
+    "live-66",
+    "live-67",
+    "live-68",
+    "live-69",
+    "live-70",
+    "live-71",
+    "live-72",
+    "live-73",
+    "live-74",
+    "live-75",
+    "live-76",
+    "live-77",
+    "live-78",
+    "live-79",
+    "live-80"
+  ],
+  "singleRoleRecoveryCanary": {
+    "created": true,
+    "status": "READY",
+    "readbackComparedFields": 13,
+    "mismatches": [],
+    "portalFitness": "5/5",
+    "liveReport": "live-44",
+    "scope": "Same-account single-role creation; full five-role restore script and fresh-account restore remain unverified"
+  },
+  "originalFwd1Restored": {
+    "registered": true,
+    "profileReloadVerified": true,
+    "fitness": "5/5",
+    "savedPromptChanged": false
+  },
+  "memoryTrialOutcome": {
+    "nativeCanary": "strictJSON2/2; writes confirmed",
+    "liveReports": [
+      "live-43",
+      "live-44",
+      "live-45"
+    ],
+    "liveMemoryUse": "not established",
+    "rollback": "Original FWD1 v16 is behavior-identical to pre-Memory v14; UI5/5"
+  },
+  "runtimeCandidate": "FWD1R1v14 and GKR2v1 both READY but unregistered; neither adopted",
+  "windowExtension": "New explicit user request at09:14UTC:8hours from this moment",
+  "latestLeaderboard": {
+    "rank": 14,
+    "played": 89,
+    "wins": 51,
+    "draws": 2,
+    "losses": 36,
+    "goalsFor": 118,
+    "goalsAgainst": 79,
+    "goalDifference": 39,
+    "points": 155,
+    "capturedAtUTC": "2026-10-24T15:39:00Z",
+    "captureTimePrecision": "minute",
+    "source": "Fresh primary portal row; private AX and screenshot"
+  },
+  "newManualMatchCutoffUTC": "2026-10-24T15:31:00Z",
+  "deadlineLocal": "2026-10-24 20:14:05 Europe/Minsk",
+  "priorLeaderboard": {
+    "rank": 10,
+    "played": 61,
+    "wins": 40,
+    "draws": 1,
+    "losses": 20,
+    "goalsFor": 84,
+    "goalsAgainst": 47,
+    "points": 121,
+    "capturedAtUTC": "2026-10-24T09:03:00Z"
+  },
+  "practiceLeaderboardAudit": {
+    "observedPracticeGames": 6,
+    "accountDelta": {
+      "played": 10,
+      "wins": 4,
+      "draws": 0,
+      "losses": 6,
+      "goalsFor": 15,
+      "goalsAgainst": 10,
+      "points": 12
+    },
+    "liveReports": "live53..62",
+    "interpretation": "Every change in account counters is exactly reconciled by ten saved live games; six Practice games did not enter those totals in this interval.",
+    "limitation": "Account observation in this workshop interval, not a guarantee about future portal rules.",
+    "individualPractice07Check": {
+      "before": {
+        "played": 71,
+        "wins": 44,
+        "draws": 1,
+        "losses": 26,
+        "goalsFor": 99,
+        "goalsAgainst": 57,
+        "points": 133
+      },
+      "after": {
+        "played": 71,
+        "wins": 44,
+        "draws": 1,
+        "losses": 26,
+        "goalsFor": 99,
+        "goalsAgainst": 57,
+        "points": 133
+      },
+      "practiceResult": "2:0",
+      "changed": false
+    }
+  },
+  "latestRankedBatch": "ranked-batch-04.json",
+  "stableRankedBatches": {
+    "reports": "live63..72",
+    "played": 10,
+    "wins": 5,
+    "draws": 1,
+    "losses": 4,
+    "goalsFor": 12,
+    "goalsAgainst": 11,
+    "pointsGained": 16,
+    "rankBefore": 14,
+    "rankAfter": 14
+  },
+  "finalizedAtUTC": "2026-10-24T15:39:00Z",
+  "finalSetup": "A0-M8-formation112",
+  "heartbeatStatus": "PAUSED",
+  "ownerFinalisationAtUTC": "2026-10-24T15:31:00Z",
+  "finalFitness": {
+    "passed": 5,
+    "total": 5,
+    "capturedAtUTC": "2026-10-24T15:39:00Z",
+    "formationReadbackAfterReload": "1-1-2",
+    "reportedAverageLatencyMs": 0,
+    "limitation": "Portal counter; not measured model inference latency"
+  }
+}

@@ -188,7 +188,8 @@ def parse_payload(payload: dict | str, my_pid: int) -> State:
         game_time=numeric(gs.get("gameTime")),
         score_home=int(numeric(score.get("home"))),
         score_away=int(numeric(score.get("away"))),
-        play_mode=str(gs.get("playMode") or "UNKNOWN"),
+        play_mode={"OPEN_PLAY": "PLAY_ON"}.get(str(gs.get("playMode") or "UNKNOWN").upper(),
+                                             str(gs.get("playMode") or "UNKNOWN").upper()),
     )
 
 

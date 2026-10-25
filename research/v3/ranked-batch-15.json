@@ -1,0 +1,206 @@
+{
+  "id": "ranked-batch-15",
+  "status": "complete",
+  "targetCompletedGames": 5,
+  "completedGames": 5,
+  "setup": "unchanged live baseline, FWD1v16, existing FWD2 fast path, formation 1-1-2",
+  "preflight": {
+    "portalState": "READY TO PLAY",
+    "freshFitness": "5/5 PASS",
+    "p01Installed": false
+  },
+  "beforeLeaderboard": {
+    "rank": 15,
+    "played": 156,
+    "points": 274,
+    "wins": 90,
+    "draws": 4,
+    "losses": 62,
+    "goals": "206-136"
+  },
+  "games": [
+    {
+      "opponent": "Pandavas",
+      "result": "WIN",
+      "score": "3-0",
+      "possessionPct": 28,
+      "shots": "9-4",
+      "shotsOnTarget": "3-0",
+      "teamAverageLatencyMs": 405,
+      "teamCommands": 405,
+      "roleLatencyMs": [
+        459,
+        431,
+        428,
+        432,
+        369
+      ],
+      "successPct": "100% all roles",
+      "actions": {
+        "MOVE": 245,
+        "INTERCEPT": 65,
+        "PRESS": 28,
+        "SHOOT": 24,
+        "CLEAR": 16,
+        "MARK": 12,
+        "PASS": 11,
+        "GK_DIST": 4
+      },
+      "observations": [
+        "Report lists FWD 4 goal at minute 1 and MID 3 twice at minute 2.",
+        "High output despite 28% possession; one-match observation only."
+      ]
+    },
+    {
+      "opponent": "Invariant FC",
+      "result": "WIN",
+      "score": "3-1",
+      "possessionPct": 23,
+      "shots": "14-3",
+      "shotsOnTarget": "3-1",
+      "teamAverageLatencyMs": 647,
+      "teamCommands": 16,
+      "roleLatencyMs": [
+        655,
+        666,
+        665,
+        677,
+        654
+      ],
+      "successPct": "100% all roles",
+      "actions": {
+        "CLEAR": 16
+      },
+      "observations": [
+        "Report lists two MID 3 goals at minute 1, an opponent MID 3 goal at minute 2, and a third own MID 3 goal at minute 2.",
+        "Report consistency anomaly: team command breakdown totals 16 (all CLEAR), but awards list FWD5 with 52 commands; preserve both display values as observed."
+      ]
+    },
+    {
+      "opponent": "Dinamo Minsk",
+      "result": "WIN",
+      "score": "2-1",
+      "possessionPct": 45,
+      "shots": "11-9",
+      "shotsOnTarget": "2-1",
+      "teamAverageLatencyMs": 2219,
+      "teamCommands": 185,
+      "roleLatencyMs": [
+        1860,
+        2711,
+        2827,
+        2993,
+        1775
+      ],
+      "successPct": "100% all roles",
+      "actions": {
+        "MOVE": 106,
+        "INTERCEPT": 33,
+        "PASS": 20,
+        "CLEAR": 16,
+        "GK_DIST": 9,
+        "MARK": 1
+      },
+      "observations": [
+        "Report lists own FWD 4 goal at minute 1, opponent MID goal at minute 1, and own MID 3 goal at minute 4.",
+        "Despite victory, report average latency was 2219ms; role averages 1775-2993ms."
+      ]
+    },
+    {
+      "opponent": "Amber Horns 2",
+      "result": "WIN",
+      "score": "2-0",
+      "possessionPct": 30,
+      "shots": "6-0",
+      "shotsOnTarget": "2-0",
+      "teamAverageLatencyMs": 744,
+      "teamCommands": 369,
+      "roleLatencyMs": [
+        553,
+        757,
+        888,
+        615,
+        837
+      ],
+      "successPct": "100% all roles",
+      "actions": {
+        "PRESS": 169,
+        "MOVE": 167,
+        "CLEAR": 22,
+        "INTERCEPT": 8,
+        "SHOOT": 2,
+        "MARK": 1
+      },
+      "observations": [
+        "Report lists MID 3 and FWD 4 goals at minute 2.",
+        "High reported pressing and 6-0 shots; one-match observation only."
+      ]
+    }
+  ],
+  "limitations": [
+    "All matches were HOME random matchmaking; opponent strength and match conditions were not controlled.",
+    "Report command counts for Invariant FC are internally inconsistent; values retained as displayed.",
+    "Latencies are rounded report averages, not per-call traces; a 100% success rate is not deadline compliance.",
+    "Shot distance and event-level chance quality are unavailable.",
+    "RESET action attribution is unavailable."
+  ],
+  "aggregate": {
+    "record": "4W-0D-1L",
+    "goals": "10-3",
+    "points": 12,
+    "shots": "48-17",
+    "shotsOnTarget": "10-3",
+    "averagePossessionPct": 34.0,
+    "teamCommands": 1308,
+    "actions": {
+      "MOVE": 620,
+      "PRESS": 349,
+      "INTERCEPT": 114,
+      "CLEAR": 84,
+      "SHOOT": 27,
+      "MARK": 17,
+      "PASS": 31,
+      "GK_DIST": 13,
+      "RESET": 44,
+      "FOLLOW": 9
+    },
+    "teamAverageLatencyMs": {
+      "values": [
+        405,
+        647,
+        2219,
+        744,
+        803
+      ],
+      "mean": 963.6,
+      "median": 744,
+      "above1000msGames": 1
+    },
+    "roleLatencyObservations": {
+      "count": 25,
+      "above1000ms": 5
+    },
+    "successPct": "100% reported, not a timeliness measure",
+    "reportAnomalies": [
+      "Invariant FC report totals only 16 commands (all CLEAR) while the same report's award shows FWD5 with 52 commands."
+    ]
+  },
+  "afterLeaderboard": {
+    "rank": 15,
+    "played": 161,
+    "points": 286,
+    "wins": 94,
+    "draws": 4,
+    "losses": 63,
+    "goals": "216-139"
+  },
+  "leaderboardDelta": {
+    "rank": "15 to 15",
+    "played": 5,
+    "points": 12,
+    "wins": 4,
+    "draws": 0,
+    "losses": 1,
+    "goals": "+10-3"
+  }
+}

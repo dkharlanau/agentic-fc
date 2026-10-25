@@ -1,0 +1,244 @@
+{
+  "kind": "Mirrored synthetic tactical index-choice rounds; no saved configuration changes",
+  "models": [
+    {
+      "model": "micro",
+      "cases": 8,
+      "legalChoiceCount": 8,
+      "targetAgreementCount": 8,
+      "allOwnSessionsStopped": true,
+      "reportedModelMedianLatencyMs": 312.5
+    }
+  ],
+  "results": [
+    {
+      "case": "switch-outlet-home",
+      "model": "micro",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 2882,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 0
+      },
+      "responseHeadersMs": 2389,
+      "firstTextMs": 2848,
+      "firstJsonPrefixMs": 2874,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 297,
+      "usage": {
+        "inputTokens": 961,
+        "outputTokens": 6,
+        "totalTokens": 967
+      }
+    },
+    {
+      "case": "switch-outlet-away",
+      "model": "micro",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 2349,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 1
+      },
+      "responseHeadersMs": 1836,
+      "firstTextMs": 2240,
+      "firstJsonPrefixMs": 2344,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 357,
+      "usage": {
+        "inputTokens": 961,
+        "outputTokens": 6,
+        "totalTokens": 967
+      }
+    },
+    {
+      "case": "high-line-home",
+      "model": "micro",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 2691,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 0
+      },
+      "responseHeadersMs": 2193,
+      "firstTextMs": 2655,
+      "firstJsonPrefixMs": 2683,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 264,
+      "usage": {
+        "inputTokens": 965,
+        "outputTokens": 6,
+        "totalTokens": 971
+      }
+    },
+    {
+      "case": "high-line-away",
+      "model": "micro",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 1705,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 1
+      },
+      "responseHeadersMs": 1206,
+      "firstTextMs": 1671,
+      "firstJsonPrefixMs": 1700,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 340,
+      "usage": {
+        "inputTokens": 965,
+        "outputTokens": 6,
+        "totalTokens": 971
+      }
+    },
+    {
+      "case": "deep-block-home",
+      "model": "micro",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 3157,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 0
+      },
+      "responseHeadersMs": 2668,
+      "firstTextMs": 3124,
+      "firstJsonPrefixMs": 3150,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 267,
+      "usage": {
+        "inputTokens": 966,
+        "outputTokens": 6,
+        "totalTokens": 972
+      }
+    },
+    {
+      "case": "deep-block-away",
+      "model": "micro",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 2084,
+      "selectedCommand": {
+        "commandType": "PASS",
+        "playerId": 3,
+        "parameters": {
+          "target_player_id": 2,
+          "type": "GROUND"
+        },
+        "duration": 0,
+        "teamId": 1
+      },
+      "responseHeadersMs": 1551,
+      "firstTextMs": 2047,
+      "firstJsonPrefixMs": 2076,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 328,
+      "usage": {
+        "inputTokens": 966,
+        "outputTokens": 6,
+        "totalTokens": 972
+      }
+    },
+    {
+      "case": "corner-cover-home",
+      "model": "micro",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 1809,
+      "selectedCommand": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 3,
+        "parameters": {},
+        "duration": 0,
+        "teamId": 0
+      },
+      "responseHeadersMs": 1205,
+      "firstTextMs": 1772,
+      "firstJsonPrefixMs": 1803,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 484,
+      "usage": {
+        "inputTokens": 628,
+        "outputTokens": 6,
+        "totalTokens": 634
+      }
+    },
+    {
+      "case": "corner-cover-away",
+      "model": "micro",
+      "legalChoice": true,
+      "targetAgreement": true,
+      "elapsedMs": 2730,
+      "selectedCommand": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 3,
+        "parameters": {},
+        "duration": 0,
+        "teamId": 1
+      },
+      "responseHeadersMs": 2487,
+      "firstTextMs": 2701,
+      "firstJsonPrefixMs": 2725,
+      "ownSessionStopped": true,
+      "reportedModelLatencyMs": 209,
+      "usage": {
+        "inputTokens": 628,
+        "outputTokens": 6,
+        "totalTokens": 634
+      }
+    }
+  ],
+  "limitations": [
+    "Target agreement reflects the proposed policy, not an independent measure of match strength.",
+    "Eight small scenarios per model do not establish a general model ranking.",
+    "Wall time includes native Harness/session overhead; reported model latency is separate.",
+    "A first JSON prefix can be followed by more text; it is diagnostic timing, not final output validity.",
+    "These are synthetic choice checks, not football self-play or live outcome evidence.",
+    "Methodology review: always selecting index0 passes all eight original cases; original target agreement is not discriminating evidence of decision quality. Latency/format observations remain descriptive."
+  ],
+  "provenance": {
+    "sourceCommit": "88eb47f2c25ed2c0a5e0cece3fd0df6997ba1263",
+    "modelId": "amazon.nova-micro-v1:0",
+    "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-amazon-nova-micro.html",
+    "savedConfigurationChanged": false,
+    "selectorPromptSha256": "6bfcacc6c3dcf0fbac01c6cb7dcbd1e28876d9e3d1f633731b2304f8cf3c7e96"
+  },
+  "constantIndex0Baseline": {
+    "cases": 8,
+    "targetAgreementCount": 8
+  }
+}

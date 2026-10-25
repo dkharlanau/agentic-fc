@@ -1,0 +1,599 @@
+{
+  "id": "ranked-batch-11",
+  "coachVersion": "coach-v1.0",
+  "status": "complete",
+  "targetCompletedGames": 10,
+  "setup": {
+    "sourceCommit": "931af03",
+    "revision": 9,
+    "fwd2Mode": "stance",
+    "otherRoles": "original M8 GK13 DEF19 MID15 FWD1v16",
+    "formation": "1-1-2"
+  },
+  "startedAt": "2026-10-25T06:06:07.322049+00:00",
+  "beforeLeaderboard": {
+    "rank": 19,
+    "points": 211,
+    "played": 124,
+    "wins": 69,
+    "draws": 4,
+    "losses": 51,
+    "goalsFor": 162,
+    "goalsAgainst": 112
+  },
+  "games": [
+    {
+      "alias": "stance-live-01",
+      "opponent": "Singularity FC",
+      "side": "HOME",
+      "status": "complete",
+      "startedAt": "2026-10-25T06:07:09.282022+00:00",
+      "initiation": "manual random matchmaking",
+      "result": "WIN",
+      "scoreFor": 2,
+      "scoreAgainst": 0,
+      "matchReport": "https://agentic-football.aws.dev/matches/b3306055-d1e2-4371-9b27-836845a667e7/report",
+      "rawReportFacts": {
+        "possessionPct": 47,
+        "shotsFor": 4,
+        "shotsAgainst": 2,
+        "shotsOnTargetFor": 2,
+        "shotsOnTargetAgainst": 0,
+        "teamAverageLatencyMs": 73,
+        "teamCommands": 370,
+        "opponentAverageLatencyMs": 18,
+        "opponentCommands": 46,
+        "agentLatencyMs": [
+          80,
+          76,
+          76,
+          77,
+          76
+        ],
+        "opponentAgentLatencyMs": [
+          4,
+          3,
+          3,
+          3,
+          75
+        ]
+      },
+      "legacyUnverifiedCompletedAt": "2026-10-25T06:14:00Z",
+      "completedAtObserved": null,
+      "completionRecordedInGit": {
+        "commit": "f69ea9bc05bab33083acf0f3d3bb74cbc7ef7eca",
+        "committedAtUTC": "2026-10-25T06:10:41+00:00"
+      }
+    },
+    {
+      "alias": "stance-live-02",
+      "opponent": "Mr Football FC",
+      "side": "HOME",
+      "status": "complete",
+      "initiation": "manual random matchmaking",
+      "matchReport": "https://agentic-football.aws.dev/matches/02dfb5bf-804c-4af0-9bc0-ad0eaa3dce1d/report",
+      "result": "LOSS",
+      "scoreFor": 0,
+      "scoreAgainst": 2,
+      "rawReportFacts": {
+        "possessionPct": 47,
+        "shotsFor": 3,
+        "shotsAgainst": 6,
+        "shotsOnTargetFor": 0,
+        "shotsOnTargetAgainst": 2,
+        "teamAverageLatencyMs": 81,
+        "teamCommands": 364,
+        "opponentAverageLatencyMs": 16,
+        "opponentCommands": 42,
+        "agentLatencyMs": [
+          77,
+          87,
+          86,
+          83,
+          83
+        ],
+        "opponentAgentLatencyMs": [
+          3,
+          2,
+          2,
+          2,
+          75
+        ]
+      },
+      "legacyUnverifiedCompletedAt": "2026-10-25T06:21:00Z",
+      "completedAtObserved": null,
+      "completionRecordedInGit": {
+        "commit": "e544b79e5349d3fe4ebeeaf9f78ecf29d03e2d22",
+        "committedAtUTC": "2026-10-25T06:15:08+00:00"
+      }
+    },
+    {
+      "alias": "stance-live-03",
+      "opponent": "FootballCore",
+      "side": "HOME",
+      "status": "complete",
+      "initiation": "manual random matchmaking",
+      "matchReport": "https://agentic-football.aws.dev/matches/318043d8-7d09-48c8-9c65-c0a1bb28287a/report",
+      "result": "WIN",
+      "scoreFor": 2,
+      "scoreAgainst": 0,
+      "rawReportFacts": {
+        "possessionPct": 31,
+        "shotsFor": 6,
+        "shotsAgainst": 1,
+        "shotsOnTargetFor": 2,
+        "shotsOnTargetAgainst": 0,
+        "teamAverageLatencyMs": 2410,
+        "teamCommands": 230,
+        "opponentAverageLatencyMs": 20,
+        "opponentCommands": 28,
+        "agentLatencyMs": [
+          2870,
+          2983,
+          2548,
+          1637,
+          1786
+        ],
+        "opponentAgentLatencyMs": [
+          3,
+          3,
+          3,
+          2,
+          86
+        ]
+      },
+      "legacyUnverifiedCompletedAt": "2026-10-25T06:29:00Z",
+      "completedAtObserved": null,
+      "completionRecordedInGit": {
+        "commit": "b22e9bcc48b73fee7c1f52d8bd11dd2b59850a31",
+        "committedAtUTC": "2026-10-25T06:20:04+00:00"
+      }
+    },
+    {
+      "alias": "stance-live-04",
+      "opponent": "Amber Horns 2",
+      "side": "HOME",
+      "status": "complete",
+      "initiation": "manual random matchmaking",
+      "matchReport": "https://agentic-football.aws.dev/matches/73ae86f7-944a-41c2-95fe-570a78d4dd8a/report",
+      "result": "WIN",
+      "scoreFor": 4,
+      "scoreAgainst": 0,
+      "rawReportFacts": {
+        "possessionPct": 40,
+        "shotsFor": 9,
+        "shotsAgainst": 1,
+        "shotsOnTargetFor": 4,
+        "shotsOnTargetAgainst": 0,
+        "teamAverageLatencyMs": 766,
+        "teamCommands": 423,
+        "opponentAverageLatencyMs": 16,
+        "opponentCommands": 75,
+        "agentLatencyMs": [
+          577,
+          751,
+          932,
+          619,
+          863
+        ],
+        "opponentAgentLatencyMs": [
+          3,
+          2,
+          2,
+          2,
+          77
+        ],
+        "teamCommandBreakdownPct": {
+          "move": 47,
+          "press": 39,
+          "intercept": 8,
+          "clear": 6
+        },
+        "opponentCommandBreakdownPct": {
+          "clear": 83,
+          "pass": 9,
+          "press": 7,
+          "intercept": 1
+        },
+        "opponentVisibleTacticalCommentary": [
+          "Amber Horns 2 crank up the press, hunting it down.",
+          "Amber Horns 2 are pressing hard — the agents are swarming the ball!"
+        ]
+      },
+      "legacyUnverifiedCompletedAt": "2026-10-25T06:40:00Z",
+      "completedAtObserved": null,
+      "completionRecordedInGit": {
+        "commit": "e7d24614cf715940a916bcbf11fc769a6a42194a",
+        "committedAtUTC": "2026-10-25T06:25:33+00:00"
+      }
+    },
+    {
+      "alias": "stance-live-05",
+      "opponent": "Divide by Zero",
+      "side": "HOME",
+      "status": "complete",
+      "initiation": "manual random matchmaking",
+      "matchReport": "https://agentic-football.aws.dev/matches/8716c7a2-49f0-4c0f-bc48-66f722a069aa/report",
+      "result": "WIN",
+      "scoreFor": 1,
+      "scoreAgainst": 0,
+      "rawReportFacts": {
+        "possessionPct": 50,
+        "shotsFor": 3,
+        "shotsAgainst": 6,
+        "shotsOnTargetFor": 1,
+        "shotsOnTargetAgainst": 0,
+        "teamAverageLatencyMs": 949,
+        "teamCommands": 276,
+        "opponentAverageLatencyMs": 17,
+        "opponentCommands": 41,
+        "agentLatencyMs": [
+          793,
+          968,
+          1162,
+          975,
+          846
+        ],
+        "opponentAgentLatencyMs": [
+          4,
+          3,
+          3,
+          3,
+          77
+        ],
+        "teamCommandBreakdownPct": {
+          "move": 63,
+          "press": 17,
+          "mark": 8,
+          "clear": 4,
+          "pass": 3,
+          "shoot": 3,
+          "intercept": 2
+        },
+        "opponentCommandBreakdownPct": {
+          "clear": 88,
+          "pass": 12
+        }
+      },
+      "legacyUnverifiedCompletedAt": "2026-10-25T07:03:00Z",
+      "completedAtObserved": null,
+      "completionRecordedInGit": {
+        "commit": "2e97bb57a5a111d72a7d0b5181752c1ed4aa2d8c",
+        "committedAtUTC": "2026-10-25T06:29:51+00:00"
+      }
+    },
+    {
+      "alias": "stance-live-06",
+      "opponent": "(〃￣︶￣)人(￣︶￣〃)",
+      "side": "HOME",
+      "status": "complete",
+      "initiation": "manual random matchmaking",
+      "matchReport": "https://agentic-football.aws.dev/matches/5598f09c-c23c-4169-bf21-973ad36c9bcb/report",
+      "result": "WIN",
+      "scoreFor": 1,
+      "scoreAgainst": 0,
+      "rawReportFacts": {
+        "possessionPct": 49,
+        "shotsFor": 3,
+        "shotsAgainst": 4,
+        "shotsOnTargetFor": 1,
+        "shotsOnTargetAgainst": 0,
+        "teamAverageLatencyMs": 794,
+        "teamCommands": 358,
+        "opponentAverageLatencyMs": 19,
+        "opponentCommands": 48,
+        "agentLatencyMs": [
+          584,
+          779,
+          944,
+          656,
+          896
+        ],
+        "opponentAgentLatencyMs": [
+          3,
+          3,
+          3,
+          3,
+          81
+        ],
+        "teamCommandBreakdownPct": {
+          "move": 51,
+          "press": 41,
+          "clear": 4,
+          "intercept": 4,
+          "shoot": 1,
+          "mark": 0
+        },
+        "opponentCommandBreakdownPct": {
+          "clear": 85,
+          "pass": 10,
+          "press": 4
+        },
+        "opponentVisibleTacticalCommentary": [
+          "(〃￣︶￣)人(￣︶￣〃) crank up the press, hunting it down.",
+          "(〃￣︶￣)人(￣︶￣〃) keep possession, probing for a gap."
+        ]
+      },
+      "legacyUnverifiedCompletedAt": "2026-10-25T07:19:00Z",
+      "completedAtObserved": null,
+      "completionRecordedInGit": {
+        "commit": "bd9aef0cbec9eb8b8fa26515f403771e1adeb1b1",
+        "committedAtUTC": "2026-10-25T06:34:45+00:00"
+      }
+    },
+    {
+      "alias": "stance-live-07",
+      "opponent": "FootballCore",
+      "side": "HOME",
+      "status": "complete",
+      "initiation": "manual random matchmaking",
+      "matchReport": "https://agentic-football.aws.dev/matches/862c811e-8294-4df0-b3ff-890ae1a01304/report",
+      "result": "WIN",
+      "scoreFor": 2,
+      "scoreAgainst": 0,
+      "rawReportFacts": {
+        "possessionPct": 36,
+        "shotsFor": 6,
+        "shotsAgainst": 2,
+        "shotsOnTargetFor": 2,
+        "shotsOnTargetAgainst": 0,
+        "teamAverageLatencyMs": 2277,
+        "teamCommands": 219,
+        "opponentAverageLatencyMs": 15,
+        "opponentCommands": 29,
+        "agentLatencyMs": [
+          2933,
+          3100,
+          2603,
+          1675,
+          1647
+        ],
+        "opponentAgentLatencyMs": [
+          5,
+          5,
+          4,
+          4,
+          82
+        ],
+        "teamCommandBreakdownPct": {
+          "press": 46,
+          "move": 44,
+          "clear": 5,
+          "mark": 3,
+          "intercept": 2
+        },
+        "opponentCommandBreakdownPct": {
+          "clear": 79,
+          "pass": 17,
+          "intercept": 3
+        },
+        "opponentVisibleTacticalCommentary": [
+          "FootballCore crank up the press, hunting it down.",
+          "FootballCore keep possession, probing for a gap."
+        ]
+      },
+      "legacyUnverifiedCompletedAt": "2026-10-25T07:39:00Z",
+      "completedAtObserved": null,
+      "completionRecordedInGit": {
+        "commit": "0e7133c7fbf5eaeecb90eaa8c67dea3803035ca9",
+        "committedAtUTC": "2026-10-25T06:39:29+00:00"
+      }
+    },
+    {
+      "alias": "stance-live-08",
+      "opponent": "Agents United",
+      "side": "HOME",
+      "status": "complete",
+      "initiation": "manual random matchmaking",
+      "matchReport": "https://agentic-football.aws.dev/matches/6ac0e4b4-1dac-49ba-b560-714f585015f9/report",
+      "result": "WIN",
+      "scoreFor": 2,
+      "scoreAgainst": 0,
+      "rawReportFacts": {
+        "possessionPct": 47,
+        "shotsFor": 3,
+        "shotsAgainst": 5,
+        "shotsOnTargetFor": 2,
+        "shotsOnTargetAgainst": 0,
+        "teamAverageLatencyMs": 393,
+        "teamCommands": 370,
+        "opponentAverageLatencyMs": 15,
+        "opponentCommands": 39,
+        "agentLatencyMs": [
+          77,
+          82,
+          551,
+          540,
+          578
+        ],
+        "opponentAgentLatencyMs": [
+          3,
+          2,
+          2,
+          2,
+          72
+        ],
+        "teamCommandBreakdownPct": {
+          "move": 92,
+          "pass": 3,
+          "clear": 2,
+          "press": 2,
+          "shoot": 1
+        },
+        "opponentCommandBreakdownPct": {
+          "clear": 72,
+          "pass": 26,
+          "intercept": 3
+        }
+      },
+      "legacyUnverifiedCompletedAt": "2026-10-25T08:09:00Z",
+      "completedAtObserved": null,
+      "completionRecordedInGit": {
+        "commit": "3894a6c5999925c2409bbab6ca2a0dd1f39b1ef0",
+        "committedAtUTC": "2026-10-25T06:44:15+00:00"
+      }
+    },
+    {
+      "alias": "stance-live-09",
+      "opponent": "Neman Grodno",
+      "side": "HOME",
+      "status": "complete",
+      "initiation": "manual random matchmaking",
+      "matchReport": "https://agentic-football.aws.dev/matches/3495aa57-d26a-4aee-ad54-2d4c46a9cec0/report",
+      "result": "WIN",
+      "scoreFor": 2,
+      "scoreAgainst": 1,
+      "rawReportFacts": {
+        "possessionPct": 55,
+        "shotsFor": 3,
+        "shotsAgainst": 7,
+        "shotsOnTargetFor": 2,
+        "shotsOnTargetAgainst": 1,
+        "teamAverageLatencyMs": 1,
+        "teamCommands": 16,
+        "opponentAverageLatencyMs": 15,
+        "opponentCommands": 52,
+        "agentLatencyMs": [
+          3,
+          2,
+          2,
+          2,
+          2
+        ],
+        "opponentAgentLatencyMs": [
+          4,
+          4,
+          3,
+          3,
+          70
+        ],
+        "teamCommandBreakdownPct": {
+          "clear": 100
+        },
+        "opponentCommandBreakdownPct": {
+          "clear": 85,
+          "pass": 8,
+          "press": 6,
+          "intercept": 2
+        },
+        "goalsObserved": [
+          "MID 3 No Human in the Loop (1)",
+          "Joe B FWD Neman Grodno (1)",
+          "MID 3 No Human in the Loop (2)"
+        ]
+      },
+      "legacyUnverifiedCompletedAt": "2026-10-25T08:34:00Z",
+      "completedAtObserved": null,
+      "completionRecordedInGit": {
+        "commit": "eb1a3e6a43de330d1034bef15b3b132ce246366c",
+        "committedAtUTC": "2026-10-25T06:49:15+00:00"
+      }
+    },
+    {
+      "alias": "stance-live-10",
+      "opponent": "Mobile United FC",
+      "side": "HOME",
+      "status": "complete",
+      "initiation": "manual random matchmaking",
+      "matchReport": "https://agentic-football.aws.dev/matches/f5efc679-8ebc-42d7-b37c-f36c53108729/report",
+      "result": "WIN",
+      "scoreFor": 2,
+      "scoreAgainst": 1,
+      "rawReportFacts": {
+        "possessionPct": 29,
+        "shotsFor": 10,
+        "shotsAgainst": 2,
+        "shotsOnTargetFor": 2,
+        "shotsOnTargetAgainst": 1,
+        "teamAverageLatencyMs": 572,
+        "teamCommands": 301,
+        "opponentAverageLatencyMs": 15,
+        "opponentCommands": 77,
+        "agentLatencyMs": [
+          2,
+          1,
+          1012,
+          927,
+          786
+        ],
+        "opponentAgentLatencyMs": [
+          3,
+          2,
+          2,
+          2,
+          71
+        ],
+        "teamCommandBreakdownPct": {
+          "press": 58,
+          "move": 30,
+          "clear": 8,
+          "shoot": 3,
+          "intercept": 2
+        },
+        "opponentCommandBreakdownPct": {
+          "clear": 75,
+          "pass": 22,
+          "intercept": 1,
+          "press": 1
+        },
+        "goalsObserved": [
+          "FWD 4 No Human in the Loop (1)",
+          "MID 2 Mobile United FC (1)",
+          "MID 3 No Human in the Loop (2)"
+        ]
+      },
+      "legacyUnverifiedCompletedAt": "2026-10-25T09:04:00Z",
+      "completedAtObserved": null,
+      "completionRecordedInGit": {
+        "commit": "136eccea04ea2fdcf4ed52d2fa697b3d0cbff082",
+        "committedAtUTC": "2026-10-25T06:54:55+00:00"
+      }
+    }
+  ],
+  "incomingGamesObservedBeforeSeries": {
+    "winsInStreak": 3,
+    "recentHistory": [
+      "Soccer 2-0 win",
+      "Gork ’n’ Mork Boyz 2-1 win",
+      "Le Masia 1-0 win"
+    ]
+  },
+  "ownerDirective": "Ten real games per cohort; analyze only after all ten complete",
+  "analysisGate": "Open: all ten cohort games complete",
+  "setupSnapshot": "research/v3/cohort-setup-20261025.json",
+  "operations": {
+    "remainingQuotaPercentAtCohortStart": 4,
+    "newMatchesAllowed": false,
+    "reason": "Owner explicitly authorized ten real matches in batches and deferred analysis until cohort completion",
+    "activeMatch": false,
+    "automaticShutdown": false,
+    "noNewAutomations": true
+  },
+  "analysis": "research/v3/ranked-batch-11-analysis.ru.md",
+  "completedGames": 10,
+  "afterLeaderboard": {
+    "observedAtUTC": "2026-10-25T07:01:02.164864+00:00",
+    "rank": 17,
+    "points": 238,
+    "played": 134,
+    "wins": 78,
+    "draws": 4,
+    "losses": 52,
+    "goalsFor": 180,
+    "goalsAgainst": 116
+  },
+  "reconciliation": {
+    "playedDelta": 10,
+    "pointsDelta": 27,
+    "winsDelta": 9,
+    "drawsDelta": 0,
+    "lossesDelta": 1,
+    "goalsForDelta": 18,
+    "goalsAgainstDelta": 4,
+    "matchesCohortExactly": true
+  },
+  "timestampAudit": {
+    "checkedAtUTC": "2026-10-25T07:02:19.911385+00:00",
+    "finding": "Legacy completion timestamps conflict with earlier Git completion records, including values after current UTC. Exact completion times unknown; original strings retained as unverified. Git commit times prove recording time only, not match end time."
+  }
+}

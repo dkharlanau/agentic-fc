@@ -1,0 +1,861 @@
+{
+  "kind": "real Converse calls on synthetic fixtures; not live Harness latency",
+  "startedAtUTC": "2026-10-24T17:55:18Z",
+  "results": [
+    {
+      "model": "nova2",
+      "modelId": "global.amazon.nova-2-lite-v1:0",
+      "case": "fwd2-own-ball-far",
+      "role": "fwd2",
+      "repeat": 0,
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "output": "```json\n[{\"commandType\":\"SHOOT\",\"playerId\":4,\"parameters\":{\"aim_location\":\"BL\",\"power\":0.8}}]\n```",
+      "errors": [
+        "invalid_json"
+      ],
+      "usage": {
+        "inputTokens": 1417,
+        "outputTokens": 34,
+        "totalTokens": 1451
+      },
+      "modelMetrics": {
+        "latencyMs": 545
+      },
+      "retryAttempts": 0,
+      "requestWallMs": 571
+    },
+    {
+      "model": "haiku",
+      "modelId": "global.anthropic.claude-haiku-4-5-20251001-v1:0",
+      "case": "fwd2-own-ball-far",
+      "role": "fwd2",
+      "repeat": 0,
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "output": "```json\n[{\"commandType\":\"SHOOT\",\"playerId\":4,\"parameters\":{\"aim_location\":\"BR\",\"power\":0.8},\"duration\":0}]\n```",
+      "errors": [
+        "invalid_json"
+      ],
+      "usage": {
+        "inputTokens": 1507,
+        "outputTokens": 42,
+        "totalTokens": 1549,
+        "cacheReadInputTokens": 0,
+        "cacheWriteInputTokens": 0
+      },
+      "modelMetrics": {
+        "latencyMs": 1466
+      },
+      "retryAttempts": 0,
+      "requestWallMs": 1478
+    },
+    {
+      "model": "sonnet",
+      "modelId": "global.anthropic.claude-sonnet-4-6",
+      "case": "fwd2-own-ball-far",
+      "role": "fwd2",
+      "repeat": 0,
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "output": "I need to analyze the situation for player 4 (home team, agentId_4).\n\n**Possession check:**\n- Ball possession: agentId_4, possessionTeamCode: \"home\" \u2713\n- My player is agentId_4 on home team (teamId=0) \u2713\n- Confirmed possession.\n\n**Shot assessment:**\n- Player 4 position: (25, 12)\n- Away goal is at x=+50 (home attacks toward positive x)\n- Goal separation \u2248 100 units (from x=-50 to x=+50)\n- 20% of goal separation = 20 units\n- Distance to opponent goal line: 50 - 25 = 25 units \u2192 exceeds 20 units",
+      "errors": [
+        "invalid_json"
+      ],
+      "usage": {
+        "inputTokens": 1508,
+        "outputTokens": 180,
+        "totalTokens": 1688,
+        "cacheReadInputTokens": 0,
+        "cacheWriteInputTokens": 0
+      },
+      "modelMetrics": {
+        "latencyMs": 2698
+      },
+      "retryAttempts": 0,
+      "requestWallMs": 2713
+    },
+    {
+      "model": "micro",
+      "modelId": "us.amazon.nova-micro-v1:0",
+      "case": "fwd2-own-ball-far",
+      "role": "fwd2",
+      "repeat": 0,
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "output": "[{\"commandType\":\"SHOOT\",\"playerId\":4,\"parameters\":{\"aim_location\":\"BL\",\"power\":0.8},\"duration\":1}]",
+      "errors": [
+        "wrong_duration",
+        "scenario_decision"
+      ],
+      "usage": {
+        "inputTokens": 1449,
+        "outputTokens": 33,
+        "totalTokens": 1482
+      },
+      "modelMetrics": {
+        "latencyMs": 501
+      },
+      "retryAttempts": 0,
+      "requestWallMs": 511
+    },
+    {
+      "model": "nova2",
+      "modelId": "global.amazon.nova-2-lite-v1:0",
+      "case": "fwd2-ambiguous-owner",
+      "role": "fwd2",
+      "repeat": 0,
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "output": "```json\n[{\"commandType\":\"SHOOT\",\"playerId\":4,\"parameters\":{\"aim_location\":\"BL\",\"power\":0.8},\"duration\":0}]\n```",
+      "errors": [
+        "invalid_json"
+      ],
+      "usage": {
+        "inputTokens": 1409,
+        "outputTokens": 37,
+        "totalTokens": 1446
+      },
+      "modelMetrics": {
+        "latencyMs": 604
+      },
+      "retryAttempts": 0,
+      "requestWallMs": 616
+    },
+    {
+      "model": "haiku",
+      "modelId": "global.anthropic.claude-haiku-4-5-20251001-v1:0",
+      "case": "fwd2-ambiguous-owner",
+      "role": "fwd2",
+      "repeat": 0,
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "output": "```json\n[{\"commandType\":\"SHOOT\",\"playerId\":4,\"parameters\":{\"aim_location\":\"BR\",\"power\":0.8},\"duration\":0}]\n```",
+      "errors": [
+        "invalid_json"
+      ],
+      "usage": {
+        "inputTokens": 1497,
+        "outputTokens": 42,
+        "totalTokens": 1539,
+        "cacheReadInputTokens": 0,
+        "cacheWriteInputTokens": 0
+      },
+      "modelMetrics": {
+        "latencyMs": 1354
+      },
+      "retryAttempts": 0,
+      "requestWallMs": 1364
+    },
+    {
+      "model": "sonnet",
+      "modelId": "global.anthropic.claude-sonnet-4-6",
+      "case": "fwd2-ambiguous-owner",
+      "role": "fwd2",
+      "repeat": 0,
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "output": "[{\"commandType\":\"PASS\",\"playerId\":4,\"parameters\":{\"target_player_id\":3,\"type\":\"GROUND\"},\"duration\":0}]",
+      "errors": [
+        "scenario_decision"
+      ],
+      "usage": {
+        "inputTokens": 1498,
+        "outputTokens": 38,
+        "totalTokens": 1536,
+        "cacheReadInputTokens": 0,
+        "cacheWriteInputTokens": 0
+      },
+      "modelMetrics": {
+        "latencyMs": 1016
+      },
+      "retryAttempts": 0,
+      "requestWallMs": 1055
+    },
+    {
+      "model": "micro",
+      "modelId": "us.amazon.nova-micro-v1:0",
+      "case": "fwd2-ambiguous-owner",
+      "role": "fwd2",
+      "repeat": 0,
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "output": "[{\"commandType\":\"SHOOT\",\"playerId\":4,\"parameters\":{\"aim_location\":\"BL\",\"power\":0.8},\"duration\":1}]",
+      "errors": [
+        "wrong_duration",
+        "scenario_decision"
+      ],
+      "usage": {
+        "inputTokens": 1435,
+        "outputTokens": 33,
+        "totalTokens": 1468
+      },
+      "modelMetrics": {
+        "latencyMs": 446
+      },
+      "retryAttempts": 0,
+      "requestWallMs": 457
+    },
+    {
+      "model": "nova2",
+      "modelId": "global.amazon.nova-2-lite-v1:0",
+      "case": "fwd2-close-blocked-pass",
+      "role": "fwd2",
+      "repeat": 0,
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "output": "```json\n[{\"commandType\":\"SHOOT\",\"playerId\":4,\"parameters\":{\"aim_location\":\"BR\",\"power\":0.8}}]\n```",
+      "errors": [
+        "invalid_json"
+      ],
+      "usage": {
+        "inputTokens": 1419,
+        "outputTokens": 34,
+        "totalTokens": 1453
+      },
+      "modelMetrics": {
+        "latencyMs": 560
+      },
+      "retryAttempts": 0,
+      "requestWallMs": 573
+    },
+    {
+      "model": "haiku",
+      "modelId": "global.anthropic.claude-haiku-4-5-20251001-v1:0",
+      "case": "fwd2-close-blocked-pass",
+      "role": "fwd2",
+      "repeat": 0,
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "output": "```json\n[{\"commandType\":\"SHOOT\",\"playerId\":4,\"parameters\":{\"aim_location\":\"BL\",\"power\":0.8},\"duration\":0}]\n```",
+      "errors": [
+        "invalid_json"
+      ],
+      "usage": {
+        "inputTokens": 1509,
+        "outputTokens": 43,
+        "totalTokens": 1552,
+        "cacheReadInputTokens": 0,
+        "cacheWriteInputTokens": 0
+      },
+      "modelMetrics": {
+        "latencyMs": 1565
+      },
+      "retryAttempts": 0,
+      "requestWallMs": 1578
+    },
+    {
+      "model": "sonnet",
+      "modelId": "global.anthropic.claude-sonnet-4-6",
+      "case": "fwd2-close-blocked-pass",
+      "role": "fwd2",
+      "repeat": 0,
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "output": "I need to analyze the situation for player 4 (home team, agentId_4).\n\n**Possession check:**\n- Ball possession: agentId_4, possessionTeamCode: \"home\" \u2713\n- My player (teamId=0, home, agentId_4) has the ball confirmed.\n\n**Position analysis:**\n- My player (home agentId_4): x=40, y=3\n- Away GK (agentId_0): x=50, y=0 (opponent goal area)\n\n**Goal geometry:**\n- Home attacks toward positive x. Opponent goal is around x=50 (away GK is at x=50).\n- Goal separation is roughly 100 units (from x=-50 to x=50).\n- 20%",
+      "errors": [
+        "invalid_json"
+      ],
+      "usage": {
+        "inputTokens": 1510,
+        "outputTokens": 180,
+        "totalTokens": 1690,
+        "cacheReadInputTokens": 0,
+        "cacheWriteInputTokens": 0
+      },
+      "modelMetrics": {
+        "latencyMs": 2896
+      },
+      "retryAttempts": 0,
+      "requestWallMs": 2908
+    },
+    {
+      "model": "micro",
+      "modelId": "us.amazon.nova-micro-v1:0",
+      "case": "fwd2-close-blocked-pass",
+      "role": "fwd2",
+      "repeat": 0,
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "output": "[{\"commandType\":\"SHOOT\",\"playerId\":4,\"parameters\":{\"aim_location\":\"BL\",\"power\":0.8},\"duration\":1}]",
+      "errors": [
+        "wrong_duration",
+        "scenario_decision"
+      ],
+      "usage": {
+        "inputTokens": 1448,
+        "outputTokens": 33,
+        "totalTokens": 1481
+      },
+      "modelMetrics": {
+        "latencyMs": 415
+      },
+      "retryAttempts": 0,
+      "requestWallMs": 431
+    },
+    {
+      "model": "nova2",
+      "modelId": "global.amazon.nova-2-lite-v1:0",
+      "case": "fwd2-wrong-player-binding",
+      "role": "fwd2",
+      "repeat": 0,
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "output": "```json\n[{\"commandType\":\"SHOOT\",\"playerId\":4,\"parameters\":{\"aim_location\":\"BR\",\"power\":0.8},\"duration\":0}]\n```",
+      "errors": [
+        "invalid_json"
+      ],
+      "usage": {
+        "inputTokens": 1417,
+        "outputTokens": 37,
+        "totalTokens": 1454
+      },
+      "modelMetrics": {
+        "latencyMs": 622
+      },
+      "retryAttempts": 0,
+      "requestWallMs": 642
+    },
+    {
+      "model": "haiku",
+      "modelId": "global.anthropic.claude-haiku-4-5-20251001-v1:0",
+      "case": "fwd2-wrong-player-binding",
+      "role": "fwd2",
+      "repeat": 0,
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "output": "```json\n[{\"commandType\":\"SHOOT\",\"playerId\":4,\"parameters\":{\"aim_location\":\"BR\",\"power\":0.8},\"duration\":0}]\n```",
+      "errors": [
+        "invalid_json"
+      ],
+      "usage": {
+        "inputTokens": 1507,
+        "outputTokens": 42,
+        "totalTokens": 1549,
+        "cacheReadInputTokens": 0,
+        "cacheWriteInputTokens": 0
+      },
+      "modelMetrics": {
+        "latencyMs": 1438
+      },
+      "retryAttempts": 0,
+      "requestWallMs": 1450
+    },
+    {
+      "model": "sonnet",
+      "modelId": "global.anthropic.claude-sonnet-4-6",
+      "case": "fwd2-wrong-player-binding",
+      "role": "fwd2",
+      "repeat": 0,
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "output": "The game state shows myPlayers is [3], meaning I control agentId_3, not agentId_4. Wait, let me re-read: \"Control only player 4, Finisher\" and \"myPlayers\": [3].\n\nThe instructions say \"Respect myPlayers.\" and myPlayers is [3], which means agentId_3 (index 3 in the array, which is home agentId_3). But the task says to control player 4 (agentId_4).\n\nActually, myPlayers: [3] likely refers to the index in the players array or the agentId number. The player I'm supposed to control is agentId_4 on home team. myPlayers: [3] seems to indicate index 3... but agentId_",
+      "errors": [
+        "invalid_json"
+      ],
+      "usage": {
+        "inputTokens": 1508,
+        "outputTokens": 180,
+        "totalTokens": 1688,
+        "cacheReadInputTokens": 0,
+        "cacheWriteInputTokens": 0
+      },
+      "modelMetrics": {
+        "latencyMs": 2855
+      },
+      "retryAttempts": 0,
+      "requestWallMs": 2865
+    },
+    {
+      "model": "micro",
+      "modelId": "us.amazon.nova-micro-v1:0",
+      "case": "fwd2-wrong-player-binding",
+      "role": "fwd2",
+      "repeat": 0,
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "output": "[{\"commandType\":\"SHOOT\",\"playerId\":4,\"parameters\":{\"aim_location\":\"BL\",\"power\":0.8},\"duration\":1}]",
+      "errors": [
+        "wrong_duration",
+        "scenario_decision"
+      ],
+      "usage": {
+        "inputTokens": 1449,
+        "outputTokens": 33,
+        "totalTokens": 1482
+      },
+      "modelMetrics": {
+        "latencyMs": 431
+      },
+      "retryAttempts": 0,
+      "requestWallMs": 441
+    },
+    {
+      "model": "nova2",
+      "modelId": "global.amazon.nova-2-lite-v1:0",
+      "case": "fwd2-own-ball-far-away",
+      "role": "fwd2",
+      "repeat": 0,
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "output": "```json\n[{\"commandType\":\"SHOOT\",\"playerId\":4,\"parameters\":{\"aim_location\":\"BR\",\"power\":0.8}}]\n```",
+      "errors": [
+        "invalid_json"
+      ],
+      "usage": {
+        "inputTokens": 1417,
+        "outputTokens": 34,
+        "totalTokens": 1451
+      },
+      "modelMetrics": {
+        "latencyMs": 556
+      },
+      "retryAttempts": 0,
+      "requestWallMs": 569
+    },
+    {
+      "model": "haiku",
+      "modelId": "global.anthropic.claude-haiku-4-5-20251001-v1:0",
+      "case": "fwd2-own-ball-far-away",
+      "role": "fwd2",
+      "repeat": 0,
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "output": "```json\n[{\"commandType\":\"SHOOT\",\"playerId\":4,\"parameters\":{\"aim_location\":\"BL\",\"power\":0.8},\"duration\":0}]\n```",
+      "errors": [
+        "invalid_json"
+      ],
+      "usage": {
+        "inputTokens": 1507,
+        "outputTokens": 43,
+        "totalTokens": 1550,
+        "cacheReadInputTokens": 0,
+        "cacheWriteInputTokens": 0
+      },
+      "modelMetrics": {
+        "latencyMs": 1562
+      },
+      "retryAttempts": 0,
+      "requestWallMs": 1571
+    },
+    {
+      "model": "sonnet",
+      "modelId": "global.anthropic.claude-sonnet-4-6",
+      "case": "fwd2-own-ball-far-away",
+      "role": "fwd2",
+      "repeat": 0,
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "output": "[{\"commandType\":\"PASS\",\"playerId\":4,\"parameters\":{\"target_player_id\":3,\"type\":\"GROUND\"},\"duration\":0}]",
+      "errors": [],
+      "usage": {
+        "inputTokens": 1508,
+        "outputTokens": 38,
+        "totalTokens": 1546,
+        "cacheReadInputTokens": 0,
+        "cacheWriteInputTokens": 0
+      },
+      "modelMetrics": {
+        "latencyMs": 1000
+      },
+      "retryAttempts": 0,
+      "requestWallMs": 1046
+    },
+    {
+      "model": "micro",
+      "modelId": "us.amazon.nova-micro-v1:0",
+      "case": "fwd2-own-ball-far-away",
+      "role": "fwd2",
+      "repeat": 0,
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "output": "[{\"commandType\":\"SHOOT\",\"playerId\":4,\"parameters\":{\"aim_location\":\"BL\",\"power\":0.8},\"duration\":1}]",
+      "errors": [
+        "wrong_duration",
+        "scenario_decision"
+      ],
+      "usage": {
+        "inputTokens": 1449,
+        "outputTokens": 33,
+        "totalTokens": 1482
+      },
+      "modelMetrics": {
+        "latencyMs": 376
+      },
+      "retryAttempts": 0,
+      "requestWallMs": 387
+    },
+    {
+      "model": "nova2",
+      "modelId": "global.amazon.nova-2-lite-v1:0",
+      "case": "fwd2-ambiguous-owner-stale-context",
+      "role": "fwd2",
+      "repeat": 0,
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "output": "[{\"commandType\": \"PASS\", \"playerId\": 4, \"parameters\": {\"target_player_id\": 2, \"type\": \"GROUND\"}, \"duration\": 0}]",
+      "errors": [
+        "scenario_decision"
+      ],
+      "usage": {
+        "inputTokens": 5041,
+        "outputTokens": 40,
+        "totalTokens": 5081
+      },
+      "modelMetrics": {
+        "latencyMs": 689
+      },
+      "retryAttempts": 0,
+      "requestWallMs": 702
+    },
+    {
+      "model": "haiku",
+      "modelId": "global.anthropic.claude-haiku-4-5-20251001-v1:0",
+      "case": "fwd2-ambiguous-owner-stale-context",
+      "role": "fwd2",
+      "repeat": 0,
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "output": "[{\"commandType\": \"PASS\", \"playerId\": 4, \"parameters\": {\"target_player_id\": 3, \"type\": \"GROUND\"}, \"duration\": 0}]",
+      "errors": [
+        "scenario_decision"
+      ],
+      "usage": {
+        "inputTokens": 5353,
+        "outputTokens": 47,
+        "totalTokens": 5400,
+        "cacheReadInputTokens": 0,
+        "cacheWriteInputTokens": 0
+      },
+      "modelMetrics": {
+        "latencyMs": 1539
+      },
+      "retryAttempts": 0,
+      "requestWallMs": 1550
+    },
+    {
+      "model": "sonnet",
+      "modelId": "global.anthropic.claude-sonnet-4-6",
+      "case": "fwd2-ambiguous-owner-stale-context",
+      "role": "fwd2",
+      "repeat": 0,
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "output": "The ball's possessionTeamCode is missing, so team ownership is UNKNOWN.\n\n[{\"commandType\":\"CLEAR_OVERRIDE\",\"playerId\":4,\"parameters\":{},\"duration\":0}]",
+      "errors": [
+        "invalid_json"
+      ],
+      "usage": {
+        "inputTokens": 5354,
+        "outputTokens": 47,
+        "totalTokens": 5401,
+        "cacheReadInputTokens": 0,
+        "cacheWriteInputTokens": 0
+      },
+      "modelMetrics": {
+        "latencyMs": 1537
+      },
+      "retryAttempts": 0,
+      "requestWallMs": 1548
+    },
+    {
+      "model": "micro",
+      "modelId": "us.amazon.nova-micro-v1:0",
+      "case": "fwd2-ambiguous-owner-stale-context",
+      "role": "fwd2",
+      "repeat": 0,
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "output": "[{\"commandType\": \"PASS\", \"playerId\": 4, \"parameters\": {\"target_player_id\": 2, \"type\": \"GROUND\"}, \"duration\": 0}]",
+      "errors": [
+        "scenario_decision"
+      ],
+      "usage": {
+        "inputTokens": 5291,
+        "outputTokens": 41,
+        "totalTokens": 5332
+      },
+      "modelMetrics": {
+        "latencyMs": 427
+      },
+      "retryAttempts": 0,
+      "requestWallMs": 438
+    },
+    {
+      "model": "nova2",
+      "modelId": "global.amazon.nova-2-lite-v1:0",
+      "case": "fwd2-close-open-shot",
+      "role": "fwd2",
+      "repeat": 0,
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "output": "```json\n[{\"commandType\":\"SHOOT\",\"playerId\":4,\"parameters\":{\"aim_location\":\"BR\",\"power\":0.8}}]\n```",
+      "errors": [
+        "invalid_json"
+      ],
+      "usage": {
+        "inputTokens": 1417,
+        "outputTokens": 34,
+        "totalTokens": 1451
+      },
+      "modelMetrics": {
+        "latencyMs": 537
+      },
+      "retryAttempts": 0,
+      "requestWallMs": 551
+    },
+    {
+      "model": "haiku",
+      "modelId": "global.anthropic.claude-haiku-4-5-20251001-v1:0",
+      "case": "fwd2-close-open-shot",
+      "role": "fwd2",
+      "repeat": 0,
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "output": "```json\n[{\"commandType\":\"SHOOT\",\"playerId\":4,\"parameters\":{\"aim_location\":\"BL\",\"power\":0.8},\"duration\":0}]\n```",
+      "errors": [
+        "invalid_json"
+      ],
+      "usage": {
+        "inputTokens": 1507,
+        "outputTokens": 43,
+        "totalTokens": 1550,
+        "cacheReadInputTokens": 0,
+        "cacheWriteInputTokens": 0
+      },
+      "modelMetrics": {
+        "latencyMs": 1456
+      },
+      "retryAttempts": 0,
+      "requestWallMs": 1467
+    },
+    {
+      "model": "sonnet",
+      "modelId": "global.anthropic.claude-sonnet-4-6",
+      "case": "fwd2-close-open-shot",
+      "role": "fwd2",
+      "repeat": 0,
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "output": "I have confirmed possession as home agentId_4 at position (40, 3).\n\nLet me check shot viability:\n- Away GK (agentId_0) is at (50, 0) \u2014 that's the away goalkeeper at x=50.\n- The away goal should be at x=52.5 (assuming field goes from -52.5 to 52.5).\n- My position: x=40, y=3.\n- Distance to goal line: ~12.5 units.\n- Goal separation (full field length ~105 units): 20% = ~21 units. Distance 12.5 < 21 \u2713\n- Lateral offset: y=3, goal width ~7.32 units, so 10% of goal separation = ~10",
+      "errors": [
+        "invalid_json"
+      ],
+      "usage": {
+        "inputTokens": 1508,
+        "outputTokens": 180,
+        "totalTokens": 1688,
+        "cacheReadInputTokens": 0,
+        "cacheWriteInputTokens": 0
+      },
+      "modelMetrics": {
+        "latencyMs": 3066
+      },
+      "retryAttempts": 0,
+      "requestWallMs": 3077
+    },
+    {
+      "model": "micro",
+      "modelId": "us.amazon.nova-micro-v1:0",
+      "case": "fwd2-close-open-shot",
+      "role": "fwd2",
+      "repeat": 0,
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "output": "[{\"commandType\":\"SHOOT\",\"playerId\":4,\"parameters\":{\"aim_location\":\"BL\",\"power\":0.8},\"duration\":1}]",
+      "errors": [
+        "wrong_duration"
+      ],
+      "usage": {
+        "inputTokens": 1447,
+        "outputTokens": 33,
+        "totalTokens": 1480
+      },
+      "modelMetrics": {
+        "latencyMs": 521
+      },
+      "retryAttempts": 0,
+      "requestWallMs": 532
+    },
+    {
+      "model": "nova2",
+      "modelId": "global.amazon.nova-2-lite-v1:0",
+      "case": "fwd2-teammate-ball-support",
+      "role": "fwd2",
+      "repeat": 0,
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "output": "```json\n[{\"commandType\":\"SET_STANCE\",\"playerId\":4,\"parameters\":{\"stance\":1},\"duration\":0}]\n```",
+      "errors": [
+        "invalid_json"
+      ],
+      "usage": {
+        "inputTokens": 1417,
+        "outputTokens": 30,
+        "totalTokens": 1447
+      },
+      "modelMetrics": {
+        "latencyMs": 519
+      },
+      "retryAttempts": 0,
+      "requestWallMs": 531
+    },
+    {
+      "model": "haiku",
+      "modelId": "global.anthropic.claude-haiku-4-5-20251001-v1:0",
+      "case": "fwd2-teammate-ball-support",
+      "role": "fwd2",
+      "repeat": 0,
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "output": "```json\n[{\"commandType\":\"SET_STANCE\",\"playerId\":4,\"parameters\":{\"stance\":1},\"duration\":0}]\n```",
+      "errors": [
+        "invalid_json"
+      ],
+      "usage": {
+        "inputTokens": 1507,
+        "outputTokens": 36,
+        "totalTokens": 1543,
+        "cacheReadInputTokens": 0,
+        "cacheWriteInputTokens": 0
+      },
+      "modelMetrics": {
+        "latencyMs": 1206
+      },
+      "retryAttempts": 0,
+      "requestWallMs": 1217
+    },
+    {
+      "model": "sonnet",
+      "modelId": "global.anthropic.claude-sonnet-4-6",
+      "case": "fwd2-teammate-ball-support",
+      "role": "fwd2",
+      "repeat": 0,
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "output": "[{\"commandType\":\"SET_STANCE\",\"playerId\":4,\"parameters\":{\"stance\":1},\"duration\":0}]",
+      "errors": [],
+      "usage": {
+        "inputTokens": 1508,
+        "outputTokens": 31,
+        "totalTokens": 1539,
+        "cacheReadInputTokens": 0,
+        "cacheWriteInputTokens": 0
+      },
+      "modelMetrics": {
+        "latencyMs": 991
+      },
+      "retryAttempts": 0,
+      "requestWallMs": 1003
+    },
+    {
+      "model": "micro",
+      "modelId": "us.amazon.nova-micro-v1:0",
+      "case": "fwd2-teammate-ball-support",
+      "role": "fwd2",
+      "repeat": 0,
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "output": "[{\"commandType\":\"PASS\",\"playerId\":4,\"parameters\":{\"target_player_id\":2,\"type\":\"GROUND\"},\"duration\":0}]",
+      "errors": [
+        "scenario_decision"
+      ],
+      "usage": {
+        "inputTokens": 1448,
+        "outputTokens": 31,
+        "totalTokens": 1479
+      },
+      "modelMetrics": {
+        "latencyMs": 477
+      },
+      "retryAttempts": 0,
+      "requestWallMs": 488
+    },
+    {
+      "model": "nova2",
+      "modelId": "global.amazon.nova-2-lite-v1:0",
+      "case": "fwd2-low-energy-cover",
+      "role": "fwd2",
+      "repeat": 0,
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "output": "```json\n[{\"commandType\":\"SET_STANCE\",\"playerId\":4,\"parameters\":{\"stance\":1},\"duration\":0}]\n```",
+      "errors": [
+        "invalid_json"
+      ],
+      "usage": {
+        "inputTokens": 1417,
+        "outputTokens": 30,
+        "totalTokens": 1447
+      },
+      "modelMetrics": {
+        "latencyMs": 528
+      },
+      "retryAttempts": 0,
+      "requestWallMs": 540
+    },
+    {
+      "model": "haiku",
+      "modelId": "global.anthropic.claude-haiku-4-5-20251001-v1:0",
+      "case": "fwd2-low-energy-cover",
+      "role": "fwd2",
+      "repeat": 0,
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "output": "```json\n[{\"commandType\":\"CLEAR_OVERRIDE\",\"playerId\":4,\"parameters\":{},\"duration\":0}]\n```\n\n**Reasoning:**\n- Player 4 (home team, agentId_4) is at position (25, 12) with stamina at 8% (critically low, <25%)\n- Ball possession: away team (agentId_2) at (24, 12) - opponent has the ball\n- Player 4 does not have possession\n- With stamina critically low (8%), pressing is prohibited per rules\n- No safe passing option exists (opponent has ball)\n- CLEAR_OVERRIDE is the appropriate command when without possession and unable to press due to low stamina",
+      "errors": [
+        "invalid_json"
+      ],
+      "usage": {
+        "inputTokens": 1507,
+        "outputTokens": 163,
+        "totalTokens": 1670,
+        "cacheReadInputTokens": 0,
+        "cacheWriteInputTokens": 0
+      },
+      "modelMetrics": {
+        "latencyMs": 2523
+      },
+      "retryAttempts": 0,
+      "requestWallMs": 2533
+    },
+    {
+      "model": "sonnet",
+      "modelId": "global.anthropic.claude-sonnet-4-6",
+      "case": "fwd2-low-energy-cover",
+      "role": "fwd2",
+      "repeat": 0,
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "output": "[{\"commandType\":\"SET_STANCE\",\"playerId\":4,\"parameters\":{\"stance\":0},\"duration\":0}]",
+      "errors": [],
+      "usage": {
+        "inputTokens": 1508,
+        "outputTokens": 31,
+        "totalTokens": 1539,
+        "cacheReadInputTokens": 0,
+        "cacheWriteInputTokens": 0
+      },
+      "modelMetrics": {
+        "latencyMs": 1096
+      },
+      "retryAttempts": 0,
+      "requestWallMs": 1109
+    },
+    {
+      "model": "micro",
+      "modelId": "us.amazon.nova-micro-v1:0",
+      "case": "fwd2-low-energy-cover",
+      "role": "fwd2",
+      "repeat": 0,
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "output": "[{\"commandType\":\"SET_STANCE\",\"playerId\":4,\"parameters\":{\"stance\":0},\"duration\":0}]",
+      "errors": [],
+      "usage": {
+        "inputTokens": 1449,
+        "outputTokens": 27,
+        "totalTokens": 1476
+      },
+      "modelMetrics": {
+        "latencyMs": 378
+      },
+      "retryAttempts": 0,
+      "requestWallMs": 390
+    }
+  ],
+  "summary": {
+    "nova2": {
+      "passed": 0,
+      "total": 9,
+      "requestWallMedianMs": 571,
+      "requestWallMaxMs": 702,
+      "under10ms": 0
+    },
+    "haiku": {
+      "passed": 0,
+      "total": 9,
+      "requestWallMedianMs": 1478,
+      "requestWallMaxMs": 2533,
+      "under10ms": 0
+    },
+    "sonnet": {
+      "passed": 3,
+      "total": 9,
+      "requestWallMedianMs": 1548,
+      "requestWallMaxMs": 3077,
+      "under10ms": 0
+    },
+    "micro": {
+      "passed": 1,
+      "total": 9,
+      "requestWallMedianMs": 441,
+      "requestWallMaxMs": 532,
+      "under10ms": 0
+    }
+  }
+}

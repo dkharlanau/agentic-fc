@@ -1,0 +1,411 @@
+{
+  "kind": "real model calls on synthetic fixtures, not Harness or game validation",
+  "startedAtEpoch": 1792862767.820484,
+  "results": [
+    {
+      "id": "gk-own-ball-far",
+      "role": "gk",
+      "promptSha256": "ba8cc43c1c39dca4dbb5b9e18f721419b554901730248bfe9d9b9ed3a6796e92",
+      "output": "```json\n[{\"commandType\": \"GK_DISTRIBUTE\", \"playerId\": 0, \"parameters\": {\"target_player_id\": 1, \"method\": \"THROW\"}, \"duration\": 0}]\n```",
+      "errors": [
+        "invalid_json"
+      ],
+      "requestWallMs": 696,
+      "usage": {
+        "inputTokens": 2147,
+        "outputTokens": 49,
+        "totalTokens": 2196
+      }
+    },
+    {
+      "id": "gk-ambiguous-owner",
+      "role": "gk",
+      "promptSha256": "ba8cc43c1c39dca4dbb5b9e18f721419b554901730248bfe9d9b9ed3a6796e92",
+      "output": "```json\n[{\"commandType\": \"GK_DISTRIBUTE\", \"playerId\": 0, \"parameters\": {\"target_player_id\": 1, \"method\": \"THROW\"}, \"duration\": 0}]\n```",
+      "errors": [
+        "invalid_json"
+      ],
+      "requestWallMs": 617,
+      "usage": {
+        "inputTokens": 2139,
+        "outputTokens": 49,
+        "totalTokens": 2188
+      }
+    },
+    {
+      "id": "def-own-ball-far",
+      "role": "def",
+      "promptSha256": "1051b151fbe84f464bdc78583b867bbe6a1ef5c0ed4d5ed1e304aca948daf637",
+      "output": "```json\n[{\"commandType\": \"PASS\", \"playerId\": 1, \"parameters\": {\"target_player_id\": 2, \"type\": \"GROUND\"}, \"duration\": 0}]\n```",
+      "errors": [
+        "invalid_json"
+      ],
+      "requestWallMs": 793,
+      "usage": {
+        "inputTokens": 2182,
+        "outputTokens": 44,
+        "totalTokens": 2226
+      }
+    },
+    {
+      "id": "def-ambiguous-owner",
+      "role": "def",
+      "promptSha256": "1051b151fbe84f464bdc78583b867bbe6a1ef5c0ed4d5ed1e304aca948daf637",
+      "output": "```json\n[{\"commandType\": \"PASS\", \"playerId\": 1, \"parameters\": {\"target_player_id\": 3, \"type\": \"GROUND\"}, \"duration\": 0}]\n```",
+      "errors": [
+        "invalid_json"
+      ],
+      "requestWallMs": 1159,
+      "usage": {
+        "inputTokens": 2174,
+        "outputTokens": 44,
+        "totalTokens": 2218
+      }
+    },
+    {
+      "id": "mid-own-ball-far",
+      "role": "mid",
+      "promptSha256": "ad0d332cd118326e6d3c27b101d21ae5d962f8a3309b61696964e15d25c62c73",
+      "output": "```json\n[{\"commandType\": \"PASS\", \"playerId\": 2, \"parameters\": {\"target_player_id\": 4}, \"duration\": 0}]\n```",
+      "errors": [
+        "invalid_json"
+      ],
+      "requestWallMs": 675,
+      "usage": {
+        "inputTokens": 2182,
+        "outputTokens": 38,
+        "totalTokens": 2220
+      }
+    },
+    {
+      "id": "mid-ambiguous-owner",
+      "role": "mid",
+      "promptSha256": "ad0d332cd118326e6d3c27b101d21ae5d962f8a3309b61696964e15d25c62c73",
+      "output": "```json\n[{\"commandType\": \"PASS\", \"playerId\": 2, \"parameters\": {\"target_player_id\": 4}, \"duration\": 0}]\n```",
+      "errors": [
+        "invalid_json"
+      ],
+      "requestWallMs": 625,
+      "usage": {
+        "inputTokens": 2174,
+        "outputTokens": 38,
+        "totalTokens": 2212
+      }
+    },
+    {
+      "id": "fwd1-own-ball-far",
+      "role": "fwd1",
+      "promptSha256": "396916c49d1e2a44b52c85d6cc197a29a084846fd65abb96109f1209c85cebb2",
+      "output": "```json\n[{\"commandType\": \"SHOOT\", \"playerId\": 3, \"parameters\": {\"aim_location\": \"BR\", \"power\": 0.8}, \"duration\": 0}]\n```",
+      "errors": [
+        "invalid_json"
+      ],
+      "requestWallMs": 658,
+      "usage": {
+        "inputTokens": 2196,
+        "outputTokens": 47,
+        "totalTokens": 2243
+      }
+    },
+    {
+      "id": "fwd1-ambiguous-owner",
+      "role": "fwd1",
+      "promptSha256": "396916c49d1e2a44b52c85d6cc197a29a084846fd65abb96109f1209c85cebb2",
+      "output": "```json\n[{\"commandType\": \"SHOOT\", \"playerId\": 3, \"parameters\": {\"aim_location\": \"BR\", \"power\": 0.8}, \"duration\": 0}]\n```",
+      "errors": [
+        "invalid_json"
+      ],
+      "requestWallMs": 575,
+      "usage": {
+        "inputTokens": 2188,
+        "outputTokens": 47,
+        "totalTokens": 2235
+      }
+    },
+    {
+      "id": "fwd2-own-ball-far",
+      "role": "fwd2",
+      "promptSha256": "7a08ee74e4b501d393e8b92d98955190432a5d589fbcef5b82501aaa2615b16f",
+      "output": "```json\n[{\"commandType\": \"SHOOT\", \"playerId\": 4, \"parameters\": {\"aim_location\": \"BR\", \"power\": 0.8}, \"duration\": 0}]\n```",
+      "errors": [
+        "invalid_json"
+      ],
+      "requestWallMs": 1501,
+      "usage": {
+        "inputTokens": 2392,
+        "outputTokens": 50,
+        "totalTokens": 2442,
+        "cacheReadInputTokens": 0,
+        "cacheWriteInputTokens": 0
+      }
+    },
+    {
+      "id": "fwd2-ambiguous-owner",
+      "role": "fwd2",
+      "promptSha256": "7a08ee74e4b501d393e8b92d98955190432a5d589fbcef5b82501aaa2615b16f",
+      "output": "```json\n[{\"commandType\": \"SHOOT\", \"playerId\": 4, \"parameters\": {\"aim_location\": \"BR\", \"power\": 0.8}, \"duration\": 0}]\n```",
+      "errors": [
+        "invalid_json"
+      ],
+      "requestWallMs": 1415,
+      "usage": {
+        "inputTokens": 2382,
+        "outputTokens": 50,
+        "totalTokens": 2432,
+        "cacheReadInputTokens": 0,
+        "cacheWriteInputTokens": 0
+      }
+    },
+    {
+      "id": "fwd1-close-open-shot",
+      "role": "fwd1",
+      "promptSha256": "396916c49d1e2a44b52c85d6cc197a29a084846fd65abb96109f1209c85cebb2",
+      "output": "```json\n[{\"commandType\": \"SHOOT\", \"playerId\": 3, \"parameters\": {\"aim_location\": \"TR\", \"power\": 0.8}, \"duration\": 0}]\n```",
+      "errors": [
+        "invalid_json"
+      ],
+      "requestWallMs": 793,
+      "usage": {
+        "inputTokens": 2196,
+        "outputTokens": 47,
+        "totalTokens": 2243
+      }
+    },
+    {
+      "id": "fwd2-close-blocked-pass",
+      "role": "fwd2",
+      "promptSha256": "7a08ee74e4b501d393e8b92d98955190432a5d589fbcef5b82501aaa2615b16f",
+      "output": "```json\n[{\"commandType\": \"SHOOT\", \"playerId\": 4, \"parameters\": {\"aim_location\": \"BR\", \"power\": 0.8}, \"duration\": 0}]\n```",
+      "errors": [
+        "invalid_json"
+      ],
+      "requestWallMs": 1457,
+      "usage": {
+        "inputTokens": 2394,
+        "outputTokens": 50,
+        "totalTokens": 2444,
+        "cacheReadInputTokens": 0,
+        "cacheWriteInputTokens": 0
+      }
+    },
+    {
+      "id": "gk-reject-marked-defender",
+      "role": "gk",
+      "promptSha256": "ba8cc43c1c39dca4dbb5b9e18f721419b554901730248bfe9d9b9ed3a6796e92",
+      "output": "```json\n[{\"commandType\": \"GK_DISTRIBUTE\", \"playerId\": 0, \"parameters\": {\"target_player_id\": 1, \"method\": \"THROW\"}, \"duration\": 0}]\n```",
+      "errors": [
+        "invalid_json"
+      ],
+      "requestWallMs": 643,
+      "usage": {
+        "inputTokens": 2147,
+        "outputTokens": 49,
+        "totalTokens": 2196
+      }
+    },
+    {
+      "id": "fwd1-low-energy-cover",
+      "role": "fwd1",
+      "promptSha256": "396916c49d1e2a44b52c85d6cc197a29a084846fd65abb96109f1209c85cebb2",
+      "output": "```json\n[{\"commandType\": \"SET_STANCE\", \"playerId\": 3, \"parameters\": {\"stance\": 0}, \"duration\": 0}]\n```",
+      "errors": [
+        "invalid_json"
+      ],
+      "requestWallMs": 583,
+      "usage": {
+        "inputTokens": 2196,
+        "outputTokens": 38,
+        "totalTokens": 2234
+      }
+    },
+    {
+      "id": "mid-malformed-players",
+      "role": "mid",
+      "promptSha256": "ad0d332cd118326e6d3c27b101d21ae5d962f8a3309b61696964e15d25c62c73",
+      "output": "```json\n[{\"commandType\": \"SET_STANCE\", \"playerId\": 2, \"parameters\": {\"stance\": 0}, \"duration\": 0}]\n```",
+      "errors": [
+        "invalid_json"
+      ],
+      "requestWallMs": 652,
+      "usage": {
+        "inputTokens": 1454,
+        "outputTokens": 38,
+        "totalTokens": 1492
+      }
+    },
+    {
+      "id": "fwd2-wrong-player-binding",
+      "role": "fwd2",
+      "promptSha256": "7a08ee74e4b501d393e8b92d98955190432a5d589fbcef5b82501aaa2615b16f",
+      "output": "```json\n[{\"commandType\": \"SHOOT\", \"playerId\": 4, \"parameters\": {\"aim_location\": \"BR\", \"power\": 0.8}, \"duration\": 0}]\n```",
+      "errors": [
+        "invalid_json"
+      ],
+      "requestWallMs": 1491,
+      "usage": {
+        "inputTokens": 2392,
+        "outputTokens": 50,
+        "totalTokens": 2442,
+        "cacheReadInputTokens": 0,
+        "cacheWriteInputTokens": 0
+      }
+    },
+    {
+      "id": "gk-own-ball-far-away",
+      "role": "gk",
+      "promptSha256": "ba8cc43c1c39dca4dbb5b9e18f721419b554901730248bfe9d9b9ed3a6796e92",
+      "output": "```json\n[{\"commandType\": \"CLEAR_OVERRIDE\", \"playerId\": 0, \"parameters\": {}, \"duration\": 0}]\n```",
+      "errors": [
+        "invalid_json"
+      ],
+      "requestWallMs": 576,
+      "usage": {
+        "inputTokens": 2147,
+        "outputTokens": 35,
+        "totalTokens": 2182
+      }
+    },
+    {
+      "id": "def-own-ball-far-away",
+      "role": "def",
+      "promptSha256": "1051b151fbe84f464bdc78583b867bbe6a1ef5c0ed4d5ed1e304aca948daf637",
+      "output": "```json\n[{\"commandType\": \"SET_STANCE\", \"playerId\": 1, \"parameters\": {\"stance\": 2}, \"duration\": 0}]\n```",
+      "errors": [
+        "invalid_json"
+      ],
+      "requestWallMs": 543,
+      "usage": {
+        "inputTokens": 2182,
+        "outputTokens": 38,
+        "totalTokens": 2220
+      }
+    },
+    {
+      "id": "mid-own-ball-far-away",
+      "role": "mid",
+      "promptSha256": "ad0d332cd118326e6d3c27b101d21ae5d962f8a3309b61696964e15d25c62c73",
+      "output": "```json\n[{\"commandType\": \"PASS\", \"playerId\": 2, \"parameters\": {\"target_player_id\": 4}, \"duration\": 0}]\n```",
+      "errors": [
+        "invalid_json"
+      ],
+      "requestWallMs": 653,
+      "usage": {
+        "inputTokens": 2182,
+        "outputTokens": 38,
+        "totalTokens": 2220
+      }
+    },
+    {
+      "id": "fwd1-own-ball-far-away",
+      "role": "fwd1",
+      "promptSha256": "396916c49d1e2a44b52c85d6cc197a29a084846fd65abb96109f1209c85cebb2",
+      "output": "```json\n[{\"commandType\": \"SHOOT\", \"playerId\": 3, \"parameters\": {\"aim_location\": \"BR\", \"power\": 0.8}, \"duration\": 0}]\n```",
+      "errors": [
+        "invalid_json"
+      ],
+      "requestWallMs": 1214,
+      "usage": {
+        "inputTokens": 2196,
+        "outputTokens": 47,
+        "totalTokens": 2243
+      }
+    },
+    {
+      "id": "fwd2-own-ball-far-away",
+      "role": "fwd2",
+      "promptSha256": "7a08ee74e4b501d393e8b92d98955190432a5d589fbcef5b82501aaa2615b16f",
+      "output": "```json\n[{\"commandType\": \"SHOOT\", \"playerId\": 4, \"parameters\": {\"aim_location\": \"BL\", \"power\": 0.8}, \"duration\": 0}]\n```",
+      "errors": [
+        "invalid_json"
+      ],
+      "requestWallMs": 1412,
+      "usage": {
+        "inputTokens": 2392,
+        "outputTokens": 51,
+        "totalTokens": 2443,
+        "cacheReadInputTokens": 0,
+        "cacheWriteInputTokens": 0
+      }
+    },
+    {
+      "id": "gk-ambiguous-owner-stale-context",
+      "role": "gk",
+      "promptSha256": "ba8cc43c1c39dca4dbb5b9e18f721419b554901730248bfe9d9b9ed3a6796e92",
+      "output": "[{\"commandType\": \"CLEAR_OVERRIDE\", \"playerId\": 0, \"parameters\": {}, \"duration\": 0}]",
+      "errors": [],
+      "requestWallMs": 596,
+      "usage": {
+        "inputTokens": 5791,
+        "outputTokens": 31,
+        "totalTokens": 5822
+      }
+    },
+    {
+      "id": "def-ambiguous-owner-stale-context",
+      "role": "def",
+      "promptSha256": "1051b151fbe84f464bdc78583b867bbe6a1ef5c0ed4d5ed1e304aca948daf637",
+      "output": "[{\"commandType\": \"PASS\", \"playerId\": 1, \"parameters\": {\"target_player_id\": 4, \"type\": \"GROUND\"}, \"duration\": 0}]",
+      "errors": [
+        "scenario_decision"
+      ],
+      "requestWallMs": 805,
+      "usage": {
+        "inputTokens": 5806,
+        "outputTokens": 40,
+        "totalTokens": 5846
+      }
+    },
+    {
+      "id": "mid-ambiguous-owner-stale-context",
+      "role": "mid",
+      "promptSha256": "ad0d332cd118326e6d3c27b101d21ae5d962f8a3309b61696964e15d25c62c73",
+      "output": "[{\"commandType\": \"PASS\", \"playerId\": 2, \"parameters\": {\"target_player_id\": 4, \"type\": \"GROUND\"}, \"duration\": 0}]",
+      "errors": [
+        "scenario_decision"
+      ],
+      "requestWallMs": 696,
+      "usage": {
+        "inputTokens": 5806,
+        "outputTokens": 40,
+        "totalTokens": 5846
+      }
+    },
+    {
+      "id": "fwd1-ambiguous-owner-stale-context",
+      "role": "fwd1",
+      "promptSha256": "396916c49d1e2a44b52c85d6cc197a29a084846fd65abb96109f1209c85cebb2",
+      "output": "[{\"commandType\": \"PASS\", \"playerId\": 3, \"parameters\": {\"target_player_id\": 4, \"type\": \"GROUND\"}, \"duration\": 0}]",
+      "errors": [
+        "scenario_decision"
+      ],
+      "requestWallMs": 903,
+      "usage": {
+        "inputTokens": 5820,
+        "outputTokens": 40,
+        "totalTokens": 5860
+      }
+    },
+    {
+      "id": "fwd2-ambiguous-owner-stale-context",
+      "role": "fwd2",
+      "promptSha256": "7a08ee74e4b501d393e8b92d98955190432a5d589fbcef5b82501aaa2615b16f",
+      "output": "[{\"commandType\": \"CLEAR_OVERRIDE\", \"playerId\": 4, \"parameters\": {}, \"duration\": 0}]",
+      "errors": [],
+      "requestWallMs": 1233,
+      "usage": {
+        "inputTokens": 6238,
+        "outputTokens": 34,
+        "totalTokens": 6272,
+        "cacheReadInputTokens": 0,
+        "cacheWriteInputTokens": 0
+      }
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "total": 26,
+    "requestWallMedianMs": 696.0,
+    "requestWallMaxMs": 1501,
+    "limitation": "Sequential Converse including network; not live Harness end-to-end latency"
+  }
+}

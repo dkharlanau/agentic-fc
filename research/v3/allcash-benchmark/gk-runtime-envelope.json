@@ -1,0 +1,13 @@
+{
+  "kind": "InvokeAgentRuntime with Harness ARN; CloudShell path, not game server",
+  "role": "ai_gk_agent",
+  "player": 0,
+  "calls": [],
+  "stopped": false,
+  "failureType": "ResourceNotFoundException",
+  "failureElapsedMs": 82.22690499997043,
+  "failureCode": "ResourceNotFoundException",
+  "stopFailureType": "ResourceNotFoundException",
+  "sessionAbsentConfirmed": true,
+  "evidence": "StopRuntimeSession returned session not found or terminated after InvokeAgentRuntime rejected Harness ARN"
+}

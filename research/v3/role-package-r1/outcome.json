@@ -1,0 +1,27 @@
+{
+  "experiment": "role-package-r1",
+  "status": "rejected-before-deployment",
+  "closedAtUTC": "2026-10-24T17:29:00Z",
+  "deployed": false,
+  "candidateFitnessRuns": 0,
+  "candidateRankedGames": 0,
+  "operationalSetup": "original M8 formation1-1-2",
+  "originalConfigurationChanged": false,
+  "evaluationCalls": 73,
+  "additionalDiagnosticCalls": 7,
+  "latest": {
+    "passed": 2,
+    "total": 26,
+    "requestWallMedianMs": 696.0,
+    "requestWallMaxMs": 1501,
+    "limitation": "Sequential Converse including network; not live Harness end-to-end latency"
+  },
+  "sourceCommit": "9310c75",
+  "result": "RESULT.md",
+  "evidenceSha256": {
+    "model-eval-v1.json": "7b23195bb76eb46dc746996d7d4535c00b6febf4e300a55b9dd1b33be79a29dd",
+    "model-eval-v2.json": "e0d6b87003b8c65e735499923706f61e21006c469f77e81e0eb9b66b0c5b4e01",
+    "model-eval-v3.json": "b3fe8a1fd24cabdb5c3eb1153c3ef60e28dce2b886c8e7fce7b21bca472e07eb"
+  },
+  "powerOrAutomationChanged": false
+}

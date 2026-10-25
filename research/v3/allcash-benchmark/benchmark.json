@@ -1,0 +1,263 @@
+{
+  "status": "two-cohorts-complete-provisional",
+  "observedAt": "2026-10-24T18:41:00Z",
+  "leaderboard": {
+    "allcash": {
+      "rank": 1,
+      "played": 248,
+      "wins": 186,
+      "draws": 5,
+      "losses": 57,
+      "points": 563,
+      "goalsFor": 575,
+      "goalsAgainst": 232
+    },
+    "own": {
+      "rank": 15,
+      "played": 98,
+      "wins": 54,
+      "draws": 2,
+      "losses": 42,
+      "points": 164,
+      "goalsFor": 124,
+      "goalsAgainst": 92
+    }
+  },
+  "matchedReport": {
+    "source": "previous fast FWD2 incoming AllCash report, re-supplied by owner",
+    "ownSide": "AWAY",
+    "ownScore": [
+      0,
+      2
+    ],
+    "roleOrder": [
+      "GK",
+      "DEF",
+      "MID",
+      "FWD1",
+      "FWD2"
+    ],
+    "allcashLatencyMs": [
+      2,
+      2,
+      2,
+      1,
+      79
+    ],
+    "ownLatencyMs": [
+      83,
+      84,
+      86,
+      82,
+      82
+    ],
+    "allSuccessPercent": 100,
+    "ownSetup": "M8 four roles plus deterministic FWD2, since rolled back",
+    "caveats": [
+      "Overlapped own Practice",
+      "Report attribution differs from own exact-session audit",
+      "No evidence of opponent model/runtime architecture"
+    ]
+  },
+  "targets": {
+    "endToEndRoleLatencyMs": 10,
+    "cohortGames": 3,
+    "requireFitness": 5,
+    "requireUsefulPhysicalActions": true,
+    "requireCompetitiveImprovement": true
+  },
+  "sourceCommit": "0194b5c750a6c936f0dd5719cce0479a14051bfc",
+  "freshPrePilotLeaderboard": {
+    "savedAt": "2026-10-24T18:48:59.503624+00:00",
+    "allcash": {
+      "rank": 1,
+      "played": 250,
+      "wins": 188,
+      "draws": 5,
+      "losses": 57,
+      "points": 569,
+      "goalsFor": 580,
+      "goalsAgainst": 233
+    },
+    "own": {
+      "rank": 15,
+      "played": 98,
+      "wins": 54,
+      "draws": 2,
+      "losses": 42,
+      "points": 164,
+      "goalsFor": 124,
+      "goalsAgainst": 92
+    }
+  },
+  "experiment": {
+    "source": "8747a88",
+    "name": "fast-FWD2-fixed-pitch-reference",
+    "formation": "1-1-2",
+    "otherFourRoles": "unchanged original M8",
+    "nativePassed": 28,
+    "nativeTotal": 28,
+    "nativeWarmMedianMs": 103.465,
+    "nativeMaxMs": 130.076,
+    "ownProbeStopped": true,
+    "fitness": {
+      "passed": 5,
+      "total": 5,
+      "savedAt": "2026-10-24T18:50:31.886615+00:00"
+    },
+    "practice": {
+      "result": "win",
+      "score": [
+        4,
+        0
+      ],
+      "opponent": "The Benchmark FC",
+      "ownSide": "HOME",
+      "shots": [
+        6,
+        2
+      ],
+      "possessionPercent": [
+        16,
+        84
+      ],
+      "reportRoleLatencyMs": {
+        "own": [
+          621,
+          834,
+          957,
+          607,
+          944
+        ],
+        "opponent": [
+          3,
+          2,
+          2,
+          2,
+          83
+        ]
+      },
+      "reportCommands": {
+        "own": {
+          "MOVE_TO": 193,
+          "PRESS_BALL": 119,
+          "SHOOT": 41,
+          "INTERCEPT": 40,
+          "PASS": 22,
+          "CLEAR_OVERRIDE": 19
+        },
+        "opponent": {
+          "CLEAR_OVERRIDE": 44,
+          "PASS": 17,
+          "PRESS_BALL": 1
+        }
+      },
+      "audit": "practice-audit.json",
+      "geometryFailures": 0,
+      "limitations": [
+        "First malformed connectivity input separately observed",
+        "Physical movement and attacks observed; effect of individual FWD2 choices not causally established",
+        "Command/latency team labels still conflict with own exact-session audit",
+        "One Practice result is not competitive validation"
+      ]
+    },
+    "rankedGames": [
+      {
+        "alias": "fixed-reference-live-01",
+        "opponent": "WKS MUCHOB\u00d3R WROC\u0141AW",
+        "score": [
+          4,
+          0
+        ],
+        "shots": [
+          8,
+          2
+        ]
+      },
+      {
+        "alias": "fixed-reference-live-02",
+        "opponent": "ForzaMilan13",
+        "score": [
+          2,
+          0
+        ],
+        "shots": [
+          8,
+          0
+        ]
+      },
+      {
+        "alias": "fixed-reference-live-03",
+        "opponent": "Amber Horns 2",
+        "score": [
+          4,
+          0
+        ],
+        "shots": [
+          13,
+          2
+        ]
+      }
+    ],
+    "decision": {
+      "action": "retain provisionally for a three-game replication",
+      "nextChange": null,
+      "rollback": "original FWD2 v14 and same other four original M8 roles; formation 1-1-2; Fitness5/5",
+      "limits": [
+        "All HOME against nonleaders; uncontrolled opponent sample",
+        "ForzaMilan13 was also beaten2:0 under previous M8",
+        "Own FWD2 audit does not match report team command/latency labels",
+        "No end-to-end10ms or tournament dominance achieved"
+      ]
+    }
+  },
+  "afterCohortLeaderboard": {
+    "savedAt": "2026-10-24T19:19:09.176822+00:00",
+    "own": {
+      "rank": 16,
+      "points": 173,
+      "played": 101,
+      "wins": 57,
+      "draws": 2,
+      "losses": 42,
+      "goalsFor": 134,
+      "goalsAgainst": 92
+    },
+    "allcash": {
+      "rank": 1,
+      "played": 256,
+      "wins": 192,
+      "draws": 5,
+      "losses": 59,
+      "goalsFor": 593,
+      "goalsAgainst": 237,
+      "points": 581
+    }
+  },
+  "afterReplicationLeaderboard": {
+    "own": {
+      "rank": 17,
+      "points": 177,
+      "played": 104,
+      "wins": 58,
+      "draws": 3,
+      "losses": 43,
+      "goalsFor": 137,
+      "goalsAgainst": 94,
+      "savedAt": "2026-10-24T19:41:55.673331+00:00"
+    },
+    "allcash": {
+      "name": "AllCash United",
+      "rank": 1,
+      "points": 590,
+      "played": 259,
+      "wins": 195,
+      "draws": 5,
+      "losses": 59,
+      "goalsFor": 607,
+      "goalsAgainst": 237
+    }
+  },
+  "replication": "../ranked-batch-07.json",
+  "latestAnalysis": "REPLICATION_AND_LATENCY.md"
+}

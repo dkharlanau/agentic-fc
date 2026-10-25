@@ -1,0 +1,196 @@
+#!/usr/bin/env python3
+"""Invoke own synthetic shot/restart sessions and stop them; retain evidence privately."""
+import argparse
+import copy
+import json
+from pathlib import Path
+import time
+import uuid
+import sys
+
+from deploy import save_private
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+from runtime_v1.core import unwrap
+
+
+def decode_commands(raw):
+    texts = [line[5:].strip() for line in raw.splitlines() if line.startswith('data:')]
+    if not texts:
+        texts = [raw]
+    for text in texts:
+        value = text
+        for _ in range(4):
+            if not isinstance(value, str):
+                break
+            try:
+                value = json.loads(value)
+            except ValueError:
+                break
+        if isinstance(value, list) and all(isinstance(c, dict) and 'commandType' in c for c in value):
+            return value
+    raise ValueError('No JSON command array found in the returned response stream')
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--receipt', type=Path, required=True)
+    parser.add_argument('--output', type=Path, required=True)
+    parser.add_argument('--apply', action='store_true', help='Actually invoke the saved Runtime')
+    args = parser.parse_args()
+    if '.local' not in args.output.resolve().parts:
+        parser.error('Evidence output must remain under .local')
+    receipt = json.loads(args.receipt.read_text())
+    if not receipt.get('verifiedReady'):
+        parser.error('Require a verified READY deployment receipt')
+    fixtures = json.loads((ROOT / 'research/v3/selective-autonomy/fixtures.json').read_text())['cases']
+    env = receipt['identity']['request']['environmentVariables']
+    player_id = int(env['PLAYER_ID'])
+    wire_scope = env.get('WIRE_TEAM_SCOPE', 'explicit')
+    support_mode = env.get('FWD_SUPPORT_STANCE', 'default')
+    cases = [(0, fixtures[0], 'SHOOT'), (1, fixtures[1], 'SHOOT'), (0, fixtures[3], 'MOVE_TO')]
+    observed = json.loads((ROOT / 'research/v3/fixtures/observed-live-away-open-play.json').read_text())['decodedState']
+    observed_case = {'id': 'observed-live-open-play', 'modelText': json.dumps({'prompt': json.dumps(observed)})}
+    if support_mode == 'position':
+        observed_case['expected'] = {'probeTarget': {'target_x': -2.369475, 'target_y': -2.179356, 'sprint': False}}
+    cases.append((1, observed_case,
+                  'MOVE_TO' if support_mode == 'position' else 'SET_STANCE' if support_mode == 'attack' else 'CLEAR_OVERRIDE'))
+    close = copy.deepcopy(observed)
+    player = next(p for p in close['gameState']['players'] if p['teamCode'] == 'away' and p['agentId'] == 'agentId_3')
+    player.update(position={'x': -4.2, 'y': 0.1}, velocity={'x': -1, 'y': 0}, lastAction='AdvanceToGoalWithBall')
+    close['gameState']['ball'].update(position={'x': -4.42, 'y': 0.14, 'z': 0.1},
+                                     velocity={'x': -1, 'y': 0, 'z': 0}, isFree=False, possessionAgentId='agentId_3')
+    cases.append((1, {'id': 'synthetic-world-contact-close-shot',
+                      'modelText': json.dumps({'prompt': json.dumps(close)})}, 'SHOOT'))
+    if player_id == 3 and env.get('FWD_SUPPORT_STANCE') == 'attack':
+        for side in (0, 1):
+            support = copy.deepcopy(unwrap(fixtures[2]['modelText']))
+            if side:
+                support['teamId'] = 1
+                support['gameState']['modeTeamId'] = 1
+                for player in support['gameState']['players']:
+                    player['teamCode'] = 'away' if player['teamCode'] == 'home' else 'home'
+                    player['position']['x'] *= -1
+                ball = support['gameState']['ball']
+                ball['position']['x'] *= -1
+                ball['possessionTeamCode'] = 'away'
+            cases.append((side, {'id': 'attack-support-' + str(side),
+                                 'modelText': json.dumps(support)}, 'SET_STANCE'))
+    if player_id == 3 and support_mode == 'position':
+        for side in (0, 1):
+            support = copy.deepcopy(unwrap(fixtures[2]['modelText']))
+            restart = copy.deepcopy(observed)
+            restart['gameState']['playMode'] = 'KICK_OFF'
+            if side == 1:
+                support['teamId'] = 1
+                for player in support['gameState']['players']:
+                    player['teamCode'] = 'away' if player['teamCode'] == 'home' else 'home'
+                    player['position']['x'] *= -1
+                support['gameState']['ball']['position']['x'] *= -1
+                support['gameState']['ball']['possessionTeamCode'] = 'away'
+            else:
+                restart['teamId'] = 0
+                for player in restart['gameState']['players']:
+                    player['teamCode'] = 'away' if player['teamCode'] == 'home' else 'home'
+                    player['position']['x'] *= -1
+                restart['gameState']['ball']['position']['x'] *= -1
+            cases.append((side, {'id': 'position-support-' + str(side), 'modelText': json.dumps(support),
+                                 'expected': {'probeTarget': {'target_x': 36.0 if side == 0 else -36.0,
+                                                              'target_y': -10.0, 'sprint': False}}}, 'MOVE_TO'))
+            cases.append((side, {'id': 'world-restart-' + str(side), 'modelText': json.dumps(restart),
+                                 'expected': {'probeTarget': {'target_x': -.354720 if side == 0 else .354720,
+                                                              'target_y': -.871743, 'sprint': False}}}, 'MOVE_TO'))
+    if player_id == 3 and env.get('FWD_COORDINATE_PROBE') in ('world-target', 'own-wide'):
+        for side in (0, 1):
+            diagnostic = copy.deepcopy(observed)
+            diagnostic['gameState']['gameTime'] = 10
+            if side == 0:
+                diagnostic['teamId'] = 0
+                for player in diagnostic['gameState']['players']:
+                    player['teamCode'] = 'away' if player['teamCode'] == 'home' else 'home'
+                    player['position']['x'] *= -1
+                diagnostic['gameState']['ball']['position']['x'] *= -1
+            wide = env['FWD_COORDINATE_PROBE'] == 'own-wide'
+            x = (-2.0 if wide else 4.0) * (1 if side == 0 else -1)
+            cases.append((side, {'id': 'coordinate-probe-' + str(side),
+                                 'modelText': json.dumps(diagnostic),
+                                 'expected': {'probeTarget': {'target_x': x,
+                                                              'target_y': 2.8 if wide else 1.5,
+                                                              'sprint': False}}}, 'MOVE_TO'))
+    if player_id == 0:
+        keeper_cases = json.loads((ROOT / 'research/v3/keeper-g1/fixtures.json').read_text())['cases']
+        cases = [(unwrap(c['modelText']).get('teamId'), c, c['expected']['commandType']) for c in keeper_cases]
+        kickoff = unwrap(fixtures[3]['modelText'])
+        kickoff['myPlayers'] = [0]
+        cases.append((0, {'id': 'home-keeper-kickoff', 'modelText': json.dumps(kickoff)}, 'MOVE_TO'))
+    if not args.apply:
+        print(f'Plan:{len(cases)}synthetic/replayed states for player{player_id}; stop own sessions.')
+        return
+    import boto3
+    from botocore.config import Config
+    client = boto3.client('bedrock-agentcore', region_name=receipt['identity']['region'],
+                          config=Config(connect_timeout=5, read_timeout=90, retries={'max_attempts': 0}))
+    arn = receipt['runtime']['agentRuntimeArn']
+    result = {'kind': 'Native synthetic Runtime probes; not live match evidence', 'probes': []}
+    for side, case, expected in cases:
+        sid = 'nhitl-r1-probe-' + str(uuid.uuid4())
+        record = {'case': case['id'], 'side': side, 'sessionId': sid, 'expected': expected, 'stopped': False}
+        result['probes'].append(record)
+        save_private(args.output, result)
+        started = time.monotonic()
+        try:
+            response = client.invoke_agent_runtime(agentRuntimeArn=arn, runtimeSessionId=sid,
+                                                   qualifier='DEFAULT', contentType='application/json',
+                                                   payload=case['modelText'].encode())
+            record['headersElapsedMs'] = round((time.monotonic() - started) * 1000)
+            record['responseContentType'] = response.get('contentType')
+            raw = response['response'].read().decode()
+            record['responseStream'] = raw
+            record['elapsedMs'] = round((time.monotonic() - started) * 1000)
+            commands = decode_commands(raw)
+            record['commands'] = commands
+            scope_valid = 'teamId' not in commands[0] if wire_scope == 'bound' else commands[0].get('teamId') == side
+            record['wireTeamScope'] = wire_scope
+            record['commandGatePassed'] = len(commands) == 1 and commands[0].get('playerId') == player_id and \
+                scope_valid and commands[0].get('commandType') == expected
+            expectation = case.get('expected', {})
+            if record['commandGatePassed'] and 'excludedTarget' in expectation:
+                record['commandGatePassed'] = commands[0]['parameters'].get('target_player_id') != expectation['excludedTarget']
+            if record['commandGatePassed'] and 'targetHemisphere' in expectation:
+                record['commandGatePassed'] = commands[0]['parameters'].get('target_x', 0) * expectation['targetHemisphere'] > 40
+            if record['commandGatePassed'] and 'probeTarget' in expectation:
+                record['commandGatePassed'] = commands[0]['parameters'] == expectation['probeTarget']
+            if env.get('MEMORY_ID'):
+                events = client.list_events(memoryId=env['MEMORY_ID'], actorId=env['MEMORY_ACTOR_ID'],
+                                            sessionId=sid, includePayloads=True, maxResults=20)
+                record['memoryEvents'] = json.loads(json.dumps(events['events'], default=str))
+                audits = []
+                for event in events['events']:
+                    for payload in event.get('payload', []):
+                        conversation = payload.get('conversational', {})
+                        if conversation.get('role') == 'ASSISTANT':
+                            decoded = json.loads(conversation['content']['text'])
+                            if isinstance(decoded.get('audit'), dict):
+                                audits.append(decoded['audit'])
+                record['acceptedModelChoiceVerified'] = any(a.get('outcome') == 'model_choice' and
+                    a.get('commandType') == expected and a.get('modelAttempted') is True for a in audits)
+        except Exception as error:
+            record['error'] = type(error).__name__ + ': ' + str(error)
+        finally:
+            try:
+                client.stop_runtime_session(agentRuntimeArn=arn, runtimeSessionId=sid, qualifier='DEFAULT')
+                record['stopped'] = True
+            except Exception as error:
+                record['stopError'] = type(error).__name__ + ': ' + str(error)
+            save_private(args.output, result)
+        print(json.dumps({k: record.get(k) for k in ('case', 'side', 'elapsedMs', 'commandGatePassed',
+                          'acceptedModelChoiceVerified', 'stopped', 'error')}, default=str), flush=True)
+    if not all(p.get('commandGatePassed') and p.get('acceptedModelChoiceVerified') and p['stopped']
+               for p in result['probes']):
+        raise SystemExit('Native gate not satisfied; inspect private evidence before registration.')
+    print('Native HOME/AWAY model and own-session cleanup gates passed.')
+
+
+if __name__ == '__main__':
+    main()

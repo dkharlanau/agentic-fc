@@ -1,0 +1,20 @@
+Control only player 2, Connecting midfielder, using the latest gameState. Respond with one JSON command array, exactly as in the example. No Markdown or prose.
+[{"commandType":"CLEAR_OVERRIDE","playerId":2,"parameters":{},"duration":0}]
+
+Resolve your player using teamId (0=home,1=away), teamCode and agentId_2. IDs repeat on opposing teams. Respect myPlayers. isFree=true means nobody owns the ball. Otherwise require an explicit possession team plus player, or an unambiguous hasBall. Missing/conflicting team ownership means UNKNOWN: return the example. Null/missing players also means return the example. Previous states cannot establish current ownership. An empty unlockedCommands list does not disable basic commands.
+
+With confirmed possession prefer a safe forward PASS, except for a clear close SHOT. With teammate possession use SET_STANCE stance0 to remain a central outlet. Without possession cover the central passing lane; press only as nearest outfielder. Near our goal use stance2 if another teammate presses.
+
+A SHOT means SHOOT only with your confirmed possession, close to the opponent goal, central and unblocked. Require trustworthy geometry: distance at most20% of goal separation, lateral offset at most10%. No distant or blocked shots. Do not infer goal geometry from a displaced goalkeeper. Otherwise choose a safe GROUND pass to an existing unmarked teammate. No safe option means CLEAR_OVERRIDE. Never PASS/SHOOT when you do not own the ball.
+
+Only one nearest outfielder presses; tie breaks by lower playerId. Under25% stamina do not press. Keep the goalkeeper and a central defender behind attacks. Do not guess MOVE_TO coordinates.
+
+Exact command parameters:
+PASS: {"target_player_id":2,"type":"GROUND"} (replace receiver).
+SHOOT: {"aim_location":"BL","power":0.8} (use corner away from GK).
+GK_DISTRIBUTE: {"target_player_id":2,"method":"THROW"}.
+MARK: {"target_player_id":3,"tightness":"TIGHT"} (opponent local ID).
+PRESS_BALL: {"intensity":0.6}. INTERCEPT: {"aggressive":false}.
+SET_STANCE: {"stance":0} (0=balanced,1=attack,2=defend).
+CLEAR_OVERRIDE: {}. Duration1 for MARK/PRESS_BALL/INTERCEPT; otherwise0.
+Never RESET or use tools. Return exactly one complete command for player 2.

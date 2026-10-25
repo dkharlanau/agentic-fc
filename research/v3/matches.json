@@ -1,0 +1,3365 @@
+{
+  "kind": "observed live match report summaries; uncontrolled opponents",
+  "matches": [
+    {
+      "id": "live-01",
+      "setup": "H2.1",
+      "side": "away",
+      "goalsFor": 1,
+      "goalsAgainst": 2,
+      "extraTime": true,
+      "shotsFor": 4,
+      "shotsAgainst": 11,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 2,
+      "possessionPercent": 35,
+      "commands": 492,
+      "averageLatencyMs": 1327,
+      "commandCounts": {
+        "MOVE_TO": 298,
+        "GK_DISTRIBUTE": 49,
+        "INTERCEPT": 38,
+        "PRESS_BALL": 31,
+        "SHOOT": 30,
+        "PASS": 29,
+        "CLEAR_OVERRIDE": 17
+      }
+    },
+    {
+      "id": "live-02",
+      "setup": "H3-strict with DEF maxTokens=1024 trial",
+      "side": "away",
+      "goalsFor": 2,
+      "goalsAgainst": 0,
+      "shotsFor": 5,
+      "shotsAgainst": 5,
+      "shotsOnTargetFor": 2,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 51,
+      "commands": 24,
+      "averageLatencyMs": 13940,
+      "commandCounts": {
+        "MOVE_TO": 12,
+        "PASS": 7,
+        "PRESS_BALL": 5
+      },
+      "limitations": [
+        "Mixed configuration around this match; exact per-tick endpoint version not recovered.",
+        "Opponent reported zero commands; built-in engine still played.",
+        "Victory does not establish a stronger policy; latency substantially worsened."
+      ]
+    },
+    {
+      "id": "live-03",
+      "setup": "A0-M1",
+      "opponent": "DarkHorse_AI",
+      "side": "home",
+      "goalsFor": 2,
+      "goalsAgainst": 1,
+      "shotsFor": 6,
+      "shotsAgainst": 5,
+      "shotsOnTargetFor": 2,
+      "shotsOnTargetAgainst": 1,
+      "possessionPercent": 33,
+      "commands": 327,
+      "averageLatencyMs": 872,
+      "commandCounts": {
+        "PRESS_BALL": 198,
+        "RESET": 64,
+        "MOVE_TO": 27,
+        "CLEAR_OVERRIDE": 21,
+        "INTERCEPT": 14,
+        "MARK": 3
+      },
+      "roleLatencyMs": {
+        "gk": 601,
+        "def": 599,
+        "mid": 796,
+        "fwd1": 780,
+        "fwd2": 1202
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "One uncontrolled live opponent; does not establish a winning policy.",
+        "AI Overview contains causal claims not established by the report.",
+        "No explicit PASS/SHOOT/GK_DISTRIBUTE commands despite goals; built-in engine behaviour remains material."
+      ]
+    },
+    {
+      "id": "live-04",
+      "setup": "A0-M3-no-reset-no-tools",
+      "opponent": "Matrix_7",
+      "side": "home",
+      "goalsFor": 0,
+      "goalsAgainst": 1,
+      "shotsFor": 4,
+      "shotsAgainst": 6,
+      "shotsOnTargetFor": 0,
+      "shotsOnTargetAgainst": 1,
+      "possessionPercent": 43,
+      "commands": 115,
+      "averageLatencyMs": 3042,
+      "commandCounts": {
+        "PRESS_BALL": 64,
+        "MOVE_TO": 25,
+        "INTERCEPT": 14,
+        "MARK": 11,
+        "FOLLOW_PLAYER": 1
+      },
+      "roleLatencyMs": {
+        "gk": 94,
+        "def": 2908,
+        "mid": 2837,
+        "fwd1": 3330,
+        "fwd2": 5066
+      },
+      "reportedRoleSuccessPercent": 100,
+      "opponentCommands": 0,
+      "limitations": [
+        "RESET disappeared, but this uncontrolled match did not establish stronger play.",
+        "Latency regressed relative to live-03; cause not isolated.",
+        "No explicit PASS or SHOOT commands; four engine shots, none on target.",
+        "Opponent won with zero reported commands; built-in engine remained active."
+      ]
+    },
+    {
+      "id": "live-05",
+      "setup": "A0-M3-no-reset-no-tools",
+      "opponent": "No Context FC",
+      "side": "home",
+      "goalsFor": 2,
+      "goalsAgainst": 0,
+      "shotsFor": 4,
+      "shotsAgainst": 5,
+      "shotsOnTargetFor": 2,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 40,
+      "commands": 324,
+      "averageLatencyMs": 1347,
+      "commandCounts": {
+        "PRESS_BALL": 312,
+        "CLEAR_OVERRIDE": 12
+      },
+      "roleLatencyMs": {
+        "gk": 1103,
+        "def": 1290,
+        "mid": 1362,
+        "fwd1": 965,
+        "fwd2": 1279
+      },
+      "reportedRoleSuccessPercent": 100,
+      "opponentCommands": 21,
+      "limitations": [
+        "Same M3 configuration as live-04, different uncontrolled opponent.",
+        "RESET remained absent, but 96% of commands were PRESS_BALL.",
+        "No explicit PASS/SHOOT/GK_DISTRIBUTE commands; built-in engine contributed to shots/goals.",
+        "No controlled conclusion that M3 is stronger than M1."
+      ]
+    },
+    {
+      "id": "live-06",
+      "setup": "A0-M3-no-reset-no-tools",
+      "opponent": "Agentic United 1",
+      "side": "home",
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "shotsFor": 5,
+      "shotsAgainst": 4,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 47,
+      "commands": 335,
+      "averageLatencyMs": 454,
+      "commandCounts": {
+        "MOVE_TO": 130,
+        "MARK": 88,
+        "PRESS_BALL": 46,
+        "INTERCEPT": 41,
+        "CLEAR_OVERRIDE": 11,
+        "PASS": 9,
+        "SHOOT": 7,
+        "GK_DISTRIBUTE": 3
+      },
+      "roleLatencyMs": {
+        "gk": 453,
+        "def": 446,
+        "mid": 458,
+        "fwd1": 444,
+        "fwd2": 456
+      },
+      "reportedRoleSuccessPercent": 100,
+      "opponentCommands": 8,
+      "limitations": [
+        "Unchanged M3 and uncontrolled opponent.",
+        "Latency improved across unchanged M3 games:3042/1347/454ms; cause not established.",
+        "Role-diverse commands returned, so absence of PASS/SHOOT in earlier games does not establish an immutable possession-parser defect.",
+        "Reported Success and issued commands still do not prove useful application of every action."
+      ]
+    },
+    {
+      "id": "live-07",
+      "setup": "A0-M3-no-reset-no-tools",
+      "opponent": "AWSenal",
+      "side": "home",
+      "goalsFor": 2,
+      "goalsAgainst": 0,
+      "shotsFor": 8,
+      "shotsAgainst": 1,
+      "shotsOnTargetFor": 2,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 34,
+      "commands": 11,
+      "averageLatencyMs": 1,
+      "commandCounts": {
+        "CLEAR_OVERRIDE": 11
+      },
+      "roleLatencyMs": {
+        "gk": 2,
+        "def": 1,
+        "mid": 1,
+        "fwd1": 1,
+        "fwd2": 1
+      },
+      "reportedRoleSuccessPercent": 100,
+      "opponentCommands": 19,
+      "limitations": [
+        "1ms and eleven CLEAR_OVERRIDE commands do not establish Nova inference or prompt execution.",
+        "Engine play/cache/fallback are possible explanations, not verified causes.",
+        "Same installed M3 as preceding450ms role-diverse report; do not attribute winning to a new change."
+      ]
+    },
+    {
+      "id": "live-08",
+      "setup": "A0-M3-no-reset-no-tools",
+      "opponent": "Meerut United",
+      "side": "home",
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "shotsFor": 10,
+      "shotsAgainst": 2,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 19,
+      "commands": 327,
+      "averageLatencyMs": 1091,
+      "commandCounts": {
+        "MOVE_TO": 142,
+        "PRESS_BALL": 120,
+        "CLEAR_OVERRIDE": 20,
+        "SHOOT": 18,
+        "PASS": 15,
+        "GK_DISTRIBUTE": 12
+      },
+      "opponentCommands": 7,
+      "opponentAverageLatencyMs": 3,
+      "roleLatencyMs": {
+        "gk": 943,
+        "def": 1267,
+        "mid": 1335,
+        "fwd1": 1255,
+        "fwd2": 958
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy."
+      ]
+    },
+    {
+      "id": "live-09",
+      "setup": "A0-M3-no-reset-no-tools",
+      "opponent": "Agentic United 1",
+      "side": "home",
+      "goalsFor": 2,
+      "goalsAgainst": 0,
+      "shotsFor": 12,
+      "shotsAgainst": 3,
+      "shotsOnTargetFor": 2,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 41,
+      "commands": 370,
+      "averageLatencyMs": 433,
+      "commandCounts": {
+        "MOVE_TO": 124,
+        "MARK": 103,
+        "INTERCEPT": 71,
+        "PRESS_BALL": 29,
+        "CLEAR_OVERRIDE": 16,
+        "PASS": 10,
+        "SHOOT": 9,
+        "GK_DISTRIBUTE": 8
+      },
+      "opponentCommands": 8,
+      "opponentAverageLatencyMs": 2,
+      "roleLatencyMs": {
+        "gk": 440,
+        "def": 431,
+        "mid": 447,
+        "fwd1": 453,
+        "fwd2": 439
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy."
+      ]
+    },
+    {
+      "id": "live-10",
+      "setup": "A0-M3-no-reset-no-tools",
+      "opponent": "No Context FC",
+      "side": "home",
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "shotsFor": 4,
+      "shotsAgainst": 5,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 36,
+      "commands": 0,
+      "averageLatencyMs": 14263,
+      "commandCounts": {},
+      "opponentCommands": 0,
+      "opponentAverageLatencyMs": 2,
+      "roleLatencyMs": {
+        "gk": 11142,
+        "def": 18927,
+        "mid": 18937,
+        "fwd1": 11136,
+        "fwd2": 11172
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Zero reported commands and14.263s do not demonstrate model policy execution despite the1:0 win."
+      ]
+    },
+    {
+      "id": "live-11",
+      "setup": "unattributed-background",
+      "opponent": "Octopus",
+      "side": "away",
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "shotsFor": 5,
+      "shotsAgainst": 6,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 54,
+      "commands": 335,
+      "averageLatencyMs": 84,
+      "commandCounts": {
+        "MOVE_TO": 247,
+        "INTERCEPT": 34,
+        "PRESS_BALL": 16,
+        "SHOOT": 12,
+        "PASS": 10,
+        "CLEAR_OVERRIDE": 7,
+        "MARK": 6,
+        "GK_DISTRIBUTE": 3
+      },
+      "opponentCommands": 4,
+      "opponentAverageLatencyMs": 1,
+      "roleLatencyMs": {
+        "gk": 89,
+        "def": 82,
+        "mid": 82,
+        "fwd1": 83,
+        "fwd2": 82
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Observed around M3/M4 updates; exact endpoint versions at match initiation not recovered. Exclude from clean setup comparison."
+      ],
+      "initiation": "incoming/background, not manually initiated",
+      "evidenceCapturedAtUTC": "2026-10-23T21:05:24.026424+00:00"
+    },
+    {
+      "id": "live-12",
+      "setup": "unattributed-background",
+      "opponent": "The Drunkards",
+      "side": "away",
+      "goalsFor": 2,
+      "goalsAgainst": 1,
+      "shotsFor": 7,
+      "shotsAgainst": 6,
+      "shotsOnTargetFor": 2,
+      "shotsOnTargetAgainst": 1,
+      "possessionPercent": 52,
+      "commands": 565,
+      "averageLatencyMs": 77,
+      "commandCounts": {
+        "MOVE_TO": 449,
+        "PRESS_BALL": 46,
+        "PASS": 22,
+        "INTERCEPT": 16,
+        "CLEAR_OVERRIDE": 12,
+        "MARK": 11,
+        "SHOOT": 6,
+        "GK_DISTRIBUTE": 3
+      },
+      "opponentCommands": 12,
+      "opponentAverageLatencyMs": 1,
+      "roleLatencyMs": {
+        "gk": 76,
+        "def": 76,
+        "mid": 73,
+        "fwd1": 79,
+        "fwd2": 80
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Observed around M3/M4 updates; exact endpoint versions at match initiation not recovered. Exclude from clean setup comparison."
+      ],
+      "initiation": "incoming/background, not manually initiated",
+      "evidenceCapturedAtUTC": "2026-10-23T21:12:03.737652+00:00"
+    },
+    {
+      "id": "live-13",
+      "setup": "A0-M4-context10",
+      "opponent": "DarkHorse_AI",
+      "side": "home",
+      "goalsFor": 2,
+      "goalsAgainst": 0,
+      "shotsFor": 5,
+      "shotsAgainst": 4,
+      "shotsOnTargetFor": 2,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 35,
+      "commands": 370,
+      "averageLatencyMs": 869,
+      "commandCounts": {
+        "PRESS_BALL": 182,
+        "MOVE_TO": 107,
+        "RESET": 57,
+        "CLEAR_OVERRIDE": 16,
+        "INTERCEPT": 6,
+        "FOLLOW_PLAYER": 1,
+        "MARK": 1
+      },
+      "opponentCommands": 15,
+      "opponentAverageLatencyMs": 2,
+      "roleLatencyMs": {
+        "gk": 611,
+        "def": 595,
+        "mid": 915,
+        "fwd1": 910,
+        "fwd2": 988
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "57 RESET commands despite the no-RESET system instruction; actual live prompt/version payload was not recovered, so cause is unknown."
+      ],
+      "initiation": "manual after M4 configuration and post-reset Fitness verification",
+      "evidenceCapturedAtUTC": "2026-10-23T21:38:40.361697+00:00"
+    },
+    {
+      "id": "live-14",
+      "setup": "A0-M4-context10",
+      "opponent": "EPAM Spor",
+      "side": "away",
+      "goalsFor": 0,
+      "goalsAgainst": 1,
+      "shotsFor": 6,
+      "shotsAgainst": 4,
+      "shotsOnTargetFor": 0,
+      "shotsOnTargetAgainst": 1,
+      "possessionPercent": 49,
+      "commands": 7,
+      "averageLatencyMs": 3,
+      "commandCounts": {
+        "CLEAR_OVERRIDE": 7
+      },
+      "opponentCommands": 7,
+      "opponentAverageLatencyMs": 1,
+      "roleLatencyMs": {
+        "gk": 3,
+        "def": 3,
+        "mid": 3,
+        "fwd1": 2,
+        "fwd2": 2
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Only seven CLEAR_OVERRIDE commands at3ms; not evidence of model policy inference. Saved M4 stayed unchanged; actual versions at kickoff unverified."
+      ],
+      "initiation": "appeared in history; manual initiation not verified",
+      "evidenceCapturedAtUTC": "2026-10-23T21:38:40.361991+00:00"
+    },
+    {
+      "id": "live-15",
+      "setup": "A0-M4-context10",
+      "opponent": "No Context FC",
+      "side": "home",
+      "goalsFor": 3,
+      "goalsAgainst": 0,
+      "shotsFor": 6,
+      "shotsAgainst": 3,
+      "shotsOnTargetFor": 3,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 20,
+      "commands": 400,
+      "averageLatencyMs": 1124,
+      "commandCounts": {
+        "MOVE_TO": 249,
+        "PRESS_BALL": 109,
+        "CLEAR_OVERRIDE": 20,
+        "SHOOT": 16,
+        "INTERCEPT": 4,
+        "GK_DISTRIBUTE": 1,
+        "MARK": 1
+      },
+      "opponentCommands": 18,
+      "opponentAverageLatencyMs": 2,
+      "roleLatencyMs": {
+        "gk": 1044,
+        "def": 1408,
+        "mid": 1289,
+        "fwd1": 992,
+        "fwd2": 1306
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy."
+      ],
+      "initiation": "manual after verified M4 gate; configuration unchanged during game",
+      "evidenceCapturedAtUTC": "2026-10-23T21:47:58.170219+00:00"
+    },
+    {
+      "id": "live-16",
+      "setup": "unattributed-M4-M5-transition",
+      "opponent": "BOYS753",
+      "side": "away",
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "shotsFor": 12,
+      "shotsAgainst": 1,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 32,
+      "commands": 9,
+      "averageLatencyMs": 3,
+      "commandCounts": {
+        "PASS": 5,
+        "CLEAR_OVERRIDE": 4
+      },
+      "opponentCommands": 3,
+      "opponentAverageLatencyMs": 2,
+      "roleLatencyMs": {
+        "gk": 4,
+        "def": 3,
+        "mid": 3,
+        "fwd1": 3,
+        "fwd2": 2
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Exact versions at kickoff unknown; exclude from clean M5 cohort. Only9commands at3ms does not establish model policy inference."
+      ],
+      "initiation": "incoming during M4/M5 update",
+      "evidenceCapturedAtUTC": "2026-10-23T21:50:56.822770+00:00"
+    },
+    {
+      "id": "live-17",
+      "setup": "A0-M5-schema-clean",
+      "opponent": "Neman Grodno",
+      "side": "home",
+      "goalsFor": 1,
+      "goalsAgainst": 2,
+      "shotsFor": 4,
+      "shotsAgainst": 11,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 2,
+      "possessionPercent": 57,
+      "commands": 10,
+      "averageLatencyMs": 2,
+      "commandCounts": {
+        "CLEAR_OVERRIDE": 10
+      },
+      "opponentCommands": 14,
+      "opponentAverageLatencyMs": 3,
+      "roleLatencyMs": {
+        "gk": 2,
+        "def": 2,
+        "mid": 2,
+        "fwd1": 1,
+        "fwd2": 1
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Extra-time loss with only10CLEAR_OVERRIDE commands at2ms; does not establish model policy execution or a schema-cleanup effect."
+      ],
+      "initiation": "manual after saved M5 verification and post-reset UI Fitness5/5",
+      "evidenceCapturedAtUTC": "2026-10-23T21:56:56.956179+00:00"
+    },
+    {
+      "id": "live-18",
+      "setup": "A0-M5-schema-clean",
+      "opponent": "Amber Arcs 2",
+      "side": "home",
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "shotsFor": 12,
+      "shotsAgainst": 4,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 39,
+      "commands": 4,
+      "averageLatencyMs": 2,
+      "commandCounts": {
+        "CLEAR_OVERRIDE": 4
+      },
+      "opponentCommands": 3,
+      "opponentAverageLatencyMs": 3,
+      "roleLatencyMs": {
+        "gk": 2,
+        "def": 2,
+        "mid": 2,
+        "fwd1": 2,
+        "fwd2": 2
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Only4CLEAR_OVERRIDE commands at2ms; not evidence of model policy inference or a winning schema-cleanup effect."
+      ],
+      "initiation": "manual after verified M5 gate; unchanged configuration",
+      "evidenceCapturedAtUTC": "2026-10-23T22:03:46.755355+00:00"
+    },
+    {
+      "id": "live-19",
+      "setup": "A0-M6-haiku-fwd2",
+      "opponent": "BlackEagle",
+      "side": "home",
+      "goalsFor": 0,
+      "goalsAgainst": 1,
+      "shotsFor": 6,
+      "shotsAgainst": 4,
+      "shotsOnTargetFor": 0,
+      "shotsOnTargetAgainst": 1,
+      "possessionPercent": 55,
+      "commands": 335,
+      "averageLatencyMs": 81,
+      "commandCounts": {
+        "MOVE_TO": 285,
+        "INTERCEPT": 24,
+        "CLEAR_OVERRIDE": 12,
+        "PASS": 8,
+        "GK_DISTRIBUTE": 4,
+        "PRESS_BALL": 1,
+        "SHOOT": 1
+      },
+      "opponentCommands": 4,
+      "opponentAverageLatencyMs": 3,
+      "roleLatencyMs": {
+        "gk": 86,
+        "def": 102,
+        "mid": 86,
+        "fwd1": 79,
+        "fwd2": 88
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "81ms aggregate and88ms FWD2 report do not establish per-tick Haiku inference. One uncontrolled loss does not establish a model effect."
+      ],
+      "initiation": "manual after verified M6 configuration, saved native canary and UI Fitness5/5",
+      "evidenceCapturedAtUTC": "2026-10-23T22:19:18.368341+00:00"
+    },
+    {
+      "id": "live-20",
+      "setup": "A0-M6-haiku-fwd2",
+      "opponent": "AWSenal",
+      "side": "home",
+      "goalsFor": 3,
+      "goalsAgainst": 1,
+      "shotsFor": 7,
+      "shotsAgainst": 4,
+      "shotsOnTargetFor": 3,
+      "shotsOnTargetAgainst": 1,
+      "possessionPercent": 31,
+      "commands": 16,
+      "averageLatencyMs": 1,
+      "commandCounts": {
+        "CLEAR_OVERRIDE": 16
+      },
+      "opponentCommands": 23,
+      "opponentAverageLatencyMs": 2,
+      "roleLatencyMs": {
+        "gk": 1,
+        "def": 1,
+        "mid": 1,
+        "fwd1": 1,
+        "fwd2": 1
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "All16commands areCLEAR_OVERRIDE at1ms; win does not demonstrate Haiku inference or model improvement."
+      ],
+      "initiation": "manual unchanged M6",
+      "evidenceCapturedAtUTC": "2026-10-23T22:24:42.383445+00:00"
+    },
+    {
+      "id": "live-21",
+      "setup": "A0-M6-haiku-fwd2",
+      "opponent": "Amber Arcs 2",
+      "side": "home",
+      "goalsFor": 1,
+      "goalsAgainst": 3,
+      "shotsFor": 3,
+      "shotsAgainst": 6,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 3,
+      "possessionPercent": 36,
+      "commands": 16,
+      "averageLatencyMs": 2,
+      "commandCounts": {
+        "CLEAR_OVERRIDE": 16
+      },
+      "opponentCommands": 17,
+      "opponentAverageLatencyMs": 3,
+      "roleLatencyMs": {
+        "gk": 2,
+        "def": 2,
+        "mid": 2,
+        "fwd1": 2,
+        "fwd2": 1
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "All16commands areCLEAR_OVERRIDE at2ms; loss does not establish a Haiku model effect."
+      ],
+      "initiation": "manual unchanged M6",
+      "evidenceCapturedAtUTC": "2026-10-23T22:32:38.108766+00:00"
+    },
+    {
+      "id": "live-22",
+      "setup": "A0-M7-formation121",
+      "opponent": "Agentic United 1",
+      "side": "home",
+      "goalsFor": 2,
+      "goalsAgainst": 0,
+      "shotsFor": 4,
+      "shotsAgainst": 3,
+      "shotsOnTargetFor": 2,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 55,
+      "commands": 370,
+      "averageLatencyMs": 425,
+      "commandCounts": {
+        "MOVE_TO": 162,
+        "MARK": 69,
+        "PRESS_BALL": 68,
+        "INTERCEPT": 29,
+        "PASS": 19,
+        "CLEAR_OVERRIDE": 13,
+        "SHOOT": 8,
+        "GK_DISTRIBUTE": 2
+      },
+      "opponentCommands": 20,
+      "opponentAverageLatencyMs": 2,
+      "roleLatencyMs": {
+        "gk": 459,
+        "def": 448,
+        "mid": 435,
+        "fwd1": 447,
+        "fwd2": 438
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Prior same-name M3 controls differ in multiple settings and time; this first win does not isolate a formation effect. Report FWD2 latency438ms does not establish per-tick Haiku inference."
+      ],
+      "initiation": "manual selected READY opponent; actual viewer header matched selection",
+      "evidenceCapturedAtUTC": "2026-10-23T22:42:50.612652+00:00"
+    },
+    {
+      "id": "live-23",
+      "setup": "A0-M7-formation121",
+      "opponent": "Goalpost Shifters",
+      "side": "away",
+      "goalsFor": 1,
+      "goalsAgainst": 3,
+      "shotsFor": 3,
+      "shotsAgainst": 7,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 3,
+      "possessionPercent": 62,
+      "commands": 362,
+      "averageLatencyMs": 79,
+      "commandCounts": {
+        "MOVE_TO": 204,
+        "PRESS_BALL": 79,
+        "INTERCEPT": 25,
+        "PASS": 17,
+        "SHOOT": 16,
+        "CLEAR_OVERRIDE": 12,
+        "MARK": 9
+      },
+      "opponentCommands": 16,
+      "opponentAverageLatencyMs": 1,
+      "roleLatencyMs": {
+        "gk": 87,
+        "def": 79,
+        "mid": 78,
+        "fwd1": 84,
+        "fwd2": 77
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Stable saved M7 configuration; exact per-call live versions and useful action application not recovered.16issuedSHOOT versus3teamshots does not prove successful shot application."
+      ],
+      "initiation": "observed existing LIVE banner after rejected Find; request actor unverified",
+      "evidenceCapturedAtUTC": "2026-10-23T22:52:29.958009+00:00"
+    },
+    {
+      "id": "live-24",
+      "setup": "A0-M7-formation121",
+      "opponent": "Lighting Cloud",
+      "side": "home",
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "shotsFor": 10,
+      "shotsAgainst": 0,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 39,
+      "commands": 117,
+      "averageLatencyMs": 3365,
+      "commandCounts": {
+        "INTERCEPT": 83,
+        "PRESS_BALL": 25,
+        "MOVE_TO": 5,
+        "CLEAR_OVERRIDE": 4
+      },
+      "opponentCommands": 3,
+      "opponentAverageLatencyMs": 2,
+      "roleLatencyMs": {
+        "gk": 611,
+        "def": 3806,
+        "mid": 4205,
+        "fwd1": 4086,
+        "fwd2": 4057
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Role latency611/3806/4205/4086/4057ms and no issuedPASS/SHOOT despite10teamshots. Native FWD1 probes ran during part of this game; any load effect is unverified."
+      ],
+      "initiation": "manual auto-matched by normal Find",
+      "evidenceCapturedAtUTC": "2026-10-23T23:07:26.355566+00:00"
+    },
+    {
+      "id": "live-25",
+      "setup": "A0-M7-formation121",
+      "opponent": "AWSenal",
+      "side": "home",
+      "goalsFor": 0,
+      "goalsAgainst": 2,
+      "shotsFor": 4,
+      "shotsAgainst": 8,
+      "shotsOnTargetFor": 0,
+      "shotsOnTargetAgainst": 2,
+      "possessionPercent": 61,
+      "commands": 6,
+      "averageLatencyMs": 1,
+      "commandCounts": {
+        "CLEAR_OVERRIDE": 6
+      },
+      "opponentCommands": 22,
+      "opponentAverageLatencyMs": 1,
+      "roleLatencyMs": {
+        "gk": 1,
+        "def": 1,
+        "mid": 1,
+        "fwd1": 0,
+        "fwd2": 0
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Six CLEAR_OVERRIDE commands at1ms do not establish model inference or GK/formation strength."
+      ],
+      "initiation": "manual auto-matched by normal Find",
+      "evidenceCapturedAtUTC": "2026-10-23T23:28:54.942804+00:00"
+    },
+    {
+      "id": "live-26",
+      "setup": "A0-M7-formation121",
+      "opponent": "Hail Mary",
+      "side": "home",
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "shotsFor": 10,
+      "shotsAgainst": 0,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 56,
+      "commands": 379,
+      "averageLatencyMs": 845,
+      "commandCounts": {
+        "PRESS_BALL": 184,
+        "MOVE_TO": 152,
+        "INTERCEPT": 31,
+        "CLEAR_OVERRIDE": 12
+      },
+      "opponentCommands": 6,
+      "opponentAverageLatencyMs": 2,
+      "roleLatencyMs": {
+        "gk": 644,
+        "def": 907,
+        "mid": 942,
+        "fwd1": 629,
+        "fwd2": 902
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "M7 plus two coaching interventions, not an unchanged control.",
+        "No issued SHOOT/PASS in report despite10teamshots and explicit coaching; delivery does not prove policy adherence or caused victory."
+      ],
+      "initiation": "manual auto-matched by normal Find",
+      "evidenceCapturedAtUTC": "2026-10-23T23:36:38.709166+00:00",
+      "overtime": true,
+      "coaching": [
+        {
+          "gameClock": "about00:33",
+          "score": "0:0",
+          "text": "GK 1: stay near your own goal. DEF 2: hold cover. MID 3: pass forward when free. FWD 4/FWD 5: spread wide; shoot in range when unmarked."
+        },
+        {
+          "gameClock": "overtime",
+          "score": "0:0",
+          "text": "FWD 4/FWD 5: if you possess the ball in shooting range with a clear lane, SHOOT immediately. MID 3: support with a safe forward pass."
+        }
+      ],
+      "coachingVerification": "Both own messages appeared in Coach Live Feed; actual agent adherence not established."
+    },
+    {
+      "id": "live-27",
+      "setup": "A0-M7-formation121",
+      "opponent": "Meerut United",
+      "side": "home",
+      "goalsFor": 2,
+      "goalsAgainst": 1,
+      "shotsFor": 12,
+      "shotsAgainst": 3,
+      "shotsOnTargetFor": 2,
+      "shotsOnTargetAgainst": 1,
+      "possessionPercent": 45,
+      "commands": 659,
+      "averageLatencyMs": 1093,
+      "commandCounts": {
+        "MOVE_TO": 314,
+        "PRESS_BALL": 246,
+        "CLEAR_OVERRIDE": 36,
+        "PASS": 27,
+        "SHOOT": 19,
+        "GK_DISTRIBUTE": 17
+      },
+      "opponentCommands": 24,
+      "opponentAverageLatencyMs": 3,
+      "roleLatencyMs": {
+        "gk": 932,
+        "def": 1233,
+        "mid": 1264,
+        "fwd1": 1230,
+        "fwd2": 983
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Viewer commentary became stale in overtime; reload of the same viewer recovered terminal2:1. Lobby had also shown activeLIVE; no new match was requested."
+      ],
+      "initiation": "manual auto-matched by normal Find",
+      "evidenceCapturedAtUTC": "2026-10-23T23:45:44.621649+00:00",
+      "overtime": true,
+      "coaching": []
+    },
+    {
+      "id": "live-28",
+      "setup": "A0-M8-formation112",
+      "opponent": "Shalqar United",
+      "side": "home",
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "shotsFor": 4,
+      "shotsAgainst": 6,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 42,
+      "commands": 325,
+      "averageLatencyMs": 815,
+      "commandCounts": {
+        "PRESS_BALL": 216,
+        "INTERCEPT": 70,
+        "CLEAR_OVERRIDE": 20,
+        "MOVE_TO": 11,
+        "SHOOT": 5,
+        "RESET": 2,
+        "GK_DISTRIBUTE": 1
+      },
+      "opponentCommands": 17,
+      "opponentAverageLatencyMs": 2,
+      "roleLatencyMs": {
+        "gk": 604,
+        "def": 826,
+        "mid": 937,
+        "fwd1": 815,
+        "fwd2": 888
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Two issued RESET commands violate the saved schema-clean prompts, which exclude RESET from the positive command list and explicitly prohibit it. Actual live payload/role source was not recovered; no cause is established.",
+        "First M8 sample; no isolated formation-strength conclusion."
+      ],
+      "initiation": "manual auto-matched by normal Find after verified M8 gate",
+      "evidenceCapturedAtUTC": "2026-10-23T23:51:54.863746+00:00",
+      "overtime": true,
+      "coaching": []
+    },
+    {
+      "id": "live-29",
+      "setup": "A0-M8-formation112",
+      "opponent": "Sporting Lambda",
+      "side": "home",
+      "goalsFor": 0,
+      "goalsAgainst": 0,
+      "shotsFor": null,
+      "shotsAgainst": null,
+      "shotsOnTargetFor": null,
+      "shotsOnTargetAgainst": null,
+      "possessionPercent": null,
+      "commands": 6,
+      "averageLatencyMs": 1,
+      "commandCounts": {
+        "CLEAR_OVERRIDE": 6
+      },
+      "opponentCommands": 7,
+      "opponentAverageLatencyMs": 2,
+      "roleLatencyMs": {
+        "gk": 2,
+        "def": 2,
+        "mid": 1,
+        "fwd1": 1,
+        "fwd2": 1
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Primary STATS table absent in the rendered report; shots/on-target/possession are unknown (null), not zero.",
+        "Viewer header remainedLIVE after full-time commentary; reload of the same viewer confirmed Draw0:0.",
+        "No RESET in this six-command report does not establish model-policy compliance or inference."
+      ],
+      "initiation": "manual auto-matched by normal Find after verified M8 gate",
+      "evidenceCapturedAtUTC": "2026-10-24T00:01:21.784621+00:00",
+      "overtime": true,
+      "coaching": []
+    },
+    {
+      "id": "live-30",
+      "setup": "A0-M8-formation112",
+      "opponent": "Matrix_7",
+      "side": "home",
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "shotsFor": 20,
+      "shotsAgainst": 0,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 40,
+      "commands": 543,
+      "averageLatencyMs": 212,
+      "commandCounts": {
+        "MOVE_TO": 332,
+        "MARK": 145,
+        "PRESS_BALL": 25,
+        "INTERCEPT": 23,
+        "CLEAR_OVERRIDE": 14,
+        "GK_DISTRIBUTE": 4
+      },
+      "opponentCommands": 16,
+      "opponentAverageLatencyMs": 2,
+      "roleLatencyMs": {
+        "gk": 80,
+        "def": 347,
+        "mid": 485,
+        "fwd1": 77,
+        "fwd2": 119
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Twenty teamshots with only one on target, but no issued SHOOT/PASS in the report. Applied engine actions and issued command counts remain distinct.",
+        "Earlier M3 lost to the same opponent name0:1 under different settings/time; this is not an isolated formation comparison."
+      ],
+      "initiation": "manual auto-matched by normal Find after verified M8 gate",
+      "evidenceCapturedAtUTC": "2026-10-24T00:07:57.349278+00:00",
+      "overtime": true,
+      "coaching": []
+    },
+    {
+      "id": "live-31",
+      "setup": "A0-M8-formation112",
+      "opponent": "Agentic Arsenal",
+      "side": "home",
+      "goalsFor": 2,
+      "goalsAgainst": 1,
+      "shotsFor": 13,
+      "shotsAgainst": 3,
+      "shotsOnTargetFor": 2,
+      "shotsOnTargetAgainst": 1,
+      "possessionPercent": 44,
+      "commands": 332,
+      "averageLatencyMs": 858,
+      "commandCounts": {
+        "MOVE_TO": 151,
+        "PRESS_BALL": 80,
+        "FOLLOW_PLAYER": 33,
+        "SHOOT": 25,
+        "CLEAR_OVERRIDE": 12,
+        "PASS": 10,
+        "INTERCEPT": 9,
+        "GK_DISTRIBUTE": 6,
+        "RESET": 5,
+        "MARK": 1
+      },
+      "opponentCommands": 12,
+      "opponentAverageLatencyMs": 2,
+      "roleLatencyMs": {
+        "gk": 655,
+        "def": 926,
+        "mid": 1032,
+        "fwd1": 677,
+        "fwd2": 916
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Shout field was not visible in this viewer; no coaching instruction was sent.",
+        "Five issued RESET commands recur despite unchanged saved ban/positive-enum cleanup. Actual emitting role/live payload not recovered.",
+        "Overtime status was not independently captured; no overtime boolean is inferred from the goal timeline."
+      ],
+      "initiation": "manual auto-matched by normal Find after verified M8 gate",
+      "evidenceCapturedAtUTC": "2026-10-24T00:15:50.072402+00:00",
+      "coaching": []
+    },
+    {
+      "id": "live-32",
+      "setup": "A0-M8-formation112",
+      "opponent": "Apocalypse",
+      "side": "home",
+      "goalsFor": 2,
+      "goalsAgainst": 0,
+      "shotsFor": 8,
+      "shotsAgainst": 0,
+      "shotsOnTargetFor": 2,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 53,
+      "commands": 375,
+      "averageLatencyMs": 499,
+      "commandCounts": {
+        "MOVE_TO": 367,
+        "CLEAR_OVERRIDE": 8
+      },
+      "opponentCommands": 16,
+      "opponentAverageLatencyMs": 3,
+      "roleLatencyMs": {
+        "gk": 519,
+        "def": 514,
+        "mid": 503,
+        "fwd1": 500,
+        "fwd2": 517
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Only MOVE_TO/CLEAR_OVERRIDE issued in this report despite8teamshots/2goals. This does not establish which live policy generated applied scoring actions.",
+        "No native test or coaching instruction overlapped this game."
+      ],
+      "initiation": "manual auto-matched by normal Find after verified M8 gate",
+      "evidenceCapturedAtUTC": "2026-10-24T00:28:10.864430+00:00",
+      "coaching": []
+    },
+    {
+      "id": "live-33",
+      "setup": "A0-M8-formation112",
+      "opponent": "Hail Mary",
+      "side": "home",
+      "goalsFor": 2,
+      "goalsAgainst": 0,
+      "shotsFor": 7,
+      "shotsAgainst": 2,
+      "shotsOnTargetFor": 2,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 33,
+      "commands": 329,
+      "averageLatencyMs": 824,
+      "commandCounts": {
+        "MOVE_TO": 166,
+        "PRESS_BALL": 128,
+        "CLEAR_OVERRIDE": 16,
+        "INTERCEPT": 14,
+        "MARK": 3,
+        "SHOOT": 2
+      },
+      "opponentCommands": 13,
+      "opponentAverageLatencyMs": 3,
+      "roleLatencyMs": {
+        "gk": 645,
+        "def": 968,
+        "mid": 931,
+        "fwd1": 629,
+        "fwd2": 909
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy."
+      ],
+      "initiation": "manual auto-matched by normal Find after verified M8 gate",
+      "evidenceCapturedAtUTC": "2026-10-24T00:35:21.787264+00:00",
+      "coaching": []
+    },
+    {
+      "id": "live-34",
+      "setup": "A0-M8-formation112",
+      "opponent": "Amber Oars 2",
+      "side": "home",
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "shotsFor": 7,
+      "shotsAgainst": 1,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 36,
+      "commands": 264,
+      "averageLatencyMs": 787,
+      "commandCounts": {
+        "PRESS_BALL": 146,
+        "MOVE_TO": 92,
+        "CLEAR_OVERRIDE": 15,
+        "INTERCEPT": 9,
+        "MARK": 1,
+        "SHOOT": 1
+      },
+      "opponentCommands": 14,
+      "opponentAverageLatencyMs": 3,
+      "roleLatencyMs": {
+        "gk": 594,
+        "def": 810,
+        "mid": 909,
+        "fwd1": 611,
+        "fwd2": 928
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy."
+      ],
+      "initiation": "manual auto-matched by normal Find after verified M8 gate",
+      "evidenceCapturedAtUTC": "2026-10-24T00:41:49.910446+00:00",
+      "coaching": []
+    },
+    {
+      "id": "live-35",
+      "setup": "A0-M8-formation112",
+      "opponent": "Singularity FC",
+      "side": "home",
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "shotsFor": 9,
+      "shotsAgainst": 4,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 44,
+      "commands": 330,
+      "averageLatencyMs": 74,
+      "commandCounts": {
+        "MOVE_TO": 142,
+        "CLEAR_OVERRIDE": 125,
+        "PRESS_BALL": 40,
+        "MARK": 20,
+        "PASS": 3
+      },
+      "opponentCommands": 4,
+      "opponentAverageLatencyMs": 2,
+      "roleLatencyMs": {
+        "gk": 80,
+        "def": 83,
+        "mid": 80,
+        "fwd1": 75,
+        "fwd2": 81
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Opponent issued only4CLEAR commands2ms; its previous high win record does not establish active model execution in this match."
+      ],
+      "initiation": "manual auto-matched by normal Find after verified M8 gate",
+      "evidenceCapturedAtUTC": "2026-10-24T00:47:15.033152+00:00",
+      "coaching": []
+    },
+    {
+      "id": "live-36",
+      "setup": "A0-M8-formation112",
+      "opponent": "Spartak Ultimate",
+      "side": "home",
+      "goalsFor": 2,
+      "goalsAgainst": 0,
+      "shotsFor": 12,
+      "shotsAgainst": 0,
+      "shotsOnTargetFor": 2,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 34,
+      "commands": 370,
+      "averageLatencyMs": 912,
+      "commandCounts": {
+        "MOVE_TO": 114,
+        "INTERCEPT": 87,
+        "MARK": 77,
+        "PASS": 59,
+        "CLEAR_OVERRIDE": 13,
+        "FOLLOW_PLAYER": 10,
+        "GK_DISTRIBUTE": 10
+      },
+      "opponentCommands": 16,
+      "opponentAverageLatencyMs": 2,
+      "roleLatencyMs": {
+        "gk": 833,
+        "def": 982,
+        "mid": 921,
+        "fwd1": 998,
+        "fwd2": 978
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy."
+      ],
+      "initiation": "manual auto-matched by normal Find after verified M8 gate",
+      "evidenceCapturedAtUTC": "2026-10-24T00:53:52.841746+00:00",
+      "coaching": []
+    },
+    {
+      "id": "live-37",
+      "setup": "A0-M8-formation112",
+      "opponent": "Spartak Ultimate",
+      "side": "home",
+      "goalsFor": 4,
+      "goalsAgainst": 1,
+      "shotsFor": 7,
+      "shotsAgainst": 2,
+      "shotsOnTargetFor": 4,
+      "shotsOnTargetAgainst": 1,
+      "possessionPercent": 45,
+      "commands": 475,
+      "averageLatencyMs": 912,
+      "commandCounts": {
+        "MOVE_TO": 193,
+        "INTERCEPT": 89,
+        "MARK": 86,
+        "PASS": 79,
+        "CLEAR_OVERRIDE": 23,
+        "GK_DISTRIBUTE": 5
+      },
+      "opponentCommands": 26,
+      "opponentAverageLatencyMs": 2,
+      "roleLatencyMs": {
+        "gk": 816,
+        "def": 942,
+        "mid": 920,
+        "fwd1": 959,
+        "fwd2": 991
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy."
+      ],
+      "initiation": "manual auto-matched by normal Find after verified M8 gate",
+      "evidenceCapturedAtUTC": "2026-10-24T01:00:52.792979+00:00",
+      "coaching": []
+    },
+    {
+      "id": "live-38",
+      "setup": "A0-M8-formation112",
+      "opponent": "Team AA",
+      "side": "home",
+      "goalsFor": 3,
+      "goalsAgainst": 0,
+      "shotsFor": 7,
+      "shotsAgainst": 0,
+      "shotsOnTargetFor": 3,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 41,
+      "commands": 332,
+      "averageLatencyMs": 893,
+      "commandCounts": {
+        "PRESS_BALL": 138,
+        "MOVE_TO": 137,
+        "INTERCEPT": 34,
+        "CLEAR_OVERRIDE": 22,
+        "SHOOT": 1
+      },
+      "opponentCommands": 23,
+      "opponentAverageLatencyMs": 2,
+      "roleLatencyMs": {
+        "gk": 595,
+        "def": 1114,
+        "mid": 910,
+        "fwd1": 651,
+        "fwd2": 857
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy."
+      ],
+      "initiation": "last manual auto-match requested before scheduling cutoff",
+      "evidenceCapturedAtUTC": "2026-10-24T01:08:50.201238+00:00",
+      "coaching": []
+    },
+    {
+      "id": "live-39",
+      "setup": "unattributed-background",
+      "opponent": "AWSuoliai",
+      "side": "away",
+      "goalsFor": 0,
+      "goalsAgainst": 1,
+      "shotsFor": 2,
+      "shotsAgainst": 5,
+      "shotsOnTargetFor": 0,
+      "shotsOnTargetAgainst": 1,
+      "possessionPercent": 59,
+      "commands": 321,
+      "averageLatencyMs": 326,
+      "commandCounts": {
+        "MOVE_TO": 208,
+        "MARK": 47,
+        "PRESS_BALL": 38,
+        "PASS": 14,
+        "CLEAR_OVERRIDE": 10,
+        "SHOOT": 3,
+        "INTERCEPT": 1
+      },
+      "opponentCommands": 12,
+      "opponentAverageLatencyMs": 1,
+      "roleLatencyMs": {
+        "gk": 473,
+        "def": 129,
+        "mid": 347,
+        "fwd1": 285,
+        "fwd2": 314
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Exact Harness versions/formation at kickoff and initiator were not captured. M8 is the last known saved setup, not a verified kickoff attribution; excluded from the manually verified M8 series."
+      ],
+      "lastKnownSavedSetup": "A0-M8-formation112",
+      "initiation": "Appeared in history after session shutdown; not manually initiated in resumed session.",
+      "evidenceCapturedAtUTC": "2026-10-24T05:23:37.779638+00:00",
+      "coaching": []
+    },
+    {
+      "id": "live-40",
+      "setup": "unattributed-background",
+      "opponent": "Goalpost Shifters",
+      "side": "away",
+      "goalsFor": 0,
+      "goalsAgainst": 2,
+      "shotsFor": 4,
+      "shotsAgainst": 10,
+      "shotsOnTargetFor": 0,
+      "shotsOnTargetAgainst": 2,
+      "possessionPercent": 49,
+      "commands": 312,
+      "averageLatencyMs": 79,
+      "commandCounts": {
+        "MOVE_TO": 180,
+        "PRESS_BALL": 51,
+        "INTERCEPT": 35,
+        "MARK": 16,
+        "CLEAR_OVERRIDE": 13,
+        "SHOOT": 12,
+        "PASS": 4,
+        "GK_DISTRIBUTE": 1
+      },
+      "opponentCommands": 8,
+      "opponentAverageLatencyMs": 1,
+      "roleLatencyMs": {
+        "gk": 80,
+        "def": 84,
+        "mid": 83,
+        "fwd1": 78,
+        "fwd2": 84
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Exact Harness versions/formation at kickoff and initiator were not captured. M8 is the last known saved setup, not a verified kickoff attribution; excluded from the manually verified M8 series."
+      ],
+      "lastKnownSavedSetup": "A0-M8-formation112",
+      "initiation": "Appeared in history after session shutdown; not manually initiated in resumed session.",
+      "evidenceCapturedAtUTC": "2026-10-24T05:23:37.779933+00:00",
+      "coaching": []
+    },
+    {
+      "id": "live-41",
+      "setup": "A0-M8-formation112",
+      "opponent": "FC LTX",
+      "side": "home",
+      "goalsFor": 1,
+      "goalsAgainst": 2,
+      "shotsFor": 3,
+      "shotsAgainst": 6,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 2,
+      "possessionPercent": 42,
+      "commands": 470,
+      "averageLatencyMs": 707,
+      "commandCounts": {
+        "MOVE_TO": 349,
+        "INTERCEPT": 35,
+        "PASS": 34,
+        "PRESS_BALL": 28,
+        "CLEAR_OVERRIDE": 12,
+        "MARK": 10,
+        "GK_DISTRIBUTE": 2
+      },
+      "opponentCommands": 16,
+      "opponentAverageLatencyMs": 3,
+      "roleLatencyMs": {
+        "gk": 566,
+        "def": 740,
+        "mid": 792,
+        "fwd1": 769,
+        "fwd2": 810
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "No saved Harness configuration change, coaching or native model probe during this game. Prior11-game M8 series was HOME-only and this is an additional HOME loss."
+      ],
+      "extraTime": true,
+      "initiation": "manual normal Find after restored M8 profile and fresh UI Fitness5/5",
+      "coaching": [],
+      "evidenceCapturedAtUTC": "2026-10-24T05:30:11.832262+00:00"
+    },
+    {
+      "id": "live-42",
+      "setup": "A0-M7-formation121",
+      "opponent": "AgentCore Fighters",
+      "side": "home",
+      "goalsFor": 2,
+      "goalsAgainst": 0,
+      "shotsFor": 13,
+      "shotsAgainst": 1,
+      "shotsOnTargetFor": 2,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 50,
+      "commands": 370,
+      "averageLatencyMs": 82,
+      "commandCounts": {
+        "MOVE_TO": 265,
+        "INTERCEPT": 43,
+        "PRESS_BALL": 19,
+        "CLEAR_OVERRIDE": 14,
+        "PASS": 14,
+        "SHOOT": 8,
+        "GK_DISTRIBUTE": 7
+      },
+      "opponentCommands": 8,
+      "opponentAverageLatencyMs": 2,
+      "roleLatencyMs": {
+        "gk": 79,
+        "def": 92,
+        "mid": 79,
+        "fwd1": 83,
+        "fwd2": 82
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Formation-only return to M7; no saved Harness changes, coaching or native probes during game. Different uncontrolled opponent from live41; no isolated formation-effect claim."
+      ],
+      "initiation": "manual normal Find after saved/reloaded1-2-1 and fresh UI Fitness5/5",
+      "coaching": [],
+      "evidenceCapturedAtUTC": "2026-10-24T05:42:55.807672+00:00"
+    },
+    {
+      "id": "live-43",
+      "setup": "A0-M9-memory-fwd1",
+      "opponent": "BlackEagle",
+      "side": "home",
+      "goalsFor": 1,
+      "goalsAgainst": 2,
+      "shotsFor": 4,
+      "shotsAgainst": 7,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 2,
+      "possessionPercent": 60,
+      "commands": 405,
+      "averageLatencyMs": 72,
+      "commandCounts": {
+        "MOVE_TO": 353,
+        "INTERCEPT": 26,
+        "CLEAR_OVERRIDE": 13,
+        "PASS": 9,
+        "PRESS_BALL": 4
+      },
+      "opponentCommands": 23,
+      "opponentAverageLatencyMs": 2,
+      "roleLatencyMs": {
+        "gk": 88,
+        "def": 81,
+        "mid": 90,
+        "fwd1": 89,
+        "fwd2": 76
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "FWD1 Memory writes verified in native synthetic canary, but no matching live session observed in STM immediately after game. Actual live execution path remains unverified; do not attribute outcome to Memory."
+      ],
+      "initiation": "manual normal Find after Memory-only FWD1 v15 update, exact GetHarness comparison, own probe/scrimmage reset and UI Fitness5/5",
+      "coaching": [],
+      "evidenceCapturedAtUTC": "2026-10-24T06:26:12.122799+00:00"
+    },
+    {
+      "id": "live-44",
+      "setup": "A0-M10-fresh-fwd1-memory",
+      "opponent": "AWSenal",
+      "side": "home",
+      "goalsFor": 0,
+      "goalsAgainst": 2,
+      "shotsFor": 3,
+      "shotsAgainst": 9,
+      "shotsOnTargetFor": 0,
+      "shotsOnTargetAgainst": 2,
+      "possessionPercent": 59,
+      "commands": 9,
+      "averageLatencyMs": 2,
+      "commandCounts": {
+        "CLEAR_OVERRIDE": 9
+      },
+      "opponentCommands": 18,
+      "opponentAverageLatencyMs": 3,
+      "roleLatencyMs": {
+        "gk": 2,
+        "def": 2,
+        "mid": 2,
+        "fwd1": 2,
+        "fwd2": 1
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Only9 CLEAR_OVERRIDE commands for the entire team, reported2ms average; native Memory events stop at scrimmage. Inference/fallback path not established. Fresh resource identity and different uncontrolled opponent confound comparison with M9."
+      ],
+      "initiation": "manual normal Find after single-role restore canary Ready, 13-field saved-config readback with no mismatches, FWD1 registration reload and UI Fitness5/5",
+      "coaching": [],
+      "evidenceCapturedAtUTC": "2026-10-24T06:37:21.310095+00:00"
+    },
+    {
+      "id": "live-45",
+      "setup": "A0-M9-memory-fwd1",
+      "opponent": "Agentic Arsenal",
+      "side": "home",
+      "goalsFor": 0,
+      "goalsAgainst": 2,
+      "shotsFor": 5,
+      "shotsAgainst": 5,
+      "shotsOnTargetFor": 0,
+      "shotsOnTargetAgainst": 2,
+      "possessionPercent": 51,
+      "commands": 307,
+      "averageLatencyMs": 846,
+      "commandCounts": {
+        "MOVE_TO": 204,
+        "PRESS_BALL": 48,
+        "INTERCEPT": 20,
+        "SHOOT": 15,
+        "CLEAR_OVERRIDE": 11,
+        "GK_DISTRIBUTE": 4,
+        "PASS": 4,
+        "MARK": 1
+      },
+      "opponentCommands": 15,
+      "opponentAverageLatencyMs": 3,
+      "roleLatencyMs": {
+        "gk": 629,
+        "def": 823,
+        "mid": 1076,
+        "fwd1": 673,
+        "fwd2": 870
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Reported15SHOOT commands yielded no primary shots on target. Memory actor/session enumeration after game showed only known probes and scrimmage, not a matching live session. Execution path and inference/fallback use remain unverified."
+      ],
+      "initiation": "manual normal Find after original FWD1 binding restored and profile reloaded; fresh UI Fitness5/5; same original Memory-enabled v15; no saved candidate prompts",
+      "coaching": [],
+      "evidenceCapturedAtUTC": "2026-10-24T07:15:48.732529+00:00"
+    },
+    {
+      "id": "live-46",
+      "setup": "A0-M7-formation121",
+      "opponent": "Claude Van Dam",
+      "side": "home",
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "shotsFor": 9,
+      "shotsAgainst": 3,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 53,
+      "commands": 430,
+      "averageLatencyMs": 71,
+      "commandCounts": {
+        "MOVE_TO": 297,
+        "MARK": 60,
+        "PRESS_BALL": 30,
+        "INTERCEPT": 21,
+        "PASS": 9,
+        "CLEAR_OVERRIDE": 8,
+        "GK_DISTRIBUTE": 3,
+        "SHOOT": 2
+      },
+      "opponentCommands": 3,
+      "opponentAverageLatencyMs": 4,
+      "roleLatencyMs": {
+        "gk": 78,
+        "def": 80,
+        "mid": 79,
+        "fwd1": 81,
+        "fwd2": 81
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Rendered primary report statistics; live model execution path remains unverified.",
+        "Uncontrolled opponent; this game alone does not establish policy improvement."
+      ],
+      "coaching": [],
+      "initiation": "Manual Find after original FWD1 v16 matched pre-Memory v14 and Fitness5/5",
+      "evidenceCapturedAtUTC": "2026-10-24T07:32:35.252684+00:00"
+    },
+    {
+      "id": "live-47",
+      "setup": "unattributed-background",
+      "opponent": "Matrix_7",
+      "side": "home",
+      "goalsFor": 3,
+      "goalsAgainst": 0,
+      "shotsFor": 13,
+      "shotsAgainst": 1,
+      "shotsOnTargetFor": 3,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 47,
+      "commands": 384,
+      "averageLatencyMs": 179,
+      "commandCounts": {
+        "MOVE_TO": 270,
+        "MARK": 71,
+        "INTERCEPT": 16,
+        "PRESS_BALL": 15,
+        "CLEAR_OVERRIDE": 10,
+        "GK_DISTRIBUTE": 2
+      },
+      "opponentCommands": 19,
+      "opponentAverageLatencyMs": 2,
+      "roleLatencyMs": {
+        "gk": 81,
+        "def": 244,
+        "mid": 347,
+        "fwd1": 183,
+        "fwd2": 162
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Rendered primary report statistics; live model execution path remains unverified.",
+        "Uncontrolled opponent; this game alone does not establish policy improvement.",
+        "Exclude from verified setup comparisons: kickoff configuration unattributed."
+      ],
+      "coaching": [],
+      "initiation": "Background match appeared while working elsewhere; kickoff and saved setup not observed",
+      "lastKnownSavedSetup": "A0-M7-formation121",
+      "evidenceCapturedAtUTC": "2026-10-24T07:32:35.254233+00:00"
+    },
+    {
+      "id": "live-48",
+      "setup": "unattributed-background",
+      "opponent": "AWSuoliai",
+      "side": "away",
+      "goalsFor": 2,
+      "goalsAgainst": 0,
+      "shotsFor": 5,
+      "shotsAgainst": 6,
+      "shotsOnTargetFor": 2,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 51,
+      "commands": 367,
+      "averageLatencyMs": 256,
+      "commandCounts": {
+        "MOVE_TO": 241,
+        "MARK": 44,
+        "PRESS_BALL": 29,
+        "PASS": 22,
+        "CLEAR_OVERRIDE": 15,
+        "SHOOT": 11,
+        "GK_DISTRIBUTE": 5
+      },
+      "opponentCommands": 12,
+      "opponentAverageLatencyMs": 1,
+      "roleLatencyMs": {
+        "gk": 431,
+        "def": 95,
+        "mid": 206,
+        "fwd1": 276,
+        "fwd2": 254
+      },
+      "reportedRoleSuccessPercent": 100,
+      "initiation": "Discovered already completed in portal history; kickoff and saved setup not observed",
+      "lastKnownSavedSetup": "A0-M7-formation121",
+      "coaching": [],
+      "limitations": [
+        "Exclude from verified setup cohorts: kickoff was not observed.",
+        "Primary report statistics, not proof of actual model execution or tactical causation.",
+        "Background game may overlap native probe activity; do not treat as controlled experiment."
+      ]
+    },
+    {
+      "id": "live-49",
+      "setup": "unattributed-background",
+      "opponent": "Matrix_7",
+      "side": "home",
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "shotsFor": 12,
+      "shotsAgainst": 1,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 30,
+      "commands": 318,
+      "averageLatencyMs": 268,
+      "commandCounts": {
+        "MOVE_TO": 202,
+        "MARK": 79,
+        "INTERCEPT": 13,
+        "PRESS_BALL": 13,
+        "CLEAR_OVERRIDE": 10,
+        "GK_DISTRIBUTE": 1
+      },
+      "opponentCommands": 9,
+      "opponentAverageLatencyMs": 18,
+      "roleLatencyMs": {
+        "gk": 79,
+        "def": 333,
+        "mid": 372,
+        "fwd1": 302,
+        "fwd2": 181
+      },
+      "reportedRoleSuccessPercent": 100,
+      "lastKnownSavedSetup": "R1-FWD1-v3-plus-M7",
+      "initiation": "Portal opened this background match during a repeated Fitness request; no Find was clicked; kickoff binding unverified",
+      "coaching": [],
+      "limitations": [
+        "Exclude from verified setup comparisons: actual kickoff bindings not observed.",
+        "No new R1 non-probe session or NHITL_DECISION log found during a midgame read; this does not establish which setup the game used.",
+        "Primary aggregate report has no shot coordinates or shot-by-shot outcomes."
+      ]
+    },
+    {
+      "id": "live-50",
+      "setup": "unattributed-background",
+      "opponent": "Prashanth Pokkula",
+      "side": "away",
+      "goalsFor": 1,
+      "goalsAgainst": 2,
+      "shotsFor": 2,
+      "shotsAgainst": 6,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 2,
+      "possessionPercent": 65,
+      "commands": 382,
+      "averageLatencyMs": 861,
+      "commandCounts": {
+        "MOVE_TO": 136,
+        "GK_DISTRIBUTE": 60,
+        "PRESS_BALL": 53,
+        "RESET": 52,
+        "SHOOT": 34,
+        "PASS": 23,
+        "CLEAR_OVERRIDE": 17,
+        "INTERCEPT": 4,
+        "FOLLOW_PLAYER": 2,
+        "MARK": 1
+      },
+      "opponentCommands": 17,
+      "opponentAverageLatencyMs": 17,
+      "roleLatencyMs": {
+        "gk": 596,
+        "def": 916,
+        "mid": 863,
+        "fwd1": 588,
+        "fwd2": 755
+      },
+      "reportedRoleSuccessPercent": 100,
+      "lastKnownSavedSetup": "R1-FWD1-diagnostic-v4-plus-M7",
+      "coaching": [],
+      "initiation": "Discovered inbound live banner; no Find clicked; watched through completion",
+      "runtimeEvidence": "Own R1 STM diagnostic session matched this game. Live normalized input has OPEN_PLAY,empty unlockedCommands and3Dball/2Dplayers; R1 rejected supported-action selection before model invocation.",
+      "limitations": [
+        "Kickoff configuration of other slots and formation not directly observed; exclude from controlled setup comparisons.",
+        "Team report includes52RESET commands; the per-role origin is not established.",
+        "Live error-path Memory capture is operational evidence, not successful model action selection.",
+        "Primary STATS have no per-shot distance/outcome table."
+      ]
+    },
+    {
+      "id": "live-51",
+      "setup": "unattributed-background",
+      "opponent": "Amber Horns 2",
+      "side": "home",
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "shotsFor": 7,
+      "shotsAgainst": 2,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 45,
+      "commands": 306,
+      "averageLatencyMs": 754,
+      "commandCounts": {
+        "PRESS_BALL": 138,
+        "RESET": 63,
+        "MARK": 50,
+        "INTERCEPT": 32,
+        "CLEAR_OVERRIDE": 15,
+        "MOVE_TO": 7,
+        "SHOOT": 1
+      },
+      "opponentCommands": 26,
+      "opponentAverageLatencyMs": 18,
+      "roleLatencyMs": {
+        "gk": 628,
+        "def": 734,
+        "mid": 894,
+        "fwd1": 566,
+        "fwd2": 849
+      },
+      "reportedRoleSuccessPercent": 100,
+      "lastKnownSavedSetup": "R1-FWD1-diagnostic-v4-plus-M7",
+      "coaching": [],
+      "initiation": "Already completed in background history; no Find clicked; kickoff not observed",
+      "limitations": [
+        "Exclude from controlled setup comparisons.",
+        "Team report includes63RESET commands; per-role model or fallback origin is not established.",
+        "R1v4 still had the observed live contract mismatch; no successful R1 decision claimed.",
+        "Possession and command counts do not establish tactical causation."
+      ]
+    },
+    {
+      "id": "live-52",
+      "setup": "unattributed-background",
+      "opponent": "Meerut United",
+      "side": "home",
+      "goalsFor": 0,
+      "goalsAgainst": 1,
+      "shotsFor": 5,
+      "shotsAgainst": 2,
+      "shotsOnTargetFor": 0,
+      "shotsOnTargetAgainst": 1,
+      "possessionPercent": 41,
+      "commands": 332,
+      "averageLatencyMs": 73,
+      "commandCounts": {
+        "MOVE_TO": 264,
+        "PRESS_BALL": 22,
+        "INTERCEPT": 19,
+        "PASS": 15,
+        "CLEAR_OVERRIDE": 7,
+        "GK_DISTRIBUTE": 5
+      },
+      "opponentCommands": 73,
+      "opponentAverageLatencyMs": 94,
+      "roleLatencyMs": {
+        "gk": 86,
+        "def": 84,
+        "mid": 79,
+        "fwd1": 84,
+        "fwd2": 82
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Exact kickoff bindings of the other four roles were not observed.",
+        "CloudWatch decision totals differ from portal command totals; issued Runtime responses are not proof that each was applied.",
+        "Observed opponent corner positioning reported by user in extra time; no replay coordinates captured to identify the exact pattern."
+      ],
+      "lastKnownSavedSetup": "R1-FWD1-v5-plus-M7",
+      "initiation": "Inbound game; Preparing observed after native probes; no Find clicked",
+      "coaching": [],
+      "runtimeEvidence": {
+        "sourceCommit": "41ae5e4",
+        "decisionCount": 69,
+        "modelChoices": 69,
+        "inputRejections": 0,
+        "commands": {
+          "CLEAR_OVERRIDE": 67,
+          "PASS": 2
+        },
+        "modelLatencyMedianMs": 411,
+        "phaseCounts": {
+          "FREE": 20,
+          "UNKNOWN": 24,
+          "THEIRS": 12,
+          "OURS": 13
+        }
+      }
+    },
+    {
+      "id": "live-53",
+      "setup": "R1-FWD1-v5-plus-M7",
+      "opponent": "Sporting Lambda",
+      "side": "home",
+      "goalsFor": 0,
+      "goalsAgainst": 2,
+      "shotsFor": 3,
+      "shotsAgainst": 6,
+      "shotsOnTargetFor": 0,
+      "shotsOnTargetAgainst": 2,
+      "possessionPercent": 63,
+      "commands": 8,
+      "averageLatencyMs": 1,
+      "commandCounts": {
+        "CLEAR_OVERRIDE": 8
+      },
+      "opponentCommands": 91,
+      "opponentAverageLatencyMs": 97,
+      "roleLatencyMs": {
+        "gk": 2,
+        "def": 2,
+        "mid": 1,
+        "fwd1": 1,
+        "fwd2": 1
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Portal counted8CLEAR and reportedFWD1ms; this is not model or end-to-end Runtime latency.",
+        "No per-shot distance/outcome table available."
+      ],
+      "initiation": "Manual Find clicked after v5 profile binding and UI Fitness5/5",
+      "coaching": []
+    },
+    {
+      "id": "live-54",
+      "setup": "unattributed-background",
+      "opponent": "Agentic Arsenal",
+      "side": "away",
+      "goalsFor": 2,
+      "goalsAgainst": 3,
+      "shotsFor": 6,
+      "shotsAgainst": 4,
+      "shotsOnTargetFor": 2,
+      "shotsOnTargetAgainst": 3,
+      "possessionPercent": 41,
+      "commands": 326,
+      "averageLatencyMs": 787,
+      "commandCounts": {
+        "MOVE_TO": 234,
+        "PRESS_BALL": 41,
+        "CLEAR_OVERRIDE": 18,
+        "SHOOT": 17,
+        "PASS": 14,
+        "MARK": 2
+      },
+      "opponentCommands": 12,
+      "opponentAverageLatencyMs": 91,
+      "roleLatencyMs": {
+        "gk": 622,
+        "def": 788,
+        "mid": 1018,
+        "fwd1": 651,
+        "fwd2": 870
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Inbound match overlapped own native readiness probes; exclude from controlled comparisons.",
+        "Last observed formation1-2-1; exact kickoff bindings and timing not observed.",
+        "Portal goal attribution/AI commentary not used to establish mechanism.",
+        "Runtime build correlation confirms stalev6 game session; do not count as v7 SSE trial."
+      ],
+      "lastKnownSavedSetup": "R1 update fromv6toexactv5 rollback in progress around inbound kickoff",
+      "initiation": "Inbound live banner discovered during five-case native rerun after rollback; no Find clicked",
+      "coaching": [],
+      "runtimeEvidence": {
+        "sourceCommit": "26b5826",
+        "meaning": "This game session retained completed-JSONv6, not restoredv7",
+        "decisions": 92,
+        "outcomes": {
+          "model_choice": 92
+        },
+        "commands": {
+          "CLEAR_OVERRIDE": 85,
+          "PASS": 7
+        },
+        "inputRejections": 0,
+        "modelLatencyMs": {
+          "p50": 417,
+          "p95": 609,
+          "max": 735
+        },
+        "sampledMemoryWrites": 10,
+        "consecutiveRepeatedGameTimes": 24,
+        "applicationLimit": "PortalFitness rejected this transport asNO_PARSE; model emissions do not prove application"
+      }
+    },
+    {
+      "id": "live-55",
+      "setup": "R1-FWD1-v7-plus-M7-formation112",
+      "opponent": "Amber Arcs 2",
+      "side": "home",
+      "goalsFor": 0,
+      "goalsAgainst": 1,
+      "shotsFor": 10,
+      "shotsAgainst": 3,
+      "shotsOnTargetFor": 0,
+      "shotsOnTargetAgainst": 1,
+      "possessionPercent": 31,
+      "commands": 12,
+      "averageLatencyMs": 1,
+      "commandCounts": {
+        "CLEAR_OVERRIDE": 12
+      },
+      "opponentCommands": 73,
+      "opponentAverageLatencyMs": 101,
+      "roleLatencyMs": {
+        "gk": 2,
+        "def": 2,
+        "mid": 1,
+        "fwd1": 1,
+        "fwd2": 1
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "One uncontrolled opponent is insufficient to rank a setup.",
+        "Report latency is not the same measurement as model latency."
+      ],
+      "coaching": [],
+      "initiation": "Manual Find after persisted112 and fresh-session Fitness5/5",
+      "lastKnownSavedSetup": "R1-FWD1-v7-plus-M7-formation112"
+    },
+    {
+      "id": "live-56",
+      "setup": "unattributed-background",
+      "opponent": "ForzaRossoneri",
+      "side": "away",
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "shotsFor": 8,
+      "shotsAgainst": 2,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 46,
+      "commands": 330,
+      "averageLatencyMs": 1153,
+      "commandCounts": {
+        "MOVE_TO": 201,
+        "PRESS_BALL": 45,
+        "MARK": 28,
+        "CLEAR_OVERRIDE": 20,
+        "PASS": 12,
+        "INTERCEPT": 10,
+        "GK_DISTRIBUTE": 7,
+        "SHOOT": 7
+      },
+      "opponentCommands": 71,
+      "opponentAverageLatencyMs": 98,
+      "roleLatencyMs": {
+        "gk": 1027,
+        "def": 1004,
+        "mid": 1016,
+        "fwd1": 1034,
+        "fwd2": 1074
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "One uncontrolled opponent is insufficient to rank a setup.",
+        "Report latency is not the same measurement as model latency."
+      ],
+      "coaching": [],
+      "initiation": "Completed background incoming game discovered in history; kickoff not observed",
+      "lastKnownSavedSetup": "R1-FWD1-v7-plus-M7-formation112"
+    },
+    {
+      "id": "live-57",
+      "setup": "A0-M8-formation112-original-fwd1-v16",
+      "opponent": "Gork ’n’ Mork Boyz",
+      "side": "home",
+      "goalsFor": 7,
+      "goalsAgainst": 0,
+      "shotsFor": 19,
+      "shotsAgainst": 0,
+      "shotsOnTargetFor": 7,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 19,
+      "commands": 545,
+      "averageLatencyMs": 470,
+      "commandCounts": {
+        "INTERCEPT": 437,
+        "CLEAR_OVERRIDE": 36,
+        "MOVE_TO": 31,
+        "PRESS_BALL": 31,
+        "GK_DISTRIBUTE": 5,
+        "MARK": 3,
+        "FOLLOW_PLAYER": 2
+      },
+      "opponentCommands": 44,
+      "opponentAverageLatencyMs": 2,
+      "roleLatencyMs": {
+        "gk": 453,
+        "def": 484,
+        "mid": 539,
+        "fwd1": 398,
+        "fwd2": 509
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Single uncontrolled opponent; do not attribute7:0 exclusively to the FWD1 rollback.",
+        "545command decisions include0SHOOT while primaryshots19/goals7; command mix does not explain physical shot origins."
+      ],
+      "initiation": "Manual Find after originalFWD1Harness restored,112 persisted and UI Fitness5/5",
+      "coaching": []
+    },
+    {
+      "id": "live-58",
+      "setup": "unattributed-background",
+      "opponent": "Zorja",
+      "side": "away",
+      "goalsFor": 0,
+      "goalsAgainst": 1,
+      "shotsFor": 3,
+      "shotsAgainst": 8,
+      "shotsOnTargetFor": 0,
+      "shotsOnTargetAgainst": 1,
+      "possessionPercent": 50,
+      "commands": 335,
+      "averageLatencyMs": 440,
+      "commandCounts": {
+        "MOVE_TO": 188,
+        "PRESS_BALL": 94,
+        "MARK": 12,
+        "CLEAR_OVERRIDE": 11,
+        "INTERCEPT": 11,
+        "SHOOT": 11,
+        "PASS": 6,
+        "GK_DISTRIBUTE": 2
+      },
+      "opponentCommands": 10,
+      "opponentAverageLatencyMs": 1,
+      "roleLatencyMs": {
+        "gk": 431,
+        "def": 405,
+        "mid": 584,
+        "fwd1": 408,
+        "fwd2": 330
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Overlapped own invocation-only model benchmark on registeredFWD1Harness; exclude from controlled comparisons.",
+        "No saved model/prompt changes were made; exact kickoff snapshot not observed."
+      ],
+      "initiation": "Incoming banner observed after tactical probes began; no Find clicked",
+      "lastKnownSavedSetup": "A0-M8-formation112-original-fwd1-v16",
+      "coaching": []
+    },
+    {
+      "id": "live-59",
+      "setup": "R1-FWD1-v9-plus-M7-formation112",
+      "opponent": "Matrix_7",
+      "side": "away",
+      "goalsFor": 0,
+      "goalsAgainst": 1,
+      "shotsFor": 3,
+      "shotsAgainst": 1,
+      "shotsOnTargetFor": 0,
+      "shotsOnTargetAgainst": 1,
+      "possessionPercent": 50,
+      "commands": 317,
+      "averageLatencyMs": 243,
+      "commandCounts": {
+        "MOVE_TO": 185,
+        "MARK": 78,
+        "PASS": 27,
+        "INTERCEPT": 17,
+        "GK_DISTRIBUTE": 6,
+        "CLEAR_OVERRIDE": 4
+      },
+      "opponentCommands": 72,
+      "opponentAverageLatencyMs": 105,
+      "roleLatencyMs": {
+        "gk": 81,
+        "def": 340,
+        "mid": 434,
+        "fwd1": 280,
+        "fwd2": 191
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Own emitted FWD command mix still resembles opponent report column; output teamId omission did not resolve attribution concern. Applied team not established."
+      ],
+      "initiation": "Incoming match; kickoff not observed. R1v9 bound output scope verified in game audit.",
+      "coaching": [],
+      "runtimeEvidence": {
+        "sourceCommit": "5d75b18",
+        "decisions": 67,
+        "commands": {
+          "CLEAR_OVERRIDE": 63,
+          "PASS": 4
+        },
+        "inputRejections": 0,
+        "wireTeamScope": "bound",
+        "modelLatencyMs": {
+          "p50": 413,
+          "p95": 506,
+          "max": 582
+        }
+      }
+    },
+    {
+      "id": "live-60",
+      "setup": "R1-FWD1-v9-plus-M7-formation112",
+      "opponent": "LFC",
+      "side": "away",
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "shotsFor": 9,
+      "shotsAgainst": 0,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 42,
+      "commands": 335,
+      "averageLatencyMs": 247,
+      "commandCounts": {
+        "MOVE_TO": 253,
+        "INTERCEPT": 33,
+        "PRESS_BALL": 22,
+        "PASS": 15,
+        "CLEAR_OVERRIDE": 10,
+        "GK_DISTRIBUTE": 2
+      },
+      "opponentCommands": 74,
+      "opponentAverageLatencyMs": 101,
+      "roleLatencyMs": {
+        "gk": 259,
+        "def": 136,
+        "mid": 238,
+        "fwd1": 274,
+        "fwd2": 108
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy."
+      ],
+      "initiation": "Incoming match; bindingR1v9 unchanged throughout observed game; kickoff not observed",
+      "coaching": []
+    },
+    {
+      "id": "live-61",
+      "setup": "GK-R2v1-plus-FWD1-v11-plus-threeM7-formation112",
+      "opponent": "Goalpost Shifters",
+      "side": "away",
+      "goalsFor": 1,
+      "goalsAgainst": 2,
+      "shotsFor": 13,
+      "shotsAgainst": 10,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 2,
+      "possessionPercent": 44,
+      "commands": 522,
+      "averageLatencyMs": 75,
+      "commandCounts": {
+        "MOVE_TO": 313,
+        "PRESS_BALL": 62,
+        "INTERCEPT": 58,
+        "MARK": 32,
+        "SHOOT": 24,
+        "CLEAR_OVERRIDE": 16,
+        "PASS": 15,
+        "GK_DISTRIBUTE": 2
+      },
+      "opponentCommands": 191,
+      "opponentAverageLatencyMs": 199,
+      "roleLatencyMs": {
+        "gk": 73,
+        "def": 74,
+        "mid": 75,
+        "fwd1": 73,
+        "fwd2": 79
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Agent command columns remain inconsistent with own Runtime audit; do not infer physical application from them.",
+        "No stronger keeper or attack effect established from one uncontrolled loss."
+      ],
+      "initiation": "Incoming AWAY match; no runtime/configchanges during observed game; kickoff not observed",
+      "coaching": [],
+      "unityFinalVerified": {
+        "goalsFor": 1,
+        "goalsAgainst": 2,
+        "shotsFor": 13,
+        "shotsAgainst": 10,
+        "shotsOnTargetFor": 1,
+        "shotsOnTargetAgainst": 2,
+        "possessionPercent": 44
+      },
+      "runtimeEvidence": {
+        "sourceCommit": "7a14d1b",
+        "gameTimeRange": [
+          0,
+          209.16786
+        ],
+        "gk": {
+          "decisions": 123,
+          "commands": {
+            "CLEAR_OVERRIDE": 123
+          },
+          "inputRejects": 0,
+          "modelLatencyMs": {
+            "p50": 416,
+            "p95": 637,
+            "max": 917
+          }
+        },
+        "fwd1": {
+          "decisions": 123,
+          "commands": {
+            "CLEAR_OVERRIDE": 50,
+            "SET_STANCE": 68,
+            "PASS": 4,
+            "INTERCEPT": 1
+          },
+          "inputRejects": 0,
+          "modelLatencyMs": {
+            "p50": 414,
+            "p95": 561,
+            "max": 705
+          }
+        }
+      }
+    },
+    {
+      "id": "live-62",
+      "setup": "A0-M8-formation112-original-fwd1-v16",
+      "opponent": "Claude Van Dam",
+      "side": "away",
+      "goalsFor": 3,
+      "goalsAgainst": 0,
+      "shotsFor": 8,
+      "shotsAgainst": 5,
+      "shotsOnTargetFor": 3,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 37,
+      "commands": 410,
+      "averageLatencyMs": 75,
+      "commandCounts": {
+        "MOVE_TO": 338,
+        "PRESS_BALL": 21,
+        "PASS": 19,
+        "INTERCEPT": 13,
+        "CLEAR_OVERRIDE": 12,
+        "GK_DISTRIBUTE": 5,
+        "MARK": 1,
+        "SHOOT": 1
+      },
+      "opponentCommands": 9,
+      "opponentAverageLatencyMs": 1,
+      "roleLatencyMs": {
+        "gk": 79,
+        "def": 80,
+        "mid": 81,
+        "fwd1": 85,
+        "fwd2": 79
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Possible overlap with unregistered R1native probes near kickoff; exact kickoff time not recovered.",
+        "SavedHarness binding and portal stats do not establish actual model inference."
+      ],
+      "initiation": "Incoming AWAY after both independentRuntime slots restored to originals andFitness5; no saved changes during game; kickoff not observed",
+      "coaching": [],
+      "unityFinalVerified": {
+        "goalsFor": 3,
+        "goalsAgainst": 0,
+        "shotsFor": 8,
+        "shotsAgainst": 5,
+        "shotsOnTargetFor": 3,
+        "shotsOnTargetAgainst": 0,
+        "possessionPercent": 37
+      }
+    },
+    {
+      "id": "live-63",
+      "setup": "A0-M8-formation112-original-fwd1-v16",
+      "opponent": "Divide by Zero",
+      "side": "away",
+      "goalsFor": 3,
+      "goalsAgainst": 2,
+      "shotsFor": 5,
+      "shotsAgainst": 2,
+      "shotsOnTargetFor": 3,
+      "shotsOnTargetAgainst": 2,
+      "possessionPercent": 34,
+      "commands": 393,
+      "averageLatencyMs": 1162,
+      "commandCounts": {
+        "MOVE_TO": 249,
+        "PRESS_BALL": 58,
+        "PASS": 39,
+        "MARK": 22,
+        "CLEAR_OVERRIDE": 20,
+        "INTERCEPT": 5
+      },
+      "opponentCommands": 15,
+      "opponentAverageLatencyMs": 1,
+      "roleLatencyMs": {
+        "gk": 790,
+        "def": 1193,
+        "mid": 1194,
+        "fwd1": 1229,
+        "fwd2": 1169
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy."
+      ],
+      "initiation": "incoming",
+      "batch": "ranked-batch-01",
+      "completedAtUTC": "2026-10-24T13:32:00Z",
+      "captureTimePrecision": "minute"
+    },
+    {
+      "id": "live-64",
+      "setup": "A0-M8-formation112-original-fwd1-v16",
+      "opponent": "Matrix_7",
+      "side": "home",
+      "goalsFor": 2,
+      "goalsAgainst": 1,
+      "shotsFor": 5,
+      "shotsAgainst": 1,
+      "shotsOnTargetFor": 2,
+      "shotsOnTargetAgainst": 1,
+      "possessionPercent": 39,
+      "commands": 392,
+      "averageLatencyMs": 246,
+      "commandCounts": {
+        "MOVE_TO": 269,
+        "MARK": 80,
+        "INTERCEPT": 18,
+        "CLEAR_OVERRIDE": 12,
+        "PRESS_BALL": 11,
+        "GK_DISTRIBUTE": 2
+      },
+      "opponentCommands": 15,
+      "opponentAverageLatencyMs": 3,
+      "roleLatencyMs": {
+        "gk": 85,
+        "def": 294,
+        "mid": 357,
+        "fwd1": 219,
+        "fwd2": 235
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy."
+      ],
+      "initiation": "manual",
+      "batch": "ranked-batch-01"
+    },
+    {
+      "id": "live-65",
+      "setup": "A0-M8-formation112-original-fwd1-v16",
+      "opponent": "Juja",
+      "side": "home",
+      "goalsFor": 2,
+      "goalsAgainst": 0,
+      "shotsFor": 5,
+      "shotsAgainst": 3,
+      "shotsOnTargetFor": 2,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 40,
+      "commands": 370,
+      "averageLatencyMs": 79,
+      "commandCounts": {
+        "MOVE_TO": 302,
+        "CLEAR_OVERRIDE": 41,
+        "PRESS_BALL": 14,
+        "MARK": 6,
+        "INTERCEPT": 4,
+        "GK_DISTRIBUTE": 3
+      },
+      "opponentCommands": 17,
+      "opponentAverageLatencyMs": 2,
+      "roleLatencyMs": {
+        "gk": 81,
+        "def": 87,
+        "mid": 79,
+        "fwd1": 82,
+        "fwd2": 78
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy."
+      ],
+      "initiation": "manual",
+      "batch": "ranked-batch-01"
+    },
+    {
+      "id": "live-66",
+      "setup": "A0-M8-formation112-original-fwd1-v16",
+      "opponent": "Neman Grodno",
+      "side": "home",
+      "goalsFor": 0,
+      "goalsAgainst": 1,
+      "shotsFor": 0,
+      "shotsAgainst": 13,
+      "shotsOnTargetFor": 0,
+      "shotsOnTargetAgainst": 1,
+      "possessionPercent": 53,
+      "commands": 7,
+      "averageLatencyMs": 1,
+      "commandCounts": {
+        "CLEAR_OVERRIDE": 7
+      },
+      "opponentCommands": 11,
+      "opponentAverageLatencyMs": 2,
+      "roleLatencyMs": {
+        "gk": 2,
+        "def": 2,
+        "mid": 2,
+        "fwd1": 1,
+        "fwd2": 1
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Only7owncommands/1ms reported despite no binding change; unusual primary command table; cause unconfirmed. Final score and shot stats match Unity."
+      ],
+      "initiation": "manual",
+      "batch": "ranked-batch-01",
+      "extraTime": true,
+      "unityFinalGameTime": "02:50"
+    },
+    {
+      "id": "live-67",
+      "setup": "A0-M8-formation112-original-fwd1-v16",
+      "opponent": "Amber Dragons X",
+      "side": "home",
+      "goalsFor": 1,
+      "goalsAgainst": 2,
+      "shotsFor": 1,
+      "shotsAgainst": 8,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 2,
+      "possessionPercent": 39,
+      "commands": 405,
+      "averageLatencyMs": 80,
+      "commandCounts": {
+        "MOVE_TO": 312,
+        "CLEAR_OVERRIDE": 45,
+        "INTERCEPT": 21,
+        "PRESS_BALL": 13,
+        "SHOOT": 11,
+        "PASS": 3
+      },
+      "opponentCommands": 14,
+      "opponentAverageLatencyMs": 3,
+      "roleLatencyMs": {
+        "gk": 78,
+        "def": 79,
+        "mid": 78,
+        "fwd1": 78,
+        "fwd2": 77
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy."
+      ],
+      "initiation": "manual",
+      "batch": "ranked-batch-01"
+    },
+    {
+      "id": "live-68",
+      "setup": "A0-M8-formation112-original-fwd1-v16",
+      "opponent": "FC RAM",
+      "side": "away",
+      "goalsFor": 0,
+      "goalsAgainst": 1,
+      "shotsFor": 3,
+      "shotsAgainst": 7,
+      "shotsOnTargetFor": 0,
+      "shotsOnTargetAgainst": 1,
+      "possessionPercent": 50,
+      "commands": 360,
+      "averageLatencyMs": 76,
+      "commandCounts": {
+        "MOVE_TO": 276,
+        "MARK": 21,
+        "INTERCEPT": 20,
+        "PRESS_BALL": 20,
+        "CLEAR_OVERRIDE": 10,
+        "PASS": 6,
+        "SHOOT": 6,
+        "GK_DISTRIBUTE": 1
+      },
+      "opponentCommands": 3,
+      "opponentAverageLatencyMs": 1,
+      "roleLatencyMs": {
+        "gk": 82,
+        "def": 85,
+        "mid": 79,
+        "fwd1": 83,
+        "fwd2": 79
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy."
+      ],
+      "initiation": "incoming",
+      "batch": "ranked-batch-02",
+      "kickoffObserved": false
+    },
+    {
+      "id": "live-69",
+      "setup": "A0-M8-formation112-original-fwd1-v16",
+      "opponent": "CypherForce Hotshots",
+      "side": "home",
+      "goalsFor": 0,
+      "goalsAgainst": 3,
+      "shotsFor": 0,
+      "shotsAgainst": 12,
+      "shotsOnTargetFor": 0,
+      "shotsOnTargetAgainst": 3,
+      "possessionPercent": 41,
+      "commands": 0,
+      "averageLatencyMs": 13335,
+      "commandCounts": {},
+      "opponentCommands": 0,
+      "opponentAverageLatencyMs": 12,
+      "roleLatencyMs": {
+        "gk": 15754,
+        "def": 15768,
+        "mid": 9565,
+        "fwd1": 16009,
+        "fwd2": 9578
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy."
+      ],
+      "initiation": "manual",
+      "batch": "ranked-batch-02",
+      "criticalReliabilitySignal": "Zero own AND opponent commands; own reportedmean13335ms, role9565..16009ms despite100%success. Rootcauseunconfirmed; severe enough to pause newmatchmaking for Fitness/logread."
+    },
+    {
+      "id": "live-70",
+      "setup": "A0-M8-formation112-original-fwd1-v16",
+      "opponent": "ERTT",
+      "side": "home",
+      "goalsFor": 2,
+      "goalsAgainst": 0,
+      "shotsFor": 6,
+      "shotsAgainst": 0,
+      "shotsOnTargetFor": 2,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 32,
+      "commands": 336,
+      "averageLatencyMs": 1316,
+      "commandCounts": {
+        "PRESS_BALL": 213,
+        "MARK": 57,
+        "INTERCEPT": 30,
+        "RESET": 18,
+        "CLEAR_OVERRIDE": 16,
+        "MOVE_TO": 2
+      },
+      "opponentCommands": 11,
+      "opponentAverageLatencyMs": 3,
+      "roleLatencyMs": {
+        "gk": 1382,
+        "def": 1197,
+        "mid": 1034,
+        "fwd1": 1041,
+        "fwd2": 1424
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Renderedcommandtable reports18RESETdespite allsavedprompts forbidding it; actualissuer/physicalapplication unresolved. PriorownRuntimecommandswereattributedtoopponent; do not assume table identifiescurrentpolicy."
+      ],
+      "initiation": "manual",
+      "batch": "ranked-batch-02"
+    },
+    {
+      "id": "live-71",
+      "setup": "A0-M8-formation112-original-fwd1-v16",
+      "opponent": "Singularity FC",
+      "side": "home",
+      "goalsFor": 2,
+      "goalsAgainst": 1,
+      "shotsFor": 6,
+      "shotsAgainst": 3,
+      "shotsOnTargetFor": 2,
+      "shotsOnTargetAgainst": 1,
+      "possessionPercent": 42,
+      "commands": 405,
+      "averageLatencyMs": 72,
+      "commandCounts": {
+        "MOVE_TO": 206,
+        "CLEAR_OVERRIDE": 140,
+        "PRESS_BALL": 36,
+        "MARK": 18,
+        "SHOOT": 3,
+        "PASS": 2
+      },
+      "opponentCommands": 16,
+      "opponentAverageLatencyMs": 2,
+      "roleLatencyMs": {
+        "gk": 80,
+        "def": 79,
+        "mid": 78,
+        "fwd1": 75,
+        "fwd2": 80
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy."
+      ],
+      "initiation": "manual",
+      "batch": "ranked-batch-02"
+    },
+    {
+      "id": "live-72",
+      "setup": "A0-M8-formation112-original-fwd1-v16",
+      "opponent": "Soccer",
+      "side": "home",
+      "goalsFor": 0,
+      "goalsAgainst": 0,
+      "shotsFor": null,
+      "shotsAgainst": null,
+      "shotsOnTargetFor": null,
+      "shotsOnTargetAgainst": null,
+      "possessionPercent": null,
+      "commands": 595,
+      "averageLatencyMs": 96,
+      "commandCounts": {
+        "MOVE_TO": 468,
+        "INTERCEPT": 47,
+        "PASS": 28,
+        "PRESS_BALL": 27,
+        "CLEAR_OVERRIDE": 18,
+        "GK_DISTRIBUTE": 7
+      },
+      "opponentCommands": 13,
+      "opponentAverageLatencyMs": 3,
+      "roleLatencyMs": {
+        "gk": 97,
+        "def": 93,
+        "mid": 94,
+        "fwd1": 96,
+        "fwd2": 96
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Primary STATS table absent in the rendered report; shots/on-target/possession are unknown (null), not zero."
+      ],
+      "initiation": "manual",
+      "batch": "ranked-batch-02",
+      "extraTime": true,
+      "unityFinal": "Finalheader0:0; no Unityshotstats; renderedreportSTATSabsent; retainnull."
+    },
+    {
+      "id": "live-73",
+      "setup": "M8-fouroriginal-plus-R1v14-position-FWD1-112",
+      "opponent": "LFC",
+      "side": "away",
+      "goalsFor": 0,
+      "goalsAgainst": 1,
+      "shotsFor": 5,
+      "shotsAgainst": 4,
+      "shotsOnTargetFor": 0,
+      "shotsOnTargetAgainst": 1,
+      "possessionPercent": 52,
+      "commands": 335,
+      "averageLatencyMs": 261,
+      "commandCounts": {
+        "MOVE_TO": 275,
+        "INTERCEPT": 29,
+        "PRESS_BALL": 17,
+        "PASS": 7,
+        "CLEAR_OVERRIDE": 4,
+        "SHOOT": 2,
+        "GK_DISTRIBUTE": 1
+      },
+      "opponentCommands": 70,
+      "opponentAverageLatencyMs": 129,
+      "roleLatencyMs": {
+        "gk": 235,
+        "def": 198,
+        "mid": 318,
+        "fwd1": 328,
+        "fwd2": 151
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "Concurrent automatic incoming game overlapped existingPractice08; preserveeligibleliveoutcome but do not use as clean candidate-controlcomparison."
+      ],
+      "initiation": "incoming",
+      "mode": "live",
+      "cohort": "additional incoming outside plannedfivegameblocks",
+      "concurrentPractice": "Practice08 was already running when this incominggame began; no manual parallelmatchmaking, nativeprobe or configchange.",
+      "excludeFromControlledComparison": true,
+      "runtimeEvidence": {
+        "sourceCommit": "e11bad6992d499d02437d7f8ba280b8c6b9e0627",
+        "version": 14,
+        "genuineModelChoices": 68,
+        "inputRejections": 0,
+        "commands": {
+          "CLEAR_OVERRIDE": 20,
+          "MOVE_TO": 47,
+          "INTERCEPT": 1
+        },
+        "modelLatencyMs": {
+          "p50": 508,
+          "p95": 883,
+          "max": 1179
+        },
+        "supportMode": "position"
+      }
+    },
+    {
+      "id": "live-74",
+      "setup": "M8-fouroriginal-plus-R1v14-position-FWD1-112",
+      "opponent": "Agentic Arsenal",
+      "side": "away",
+      "goalsFor": 0,
+      "goalsAgainst": 1,
+      "shotsFor": 8,
+      "shotsAgainst": 1,
+      "shotsOnTargetFor": 0,
+      "shotsOnTargetAgainst": 1,
+      "possessionPercent": 54,
+      "commands": 331,
+      "averageLatencyMs": 872,
+      "commandCounts": {
+        "MOVE_TO": 246,
+        "PRESS_BALL": 36,
+        "INTERCEPT": 18,
+        "SHOOT": 12,
+        "CLEAR_OVERRIDE": 7,
+        "PASS": 6,
+        "FOLLOW_PLAYER": 5,
+        "MARK": 1
+      },
+      "opponentCommands": 73,
+      "opponentAverageLatencyMs": 116,
+      "roleLatencyMs": {
+        "gk": 657,
+        "def": 911,
+        "mid": 1034,
+        "fwd1": 675,
+        "fwd2": 893
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy."
+      ],
+      "initiation": "incoming",
+      "batch": "ranked-batch-03",
+      "kickoffObserved": false
+    },
+    {
+      "id": "live-75",
+      "setup": "M8-fouroriginal-plus-R1v14-position-FWD1-112",
+      "opponent": "Amber Geysers 2",
+      "side": "home",
+      "goalsFor": 2,
+      "goalsAgainst": 3,
+      "shotsFor": 3,
+      "shotsAgainst": 6,
+      "shotsOnTargetFor": 2,
+      "shotsOnTargetAgainst": 3,
+      "possessionPercent": 38,
+      "commands": 474,
+      "averageLatencyMs": 811,
+      "commandCounts": {
+        "PRESS_BALL": 198,
+        "MOVE_TO": 119,
+        "CLEAR_OVERRIDE": 87,
+        "MARK": 56,
+        "INTERCEPT": 12,
+        "FOLLOW_PLAYER": 2
+      },
+      "opponentCommands": 128,
+      "opponentAverageLatencyMs": 123,
+      "roleLatencyMs": {
+        "gk": 632,
+        "def": 925,
+        "mid": 902,
+        "fwd1": 617,
+        "fwd2": 911
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy."
+      ],
+      "initiation": "manual",
+      "batch": "ranked-batch-03",
+      "earlyScoreObserved": "2:0at30seconds; final2:3"
+    },
+    {
+      "id": "live-76",
+      "setup": "M8-fouroriginal-plus-R1v14-position-FWD1-112",
+      "opponent": "Amber Crests 2",
+      "side": "home",
+      "goalsFor": 0,
+      "goalsAgainst": 1,
+      "shotsFor": 4,
+      "shotsAgainst": 7,
+      "shotsOnTargetFor": 0,
+      "shotsOnTargetAgainst": 1,
+      "possessionPercent": 46,
+      "commands": 308,
+      "averageLatencyMs": 779,
+      "commandCounts": {
+        "MOVE_TO": 255,
+        "INTERCEPT": 32,
+        "SHOOT": 9,
+        "CLEAR_OVERRIDE": 8,
+        "PASS": 3,
+        "GK_DISTRIBUTE": 1
+      },
+      "opponentCommands": 70,
+      "opponentAverageLatencyMs": 124,
+      "roleLatencyMs": {
+        "gk": 875,
+        "def": 794,
+        "mid": 861,
+        "fwd1": 754,
+        "fwd2": 779
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy."
+      ],
+      "initiation": "manual",
+      "batch": "ranked-batch-03"
+    },
+    {
+      "id": "live-77",
+      "setup": "M8-fouroriginal-plus-R1v14-position-FWD1-112",
+      "opponent": "(〃￣︶￣)人(￣︶￣〃)",
+      "side": "home",
+      "goalsFor": 2,
+      "goalsAgainst": 1,
+      "shotsFor": 2,
+      "shotsAgainst": 2,
+      "shotsOnTargetFor": 2,
+      "shotsOnTargetAgainst": 1,
+      "possessionPercent": 39,
+      "commands": 396,
+      "averageLatencyMs": 1123,
+      "commandCounts": {
+        "MOVE_TO": 221,
+        "PRESS_BALL": 93,
+        "RESET": 41,
+        "CLEAR_OVERRIDE": 15,
+        "INTERCEPT": 13,
+        "MARK": 7,
+        "SHOOT": 6
+      },
+      "opponentCommands": 91,
+      "opponentAverageLatencyMs": 113,
+      "roleLatencyMs": {
+        "gk": 867,
+        "def": 1076,
+        "mid": 1149,
+        "fwd1": 881,
+        "fwd2": 1192
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy.",
+        "ReporttableRESET41 is not attributed to the code-guarded R1; physicalissuer unknown, preserveknownreportattributionlimitation."
+      ],
+      "initiation": "manual",
+      "batch": "ranked-batch-03"
+    },
+    {
+      "id": "live-78",
+      "setup": "M8-fouroriginal-plus-R1v14-position-FWD1-112",
+      "opponent": "LFC",
+      "side": "away",
+      "goalsFor": 1,
+      "goalsAgainst": 2,
+      "shotsFor": 7,
+      "shotsAgainst": 6,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 2,
+      "possessionPercent": 38,
+      "commands": 430,
+      "averageLatencyMs": 228,
+      "commandCounts": {
+        "MOVE_TO": 342,
+        "INTERCEPT": 27,
+        "PRESS_BALL": 25,
+        "CLEAR_OVERRIDE": 18,
+        "PASS": 15,
+        "GK_DISTRIBUTE": 3
+      },
+      "opponentCommands": 99,
+      "opponentAverageLatencyMs": 123,
+      "roleLatencyMs": {
+        "gk": 223,
+        "def": 214,
+        "mid": 255,
+        "fwd1": 251,
+        "fwd2": 127
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy."
+      ],
+      "initiation": "incoming",
+      "batch": "ranked-batch-03",
+      "extraTime": true,
+      "unityFinalGameTime": "02:18"
+    },
+    {
+      "id": "live-79",
+      "setup": "M8-fouroriginal-plus-R1v14-position-FWD1-112",
+      "opponent": "Sporting Lambda",
+      "side": "away",
+      "goalsFor": 1,
+      "goalsAgainst": 2,
+      "shotsFor": 5,
+      "shotsAgainst": 4,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 2,
+      "possessionPercent": 47,
+      "commands": 16,
+      "averageLatencyMs": 2,
+      "commandCounts": {
+        "CLEAR_OVERRIDE": 16
+      },
+      "opponentCommands": 94,
+      "opponentAverageLatencyMs": 109,
+      "roleLatencyMs": {
+        "gk": 3,
+        "def": 2,
+        "mid": 2,
+        "fwd1": 2,
+        "fwd2": 2
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy."
+      ],
+      "initiation": "incoming",
+      "mode": "live",
+      "cohort": "Additional incoming after closed batch03, before safe rollback",
+      "rollbackDeferred": true
+    },
+    {
+      "id": "live-80",
+      "setup": "A0-M7-formation121-original-fwd1-v16",
+      "opponent": "Mobile United FC",
+      "side": "home",
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "shotsFor": 6,
+      "shotsAgainst": 6,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 51,
+      "commands": 343,
+      "averageLatencyMs": 637,
+      "commandCounts": {
+        "PRESS_BALL": 180,
+        "MOVE_TO": 111,
+        "SHOOT": 39,
+        "CLEAR_OVERRIDE": 11,
+        "INTERCEPT": 2
+      },
+      "opponentCommands": 15,
+      "opponentAverageLatencyMs": 3,
+      "roleLatencyMs": {
+        "gk": 2,
+        "def": 2,
+        "mid": 1121,
+        "fwd1": 1138,
+        "fwd2": 1074
+      },
+      "reportedRoleSuccessPercent": 100,
+      "limitations": [
+        "Extracted from the rendered report; no inference/fallback mechanism is established.",
+        "Reported Success and issued commands do not prove useful application of every action.",
+        "Uncontrolled live opponent; one game does not establish a stronger policy."
+      ],
+      "initiation": "manual",
+      "mode": "live",
+      "batch": "ranked-batch-04",
+      "completedBeforeFinalRollback": true
+    }
+  ],
+  "recordingOrder": "Local evidence-capture order; background matches may be appended retrospectively."
+}

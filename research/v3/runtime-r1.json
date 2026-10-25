@@ -1,0 +1,445 @@
+{
+  "kind": "Independent Runtime FWD1 pilot; public-safe evidence summary",
+  "status": "Final originalM8 restored,112,Fitness5; experimentalFWD1v14/GK unregistered,not adopted",
+  "initialSourceCommit": "7ae12c1e737992f83a10ff5c2cf1497cb2580764",
+  "initialArchiveSha256": "21ed279d4831546ff58e0ce3c91744e1d47b4cb5fbcff8ae4e970ba1489274e3",
+  "reproducibility": "Local macOS cross-build and CloudShell Linux build produced identical archive SHA256,20610262bytes,2731files",
+  "savedReadback": {
+    "status": "READY",
+    "role": "matched",
+    "artifact": "matched",
+    "network": "matched",
+    "environment": "matched",
+    "lifecycle": "matched"
+  },
+  "nativeProbes": [
+    {
+      "side": "home",
+      "command": "SHOOT",
+      "ownPlayerAndTeam": true,
+      "elapsedMsIncludingColdStartAndMemory": 3620,
+      "ownSessionStopped": true
+    },
+    {
+      "side": "away",
+      "command": "SHOOT",
+      "ownPlayerAndTeam": true,
+      "elapsedMsIncludingColdStartAndMemory": 4174,
+      "ownSessionStopped": true
+    }
+  ],
+  "auditObservation": "STM events were written for both probes, but blob objects were returned as map-style strings rather than structured JSON. The initial automated audit gate therefore failed. Revision stores JSON in typed conversational text fields; it needs native revalidation.",
+  "limitations": [
+    "Native probes are synthetic or replayed, not live outcome evidence",
+    "Historical one-role R1 trials; currently R1 and GK candidates unregistered while originalfiveHarness play rankedbatch02",
+    "No IAM changes",
+    "Portal report action counts differ from Runtime response counts; application semantics unresolved"
+  ],
+  "revisionSourceCommit": "a401d6c",
+  "revisionArchiveSha256": "271e027b40f0cb77767f4a4e03f03b17f9bb2f627bd063498acda01183b5e661",
+  "revisionNativeProbes": [
+    {
+      "side": "home",
+      "command": "SHOOT",
+      "ownPlayerAndTeam": true,
+      "acceptedModelChoiceVerifiedInMemory": true,
+      "elapsedMsIncludingColdStartAndMemory": 4795,
+      "ownSessionStopped": true
+    },
+    {
+      "side": "away",
+      "command": "SHOOT",
+      "ownPlayerAndTeam": true,
+      "acceptedModelChoiceVerifiedInMemory": true,
+      "elapsedMsIncludingColdStartAndMemory": 4062,
+      "ownSessionStopped": true
+    }
+  ],
+  "fitnessInitial": {
+    "passed": 4,
+    "total": 5,
+    "failedRole": "fwd1",
+    "reason": "FWD1 active commands0/1ticks; require>50%",
+    "tip": "Team should use PASS",
+    "candidateChange": "Offer a mirrored own-half non-sprint formation position at KICK_OFF; no possession guess"
+  },
+  "revision3": {
+    "sourceCommit": "de5aed1",
+    "archiveSha256": "704bb0cc5b140fa76a4e3c1d782044ae355b775adf5fe13d1431ef9841d6fe60",
+    "status": "READY",
+    "nativeChecks": "HOMEshot, AWAYshot and HOMEkickoff command+model audit3/3; all own probes stopped",
+    "fitness": "UI5/5,5commands100%active, reportedavg0ms",
+    "live49": "Background1:0win againstMatrix_7; kickoff bindingunattributed. Runtime log session correlated to this match shows ValueError No supported command is unlocked before action selection. Do not count as tactical success."
+  },
+  "shotContextDiagnostics": "Next source revision records rejected raw input privately and numeric position/stamina/distance/time/score for accepted actions; no unsupported command is invented.",
+  "revision4": {
+    "sourceCommit": "0bfe524",
+    "archiveSha256": "19d9e8f910bd5d8a7b332b9648432aca69f09116c649640c16bc7061fc487224",
+    "status": "READY",
+    "nativeChecks": "3/3 command and Memory model-audit gates; own sessions stopped",
+    "live50": "AWAY vsPrashanthPokkula lost1:2; actual error-path STM snapshot captured OPEN_PLAY,unlockedCommands[],3Dball and2Dplayers. No successful R1 decision claimed."
+  },
+  "revision5": {
+    "status": "AWS READY",
+    "adapter": "OPEN_PLAY alias; empty unlock list interpreted as no supplied basic restriction; observed keeper-reference XZ normalization; bounded contact/motion ownership inference",
+    "coordinateLimit": "Keeper proxy, not surveyed goalposts; outgoing coordinate conversion remains unverified",
+    "ownershipLimit": "Inferred, not server-confirmed; contested/contradictory input releases control",
+    "validation": "30 policy/runtime unit checks and fake-client SDK shape/stream smoke passed",
+    "nativeLiveReadiness": "Pending deployment and native5case gate",
+    "sourceCommit": "41ae5e4",
+    "archiveSha256": "8b796c69a88f8a5c5e2f919d70d5f6b86e5c6269dd0a3196cb65cfe912f0ecf3",
+    "nativeChecks": "5/5 command and accepted-model audit gates; all own probe sessions stopped",
+    "nativeElapsedMs": [
+      4689,
+      3651,
+      3515,
+      3073,
+      4152
+    ],
+    "fitness": "UI5/5,5commands100%active",
+    "live52": {
+      "sourceCommit": "41ae5e4",
+      "decisionCount": 69,
+      "modelChoices": 69,
+      "inputRejections": 0,
+      "commands": {
+        "CLEAR_OVERRIDE": 67,
+        "PASS": 2
+      },
+      "modelLatencyMedianMs": 411,
+      "phaseCounts": {
+        "FREE": 20,
+        "UNKNOWN": 24,
+        "THEIRS": 12,
+        "OURS": 13
+      }
+    },
+    "live52PositionContext": {
+      "distanceFrame": "Keeper-reference logical proxy, not surveyed physical distance",
+      "minimumDistanceToGoal": 33.85,
+      "medianDistanceToGoal": 81.44,
+      "maximumDistanceToGoal": 117.62,
+      "observationsWithin25": 0
+    }
+  },
+  "executionAudit": {
+    "defLiveCorrelation": "From08:40UTC, logged2Fitness InvokeHarness requests,0matching live52 or53 requests; does not prove all other roles failed.",
+    "r1Live52ModelLatencyMs": {
+      "median": 411,
+      "p95": 486,
+      "max": 497
+    },
+    "transportHypothesis": "SDK emits SSE containing a JSON string for async-generator yield json.dumps. Testing one completed application/json array response without tactical changes. Server consumer behavior not accessible.",
+    "revision6Candidate": {
+      "status": "Rejected: portal Fitness4/5, FWD1 NO_PARSE",
+      "onlyBehaviorChange": "Response transport, retaining v5 decision policy",
+      "archiveSha256": "0114a5a4f2489b9cc021e8ff7730aa7c2c817a3631ef2ead167b6a3f37d387c3",
+      "nativeCases": 5,
+      "nativeElapsedMs": [
+        4097,
+        3010,
+        3463,
+        4115,
+        3398
+      ],
+      "portalMessage": "Return a JSON array on the last data line of the SSE stream; use BedrockAgentCoreApp and yield json.dumps(commands)."
+    },
+    "conclusion": "Completed application/json response is not accepted by portal Fitness. Native decoding gate alone was insufficient. Restore exact v5 SSE and continue separate Harness live-routing audit.",
+    "live54": {
+      "sourceCommit": "26b5826",
+      "meaning": "This game session retained completed-JSONv6, not restoredv7",
+      "decisions": 92,
+      "outcomes": {
+        "model_choice": 92
+      },
+      "commands": {
+        "CLEAR_OVERRIDE": 85,
+        "PASS": 7
+      },
+      "inputRejections": 0,
+      "modelLatencyMs": {
+        "p50": 417,
+        "p95": 609,
+        "max": 735
+      },
+      "sampledMemoryWrites": 10,
+      "consecutiveRepeatedGameTimes": 24,
+      "applicationLimit": "PortalFitness rejected this transport asNO_PARSE; model emissions do not prove application"
+    },
+    "defSideAudit": {
+      "scope": "Since09:20UTC",
+      "events": 6,
+      "fitnessEvents": 6,
+      "matchedHome55": 0,
+      "matchedAway54": 0,
+      "matchedAway56": 0,
+      "limit": "Absence of request logs is not proof of every failure mechanism"
+    },
+    "defMetricAudit": {
+      "scope": "CloudWatch namespaceAWS/Bedrock-AgentCore from08:40UTC through currentquery",
+      "invocations": 10,
+      "datapointMinutes": 5,
+      "userErrors": 0,
+      "limit": "Same metric appears in multiple dimension sets; do not sum duplicated series. Counts alone do not establish source or action application."
+    },
+    "officialHarnessGuide": "Workshop Deploy toAWS, Harness tab explicitly requiresHarnessARN rather than managed RuntimeARN and states it is supported. Missing live logs/counters do not justify replacing it with the underlying managed RuntimeARN or changingIAM."
+  },
+  "revision7": {
+    "sourceCommit": "a30cdc1",
+    "archiveSha256": "8b796c69a88f8a5c5e2f919d70d5f6b86e5c6269dd0a3196cb65cfe912f0ecf3",
+    "meaning": "Byte-identical v5 artifact restored after rejected transport experiment",
+    "status": "AWS READY; five native cases passed model+command+cleanup gates; fixed Fitness session stopped200 before fresh UI retry",
+    "fitness": "After stopping only the fixed own Fitness session, fresh UI5/5,5commands100%active; formation112 persisted afterreload"
+  },
+  "keeperCodeCandidate": {
+    "status": "Offline only, not installed",
+    "scope": "Separate GKRuntime on same existing execution role; FWD1 binding remains separate",
+    "guards": [
+      "No goalkeeper PRESS/SHOOT/PASS/RESET",
+      "Distribution only with own possession and an open outlet",
+      "No outgoing MOVE_TO in observed world/proxy frame",
+      "Documented-frame mirrored recovery and kickoff"
+    ],
+    "validation": "38 policy/runtime/observer/keeper checks passed; SDK fake-client streaming shape check passed",
+    "archiveSha256": "b9b57cc45657296fa1cf5d0003beab8266e97093cd16bad9859c0e1952bc42e5"
+  },
+  "revision8Candidate": {
+    "status": "AWSREADY unregistered; five native command/model/cleanup gates passed",
+    "hypothesis": "Outer async-generator opens SSE response before the model completes. Test a precomputed normal generator returned after awaiting the decision, retaining exact SSE bytes.",
+    "semanticChange": "Response readiness timing, not FWD1 action policy",
+    "fwd1ParityFixtures": 8,
+    "validation": "38 checks and SDK HTTP smoke: model completed before response exists; SSE bytes equal previous format",
+    "archiveSha256": "edd07b839a823fc5b8fc7e3c5184472fbe1e89d79f5c904d65d4172f3898f38f",
+    "sourceCommit": "dca5634",
+    "nativeElapsedMs": [
+      3524,
+      3059,
+      4067,
+      4083,
+      3014
+    ],
+    "fitness": "Pending after portal binding",
+    "practice02": {
+      "scoreFor": 1,
+      "scoreAgainst": 0,
+      "shotsFor": 4,
+      "shotsAgainst": 10,
+      "runtimeBuild": "dca5634",
+      "emittedCommands": {
+        "CLEAR_OVERRIDE": 92,
+        "PASS": 5
+      },
+      "reportedOpponentCommands": {
+        "CLEAR_OVERRIDE": 97,
+        "PASS": 6
+      },
+      "reportedOpponentFwdLatencyMs": 524,
+      "reportedOwnFwdLatencyMs": 590,
+      "interpretation": "Possible team attribution/routing mismatch; not established"
+    }
+  },
+  "currentMainTeam": "OriginalGK13/DEF19/MID15/FWD1v16/FWD2v14,112; Nova2Lite0..3/Haiku4.5role4",
+  "revision9Candidate": {
+    "status": "READY; native5/5 and fresh portalFitness5/5",
+    "onlyBehaviorChange": "Optional bound wire mode omits output teamId; internal own-team/player validation remains",
+    "hypothesis": "Workshop prompt schema omits teamId, while own R1 counts resemble opponent forward stats",
+    "alternatives": [
+      "Report attribution defect",
+      "Output field mapping",
+      "Different opponent/client behavior"
+    ],
+    "validation": "38checks plus fake-client SDK HTTP explicit/bound formats and sampled audit passed",
+    "archiveSha256": "69d30ec1c26c66ff210f00a86623788dd945894db84c1b5996345124269e61f1",
+    "fitness": "5/5",
+    "sourceCommit": "5d75b18",
+    "live59": "67 accepted model choices,63CLEAR+4PASS,0inputreject; modelp50=413/p95=506/max582ms; opponent column remains similar. No routing fix established."
+  },
+  "revision10Candidate": {
+    "status": "READY/native5of7target gates; no Practice",
+    "feature": "Optional FWD attack-support stance when known off-ball and no local intervention offered",
+    "audit": "Previous server command and both same-ID player last-actions retained privately; no numeric team inversion",
+    "validation": "39offline checks passed",
+    "archiveSha256": "5dd20ac3f795bcac9770cbf666b12444a1da695f4d568f2c47c202e8e61ac7dc",
+    "sourceCommit": "32047c9",
+    "nativeFindings": [
+      "Observed live replay correctly returned newly offered SET_STANCE; test still expected old CLEAR.",
+      "HOMEsupport returned legal CLEAR instead of intended SET_STANCE; AWAY choseSET_STANCE.",
+      "All seven own probe sessions stopped."
+    ]
+  },
+  "revision11Candidate": {
+    "status": "READY/native7of7",
+    "change": "Replace conflicting generic routine-clear instruction in optional attack-support selector; update replay expectation for that mode",
+    "archiveSha256": "8554b6aa9189c3bbefe9ed100fd494261a85212777250106b500770e587efb81",
+    "offlineChecks": 39,
+    "sourceCommit": "7a14d1b",
+    "nativeElapsedMs": [
+      4220,
+      3521,
+      4021,
+      3639,
+      3474,
+      3049,
+      4095
+    ],
+    "ownProbeSessionsStopped": true,
+    "fitness": "5/5",
+    "practice": "Practice04 versus same Benchmarkpreset active; no coach",
+    "practice04": {
+      "result": "WIN2:0",
+      "shots": "7:5",
+      "genuineModelChoices": 75,
+      "modelP50Ms": 406,
+      "modelP95Ms": 511,
+      "stanceCommands": 40,
+      "applicationObservation": "OwnCoachIntercept aligns with own previousINTERCEPT once; reports still require attribution caution",
+      "strength": "No superiority established versus v9control3:0/6:4shots; uncontrolled seed"
+    }
+  },
+  "goalkeeperCandidate": {
+    "status": "READY/native11/Fitness5; Practice05draw0:0,shotstatsmissing",
+    "sourceCommit": "7a14d1b",
+    "playerId": 0,
+    "model": "global.amazon.nova-2-lite-v1:0",
+    "nativeGate": "11cases pending",
+    "changes": "No IAM changes; separate Runtime and STM actor",
+    "nativeElapsedMs": [
+      3063,
+      4076,
+      3703,
+      4101,
+      3494,
+      3595,
+      2996,
+      3682,
+      3088,
+      4168,
+      3447
+    ],
+    "ownSessionsStopped": true,
+    "fitness": "5/5",
+    "practice05": {
+      "result": "DRAW0:0",
+      "primaryStats": null,
+      "genuineChoices": 118,
+      "commands": {
+        "CLEAR_OVERRIDE": 118
+      },
+      "inputRejects": 0,
+      "modelP50Ms": 415,
+      "modelP95Ms": 597,
+      "gameTimeEnd": 239.11426,
+      "interpretation": "No actual distribution opportunity verified; no stronger goalkeeper effect established"
+    },
+    "live61": {
+      "result": "LOSS1:2afterOT",
+      "shots": "13:10",
+      "genuineChoices": 123,
+      "commands": {
+        "CLEAR_OVERRIDE": 123
+      },
+      "inputRejects": 0,
+      "modelP50Ms": 416,
+      "modelP95Ms": 637,
+      "interpretation": "No better keeper effect established"
+    }
+  },
+  "revision12Candidate": {
+    "status": "READY/native9/Fitness5passed; diagnosticPractice06starting",
+    "purpose": "Bounded movement-unit and physical-recipient diagnostic, not a strength comparison",
+    "windowSeconds": [
+      8,
+      28
+    ],
+    "target": "Raw X=4*attackSign,Y=1.5,noSprint,onlyFWD1",
+    "default": "Disabled; native9 and Fitness required beforePractice06",
+    "offlineChecks": 40,
+    "archiveSha256": "96c2a99999154556b1a12853c6988f9607aaa3e3e527b590bb574f21fe2efc01",
+    "sourceCommit": "e52447c",
+    "nativeElapsedMs": [
+      4049,
+      4009,
+      3985,
+      4076,
+      3489,
+      4114,
+      3504,
+      3594,
+      3648
+    ],
+    "ownSessionsStopped": true,
+    "fitness": "5/5",
+    "practice06": {
+      "result": "LOSS0:1",
+      "shots": "1:5",
+      "excludedFromStrength": true,
+      "probeMoves": 10,
+      "observation": "OwnHOME3CoachMoveTo at11.72 afterfirstprobe, later withinabout0.53ofraw4,1.5; ballcontact/dribbling confounds unit proof. Opponent also hasCoachMoveTo; labels alone insufficient."
+    }
+  },
+  "revision13Candidate": {
+    "status": "READY/native9of9; unregistered; bind deferred for incominglive62",
+    "onlyMechanismChange": "Quiet own-half wide target(-2*attackSign,2.8) instead of attacking target; same8..28window/scope/model",
+    "hypothesis": "Reduce ball-contact confounding and distinguish raw target from normalized target",
+    "archiveSha256": "de7dddef3fa44bfa824849d684c0a1ec3d7dc527bd23d31dcfc356467252e2e0",
+    "offlineChecks": 40,
+    "nativeGate": "9/9passed; own probes stopped",
+    "sourceCommit": "88eb47f",
+    "nativeElapsedMs": [
+      3702,
+      3499,
+      4105,
+      3003,
+      3523,
+      3671,
+      3697,
+      3036,
+      3537
+    ],
+    "ownProbeSessionsStopped": true,
+    "practice07": {
+      "result": "WIN2:0",
+      "shots": "4:4",
+      "excludedFromStrength": true,
+      "build": "88eb47f",
+      "genuineChoices": 73,
+      "moveProbes": 10,
+      "ownHomeControl": "Verified by own blueFWD4 view and consecutiveCoachMoveTo vectors",
+      "rawTargetVectorCosines": [
+        0.9999994130646375,
+        0.9999999999983091
+      ],
+      "normalizedAlternativeCosines": [
+        0.8394468958669636,
+        0.3901829179172224
+      ],
+      "limitations": "HOME only; keeperanchors proxy, exactposts unmeasured; reportcommandcolumns unreliable"
+    }
+  },
+  "revision14Candidate": {
+    "status": "READY butunregistered; native9/Fitness5/Practice3:0; rankedblock1W4L,notadoptedasfinal",
+    "supportMode": "position",
+    "model": "global.amazon.nova-2-lite-v1:0",
+    "diagnosticProbe": "off",
+    "change": "Offball FWD walking role targets and inverse conversion from canonical to verified raw frame; no guessed movement in unresolved frame",
+    "archiveSha256": "516464b636877353d137f097bdbb83912423ffe74421402acbba7a0c00faaa90",
+    "offlineChecks": 43,
+    "nativeGate": "9/9command/model/own-sessioncleanup passed",
+    "sourceCommit": "e11bad6992d499d02437d7f8ba280b8c6b9e0627",
+    "nativeElapsedMs": [
+      3538,
+      3297,
+      4058,
+      4156,
+      3634,
+      3147,
+      3835,
+      3546,
+      4790
+    ],
+    "ownSessionsStopped": true,
+    "fitness": "5/5",
+    "registered": false,
+    "rankedBatch": "ranked-batch-03.json"
+  }
+}

@@ -1,0 +1,194 @@
+[
+  {
+    "alias": "outlet-live-01",
+    "summary": {
+      "count": 64,
+      "computeMedianMs": 0.5687365,
+      "computeP95Ms": 0.632311,
+      "computeMaxMs": 1.284223,
+      "commands": {
+        "CLEAR_OVERRIDE": 21,
+        "SET_STANCE": 29,
+        "INTERCEPT": 2,
+        "MOVE_TO": 9,
+        "PRESS_BALL": 1,
+        "PASS": 2
+      },
+      "reasons": {
+        "MALFORMED_POSITION": 1,
+        "KEEP_SHAPE": 28,
+        "NEAREST_FREE_BALL": 2,
+        "UNKNOWN_POSSESSION": 15,
+        "PASSING_OUTLET_POSITION": 9,
+        "SINGLE_LOCAL_PRESS": 1,
+        "NO_SAFE_OUTLET": 1,
+        "SAFE_OUTLET": 2,
+        "ENGINE_RESTART": 4,
+        "ROLE_SUPPORT": 1
+      },
+      "frames": {
+        "missing": 1,
+        "keeper_reference_xz": 63
+      },
+      "modelCalls": 0,
+      "buildCommits": [
+        "931af03"
+      ]
+    },
+    "modes": {
+      "missing": 1,
+      "outlet": 63
+    }
+  },
+  {
+    "alias": "outlet-live-02",
+    "summary": {
+      "count": 72,
+      "computeMedianMs": 0.5717030000000001,
+      "computeP95Ms": 0.680188,
+      "computeMaxMs": 1.295294,
+      "commands": {
+        "CLEAR_OVERRIDE": 33,
+        "MOVE_TO": 15,
+        "SET_STANCE": 23,
+        "INTERCEPT": 1
+      },
+      "reasons": {
+        "MALFORMED_POSITION": 1,
+        "UNKNOWN_POSSESSION": 24,
+        "PASSING_OUTLET_POSITION": 15,
+        "KEEP_SHAPE": 21,
+        "ENGINE_RESTART": 8,
+        "ROLE_SUPPORT": 2,
+        "NEAREST_FREE_BALL": 1
+      },
+      "frames": {
+        "missing": 1,
+        "keeper_reference_xz": 71
+      },
+      "modelCalls": 0,
+      "buildCommits": [
+        "931af03"
+      ]
+    },
+    "modes": {
+      "missing": 1,
+      "outlet": 71
+    }
+  },
+  {
+    "alias": "outlet-live-03",
+    "summary": {
+      "count": 65,
+      "computeMedianMs": 0.43134,
+      "computeP95Ms": 0.49771,
+      "computeMaxMs": 1.063938,
+      "commands": {
+        "CLEAR_OVERRIDE": 17,
+        "SET_STANCE": 32,
+        "PASS": 1,
+        "MOVE_TO": 15
+      },
+      "reasons": {
+        "MALFORMED_POSITION": 1,
+        "UNKNOWN_POSSESSION": 13,
+        "KEEP_SHAPE": 29,
+        "SAFE_OUTLET": 1,
+        "PASSING_OUTLET_POSITION": 15,
+        "ROLE_SUPPORT": 3,
+        "ENGINE_RESTART": 3
+      },
+      "frames": {
+        "missing": 1,
+        "keeper_reference_xz": 64
+      },
+      "modelCalls": 0,
+      "buildCommits": [
+        "931af03"
+      ]
+    },
+    "modes": {
+      "missing": 1,
+      "outlet": 64
+    }
+  },
+  {
+    "alias": "outlet-live-04",
+    "summary": {
+      "count": 123,
+      "computeMedianMs": 0.423808,
+      "computeP95Ms": 0.480477,
+      "computeMaxMs": 1.040316,
+      "commands": {
+        "CLEAR_OVERRIDE": 49,
+        "MOVE_TO": 15,
+        "SET_STANCE": 50,
+        "PASS": 1,
+        "INTERCEPT": 3,
+        "PRESS_BALL": 5
+      },
+      "reasons": {
+        "MALFORMED_POSITION": 1,
+        "UNKNOWN_POSSESSION": 31,
+        "PASSING_OUTLET_POSITION": 15,
+        "KEEP_SHAPE": 48,
+        "SAFE_OUTLET": 1,
+        "NO_SAFE_OUTLET": 1,
+        "NEAREST_FREE_BALL": 3,
+        "ENGINE_RESTART": 16,
+        "SINGLE_LOCAL_PRESS": 5,
+        "ROLE_SUPPORT": 2
+      },
+      "frames": {
+        "missing": 1,
+        "keeper_reference_xz": 122
+      },
+      "modelCalls": 0,
+      "buildCommits": [
+        "931af03"
+      ]
+    },
+    "modes": {
+      "missing": 1,
+      "outlet": 122
+    }
+  },
+  {
+    "alias": "outlet-live-05",
+    "summary": {
+      "count": 82,
+      "computeMedianMs": 0.408012,
+      "computeP95Ms": 0.488799,
+      "computeMaxMs": 0.539003,
+      "commands": {
+        "CLEAR_OVERRIDE": 47,
+        "MOVE_TO": 12,
+        "SET_STANCE": 20,
+        "PASS": 2,
+        "PRESS_BALL": 1
+      },
+      "reasons": {
+        "MALFORMED_POSITION": 1,
+        "UNKNOWN_POSSESSION": 28,
+        "PASSING_OUTLET_POSITION": 12,
+        "KEEP_SHAPE": 18,
+        "ENGINE_RESTART": 18,
+        "ROLE_SUPPORT": 2,
+        "SAFE_OUTLET": 2,
+        "SINGLE_LOCAL_PRESS": 1
+      },
+      "frames": {
+        "missing": 1,
+        "keeper_reference_xz": 81
+      },
+      "modelCalls": 0,
+      "buildCommits": [
+        "931af03"
+      ]
+    },
+    "modes": {
+      "missing": 1,
+      "outlet": 81
+    }
+  }
+]

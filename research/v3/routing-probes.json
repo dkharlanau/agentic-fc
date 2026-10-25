@@ -1,0 +1,560 @@
+{
+  "kind": "Synthetic Playground team-routing probes; no saved Harness configuration changed.",
+  "sessionPolicy": "Own test sessions stopped after each test.",
+  "limitations": [
+    "Wrapped input sends the whole harnessUserMessage object as model text; direct input sends its prompt value. Actual football invocation payload shape was not recovered. Do not treat these as equivalent or infer a live root cause.",
+    "Cases add explicit possession fields; actual live availability is unverified.",
+    "Category and target hemisphere are tactical heuristics, separate from command-format validity. Small stochastic samples do not rank model strength.",
+    "modeTeamId full semantics are not established; official sample uses outer teamId for controlled-team selection.",
+    "Null tokens mean unavailable, not zero. Prepared DEF/MID/FWD2 routing cases were not executed.",
+    "GK candidate was not installed because readiness was mixed; current saved M7 retained."
+  ],
+  "results": [
+    {
+      "id": "m7-native-fwd1-home-support",
+      "prompt": "schema-clean/fwd1.txt",
+      "promptSha256": "ee4c92203e6fcbc86d14329913933ba68d8cd2092947bebd2c66d5ed14c17b15",
+      "case": "home-support",
+      "inputShape": "wrapped",
+      "model": "global.amazon.nova-2-lite-v1:0",
+      "inputTokens": 1787,
+      "outputTokens": 40,
+      "reportedPlaygroundLatencyMs": 757,
+      "response": [
+        {
+          "commandType": "MOVE_TO",
+          "playerId": 3,
+          "parameters": {
+            "target_x": 40,
+            "target_y": 0,
+            "sprint": true
+          },
+          "duration": 0
+        }
+      ],
+      "formatPassed": true,
+      "installedChange": false
+    },
+    {
+      "id": "m7-native-fwd1-away-support",
+      "prompt": "schema-clean/fwd1.txt",
+      "promptSha256": "ee4c92203e6fcbc86d14329913933ba68d8cd2092947bebd2c66d5ed14c17b15",
+      "case": "away-support",
+      "inputShape": "wrapped",
+      "model": "global.amazon.nova-2-lite-v1:0",
+      "inputTokens": 1790,
+      "outputTokens": 40,
+      "reportedPlaygroundLatencyMs": 616,
+      "response": [
+        {
+          "commandType": "MOVE_TO",
+          "playerId": 3,
+          "parameters": {
+            "target_x": 10,
+            "target_y": 0,
+            "sprint": true
+          },
+          "duration": 0
+        }
+      ],
+      "formatPassed": true,
+      "installedChange": false
+    },
+    {
+      "id": "m7-native-fwd1-away-support-mode1",
+      "prompt": "schema-clean/fwd1.txt",
+      "promptSha256": "ee4c92203e6fcbc86d14329913933ba68d8cd2092947bebd2c66d5ed14c17b15",
+      "case": "away-support-mode-away",
+      "inputShape": "wrapped",
+      "model": "global.amazon.nova-2-lite-v1:0",
+      "inputTokens": 1790,
+      "outputTokens": 40,
+      "reportedPlaygroundLatencyMs": 779,
+      "response": [
+        {
+          "commandType": "MOVE_TO",
+          "playerId": 3,
+          "parameters": {
+            "target_x": -40,
+            "target_y": 0,
+            "sprint": true
+          },
+          "duration": 0
+        }
+      ],
+      "formatPassed": true,
+      "installedChange": false
+    },
+    {
+      "id": "m7-native-fwd1-away-support-repeat",
+      "prompt": "schema-clean/fwd1.txt",
+      "promptSha256": "ee4c92203e6fcbc86d14329913933ba68d8cd2092947bebd2c66d5ed14c17b15",
+      "case": "away-support",
+      "inputShape": "wrapped",
+      "model": "global.amazon.nova-2-lite-v1:0",
+      "inputTokens": 1790,
+      "outputTokens": 36,
+      "reportedPlaygroundLatencyMs": 613,
+      "response": [
+        {
+          "commandType": "MOVE_TO",
+          "playerId": 3,
+          "parameters": {
+            "target_x": 15,
+            "target_y": 0,
+            "sprint": true
+          },
+          "duration": 0
+        }
+      ],
+      "formatPassed": true,
+      "installedChange": false
+    },
+    {
+      "id": "routing-fwd1-away-mode0",
+      "prompt": "team-routing/fwd1.txt",
+      "promptSha256": "e1b1df3e98d31139080f0259c25ca79b091e3912a451e018acff84e19f955ae9",
+      "case": "away-support",
+      "inputShape": "wrapped",
+      "model": "global.amazon.nova-2-lite-v1:0",
+      "inputTokens": 2037,
+      "outputTokens": 40,
+      "reportedPlaygroundLatencyMs": 836,
+      "response": [
+        {
+          "commandType": "MOVE_TO",
+          "playerId": 3,
+          "parameters": {
+            "target_x": -40,
+            "target_y": 0,
+            "sprint": true
+          },
+          "duration": 0
+        }
+      ],
+      "formatPassed": true,
+      "installedChange": false
+    },
+    {
+      "id": "routing-fwd1-home",
+      "prompt": "team-routing/fwd1.txt",
+      "promptSha256": "e1b1df3e98d31139080f0259c25ca79b091e3912a451e018acff84e19f955ae9",
+      "case": "home-support",
+      "inputShape": "wrapped",
+      "model": "global.amazon.nova-2-lite-v1:0",
+      "inputTokens": 2034,
+      "outputTokens": 40,
+      "reportedPlaygroundLatencyMs": 721,
+      "response": [
+        {
+          "commandType": "MOVE_TO",
+          "playerId": 3,
+          "parameters": {
+            "target_x": 40,
+            "target_y": 0,
+            "sprint": true
+          },
+          "duration": 0
+        }
+      ],
+      "formatPassed": true,
+      "installedChange": false
+    },
+    {
+      "id": "routing-fwd1-away-mode0-repeat",
+      "prompt": "team-routing/fwd1.txt",
+      "promptSha256": "e1b1df3e98d31139080f0259c25ca79b091e3912a451e018acff84e19f955ae9",
+      "case": "away-support",
+      "inputShape": "wrapped",
+      "model": "global.amazon.nova-2-lite-v1:0",
+      "inputTokens": 2037,
+      "outputTokens": 40,
+      "reportedPlaygroundLatencyMs": 841,
+      "response": [
+        {
+          "commandType": "MOVE_TO",
+          "playerId": 3,
+          "parameters": {
+            "target_x": 0,
+            "target_y": 25,
+            "sprint": false
+          },
+          "duration": 0
+        }
+      ],
+      "formatPassed": true,
+      "installedChange": false
+    },
+    {
+      "id": "routing-fwd1-away-mode1",
+      "prompt": "team-routing/fwd1.txt",
+      "promptSha256": "e1b1df3e98d31139080f0259c25ca79b091e3912a451e018acff84e19f955ae9",
+      "case": "away-support-mode-away",
+      "inputShape": "wrapped",
+      "model": "global.amazon.nova-2-lite-v1:0",
+      "inputTokens": 2037,
+      "outputTokens": 40,
+      "reportedPlaygroundLatencyMs": 739,
+      "response": [
+        {
+          "commandType": "MOVE_TO",
+          "playerId": 3,
+          "parameters": {
+            "target_x": -10,
+            "target_y": 0,
+            "sprint": true
+          },
+          "duration": 0
+        }
+      ],
+      "formatPassed": true,
+      "installedChange": false
+    },
+    {
+      "id": "m7-native-gk-away-mode0",
+      "prompt": "schema-clean/gk.txt",
+      "promptSha256": "43a75e8e85225b14879c7c9b839a7f8b3e5d056d8a841a1a4019b8fc8263cd36",
+      "case": "gk-away-mode0",
+      "inputShape": "wrapped",
+      "model": "global.amazon.nova-2-lite-v1:0",
+      "inputTokens": null,
+      "outputTokens": null,
+      "reportedPlaygroundLatencyMs": 1235,
+      "response": [
+        {
+          "commandType": "MOVE_TO",
+          "playerId": 0,
+          "parameters": {
+            "target_x": -42.0,
+            "target_y": 0.0,
+            "sprint": false
+          },
+          "duration": 0
+        }
+      ],
+      "formatPassed": true,
+      "installedChange": false
+    },
+    {
+      "id": "routing-gk-away-mode0",
+      "prompt": "team-routing/gk.txt",
+      "promptSha256": "5dc1207f7f48650f74d4dd53598caa9aa3069053281af05f1cbcfaef928cefb1",
+      "case": "gk-away-mode0",
+      "inputShape": "wrapped",
+      "model": "global.amazon.nova-2-lite-v1:0",
+      "inputTokens": 1857,
+      "outputTokens": 40,
+      "reportedPlaygroundLatencyMs": 870,
+      "response": [
+        {
+          "commandType": "MOVE_TO",
+          "playerId": 0,
+          "parameters": {
+            "target_x": -50,
+            "target_y": 0,
+            "sprint": false
+          },
+          "duration": 0
+        }
+      ],
+      "formatPassed": true,
+      "installedChange": false
+    },
+    {
+      "id": "haiku-gk-original-away-mode0",
+      "prompt": "schema-clean/gk.txt",
+      "promptSha256": "43a75e8e85225b14879c7c9b839a7f8b3e5d056d8a841a1a4019b8fc8263cd36",
+      "case": "gk-away-mode0",
+      "inputShape": "wrapped",
+      "model": "global.anthropic.claude-haiku-4-5-20251001-v1:0",
+      "inputTokens": 1991,
+      "outputTokens": 61,
+      "reportedPlaygroundLatencyMs": 1396,
+      "response": [
+        {
+          "commandType": "MOVE_TO",
+          "playerId": 0,
+          "parameters": {
+            "target_x": -50.0,
+            "target_y": 0.0,
+            "sprint": false
+          },
+          "duration": 0
+        }
+      ],
+      "formatPassed": true,
+      "installedChange": false
+    },
+    {
+      "id": "gk-routing-haiku-away",
+      "prompt": "gk-routing/gk-v1.txt",
+      "promptSha256": "53600beca506ea6d3a4656dc45c7b29cdc7664365640a451cba549fd69315040",
+      "case": "gk-away-mode0",
+      "inputShape": "wrapped",
+      "model": "global.anthropic.claude-haiku-4-5-20251001-v1:0",
+      "inputTokens": 2340,
+      "outputTokens": 52,
+      "reportedPlaygroundLatencyMs": 1248,
+      "response": [
+        {
+          "commandType": "MOVE_TO",
+          "playerId": 0,
+          "parameters": {
+            "target_x": 49.0,
+            "target_y": 0.0,
+            "sprint": false
+          },
+          "duration": 0
+        }
+      ],
+      "formatPassed": true,
+      "installedChange": false
+    },
+    {
+      "id": "gk-routing-nova-away",
+      "prompt": "gk-routing/gk-v1.txt",
+      "promptSha256": "53600beca506ea6d3a4656dc45c7b29cdc7664365640a451cba549fd69315040",
+      "case": "gk-away-mode0",
+      "inputShape": "wrapped",
+      "model": "global.amazon.nova-2-lite-v1:0",
+      "inputTokens": 1906,
+      "outputTokens": 44,
+      "reportedPlaygroundLatencyMs": 700,
+      "response": [
+        {
+          "commandType": "MOVE_TO",
+          "playerId": 0,
+          "parameters": {
+            "target_x": 49.0,
+            "target_y": 0.0,
+            "sprint": false
+          },
+          "duration": 0
+        }
+      ],
+      "formatPassed": true,
+      "installedChange": false
+    },
+    {
+      "id": "gk-routing-nova-home",
+      "prompt": "gk-routing/gk-v1.txt",
+      "promptSha256": "53600beca506ea6d3a4656dc45c7b29cdc7664365640a451cba549fd69315040",
+      "case": "home-recovery",
+      "inputShape": "wrapped",
+      "model": "global.amazon.nova-2-lite-v1:0",
+      "inputTokens": 1902,
+      "outputTokens": 44,
+      "reportedPlaygroundLatencyMs": 1117,
+      "response": [
+        {
+          "commandType": "MOVE_TO",
+          "playerId": 0,
+          "parameters": {
+            "target_x": -49.0,
+            "target_y": 0.0,
+            "sprint": false
+          },
+          "duration": 0
+        }
+      ],
+      "formatPassed": true,
+      "installedChange": false
+    },
+    {
+      "id": "gk-routing-nova-away-ball",
+      "prompt": "gk-routing/gk-v1.txt",
+      "promptSha256": "53600beca506ea6d3a4656dc45c7b29cdc7664365640a451cba549fd69315040",
+      "case": "away-gk-possession",
+      "inputShape": "wrapped",
+      "model": "global.amazon.nova-2-lite-v1:0",
+      "inputTokens": 1905,
+      "outputTokens": 44,
+      "reportedPlaygroundLatencyMs": 1067,
+      "response": [
+        {
+          "commandType": "MOVE_TO",
+          "playerId": 0,
+          "parameters": {
+            "target_x": 49.0,
+            "target_y": 0.0,
+            "sprint": false
+          },
+          "duration": 0
+        }
+      ],
+      "formatPassed": true,
+      "installedChange": false
+    },
+    {
+      "id": "gk-routing-v2-nova-away-ball",
+      "prompt": "gk-routing/gk.txt",
+      "promptSha256": "8f7a183b986950429ff228ea7fef63ea03cc7962824c8a2c194621e394f008a6",
+      "case": "away-gk-possession",
+      "inputShape": "wrapped",
+      "model": "global.amazon.nova-2-lite-v1:0",
+      "inputTokens": 1972,
+      "outputTokens": 44,
+      "reportedPlaygroundLatencyMs": 552,
+      "response": [
+        {
+          "commandType": "MOVE_TO",
+          "playerId": 0,
+          "parameters": {
+            "target_x": 49.0,
+            "target_y": 0.0,
+            "sprint": false
+          },
+          "duration": 0
+        }
+      ],
+      "formatPassed": true,
+      "installedChange": false
+    },
+    {
+      "id": "gk-routing-v2-nova-away-ball-unwrapped",
+      "prompt": "gk-routing/gk.txt",
+      "promptSha256": "8f7a183b986950429ff228ea7fef63ea03cc7962824c8a2c194621e394f008a6",
+      "case": "away-gk-possession",
+      "inputShape": "direct",
+      "model": "global.amazon.nova-2-lite-v1:0",
+      "inputTokens": 1934,
+      "outputTokens": 39,
+      "reportedPlaygroundLatencyMs": 1396,
+      "response": [
+        {
+          "commandType": "GK_DISTRIBUTE",
+          "playerId": 0,
+          "parameters": {
+            "target_player_id": 1,
+            "method": "THROW"
+          },
+          "duration": 0
+        }
+      ],
+      "formatPassed": true,
+      "installedChange": false
+    },
+    {
+      "id": "m7-gk-original-away-unwrapped",
+      "prompt": "schema-clean/gk.txt",
+      "promptSha256": "43a75e8e85225b14879c7c9b839a7f8b3e5d056d8a841a1a4019b8fc8263cd36",
+      "case": "gk-away-mode0",
+      "inputShape": "direct",
+      "model": "global.amazon.nova-2-lite-v1:0",
+      "inputTokens": 1571,
+      "outputTokens": 40,
+      "reportedPlaygroundLatencyMs": 1097,
+      "response": [
+        {
+          "commandType": "MOVE_TO",
+          "playerId": 0,
+          "parameters": {
+            "target_x": -40,
+            "target_y": 0,
+            "sprint": false
+          },
+          "duration": 0
+        }
+      ],
+      "formatPassed": true,
+      "installedChange": false
+    },
+    {
+      "id": "m7-gk-original-away-ball-unwrapped",
+      "prompt": "schema-clean/gk.txt",
+      "promptSha256": "43a75e8e85225b14879c7c9b839a7f8b3e5d056d8a841a1a4019b8fc8263cd36",
+      "case": "away-gk-possession",
+      "inputShape": "direct",
+      "model": "global.amazon.nova-2-lite-v1:0",
+      "inputTokens": 1571,
+      "outputTokens": 35,
+      "reportedPlaygroundLatencyMs": 831,
+      "response": [
+        {
+          "commandType": "GK_DISTRIBUTE",
+          "playerId": 0,
+          "parameters": {
+            "target_player_id": 1,
+            "method": "THROW"
+          },
+          "duration": 0
+        }
+      ],
+      "formatPassed": true,
+      "installedChange": false
+    },
+    {
+      "id": "gk-routing-v2-nova-away-unwrapped",
+      "prompt": "gk-routing/gk.txt",
+      "promptSha256": "8f7a183b986950429ff228ea7fef63ea03cc7962824c8a2c194621e394f008a6",
+      "case": "gk-away-mode0",
+      "inputShape": "direct",
+      "model": "global.amazon.nova-2-lite-v1:0",
+      "inputTokens": 1934,
+      "outputTokens": 44,
+      "reportedPlaygroundLatencyMs": 957,
+      "response": [
+        {
+          "commandType": "MOVE_TO",
+          "playerId": 0,
+          "parameters": {
+            "target_x": 49.0,
+            "target_y": 0.0,
+            "sprint": false
+          },
+          "duration": 0
+        }
+      ],
+      "formatPassed": true,
+      "installedChange": false
+    },
+    {
+      "id": "gk-routing-v2-nova-home-unwrapped",
+      "prompt": "gk-routing/gk.txt",
+      "promptSha256": "8f7a183b986950429ff228ea7fef63ea03cc7962824c8a2c194621e394f008a6",
+      "case": "home-recovery",
+      "inputShape": "direct",
+      "model": "global.amazon.nova-2-lite-v1:0",
+      "inputTokens": 1934,
+      "outputTokens": 39,
+      "reportedPlaygroundLatencyMs": 609,
+      "response": [
+        {
+          "commandType": "GK_DISTRIBUTE",
+          "playerId": 0,
+          "parameters": {
+            "target_player_id": 1,
+            "method": "THROW"
+          },
+          "duration": 0
+        }
+      ],
+      "formatPassed": true,
+      "installedChange": false
+    },
+    {
+      "id": "gk-routing-v2-nova-away-ball-unwrapped-repeat",
+      "prompt": "gk-routing/gk.txt",
+      "promptSha256": "8f7a183b986950429ff228ea7fef63ea03cc7962824c8a2c194621e394f008a6",
+      "case": "away-gk-possession",
+      "inputShape": "direct",
+      "model": "global.amazon.nova-2-lite-v1:0",
+      "inputTokens": 1934,
+      "outputTokens": 39,
+      "reportedPlaygroundLatencyMs": 747,
+      "response": [
+        {
+          "commandType": "GK_DISTRIBUTE",
+          "playerId": 0,
+          "parameters": {
+            "target_player_id": 1,
+            "method": "THROW"
+          },
+          "duration": 0
+        }
+      ],
+      "formatPassed": true,
+      "installedChange": false
+    }
+  ]
+}

@@ -1,0 +1,644 @@
+{
+  "kind": "synthetic local checks and local deserialize/decision/serialize CPU timing, NOT AWS/portal latency",
+  "platform": "macOS-27.2-arm64-arm-64bit",
+  "rows": [
+    {
+      "id": "gk-own-ball-far",
+      "output": [
+        {
+          "commandType": "GK_DISTRIBUTE",
+          "playerId": 0,
+          "parameters": {
+            "target_player_id": 4,
+            "method": "KICK"
+          },
+          "duration": 0
+        }
+      ],
+      "errors": [],
+      "audit": {
+        "reason": "SAFE_OUTLET",
+        "computeMs": 0.158833,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "frame": "documented_xy",
+        "pitchReferenceReady": true,
+        "possession": "OURS",
+        "playMode": "PLAY_ON",
+        "inferredPossession": false
+      }
+    },
+    {
+      "id": "gk-ambiguous-owner",
+      "output": [
+        {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 0,
+          "parameters": {},
+          "duration": 0
+        }
+      ],
+      "errors": [],
+      "audit": {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.092125,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "frame": "documented_xy",
+        "pitchReferenceReady": false,
+        "possession": "UNKNOWN",
+        "playMode": "PLAY_ON",
+        "inferredPossession": false
+      }
+    },
+    {
+      "id": "def-own-ball-far",
+      "output": [
+        {
+          "commandType": "PASS",
+          "playerId": 1,
+          "parameters": {
+            "target_player_id": 4,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "errors": [],
+      "audit": {
+        "reason": "SAFE_OUTLET",
+        "computeMs": 0.118292,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "frame": "documented_xy",
+        "pitchReferenceReady": true,
+        "possession": "OURS",
+        "playMode": "PLAY_ON",
+        "inferredPossession": false
+      }
+    },
+    {
+      "id": "def-ambiguous-owner",
+      "output": [
+        {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 1,
+          "parameters": {},
+          "duration": 0
+        }
+      ],
+      "errors": [],
+      "audit": {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.085583,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "frame": "documented_xy",
+        "pitchReferenceReady": true,
+        "possession": "UNKNOWN",
+        "playMode": "PLAY_ON",
+        "inferredPossession": false
+      }
+    },
+    {
+      "id": "mid-own-ball-far",
+      "output": [
+        {
+          "commandType": "PASS",
+          "playerId": 2,
+          "parameters": {
+            "target_player_id": 4,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "errors": [],
+      "audit": {
+        "reason": "SAFE_OUTLET",
+        "computeMs": 0.117208,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "frame": "documented_xy",
+        "pitchReferenceReady": true,
+        "possession": "OURS",
+        "playMode": "PLAY_ON",
+        "inferredPossession": false
+      }
+    },
+    {
+      "id": "mid-ambiguous-owner",
+      "output": [
+        {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 2,
+          "parameters": {},
+          "duration": 0
+        }
+      ],
+      "errors": [],
+      "audit": {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.084958,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "frame": "documented_xy",
+        "pitchReferenceReady": true,
+        "possession": "UNKNOWN",
+        "playMode": "PLAY_ON",
+        "inferredPossession": false
+      }
+    },
+    {
+      "id": "fwd1-own-ball-far",
+      "output": [
+        {
+          "commandType": "PASS",
+          "playerId": 3,
+          "parameters": {
+            "target_player_id": 4,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "errors": [],
+      "audit": {
+        "reason": "SAFE_OUTLET",
+        "computeMs": 0.104625,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "frame": "documented_xy",
+        "pitchReferenceReady": true,
+        "possession": "OURS",
+        "playMode": "PLAY_ON",
+        "inferredPossession": false
+      }
+    },
+    {
+      "id": "fwd1-ambiguous-owner",
+      "output": [
+        {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 3,
+          "parameters": {},
+          "duration": 0
+        }
+      ],
+      "errors": [],
+      "audit": {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.0845,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "frame": "documented_xy",
+        "pitchReferenceReady": true,
+        "possession": "UNKNOWN",
+        "playMode": "PLAY_ON",
+        "inferredPossession": false
+      }
+    },
+    {
+      "id": "fwd2-own-ball-far",
+      "output": [
+        {
+          "commandType": "PASS",
+          "playerId": 4,
+          "parameters": {
+            "target_player_id": 3,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "errors": [],
+      "audit": {
+        "reason": "SAFE_OUTLET",
+        "computeMs": 0.105375,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "frame": "documented_xy",
+        "pitchReferenceReady": true,
+        "possession": "OURS",
+        "playMode": "PLAY_ON",
+        "inferredPossession": false
+      }
+    },
+    {
+      "id": "fwd2-ambiguous-owner",
+      "output": [
+        {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        }
+      ],
+      "errors": [],
+      "audit": {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.074166,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "frame": "documented_xy",
+        "pitchReferenceReady": true,
+        "possession": "UNKNOWN",
+        "playMode": "PLAY_ON",
+        "inferredPossession": false
+      }
+    },
+    {
+      "id": "fwd1-close-open-shot",
+      "output": [
+        {
+          "commandType": "SHOOT",
+          "playerId": 3,
+          "parameters": {
+            "aim_location": "TR",
+            "power": 0.8
+          },
+          "duration": 0
+        }
+      ],
+      "errors": [],
+      "audit": {
+        "reason": "CLOSE_CLEAR_SHOT",
+        "computeMs": 0.078208,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "frame": "documented_xy",
+        "pitchReferenceReady": true,
+        "possession": "OURS",
+        "playMode": "PLAY_ON",
+        "inferredPossession": false
+      }
+    },
+    {
+      "id": "fwd2-close-blocked-pass",
+      "output": [
+        {
+          "commandType": "PASS",
+          "playerId": 4,
+          "parameters": {
+            "target_player_id": 3,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "errors": [],
+      "audit": {
+        "reason": "SAFE_OUTLET",
+        "computeMs": 0.104708,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "frame": "documented_xy",
+        "pitchReferenceReady": true,
+        "possession": "OURS",
+        "playMode": "PLAY_ON",
+        "inferredPossession": false
+      }
+    },
+    {
+      "id": "gk-reject-marked-defender",
+      "output": [
+        {
+          "commandType": "GK_DISTRIBUTE",
+          "playerId": 0,
+          "parameters": {
+            "target_player_id": 4,
+            "method": "KICK"
+          },
+          "duration": 0
+        }
+      ],
+      "errors": [],
+      "audit": {
+        "reason": "SAFE_OUTLET",
+        "computeMs": 0.131041,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "frame": "documented_xy",
+        "pitchReferenceReady": true,
+        "possession": "OURS",
+        "playMode": "PLAY_ON",
+        "inferredPossession": false
+      }
+    },
+    {
+      "id": "fwd1-low-energy-cover",
+      "output": [
+        {
+          "commandType": "SET_STANCE",
+          "playerId": 3,
+          "parameters": {
+            "stance": 0
+          },
+          "duration": 0
+        }
+      ],
+      "errors": [],
+      "audit": {
+        "reason": "KEEP_SHAPE",
+        "computeMs": 0.088458,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "frame": "documented_xy",
+        "pitchReferenceReady": true,
+        "possession": "THEIRS",
+        "playMode": "PLAY_ON",
+        "inferredPossession": false
+      }
+    },
+    {
+      "id": "mid-malformed-players",
+      "output": [
+        {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 2,
+          "parameters": {},
+          "duration": 0
+        }
+      ],
+      "errors": [],
+      "audit": {
+        "reason": "MALFORMED",
+        "computeMs": 0.00125,
+        "modelAttempted": false,
+        "policy": "fast_path_v2"
+      }
+    },
+    {
+      "id": "fwd2-wrong-player-binding",
+      "output": [
+        {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        }
+      ],
+      "errors": [],
+      "audit": {
+        "reason": "UNASSIGNED",
+        "computeMs": 0.009542,
+        "modelAttempted": false,
+        "policy": "fast_path_v2"
+      }
+    },
+    {
+      "id": "gk-own-ball-far-away",
+      "output": [
+        {
+          "commandType": "GK_DISTRIBUTE",
+          "playerId": 0,
+          "parameters": {
+            "target_player_id": 4,
+            "method": "KICK"
+          },
+          "duration": 0
+        }
+      ],
+      "errors": [],
+      "audit": {
+        "reason": "SAFE_OUTLET",
+        "computeMs": 0.120375,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "frame": "documented_xy",
+        "pitchReferenceReady": true,
+        "possession": "OURS",
+        "playMode": "PLAY_ON",
+        "inferredPossession": false
+      }
+    },
+    {
+      "id": "def-own-ball-far-away",
+      "output": [
+        {
+          "commandType": "PASS",
+          "playerId": 1,
+          "parameters": {
+            "target_player_id": 4,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "errors": [],
+      "audit": {
+        "reason": "SAFE_OUTLET",
+        "computeMs": 0.105167,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "frame": "documented_xy",
+        "pitchReferenceReady": true,
+        "possession": "OURS",
+        "playMode": "PLAY_ON",
+        "inferredPossession": false
+      }
+    },
+    {
+      "id": "mid-own-ball-far-away",
+      "output": [
+        {
+          "commandType": "PASS",
+          "playerId": 2,
+          "parameters": {
+            "target_player_id": 4,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "errors": [],
+      "audit": {
+        "reason": "SAFE_OUTLET",
+        "computeMs": 0.105709,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "frame": "documented_xy",
+        "pitchReferenceReady": true,
+        "possession": "OURS",
+        "playMode": "PLAY_ON",
+        "inferredPossession": false
+      }
+    },
+    {
+      "id": "fwd1-own-ball-far-away",
+      "output": [
+        {
+          "commandType": "PASS",
+          "playerId": 3,
+          "parameters": {
+            "target_player_id": 4,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "errors": [],
+      "audit": {
+        "reason": "SAFE_OUTLET",
+        "computeMs": 0.105917,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "frame": "documented_xy",
+        "pitchReferenceReady": true,
+        "possession": "OURS",
+        "playMode": "PLAY_ON",
+        "inferredPossession": false
+      }
+    },
+    {
+      "id": "fwd2-own-ball-far-away",
+      "output": [
+        {
+          "commandType": "PASS",
+          "playerId": 4,
+          "parameters": {
+            "target_player_id": 3,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "errors": [],
+      "audit": {
+        "reason": "SAFE_OUTLET",
+        "computeMs": 0.104084,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "frame": "documented_xy",
+        "pitchReferenceReady": true,
+        "possession": "OURS",
+        "playMode": "PLAY_ON",
+        "inferredPossession": false
+      }
+    },
+    {
+      "id": "gk-ambiguous-owner-stale-context",
+      "output": [
+        {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 0,
+          "parameters": {},
+          "duration": 0
+        }
+      ],
+      "errors": [],
+      "audit": {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.088542,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "frame": "documented_xy",
+        "pitchReferenceReady": true,
+        "possession": "UNKNOWN",
+        "playMode": "PLAY_ON",
+        "inferredPossession": false
+      }
+    },
+    {
+      "id": "def-ambiguous-owner-stale-context",
+      "output": [
+        {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 1,
+          "parameters": {},
+          "duration": 0
+        }
+      ],
+      "errors": [],
+      "audit": {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.077459,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "frame": "documented_xy",
+        "pitchReferenceReady": true,
+        "possession": "UNKNOWN",
+        "playMode": "PLAY_ON",
+        "inferredPossession": false
+      }
+    },
+    {
+      "id": "mid-ambiguous-owner-stale-context",
+      "output": [
+        {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 2,
+          "parameters": {},
+          "duration": 0
+        }
+      ],
+      "errors": [],
+      "audit": {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.065209,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "frame": "documented_xy",
+        "pitchReferenceReady": true,
+        "possession": "UNKNOWN",
+        "playMode": "PLAY_ON",
+        "inferredPossession": false
+      }
+    },
+    {
+      "id": "fwd1-ambiguous-owner-stale-context",
+      "output": [
+        {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 3,
+          "parameters": {},
+          "duration": 0
+        }
+      ],
+      "errors": [],
+      "audit": {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.076833,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "frame": "documented_xy",
+        "pitchReferenceReady": true,
+        "possession": "UNKNOWN",
+        "playMode": "PLAY_ON",
+        "inferredPossession": false
+      }
+    },
+    {
+      "id": "fwd2-ambiguous-owner-stale-context",
+      "output": [
+        {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        }
+      ],
+      "errors": [],
+      "audit": {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.072458,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "frame": "documented_xy",
+        "pitchReferenceReady": true,
+        "possession": "UNKNOWN",
+        "playMode": "PLAY_ON",
+        "inferredPossession": false
+      }
+    }
+  ],
+  "summary": {
+    "passed": 26,
+    "total": 26,
+    "timingSamples": 10000,
+    "localWallMedianMs": 0.104,
+    "localWallP95Ms": 0.135583,
+    "localWallMaxMs": 0.271875,
+    "under10ms": 10000
+  }
+}

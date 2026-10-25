@@ -1,0 +1,194 @@
+{
+  "kind": "Six Playground-only FWD1 direct-input model probes. No saved Harness model/prompt changed.",
+  "fixture": "fixtures/derived-fwd1-direct-possession.json",
+  "sessionPolicy": "New own session for every sample; all six stopped after completion. No native probe overlapped live31.",
+  "formatEvaluation": "Parse the complete visible assistant text, not just the first array. Extra explanation violates JSON-only even if an actionable array is present. This is a prompt contract check, not proof of the actual portal parser outcome.",
+  "decision": "Retain M8 Nova FWD1. Haiku matched3/3 expected categories but only2/3 JSON-only contracts; Nova matched2/3 categories and3/3 contracts. No M9 was deployed.",
+  "limitations": [
+    "Single samples on role-adapted synthetic inputs do not rank match strength.",
+    "Explicit possession fields are synthetic; actual live invocation payload remains unknown.",
+    "SHOOT/MOVE expected categories are tactical heuristics; Nova CLEAR_OVERRIDE is valid and does not prove parsing failure.",
+    "Playground latency3119ms for Haiku AWAY is not a live tick latency.",
+    "An initial array-only format assessment was corrected after inspecting the full assistant message; extra reasoning is not published."
+  ],
+  "relatedLocalFormatAudit": {
+    "snapshots": 26,
+    "scope": "The22routing and4command-guard local snapshots each contained one complete JSON text block matching the recorded response; no previous labels in those two files needed correction. Other older probes were not audited here."
+  },
+  "results": [
+    {
+      "id": "fwd1-direct-nova-home-clear-shot",
+      "case": "home-clear-shot",
+      "model": "global.amazon.nova-2-lite-v1:0",
+      "prompt": "schema-clean/fwd1.txt",
+      "promptSha256": "ee4c92203e6fcbc86d14329913933ba68d8cd2092947bebd2c66d5ed14c17b15",
+      "inputTokens": 1751,
+      "outputTokens": 37,
+      "reportedPlaygroundLatencyMs": 724,
+      "responseArray": [
+        {
+          "commandType": "SHOOT",
+          "playerId": 3,
+          "parameters": {
+            "aim_location": "CENTER",
+            "power": 0.9
+          },
+          "duration": 0
+        }
+      ],
+      "assistantTextBlockCount": 1,
+      "assistantTextSha256": "686d2c55725b0df5ae7fbca34079ab4f3ea6b267fc662ef66f7dd0bba7a2ae4b",
+      "jsonOnlyPassed": true,
+      "exactlyOneOwnPlayerCommandArrayPresent": true,
+      "commandContractPassed": true,
+      "expectedCategory": "SHOOT",
+      "expectedCategoryIsHeuristic": true,
+      "expectedCategoryPassed": true
+    },
+    {
+      "id": "fwd1-direct-nova-away-clear-shot",
+      "case": "away-clear-shot",
+      "model": "global.amazon.nova-2-lite-v1:0",
+      "prompt": "schema-clean/fwd1.txt",
+      "promptSha256": "ee4c92203e6fcbc86d14329913933ba68d8cd2092947bebd2c66d5ed14c17b15",
+      "inputTokens": 1751,
+      "outputTokens": 22,
+      "reportedPlaygroundLatencyMs": 655,
+      "responseArray": [
+        {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 3,
+          "parameters": {},
+          "duration": 0
+        }
+      ],
+      "assistantTextBlockCount": 1,
+      "assistantTextSha256": "ca37d7d520d605effb83f41c7c9ca953194d8773829197e494cf2e15bc93be47",
+      "jsonOnlyPassed": true,
+      "exactlyOneOwnPlayerCommandArrayPresent": true,
+      "commandContractPassed": true,
+      "expectedCategory": "SHOOT",
+      "expectedCategoryIsHeuristic": true,
+      "expectedCategoryPassed": false
+    },
+    {
+      "id": "fwd1-direct-nova-home-teammate-possession",
+      "case": "home-teammate-possession",
+      "model": "global.amazon.nova-2-lite-v1:0",
+      "prompt": "schema-clean/fwd1.txt",
+      "promptSha256": "ee4c92203e6fcbc86d14329913933ba68d8cd2092947bebd2c66d5ed14c17b15",
+      "inputTokens": 1751,
+      "outputTokens": 40,
+      "reportedPlaygroundLatencyMs": 611,
+      "responseArray": [
+        {
+          "commandType": "MOVE_TO",
+          "playerId": 3,
+          "parameters": {
+            "target_x": 40,
+            "target_y": 0,
+            "sprint": true
+          },
+          "duration": 0
+        }
+      ],
+      "assistantTextBlockCount": 1,
+      "assistantTextSha256": "62ab0ed838319c9a22c9ea1d914cd4b8c6d6d147b73ee27b49205659964943e4",
+      "jsonOnlyPassed": true,
+      "exactlyOneOwnPlayerCommandArrayPresent": true,
+      "commandContractPassed": true,
+      "expectedCategory": "MOVE_TO",
+      "expectedCategoryIsHeuristic": true,
+      "expectedCategoryPassed": true
+    },
+    {
+      "id": "fwd1-direct-haiku-home-clear-shot",
+      "case": "home-clear-shot",
+      "model": "global.anthropic.claude-haiku-4-5-20251001-v1:0",
+      "prompt": "schema-clean/fwd1.txt",
+      "promptSha256": "ee4c92203e6fcbc86d14329913933ba68d8cd2092947bebd2c66d5ed14c17b15",
+      "inputTokens": 1993,
+      "outputTokens": 42,
+      "reportedPlaygroundLatencyMs": 1364,
+      "responseArray": [
+        {
+          "commandType": "SHOOT",
+          "playerId": 3,
+          "parameters": {
+            "aim_location": "TR",
+            "power": 0.9
+          },
+          "duration": 0
+        }
+      ],
+      "assistantTextBlockCount": 1,
+      "assistantTextSha256": "8378e328452f6b0dbd914109063020fc60bf4ac91c625dea9c4f4b03b7c71994",
+      "jsonOnlyPassed": true,
+      "exactlyOneOwnPlayerCommandArrayPresent": true,
+      "commandContractPassed": true,
+      "expectedCategory": "SHOOT",
+      "expectedCategoryIsHeuristic": true,
+      "expectedCategoryPassed": true
+    },
+    {
+      "id": "fwd1-direct-haiku-away-clear-shot",
+      "case": "away-clear-shot",
+      "model": "global.anthropic.claude-haiku-4-5-20251001-v1:0",
+      "prompt": "schema-clean/fwd1.txt",
+      "promptSha256": "ee4c92203e6fcbc86d14329913933ba68d8cd2092947bebd2c66d5ed14c17b15",
+      "inputTokens": 1991,
+      "outputTokens": 178,
+      "reportedPlaygroundLatencyMs": 3119,
+      "responseArray": [
+        {
+          "commandType": "SHOOT",
+          "playerId": 3,
+          "parameters": {
+            "aim_location": "TR",
+            "power": 0.85
+          },
+          "duration": 0
+        }
+      ],
+      "assistantTextBlockCount": 8,
+      "assistantTextSha256": "b16e2d72ffd3393db195a5a84a8e8145e15ff5c81bc9f1984dfadac878bf3e29",
+      "jsonOnlyPassed": false,
+      "exactlyOneOwnPlayerCommandArrayPresent": true,
+      "commandContractPassed": false,
+      "expectedCategory": "SHOOT",
+      "expectedCategoryIsHeuristic": true,
+      "expectedCategoryPassed": true,
+      "formatFailure": "Seven additional visible assistant text blocks followed the array, including a Reasoning section. Full text is not JSON-only; array presence alone is insufficient."
+    },
+    {
+      "id": "fwd1-direct-haiku-home-teammate-possession",
+      "case": "home-teammate-possession",
+      "model": "global.anthropic.claude-haiku-4-5-20251001-v1:0",
+      "prompt": "schema-clean/fwd1.txt",
+      "promptSha256": "ee4c92203e6fcbc86d14329913933ba68d8cd2092947bebd2c66d5ed14c17b15",
+      "inputTokens": 1994,
+      "outputTokens": 52,
+      "reportedPlaygroundLatencyMs": 1397,
+      "responseArray": [
+        {
+          "commandType": "MOVE_TO",
+          "playerId": 3,
+          "parameters": {
+            "target_x": 45.0,
+            "target_y": 5.0,
+            "sprint": true
+          },
+          "duration": 0
+        }
+      ],
+      "assistantTextBlockCount": 1,
+      "assistantTextSha256": "daa6af885d2a8cc3256ff32d10a201e966baf80ee1740d8a40deb25a3872da99",
+      "jsonOnlyPassed": true,
+      "exactlyOneOwnPlayerCommandArrayPresent": true,
+      "commandContractPassed": true,
+      "expectedCategory": "MOVE_TO",
+      "expectedCategoryIsHeuristic": true,
+      "expectedCategoryPassed": true
+    }
+  ]
+}

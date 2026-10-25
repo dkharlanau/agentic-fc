@@ -1,0 +1,109 @@
+[
+  {
+    "kind": "Own exact-session decision audit; compute is not transport latency",
+    "alias": "replication-live-01",
+    "side": 0,
+    "queriedAt": "2026-10-24T19:42:49.425885+00:00",
+    "summary": {
+      "count": 87,
+      "computeMedianMs": 0.403127,
+      "computeP95Ms": 0.48575,
+      "computeMaxMs": 0.501484,
+      "commands": {
+        "CLEAR_OVERRIDE": 41,
+        "SET_STANCE": 39,
+        "PRESS_BALL": 5,
+        "PASS": 2
+      },
+      "reasons": {
+        "MALFORMED_POSITION": 1,
+        "KEEP_SHAPE": 21,
+        "UNKNOWN_POSSESSION": 17,
+        "ROLE_SUPPORT": 18,
+        "ENGINE_RESTART": 23,
+        "SINGLE_LOCAL_PRESS": 5,
+        "SAFE_OUTLET": 2
+      },
+      "frames": {
+        "missing": 1,
+        "keeper_reference_xz": 86
+      },
+      "modelCalls": 0,
+      "buildCommits": [
+        "8747a88"
+      ]
+    }
+  },
+  {
+    "kind": "Own exact-session decision audit; compute is not transport latency",
+    "alias": "replication-live-02",
+    "side": 0,
+    "queriedAt": "2026-10-24T19:42:50.563116+00:00",
+    "summary": {
+      "count": 118,
+      "computeMedianMs": 0.5529165,
+      "computeP95Ms": 0.638627,
+      "computeMaxMs": 1.378653,
+      "commands": {
+        "CLEAR_OVERRIDE": 34,
+        "SET_STANCE": 70,
+        "PRESS_BALL": 3,
+        "PASS": 10,
+        "INTERCEPT": 1
+      },
+      "reasons": {
+        "MALFORMED_POSITION": 1,
+        "UNKNOWN_POSSESSION": 32,
+        "ROLE_SUPPORT": 18,
+        "KEEP_SHAPE": 52,
+        "SINGLE_LOCAL_PRESS": 3,
+        "SAFE_OUTLET": 10,
+        "NO_SAFE_OUTLET": 1,
+        "NEAREST_FREE_BALL": 1
+      },
+      "frames": {
+        "missing": 1,
+        "keeper_reference_xz": 117
+      },
+      "modelCalls": 0,
+      "buildCommits": [
+        "8747a88"
+      ]
+    }
+  },
+  {
+    "kind": "Own exact-session decision audit; compute is not transport latency",
+    "alias": "replication-live-03",
+    "side": 0,
+    "queriedAt": "2026-10-24T19:42:51.658855+00:00",
+    "summary": {
+      "count": 79,
+      "computeMedianMs": 0.415592,
+      "computeP95Ms": 0.463413,
+      "computeMaxMs": 0.500552,
+      "commands": {
+        "CLEAR_OVERRIDE": 22,
+        "SET_STANCE": 53,
+        "PRESS_BALL": 3,
+        "PASS": 1
+      },
+      "reasons": {
+        "MALFORMED_POSITION": 1,
+        "KEEP_SHAPE": 41,
+        "UNKNOWN_POSSESSION": 17,
+        "ROLE_SUPPORT": 12,
+        "SINGLE_LOCAL_PRESS": 3,
+        "SAFE_OUTLET": 1,
+        "ENGINE_RESTART": 4
+      },
+      "frames": {
+        "missing": 1,
+        "keeper_reference_xz": 78
+      },
+      "modelCalls": 0,
+      "buildCommits": [
+        "8747a88"
+      ]
+    }
+  }
+]

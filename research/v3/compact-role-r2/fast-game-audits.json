@@ -1,0 +1,2056 @@
+{
+  "practice": {
+    "kind": "Own matched Practice Runtime audit; compute time is not transport or portal latency",
+    "summary": {
+      "count": 62,
+      "computeMedianMs": 0.39186699999999997,
+      "computeP95Ms": 0.45608,
+      "computeMaxMs": 0.516254,
+      "commands": {
+        "CLEAR_OVERRIDE": 59,
+        "SET_STANCE": 3
+      },
+      "reasons": {
+        "MALFORMED_POSITION": 1,
+        "KEEP_SHAPE": 3,
+        "UNKNOWN_GEOMETRY": 39,
+        "UNKNOWN_POSSESSION": 19
+      },
+      "modelCalls": 0
+    },
+    "rows": [
+      {
+        "reason": "MALFORMED_POSITION",
+        "computeMs": 0.029601,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:18:56.436Z"
+      },
+      {
+        "reason": "KEEP_SHAPE",
+        "computeMs": 0.516254,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 0
+          },
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:20:02.272Z"
+      },
+      {
+        "reason": "KEEP_SHAPE",
+        "computeMs": 0.436999,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 0
+          },
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:20:04.273Z"
+      },
+      {
+        "reason": "UNKNOWN_GEOMETRY",
+        "computeMs": 0.372347,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:20:06.274Z"
+      },
+      {
+        "reason": "UNKNOWN_GEOMETRY",
+        "computeMs": 0.384039,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:20:08.283Z"
+      },
+      {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.38751,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:20:10.295Z"
+      },
+      {
+        "reason": "UNKNOWN_GEOMETRY",
+        "computeMs": 0.370442,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:20:12.277Z"
+      },
+      {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.397622,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:20:14.282Z"
+      },
+      {
+        "reason": "UNKNOWN_GEOMETRY",
+        "computeMs": 0.417072,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:20:16.330Z"
+      },
+      {
+        "reason": "UNKNOWN_GEOMETRY",
+        "computeMs": 0.461579,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:20:18.283Z"
+      },
+      {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.378962,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:20:20.276Z"
+      },
+      {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.376789,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:20:22.280Z"
+      },
+      {
+        "reason": "UNKNOWN_GEOMETRY",
+        "computeMs": 0.403068,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:20:24.262Z"
+      },
+      {
+        "reason": "UNKNOWN_GEOMETRY",
+        "computeMs": 0.366627,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:20:26.253Z"
+      },
+      {
+        "reason": "UNKNOWN_GEOMETRY",
+        "computeMs": 0.397011,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:20:28.253Z"
+      },
+      {
+        "reason": "UNKNOWN_GEOMETRY",
+        "computeMs": 0.3629,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:20:30.252Z"
+      },
+      {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.380469,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:20:32.244Z"
+      },
+      {
+        "reason": "UNKNOWN_GEOMETRY",
+        "computeMs": 0.405098,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:20:34.241Z"
+      },
+      {
+        "reason": "UNKNOWN_GEOMETRY",
+        "computeMs": 0.365575,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:20:36.246Z"
+      },
+      {
+        "reason": "UNKNOWN_GEOMETRY",
+        "computeMs": 0.365344,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:20:38.250Z"
+      },
+      {
+        "reason": "UNKNOWN_GEOMETRY",
+        "computeMs": 0.404747,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:20:40.246Z"
+      },
+      {
+        "reason": "UNKNOWN_GEOMETRY",
+        "computeMs": 0.410743,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:20:42.259Z"
+      },
+      {
+        "reason": "UNKNOWN_GEOMETRY",
+        "computeMs": 0.381078,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:20:44.247Z"
+      },
+      {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.398211,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:20:46.281Z"
+      },
+      {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.389747,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:20:48.250Z"
+      },
+      {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.385516,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:20:50.251Z"
+      },
+      {
+        "reason": "UNKNOWN_GEOMETRY",
+        "computeMs": 0.476647,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:20:52.289Z"
+      },
+      {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.394222,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:20:54.246Z"
+      },
+      {
+        "reason": "UNKNOWN_GEOMETRY",
+        "computeMs": 0.415319,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:20:56.250Z"
+      },
+      {
+        "reason": "UNKNOWN_GEOMETRY",
+        "computeMs": 0.373762,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:20:58.286Z"
+      },
+      {
+        "reason": "UNKNOWN_GEOMETRY",
+        "computeMs": 0.379016,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:21:00.292Z"
+      },
+      {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.393987,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:21:02.260Z"
+      },
+      {
+        "reason": "UNKNOWN_GEOMETRY",
+        "computeMs": 0.376279,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:21:04.265Z"
+      },
+      {
+        "reason": "UNKNOWN_GEOMETRY",
+        "computeMs": 0.373082,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:21:06.258Z"
+      },
+      {
+        "reason": "UNKNOWN_GEOMETRY",
+        "computeMs": 0.414074,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:21:08.252Z"
+      },
+      {
+        "reason": "UNKNOWN_GEOMETRY",
+        "computeMs": 0.410797,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:21:10.258Z"
+      },
+      {
+        "reason": "UNKNOWN_GEOMETRY",
+        "computeMs": 0.402441,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:21:12.258Z"
+      },
+      {
+        "reason": "UNKNOWN_GEOMETRY",
+        "computeMs": 0.406727,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:21:14.275Z"
+      },
+      {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.375359,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:21:16.271Z"
+      },
+      {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.375195,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:21:18.266Z"
+      },
+      {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.385101,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:21:20.261Z"
+      },
+      {
+        "reason": "UNKNOWN_GEOMETRY",
+        "computeMs": 0.405667,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:21:22.264Z"
+      },
+      {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.444767,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:21:24.300Z"
+      },
+      {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.389275,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:21:26.263Z"
+      },
+      {
+        "reason": "UNKNOWN_GEOMETRY",
+        "computeMs": 0.405523,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:21:28.262Z"
+      },
+      {
+        "reason": "UNKNOWN_GEOMETRY",
+        "computeMs": 0.368965,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:21:30.272Z"
+      },
+      {
+        "reason": "UNKNOWN_GEOMETRY",
+        "computeMs": 0.379219,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:21:32.292Z"
+      },
+      {
+        "reason": "UNKNOWN_GEOMETRY",
+        "computeMs": 0.368517,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:21:34.306Z"
+      },
+      {
+        "reason": "UNKNOWN_GEOMETRY",
+        "computeMs": 0.37262,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:21:36.269Z"
+      },
+      {
+        "reason": "UNKNOWN_GEOMETRY",
+        "computeMs": 0.368198,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:21:38.265Z"
+      },
+      {
+        "reason": "UNKNOWN_GEOMETRY",
+        "computeMs": 0.365134,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:21:40.271Z"
+      },
+      {
+        "reason": "UNKNOWN_GEOMETRY",
+        "computeMs": 0.416482,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:21:42.265Z"
+      },
+      {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.449789,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:21:44.267Z"
+      },
+      {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.394011,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:21:57.626Z"
+      },
+      {
+        "reason": "KEEP_SHAPE",
+        "computeMs": 0.434161,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 0
+          },
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:21:59.667Z"
+      },
+      {
+        "reason": "UNKNOWN_GEOMETRY",
+        "computeMs": 0.417163,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:22:01.753Z"
+      },
+      {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.45608,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:22:03.712Z"
+      },
+      {
+        "reason": "UNKNOWN_GEOMETRY",
+        "computeMs": 0.466317,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:22:05.691Z"
+      },
+      {
+        "reason": "UNKNOWN_GEOMETRY",
+        "computeMs": 0.409041,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:22:07.731Z"
+      },
+      {
+        "reason": "UNKNOWN_GEOMETRY",
+        "computeMs": 0.372527,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:22:09.697Z"
+      },
+      {
+        "reason": "UNKNOWN_GEOMETRY",
+        "computeMs": 0.441056,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:22:11.709Z"
+      },
+      {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.384663,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:22:13.728Z"
+      }
+    ]
+  },
+  "allcash": {
+    "kind": "Own matched incoming ranked Runtime audit; compute time is not transport or portal latency",
+    "summary": {
+      "count": 75,
+      "computeMedianMs": 0.403771,
+      "computeP95Ms": 0.469204,
+      "computeMaxMs": 0.982739,
+      "commands": {
+        "CLEAR_OVERRIDE": 35,
+        "SET_STANCE": 38,
+        "PASS": 2
+      },
+      "reasons": {
+        "MALFORMED_POSITION": 1,
+        "UNKNOWN_POSSESSION": 21,
+        "ROLE_SUPPORT": 19,
+        "KEEP_SHAPE": 19,
+        "UNKNOWN_GEOMETRY": 1,
+        "ENGINE_RESTART": 12,
+        "SAFE_OUTLET": 2
+      },
+      "modelCalls": 0
+    },
+    "rows": [
+      {
+        "reason": "MALFORMED_POSITION",
+        "computeMs": 0.040893,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:20:54.947Z"
+      },
+      {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.441732,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:21:57.347Z"
+      },
+      {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.394356,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:21:59.317Z"
+      },
+      {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.39688,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:22:01.320Z"
+      },
+      {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.381082,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:22:03.300Z"
+      },
+      {
+        "reason": "ROLE_SUPPORT",
+        "computeMs": 0.424995,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 1
+          },
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:22:05.294Z"
+      },
+      {
+        "reason": "KEEP_SHAPE",
+        "computeMs": 0.428835,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 0
+          },
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:22:07.316Z"
+      },
+      {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.390865,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:22:09.332Z"
+      },
+      {
+        "reason": "ROLE_SUPPORT",
+        "computeMs": 0.416956,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 1
+          },
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:22:11.314Z"
+      },
+      {
+        "reason": "ROLE_SUPPORT",
+        "computeMs": 0.410408,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 1
+          },
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:22:14.033Z"
+      },
+      {
+        "reason": "ROLE_SUPPORT",
+        "computeMs": 0.405435,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 1
+          },
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:22:15.341Z"
+      },
+      {
+        "reason": "KEEP_SHAPE",
+        "computeMs": 0.469204,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 0
+          },
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:22:17.312Z"
+      },
+      {
+        "reason": "ROLE_SUPPORT",
+        "computeMs": 0.418871,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 1
+          },
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:22:19.308Z"
+      },
+      {
+        "reason": "ROLE_SUPPORT",
+        "computeMs": 0.410656,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 1
+          },
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:22:21.308Z"
+      },
+      {
+        "reason": "KEEP_SHAPE",
+        "computeMs": 0.37288,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 0
+          },
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:22:23.312Z"
+      },
+      {
+        "reason": "UNKNOWN_GEOMETRY",
+        "computeMs": 0.364961,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:22:25.330Z"
+      },
+      {
+        "reason": "ROLE_SUPPORT",
+        "computeMs": 0.408765,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 1
+          },
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:22:27.311Z"
+      },
+      {
+        "reason": "ROLE_SUPPORT",
+        "computeMs": 0.408826,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 1
+          },
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:22:29.312Z"
+      },
+      {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.438941,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:22:31.321Z"
+      },
+      {
+        "reason": "KEEP_SHAPE",
+        "computeMs": 0.380703,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 0
+          },
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:22:33.314Z"
+      },
+      {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.400648,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:22:35.313Z"
+      },
+      {
+        "reason": "KEEP_SHAPE",
+        "computeMs": 0.419481,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 0
+          },
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:22:37.311Z"
+      },
+      {
+        "reason": "ENGINE_RESTART",
+        "computeMs": 0.374424,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:22:39.364Z"
+      },
+      {
+        "reason": "ENGINE_RESTART",
+        "computeMs": 0.388773,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:22:41.315Z"
+      },
+      {
+        "reason": "ENGINE_RESTART",
+        "computeMs": 0.367845,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:22:43.322Z"
+      },
+      {
+        "reason": "ENGINE_RESTART",
+        "computeMs": 0.364983,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:22:45.328Z"
+      },
+      {
+        "reason": "ENGINE_RESTART",
+        "computeMs": 0.36245,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:22:47.339Z"
+      },
+      {
+        "reason": "ENGINE_RESTART",
+        "computeMs": 0.375923,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:22:49.321Z"
+      },
+      {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.390662,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:22:51.330Z"
+      },
+      {
+        "reason": "ROLE_SUPPORT",
+        "computeMs": 0.4313,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 1
+          },
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:22:53.323Z"
+      },
+      {
+        "reason": "KEEP_SHAPE",
+        "computeMs": 0.389683,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 0
+          },
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:22:55.416Z"
+      },
+      {
+        "reason": "KEEP_SHAPE",
+        "computeMs": 0.403771,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 0
+          },
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:22:57.363Z"
+      },
+      {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.430363,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:22:59.329Z"
+      },
+      {
+        "reason": "ROLE_SUPPORT",
+        "computeMs": 0.415154,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 1
+          },
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:23:01.347Z"
+      },
+      {
+        "reason": "KEEP_SHAPE",
+        "computeMs": 0.419304,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 0
+          },
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:23:03.347Z"
+      },
+      {
+        "reason": "KEEP_SHAPE",
+        "computeMs": 0.381999,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 0
+          },
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:23:05.323Z"
+      },
+      {
+        "reason": "KEEP_SHAPE",
+        "computeMs": 0.384539,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 0
+          },
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:23:07.338Z"
+      },
+      {
+        "reason": "KEEP_SHAPE",
+        "computeMs": 0.383257,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 0
+          },
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:23:09.384Z"
+      },
+      {
+        "reason": "KEEP_SHAPE",
+        "computeMs": 0.383494,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 0
+          },
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:23:11.329Z"
+      },
+      {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.382761,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:23:13.357Z"
+      },
+      {
+        "reason": "ROLE_SUPPORT",
+        "computeMs": 0.417548,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 1
+          },
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:23:15.367Z"
+      },
+      {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.392894,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:23:17.332Z"
+      },
+      {
+        "reason": "ENGINE_RESTART",
+        "computeMs": 0.371546,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:23:19.348Z"
+      },
+      {
+        "reason": "ENGINE_RESTART",
+        "computeMs": 0.372089,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:23:21.337Z"
+      },
+      {
+        "reason": "ENGINE_RESTART",
+        "computeMs": 0.362375,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:23:23.333Z"
+      },
+      {
+        "reason": "ENGINE_RESTART",
+        "computeMs": 0.368915,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:23:25.335Z"
+      },
+      {
+        "reason": "ENGINE_RESTART",
+        "computeMs": 0.359555,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:23:27.333Z"
+      },
+      {
+        "reason": "ENGINE_RESTART",
+        "computeMs": 0.360452,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:23:29.338Z"
+      },
+      {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.982739,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:23:31.350Z"
+      },
+      {
+        "reason": "ROLE_SUPPORT",
+        "computeMs": 0.429486,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 1
+          },
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:23:33.347Z"
+      },
+      {
+        "reason": "KEEP_SHAPE",
+        "computeMs": 0.478201,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 0
+          },
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:23:35.344Z"
+      },
+      {
+        "reason": "ROLE_SUPPORT",
+        "computeMs": 0.420976,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 1
+          },
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:23:37.345Z"
+      },
+      {
+        "reason": "ROLE_SUPPORT",
+        "computeMs": 0.421713,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 1
+          },
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:23:39.336Z"
+      },
+      {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.424767,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:23:41.345Z"
+      },
+      {
+        "reason": "KEEP_SHAPE",
+        "computeMs": 0.390084,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 0
+          },
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:23:43.351Z"
+      },
+      {
+        "reason": "KEEP_SHAPE",
+        "computeMs": 0.391942,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 0
+          },
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:23:45.384Z"
+      },
+      {
+        "reason": "KEEP_SHAPE",
+        "computeMs": 0.416218,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 0
+          },
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:23:47.376Z"
+      },
+      {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.388209,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:23:49.347Z"
+      },
+      {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.40402,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:23:51.354Z"
+      },
+      {
+        "reason": "KEEP_SHAPE",
+        "computeMs": 0.414198,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 0
+          },
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:23:53.345Z"
+      },
+      {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.43811,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:23:55.346Z"
+      },
+      {
+        "reason": "ROLE_SUPPORT",
+        "computeMs": 0.461016,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 1
+          },
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:23:57.351Z"
+      },
+      {
+        "reason": "ROLE_SUPPORT",
+        "computeMs": 0.46555,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 1
+          },
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:23:59.346Z"
+      },
+      {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.383237,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:24:01.379Z"
+      },
+      {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.398397,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:24:03.396Z"
+      },
+      {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.389062,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:24:05.356Z"
+      },
+      {
+        "reason": "ROLE_SUPPORT",
+        "computeMs": 0.476821,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 1
+          },
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:24:07.353Z"
+      },
+      {
+        "reason": "ROLE_SUPPORT",
+        "computeMs": 0.423513,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 1
+          },
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:24:09.353Z"
+      },
+      {
+        "reason": "SAFE_OUTLET",
+        "computeMs": 0.526503,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "PASS",
+          "playerId": 4,
+          "parameters": {
+            "target_player_id": 3,
+            "type": "GROUND"
+          },
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:24:11.365Z"
+      },
+      {
+        "reason": "SAFE_OUTLET",
+        "computeMs": 0.449087,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "PASS",
+          "playerId": 4,
+          "parameters": {
+            "target_player_id": 2,
+            "type": "GROUND"
+          },
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:24:13.356Z"
+      },
+      {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.395751,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:24:15.353Z"
+      },
+      {
+        "reason": "UNKNOWN_POSSESSION",
+        "computeMs": 0.386608,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:24:17.389Z"
+      },
+      {
+        "reason": "KEEP_SHAPE",
+        "computeMs": 0.41391,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 0
+          },
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:24:19.411Z"
+      },
+      {
+        "reason": "KEEP_SHAPE",
+        "computeMs": 0.441921,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 0
+          },
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:24:21.362Z"
+      },
+      {
+        "reason": "ROLE_SUPPORT",
+        "computeMs": 0.455405,
+        "modelAttempted": false,
+        "policy": "fast_path_v2",
+        "buildCommit": "b99bf779bc70b87f36010c1c83f7bd14d94e4cf7",
+        "command": {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 1
+          },
+          "duration": 0
+        },
+        "timestamp": "2026-10-24T18:24:23.370Z"
+      }
+    ]
+  }
+}

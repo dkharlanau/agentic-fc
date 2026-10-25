@@ -1,0 +1,65 @@
+{
+  "kind": "Native InvokeHarness; CloudShell path, not game server",
+  "role": "ai_gk_agent",
+  "player": 0,
+  "calls": [
+    {
+      "repeat": 0,
+      "headersMs": 1394.4283200003156,
+      "firstEventMs": 2195.2569110003424,
+      "completeMs": 2389.915879,
+      "eventTypes": [
+        "contentBlockDelta",
+        "contentBlockStop",
+        "messageStart",
+        "messageStop",
+        "metadata"
+      ],
+      "metadata": [
+        {
+          "usage": {
+            "inputTokens": 2090,
+            "outputTokens": 46,
+            "totalTokens": 2136
+          },
+          "metrics": {
+            "latencyMs": 897
+          }
+        }
+      ],
+      "text": "```json\n[{\"commandType\":\"MOVE_TO\",\"playerId\":0,\"parameters\":{\"target_x\":-0.6259,\"target_y\":0.1429,\"sprint\":false},\"duration\":0}]\n```",
+      "errors": []
+    },
+    {
+      "repeat": 1,
+      "headersMs": 331.33068999995885,
+      "firstEventMs": 949.3455829997401,
+      "completeMs": 1039.4738149998375,
+      "eventTypes": [
+        "contentBlockDelta",
+        "contentBlockStop",
+        "messageStart",
+        "messageStop",
+        "metadata"
+      ],
+      "metadata": [
+        {
+          "usage": {
+            "inputTokens": 3373,
+            "outputTokens": 46,
+            "totalTokens": 3419
+          },
+          "metrics": {
+            "latencyMs": 644
+          }
+        }
+      ],
+      "text": "```json\n[{\"commandType\":\"MOVE_TO\",\"playerId\":0,\"parameters\":{\"target_x\":-0.6259,\"target_y\":0.1429,\"sprint\":false},\"duration\":0}]\n```",
+      "errors": []
+    }
+  ],
+  "stopped": true,
+  "stopRoute": "Harness ARN",
+  "initialStopFailure": "Managed Harness runtime rejects direct Runtime ARN; corrected using Harness ARN",
+  "stopStatusCode": 200
+}

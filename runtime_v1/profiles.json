@@ -1,0 +1,86 @@
+{
+  "kind": "Portable experimental Runtime profiles; no account bindings or credentials",
+  "sourceCommit": "7a14d1b8e1355e994271fb4e06e6ca09b6b0e833",
+  "archiveSha256": "8554b6aa9189c3bbefe9ed100fd494261a85212777250106b500770e587efb81",
+  "formation": "1-1-2",
+  "profiles": {
+    "fwd1-support-v11": {
+      "name": "nhitl_fwd1_r1",
+      "playerId": 3,
+      "modelId": "global.amazon.nova-2-lite-v1:0",
+      "wireTeamScope": "bound",
+      "fwdSupportStance": "attack",
+      "memoryActor": "r1_fwd1",
+      "nativeCases": 7,
+      "verified": [
+        "READY readback",
+        "native7/7",
+        "Fitness5/5",
+        "Practice04 completed2:0"
+      ],
+      "strength": "Not established as stronger than original M8 or v9 control"
+    },
+    "gk-r2-v1": {
+      "name": "nhitl_gk_r2",
+      "playerId": 0,
+      "modelId": "global.amazon.nova-2-lite-v1:0",
+      "wireTeamScope": "bound",
+      "fwdSupportStance": "default",
+      "memoryActor": "r1_gk",
+      "nativeCases": 11,
+      "verified": [
+        "READY readback",
+        "native11/11",
+        "Fitness5/5",
+        "Practice05draw0:0; primaryshotstatsmissing"
+      ],
+      "strength": "118genuineClear choices and no input rejects in first field game; no verified keeper improvement"
+    },
+    "fwd1-position-v14": {
+      "name": "nhitl_fwd1_r1",
+      "playerId": 3,
+      "sourceCommit": "e11bad6992d499d02437d7f8ba280b8c6b9e0627",
+      "archiveSha256": "516464b636877353d137f097bdbb83912423ffe74421402acbba7a0c00faaa90",
+      "archiveBytes": 20615902,
+      "archiveFiles": 2733,
+      "modelId": "global.amazon.nova-2-lite-v1:0",
+      "wireTeamScope": "bound",
+      "fwdSupportMode": "position",
+      "fwdCoordinateProbe": "off",
+      "memoryActor": "r1_fwd1",
+      "nativeCases": 9,
+      "registered": false,
+      "verified": [
+        "READY",
+        "native9/9",
+        "Fitness5/5",
+        "Practice08WIN3:0",
+        "79actualPracticechoices/0inputrejects/29nonsprintMOVEs"
+      ],
+      "rankedBatch": "research/v3/ranked-batch-03.json",
+      "strength": "Not adopted:1W4L,5:8goals,3points in5games; uncontrolled opponents/sides. Final is originalM8."
+    }
+  },
+  "memory": {
+    "optional": true,
+    "eventExpiryDays": 3,
+    "longTermStrategies": [],
+    "sampleEvery": 10,
+    "scope": "Distinct actor and Runtime session for each role; raw input and audit stay private"
+  },
+  "restoreOrder": [
+    "Restore original five Harness with baseline-m8 recovery profile first",
+    "Resolve selected profile sourceCommit/archiveSha256 overrides, then build exact source using locked LinuxARM64 dependencies; require archive match",
+    "Use the new workshop existing role and bucket; optionally create the same bounded STM shape",
+    "Deploy each experimental profile to a separate Runtime and private receipt",
+    "Require its native command/model/cleanup gates before replacing only that portal role",
+    "Reload and require fresh Fitness5/5; compare matched Practice before choosing final tournament setup"
+  ],
+  "limitations": [
+    "This is an experimental recipe, not the default tournament recommendation",
+    "Do not carry old AWS ARNs, session IDs, access codes or credentials into a new workshop",
+    "Recheck current model availability and service behavior after a workshop reset",
+    "Reported agent command columns do not establish physical team attribution"
+  ],
+  "sourceResolution": "Each profile may override sourceCommit/archiveSha256; otherwise use the top-level historical v11/GK build."
+}

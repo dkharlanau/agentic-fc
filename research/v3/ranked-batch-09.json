@@ -1,0 +1,388 @@
+{
+  "setup": {
+    "name": "M8 four roles + fixed-reference fast FWD2",
+    "sourceCommit": "931af03",
+    "formation": "1-1-2",
+    "gk": "original v13",
+    "def": "original v19",
+    "mid": "original v15",
+    "fwd1": "original v16",
+    "fwd2": "fast_path_v2 revision8; HOME outlet; no per-tick model"
+  },
+  "coachVersion": "coach-v1.0",
+  "id": "ranked-batch-09",
+  "targetCompletedGames": 5,
+  "ownerDirective": "Five real games then review; no Practice/Benchmark",
+  "status": "complete",
+  "preparedAt": "2026-10-24T20:46:53.603210+00:00",
+  "beforeLeaderboard": {
+    "rank": 17,
+    "points": 189,
+    "played": 109,
+    "wins": 62,
+    "draws": 3,
+    "losses": 44,
+    "goalsFor": 146,
+    "goalsAgainst": 99,
+    "savedAt": "2026-10-24T20:39:45.843243+00:00"
+  },
+  "games": [
+    {
+      "alias": "outlet-live-01",
+      "opponent": "L' Espresso",
+      "side": "HOME",
+      "status": "complete",
+      "initiation": "manual random matchmaking",
+      "startedAt": "2026-10-24T20:48:29.002385+00:00",
+      "completedAt": "2026-10-24T20:51:53.973933+00:00",
+      "result": "win",
+      "score": [
+        1,
+        0
+      ],
+      "shots": [
+        3,
+        3
+      ],
+      "possessionPercent": [
+        37,
+        63
+      ],
+      "reportRoleLatencyMs": {
+        "own": [
+          817,
+          1109,
+          899,
+          895,
+          778
+        ],
+        "opponent": [
+          3,
+          3,
+          2,
+          2,
+          68
+        ]
+      },
+      "successPercent": 100,
+      "reportAverageLatencyMs": [
+        879,
+        14
+      ],
+      "reportCommands": {
+        "own": {
+          "PRESS_BALL": 204,
+          "MOVE_TO": 60,
+          "MARK": 23,
+          "INTERCEPT": 20,
+          "CLEAR_OVERRIDE": 16
+        },
+        "opponent": {
+          "CLEAR_OVERRIDE": 29,
+          "MOVE_TO": 9,
+          "PASS": 7,
+          "INTERCEPT": 2,
+          "PRESS_BALL": 1
+        }
+      }
+    },
+    {
+      "alias": "outlet-live-02",
+      "opponent": "Pandavas",
+      "side": "HOME",
+      "status": "complete",
+      "initiation": "manual random matchmaking",
+      "startedAt": "2026-10-24T20:53:04.158662+00:00",
+      "completedAt": "2026-10-24T20:57:01.472577+00:00",
+      "result": "loss",
+      "score": [
+        0,
+        2
+      ],
+      "shots": [
+        3,
+        5
+      ],
+      "possessionPercent": [
+        47,
+        53
+      ],
+      "reportRoleLatencyMs": {
+        "own": [
+          452,
+          442,
+          450,
+          446,
+          441
+        ],
+        "opponent": [
+          5,
+          3,
+          3,
+          3,
+          77
+        ]
+      },
+      "successPercent": 100,
+      "reportAverageLatencyMs": [
+        464,
+        18
+      ],
+      "reportCommands": {
+        "own": {
+          "MOVE_TO": 214,
+          "INTERCEPT": 55,
+          "PRESS_BALL": 53,
+          "MARK": 16,
+          "CLEAR_OVERRIDE": 15,
+          "SHOOT": 10,
+          "PASS": 6,
+          "GK_DISTRIBUTE": 1
+        },
+        "opponent": {
+          "CLEAR_OVERRIDE": 39,
+          "MOVE_TO": 15,
+          "PASS": 4,
+          "INTERCEPT": 1
+        }
+      }
+    },
+    {
+      "alias": "outlet-live-03",
+      "opponent": "FC Zukko",
+      "side": "HOME",
+      "status": "complete",
+      "initiation": "manual random matchmaking",
+      "completedAt": "2026-10-24T21:01:37.080474+00:00",
+      "result": "loss",
+      "score": [
+        0,
+        1
+      ],
+      "shots": [
+        0,
+        10
+      ],
+      "possessionPercent": [
+        48,
+        52
+      ],
+      "reportRoleLatencyMs": {
+        "own": [
+          3,
+          2,
+          2,
+          2,
+          2
+        ],
+        "opponent": [
+          4,
+          4,
+          3,
+          3,
+          70
+        ]
+      },
+      "successPercent": 100,
+      "reportAverageLatencyMs": [
+        1,
+        17
+      ],
+      "reportCommands": {
+        "own": {
+          "CLEAR_OVERRIDE": 8
+        },
+        "opponent": {
+          "CLEAR_OVERRIDE": 24,
+          "MOVE_TO": 15,
+          "PASS": 5
+        }
+      },
+      "observation": "Own report unusually shows only eight clear commands; exact runtime audit required before next game.",
+      "runtimeAudit": {
+        "count": 65,
+        "computeMedianMs": 0.43134,
+        "computeP95Ms": 0.49771,
+        "computeMaxMs": 1.063938,
+        "commands": {
+          "CLEAR_OVERRIDE": 17,
+          "SET_STANCE": 32,
+          "PASS": 1,
+          "MOVE_TO": 15
+        },
+        "outletMoves": 15,
+        "modelCalls": 0,
+        "buildCommit": "931af03"
+      }
+    },
+    {
+      "alias": "outlet-live-04",
+      "opponent": "FantasyFootball",
+      "side": "HOME",
+      "status": "complete",
+      "initiation": "manual random matchmaking",
+      "startedAt": "2026-10-24T21:02:08.260998+00:00",
+      "completedAt": "2026-10-24T21:07:43.909881+00:00",
+      "result": "loss",
+      "score": [
+        1,
+        2
+      ],
+      "shots": [
+        8,
+        14
+      ],
+      "possessionPercent": [
+        44,
+        56
+      ],
+      "overtime": true,
+      "reportRoleLatencyMs": {
+        "own": [
+          2,
+          2,
+          1,
+          1,
+          1
+        ],
+        "opponent": [
+          3,
+          3,
+          3,
+          2,
+          70
+        ]
+      },
+      "successPercent": 100,
+      "reportAverageLatencyMs": [
+        1,
+        17
+      ],
+      "reportCommands": {
+        "own": {
+          "CLEAR_OVERRIDE": 17
+        },
+        "opponent": {
+          "CLEAR_OVERRIDE": 72,
+          "MOVE_TO": 15,
+          "PRESS_BALL": 5,
+          "PASS": 4,
+          "INTERCEPT": 3
+        }
+      }
+    },
+    {
+      "alias": "outlet-live-05",
+      "opponent": "ERTT",
+      "side": "HOME",
+      "status": "complete",
+      "initiation": "manual random matchmaking",
+      "startedAt": "2026-10-24T21:09:04.422736+00:00",
+      "completedAt": "2026-10-24T21:12:45.386436+00:00",
+      "result": "win",
+      "score": [
+        3,
+        0
+      ],
+      "shots": [
+        10,
+        0
+      ],
+      "possessionPercent": [
+        38,
+        62
+      ],
+      "reportRoleLatencyMs": {
+        "own": [
+          1200,
+          1078,
+          938,
+          1053,
+          1114
+        ],
+        "opponent": [
+          3,
+          2,
+          2,
+          2,
+          77
+        ]
+      },
+      "successPercent": 100,
+      "reportAverageLatencyMs": [
+        1116,
+        15
+      ],
+      "reportCommands": {
+        "own": {
+          "PRESS_BALL": 193,
+          "MARK": 72,
+          "CLEAR_OVERRIDE": 20,
+          "INTERCEPT": 13,
+          "GK_DISTRIBUTE": 10,
+          "MOVE_TO": 1
+        },
+        "opponent": {
+          "CLEAR_OVERRIDE": 58,
+          "MOVE_TO": 12,
+          "PASS": 5,
+          "PRESS_BALL": 1
+        }
+      }
+    }
+  ],
+  "incomingGames": [],
+  "gates": {
+    "localTests": "13 passed",
+    "native": "34/34; warm median104.216ms, max147.518ms; own diagnostic session stopped",
+    "fitness": "5/5 portal; native fresh session candidate checked; live build verification pending",
+    "liveBuild": "First22responses:21outlet,1malformed bootstrap; source931af03"
+  },
+  "changeFromPreviousCohort": "Only FWD2 off-ball HOME own-possession outlet positioning; rest unchanged",
+  "rollback": "revision7/source8b31760 stance; current source stance retains baseline action policy",
+  "summary": {
+    "wins": 2,
+    "draws": 0,
+    "losses": 3,
+    "goals": [
+      5,
+      5
+    ],
+    "shots": [
+      24,
+      32
+    ],
+    "scorelessGames": 2,
+    "cleanSheets": 2,
+    "pointsPerGame": 1.2
+  },
+  "afterLeaderboard": {
+    "rank": 17,
+    "points": 195,
+    "played": 114,
+    "wins": 64,
+    "draws": 3,
+    "losses": 47,
+    "goalsFor": 151,
+    "goalsAgainst": 104,
+    "savedAt": "2026-10-24T21:13:19.286799+00:00"
+  },
+  "accountDelta": {
+    "played": 5,
+    "points": 6,
+    "goalsFor": 5,
+    "goalsAgainst": 5,
+    "extraIncomingGamesObserved": 0
+  },
+  "decision": "Do not promote outlet. Return stance baseline after exact audits; opponent mix prevents causal harm claim.",
+  "rollbackVerified": {
+    "sourceCommit": "931af03",
+    "revision": 9,
+    "mode": "stance",
+    "nativePassed": 34,
+    "nativeTotal": 34,
+    "nativeSessionStopped": true,
+    "fitness": "5/5",
+    "freshRealSession": "pending"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "status": "rejected-before-Harness-deployment",
+  "formation": "1-1-2",
+  "latencyTargetMs": 10,
+  "latencyTargetVerified": false,
+  "roles": {
+    "gk": {
+      "playerId": 0,
+      "promptSha256": "8aa6fbc1dac446ee97e534cee28031c021e362741f22fb4ceb1b47e42403cab7",
+      "words": 270
+    },
+    "def": {
+      "playerId": 1,
+      "promptSha256": "7677d04f6150a884eee07e24a098402fa33ba9321467a9f7a1ddf37bd328b8d6",
+      "words": 289
+    },
+    "mid": {
+      "playerId": 2,
+      "promptSha256": "9f7731f3e3f4d6ff4bf76e2cf8ff7ef5ea64601aebb9f5a5dcfe08d2bde7a5e1",
+      "words": 281
+    },
+    "fwd1": {
+      "playerId": 3,
+      "promptSha256": "4be120fdbfa5b651bcca2435e637ca50b66e86a889e00d1ccc5c8c8ccd2018de",
+      "words": 279
+    },
+    "fwd2": {
+      "playerId": 4,
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "words": 276
+    }
+  },
+  "modelComparisonCalls": 36,
+  "winner": null
+}

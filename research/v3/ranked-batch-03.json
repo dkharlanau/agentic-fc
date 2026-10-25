@@ -1,0 +1,131 @@
+{
+  "kind": "five-game ranked live candidate cohort",
+  "status": "complete;1W4L;notadoptedasfinal",
+  "setup": "M8-fouroriginal-plus-R1v14-position-FWD1-112",
+  "coachVersion": "coach-v1.0",
+  "coachSourceCommit": "9e67ead",
+  "before": {
+    "rank": 14,
+    "played": 82,
+    "wins": 49,
+    "draws": 2,
+    "losses": 31,
+    "goalsFor": 111,
+    "goalsAgainst": 69,
+    "goalDifference": 42,
+    "points": 149,
+    "capturedAtUTC": "2026-10-24T14:50:00Z",
+    "captureTimePrecision": "minute",
+    "source": "Primaryportalbeforebatch03;AXandscreenshotprivate"
+  },
+  "reports": [
+    "live-74",
+    "live-75",
+    "live-76",
+    "live-77",
+    "live-78"
+  ],
+  "targetCompleted": 5,
+  "deadlineUTC": "2026-10-24T17:14:05Z",
+  "cutoffUTC": "2026-10-24T17:04:05Z",
+  "singleChange": "FWD1 independentv14position support; sameNova2Lite, otherfouroriginal andformation112 unchanged",
+  "gates": {
+    "native": "9/9genuinechoice/command/own-sessioncleanup",
+    "fitness": "5/5",
+    "practice": "Practice08WIN3:0,5:4shots,27%possession",
+    "actualBuild": "e11bad6992d499d02437d7f8ba280b8c6b9e0627",
+    "practiceOwnDecisions": 79,
+    "practiceInputRejections": 0,
+    "practiceSupportMoves": 29,
+    "practiceSprintMoves": 0
+  },
+  "rollback": "OriginalFWD1v16fromprivatecheckpoint;freshFitness5",
+  "criticalStop": "JSON/NO_PARSE,wrongplayer/frame,invalidcommand,severerepeatedzerocommand/highlatency; ordinarylossdoesnotchangeconfiguration",
+  "comparisonLimits": [
+    "Notclaimedstronger;uncontrolledopponents/sides",
+    "Additionalincominglive73overlappedPractice08andisrecordedoutsideplannedblock;includedinaccountbefore82games",
+    "Practiceexcludedfromranking; auditusesportalrecordUUID,notUnityviewerquerymatchId"
+  ],
+  "activeOpponent": "Agentic Arsenal",
+  "activeSide": "away",
+  "activeInitiation": "incoming",
+  "stabilityS01": {
+    "sourceReports": [
+      "live-74",
+      "live-75",
+      "live-76",
+      "live-77",
+      "live-78"
+    ],
+    "completeShotStats": 5,
+    "scorelessGames": 2,
+    "losses": 4,
+    "oneGoalLosses": 4,
+    "medianGoalDifference": -1,
+    "goalsShareFromLargestWin": 0.4,
+    "largestWinReport": "live-77",
+    "shotAdvantageGames": 2,
+    "shotAdvantageWins": 0,
+    "shotAdvantageDraws": 0,
+    "shotAdvantageLosses": 2,
+    "limitation": "Descriptive five-game snapshot; uncontrolled opponents and sides, no causal inference."
+  },
+  "after": {
+    "rank": 14,
+    "played": 87,
+    "wins": 50,
+    "draws": 2,
+    "losses": 35,
+    "goalsFor": 116,
+    "goalsAgainst": 77,
+    "goalDifference": 39,
+    "points": 152,
+    "capturedAtUTC": "2026-10-24T15:19:00Z",
+    "captureTimePrecision": "minute",
+    "source": "Primary portal; private AX and screenshot"
+  },
+  "aggregate": {
+    "played": 5,
+    "wins": 1,
+    "draws": 0,
+    "losses": 4,
+    "goalsFor": 5,
+    "goalsAgainst": 8,
+    "goalDifference": -3,
+    "points": 3,
+    "pointsPerGame": 0.6,
+    "shotsFor": 24,
+    "shotsAgainst": 22,
+    "shotsOnTargetFor": 5,
+    "shotsOnTargetAgainst": 8,
+    "meanPossessionPercent": 43
+  },
+  "leaderboardDelta": {
+    "rank": 0,
+    "played": 5,
+    "wins": 1,
+    "draws": 0,
+    "losses": 4,
+    "goalsFor": 5,
+    "goalsAgainst": 8,
+    "goalDifference": -3,
+    "points": 3
+  },
+  "reconciliation": "Five saved live games exactly match all account counter changes; two incoming, three manual. Practice and earlier additional incominglive73 excluded from this delta.",
+  "decision": "Not adopted as final. Technical gates and positional movement worked, but candidate did not demonstrate competitive gain:0.6points/game vs1.8/1.4 in prior baseline blocks. Different opponents prevent causal claim of harm. Restore original FWD1v16 and retain candidate source/recipes for future work.",
+  "nextHypothesis": "After restoring original five M8 roles, trial formation1-2-1 alone relative to originalM8 reference. Do not call the transition from v14 a one-factor adjacent A/B. No model/prompt/GK/runtime change inside nextblock.",
+  "limitations": [
+    "All four losses byonegoal; role attribution and SOT semantics unresolved.",
+    "No shot distances available; no blanket shot prohibition.",
+    "Genuine format/model gates are not strength proof.",
+    "No actual systematic late-command rejection was established; Micro/model and keeper changes deferred."
+  ],
+  "paceS07": {
+    "snapshotIntervalSeconds": 1740.0,
+    "completedEligibleGames": 5,
+    "pointsGained": 3,
+    "completedGamesPerObservedHour": 10.34,
+    "pointsPerObservedHour": 6.21,
+    "limitation": "Approximate snapshot interval, includes waiting, recording and logged diagnostics; not pure game throughput or causal strength."
+  }
+}

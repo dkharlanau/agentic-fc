@@ -1,0 +1,384 @@
+{
+  "setup": {
+    "name": "M8 four roles + fixed-reference fast FWD2",
+    "sourceCommit": "8b31760",
+    "formation": "1-1-2",
+    "gk": "original v13",
+    "def": "original v19",
+    "mid": "original v15",
+    "fwd1": "original v16",
+    "fwd2": "fast_path_v2 revision7; stance; no per-tick model"
+  },
+  "coachVersion": "coach-v1.0",
+  "id": "ranked-batch-08",
+  "targetCompletedGames": 5,
+  "ownerDirective": "Five real ranked games then one analysis; no Practice/Benchmark games",
+  "status": "complete",
+  "games": [
+    {
+      "alias": "real-only-01",
+      "opponent": "KERON FC",
+      "side": "HOME",
+      "status": "complete",
+      "initiation": "manual random matchmaking",
+      "startedAt": "2026-10-24T20:13:02.990406+00:00",
+      "completedAt": "2026-10-24T20:17:40.489582+00:00",
+      "result": "loss",
+      "score": [
+        1,
+        2
+      ],
+      "shots": [
+        6,
+        9
+      ],
+      "possessionPercent": [
+        48,
+        52
+      ],
+      "reportRoleLatencyMs": {
+        "own": [
+          1130,
+          2,
+          1509,
+          992,
+          1288
+        ],
+        "opponent": [
+          3,
+          3,
+          3,
+          3,
+          73
+        ]
+      },
+      "successPercent": 100,
+      "reportAverageLatencyMs": [
+        1109,
+        16
+      ],
+      "reportCommands": {
+        "own": {
+          "PRESS_BALL": 186,
+          "CLEAR_OVERRIDE": 12,
+          "MARK": 6,
+          "INTERCEPT": 1
+        },
+        "opponent": {
+          "CLEAR_OVERRIDE": 47,
+          "PASS": 3
+        }
+      }
+    },
+    {
+      "alias": "real-only-02",
+      "opponent": "Octopus",
+      "side": "HOME",
+      "status": "complete",
+      "initiation": "manual random matchmaking",
+      "startedAt": "2026-10-24T20:18:05.538445+00:00",
+      "completedAt": "2026-10-24T20:24:32.579485+00:00",
+      "result": "win",
+      "score": [
+        3,
+        2
+      ],
+      "shots": [
+        5,
+        5
+      ],
+      "possessionPercent": [
+        61,
+        39
+      ],
+      "overtime": true,
+      "reportRoleLatencyMs": {
+        "own": [
+          82,
+          79,
+          80,
+          80,
+          76
+        ],
+        "opponent": [
+          3,
+          3,
+          3,
+          2,
+          77
+        ]
+      },
+      "successPercent": 100,
+      "reportAverageLatencyMs": [
+        80,
+        17
+      ],
+      "reportCommands": {
+        "own": {
+          "MOVE_TO": 396,
+          "INTERCEPT": 44,
+          "MARK": 31,
+          "PRESS_BALL": 30,
+          "CLEAR_OVERRIDE": 20,
+          "PASS": 17,
+          "SHOOT": 4,
+          "GK_DISTRIBUTE": 3
+        },
+        "opponent": {
+          "CLEAR_OVERRIDE": 79,
+          "PASS": 5,
+          "INTERCEPT": 2,
+          "PRESS_BALL": 1
+        }
+      }
+    },
+    {
+      "alias": "real-only-03",
+      "opponent": "Couch Potato United",
+      "side": "HOME",
+      "status": "complete",
+      "initiation": "manual random matchmaking",
+      "startedAt": "2026-10-24T20:25:51.880485+00:00",
+      "completedAt": "2026-10-24T20:29:06.377172+00:00",
+      "result": "win",
+      "score": [
+        1,
+        0
+      ],
+      "shots": [
+        12,
+        0
+      ],
+      "possessionPercent": [
+        23,
+        77
+      ],
+      "reportRoleLatencyMs": {
+        "own": [
+          948,
+          900,
+          1327,
+          990,
+          972
+        ],
+        "opponent": [
+          3,
+          3,
+          3,
+          2,
+          81
+        ]
+      },
+      "successPercent": 100,
+      "reportAverageLatencyMs": [
+        1145,
+        20
+      ],
+      "reportCommands": {
+        "own": {
+          "MOVE_TO": 140,
+          "PRESS_BALL": 125,
+          "MARK": 33,
+          "CLEAR_OVERRIDE": 12,
+          "INTERCEPT": 25
+        },
+        "opponent": {
+          "CLEAR_OVERRIDE": 41,
+          "PASS": 4,
+          "PRESS_BALL": 2,
+          "INTERCEPT": 1
+        }
+      }
+    },
+    {
+      "alias": "real-only-04",
+      "opponent": "Amber Horns 2",
+      "side": "HOME",
+      "status": "complete",
+      "initiation": "manual random matchmaking",
+      "startedAt": "2026-10-24T20:30:21.192602+00:00",
+      "completedAt": "2026-10-24T20:34:27.270428+00:00",
+      "result": "win",
+      "score": [
+        3,
+        1
+      ],
+      "shots": [
+        4,
+        5
+      ],
+      "possessionPercent": [
+        38,
+        62
+      ],
+      "reportRoleLatencyMs": {
+        "own": [
+          631,
+          1119,
+          903,
+          625,
+          800
+        ],
+        "opponent": [
+          4,
+          3,
+          3,
+          3,
+          80
+        ]
+      },
+      "successPercent": 100,
+      "reportAverageLatencyMs": [
+        892,
+        18
+      ],
+      "reportCommands": {
+        "own": {
+          "PRESS_BALL": 167,
+          "MOVE_TO": 94,
+          "RESET": 67,
+          "CLEAR_OVERRIDE": 23,
+          "INTERCEPT": 4,
+          "FOLLOW": 1,
+          "MARK": 1
+        },
+        "opponent": {
+          "CLEAR_OVERRIDE": 66,
+          "PRESS_BALL": 1
+        }
+      }
+    },
+    {
+      "alias": "real-only-05",
+      "opponent": "Apocalypse",
+      "side": "HOME",
+      "status": "complete",
+      "initiation": "manual random matchmaking",
+      "startedAt": "2026-10-24T20:35:37.049459+00:00",
+      "completedAt": "2026-10-24T20:39:16.674424+00:00",
+      "result": "win",
+      "score": [
+        1,
+        0
+      ],
+      "shots": [
+        5,
+        2
+      ],
+      "possessionPercent": [
+        47,
+        53
+      ],
+      "reportRoleLatencyMs": {
+        "own": [
+          519,
+          499,
+          487,
+          499,
+          483
+        ],
+        "opponent": [
+          3,
+          3,
+          3,
+          2,
+          79
+        ]
+      },
+      "successPercent": 100,
+      "reportAverageLatencyMs": [
+        505,
+        17
+      ],
+      "reportCommands": {
+        "own": {
+          "MOVE_TO": 321,
+          "CLEAR_OVERRIDE": 10,
+          "GK_DISTRIBUTE": 2,
+          "INTERCEPT": 1,
+          "PRESS_BALL": 1
+        },
+        "opponent": {
+          "CLEAR_OVERRIDE": 28,
+          "PASS": 6,
+          "INTERCEPT": 2,
+          "PRESS_BALL": 1
+        }
+      }
+    }
+  ],
+  "incomingGames": [],
+  "preparedAt": "2026-10-24T20:12:32.893562+00:00",
+  "beforeLeaderboard": {
+    "rank": 17,
+    "points": 177,
+    "played": 104,
+    "wins": 58,
+    "draws": 3,
+    "losses": 43,
+    "goalsFor": 137,
+    "goalsAgainst": 94
+  },
+  "gates": {
+    "native": "32/32",
+    "fitness": "5/5",
+    "practice": "No additional Practice allowed or required: baseline commands restored",
+    "fitnessLimit": "Portal5/5; drill logs still reference prior probe-wide session. New native session verifies stance; require genuine game log confirmation.",
+    "freshGameMode": "real-only-01 first17 audited responses:16 stance,1 malformed initial state without mode; no probe-wide"
+  },
+  "summary": {
+    "wins": 4,
+    "draws": 0,
+    "losses": 1,
+    "goals": [
+      9,
+      5
+    ],
+    "shots": [
+      32,
+      21
+    ],
+    "pointsGained": 12,
+    "pointsPerGame": 2.4,
+    "scorelessGames": 0,
+    "cleanSheets": 2,
+    "allHome": true,
+    "unexplainedLeaderboardDelta": 0
+  },
+  "afterLeaderboard": {
+    "rank": 17,
+    "points": 189,
+    "played": 109,
+    "wins": 62,
+    "draws": 3,
+    "losses": 44,
+    "goalsFor": 146,
+    "goalsAgainst": 99,
+    "savedAt": "2026-10-24T20:39:45.843243+00:00"
+  },
+  "leaderBenchmarkAfter": {
+    "name": "AllCash United",
+    "rank": 1,
+    "points": 599,
+    "played": 262,
+    "wins": 198,
+    "draws": 5,
+    "losses": 59,
+    "goalsFor": 619,
+    "goalsAgainst": 242
+  },
+  "audit": "allcash-benchmark/cohort08-audits.json",
+  "decision": {
+    "action": "retain as working fallback; prepare one HOME FWD2 off-ball outlet candidate",
+    "nextPolicyChange": "Nonsprinting bounded passing support only in known team possession, validated HOME frame; other roles/models/formation unchanged",
+    "candidateStatus": "not implemented or deployed",
+    "rollback": "Current revision7/source8b31760 stance; original FWD2v14 as second-level fallback; fresh Fitness",
+    "limits": [
+      "All five matches HOME and random opponents, no leader game",
+      "Report role/team command attribution unresolved",
+      "Full AWS latency target10ms remains unachieved",
+      "No causal claim that latest mode or policy caused wins",
+      "No more Practice/Benchmark games per owner"
+    ]
+  }
+}

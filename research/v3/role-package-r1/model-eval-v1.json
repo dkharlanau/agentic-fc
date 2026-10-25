@@ -1,0 +1,226 @@
+{
+  "kind": "Real model responses transcribed from visible CloudShell AX; synthetic fixtures",
+  "sourceCommit": "f2b34be",
+  "results": [
+    {
+      "id": "gk-own-ball-far",
+      "errors": [
+        "invalid_json"
+      ],
+      "requestWallMs": 867,
+      "output": "```json\n[{\"commandType\":\"GK_DISTRIBUTE\",\"playerId\":0,\"parameters\":{\"target_player_id\":1,\"method\":\"THROW\"}}]\n```",
+      "role": "gk",
+      "promptSha256": "102cb9d3147803ce9a2933616bb39ee0710c743064e680400a16bf7952126dde"
+    },
+    {
+      "id": "gk-ambiguous-owner",
+      "errors": [
+        "invalid_json"
+      ],
+      "requestWallMs": 556,
+      "output": "```json\n[{\"commandType\":\"GK_DISTRIBUTE\",\"playerId\":0,\"parameters\":{\"target_player_id\":1,\"method\":\"THROW\"}}]\n```",
+      "role": "gk",
+      "promptSha256": "102cb9d3147803ce9a2933616bb39ee0710c743064e680400a16bf7952126dde"
+    },
+    {
+      "id": "def-own-ball-far",
+      "errors": [
+        "invalid_json"
+      ],
+      "requestWallMs": 604,
+      "output": "```json\n[{\"commandType\":\"SET_STANCE\",\"playerId\":1,\"parameters\":{\"stance\":2},\"duration\":0}]\n```",
+      "role": "def",
+      "promptSha256": "0adbead4e347831db1602487e2b1dc118affe240a95065e59c6cc1947a18206a"
+    },
+    {
+      "id": "def-ambiguous-owner",
+      "errors": [
+        "invalid_json"
+      ],
+      "requestWallMs": 1118,
+      "output": "```json\n[{\"commandType\":\"SET_STANCE\",\"playerId\":1,\"parameters\":{\"stance\":2},\"duration\":0}]\n```",
+      "role": "def",
+      "promptSha256": "0adbead4e347831db1602487e2b1dc118affe240a95065e59c6cc1947a18206a"
+    },
+    {
+      "id": "mid-own-ball-far",
+      "errors": [
+        "invalid_json"
+      ],
+      "requestWallMs": 674,
+      "output": "```json\n[{\"commandType\":\"PASS\",\"playerId\":2,\"parameters\":{\"target_player_id\":4,\"type\":\"GROUND\"}}]\n```",
+      "role": "mid",
+      "promptSha256": "e96638500f333941b69f7fc45ce0163de6c06643bfcb9fdebdc0a788752336cd"
+    },
+    {
+      "id": "mid-ambiguous-owner",
+      "errors": [
+        "invalid_json"
+      ],
+      "requestWallMs": 904,
+      "output": "```json\n[{\"commandType\":\"PASS\",\"playerId\":2,\"parameters\":{\"target_player_id\":4,\"type\":\"GROUND\"}}]\n```",
+      "role": "mid",
+      "promptSha256": "e96638500f333941b69f7fc45ce0163de6c06643bfcb9fdebdc0a788752336cd"
+    },
+    {
+      "id": "fwd1-own-ball-far",
+      "errors": [
+        "invalid_json"
+      ],
+      "requestWallMs": 711,
+      "output": "```json\n[{\"commandType\": \"PASS\", \"playerId\": 3, \"parameters\": {\"target_player_id\": 4, \"type\": \"GROUND\"}}]\n```",
+      "role": "fwd1",
+      "promptSha256": "19706176c2feabcd7874df1c4a5c00765400b89fb15575c475f7a204ff53da73"
+    },
+    {
+      "id": "fwd1-ambiguous-owner",
+      "errors": [
+        "invalid_json"
+      ],
+      "requestWallMs": 575,
+      "output": "```json\n[{\"commandType\":\"PASS\",\"playerId\":3,\"parameters\":{\"target_player_id\":4,\"type\":\"GROUND\"}}]\n```",
+      "role": "fwd1",
+      "promptSha256": "19706176c2feabcd7874df1c4a5c00765400b89fb15575c475f7a204ff53da73"
+    },
+    {
+      "id": "fwd2-own-ball-far",
+      "errors": [
+        "invalid_json"
+      ],
+      "requestWallMs": 2509,
+      "output": "```json\n[{\"commandType\":\"SHOOT\",\"playerId\":4,\"parameters\":{\"aim_location\":\"BR\",\"power\":0.8},\"duration\":0}]\n```",
+      "role": "fwd2",
+      "promptSha256": "ff355d49405e004c5c8fc0dc85317bcf94208368b6d919b250d0eb056fc47622"
+    },
+    {
+      "id": "fwd2-ambiguous-owner",
+      "errors": [
+        "invalid_json"
+      ],
+      "requestWallMs": 1388,
+      "output": "```json\n[{\"commandType\":\"CLEAR_OVERRIDE\",\"playerId\":4,\"parameters\":{},\"duration\":0}]\n```",
+      "role": "fwd2",
+      "promptSha256": "ff355d49405e004c5c8fc0dc85317bcf94208368b6d919b250d0eb056fc47622"
+    },
+    {
+      "id": "fwd1-close-open-shot",
+      "errors": [
+        "invalid_json"
+      ],
+      "requestWallMs": 628,
+      "output": "```json\n[{\"commandType\": \"PASS\", \"playerId\": 3, \"parameters\": {\"target_player_id\": 4, \"type\": \"GROUND\"}}]\n```",
+      "role": "fwd1",
+      "promptSha256": "19706176c2feabcd7874df1c4a5c00765400b89fb15575c475f7a204ff53da73"
+    },
+    {
+      "id": "fwd2-close-blocked-pass",
+      "errors": [
+        "invalid_json"
+      ],
+      "requestWallMs": 2429,
+      "output": "```json\n[{\"commandType\":\"SHOOT\",\"playerId\":4,\"parameters\":{\"aim_location\":\"BR\",\"power\":0.8},\"duration\":0}]\n```",
+      "role": "fwd2",
+      "promptSha256": "ff355d49405e004c5c8fc0dc85317bcf94208368b6d919b250d0eb056fc47622"
+    },
+    {
+      "id": "gk-reject-marked-defender",
+      "errors": [
+        "invalid_json"
+      ],
+      "requestWallMs": 675,
+      "output": "```json\n[{\"commandType\":\"GK_DISTRIBUTE\",\"playerId\":0,\"parameters\":{\"target_player_id\":1,\"method\":\"THROW\"}}]\n```",
+      "role": "gk",
+      "promptSha256": "102cb9d3147803ce9a2933616bb39ee0710c743064e680400a16bf7952126dde"
+    },
+    {
+      "id": "fwd1-low-energy-cover",
+      "errors": [
+        "invalid_json"
+      ],
+      "requestWallMs": 710,
+      "output": "```json\n[{\"commandType\":\"SET_STANCE\",\"playerId\":3,\"parameters\":{\"stance\":0},\"duration\":0}]\n```",
+      "role": "fwd1",
+      "promptSha256": "19706176c2feabcd7874df1c4a5c00765400b89fb15575c475f7a204ff53da73"
+    },
+    {
+      "id": "mid-malformed-players",
+      "errors": [
+        "invalid_json"
+      ],
+      "requestWallMs": 560,
+      "output": "```json\n[{\"commandType\":\"PASS\",\"playerId\":2,\"parameters\":{\"target_player_id\":1,\"type\":\"GROUND\"}}]\n```",
+      "role": "mid",
+      "promptSha256": "e96638500f333941b69f7fc45ce0163de6c06643bfcb9fdebdc0a788752336cd"
+    },
+    {
+      "id": "fwd2-wrong-player-binding",
+      "errors": [
+        "invalid_json"
+      ],
+      "requestWallMs": 1205,
+      "output": "```json\n[{\"commandType\":\"CLEAR_OVERRIDE\",\"playerId\":4,\"parameters\":{},\"duration\":0}]\n```",
+      "role": "fwd2",
+      "promptSha256": "ff355d49405e004c5c8fc0dc85317bcf94208368b6d919b250d0eb056fc47622"
+    },
+    {
+      "id": "gk-own-ball-far-away",
+      "errors": [
+        "invalid_json"
+      ],
+      "requestWallMs": 797,
+      "output": "```json\n[{\"commandType\":\"CLEAR_OVERRIDE\",\"playerId\":0,\"parameters\":{},\"duration\":0}]\n```",
+      "role": "gk",
+      "promptSha256": "102cb9d3147803ce9a2933616bb39ee0710c743064e680400a16bf7952126dde"
+    },
+    {
+      "id": "def-own-ball-far-away",
+      "errors": [
+        "invalid_json"
+      ],
+      "requestWallMs": 874,
+      "output": "```json\n[{\"commandType\":\"SET_STANCE\",\"playerId\":1,\"parameters\":{\"stance\":2},\"duration\":0}]\n```",
+      "role": "def",
+      "promptSha256": "0adbead4e347831db1602487e2b1dc118affe240a95065e59c6cc1947a18206a"
+    },
+    {
+      "id": "mid-own-ball-far-away",
+      "errors": [
+        "invalid_json"
+      ],
+      "requestWallMs": 591,
+      "output": "```json\n[{\"commandType\":\"PASS\",\"playerId\":2,\"parameters\":{\"target_player_id\":1,\"type\":\"GROUND\"}}]\n```",
+      "role": "mid",
+      "promptSha256": "e96638500f333941b69f7fc45ce0163de6c06643bfcb9fdebdc0a788752336cd"
+    },
+    {
+      "id": "fwd1-own-ball-far-away",
+      "errors": [
+        "invalid_json"
+      ],
+      "requestWallMs": 549,
+      "output": "```json\n[{\"commandType\":\"PASS\",\"playerId\":3,\"parameters\":{\"target_player_id\":2,\"type\":\"GROUND\"}}]\n```",
+      "role": "fwd1",
+      "promptSha256": "19706176c2feabcd7874df1c4a5c00765400b89fb15575c475f7a204ff53da73"
+    },
+    {
+      "id": "fwd2-own-ball-far-away",
+      "errors": [
+        "invalid_json"
+      ],
+      "requestWallMs": 1379,
+      "output": "```json\n[{\"commandType\":\"SHOOT\",\"playerId\":4,\"parameters\":{\"aim_location\":\"BL\",\"power\":0.8},\"duration\":0}]\n```",
+      "role": "fwd2",
+      "promptSha256": "ff355d49405e004c5c8fc0dc85317bcf94208368b6d919b250d0eb056fc47622"
+    }
+  ],
+  "summary": {
+    "passed": 0,
+    "total": 21,
+    "requestWallMedianMs": 711,
+    "requestWallMaxMs": 2509
+  },
+  "limitations": [
+    "Direct Converse, not Harness or physical execution",
+    "Usage fields not transcribed; full report retained in CloudShell"
+  ]
+}

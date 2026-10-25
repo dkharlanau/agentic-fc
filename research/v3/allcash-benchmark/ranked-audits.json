@@ -1,0 +1,107 @@
+[
+  {
+    "kind": "Own exact-session decision audit; compute is not transport latency",
+    "alias": "fixed-reference-live-01",
+    "side": 0,
+    "queriedAt": "2026-10-24T19:19:27.601455+00:00",
+    "summary": {
+      "count": 84,
+      "computeMedianMs": 0.5475215,
+      "computeP95Ms": 0.600809,
+      "computeMaxMs": 0.650862,
+      "commands": {
+        "CLEAR_OVERRIDE": 37,
+        "SET_STANCE": 43,
+        "PASS": 2,
+        "PRESS_BALL": 2
+      },
+      "reasons": {
+        "MALFORMED_POSITION": 1,
+        "ROLE_SUPPORT": 5,
+        "KEEP_SHAPE": 38,
+        "UNKNOWN_POSSESSION": 15,
+        "SAFE_OUTLET": 2,
+        "ENGINE_RESTART": 20,
+        "NO_SAFE_OUTLET": 1,
+        "SINGLE_LOCAL_PRESS": 2
+      },
+      "frames": {
+        "missing": 1,
+        "keeper_reference_xz": 83
+      },
+      "modelCalls": 0,
+      "buildCommits": [
+        "8747a88"
+      ]
+    }
+  },
+  {
+    "kind": "Own exact-session decision audit; compute is not transport latency",
+    "alias": "fixed-reference-live-02",
+    "side": 0,
+    "queriedAt": "2026-10-24T19:19:28.861744+00:00",
+    "summary": {
+      "count": 72,
+      "computeMedianMs": 0.4085985,
+      "computeP95Ms": 0.463028,
+      "computeMaxMs": 0.991809,
+      "commands": {
+        "CLEAR_OVERRIDE": 35,
+        "SET_STANCE": 37
+      },
+      "reasons": {
+        "MALFORMED_POSITION": 1,
+        "KEEP_SHAPE": 18,
+        "ROLE_SUPPORT": 19,
+        "UNKNOWN_POSSESSION": 23,
+        "ENGINE_RESTART": 11
+      },
+      "frames": {
+        "missing": 1,
+        "keeper_reference_xz": 71
+      },
+      "modelCalls": 0,
+      "buildCommits": [
+        "8747a88"
+      ]
+    }
+  },
+  {
+    "kind": "Own exact-session decision audit; compute is not transport latency",
+    "alias": "fixed-reference-live-03",
+    "side": 0,
+    "queriedAt": "2026-10-24T19:19:30.018892+00:00",
+    "summary": {
+      "count": 85,
+      "computeMedianMs": 0.551741,
+      "computeP95Ms": 0.606289,
+      "computeMaxMs": 1.293512,
+      "commands": {
+        "CLEAR_OVERRIDE": 46,
+        "SET_STANCE": 34,
+        "PASS": 1,
+        "PRESS_BALL": 2,
+        "INTERCEPT": 2
+      },
+      "reasons": {
+        "MALFORMED_POSITION": 1,
+        "UNKNOWN_POSSESSION": 24,
+        "KEEP_SHAPE": 25,
+        "SAFE_OUTLET": 1,
+        "ROLE_SUPPORT": 9,
+        "ENGINE_RESTART": 20,
+        "SINGLE_LOCAL_PRESS": 2,
+        "NEAREST_FREE_BALL": 2,
+        "NO_SAFE_OUTLET": 1
+      },
+      "frames": {
+        "missing": 1,
+        "keeper_reference_xz": 84
+      },
+      "modelCalls": 0,
+      "buildCommits": [
+        "8747a88"
+      ]
+    }
+  }
+]

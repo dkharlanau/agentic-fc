@@ -1,0 +1,1177 @@
+{
+  "kind": "Frozen offline descriptive audit; no causal effect, model ranking or new live result",
+  "date": "2026-10-24",
+  "throughReport": "live-80",
+  "reports": 80,
+  "sourceHashes": {
+    "research/v3/matches.json": "2696e9d18e68df7707b29dab065a2c3a5bf0c27bda7e36d6037b8eb72c7d27d3",
+    "research/v3/shots-analysis.json": "6a78f5e750321f94c60f0880b88d418329a4b449555757b26589e62003fe041a",
+    "research/v3/side-audit-20261024.json": "aba95577c5e1449cf2db759dc17efd8ccbae3ae85807bafe4b468bf312905f7b",
+    "research/v3/final-setup-20261024.json": "f37ddfadf9ce0b0564ac27ecc260625481ae54a1a8141447832212504e559763",
+    "research/v3/recovery/bundle.json": "5dedbda8af69b6e4d4424d6f230f21dc74ab2f267ef5ecae26323e88a7eb5f96",
+    "research/v3/ranked-batch-01.json": "5443fc337a487a5d274faca4c85f89688a33fafffa09c899c60da59b771864f5",
+    "research/v3/ranked-batch-02.json": "4e17748cb35d6430359fa3e8fa2c6ce133a015d830c28d80367db75473b1609e",
+    "research/v3/ranked-batch-03.json": "55836f5dae0873c731c2d450c611dafd748d26a8fda6cf80708bc37cf87149a9",
+    "research/v3/ranked-batch-04.json": "0a08238ca0f79db632d1eab92d4fe34dede68cd1ee8f29e83b53198b952d0912",
+    "research/v3/schema-clean/gk.txt": "43a75e8e85225b14879c7c9b839a7f8b3e5d056d8a841a1a4019b8fc8263cd36",
+    "research/v3/schema-clean/def.txt": "86426b2320f5e40e444ebe553b0827b3707ff6f5cd22599478f71e5391c838d9",
+    "research/v3/schema-clean/mid.txt": "7b05fe872d47c532c374390642006759924d84048a61577bf4f3a9bba400c729",
+    "research/v3/schema-clean/fwd1.txt": "ee4c92203e6fcbc86d14329913933ba68d8cd2092947bebd2c66d5ed14c17b15",
+    "research/v3/schema-clean/fwd2.txt": "03ed589df3ebe560294ac54966bfc27156aa27391c8079dae5aab93ba096a13f"
+  },
+  "analysisScriptSha256": "43add8d3481c8eaa62ac9938dc84e065ea79b7ab7034aef768234aac01f73175",
+  "cohorts": {
+    "earlyM8HistoricalWindow": {
+      "reports": [
+        "live-28",
+        "live-29",
+        "live-30",
+        "live-31",
+        "live-32",
+        "live-33",
+        "live-34",
+        "live-35",
+        "live-36",
+        "live-37",
+        "live-38"
+      ],
+      "played": 11,
+      "wins": 10,
+      "draws": 1,
+      "losses": 0,
+      "points": 31,
+      "ppg": 2.8181818181818183,
+      "goalsFor": 19,
+      "goalsAgainst": 2,
+      "shotCoverage": 10,
+      "shotsForKnown": 94,
+      "shotsAgainstKnown": 18,
+      "scoreless": 1,
+      "zeroShotReports": [],
+      "oneGoalLosses": 0,
+      "medianGoalDifference": 1,
+      "largestWinGoalShare": 0.21052631578947367,
+      "shotAdvantage": {
+        "played": 9,
+        "wins": 9,
+        "draws": 0,
+        "losses": 0
+      },
+      "bySide": {
+        "home": {
+          "reports": [
+            "live-28",
+            "live-29",
+            "live-30",
+            "live-31",
+            "live-32",
+            "live-33",
+            "live-34",
+            "live-35",
+            "live-36",
+            "live-37",
+            "live-38"
+          ],
+          "played": 11,
+          "wins": 10,
+          "draws": 1,
+          "losses": 0,
+          "points": 31,
+          "ppg": 2.8181818181818183,
+          "goalsFor": 19,
+          "goalsAgainst": 2,
+          "shotCoverage": 10,
+          "shotsForKnown": 94,
+          "shotsAgainstKnown": 18,
+          "scoreless": 1,
+          "zeroShotReports": [],
+          "oneGoalLosses": 0,
+          "medianGoalDifference": 1,
+          "largestWinGoalShare": 0.21052631578947367,
+          "shotAdvantage": {
+            "played": 9,
+            "wins": 9,
+            "draws": 0,
+            "losses": 0
+          }
+        },
+        "away": {
+          "reports": [],
+          "played": 0,
+          "wins": 0,
+          "draws": 0,
+          "losses": 0,
+          "points": 0,
+          "ppg": null,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "shotCoverage": 0,
+          "shotsForKnown": 0,
+          "shotsAgainstKnown": 0,
+          "scoreless": 0,
+          "zeroShotReports": [],
+          "oneGoalLosses": 0,
+          "medianGoalDifference": null,
+          "largestWinGoalShare": null,
+          "shotAdvantage": {
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0
+          }
+        }
+      },
+      "recordedSetupCounts": {
+        "A0-M8-formation112": 11
+      }
+    },
+    "earlyM8IncludingNextAttributedLoss": {
+      "reports": [
+        "live-28",
+        "live-29",
+        "live-30",
+        "live-31",
+        "live-32",
+        "live-33",
+        "live-34",
+        "live-35",
+        "live-36",
+        "live-37",
+        "live-38",
+        "live-41"
+      ],
+      "played": 12,
+      "wins": 10,
+      "draws": 1,
+      "losses": 1,
+      "points": 31,
+      "ppg": 2.5833333333333335,
+      "goalsFor": 20,
+      "goalsAgainst": 4,
+      "shotCoverage": 11,
+      "shotsForKnown": 97,
+      "shotsAgainstKnown": 24,
+      "scoreless": 1,
+      "zeroShotReports": [],
+      "oneGoalLosses": 1,
+      "medianGoalDifference": 1.0,
+      "largestWinGoalShare": 0.2,
+      "shotAdvantage": {
+        "played": 9,
+        "wins": 9,
+        "draws": 0,
+        "losses": 0
+      },
+      "bySide": {
+        "home": {
+          "reports": [
+            "live-28",
+            "live-29",
+            "live-30",
+            "live-31",
+            "live-32",
+            "live-33",
+            "live-34",
+            "live-35",
+            "live-36",
+            "live-37",
+            "live-38",
+            "live-41"
+          ],
+          "played": 12,
+          "wins": 10,
+          "draws": 1,
+          "losses": 1,
+          "points": 31,
+          "ppg": 2.5833333333333335,
+          "goalsFor": 20,
+          "goalsAgainst": 4,
+          "shotCoverage": 11,
+          "shotsForKnown": 97,
+          "shotsAgainstKnown": 24,
+          "scoreless": 1,
+          "zeroShotReports": [],
+          "oneGoalLosses": 1,
+          "medianGoalDifference": 1.0,
+          "largestWinGoalShare": 0.2,
+          "shotAdvantage": {
+            "played": 9,
+            "wins": 9,
+            "draws": 0,
+            "losses": 0
+          }
+        },
+        "away": {
+          "reports": [],
+          "played": 0,
+          "wins": 0,
+          "draws": 0,
+          "losses": 0,
+          "points": 0,
+          "ppg": null,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "shotCoverage": 0,
+          "shotsForKnown": 0,
+          "shotsAgainstKnown": 0,
+          "scoreless": 0,
+          "zeroShotReports": [],
+          "oneGoalLosses": 0,
+          "medianGoalDifference": null,
+          "largestWinGoalShare": null,
+          "shotAdvantage": {
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0
+          }
+        }
+      },
+      "recordedSetupCounts": {
+        "A0-M8-formation112": 12
+      }
+    },
+    "mixed53to62": {
+      "reports": [
+        "live-53",
+        "live-54",
+        "live-55",
+        "live-56",
+        "live-57",
+        "live-58",
+        "live-59",
+        "live-60",
+        "live-61",
+        "live-62"
+      ],
+      "played": 10,
+      "wins": 4,
+      "draws": 0,
+      "losses": 6,
+      "points": 12,
+      "ppg": 1.2,
+      "goalsFor": 15,
+      "goalsAgainst": 10,
+      "shotCoverage": 10,
+      "shotsForKnown": 82,
+      "shotsAgainstKnown": 39,
+      "scoreless": 4,
+      "zeroShotReports": [],
+      "oneGoalLosses": 5,
+      "medianGoalDifference": -1.0,
+      "largestWinGoalShare": 0.4666666666666667,
+      "shotAdvantage": {
+        "played": 8,
+        "wins": 4,
+        "draws": 0,
+        "losses": 4
+      },
+      "bySide": {
+        "home": {
+          "reports": [
+            "live-53",
+            "live-55",
+            "live-57"
+          ],
+          "played": 3,
+          "wins": 1,
+          "draws": 0,
+          "losses": 2,
+          "points": 3,
+          "ppg": 1.0,
+          "goalsFor": 7,
+          "goalsAgainst": 3,
+          "shotCoverage": 3,
+          "shotsForKnown": 32,
+          "shotsAgainstKnown": 9,
+          "scoreless": 2,
+          "zeroShotReports": [],
+          "oneGoalLosses": 1,
+          "medianGoalDifference": -1,
+          "largestWinGoalShare": 1.0,
+          "shotAdvantage": {
+            "played": 2,
+            "wins": 1,
+            "draws": 0,
+            "losses": 1
+          }
+        },
+        "away": {
+          "reports": [
+            "live-54",
+            "live-56",
+            "live-58",
+            "live-59",
+            "live-60",
+            "live-61",
+            "live-62"
+          ],
+          "played": 7,
+          "wins": 3,
+          "draws": 0,
+          "losses": 4,
+          "points": 9,
+          "ppg": 1.2857142857142858,
+          "goalsFor": 8,
+          "goalsAgainst": 7,
+          "shotCoverage": 7,
+          "shotsForKnown": 50,
+          "shotsAgainstKnown": 30,
+          "scoreless": 2,
+          "zeroShotReports": [],
+          "oneGoalLosses": 4,
+          "medianGoalDifference": -1,
+          "largestWinGoalShare": 0.375,
+          "shotAdvantage": {
+            "played": 6,
+            "wins": 3,
+            "draws": 0,
+            "losses": 3
+          }
+        }
+      },
+      "recordedSetupCounts": {
+        "R1-FWD1-v5-plus-M7": 1,
+        "unattributed-background": 3,
+        "R1-FWD1-v7-plus-M7-formation112": 1,
+        "A0-M8-formation112-original-fwd1-v16": 2,
+        "R1-FWD1-v9-plus-M7-formation112": 2,
+        "GK-R2v1-plus-FWD1-v11-plus-threeM7-formation112": 1
+      }
+    },
+    "stableM8": {
+      "reports": [
+        "live-63",
+        "live-64",
+        "live-65",
+        "live-66",
+        "live-67",
+        "live-68",
+        "live-69",
+        "live-70",
+        "live-71",
+        "live-72"
+      ],
+      "played": 10,
+      "wins": 5,
+      "draws": 1,
+      "losses": 4,
+      "points": 16,
+      "ppg": 1.6,
+      "goalsFor": 12,
+      "goalsAgainst": 11,
+      "shotCoverage": 9,
+      "shotsForKnown": 31,
+      "shotsAgainstKnown": 49,
+      "scoreless": 4,
+      "zeroShotReports": [
+        "live-66",
+        "live-69"
+      ],
+      "oneGoalLosses": 3,
+      "medianGoalDifference": 0.5,
+      "largestWinGoalShare": 0.25,
+      "shotAdvantage": {
+        "played": 5,
+        "wins": 5,
+        "draws": 0,
+        "losses": 0
+      },
+      "bySide": {
+        "home": {
+          "reports": [
+            "live-64",
+            "live-65",
+            "live-66",
+            "live-67",
+            "live-69",
+            "live-70",
+            "live-71",
+            "live-72"
+          ],
+          "played": 8,
+          "wins": 4,
+          "draws": 1,
+          "losses": 3,
+          "points": 13,
+          "ppg": 1.625,
+          "goalsFor": 9,
+          "goalsAgainst": 8,
+          "shotCoverage": 7,
+          "shotsForKnown": 23,
+          "shotsAgainstKnown": 40,
+          "scoreless": 3,
+          "zeroShotReports": [
+            "live-66",
+            "live-69"
+          ],
+          "oneGoalLosses": 2,
+          "medianGoalDifference": 0.5,
+          "largestWinGoalShare": 0.2222222222222222,
+          "shotAdvantage": {
+            "played": 4,
+            "wins": 4,
+            "draws": 0,
+            "losses": 0
+          }
+        },
+        "away": {
+          "reports": [
+            "live-63",
+            "live-68"
+          ],
+          "played": 2,
+          "wins": 1,
+          "draws": 0,
+          "losses": 1,
+          "points": 3,
+          "ppg": 1.5,
+          "goalsFor": 3,
+          "goalsAgainst": 3,
+          "shotCoverage": 2,
+          "shotsForKnown": 8,
+          "shotsAgainstKnown": 9,
+          "scoreless": 1,
+          "zeroShotReports": [],
+          "oneGoalLosses": 1,
+          "medianGoalDifference": 0.0,
+          "largestWinGoalShare": 1.0,
+          "shotAdvantage": {
+            "played": 1,
+            "wins": 1,
+            "draws": 0,
+            "losses": 0
+          }
+        }
+      },
+      "recordedSetupCounts": {
+        "A0-M8-formation112-original-fwd1-v16": 10
+      }
+    },
+    "positionV14Planned": {
+      "reports": [
+        "live-74",
+        "live-75",
+        "live-76",
+        "live-77",
+        "live-78"
+      ],
+      "played": 5,
+      "wins": 1,
+      "draws": 0,
+      "losses": 4,
+      "points": 3,
+      "ppg": 0.6,
+      "goalsFor": 5,
+      "goalsAgainst": 8,
+      "shotCoverage": 5,
+      "shotsForKnown": 24,
+      "shotsAgainstKnown": 22,
+      "scoreless": 2,
+      "zeroShotReports": [],
+      "oneGoalLosses": 4,
+      "medianGoalDifference": -1,
+      "largestWinGoalShare": 0.4,
+      "shotAdvantage": {
+        "played": 2,
+        "wins": 0,
+        "draws": 0,
+        "losses": 2
+      },
+      "bySide": {
+        "home": {
+          "reports": [
+            "live-75",
+            "live-76",
+            "live-77"
+          ],
+          "played": 3,
+          "wins": 1,
+          "draws": 0,
+          "losses": 2,
+          "points": 3,
+          "ppg": 1.0,
+          "goalsFor": 4,
+          "goalsAgainst": 5,
+          "shotCoverage": 3,
+          "shotsForKnown": 9,
+          "shotsAgainstKnown": 15,
+          "scoreless": 1,
+          "zeroShotReports": [],
+          "oneGoalLosses": 2,
+          "medianGoalDifference": -1,
+          "largestWinGoalShare": 0.5,
+          "shotAdvantage": {
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0
+          }
+        },
+        "away": {
+          "reports": [
+            "live-74",
+            "live-78"
+          ],
+          "played": 2,
+          "wins": 0,
+          "draws": 0,
+          "losses": 2,
+          "points": 0,
+          "ppg": 0.0,
+          "goalsFor": 1,
+          "goalsAgainst": 3,
+          "shotCoverage": 2,
+          "shotsForKnown": 15,
+          "shotsAgainstKnown": 7,
+          "scoreless": 1,
+          "zeroShotReports": [],
+          "oneGoalLosses": 2,
+          "medianGoalDifference": -1.0,
+          "largestWinGoalShare": 0.0,
+          "shotAdvantage": {
+            "played": 2,
+            "wins": 0,
+            "draws": 0,
+            "losses": 2
+          }
+        }
+      },
+      "recordedSetupCounts": {
+        "M8-fouroriginal-plus-R1v14-position-FWD1-112": 5
+      }
+    },
+    "positionV14IncludingIncoming": {
+      "reports": [
+        "live-73",
+        "live-74",
+        "live-75",
+        "live-76",
+        "live-77",
+        "live-78",
+        "live-79"
+      ],
+      "played": 7,
+      "wins": 1,
+      "draws": 0,
+      "losses": 6,
+      "points": 3,
+      "ppg": 0.42857142857142855,
+      "goalsFor": 6,
+      "goalsAgainst": 11,
+      "shotCoverage": 7,
+      "shotsForKnown": 34,
+      "shotsAgainstKnown": 30,
+      "scoreless": 3,
+      "zeroShotReports": [],
+      "oneGoalLosses": 6,
+      "medianGoalDifference": -1,
+      "largestWinGoalShare": 0.3333333333333333,
+      "shotAdvantage": {
+        "played": 4,
+        "wins": 0,
+        "draws": 0,
+        "losses": 4
+      },
+      "bySide": {
+        "home": {
+          "reports": [
+            "live-75",
+            "live-76",
+            "live-77"
+          ],
+          "played": 3,
+          "wins": 1,
+          "draws": 0,
+          "losses": 2,
+          "points": 3,
+          "ppg": 1.0,
+          "goalsFor": 4,
+          "goalsAgainst": 5,
+          "shotCoverage": 3,
+          "shotsForKnown": 9,
+          "shotsAgainstKnown": 15,
+          "scoreless": 1,
+          "zeroShotReports": [],
+          "oneGoalLosses": 2,
+          "medianGoalDifference": -1,
+          "largestWinGoalShare": 0.5,
+          "shotAdvantage": {
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0
+          }
+        },
+        "away": {
+          "reports": [
+            "live-73",
+            "live-74",
+            "live-78",
+            "live-79"
+          ],
+          "played": 4,
+          "wins": 0,
+          "draws": 0,
+          "losses": 4,
+          "points": 0,
+          "ppg": 0.0,
+          "goalsFor": 2,
+          "goalsAgainst": 6,
+          "shotCoverage": 4,
+          "shotsForKnown": 25,
+          "shotsAgainstKnown": 15,
+          "scoreless": 2,
+          "zeroShotReports": [],
+          "oneGoalLosses": 4,
+          "medianGoalDifference": -1.0,
+          "largestWinGoalShare": 0.0,
+          "shotAdvantage": {
+            "played": 4,
+            "wins": 0,
+            "draws": 0,
+            "losses": 4
+          }
+        }
+      },
+      "recordedSetupCounts": {
+        "M8-fouroriginal-plus-R1v14-position-FWD1-112": 7
+      }
+    },
+    "formation121Partial": {
+      "reports": [
+        "live-80"
+      ],
+      "played": 1,
+      "wins": 1,
+      "draws": 0,
+      "losses": 0,
+      "points": 3,
+      "ppg": 3.0,
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "shotCoverage": 1,
+      "shotsForKnown": 6,
+      "shotsAgainstKnown": 6,
+      "scoreless": 0,
+      "zeroShotReports": [],
+      "oneGoalLosses": 0,
+      "medianGoalDifference": 1,
+      "largestWinGoalShare": 1.0,
+      "shotAdvantage": {
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0
+      },
+      "bySide": {
+        "home": {
+          "reports": [
+            "live-80"
+          ],
+          "played": 1,
+          "wins": 1,
+          "draws": 0,
+          "losses": 0,
+          "points": 3,
+          "ppg": 3.0,
+          "goalsFor": 1,
+          "goalsAgainst": 0,
+          "shotCoverage": 1,
+          "shotsForKnown": 6,
+          "shotsAgainstKnown": 6,
+          "scoreless": 0,
+          "zeroShotReports": [],
+          "oneGoalLosses": 0,
+          "medianGoalDifference": 1,
+          "largestWinGoalShare": 1.0,
+          "shotAdvantage": {
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0
+          }
+        },
+        "away": {
+          "reports": [],
+          "played": 0,
+          "wins": 0,
+          "draws": 0,
+          "losses": 0,
+          "points": 0,
+          "ppg": null,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "shotCoverage": 0,
+          "shotsForKnown": 0,
+          "shotsAgainstKnown": 0,
+          "scoreless": 0,
+          "zeroShotReports": [],
+          "oneGoalLosses": 0,
+          "medianGoalDifference": null,
+          "largestWinGoalShare": null,
+          "shotAdvantage": {
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0
+          }
+        }
+      },
+      "recordedSetupCounts": {
+        "A0-M7-formation121-original-fwd1-v16": 1
+      }
+    },
+    "historical121BeforePartial": {
+      "reports": [
+        "live-22",
+        "live-23",
+        "live-24",
+        "live-25",
+        "live-26",
+        "live-27",
+        "live-42",
+        "live-46"
+      ],
+      "played": 8,
+      "wins": 6,
+      "draws": 0,
+      "losses": 2,
+      "points": 18,
+      "ppg": 2.25,
+      "goalsFor": 10,
+      "goalsAgainst": 6,
+      "shotCoverage": 8,
+      "shotsForKnown": 65,
+      "shotsAgainstKnown": 25,
+      "scoreless": 1,
+      "zeroShotReports": [],
+      "oneGoalLosses": 0,
+      "medianGoalDifference": 1.0,
+      "largestWinGoalShare": 0.2,
+      "shotAdvantage": {
+        "played": 6,
+        "wins": 6,
+        "draws": 0,
+        "losses": 0
+      },
+      "bySide": {
+        "home": {
+          "reports": [
+            "live-22",
+            "live-24",
+            "live-25",
+            "live-26",
+            "live-27",
+            "live-42",
+            "live-46"
+          ],
+          "played": 7,
+          "wins": 6,
+          "draws": 0,
+          "losses": 1,
+          "points": 18,
+          "ppg": 2.5714285714285716,
+          "goalsFor": 9,
+          "goalsAgainst": 3,
+          "shotCoverage": 7,
+          "shotsForKnown": 62,
+          "shotsAgainstKnown": 18,
+          "scoreless": 1,
+          "zeroShotReports": [],
+          "oneGoalLosses": 0,
+          "medianGoalDifference": 1,
+          "largestWinGoalShare": 0.2222222222222222,
+          "shotAdvantage": {
+            "played": 6,
+            "wins": 6,
+            "draws": 0,
+            "losses": 0
+          }
+        },
+        "away": {
+          "reports": [
+            "live-23"
+          ],
+          "played": 1,
+          "wins": 0,
+          "draws": 0,
+          "losses": 1,
+          "points": 0,
+          "ppg": 0.0,
+          "goalsFor": 1,
+          "goalsAgainst": 3,
+          "shotCoverage": 1,
+          "shotsForKnown": 3,
+          "shotsAgainstKnown": 7,
+          "scoreless": 0,
+          "zeroShotReports": [],
+          "oneGoalLosses": 0,
+          "medianGoalDifference": -2,
+          "largestWinGoalShare": 0.0,
+          "shotAdvantage": {
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0
+          }
+        }
+      },
+      "recordedSetupCounts": {
+        "A0-M7-formation121": 8
+      }
+    }
+  },
+  "equalSideWeightPPG": {
+    "earlyM8HistoricalWindow": null,
+    "stableM8": 1.5625,
+    "positionV14Planned": 0.5
+  },
+  "commonOpponentAndSideEarlyVersusRecent": [
+    {
+      "opponent": "Matrix_7",
+      "side": "home",
+      "early": {
+        "reports": [
+          "live-30"
+        ],
+        "played": 1,
+        "wins": 1,
+        "draws": 0,
+        "losses": 0,
+        "points": 3,
+        "ppg": 3.0,
+        "goalsFor": 1,
+        "goalsAgainst": 0,
+        "shotCoverage": 1,
+        "shotsForKnown": 20,
+        "shotsAgainstKnown": 0,
+        "scoreless": 0,
+        "zeroShotReports": [],
+        "oneGoalLosses": 0,
+        "medianGoalDifference": 1,
+        "largestWinGoalShare": 1.0,
+        "shotAdvantage": {
+          "played": 1,
+          "wins": 1,
+          "draws": 0,
+          "losses": 0
+        }
+      },
+      "recent": {
+        "reports": [
+          "live-64"
+        ],
+        "played": 1,
+        "wins": 1,
+        "draws": 0,
+        "losses": 0,
+        "points": 3,
+        "ppg": 3.0,
+        "goalsFor": 2,
+        "goalsAgainst": 1,
+        "shotCoverage": 1,
+        "shotsForKnown": 5,
+        "shotsAgainstKnown": 1,
+        "scoreless": 0,
+        "zeroShotReports": [],
+        "oneGoalLosses": 0,
+        "medianGoalDifference": 1,
+        "largestWinGoalShare": 1.0,
+        "shotAdvantage": {
+          "played": 1,
+          "wins": 1,
+          "draws": 0,
+          "losses": 0
+        }
+      }
+    },
+    {
+      "opponent": "Singularity FC",
+      "side": "home",
+      "early": {
+        "reports": [
+          "live-35"
+        ],
+        "played": 1,
+        "wins": 1,
+        "draws": 0,
+        "losses": 0,
+        "points": 3,
+        "ppg": 3.0,
+        "goalsFor": 1,
+        "goalsAgainst": 0,
+        "shotCoverage": 1,
+        "shotsForKnown": 9,
+        "shotsAgainstKnown": 4,
+        "scoreless": 0,
+        "zeroShotReports": [],
+        "oneGoalLosses": 0,
+        "medianGoalDifference": 1,
+        "largestWinGoalShare": 1.0,
+        "shotAdvantage": {
+          "played": 1,
+          "wins": 1,
+          "draws": 0,
+          "losses": 0
+        }
+      },
+      "recent": {
+        "reports": [
+          "live-71"
+        ],
+        "played": 1,
+        "wins": 1,
+        "draws": 0,
+        "losses": 0,
+        "points": 3,
+        "ppg": 3.0,
+        "goalsFor": 2,
+        "goalsAgainst": 1,
+        "shotCoverage": 1,
+        "shotsForKnown": 6,
+        "shotsAgainstKnown": 3,
+        "scoreless": 0,
+        "zeroShotReports": [],
+        "oneGoalLosses": 0,
+        "medianGoalDifference": 1,
+        "largestWinGoalShare": 1.0,
+        "shotAdvantage": {
+          "played": 1,
+          "wins": 1,
+          "draws": 0,
+          "losses": 0
+        }
+      }
+    }
+  ],
+  "stableVersusPositionCommonOpponentNames": [],
+  "sensitivity": {
+    "stableWithoutLive69": {
+      "reports": [
+        "live-63",
+        "live-64",
+        "live-65",
+        "live-66",
+        "live-67",
+        "live-68",
+        "live-70",
+        "live-71",
+        "live-72"
+      ],
+      "played": 9,
+      "wins": 5,
+      "draws": 1,
+      "losses": 3,
+      "points": 16,
+      "ppg": 1.7777777777777777,
+      "goalsFor": 12,
+      "goalsAgainst": 8,
+      "shotCoverage": 8,
+      "shotsForKnown": 31,
+      "shotsAgainstKnown": 37,
+      "scoreless": 3,
+      "zeroShotReports": [
+        "live-66"
+      ],
+      "oneGoalLosses": 3,
+      "medianGoalDifference": 1,
+      "largestWinGoalShare": 0.25,
+      "shotAdvantage": {
+        "played": 5,
+        "wins": 5,
+        "draws": 0,
+        "losses": 0
+      }
+    },
+    "stableWithoutLowCountLive66And69": {
+      "reports": [
+        "live-63",
+        "live-64",
+        "live-65",
+        "live-67",
+        "live-68",
+        "live-70",
+        "live-71",
+        "live-72"
+      ],
+      "played": 8,
+      "wins": 5,
+      "draws": 1,
+      "losses": 2,
+      "points": 16,
+      "ppg": 2.0,
+      "goalsFor": 12,
+      "goalsAgainst": 7,
+      "shotCoverage": 7,
+      "shotsForKnown": 31,
+      "shotsAgainstKnown": 24,
+      "scoreless": 2,
+      "zeroShotReports": [],
+      "oneGoalLosses": 2,
+      "medianGoalDifference": 1.0,
+      "largestWinGoalShare": 0.25,
+      "shotAdvantage": {
+        "played": 5,
+        "wins": 5,
+        "draws": 0,
+        "losses": 0
+      }
+    },
+    "mixedWithout7to0": {
+      "reports": [
+        "live-53",
+        "live-54",
+        "live-55",
+        "live-56",
+        "live-58",
+        "live-59",
+        "live-60",
+        "live-61",
+        "live-62"
+      ],
+      "played": 9,
+      "wins": 3,
+      "draws": 0,
+      "losses": 6,
+      "points": 9,
+      "ppg": 1.0,
+      "goalsFor": 8,
+      "goalsAgainst": 10,
+      "shotCoverage": 9,
+      "shotsForKnown": 63,
+      "shotsAgainstKnown": 39,
+      "scoreless": 4,
+      "zeroShotReports": [],
+      "oneGoalLosses": 5,
+      "medianGoalDifference": -1,
+      "largestWinGoalShare": 0.375,
+      "shotAdvantage": {
+        "played": 7,
+        "wins": 3,
+        "draws": 0,
+        "losses": 4
+      }
+    },
+    "stableLossesOutcomeSelected": {
+      "reports": [
+        "live-66",
+        "live-67",
+        "live-68",
+        "live-69"
+      ],
+      "played": 4,
+      "wins": 0,
+      "draws": 0,
+      "losses": 4,
+      "points": 0,
+      "ppg": 0.0,
+      "goalsFor": 1,
+      "goalsAgainst": 7,
+      "shotCoverage": 4,
+      "shotsForKnown": 4,
+      "shotsAgainstKnown": 40,
+      "scoreless": 3,
+      "zeroShotReports": [
+        "live-66",
+        "live-69"
+      ],
+      "oneGoalLosses": 3,
+      "medianGoalDifference": -1.0,
+      "largestWinGoalShare": 0.0,
+      "shotAdvantage": {
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0
+      }
+    }
+  },
+  "reportCounterAudit": {
+    "complete": 78,
+    "missing": [
+      "live-29",
+      "live-72"
+    ],
+    "allCompleteSotEqualsGoalsBothSides": true,
+    "reportedShots": 512,
+    "reportedSot": 102,
+    "reportedShotsDespiteNoReportedShoot53to62": [
+      "live-53",
+      "live-55",
+      "live-57",
+      "live-59",
+      "live-60"
+    ]
+  },
+  "batchReconciliation": {
+    "ranked-batch-01.json": {
+      "completed": 5,
+      "target": 5,
+      "status": "complete; post-batch review saved",
+      "counterDelta": {
+        "played": 5,
+        "wins": 3,
+        "draws": 0,
+        "losses": 2,
+        "points": 9,
+        "goalsFor": 8,
+        "goalsAgainst": 6
+      },
+      "matchesExactly": true
+    },
+    "ranked-batch-02.json": {
+      "completed": 5,
+      "target": 5,
+      "status": "complete;reviewsaved;unchangedM8",
+      "counterDelta": {
+        "played": 5,
+        "wins": 2,
+        "draws": 1,
+        "losses": 2,
+        "points": 7,
+        "goalsFor": 4,
+        "goalsAgainst": 5
+      },
+      "matchesExactly": true
+    },
+    "ranked-batch-03.json": {
+      "completed": 5,
+      "target": 5,
+      "status": "complete;1W4L;notadoptedasfinal",
+      "counterDelta": {
+        "played": 5,
+        "wins": 1,
+        "draws": 0,
+        "losses": 4,
+        "points": 3,
+        "goalsFor": 5,
+        "goalsAgainst": 8
+      },
+      "matchesExactly": true
+    },
+    "ranked-batch-04.json": {
+      "completed": 1,
+      "target": 5,
+      "status": "owner-ended-partial",
+      "counterDelta": {
+        "played": 1,
+        "wins": 1,
+        "draws": 0,
+        "losses": 0,
+        "points": 3,
+        "goalsFor": 1,
+        "goalsAgainst": 0
+      },
+      "matchesExactly": true
+    }
+  },
+  "baselineIntegrity": "five prompt hashes, five config hashes, export versions and bundle hash verified locally",
+  "limitations": [
+    "Early window has no AWAY support; side adjustment is not identifiable.",
+    "Opponent names do not prove identical opponent versions. No pre-match strength covariate.",
+    "Sensitivity exclusions never replace official results; outcome selection is diagnostic only.",
+    "M8 has no captured per-tick input/output/execution chain for these recent matches.",
+    "Latest verified live configuration remains the saved 15:39 UTC snapshot, not a new portal read."
+  ]
+}

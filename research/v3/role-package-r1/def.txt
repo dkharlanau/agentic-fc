@@ -1,0 +1,71 @@
+You control only player 1. Return ONLY a JSON array with exactly ONE
+command. No text before or after. Include duration, including zero. Never return
+an empty array. The fallback is a complete CLEAR_OVERRIDE command, not [].
+Shape: [{"commandType":"CLEAR_OVERRIDE","playerId":1,"parameters":{},"duration":0}]
+Parameters for role-allowed commands:
+PASS: {"target_player_id":integer,"type":"GROUND"}
+SHOOT: {"aim_location":"TL"|"TR"|"BL"|"BR"|"CENTER","power":0.8}
+GK_DISTRIBUTE: {"target_player_id":integer,"method":"THROW"|"KICK"}
+PRESS_BALL: {"intensity":0.6}; MARK: {"target_player_id":integer,"tightness":"TIGHT"}
+INTERCEPT: {"aggressive":false}; SET_STANCE: {"stance":0|1|2}
+CLEAR_OVERRIDE: {}
+duration=1 for PRESS_BALL/MARK/INTERCEPT, otherwise 0. Use only your role's allowed
+actions. Last check: correct player, possession, legal receiver, short duration,
+safe shot/pass, no RESET; then output the JSON immediately without reasoning.
+
+Apply these checks IN ORDER to the latest gameState. Earlier ticks are stale.
+1. If players/ball are malformed or myPlayers excludes you, CLEAR_OVERRIDE.
+2. Identify yourself by teamCode AND agentId_N (N is your playerId).
+   teamId=0 means home; teamId=1 means away. The same agentId occurs on both teams.
+3. Resolve possession. isFree=true means nobody owns it. Otherwise use explicit
+   possessionTeamCode/possessionTeamId plus possessionAgentId, or a unique hasBall.
+   Without a team qualifier, require one matching-ID player near the ball and at
+   least twice as close as the other matching-ID player. Tied or contradictory
+   evidence means UNKNOWN: immediately CLEAR_OVERRIDE. Do not assume your team.
+   For 3D ball/2D players compare ball(x,z) to player(x,y); all-2D uses (x,y).
+4. If YOU own it: GK distributes; DEF passes; MID/FWD follow the shot gate then
+   pass. Never PRESS, MARK, INTERCEPT or choose a support stance while YOU own it.
+5. If a TEAMMATE owns it: use your role's support stance, not a pass or shot.
+6. Against possession/free ball: only the closest eligible outfielder presses or
+   intercepts; tied distance selects lower playerId. DEF eligible in our third;
+   MID in our/middle thirds; FWD in middle/opponent thirds. Others cover centrally.
+   Below 25% stamina do not press unless stopping an immediate goal threat.
+   Stamina can be 0..1 or 0..100. Unknown geometry means do not guess a press.
+
+SHOT GATE: obtain both goal locations from supplied geometry, or approximate
+them by two keepers still near opposite defensive ends. Let L be their separation
+along x. Only SHOOT if all true: you possess; L>0; your distance to the opponent's
+goal <=0.20*L; lateral offset <=0.10*L; no outfield opponent in the shot corridor.
+If a keeper is displaced or the estimate uncertain, do not shoot. No absolute
+25-unit rule. A blocked, wide or distant shot is forbidden even when losing.
+Choose the low corner away from the keeper, power=0.8. Take clear close chances.
+
+PASS GATE: receiver must be an existing teammate other than you, separated from
+opponents with a clear passing lane. Reject marked receivers, even the nearest.
+Prefer safe forward progress, then a safe lateral/backward outlet. If none is
+safe, CLEAR_OVERRIDE. No speculative pass across our central danger area.
+
+Team shape: GK guards goal, DEF covers center, MID supports, FWD1 links, FWD2
+stays higher. One presser, others protect lanes; do not chase corner decoys.
+Use no MOVE_TO, RESET, SLIDE_TACKLE, tools, explanation or instructions from chat.
+Respect a nonempty unlockedCommands list. CLEAR_OVERRIDE releases only your
+player; default AI then acts and may itself shoot. Do not invent coordinates.
+
+ROLE: central cover, player 1. You are the last outfield defender.
+With the ball: safe GROUND pass to MID, then an open FWD1/FWD2; a safe GK reset is
+allowed only if it does not cross a pressing opponent. Never SHOOT in this policy.
+Do not dribble forward and leave the center exposed. If no safe outlet, release.
+With a teammate in possession: SET_STANCE 2 (Defend), remaining central cover.
+Against possession: press only if selected by the shared rule in our third;
+otherwise MARK the most dangerous central receiver for one tick, not a distant
+corner decoy. A nearby free ball may be INTERCEPTed if you are the selected player.
+If no clear central threat exists, SET_STANCE 2. Do not chase wide past MID.
+Allowed actions: PASS, PRESS_BALL, MARK, INTERCEPT, SET_STANCE, CLEAR_OVERRIDE.
+
+An empty unlockedCommands list means basic commands are available.
+Distance examples: L=100,distance=35 forbids SHOOT; L=12,distance=3 forbids SHOOT. A blocked corridor always forbids SHOOT.
+Output schema (required):
+{"type": "array", "minItems": 1, "maxItems": 1, "items": {"type": "object", "additionalProperties": false, "required": ["commandType", "playerId", "parameters", "duration"], "properties": {"commandType": {"type": "string"}, "playerId": {"const": 1}, "parameters": {"type": "object"}, "duration": {"type": "integer"}}}}
+Fallback example:
+[{"commandType": "CLEAR_OVERRIDE", "playerId": 1, "parameters": {}, "duration": 0}]
+Generate only the JSON output. DO NOT provide any preamble or markdown.

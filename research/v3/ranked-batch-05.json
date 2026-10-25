@@ -1,0 +1,246 @@
+{
+  "status": "stopped-critical-execution-signal",
+  "ownerAuthorization": "Start a test in real games; one stable five-game cohort",
+  "setup": "M8-original-five-formation112",
+  "coachVersion": "coach-v1.0",
+  "fitness": {
+    "passed": 5,
+    "total": 5,
+    "source": "fresh portal UI",
+    "reportedAverageMs": 0,
+    "zeroLatencyCaveat": "portal displayed0ms; not actual model speed"
+  },
+  "before": {
+    "rank": 15,
+    "points": 164,
+    "played": 94,
+    "wins": 54,
+    "draws": 2,
+    "losses": 38,
+    "goalsFor": 123,
+    "goalsAgainst": 84,
+    "capturedAtUTC": "2026-10-24T17:40:00Z",
+    "captureTimePrecision": "minute"
+  },
+  "targetCompleted": 5,
+  "games": [
+    {
+      "alias": "batch05-game1",
+      "opponent": "LFC",
+      "side": "HOME",
+      "mode": "real-ranked",
+      "origin": "manual-random",
+      "status": "completed",
+      "setup": "M8-original-five-formation112",
+      "startedAtUTC": "2026-10-24T17:41:00Z",
+      "timePrecision": "minute",
+      "outcome": "LOSS",
+      "goalsFor": 0,
+      "goalsAgainst": 2,
+      "shotsFor": 8,
+      "shotsAgainst": 6,
+      "shotsOnTargetFor": 0,
+      "shotsOnTargetAgainst": 2,
+      "possessionPercent": 42,
+      "commandsFor": 370,
+      "commandsAgainst": 9,
+      "latencyAverageMs": 178,
+      "opponentLatencyAverageMs": 3,
+      "roleLatencyMs": [
+        242,
+        139,
+        273,
+        256,
+        137
+      ],
+      "roleSuccessPercent": [
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "opponentRoleLatencyMs": [
+        4,
+        3,
+        3,
+        3,
+        3
+      ],
+      "commandBreakdown": {
+        "MOVE_TO": 303,
+        "INTERCEPT": 29,
+        "PRESS_BALL": 23,
+        "CLEAR_OVERRIDE": 8,
+        "GK_DISTRIBUTE": 4,
+        "PASS": 3
+      },
+      "source": "Primary match report and final viewer; AI Overview excluded",
+      "completedAtUTC": "2026-10-24T17:45:00Z"
+    },
+    {
+      "alias": "batch05-game2",
+      "opponent": "CypherForce Hotshots",
+      "side": "HOME",
+      "mode": "real-ranked",
+      "origin": "manual-random",
+      "status": "completed",
+      "setup": "M8-original-five-formation112",
+      "startedAtUTC": "2026-10-24T17:46:00Z",
+      "timePrecision": "minute",
+      "outcome": "LOSS",
+      "goalsFor": 0,
+      "goalsAgainst": 2,
+      "shotsFor": 1,
+      "shotsAgainst": 7,
+      "shotsOnTargetFor": 0,
+      "shotsOnTargetAgainst": 2,
+      "possessionPercent": 46,
+      "commandsFor": 0,
+      "commandsAgainst": 0,
+      "latencyAverageMs": 11660,
+      "opponentLatencyAverageMs": 7,
+      "roleLatencyMs": [
+        12610,
+        12311,
+        7733,
+        13031,
+        12615
+      ],
+      "roleSuccessPercent": [
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "opponentRoleLatencyMs": [
+        8,
+        7,
+        7,
+        7,
+        7
+      ],
+      "source": "Primary match report; AI Overview excluded",
+      "ownerObservation": "Opponent runner finished from an angle; no replay attribution verified"
+    }
+  ],
+  "rules": [
+    "No changes between games",
+    "No parallel matchmaking or probes",
+    "Stop on critical execution failure",
+    "Rejected role package remains undeployed"
+  ],
+  "pauseReason": "All five role latencies7733..13031ms with0reportedcommands; critical transport/execution/measurement signal, not ordinary defeat. No causal attribution yet.",
+  "completedCount": 2,
+  "backgroundGames": [
+    {
+      "alias": "incoming-octopus-after-critical-pause",
+      "opponent": "Octopus",
+      "side": "AWAY",
+      "origin": "incoming",
+      "setup": "M8-original-five-formation112",
+      "outcome": "LOSS",
+      "goalsFor": 1,
+      "goalsAgainst": 2,
+      "shotsFor": 9,
+      "shotsAgainst": 6,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 2,
+      "possessionPercent": 53,
+      "commandsFor": 400,
+      "commandsAgainst": 14,
+      "latencyAverageMs": 73,
+      "opponentLatencyAverageMs": 1,
+      "roleLatencyMs": [
+        80,
+        77,
+        75,
+        78,
+        80
+      ],
+      "roleSuccessPercent": [
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "opponentRoleLatencyMs": [
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "note": "Outside paused manual cohort. Opponent live coach instruction observed. Unchanged baseline; no manual game start."
+    }
+  ],
+  "after": {
+    "rank": 15,
+    "points": 164,
+    "played": 98,
+    "wins": 54,
+    "draws": 2,
+    "losses": 42,
+    "goalsFor": 124,
+    "goalsAgainst": 92,
+    "goalDifference": 32,
+    "capturedAtUTC": "2026-10-24T18:29:25.535706+00:00",
+    "captureTimePrecision": "seconds; timestamp is private AX file save time",
+    "source": "Fresh primary portal leaderboard; private AX and screenshot"
+  },
+  "reconciliation": {
+    "cohortGames": 2,
+    "outsideCohortGames": 2,
+    "wins": 0,
+    "draws": 0,
+    "losses": 4,
+    "goalsFor": 1,
+    "goalsAgainst": 8,
+    "pointsGained": 0,
+    "playedDelta": 4,
+    "exactAccountDeltaMatch": true,
+    "practiceExcluded": true
+  },
+  "outsideCohortPilotGame": {
+    "alias": "incoming-allcash-fast-fwd2",
+    "opponent": "AllCash United",
+    "side": "AWAY",
+    "origin": "incoming",
+    "setup": "M8-four-original-plus-fast-FWD2-b99bf77-formation112",
+    "outcome": "LOSS",
+    "goalsFor": 0,
+    "goalsAgainst": 2,
+    "shotsFor": 5,
+    "shotsAgainst": 9,
+    "shotsOnTargetFor": 0,
+    "shotsOnTargetAgainst": 2,
+    "possessionPercent": 62,
+    "commandsFor": 370,
+    "commandsAgainst": 44,
+    "latencyAverageMs": 88,
+    "roleLatencyMs": [
+      83,
+      84,
+      86,
+      82,
+      82
+    ],
+    "roleSuccessPercent": [
+      100,
+      100,
+      100,
+      100,
+      100
+    ],
+    "opponentRoleLatencyMs": [
+      2,
+      2,
+      2,
+      1,
+      79
+    ],
+    "note": "Unrequested incoming start during Practice; not a clean serial control. Recorded separately and never interrupted."
+  }
+}

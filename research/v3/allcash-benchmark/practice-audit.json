@@ -1,0 +1,1708 @@
+{
+  "kind": "Own exact-session decision audit; compute is not transport latency",
+  "alias": "fixed-reference-practice",
+  "side": 0,
+  "queriedAt": "2026-10-24T18:56:13.144205+00:00",
+  "summary": {
+    "count": 84,
+    "computeMedianMs": 0.53986,
+    "computeP95Ms": 0.597233,
+    "computeMaxMs": 0.654519,
+    "commands": {
+      "CLEAR_OVERRIDE": 45,
+      "PRESS_BALL": 1,
+      "SET_STANCE": 36,
+      "PASS": 2
+    },
+    "reasons": {
+      "MALFORMED_POSITION": 1,
+      "UNKNOWN_POSSESSION": 25,
+      "SINGLE_LOCAL_PRESS": 1,
+      "KEEP_SHAPE": 32,
+      "ENGINE_RESTART": 19,
+      "SAFE_OUTLET": 2,
+      "ROLE_SUPPORT": 4
+    },
+    "frames": {
+      "missing": 1,
+      "keeper_reference_xz": 83
+    },
+    "modelCalls": 0,
+    "buildCommits": [
+      "8747a88"
+    ]
+  },
+  "rows": [
+    {
+      "reason": "MALFORMED_POSITION",
+      "computeMs": 0.036242,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 4,
+        "parameters": {},
+        "duration": 0
+      },
+      "timestamp": "2026-10-24T18:51:17.840000+00:00"
+    },
+    {
+      "reason": "UNKNOWN_POSSESSION",
+      "computeMs": 0.623053,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 4,
+        "parameters": {},
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "UNKNOWN",
+      "playMode": "PLAY_ON",
+      "inferredPossession": false,
+      "timestamp": "2026-10-24T18:52:44.752000+00:00"
+    },
+    {
+      "reason": "SINGLE_LOCAL_PRESS",
+      "computeMs": 0.603763,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "PRESS_BALL",
+        "playerId": 4,
+        "parameters": {
+          "intensity": 0.6
+        },
+        "duration": 1
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "THEIRS",
+      "playMode": "PLAY_ON",
+      "inferredPossession": true,
+      "timestamp": "2026-10-24T18:52:46.751000+00:00"
+    },
+    {
+      "reason": "KEEP_SHAPE",
+      "computeMs": 0.524185,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "SET_STANCE",
+        "playerId": 4,
+        "parameters": {
+          "stance": 0
+        },
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "FREE",
+      "playMode": "PLAY_ON",
+      "inferredPossession": false,
+      "timestamp": "2026-10-24T18:52:48.743000+00:00"
+    },
+    {
+      "reason": "ENGINE_RESTART",
+      "computeMs": 0.500695,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 4,
+        "parameters": {},
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "FREE",
+      "playMode": "RESETTING",
+      "inferredPossession": false,
+      "timestamp": "2026-10-24T18:52:50.754000+00:00"
+    },
+    {
+      "reason": "UNKNOWN_POSSESSION",
+      "computeMs": 0.539175,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 4,
+        "parameters": {},
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "UNKNOWN",
+      "playMode": "RESETTING",
+      "inferredPossession": false,
+      "timestamp": "2026-10-24T18:52:52.711000+00:00"
+    },
+    {
+      "reason": "ENGINE_RESTART",
+      "computeMs": 0.561878,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 4,
+        "parameters": {},
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "THEIRS",
+      "playMode": "RESETTING",
+      "inferredPossession": true,
+      "timestamp": "2026-10-24T18:52:54.751000+00:00"
+    },
+    {
+      "reason": "ENGINE_RESTART",
+      "computeMs": 0.549964,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 4,
+        "parameters": {},
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "THEIRS",
+      "playMode": "RESETTING",
+      "inferredPossession": true,
+      "timestamp": "2026-10-24T18:52:58.714000+00:00"
+    },
+    {
+      "reason": "ENGINE_RESTART",
+      "computeMs": 0.539733,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 4,
+        "parameters": {},
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "THEIRS",
+      "playMode": "RESETTING",
+      "inferredPossession": true,
+      "timestamp": "2026-10-24T18:53:00.752000+00:00"
+    },
+    {
+      "reason": "ENGINE_RESTART",
+      "computeMs": 0.549308,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 4,
+        "parameters": {},
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "THEIRS",
+      "playMode": "RESETTING",
+      "inferredPossession": true,
+      "timestamp": "2026-10-24T18:53:02.713000+00:00"
+    },
+    {
+      "reason": "KEEP_SHAPE",
+      "computeMs": 0.520411,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "SET_STANCE",
+        "playerId": 4,
+        "parameters": {
+          "stance": 0
+        },
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "FREE",
+      "playMode": "PLAY_ON",
+      "inferredPossession": false,
+      "timestamp": "2026-10-24T18:53:04.761000+00:00"
+    },
+    {
+      "reason": "KEEP_SHAPE",
+      "computeMs": 0.563576,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "SET_STANCE",
+        "playerId": 4,
+        "parameters": {
+          "stance": 0
+        },
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "THEIRS",
+      "playMode": "PLAY_ON",
+      "inferredPossession": true,
+      "timestamp": "2026-10-24T18:53:06.759000+00:00"
+    },
+    {
+      "reason": "KEEP_SHAPE",
+      "computeMs": 0.515406,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "SET_STANCE",
+        "playerId": 4,
+        "parameters": {
+          "stance": 0
+        },
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "FREE",
+      "playMode": "PLAY_ON",
+      "inferredPossession": false,
+      "timestamp": "2026-10-24T18:53:08.762000+00:00"
+    },
+    {
+      "reason": "UNKNOWN_POSSESSION",
+      "computeMs": 0.53833,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 4,
+        "parameters": {},
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "UNKNOWN",
+      "playMode": "PLAY_ON",
+      "inferredPossession": false,
+      "timestamp": "2026-10-24T18:53:10.725000+00:00"
+    },
+    {
+      "reason": "KEEP_SHAPE",
+      "computeMs": 0.599285,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "SET_STANCE",
+        "playerId": 4,
+        "parameters": {
+          "stance": 0
+        },
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "THEIRS",
+      "playMode": "PLAY_ON",
+      "inferredPossession": true,
+      "timestamp": "2026-10-24T18:53:12.717000+00:00"
+    },
+    {
+      "reason": "KEEP_SHAPE",
+      "computeMs": 0.511303,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "SET_STANCE",
+        "playerId": 4,
+        "parameters": {
+          "stance": 0
+        },
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "FREE",
+      "playMode": "PLAY_ON",
+      "inferredPossession": false,
+      "timestamp": "2026-10-24T18:53:14.725000+00:00"
+    },
+    {
+      "reason": "KEEP_SHAPE",
+      "computeMs": 0.516891,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "SET_STANCE",
+        "playerId": 4,
+        "parameters": {
+          "stance": 0
+        },
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "FREE",
+      "playMode": "PLAY_ON",
+      "inferredPossession": false,
+      "timestamp": "2026-10-24T18:53:16.721000+00:00"
+    },
+    {
+      "reason": "KEEP_SHAPE",
+      "computeMs": 0.513059,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "SET_STANCE",
+        "playerId": 4,
+        "parameters": {
+          "stance": 0
+        },
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "FREE",
+      "playMode": "PLAY_ON",
+      "inferredPossession": false,
+      "timestamp": "2026-10-24T18:53:18.742000+00:00"
+    },
+    {
+      "reason": "KEEP_SHAPE",
+      "computeMs": 0.515791,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "SET_STANCE",
+        "playerId": 4,
+        "parameters": {
+          "stance": 0
+        },
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "FREE",
+      "playMode": "PLAY_ON",
+      "inferredPossession": false,
+      "timestamp": "2026-10-24T18:53:20.751000+00:00"
+    },
+    {
+      "reason": "KEEP_SHAPE",
+      "computeMs": 0.563855,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "SET_STANCE",
+        "playerId": 4,
+        "parameters": {
+          "stance": 0
+        },
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "THEIRS",
+      "playMode": "PLAY_ON",
+      "inferredPossession": true,
+      "timestamp": "2026-10-24T18:53:22.722000+00:00"
+    },
+    {
+      "reason": "UNKNOWN_POSSESSION",
+      "computeMs": 0.521797,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 4,
+        "parameters": {},
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "UNKNOWN",
+      "playMode": "PLAY_ON",
+      "inferredPossession": false,
+      "timestamp": "2026-10-24T18:53:24.725000+00:00"
+    },
+    {
+      "reason": "UNKNOWN_POSSESSION",
+      "computeMs": 0.53659,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 4,
+        "parameters": {},
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "UNKNOWN",
+      "playMode": "PLAY_ON",
+      "inferredPossession": false,
+      "timestamp": "2026-10-24T18:53:26.724000+00:00"
+    },
+    {
+      "reason": "SAFE_OUTLET",
+      "computeMs": 0.615226,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 4,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "OURS",
+      "playMode": "PLAY_ON",
+      "inferredPossession": true,
+      "timestamp": "2026-10-24T18:53:28.721000+00:00"
+    },
+    {
+      "reason": "KEEP_SHAPE",
+      "computeMs": 0.577106,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "SET_STANCE",
+        "playerId": 4,
+        "parameters": {
+          "stance": 0
+        },
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "THEIRS",
+      "playMode": "PLAY_ON",
+      "inferredPossession": true,
+      "timestamp": "2026-10-24T18:53:30.758000+00:00"
+    },
+    {
+      "reason": "UNKNOWN_POSSESSION",
+      "computeMs": 0.525177,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 4,
+        "parameters": {},
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "UNKNOWN",
+      "playMode": "PLAY_ON",
+      "inferredPossession": false,
+      "timestamp": "2026-10-24T18:53:32.735000+00:00"
+    },
+    {
+      "reason": "UNKNOWN_POSSESSION",
+      "computeMs": 0.531085,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 4,
+        "parameters": {},
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "UNKNOWN",
+      "playMode": "PLAY_ON",
+      "inferredPossession": false,
+      "timestamp": "2026-10-24T18:53:34.824000+00:00"
+    },
+    {
+      "reason": "KEEP_SHAPE",
+      "computeMs": 0.519032,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "SET_STANCE",
+        "playerId": 4,
+        "parameters": {
+          "stance": 0
+        },
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "FREE",
+      "playMode": "PLAY_ON",
+      "inferredPossession": false,
+      "timestamp": "2026-10-24T18:53:39.089000+00:00"
+    },
+    {
+      "reason": "UNKNOWN_POSSESSION",
+      "computeMs": 0.531602,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 4,
+        "parameters": {},
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "UNKNOWN",
+      "playMode": "PLAY_ON",
+      "inferredPossession": false,
+      "timestamp": "2026-10-24T18:53:41.099000+00:00"
+    },
+    {
+      "reason": "KEEP_SHAPE",
+      "computeMs": 0.570657,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "SET_STANCE",
+        "playerId": 4,
+        "parameters": {
+          "stance": 0
+        },
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "THEIRS",
+      "playMode": "PLAY_ON",
+      "inferredPossession": true,
+      "timestamp": "2026-10-24T18:53:43.102000+00:00"
+    },
+    {
+      "reason": "UNKNOWN_POSSESSION",
+      "computeMs": 0.539987,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 4,
+        "parameters": {},
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "UNKNOWN",
+      "playMode": "PLAY_ON",
+      "inferredPossession": false,
+      "timestamp": "2026-10-24T18:53:45.106000+00:00"
+    },
+    {
+      "reason": "ROLE_SUPPORT",
+      "computeMs": 0.56388,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "SET_STANCE",
+        "playerId": 4,
+        "parameters": {
+          "stance": 1
+        },
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "OURS",
+      "playMode": "PLAY_ON",
+      "inferredPossession": true,
+      "timestamp": "2026-10-24T18:53:47.094000+00:00"
+    },
+    {
+      "reason": "UNKNOWN_POSSESSION",
+      "computeMs": 0.530674,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 4,
+        "parameters": {},
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "UNKNOWN",
+      "playMode": "PLAY_ON",
+      "inferredPossession": false,
+      "timestamp": "2026-10-24T18:53:49.122000+00:00"
+    },
+    {
+      "reason": "ENGINE_RESTART",
+      "computeMs": 0.507578,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 4,
+        "parameters": {},
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "FREE",
+      "playMode": "RESETTING",
+      "inferredPossession": false,
+      "timestamp": "2026-10-24T18:53:51.131000+00:00"
+    },
+    {
+      "reason": "UNKNOWN_POSSESSION",
+      "computeMs": 0.522995,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 4,
+        "parameters": {},
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "UNKNOWN",
+      "playMode": "RESETTING",
+      "inferredPossession": false,
+      "timestamp": "2026-10-24T18:53:53.135000+00:00"
+    },
+    {
+      "reason": "UNKNOWN_POSSESSION",
+      "computeMs": 0.531085,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 4,
+        "parameters": {},
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "UNKNOWN",
+      "playMode": "RESETTING",
+      "inferredPossession": false,
+      "timestamp": "2026-10-24T18:53:55.140000+00:00"
+    },
+    {
+      "reason": "ENGINE_RESTART",
+      "computeMs": 0.585483,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 4,
+        "parameters": {},
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "THEIRS",
+      "playMode": "RESETTING",
+      "inferredPossession": true,
+      "timestamp": "2026-10-24T18:53:59.107000+00:00"
+    },
+    {
+      "reason": "ENGINE_RESTART",
+      "computeMs": 0.59647,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 4,
+        "parameters": {},
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "THEIRS",
+      "playMode": "RESETTING",
+      "inferredPossession": true,
+      "timestamp": "2026-10-24T18:54:01.145000+00:00"
+    },
+    {
+      "reason": "ENGINE_RESTART",
+      "computeMs": 0.554378,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 4,
+        "parameters": {},
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "THEIRS",
+      "playMode": "RESETTING",
+      "inferredPossession": true,
+      "timestamp": "2026-10-24T18:54:03.098000+00:00"
+    },
+    {
+      "reason": "KEEP_SHAPE",
+      "computeMs": 0.575613,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "SET_STANCE",
+        "playerId": 4,
+        "parameters": {
+          "stance": 0
+        },
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "THEIRS",
+      "playMode": "PLAY_ON",
+      "inferredPossession": true,
+      "timestamp": "2026-10-24T18:54:05.102000+00:00"
+    },
+    {
+      "reason": "UNKNOWN_POSSESSION",
+      "computeMs": 0.530683,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 4,
+        "parameters": {},
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "UNKNOWN",
+      "playMode": "PLAY_ON",
+      "inferredPossession": false,
+      "timestamp": "2026-10-24T18:54:07.101000+00:00"
+    },
+    {
+      "reason": "UNKNOWN_POSSESSION",
+      "computeMs": 0.525891,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 4,
+        "parameters": {},
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "UNKNOWN",
+      "playMode": "PLAY_ON",
+      "inferredPossession": false,
+      "timestamp": "2026-10-24T18:54:09.111000+00:00"
+    },
+    {
+      "reason": "ENGINE_RESTART",
+      "computeMs": 0.502327,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 4,
+        "parameters": {},
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "FREE",
+      "playMode": "RESETTING",
+      "inferredPossession": false,
+      "timestamp": "2026-10-24T18:54:11.103000+00:00"
+    },
+    {
+      "reason": "UNKNOWN_POSSESSION",
+      "computeMs": 0.52041,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 4,
+        "parameters": {},
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "UNKNOWN",
+      "playMode": "RESETTING",
+      "inferredPossession": false,
+      "timestamp": "2026-10-24T18:54:13.714000+00:00"
+    },
+    {
+      "reason": "ENGINE_RESTART",
+      "computeMs": 0.562502,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 4,
+        "parameters": {},
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "THEIRS",
+      "playMode": "RESETTING",
+      "inferredPossession": true,
+      "timestamp": "2026-10-24T18:54:15.106000+00:00"
+    },
+    {
+      "reason": "ENGINE_RESTART",
+      "computeMs": 0.551146,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 4,
+        "parameters": {},
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "THEIRS",
+      "playMode": "RESETTING",
+      "inferredPossession": true,
+      "timestamp": "2026-10-24T18:54:19.103000+00:00"
+    },
+    {
+      "reason": "ENGINE_RESTART",
+      "computeMs": 0.54537,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 4,
+        "parameters": {},
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "THEIRS",
+      "playMode": "RESETTING",
+      "inferredPossession": true,
+      "timestamp": "2026-10-24T18:54:21.121000+00:00"
+    },
+    {
+      "reason": "ENGINE_RESTART",
+      "computeMs": 0.567317,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 4,
+        "parameters": {},
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "THEIRS",
+      "playMode": "RESETTING",
+      "inferredPossession": true,
+      "timestamp": "2026-10-24T18:54:23.156000+00:00"
+    },
+    {
+      "reason": "KEEP_SHAPE",
+      "computeMs": 0.567006,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "SET_STANCE",
+        "playerId": 4,
+        "parameters": {
+          "stance": 0
+        },
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "THEIRS",
+      "playMode": "PLAY_ON",
+      "inferredPossession": true,
+      "timestamp": "2026-10-24T18:54:25.149000+00:00"
+    },
+    {
+      "reason": "UNKNOWN_POSSESSION",
+      "computeMs": 0.538986,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 4,
+        "parameters": {},
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "UNKNOWN",
+      "playMode": "PLAY_ON",
+      "inferredPossession": false,
+      "timestamp": "2026-10-24T18:54:27.112000+00:00"
+    },
+    {
+      "reason": "KEEP_SHAPE",
+      "computeMs": 0.514519,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "SET_STANCE",
+        "playerId": 4,
+        "parameters": {
+          "stance": 0
+        },
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "FREE",
+      "playMode": "PLAY_ON",
+      "inferredPossession": false,
+      "timestamp": "2026-10-24T18:54:29.145000+00:00"
+    },
+    {
+      "reason": "KEEP_SHAPE",
+      "computeMs": 0.50848,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "SET_STANCE",
+        "playerId": 4,
+        "parameters": {
+          "stance": 0
+        },
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "FREE",
+      "playMode": "PLAY_ON",
+      "inferredPossession": false,
+      "timestamp": "2026-10-24T18:54:31.109000+00:00"
+    },
+    {
+      "reason": "KEEP_SHAPE",
+      "computeMs": 0.574956,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "SET_STANCE",
+        "playerId": 4,
+        "parameters": {
+          "stance": 0
+        },
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "THEIRS",
+      "playMode": "PLAY_ON",
+      "inferredPossession": true,
+      "timestamp": "2026-10-24T18:54:33.309000+00:00"
+    },
+    {
+      "reason": "KEEP_SHAPE",
+      "computeMs": 0.519287,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "SET_STANCE",
+        "playerId": 4,
+        "parameters": {
+          "stance": 0
+        },
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "FREE",
+      "playMode": "PLAY_ON",
+      "inferredPossession": false,
+      "timestamp": "2026-10-24T18:54:35.307000+00:00"
+    },
+    {
+      "reason": "UNKNOWN_POSSESSION",
+      "computeMs": 0.597233,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 4,
+        "parameters": {},
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "UNKNOWN",
+      "playMode": "PLAY_ON",
+      "inferredPossession": false,
+      "timestamp": "2026-10-24T18:54:37.306000+00:00"
+    },
+    {
+      "reason": "UNKNOWN_POSSESSION",
+      "computeMs": 0.524201,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 4,
+        "parameters": {},
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "UNKNOWN",
+      "playMode": "PLAY_ON",
+      "inferredPossession": false,
+      "timestamp": "2026-10-24T18:54:39.310000+00:00"
+    },
+    {
+      "reason": "UNKNOWN_POSSESSION",
+      "computeMs": 0.532045,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 4,
+        "parameters": {},
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "UNKNOWN",
+      "playMode": "PLAY_ON",
+      "inferredPossession": false,
+      "timestamp": "2026-10-24T18:54:41.307000+00:00"
+    },
+    {
+      "reason": "UNKNOWN_POSSESSION",
+      "computeMs": 0.519959,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 4,
+        "parameters": {},
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "UNKNOWN",
+      "playMode": "PLAY_ON",
+      "inferredPossession": false,
+      "timestamp": "2026-10-24T18:54:43.307000+00:00"
+    },
+    {
+      "reason": "ROLE_SUPPORT",
+      "computeMs": 0.55981,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "SET_STANCE",
+        "playerId": 4,
+        "parameters": {
+          "stance": 1
+        },
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "OURS",
+      "playMode": "PLAY_ON",
+      "inferredPossession": true,
+      "timestamp": "2026-10-24T18:54:45.309000+00:00"
+    },
+    {
+      "reason": "KEEP_SHAPE",
+      "computeMs": 0.571962,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "SET_STANCE",
+        "playerId": 4,
+        "parameters": {
+          "stance": 0
+        },
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "THEIRS",
+      "playMode": "PLAY_ON",
+      "inferredPossession": true,
+      "timestamp": "2026-10-24T18:54:47.312000+00:00"
+    },
+    {
+      "reason": "KEEP_SHAPE",
+      "computeMs": 0.531971,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "SET_STANCE",
+        "playerId": 4,
+        "parameters": {
+          "stance": 0
+        },
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "FREE",
+      "playMode": "PLAY_ON",
+      "inferredPossession": false,
+      "timestamp": "2026-10-24T18:54:49.309000+00:00"
+    },
+    {
+      "reason": "KEEP_SHAPE",
+      "computeMs": 0.515766,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "SET_STANCE",
+        "playerId": 4,
+        "parameters": {
+          "stance": 0
+        },
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "FREE",
+      "playMode": "PLAY_ON",
+      "inferredPossession": false,
+      "timestamp": "2026-10-24T18:54:51.309000+00:00"
+    },
+    {
+      "reason": "UNKNOWN_POSSESSION",
+      "computeMs": 0.5323,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 4,
+        "parameters": {},
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "UNKNOWN",
+      "playMode": "PLAY_ON",
+      "inferredPossession": false,
+      "timestamp": "2026-10-24T18:54:53.309000+00:00"
+    },
+    {
+      "reason": "KEEP_SHAPE",
+      "computeMs": 0.540315,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "SET_STANCE",
+        "playerId": 4,
+        "parameters": {
+          "stance": 0
+        },
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "FREE",
+      "playMode": "PLAY_ON",
+      "inferredPossession": false,
+      "timestamp": "2026-10-24T18:54:55.397000+00:00"
+    },
+    {
+      "reason": "KEEP_SHAPE",
+      "computeMs": 0.518302,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "SET_STANCE",
+        "playerId": 4,
+        "parameters": {
+          "stance": 0
+        },
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "FREE",
+      "playMode": "PLAY_ON",
+      "inferredPossession": false,
+      "timestamp": "2026-10-24T18:54:57.310000+00:00"
+    },
+    {
+      "reason": "KEEP_SHAPE",
+      "computeMs": 0.527639,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "SET_STANCE",
+        "playerId": 4,
+        "parameters": {
+          "stance": 0
+        },
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "FREE",
+      "playMode": "PLAY_ON",
+      "inferredPossession": false,
+      "timestamp": "2026-10-24T18:54:59.305000+00:00"
+    },
+    {
+      "reason": "KEEP_SHAPE",
+      "computeMs": 0.574727,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "SET_STANCE",
+        "playerId": 4,
+        "parameters": {
+          "stance": 0
+        },
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "THEIRS",
+      "playMode": "PLAY_ON",
+      "inferredPossession": true,
+      "timestamp": "2026-10-24T18:55:01.324000+00:00"
+    },
+    {
+      "reason": "KEEP_SHAPE",
+      "computeMs": 0.568614,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "SET_STANCE",
+        "playerId": 4,
+        "parameters": {
+          "stance": 0
+        },
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "THEIRS",
+      "playMode": "PLAY_ON",
+      "inferredPossession": true,
+      "timestamp": "2026-10-24T18:55:03.313000+00:00"
+    },
+    {
+      "reason": "UNKNOWN_POSSESSION",
+      "computeMs": 0.519032,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 4,
+        "parameters": {},
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "UNKNOWN",
+      "playMode": "PLAY_ON",
+      "inferredPossession": false,
+      "timestamp": "2026-10-24T18:55:05.347000+00:00"
+    },
+    {
+      "reason": "ROLE_SUPPORT",
+      "computeMs": 0.557398,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "SET_STANCE",
+        "playerId": 4,
+        "parameters": {
+          "stance": 1
+        },
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "OURS",
+      "playMode": "PLAY_ON",
+      "inferredPossession": true,
+      "timestamp": "2026-10-24T18:55:07.311000+00:00"
+    },
+    {
+      "reason": "KEEP_SHAPE",
+      "computeMs": 0.580224,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "SET_STANCE",
+        "playerId": 4,
+        "parameters": {
+          "stance": 0
+        },
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "THEIRS",
+      "playMode": "PLAY_ON",
+      "inferredPossession": true,
+      "timestamp": "2026-10-24T18:55:09.313000+00:00"
+    },
+    {
+      "reason": "KEEP_SHAPE",
+      "computeMs": 0.560524,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "SET_STANCE",
+        "playerId": 4,
+        "parameters": {
+          "stance": 0
+        },
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "FREE",
+      "playMode": "PLAY_ON",
+      "inferredPossession": false,
+      "timestamp": "2026-10-24T18:55:11.314000+00:00"
+    },
+    {
+      "reason": "UNKNOWN_POSSESSION",
+      "computeMs": 0.527163,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 4,
+        "parameters": {},
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "UNKNOWN",
+      "playMode": "PLAY_ON",
+      "inferredPossession": false,
+      "timestamp": "2026-10-24T18:55:13.322000+00:00"
+    },
+    {
+      "reason": "SAFE_OUTLET",
+      "computeMs": 0.654519,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 4,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "OURS",
+      "playMode": "PLAY_ON",
+      "inferredPossession": true,
+      "timestamp": "2026-10-24T18:55:15.321000+00:00"
+    },
+    {
+      "reason": "ROLE_SUPPORT",
+      "computeMs": 0.564396,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "SET_STANCE",
+        "playerId": 4,
+        "parameters": {
+          "stance": 1
+        },
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "OURS",
+      "playMode": "PLAY_ON",
+      "inferredPossession": true,
+      "timestamp": "2026-10-24T18:55:17.317000+00:00"
+    },
+    {
+      "reason": "ENGINE_RESTART",
+      "computeMs": 0.505436,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 4,
+        "parameters": {},
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "FREE",
+      "playMode": "RESETTING",
+      "inferredPossession": false,
+      "timestamp": "2026-10-24T18:55:19.328000+00:00"
+    },
+    {
+      "reason": "UNKNOWN_POSSESSION",
+      "computeMs": 0.534934,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 4,
+        "parameters": {},
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "UNKNOWN",
+      "playMode": "RESETTING",
+      "inferredPossession": false,
+      "timestamp": "2026-10-24T18:55:21.321000+00:00"
+    },
+    {
+      "reason": "ENGINE_RESTART",
+      "computeMs": 0.550777,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 4,
+        "parameters": {},
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "THEIRS",
+      "playMode": "RESETTING",
+      "inferredPossession": true,
+      "timestamp": "2026-10-24T18:55:23.325000+00:00"
+    },
+    {
+      "reason": "ENGINE_RESTART",
+      "computeMs": 0.572806,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 4,
+        "parameters": {},
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "THEIRS",
+      "playMode": "RESETTING",
+      "inferredPossession": true,
+      "timestamp": "2026-10-24T18:55:27.317000+00:00"
+    },
+    {
+      "reason": "ENGINE_RESTART",
+      "computeMs": 0.591375,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 4,
+        "parameters": {},
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "THEIRS",
+      "playMode": "RESETTING",
+      "inferredPossession": true,
+      "timestamp": "2026-10-24T18:55:29.333000+00:00"
+    },
+    {
+      "reason": "ENGINE_RESTART",
+      "computeMs": 0.556693,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 4,
+        "parameters": {},
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "THEIRS",
+      "playMode": "RESETTING",
+      "inferredPossession": true,
+      "timestamp": "2026-10-24T18:55:31.316000+00:00"
+    },
+    {
+      "reason": "KEEP_SHAPE",
+      "computeMs": 0.578952,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "SET_STANCE",
+        "playerId": 4,
+        "parameters": {
+          "stance": 0
+        },
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "THEIRS",
+      "playMode": "PLAY_ON",
+      "inferredPossession": true,
+      "timestamp": "2026-10-24T18:55:33.328000+00:00"
+    },
+    {
+      "reason": "UNKNOWN_POSSESSION",
+      "computeMs": 0.560639,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 4,
+        "parameters": {},
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "UNKNOWN",
+      "playMode": "PLAY_ON",
+      "inferredPossession": false,
+      "timestamp": "2026-10-24T18:55:35.327000+00:00"
+    },
+    {
+      "reason": "KEEP_SHAPE",
+      "computeMs": 0.573111,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "SET_STANCE",
+        "playerId": 4,
+        "parameters": {
+          "stance": 0
+        },
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "THEIRS",
+      "playMode": "PLAY_ON",
+      "inferredPossession": true,
+      "timestamp": "2026-10-24T18:55:37.362000+00:00"
+    },
+    {
+      "reason": "KEEP_SHAPE",
+      "computeMs": 0.57348,
+      "modelAttempted": false,
+      "policy": "fast_path_v2",
+      "buildCommit": "8747a88",
+      "command": {
+        "commandType": "SET_STANCE",
+        "playerId": 4,
+        "parameters": {
+          "stance": 0
+        },
+        "duration": 0
+      },
+      "frame": "keeper_reference_xz",
+      "pitchReferenceReady": true,
+      "possession": "THEIRS",
+      "playMode": "PLAY_ON",
+      "inferredPossession": true,
+      "timestamp": "2026-10-24T18:55:39.329000+00:00"
+    }
+  ]
+}

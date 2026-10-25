@@ -1,12 +1,28 @@
 # Agentic FC — No Human in the Loop
 
-## Latest: H2 research and complete prompts (2026-10-23)
+**Current experiment, 24 October:** four original M8 Harness plus fixed-reference
+fast FWD2,formation1-1-2. Two three-game cohorts:4W1D1L,13:2goals,+13points.
+This is provisional;10ms full-path latency and tournament dominance are unachieved.
+See [latest checkpoint](HANDOFF.md), [first cohort](research/v3/allcash-benchmark/RESULT.md),
+[replication](research/v3/ranked-batch-07.json) and [fast FWD2 recovery](fast_path_v2/RECOVERY.ru.md).
+The earlier [M8 decision and restoration](research/v3/FINAL_SETUP.ru.md) is the
+preserved control/rollback, not the current five registrations.
+
+## Latest: live experiments and portable recovery (2026-10-24)
 
 **[Начать с полного H2-разбора на русском](research/v2/README.ru.md)** — tactics, model settings, advanced features, evidence corrections and rollout plan.
 
 **[Five complete H2 Harness prompts](research/v2/prompts)** · **[Harness settings](research/v2/harness-settings.json)** · **[Executed scenario results](research/v2/results/scenario_results.json)** · **[Reproducible laboratory](research/v2/decision_lab.py)**
 
-H2 lab: 20 named checks, 2,000 mirrored scene pairs, 20,000 validated commands, 10,000 mirror checks and 10,000 player-order checks. These are **synthetic policy tests, not AWS matches or LLM benchmarks**. No win rate, live model latency or tournament improvement was measured. The candidate is not installed in AWS.
+**Live experiment history (2026-10-23):** [A0/H2.1/H3 prompts, setup hashes and Fitness investigation](research/v3/README.ru.md). A0-M1 reached verified 5/5 Fitness after scrimmage-session reset and a MID tool restriction. A winning strategy remains to be established by live match evidence.
+
+**Working reference:** the original five M7 Harness with formation **1-1-2 (M8)**: Nova 2 Lite on GK/DEF/MID/FWD1 and Haiku 4.5 on FWD2. The recent control won 7:0; a Balanced Practice won 3:1. Individual games do not establish an optimal setup. The [five-role recovery kit](research/v3/recovery/README.ru.md) includes an explicit `baseline-m8` profile. Current experimental bindings and rollbacks are recorded in the [run receipt](research/v3/run-20261024-sixhours.json).
+
+**R1 experiments:** the [runtime history](research/v3/runtime-r1.json) separates native validity, portal Fitness and actual game-session builds. Buffered SSE v8 passed five native model/command checks and Fitness 5/5; it is being compared in Practice. [Model rounds](research/v3/tactical-model-rounds1.json) gave Nova and Haiku 8/8 target agreement, with reported model medians 414.5/796ms; a constant-index0 control also passes8/8, so this does not discriminate decision quality or establish a match-strength ranking. [Source/build/recovery](runtime_v1/README.md), [critical tactical rounds](research/v3/adaptive-plan.ru.md), [Practice evidence](research/v3/practice-matches.json) and [shot analysis](research/v3/shots-analysis.ipynb) preserve the limitations. Raw traces and account bindings stay private.
+
+The [prior M8 session receipt](research/v3/run-20261023-summary.json), [resumed-session receipt](research/v3/run-20261024-resume.json) and [side audit](research/v3/side-audit-20261024.json) distinguish later defeats and the HOME-only historical cohort. [Sonnet FWD1 probes](research/v3/fwd1-sonnet-probes.json) document rejected laboratory alternatives; no Sonnet model or candidate prompt was installed. [Possession probes](research/v3/possession-probes.json), [prompt probes](research/v3/prompt-readiness-probes.json), [direct FWD1 model probes](research/v3/fwd1-direct-model-probes.json) and [native canaries](research/v3/model-probes.json) document trial rationale and limits. [Routing probes](research/v3/routing-probes.json) retain rejected laboratory candidates and input-shape limitations; none of those prompt candidates replaced the saved role prompts. See [setup history](research/v3/setups.json) and [rendered report numbers](research/v3/matches.json).
+
+H2 lab: 20 named checks, 2,000 mirrored scene pairs, 20,000 validated commands, 10,000 mirror checks and 10,000 player-order checks. These are **synthetic policy tests, not AWS matches or LLM benchmarks**. No win rate, live model latency or tournament improvement was measured. H2 and later prompt bundles were subsequently trialled in AWS; see the dated live investigation below.
 
 **Corrections to historical v1 documents below:** the current public Cup page does not establish the previously asserted hard one-second deadline. Participant workshop material reported five seconds; actual event timing must be verified. Nova 2 Lite currently does not support native Bedrock Structured Outputs; Haiku 4.5 supports them via bedrock-runtime. Prompt-only Harness does not automatically acquire structured schema enforcement by switching models. Use H2 source notes for current conclusions.
 
@@ -20,7 +36,7 @@ python research/v2/decision_lab.py
 
 Research, tactics, prompts and a testable football policy for the **AWS Agentic Football Cup** (5v5).
 
-> **Status:** A live team of five **AgentCore Harness** agents exists independently in the AWS workshop. This repository contains **offline policy prototypes, research and prompt variants**. It has **not** been deployed to AgentCore; tests here do **not** prove live match performance.
+> **Status:** A live team of five **AgentCore Harness** agents is being operated in the AWS workshop. Prompt bundles and settings in research/v3 have been installed and their observed live reports recorded. Python policy prototypes and laboratories remain offline; their tests do **not** prove live match performance.
 
 ## Historical v1 material
 
@@ -72,7 +88,7 @@ python -m agentic_fc.demo
 
 ## Safety and scope
 
-Public repo. **Never commit team codes, AWS credentials, private game traces, account-specific ARN/account IDs or personal information.** Use synthetic fixtures. Verify IAM scope and workshop restrictions before deployment. Avoid running BOTH legacy and CDK Gateway deployers; they create separate resources. The live team remains unchanged by these GitHub commits.
+Public repo. **Never commit team codes, AWS credentials, private game traces, account-specific ARN/account IDs or personal information.** Use synthetic fixtures. Verify IAM scope and workshop restrictions before deployment. Avoid running BOTH legacy and CDK Gateway deployers; they create separate resources. Publishing this history does not deploy the offline Python controller; AWS prompt/configuration changes are recorded separately in research/v3.
 
 ## Reference implementation
 

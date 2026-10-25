@@ -1,0 +1,39 @@
+{
+  "kind": "Native fast Runtime timing split; CloudShell, not game server",
+  "calls": [
+    {
+      "repeat": 0,
+      "coldFirstCall": true,
+      "headersMs": 2909.9178149999716,
+      "completeMs": 2910.035913000229,
+      "bodyReadMs": 0.1180980002573051,
+      "response": "data: \"[{\\\"commandType\\\":\\\"SET_STANCE\\\",\\\"playerId\\\":4,\\\"parameters\\\":{\\\"stance\\\":1},\\\"duration\\\":0}]\"\n\n"
+    },
+    {
+      "repeat": 1,
+      "coldFirstCall": false,
+      "headersMs": 101.42634200019529,
+      "completeMs": 101.59591499996168,
+      "bodyReadMs": 0.1695729997663875,
+      "response": "data: \"[{\\\"commandType\\\":\\\"SET_STANCE\\\",\\\"playerId\\\":4,\\\"parameters\\\":{\\\"stance\\\":1},\\\"duration\\\":0}]\"\n\n"
+    },
+    {
+      "repeat": 2,
+      "coldFirstCall": false,
+      "headersMs": 108.86048099973777,
+      "completeMs": 109.15519699983633,
+      "bodyReadMs": 0.29471600009856047,
+      "response": "data: \"[{\\\"commandType\\\":\\\"SET_STANCE\\\",\\\"playerId\\\":4,\\\"parameters\\\":{\\\"stance\\\":1},\\\"duration\\\":0}]\"\n\n"
+    },
+    {
+      "repeat": 3,
+      "coldFirstCall": false,
+      "headersMs": 104.37893200014514,
+      "completeMs": 104.66054700009408,
+      "bodyReadMs": 0.28161499994894257,
+      "response": "data: \"[{\\\"commandType\\\":\\\"SET_STANCE\\\",\\\"playerId\\\":4,\\\"parameters\\\":{\\\"stance\\\":1},\\\"duration\\\":0}]\"\n\n"
+    }
+  ],
+  "stopped": true,
+  "stopStatusCode": 200
+}

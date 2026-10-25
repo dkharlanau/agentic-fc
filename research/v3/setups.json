@@ -1,0 +1,748 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-23",
+  "note": "Public-safe configuration history. No cloud resource identifiers or credentials. A0 is the configuration observed at session start, not a proven winning setup.",
+  "setups": [
+    {
+      "id": "A0",
+      "promptDirectory": "a0",
+      "model": "global.amazon.nova-2-lite-v1:0",
+      "inferenceConfig": null,
+      "allowedTools": [
+        "*"
+      ],
+      "memory": [],
+      "gateway": null,
+      "status": "fitness_2_of_5_after_full_verified_restore",
+      "promptSha256": {
+        "def": "f5d051f210c1d63c844b470f642f5e10713a8321d9954ab507f9e40752e04ace",
+        "fwd1": "6c9c55f9e288f9375fe54be45212301a49c5e4a21e77437d3ddcb533ad385f2b",
+        "fwd2": "316935d5f77602eefbf829a288519d08500a059bdbd9c13cb60bd201d838d5b7",
+        "gk": "c6c2ce3e11cd1d61c8873702db02b1fdcaba2f951cf5689f33b9e1cf512effc7",
+        "mid": "3f9972eb2c8836055745d1d9bfbd29d460794091cb190fa64d1ccf8e531e6d21"
+      },
+      "captureLimitationByRole": {
+        "gk": "Captured prompt contains an appended Show less UI label. Retained as the text actually deployed in that historical bundle, not claimed byte-exact original."
+      }
+    },
+    {
+      "id": "H2.1",
+      "promptDirectory": "prompts",
+      "model": "global.amazon.nova-2-lite-v1:0",
+      "inferenceConfig": {
+        "temperature": 0,
+        "maxTokens": 256
+      },
+      "allowedTools": [
+        "*"
+      ],
+      "memory": [],
+      "gateway": null,
+      "status": "fitness_2_of_5",
+      "promptSha256": {
+        "def": "a72dea456738783a0c4f039a94c5d564941f14eac29bd0f274f1be5fd3e89ecd",
+        "fwd1": "fd1e234c10219050935fe1ce28f77abd1da59a1ee5ef66a042c2365ee87d0de1",
+        "fwd2": "8a0dc20065ade95665ff290bad3c05e140dd09f4310ffbca9e9734deed2086e5",
+        "gk": "1609b441eac7cb8ceaa129534389492291ef584715adb4c7e65c434cf112a377",
+        "mid": "4f4b7e788656683c29d68236dd765f9c9126b129b9d217dacb26e2ac63c90fea"
+      }
+    },
+    {
+      "id": "H3-strict",
+      "promptDirectory": "compact",
+      "model": "global.amazon.nova-2-lite-v1:0",
+      "inferenceConfig": {
+        "temperature": 0,
+        "maxTokens": 256
+      },
+      "allowedTools": [],
+      "memory": [],
+      "gateway": null,
+      "status": "fitness_2_of_5",
+      "promptSha256": {
+        "def": "8dcc1cba101c0368367b0f6e61bd13f3a82e76ad2c11feacdd0fa149751af95c",
+        "fwd1": "89a9247619a2a7f4cfa2dca649e66be3e2003d54c6b193057dfb53efc06cdcbd",
+        "fwd2": "f05add426241c291a119f1842838e20a75625e0d187fe20b50856fcc704c9275",
+        "gk": "34168702cfb0a71597cbb00f21b7a3d9299571868b9447a7597819b65b9dafd7",
+        "mid": "38f8c0cdaf65d0b0e2f78aa0062a9c4a0928c8bc17ac203f708cd9a466e14ea2"
+      }
+    },
+    {
+      "id": "A0-M1",
+      "promptDirectory": "a0",
+      "model": "global.amazon.nova-2-lite-v1:0",
+      "inferenceConfig": null,
+      "allowedToolsByRole": {
+        "gk": [
+          "*"
+        ],
+        "def": [
+          "*"
+        ],
+        "mid": [],
+        "fwd1": [
+          "*"
+        ],
+        "fwd2": [
+          "*"
+        ]
+      },
+      "memory": [],
+      "gateway": null,
+      "formation": "2-0-2",
+      "status": "verified_fitness_5_of_5",
+      "fitness": {
+        "passedPositions": 5,
+        "totalPositions": 5,
+        "commands": 5,
+        "activePercent": 100,
+        "reportedAverageLatencyMs": 0,
+        "latencyLimitations": "Portal Fitness value is not a real model-latency benchmark."
+      },
+      "promptSha256": {
+        "def": "f5d051f210c1d63c844b470f642f5e10713a8321d9954ab507f9e40752e04ace",
+        "fwd1": "6c9c55f9e288f9375fe54be45212301a49c5e4a21e77437d3ddcb533ad385f2b",
+        "fwd2": "316935d5f77602eefbf829a288519d08500a059bdbd9c13cb60bd201d838d5b7",
+        "gk": "c6c2ce3e11cd1d61c8873702db02b1fdcaba2f951cf5689f33b9e1cf512effc7",
+        "mid": "3f9972eb2c8836055745d1d9bfbd29d460794091cb190fa64d1ccf8e531e6d21"
+      },
+      "captureLimitationByRole": {
+        "gk": "Captured prompt contains an appended Show less UI label. Retained as the text actually deployed in that historical bundle, not claimed byte-exact original."
+      }
+    },
+    {
+      "id": "A0-M2-no-reset",
+      "promptDirectory": "no-reset",
+      "model": "global.amazon.nova-2-lite-v1:0",
+      "inferenceConfig": null,
+      "allowedToolsByRole": {
+        "gk": [
+          "*"
+        ],
+        "def": [
+          "*"
+        ],
+        "mid": [],
+        "fwd1": [
+          "*"
+        ],
+        "fwd2": [
+          "*"
+        ]
+      },
+      "memory": [],
+      "gateway": null,
+      "formation": "2-0-2",
+      "status": "fresh_fitness_1_of_5",
+      "singleFactor": "Append prohibition on team-wide RESET; retain all other A0-M1 settings.",
+      "promptSha256": {
+        "def": "bcc6d48b45c66f0536b0dc29f2b921d588ca626773e0c289b57043e381b315cd",
+        "fwd1": "17eb6139aeddb48886a4313a9687c8cec82fb838762ce64202cb3f7de0ec4337",
+        "fwd2": "ab845ad731540fcc64ad90df2053935d39d46cac3fabc937f6de6644198ca69d",
+        "gk": "44b6d73ce3946c7ae2b2b02b6070ca1b0b062739a0b41afc56665f16939881b3",
+        "mid": "24dc79b9dc88ba837726a6ef81e2a084c524734a3b0c0b0148af602bc62e4271"
+      },
+      "observedFailures": {
+        "gk": "AGENT_RUNTIME_ERROR HTTP 502",
+        "def": "NO_PARSE",
+        "fwd1": "failed; detailed code not captured",
+        "fwd2": "failed; detailed code not captured"
+      },
+      "captureLimitationByRole": {
+        "gk": "Captured prompt contains an appended Show less UI label. Retained as the text actually deployed in that historical bundle, not claimed byte-exact original."
+      }
+    },
+    {
+      "id": "A0-M3-no-reset-no-tools",
+      "promptDirectory": "no-reset",
+      "model": "global.amazon.nova-2-lite-v1:0",
+      "inferenceConfig": null,
+      "allowedToolsByRole": {
+        "gk": [],
+        "def": [],
+        "mid": [],
+        "fwd1": [],
+        "fwd2": []
+      },
+      "memory": [],
+      "gateway": null,
+      "formation": "2-0-2",
+      "status": "verified_fitness_5_of_5",
+      "promptSha256": {
+        "def": "bcc6d48b45c66f0536b0dc29f2b921d588ca626773e0c289b57043e381b315cd",
+        "fwd1": "17eb6139aeddb48886a4313a9687c8cec82fb838762ce64202cb3f7de0ec4337",
+        "fwd2": "ab845ad731540fcc64ad90df2053935d39d46cac3fabc937f6de6644198ca69d",
+        "gk": "44b6d73ce3946c7ae2b2b02b6070ca1b0b062739a0b41afc56665f16939881b3",
+        "mid": "24dc79b9dc88ba837726a6ef81e2a084c524734a3b0c0b0148af602bc62e4271"
+      },
+      "singleFactor": "Compared with A0-M2-no-reset, remove wildcard tools for GK/DEF/FWD1/FWD2; MID was already restricted.",
+      "fitness": {
+        "passedPositions": 5,
+        "totalPositions": 5,
+        "commands": 5,
+        "activePercent": 100,
+        "reportedAverageLatencyMs": 0,
+        "latencyLimitations": "Not an end-to-end model-latency measurement."
+      },
+      "captureLimitationByRole": {
+        "gk": "Captured prompt contains an appended Show less UI label. Retained as the text actually deployed in that historical bundle, not claimed byte-exact original."
+      }
+    },
+    {
+      "promptDirectory": "context10",
+      "model": "global.amazon.nova-2-lite-v1:0",
+      "inferenceConfig": null,
+      "allowedToolsByRole": {
+        "gk": [],
+        "def": [],
+        "mid": [],
+        "fwd1": [],
+        "fwd2": []
+      },
+      "memory": [],
+      "gateway": null,
+      "formation": "2-0-2",
+      "promptSha256": {
+        "def": "bcc6d48b45c66f0536b0dc29f2b921d588ca626773e0c289b57043e381b315cd",
+        "fwd1": "17eb6139aeddb48886a4313a9687c8cec82fb838762ce64202cb3f7de0ec4337",
+        "fwd2": "ab845ad731540fcc64ad90df2053935d39d46cac3fabc937f6de6644198ca69d",
+        "gk": "ad119756cf2033348e8d0ab4a542f1f4e3a8ae9243b0710999f773fd2420c545",
+        "mid": "24dc79b9dc88ba837726a6ef81e2a084c524734a3b0c0b0148af602bc62e4271"
+      },
+      "id": "A0-M4-context10",
+      "parent": "A0-M3-no-reset-no-tools",
+      "status": "verified_post_reset_ui_fitness_5_of_5",
+      "truncation": {
+        "strategy": "sliding_window",
+        "messagesCount": 10
+      },
+      "hypothesis": "Bound repeated state history; test latency and issued commands, not just match result.",
+      "changedFactors": [
+        "Set sliding-window Messages Count from150to10 on all roles.",
+        "Remove an accidentally captured Show less UI label from the GK prompt."
+      ],
+      "comparisonLimitation": "Two changes; do not attribute outcomes exclusively to context size.",
+      "verifiedPreviousMessagesCountByRole": {
+        "gk": 150,
+        "def": 150,
+        "mid": 150,
+        "fwd1": 150,
+        "fwd2": 150
+      },
+      "verification": {
+        "allFiveWindows": 10,
+        "model": "global.amazon.nova-2-lite-v1:0",
+        "inferenceConfigsUnset": true,
+        "normalizedRenderedPromptMatchesSource": true,
+        "promptByteEqualityNotClaimed": true
+      },
+      "fitness": {
+        "passedPositions": 5,
+        "totalPositions": 5,
+        "commands": 5,
+        "activePercent": 100,
+        "reportedAverageLatencyMs": 0,
+        "limitation": "UI gate verified after session-stop/reload procedure; new generation on each role and real inference latency are not established."
+      }
+    },
+    {
+      "promptDirectory": "schema-clean",
+      "model": "global.amazon.nova-2-lite-v1:0",
+      "inferenceConfig": null,
+      "allowedToolsByRole": {
+        "gk": [],
+        "def": [],
+        "mid": [],
+        "fwd1": [],
+        "fwd2": []
+      },
+      "memory": [],
+      "gateway": null,
+      "formation": "2-0-2",
+      "promptSha256": {
+        "def": "86426b2320f5e40e444ebe553b0827b3707ff6f5cd22599478f71e5391c838d9",
+        "fwd1": "ee4c92203e6fcbc86d14329913933ba68d8cd2092947bebd2c66d5ed14c17b15",
+        "fwd2": "03ed589df3ebe560294ac54966bfc27156aa27391c8079dae5aab93ba096a13f",
+        "gk": "43a75e8e85225b14879c7c9b839a7f8b3e5d056d8a841a1a4019b8fc8263cd36",
+        "mid": "7b05fe872d47c532c374390642006759924d84048a61577bf4f3a9bba400c729"
+      },
+      "id": "A0-M5-schema-clean",
+      "parent": "A0-M4-context10",
+      "status": "verified_post_reset_ui_fitness_5_of_5",
+      "truncation": {
+        "strategy": "sliding_window",
+        "messagesCount": 10
+      },
+      "hypothesis": "Remove conflicting RESET permission before comparing live adherence.",
+      "changedFactors": [
+        "Remove positive RESET command definition and enum entry; retain explicit prohibition."
+      ],
+      "comparisonLimitation": "Single prompt cleanup relative to M4; live outcomes remain uncontrolled.",
+      "verification": {
+        "allFiveWindows": 10,
+        "model": "global.amazon.nova-2-lite-v1:0",
+        "inferenceConfigsUnset": true,
+        "normalizedRenderedPromptMatchesSource": true,
+        "promptByteEqualityNotClaimed": true
+      },
+      "fitness": {
+        "passedPositions": 5,
+        "totalPositions": 5,
+        "commands": 5,
+        "activePercent": 100,
+        "reportedAverageLatencyMs": 0,
+        "limitation": "UI gate verified after session-stop/reload procedure; new generation on each role and real inference latency are not established."
+      }
+    },
+    {
+      "promptDirectory": "schema-clean",
+      "inferenceConfig": null,
+      "allowedToolsByRole": {
+        "gk": [],
+        "def": [],
+        "mid": [],
+        "fwd1": [],
+        "fwd2": []
+      },
+      "memory": [],
+      "gateway": null,
+      "formation": "2-0-2",
+      "promptSha256": {
+        "def": "86426b2320f5e40e444ebe553b0827b3707ff6f5cd22599478f71e5391c838d9",
+        "fwd1": "ee4c92203e6fcbc86d14329913933ba68d8cd2092947bebd2c66d5ed14c17b15",
+        "fwd2": "03ed589df3ebe560294ac54966bfc27156aa27391c8079dae5aab93ba096a13f",
+        "gk": "43a75e8e85225b14879c7c9b839a7f8b3e5d056d8a841a1a4019b8fc8263cd36",
+        "mid": "7b05fe872d47c532c374390642006759924d84048a61577bf4f3a9bba400c729"
+      },
+      "id": "A0-M6-haiku-fwd2",
+      "parent": "A0-M5-schema-clean",
+      "status": "verified_post_reset_ui_fitness_5_of_5",
+      "truncation": {
+        "strategy": "sliding_window",
+        "messagesCount": 10
+      },
+      "hypothesis": "Test the small synthetic possession-adherence advantage on one forward while retaining the other four role models.",
+      "changedFactors": [
+        "FWD2 model Nova2Lite -> Claude Haiku4.5; retain all prompt text, tools, context, inference config and formation."
+      ],
+      "comparisonLimitation": "Single-role model factor; uncontrolled live opponents and unverified per-call live model payloads limit causal attribution.",
+      "verification": {
+        "unchangedRolesInheritedFrom": "verified A0-M5-schema-clean",
+        "fwd2SavedVersionChecked": 14,
+        "fwd2FullNormalizedPromptMatchesSameSource": true,
+        "fwd2InferenceConfigsUnset": true,
+        "fwd2Window": 10,
+        "fwd2ModelId": "global.anthropic.claude-haiku-4-5-20251001-v1:0"
+      },
+      "modelByRole": {
+        "gk": "global.amazon.nova-2-lite-v1:0",
+        "def": "global.amazon.nova-2-lite-v1:0",
+        "mid": "global.amazon.nova-2-lite-v1:0",
+        "fwd1": "global.amazon.nova-2-lite-v1:0",
+        "fwd2": "global.anthropic.claude-haiku-4-5-20251001-v1:0"
+      },
+      "awsVersionByRole": {
+        "gk": 13,
+        "def": 19,
+        "mid": 15,
+        "fwd1": 14,
+        "fwd2": 14
+      },
+      "fitness": {
+        "passedPositions": 5,
+        "totalPositions": 5,
+        "commands": 5,
+        "activePercent": 100,
+        "reportedAverageLatencyMs": 0,
+        "portalFwd2ModelLabel": "Allowed · claude-haiku-4-5-20251001-v1:0",
+        "limitation": "UI gate and final model label verified after session-stop procedure;0ms does not demonstrate fresh generation or model speed for all roles."
+      }
+    },
+    {
+      "promptDirectory": "schema-clean",
+      "inferenceConfig": null,
+      "allowedToolsByRole": {
+        "gk": [],
+        "def": [],
+        "mid": [],
+        "fwd1": [],
+        "fwd2": []
+      },
+      "memory": [],
+      "gateway": null,
+      "formation": "1-2-1",
+      "promptSha256": {
+        "def": "86426b2320f5e40e444ebe553b0827b3707ff6f5cd22599478f71e5391c838d9",
+        "fwd1": "ee4c92203e6fcbc86d14329913933ba68d8cd2092947bebd2c66d5ed14c17b15",
+        "fwd2": "03ed589df3ebe560294ac54966bfc27156aa27391c8079dae5aab93ba096a13f",
+        "gk": "43a75e8e85225b14879c7c9b839a7f8b3e5d056d8a841a1a4019b8fc8263cd36",
+        "mid": "7b05fe872d47c532c374390642006759924d84048a61577bf4f3a9bba400c729"
+      },
+      "id": "A0-M7-formation121",
+      "parent": "A0-M6-haiku-fwd2",
+      "status": "verified_ui_fitness_5_of_5_after_formation_change",
+      "truncation": {
+        "strategy": "sliding_window",
+        "messagesCount": 10
+      },
+      "hypothesis": "Add central starting coverage and a passing link between defense and forward; test shots/on-target/goals and results.",
+      "changedFactors": [
+        "Starting formation2-0-2 ->1-2-1; all Harness models/prompts/tools/context/inference retained."
+      ],
+      "comparisonLimitation": "One formation factor relative to M6; uncontrolled opponents and unverified per-call live model payloads limit causal attribution.",
+      "verification": {
+        "inheritedHarnessConfiguration": "verified M6 versions13/19/15/14/14; no Harness edit for this candidate",
+        "profileFormationAfterDone": "1-2-1",
+        "profileReloadVerification": "1-2-1 confirmed in reloaded profile"
+      },
+      "modelByRole": {
+        "gk": "global.amazon.nova-2-lite-v1:0",
+        "def": "global.amazon.nova-2-lite-v1:0",
+        "mid": "global.amazon.nova-2-lite-v1:0",
+        "fwd1": "global.amazon.nova-2-lite-v1:0",
+        "fwd2": "global.anthropic.claude-haiku-4-5-20251001-v1:0"
+      },
+      "awsVersionByRole": {
+        "gk": 13,
+        "def": 19,
+        "mid": 15,
+        "fwd1": 14,
+        "fwd2": 14
+      },
+      "fitness": {
+        "passedPositions": 5,
+        "totalPositions": 5,
+        "commands": 5,
+        "activePercent": 100,
+        "reportedAverageLatencyMs": 0,
+        "portalFwd2ModelLabel": "Allowed · claude-haiku-4-5-20251001-v1:0",
+        "sessionResetBeforeThisCheck": false,
+        "limitation": "Formation-only change; unchanged Harness configuration inherited M6. UI gate verified, not proof of new generation or real model speed."
+      },
+      "retests": [
+        {
+          "recordedAtUTC": "2026-10-24T05:37:20.217832+00:00",
+          "previousSetup": "A0-M8-formation112",
+          "trigger": "Three recent account losses, including verified HOME live41; Sonnet FWD1 alternatives failed readiness checks.",
+          "changedFactors": [
+            "Starting formation1-1-2 ->1-2-1; no saved Harness changes."
+          ],
+          "profileReloadVerified": true,
+          "fitnessPassedPositions": 5,
+          "fitnessCommands": 5,
+          "fitnessReportedAverageLatencyMs": 0,
+          "scrimmageReset": false,
+          "nativeFwd1PlaygroundRestored": true,
+          "matchId": "live-42",
+          "outcome": "win2:0",
+          "limitation": "Starting positions only; unchanged role prompts. Uncontrolled opponent prevents isolated formation-effect claim.",
+          "reportId": "live-42",
+          "shotsFor": 13,
+          "shotsAgainst": 1,
+          "shotsOnTargetFor": 2,
+          "shotsOnTargetAgainst": 0
+        }
+      ],
+      "latestRollbackValidation": {
+        "capturedAtUTC": "2026-10-24T07:15:48.734760+00:00",
+        "fwd1Version": 16,
+        "memory": "disabled",
+        "comparisonSource": "GetHarness v16 vs exported v14 before Memory",
+        "behavioralDifferences": [],
+        "status": "READY",
+        "originalRegistrationRestored": true,
+        "fitness": {
+          "passedPositions": 5,
+          "totalPositions": 5,
+          "commands": 5,
+          "activePercent": 100,
+          "reportedAverageLatencyMs": 0
+        },
+        "scrimmageSession": "Known own FWD1 pos3 returned ResourceNotFound/already terminated on the Harness-routed stop request; UI Fitness then passed. Underlying managed runtime is not a directly callable/stop target."
+      }
+    },
+    {
+      "promptDirectory": "schema-clean",
+      "inferenceConfig": null,
+      "allowedToolsByRole": {
+        "gk": [],
+        "def": [],
+        "mid": [],
+        "fwd1": [],
+        "fwd2": []
+      },
+      "memory": [],
+      "gateway": null,
+      "formation": "1-1-2",
+      "promptSha256": {
+        "def": "86426b2320f5e40e444ebe553b0827b3707ff6f5cd22599478f71e5391c838d9",
+        "fwd1": "ee4c92203e6fcbc86d14329913933ba68d8cd2092947bebd2c66d5ed14c17b15",
+        "fwd2": "03ed589df3ebe560294ac54966bfc27156aa27391c8079dae5aab93ba096a13f",
+        "gk": "43a75e8e85225b14879c7c9b839a7f8b3e5d056d8a841a1a4019b8fc8263cd36",
+        "mid": "7b05fe872d47c532c374390642006759924d84048a61577bf4f3a9bba400c729"
+      },
+      "id": "A0-M8-formation112",
+      "parent": "A0-M7-formation121",
+      "status": "retained_after_observed_live_series_and_final_ui_fitness_5_of_5",
+      "truncation": {
+        "strategy": "sliding_window",
+        "messagesCount": 10
+      },
+      "hypothesis": "Align starting rows with one DEF, one MID and two FWD role prompts, retaining central support while advancing both forwards. Test shots/on-target/goals/results.",
+      "changedFactors": [
+        "Starting formation1-2-1 ->1-1-2; all Harness models/prompts/tools/context/inference retained."
+      ],
+      "comparisonLimitation": "One formation factor relative to M6; uncontrolled opponents and unverified per-call live model payloads limit causal attribution.",
+      "verification": {
+        "inheritedHarnessConfiguration": "verified M6/M7 versions13/19/15/14/14; no Harness edit for this candidate",
+        "profileFormationAfterDone": "1-1-2",
+        "profileReloadVerification": "1-1-2 confirmed in reloaded profile",
+        "versionTableRecheckAfterResetReport": {
+          "capturedAtUTC": "2026-10-24T00:01:21.784621+00:00",
+          "awsVersionByRole": {
+            "gk": 13,
+            "def": 19,
+            "mid": 15,
+            "fwd1": 14,
+            "fwd2": 14
+          },
+          "result": "All five latest versions unchanged in current Harness table; no config drift observed. Actual live payload still not recovered."
+        },
+        "finalVersionRecheck": {
+          "capturedAtUTC": "2026-10-24T00:56:04.099Z",
+          "awsVersionByRole": {
+            "fwd2": 14,
+            "fwd1": 14,
+            "mid": 15,
+            "def": 19,
+            "gk": 13
+          },
+          "basis": "Latest versions unchanged from previously inspected immutable saved source/model/settings. Local prompt hashes reverified. Actual per-call live payload remains unknown."
+        }
+      },
+      "modelByRole": {
+        "gk": "global.amazon.nova-2-lite-v1:0",
+        "def": "global.amazon.nova-2-lite-v1:0",
+        "mid": "global.amazon.nova-2-lite-v1:0",
+        "fwd1": "global.amazon.nova-2-lite-v1:0",
+        "fwd2": "global.anthropic.claude-haiku-4-5-20251001-v1:0"
+      },
+      "awsVersionByRole": {
+        "gk": 13,
+        "def": 19,
+        "mid": 15,
+        "fwd1": 14,
+        "fwd2": 14
+      },
+      "fitness": {
+        "passedPositions": 5,
+        "totalPositions": 5,
+        "commands": 5,
+        "activePercent": 100,
+        "reportedAverageLatencyMs": 0,
+        "portalFwd2ModelLabel": "Allowed · claude-haiku-4-5-20251001-v1:0",
+        "sessionResetBeforeThisCheck": false,
+        "limitation": "Formation-only change; unchanged Harness configuration inherited M7. UI gate verified, not proof of new generation or real model speed.",
+        "finalCheck": {
+          "passedPositions": 5,
+          "totalPositions": 5,
+          "commands": 5,
+          "activePercent": 100,
+          "reportedAverageLatencyMs": 0,
+          "capturedAtUTC": "2026-10-24T01:09:12.894698+00:00",
+          "sessionResetBeforeThisCheck": false,
+          "limitation": "Unchanged configuration; UI gate only, not proof of new generation or model speed."
+        }
+      }
+    },
+    {
+      "promptDirectory": "schema-clean",
+      "inferenceConfig": null,
+      "allowedToolsByRole": {
+        "gk": [],
+        "def": [],
+        "mid": [],
+        "fwd1": [],
+        "fwd2": []
+      },
+      "gateway": null,
+      "formation": "1-2-1",
+      "promptSha256": {
+        "def": "86426b2320f5e40e444ebe553b0827b3707ff6f5cd22599478f71e5391c838d9",
+        "fwd1": "ee4c92203e6fcbc86d14329913933ba68d8cd2092947bebd2c66d5ed14c17b15",
+        "fwd2": "03ed589df3ebe560294ac54966bfc27156aa27391c8079dae5aab93ba096a13f",
+        "gk": "43a75e8e85225b14879c7c9b839a7f8b3e5d056d8a841a1a4019b8fc8263cd36",
+        "mid": "7b05fe872d47c532c374390642006759924d84048a61577bf4f3a9bba400c729"
+      },
+      "truncation": {
+        "strategy": "sliding_window",
+        "messagesCount": 10
+      },
+      "modelByRole": {
+        "gk": "global.amazon.nova-2-lite-v1:0",
+        "def": "global.amazon.nova-2-lite-v1:0",
+        "mid": "global.amazon.nova-2-lite-v1:0",
+        "fwd1": "global.amazon.nova-2-lite-v1:0",
+        "fwd2": "global.anthropic.claude-haiku-4-5-20251001-v1:0"
+      },
+      "id": "A0-M9-memory-fwd1",
+      "parent": "A0-M7-formation121",
+      "status": "native_canary_2_of_2_and_ui_fitness_5_of_5_live_trial",
+      "changed": [
+        "FWD1 Memory: disabled -> shared logical STM resource NHITLMatchMemory, actor fwd1, messagesCount10; no other behavioral field changed in GetHarness v14/v15 comparison"
+      ],
+      "awsVersionByRole": {
+        "gk": 13,
+        "def": 19,
+        "mid": 15,
+        "fwd1": 15,
+        "fwd2": 14
+      },
+      "memory": {
+        "resourceName": "NHITLMatchMemory",
+        "eventExpiryDurationDays": 3,
+        "longTermStrategies": [],
+        "attachedRoles": {
+          "fwd1": {
+            "actorId": "fwd1",
+            "messagesCount": 10
+          }
+        },
+        "otherRoles": "explicitly disabled"
+      },
+      "fitness": {
+        "passedPositions": 5,
+        "totalPositions": 5,
+        "commands": 5,
+        "activePercent": 100,
+        "reportedAverageLatencyMs": 0,
+        "capturedAtUTC": "2026-10-24T06:20:30Z",
+        "sessionResetBeforeThisCheck": "Only observed FWD1 scrimmage pos3 stopped after v15 save; other roles unchanged",
+        "limitation": "UI readiness gate, not proof of new generation or real inference speed"
+      },
+      "nativeCanary": {
+        "model": "global.amazon.nova-2-lite-v1:0",
+        "strictJsonPasses": 2,
+        "cases": 2,
+        "turns": [
+          {
+            "fixture": "home clear shot",
+            "command": "SHOOT",
+            "latencyMs": 635,
+            "inputTokens": 1751,
+            "outputTokens": 33
+          },
+          {
+            "fixture": "home teammate possession after stop/reopen of same session",
+            "command": "MOVE_TO",
+            "latencyMs": 690,
+            "inputTokens": 2502,
+            "outputTokens": 36
+          }
+        ],
+        "memoryApiEventCountAfterFirstTurn": 6,
+        "limitations": [
+          "Own synthetic fixture session, not a live match state.",
+          "Memory API write evidence and same-session successful second command do not establish cross-match tactical learning."
+        ]
+      },
+      "verification": {
+        "source": "Read-only AWS CLI GetHarness exports via CloudShell",
+        "capturedAtUTC": "2026-10-24T06:10:45Z",
+        "allFiveSystemPromptsByteExact": true,
+        "fwd1Version14To15BehavioralDiff": [
+          "memory"
+        ],
+        "environment": {
+          "networkMode": "PUBLIC",
+          "idleRuntimeSessionTimeout": 900,
+          "maxLifetime": 28800
+        },
+        "maxIterations": 75,
+        "timeoutSeconds": 3600,
+        "maxTokens": "not set",
+        "tools": [],
+        "skills": [],
+        "hooks": "absent",
+        "executionRole": "unchanged; private binding excluded"
+      },
+      "recoveryBundle": "recovery/bundle.json"
+    },
+    {
+      "promptDirectory": "schema-clean",
+      "inferenceConfig": null,
+      "allowedToolsByRole": {
+        "gk": [],
+        "def": [],
+        "mid": [],
+        "fwd1": [],
+        "fwd2": []
+      },
+      "gateway": null,
+      "formation": "1-2-1",
+      "promptSha256": {
+        "def": "86426b2320f5e40e444ebe553b0827b3707ff6f5cd22599478f71e5391c838d9",
+        "fwd1": "ee4c92203e6fcbc86d14329913933ba68d8cd2092947bebd2c66d5ed14c17b15",
+        "fwd2": "03ed589df3ebe560294ac54966bfc27156aa27391c8079dae5aab93ba096a13f",
+        "gk": "43a75e8e85225b14879c7c9b839a7f8b3e5d056d8a841a1a4019b8fc8263cd36",
+        "mid": "7b05fe872d47c532c374390642006759924d84048a61577bf4f3a9bba400c729"
+      },
+      "truncation": {
+        "strategy": "sliding_window",
+        "messagesCount": 10
+      },
+      "modelByRole": {
+        "gk": "global.amazon.nova-2-lite-v1:0",
+        "def": "global.amazon.nova-2-lite-v1:0",
+        "mid": "global.amazon.nova-2-lite-v1:0",
+        "fwd1": "global.amazon.nova-2-lite-v1:0",
+        "fwd2": "global.anthropic.claude-haiku-4-5-20251001-v1:0"
+      },
+      "id": "A0-M10-fresh-fwd1-memory",
+      "parent": "A0-M9-memory-fwd1",
+      "status": "fresh_single_role_restore_ready_and_ui_fitness_5_of_5_live_trial",
+      "changed": [
+        "Only FWD1 registration replaced with a newly created Harness containing the same behavior fields as original v15; fresh resource identity and provisioning are confounders."
+      ],
+      "awsVersionByRole": {
+        "gk": 13,
+        "def": 19,
+        "mid": 15,
+        "fwd1": 1,
+        "fwd2": 14
+      },
+      "memory": {
+        "resourceName": "NHITLMatchMemory",
+        "eventExpiryDurationDays": 3,
+        "longTermStrategies": [],
+        "attachedRoles": {
+          "fwd1": {
+            "actorId": "fwd1",
+            "messagesCount": 10
+          }
+        },
+        "otherRoles": "explicitly disabled"
+      },
+      "fitness": {
+        "passedPositions": 5,
+        "totalPositions": 5,
+        "commands": 5,
+        "activePercent": 100,
+        "reportedAverageLatencyMs": 0,
+        "capturedAtUTC": "2026-10-24T06:31:06.410507+00:00",
+        "sessionResetBeforeThisCheck": false,
+        "limitation": "Fresh FWD1 resource identity, registration persisted after profile reload, all positions passed; UI readiness is not live inference proof."
+      },
+      "verification": {
+        "source": "CreateHarness from the saved private FWD1 export through CloudShell, then GetHarness read-back",
+        "capturedAtUTC": "2026-10-24T06:31:06.410150+00:00",
+        "status": "READY",
+        "comparedRequestFields": 13,
+        "mismatches": [],
+        "behavioralSettings": "Same as original FWD1 v15: same execution role, prompt, model, tools, limits, environment settings and existing Memory binding",
+        "scope": "One role restored in the same account; not a full five-role or fresh-account restore test"
+      },
+      "recoveryBundle": "recovery/bundle.json"
+    }
+  ]
+}

@@ -1,0 +1,316 @@
+{
+  "kind": "full native AWS response timings; CloudShell network path, not game server latency",
+  "probes": [
+    {
+      "case": "fwd2-own-ball-far",
+      "repeat": 0,
+      "coldFirstCall": true,
+      "elapsedMs": 2891.241,
+      "commands": [
+        {
+          "commandType": "PASS",
+          "playerId": 4,
+          "parameters": {
+            "target_player_id": 3,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-ambiguous-owner",
+      "repeat": 0,
+      "coldFirstCall": false,
+      "elapsedMs": 121.139,
+      "commands": [
+        {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-close-blocked-pass",
+      "repeat": 0,
+      "coldFirstCall": false,
+      "elapsedMs": 117.787,
+      "commands": [
+        {
+          "commandType": "PASS",
+          "playerId": 4,
+          "parameters": {
+            "target_player_id": 3,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-wrong-player-binding",
+      "repeat": 0,
+      "coldFirstCall": false,
+      "elapsedMs": 100.038,
+      "commands": [
+        {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-own-ball-far-away",
+      "repeat": 0,
+      "coldFirstCall": false,
+      "elapsedMs": 103.877,
+      "commands": [
+        {
+          "commandType": "PASS",
+          "playerId": 4,
+          "parameters": {
+            "target_player_id": 3,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-ambiguous-owner-stale-context",
+      "repeat": 0,
+      "coldFirstCall": false,
+      "elapsedMs": 111.055,
+      "commands": [
+        {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-close-open-shot",
+      "repeat": 0,
+      "coldFirstCall": false,
+      "elapsedMs": 95.237,
+      "commands": [
+        {
+          "commandType": "SHOOT",
+          "playerId": 4,
+          "parameters": {
+            "aim_location": "TR",
+            "power": 0.8
+          },
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-teammate-ball-support",
+      "repeat": 0,
+      "coldFirstCall": false,
+      "elapsedMs": 112.404,
+      "commands": [
+        {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 1
+          },
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-low-energy-cover",
+      "repeat": 0,
+      "coldFirstCall": false,
+      "elapsedMs": 103.98,
+      "commands": [
+        {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 0
+          },
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-own-ball-far",
+      "repeat": 1,
+      "coldFirstCall": false,
+      "elapsedMs": 89.244,
+      "commands": [
+        {
+          "commandType": "PASS",
+          "playerId": 4,
+          "parameters": {
+            "target_player_id": 3,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-ambiguous-owner",
+      "repeat": 1,
+      "coldFirstCall": false,
+      "elapsedMs": 113.415,
+      "commands": [
+        {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-close-blocked-pass",
+      "repeat": 1,
+      "coldFirstCall": false,
+      "elapsedMs": 101.348,
+      "commands": [
+        {
+          "commandType": "PASS",
+          "playerId": 4,
+          "parameters": {
+            "target_player_id": 3,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-wrong-player-binding",
+      "repeat": 1,
+      "coldFirstCall": false,
+      "elapsedMs": 112.338,
+      "commands": [
+        {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-own-ball-far-away",
+      "repeat": 1,
+      "coldFirstCall": false,
+      "elapsedMs": 99.598,
+      "commands": [
+        {
+          "commandType": "PASS",
+          "playerId": 4,
+          "parameters": {
+            "target_player_id": 3,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-ambiguous-owner-stale-context",
+      "repeat": 1,
+      "coldFirstCall": false,
+      "elapsedMs": 116.776,
+      "commands": [
+        {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 4,
+          "parameters": {},
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-close-open-shot",
+      "repeat": 1,
+      "coldFirstCall": false,
+      "elapsedMs": 106.005,
+      "commands": [
+        {
+          "commandType": "SHOOT",
+          "playerId": 4,
+          "parameters": {
+            "aim_location": "TR",
+            "power": 0.8
+          },
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-teammate-ball-support",
+      "repeat": 1,
+      "coldFirstCall": false,
+      "elapsedMs": 119.467,
+      "commands": [
+        {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 1
+          },
+          "duration": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "case": "fwd2-low-energy-cover",
+      "repeat": 1,
+      "coldFirstCall": false,
+      "elapsedMs": 108.38,
+      "commands": [
+        {
+          "commandType": "SET_STANCE",
+          "playerId": 4,
+          "parameters": {
+            "stance": 0
+          },
+          "duration": 0
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "stopped": true,
+  "summary": {
+    "passed": 18,
+    "total": 18,
+    "warmMedianMs": 108.38,
+    "warmMaxMs": 121.139,
+    "warmUnder10ms": 0,
+    "warmCount": 17
+  }
+}
