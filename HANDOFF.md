@@ -10,18 +10,18 @@ baseline remains unchanged. Do not repeat this identical archive blindly.
 Research evidence is in the adjacent research repository at
 `research/v3/model-prompt-lab/results/mid-l02-native-screen-20261025.json`.
 
-Batch16 baseline was complete 4W/0D/1L, 11:3. Batch17 is underway, unchanged
-baseline, 4/5 complete: Le Masia 0:2 W, Amber Arcs 2 1:0 W, Agents United 0:0 D,
-Apocalypse 0:1 W. Current score 4:0, record 3W/1D, 10 points; rank13 / 173
-played / 315 points. Le Masia used CLEAR 90% (37/41); Amber 72% (36/50), close
-to its previous 69% (36/52). Agents United and Apocalypse both had high MOVE
-shares in our reports (93% and 99%) but results differed (draw/win); the reports
-do not give enough event context to infer causality. Amber's own fields conflict
-and are excluded. Detailed rows/caveats: `research/v3/ranked-batch-17.json`. The portal was checked idle and READY TO PLAY,
-formation 1-1-2. Continue real ranked matches on this unchanged approved lineup,
-recording each opponent's report/profile and caveats. Finish each five-game
-cohort before analyzing or changing a candidate. Check quota between matches;
-stop new matches at 5% remaining and checkpoint to GitHub.
+Batch17 is complete 5/5 on the unchanged registered baseline: Le Masia 2:0,
+Amber Arcs 2 1:0, Agents United 0:0, Apocalypse 1:0, BlackEagle 2:0. Total
+4W/1D/0L, goals 6:0, 13 points. Leaderboard reconciles exactly from #13 / 169
+played / 305 points to #12 / 174 / 318, 104W/6D/64L, goals237:143. Stats exist
+for four reports: 22:14 shots, 6:0 on target, own possession mean44.25% over
+those four; Agents United report omitted these stats. All five opponents' command
+reports show CLEAR 72–90%; this is a five-match description, not proven tactical
+intent or success. Our report means are 84–786ms in four coherent reports; Amber
+Arcs' 1ms fields conflict and are excluded. <=10ms not achieved. Two high-MOVE
+matches ended draw/win and do not justify an automatic change. Full raw rows,
+coverage, and cautious series analysis: `research/v3/ranked-batch-17.json`.
+L02 remains rejected on V1/V2 cold-call gates; no candidate was installed.
 
 # Agentic FC continuation
 

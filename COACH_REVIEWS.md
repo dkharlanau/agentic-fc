@@ -1,3 +1,40 @@
+## 2026-10-25 — ranked batch17 complete; opponent profiles and tactical review
+
+Five real ranked matches on the same registered baseline: Le Masia 2:0,
+Amber Arcs 2 1:0, Agents United 0:0, Apocalypse 1:0, BlackEagle 2:0. Record
+4W/1D/0L, 6:0 goals, 13 points. The leaderboard moved exactly from #13,
+169 played, 305 points to #12, 174 played, 318 points, 104W/6D/64L,
+237:143 goals. No setup changes; no L02 matches.
+
+Opponent profiles were clearance-heavy in the report: Le Masia 37/41 CLEAR,
+Amber Arcs 2 36/50, Agents United 30/39, Apocalypse 19/24, BlackEagle 33/37.
+This describes five reports, not five confirmed intentions or clearance
+success rates. Four reports show opponents with zero shots on target; the
+Agents United report omits shooting and possession statistics. Our sample had
+22:14 shots and 6:0 on target across the four reports with these fields; own
+possession averaged 44.25% over those same four only. All five matches were
+clean sheets.
+
+MOVE_TO dominated in two games: 555/600 in the 0:0 draw against Agents United
+and 340/345 in the 1:0 win over Apocalypse. BlackEagle also had 319/370 MOVE in
+a 2:0 win. These outcomes do not identify MOVE as a cause or justify reducing
+it automatically. Agents United's report supports a follow-up hypothesis about
+whether move-heavy sequences convert into quality shots: it recorded only 2
+SHOOT and 28 PASS amid 555 MOVE, but the report omitted shots, locations, and
+events. Across the other four reports six on-target shots matched our six goals;
+this small sample suggests preserving shot quality while collecting better
+sequence evidence. AI Coach Corner recommendations are hypotheses, not ground
+truth.
+
+Our report team averages were 786/430/442/84ms in four coherent reports
+(median 436ms); Amber Arcs' reported 1ms conflicts with its own award/command
+counts and is excluded. Opponent means were 16–17ms in the five reports.
+Per-agent summaries show 100% success, but no full-response tail or timeout
+audit. The <=10ms target remains unmet. L02 failed all six first calls on both
+V1 and V2 and remains uninstalled. Continue with the baseline until an exact
+cold-call fix passes native, Fitness, and configuration gates. Detailed rows:
+`research/v3/ranked-batch-17.json`.
+
 ## 2026-10-25 — L02 rejected before game deployment
 
 L02 on both V2 and V1 returned 224/224 valid responses but failed the hard

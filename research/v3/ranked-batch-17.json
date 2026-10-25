@@ -1,8 +1,8 @@
 {
   "id": "ranked-batch-17",
-  "status": "in-progress-4of5-baseline",
+  "status": "complete-5of5-baseline",
   "targetCompletedGames": 5,
-  "completedGames": 4,
+  "completedGames": 5,
   "setup": "unchanged registered baseline, formation 1-1-2; existing FWD5 fast path; no L02 candidate installed",
   "preflight": {
     "portalState": "READY TO PLAY before search; match completed",
@@ -264,6 +264,88 @@
         "This is the second match in this cohort with a very high MOVE share: Agents United had 555/600 MOVE in a 0-0 draw. Apocalypse had 340/345 MOVE in a 1-0 win. Different opponents and outcomes do not establish that MOVE frequency helps or hurts; test command utility after the cohort, with locations and events if available.",
         "The report did not show formation, pass completion, or field event details. Apocalypse rank was not visible in the loaded leaderboard rows."
       ]
+    },
+    {
+      "opponent": "BlackEagle",
+      "result": "WIN",
+      "score": "2-0",
+      "possessionPct": "55-45",
+      "shots": "8-3",
+      "shotsOnTarget": "2-0",
+      "teamAverageLatencyMs": 84,
+      "teamCommands": 370,
+      "roleLatencyMs": [
+        78,
+        94,
+        90,
+        98,
+        87
+      ],
+      "successPct": "100% all roles",
+      "actions": {
+        "MOVE": 319,
+        "INTERCEPT": 24,
+        "CLEAR": 14,
+        "PRESS": 6,
+        "PASS": 5,
+        "GK_DIST": 1,
+        "SHOOT": 1
+      },
+      "goals": [
+        {
+          "minute": "1'",
+          "scorer": "MID 3"
+        },
+        {
+          "minute": "2'",
+          "scorer": "FWD 4"
+        }
+      ],
+      "opponentReport": {
+        "teamAverageLatencyMs": 17,
+        "teamCommands": 37,
+        "roleLatencyMs": [
+          3,
+          3,
+          3,
+          2,
+          72
+        ],
+        "successPct": "100% all roles",
+        "actions": {
+          "CLEAR": 33,
+          "PASS": 3,
+          "SHOOT": 1
+        },
+        "leaderboardAfterMatch": {
+          "rank": 41,
+          "played": 69,
+          "points": 94,
+          "wins": 31,
+          "draws": 1,
+          "losses": 37,
+          "goals": "75-92",
+          "goalDifference": -17
+        },
+        "previousObservedRow": {
+          "rank": 41,
+          "played": 68,
+          "points": 94,
+          "wins": 31,
+          "draws": 1,
+          "losses": 36,
+          "goals": "75-90",
+          "goalDifference": -15
+        }
+      },
+      "reportAiOverview": "Generated report says our two early goals and 55% possession gave territorial control; BlackEagle relied on defensive clears. This is a report-generated explanation, not a verified event trace.",
+      "observations": [
+        "No Human in the Loop won 2-0 with 55% possession, 8 shots and 2 on target; BlackEagle had 45%, 3 shots and 0 on target. Goals were attributed to MID 3 at 1' and FWD 4 at 2'.",
+        "BlackEagle used CLEAR 33/37 (89%), with 3 PASS and 1 SHOOT; average latency 17ms and role means 3/3/3/2/72ms. All roles reported 100% success.",
+        "Our 370 commands sum to MOVE319, INTERCEPT24, CLEAR14, PRESS6, PASS5, GK_DIST1, SHOOT1. Team mean 84ms; role means 78/94/90/98/87ms, all reported 100% success.",
+        "BlackEagle leaderboard changed from 68 to 69 played, with a loss added and goals against 90 to 92; its post-match row matches this 2-0 loss.",
+        "Formation, pass completion, and event locations are not shown in the report."
+      ]
     }
   ],
   "leaderboardAfterGame1": {
@@ -275,8 +357,32 @@
     "losses": 64,
     "goals": "233-143"
   },
-  "seriesAnalysis": null,
-  "note": "Four completed games of the five-game baseline cohort: 3W/1D/0L, score 4-0, 10 points. Do not change setup before the fifth game.",
+  "seriesAnalysis": {
+    "record": "4W/1D/0L",
+    "goals": "6-0",
+    "points": 13,
+    "leaderboardDelta": {
+      "rank": "13 to 12",
+      "played": "169 to 174",
+      "points": "305 to 318",
+      "wins": "+4",
+      "draws": "+1",
+      "losses": "+0",
+      "goals": "231-143 to 237-143"
+    },
+    "dataCoverage": {
+      "possession": "available in 4/5; own shares 30%, 41%, 51%, 55% (mean 44.25% over these four only); Agents United unavailable",
+      "shots": "available in 4/5; own-opponent total 22-14 over the four reports; Agents United unavailable",
+      "shotsOnTarget": "available in 4/5; own-opponent total 6-0; Agents United unavailable",
+      "latency": "four internally coherent own team means 786, 430, 442, 84ms (median 436ms); Amber Arcs report showed 1ms but conflicts with command/award totals and is excluded from latency comparisons. Per-invocation tails/timeouts are not provided.",
+      "success": "all five match reports showed 100% per role; this is report-level success, not independent timeout audit"
+    },
+    "opponentPatterns": "All five opponents had CLEAR as 72-90% of reported commands (Le Masia 37/41, Amber Arcs 2 36/50, Agents United 30/39, Apocalypse 19/24, BlackEagle 33/37). Treat as labels in five small match samples, not a confirmed shared strategy or clearance success rate. Four reports with shot stats show each opponent had zero shots on target; Agents United stats were absent.",
+    "tacticalReview": "No goals conceded across five games. In the four reports with shooting stats, six shots on target correspond to six team goals; this is a small sample and not causal evidence. Two matches had very high MOVE shares: Agents United 555/600 in a 0-0 draw and Apocalypse 340/345 in a 1-0 win; BlackEagle was 319/370 in a 2-0 win. This does not support an automatic MOVE reduction. The 0-0 report shows only 2 SHOOT and 28 PASS alongside 555 MOVE, making shot quality/transition timing a useful follow-up question after the series, not an immediate mid-series edit.",
+    "latencyReview": "The target of <=10ms was not met. Four coherent own report team means span 84-786ms, versus opponent means 16-17ms; one anomalous Amber report is excluded. These are match-summary averages, not full-response p95 or cold-start evidence. L02 remained uninstalled after failing first-call gates on V1 and V2; no Fitness or candidate games were run.",
+    "decision": "Keep the registered baseline pending a separately gated candidate and exact event-level evidence. Do not tune from generated AI Coach Corner text alone."
+  },
+  "note": "Batch17 completed 5/5 real ranked games on unchanged baseline. All result deltas match the leaderboard snapshot. Fitness was not rerun because no candidate was installed.",
   "leaderboardAfterGame2": {
     "rank": 13,
     "played": 171,
@@ -303,5 +409,14 @@
     "draws": 6,
     "losses": 64,
     "goals": "235-143"
+  },
+  "leaderboardAfterGame5": {
+    "rank": 12,
+    "played": 174,
+    "points": 318,
+    "wins": 104,
+    "draws": 6,
+    "losses": 64,
+    "goals": "237-143"
   }
 }
