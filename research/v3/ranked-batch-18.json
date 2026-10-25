@@ -1,0 +1,164 @@
+{
+  "id": "ranked-batch-18",
+  "status": "in-progress-2of5",
+  "targetCompletedGames": 5,
+  "completedGames": 2,
+  "setup": "unchanged registered baseline, formation 1-1-2; existing FWD5 fast path; no L02 candidate installed",
+  "preflight": {
+    "portalState": "two matches completed; no further match was started by this update",
+    "freshFitness": "not rerun; no candidate or configuration change",
+    "formation": "1-1-2",
+    "candidateInstalled": false
+  },
+  "beforeLeaderboard": {
+    "rank": 12,
+    "played": 174,
+    "points": 318,
+    "wins": 104,
+    "draws": 6,
+    "losses": 64,
+    "goals": "237-143"
+  },
+  "games": [
+    {
+      "opponent": "Feyenoord",
+      "result": "WIN",
+      "score": "2-0",
+      "possessionPct": "56-44",
+      "shots": "4-3",
+      "shotsOnTarget": "2-0",
+      "teamAverageLatencyMs": 73,
+      "teamCommands": 364,
+      "roleLatencyMs": [81, 73, 79, 76, 75],
+      "successPct": "100% all roles",
+      "actions": {
+        "MOVE": 270,
+        "INTERCEPT": 35,
+        "MARK": 27,
+        "CLEAR": 11,
+        "PRESS": 10,
+        "PASS": 9,
+        "GK_DIST": 1,
+        "SHOOT": 1
+      },
+      "goals": [
+        {"minute": "1'", "scorer": "MID 3"},
+        {"minute": "2'", "scorer": "MID 3"}
+      ],
+      "opponentReport": {
+        "teamAverageLatencyMs": 14,
+        "teamCommands": 49,
+        "roleLatencyMs": [2, 1, 1, 1, 74],
+        "successPct": "100% all roles",
+        "actions": {"CLEAR": 42, "PASS": 4, "PRESS": 3},
+        "leaderboardAfterMatch": {
+          "rank": 4,
+          "played": 326,
+          "points": 597,
+          "wins": 195,
+          "draws": 12,
+          "losses": 119,
+          "goals": "445-333",
+          "goalDifference": 112
+        },
+        "leaderboardBeforeObserved": {
+          "rank": 4,
+          "played": 324,
+          "points": 594,
+          "wins": 194,
+          "draws": 12,
+          "losses": 118,
+          "goals": "443-330",
+          "goalDifference": 113
+        },
+        "comparisonNote": "The post-match row is two played matches beyond the prior observed row; only this match's 0-2 loss can be assigned to this report."
+      },
+      "observations": [
+        "Feyenoord had 44% possession, 3 shots and 0 on target; No Human in the Loop had 56%, 4 shots and 2 on target.",
+        "Feyenoord reported CLEAR 42/49 (86%), PASS 4 and PRESS 3. This is one match-level action profile, not a stable strategy diagnosis or a measure of clear success.",
+        "Our 364 commands sum to MOVE 270, INTERCEPT 35, MARK 27, CLEAR 11, PRESS 10, PASS 9, GK_DIST 1 and SHOOT 1. Team mean was 73ms; role means were 81/73/79/76/75ms. All roles reported 100% success.",
+        "Feyenoord's reported team mean was 14ms; role means 2/1/1/1/74ms. All roles reported 100% success.",
+        "Feyenoord's observed leaderboard row changed from 324 to 326 played, so its full two-match table delta is not attributable to this single game."
+      ]
+    },
+    {
+      "opponent": "Hallucination FC2",
+      "result": "WIN",
+      "score": "2-1",
+      "possessionPct": "37-63",
+      "shots": "5-3",
+      "shotsOnTarget": "2-1",
+      "teamAverageLatencyMs": 75,
+      "teamCommands": 410,
+      "roleLatencyMs": [78, 77, 79, 78, 77],
+      "successPct": "100% all roles",
+      "actions": {
+        "MOVE": 265,
+        "PRESS": 69,
+        "MARK": 38,
+        "PASS": 18,
+        "CLEAR": 16,
+        "INTERCEPT": 4
+      },
+      "goals": [
+        {"minute": "1'", "scorer": "Hallucination FC2 FWD 4"},
+        {"minute": "2'", "scorer": "No Human in the Loop MID 3"},
+        {"minute": "2'", "scorer": "No Human in the Loop scorer not identified in report"}
+      ],
+      "opponentReport": {
+        "teamAverageLatencyMs": 15,
+        "teamCommands": 54,
+        "roleLatencyMs": [2, 2, 1, 1, 72],
+        "successPct": "100% all roles",
+        "actions": {"CLEAR": 43, "PASS": 8, "PRESS": 2, "INTERCEPT": 1},
+        "leaderboardAfterMatch": {
+          "rank": 21,
+          "played": 142,
+          "points": 235,
+          "wins": 78,
+          "draws": 1,
+          "losses": 63,
+          "goals": "230-192",
+          "goalDifference": 38
+        },
+        "leaderboardBeforeObserved": null
+      },
+      "reportAiOverview": "Generated report says Hallucination FC2 had 63% possession and conceded twice in quick succession; its causal account of MOVE_TO/PRESS_BALL and CLEAR_OVERRIDE is report-generated interpretation, not a verified event trace.",
+      "observations": [
+        "Hallucination FC2 had 63% possession, 3 shots and 1 on target; No Human in the Loop had 37%, 5 shots and 2 on target. We won despite lower possession.",
+        "The opponent report lists CLEAR 43/54 (80%), PASS 8, PRESS 2 and INTERCEPT 1. Live commentary described patient buildup and probing, but neither that commentary nor one report establishes a durable opponent policy.",
+        "Our 410 commands sum to MOVE 265, PRESS 69, MARK 38, PASS 18, CLEAR 16 and INTERCEPT 4. Team mean was 75ms; role means 78/77/79/78/77ms. All roles reported 100% success.",
+        "The opponent's reported team mean was 15ms with roles 2/2/1/1/72ms; all roles reported 100% success.",
+        "The match viewer showed the opponent score first, then our equalizer and winner; the report lists two goals at 2' but does not identify the second scorer. Preserve the report's unknown attribution.",
+        "The post-match Hallucination FC2 leaderboard row was rank 21, 142 played and 235 points. No pre-match row was captured, so no opponent table delta is inferred."
+      ]
+    }
+  ],
+  "leaderboardAfterGame2": {
+    "rank": 12,
+    "played": 176,
+    "points": 324,
+    "wins": 106,
+    "draws": 6,
+    "losses": 64,
+    "goals": "241-144"
+  },
+  "seriesAnalysis": {
+    "record": "2W/0D/0L so far",
+    "goals": "4-1",
+    "points": 6,
+    "leaderboardDelta": {
+      "rank": "12 to 12",
+      "played": "174 to 176",
+      "points": "318 to 324",
+      "wins": "+2",
+      "draws": "+0",
+      "losses": "+0",
+      "goals": "237-143 to 241-144"
+    },
+    "opponentPatterns": "Both reports in this partial cohort show opponents with CLEAR as their most frequent listed action (Feyenoord 42/49, Hallucination FC2 43/54). This is a repeated label in two matches only, not proof of common tactics or successful defensive clears.",
+    "latencyReview": "Our reported team averages were 73 and 75ms, above the previously stated <=10ms target. Opponent team means were 14 and 15ms, but each opponent's FWD5 latency was 72-74ms. These are report summary values, not full response-time distributions or independent timeout audits.",
+    "decision": "Partial cohort only; do not change setup based on these two wins. Continue unchanged configuration through five completed matches, then analyze the cohort."
+  },
+  "note": "These two games appeared in the portal's real-match flow after batch17 while no configuration changes were made. No match identifiers, credentials, ARNs, account IDs, or raw states are recorded."
+}

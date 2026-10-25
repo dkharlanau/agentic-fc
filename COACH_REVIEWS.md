@@ -699,3 +699,31 @@ Both show a 1ms mean for our side, unlike earlier reports. Exclude these
 command and latency values from speed/action analysis. The five-match run is a
 small, random-HOME sample; keep the lineup unchanged until a properly gated
 candidate exists. Full rows and caveats: `research/v3/ranked-batch-16.json`.
+
+## 2026-10-25 — ranked batch18 partial; Feyenoord and Hallucination FC2
+
+Two further real ranked matches were completed with the registered baseline and
+1-1-2 unchanged: Feyenoord 0:2, then Hallucination FC2 1:2. The portal
+leaderboard now shows rank 12, 176 games, 324 points, 106W/6D/64L and goals
+241:144, versus the batch17 close at rank12, 174 games, 318 points and 237:143.
+The two-game delta reconciles with +2 wins, +4 scored, +1 conceded. Batch18 is
+only 2/5; retain the setup and analyze after the remaining three results.
+
+Feyenoord's report shows 56% possession, 4:3 shots, 2:0 on target; it listed
+42/49 CLEAR (86%). Our report mean was 73ms with 364 commands; the action mix
+was MOVE270, INTERCEPT35, MARK27, CLEAR11, PRESS10, PASS9, GK_DIST1, SHOOT1.
+Hallucination FC2 had 63% possession, 3:5 shots, 1:2 on target and 43/54 CLEAR
+(80%); our report mean was 75ms with 410 commands. We recovered from conceding
+first and won 2:1; report lists our equalizer and second goal at minute 2 but
+does not identify the second scorer. AI Overview's causal explanations remain
+generated interpretation, not event evidence.
+
+Both opponents' reports are CLEAR-heavy, consistent with the last five
+batch17 opponents, but seven matches across mixed opponents remain too small
+to infer a common defense or CLEAR effectiveness. Both wins had more shots and
+shots on target for us; the sample does not isolate the role of setup, variance,
+or opponent strength. Our latency remains well above the <=10ms goal. Opponent
+summary means were 14-15ms but opponent FWD5 was 72-74ms, so the headline mean
+is not evidence that every action is faster. Role success is report-level only.
+The complete sanitized partial-series data is `research/v3/ranked-batch-18.json`.
+No configuration change or L02 installation occurred.
