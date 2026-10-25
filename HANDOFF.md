@@ -815,3 +815,13 @@ The Drunkards 1-2 loss after sudden death; FC LTX 0-1 loss. Current row #10,
 and zero on target; 54% possession did not yield shots. Keep command counts
 and match outcomes as separate measures. Full opponent data and uncertainty:
 `research/v3/ranked-batch-21.json`. Continue three games one at a time.
+
+Batch21 progress: 3/5. Amber Crests 2 0-4 No Human in the Loop; a clear
+win on unchanged baseline. Opponent report: 55% possession but 3 shots, 0 on
+target; 59 commands, CLEAR54 (92%), mean16ms. Our 45% possession produced
+6 shots/4 on target, report mean latency825ms (role means863/803/834/816/813),
+all 100% success. Adjacent leaderboard observation: our row #10, 192 played,
+357 points, 117W/6D/69L, goals262:154; opponent row #29, 104 played, 151
+points, 49W/4D/51L, 143:158. One-game/one-loss movement aligns with the result.
+Continue two games serially; retain unchanged baseline and gather each opponent
+report and standings row.

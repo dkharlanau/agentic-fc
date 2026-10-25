@@ -1,8 +1,8 @@
 {
   "id": "ranked-batch-21",
-  "status": "in-progress-2of5",
+  "status": "in-progress-3of5",
   "targetCompletedGames": 5,
-  "completedGames": 2,
+  "completedGames": 3,
   "setup": "registered baseline, formation 1-1-2; GK/DEF/MID/FWD4 show global.amazon.nova-2-lite-v1:0; FWD5 remains existing fast path, model not verified",
   "preflight": {
     "portalState": "leaderboard loaded; no active match alert; READY TO PLAY",
@@ -207,6 +207,110 @@
         "The report lists six SHOOT commands but one actual shot and zero on target; issued action count and match shot statistics diverge substantially. No causal explanation is available.",
         "FC LTX scored at 2' through MID Ranalda. Their pre-match observed leaderboard row was rank16, 164 played, 282 points; post-match row not yet checked."
       ]
+    },
+    {
+      "opponent": "Amber Crests 2",
+      "opponentLeaderboardBeforeObserved": {
+        "rank": 29,
+        "played": 103,
+        "wins": 49,
+        "draws": 4,
+        "losses": 50,
+        "goals": "143-154",
+        "goalDifference": -11,
+        "points": 151
+      },
+      "result": "WIN",
+      "score": "4-0",
+      "finish": "full time",
+      "homeAway": "HOME",
+      "possessionPct": "45-55",
+      "shots": "6-3",
+      "shotsOnTarget": "4-0",
+      "teamAverageLatencyMs": 825,
+      "teamCommands": 393,
+      "roleLatencyMs": [
+        863,
+        803,
+        834,
+        816,
+        813
+      ],
+      "successPct": "100% all roles",
+      "actions": {
+        "MOVE": 325,
+        "INTERCEPT": 24,
+        "CLEAR": 18,
+        "MARK": 14,
+        "PASS": 8,
+        "SHOOT": 4
+      },
+      "goals": [
+        {
+          "minute": "1'",
+          "scorer": "No Human in the Loop MID 3"
+        },
+        {
+          "minute": "1'",
+          "scorer": "No Human in the Loop MID 3"
+        },
+        {
+          "minute": "1'",
+          "scorer": "No Human in the Loop FWD 4"
+        },
+        {
+          "minute": "2'",
+          "scorer": "No Human in the Loop DEF 2"
+        }
+      ],
+      "opponentReport": {
+        "teamAverageLatencyMs": 16,
+        "teamCommands": 59,
+        "roleLatencyMs": [
+          4,
+          3,
+          3,
+          3,
+          80
+        ],
+        "successPct": "100% all roles",
+        "actions": {
+          "CLEAR": 54,
+          "PASS": 4,
+          "PRESS": 1
+        },
+        "leaderboardAfterMatch": {
+          "rank": 29,
+          "played": 104,
+          "points": 151,
+          "wins": 49,
+          "draws": 4,
+          "losses": 51,
+          "goals": "143-158",
+          "goalDifference": -15
+        },
+        "leaderboardBeforeObserved": {
+          "rank": 29,
+          "played": 103,
+          "points": 151,
+          "wins": 49,
+          "draws": 4,
+          "losses": 50,
+          "goals": "143-154",
+          "goalDifference": -11
+        },
+        "comparisonNote": "Observed adjacent leaderboard row increased by one played and one loss; unchanged points and rank are consistent with this result."
+      },
+      "reportAiOverview": "The report remained at Generating summary; no AI-generated explanation was used.",
+      "liveCommentaryObservations": [
+        "Amber Crests 2 were described as building patiently, keeping possession and probing for a gap."
+      ],
+      "observations": [
+        "Won 4-0 with 45% possession, 6 shots and 4 on target; Amber Crests 2 had 55%, 3 shots and 0 on target.",
+        "Our 393 commands were MOVE325, INTERCEPT24, CLEAR18, MARK14, PASS8, SHOOT4; mean825ms, role means863/803/834/816/813ms. All roles reported 100% success.",
+        "Amber Crests 2 reported 59 commands: CLEAR54 (92%), PASS4, PRESS1; mean16ms, role means4/3/3/3/80ms; all roles 100% success.",
+        "Their observed row moved from 103 to 104 played, retained rank29 and 151 points, adding a loss and four goals against; consistent with this match."
+      ]
     }
   ],
   "note": "Play five real ranked matches, one at a time, unchanged baseline. Capture opponent match reports and visible standings, then analyze at 5/5. No benchmarks or practice games.",
@@ -227,5 +331,14 @@
     "draws": 6,
     "losses": 69,
     "goals": "258-154"
+  },
+  "leaderboardAfterGame3": {
+    "rank": 10,
+    "played": 192,
+    "points": 357,
+    "wins": 117,
+    "draws": 6,
+    "losses": 69,
+    "goals": "262-154"
   }
 }
