@@ -1,0 +1,81 @@
+[
+  {
+    "id": "P03",
+    "parentHypothesis": "C03",
+    "role": "def",
+    "status": "queued_review_only; no inference or Fitness",
+    "source": "research/v3/schema-clean/def.txt",
+    "baselineVersion": "19",
+    "promptBeforeSha256": "86426b2320f5e40e444ebe553b0827b3707ff6f5cd22599478f71e5391c838d9",
+    "promptAfterSha256": "8538c1db52886d290a50094ff186114189d58e545e7e2a95324bed72ba09c200",
+    "promptBytesBefore": 2943,
+    "promptBytesAfter": 3096,
+    "modelIdUnchanged": "global.amazon.nova-2-lite-v1:0",
+    "patch": "research/v3/model-prompt-lab/candidate/def-single-press-v1.patch",
+    "formationUnchanged": "1-1-2",
+    "otherRolesUnchanged": true,
+    "freshModelCalls": 0,
+    "pairedPlanReady": false,
+    "fitnessResult": null,
+    "eligibleForPromotion": false,
+    "requiredScenarioFamilies": [
+      "MID closer: DEF shields/marks instead of joining press",
+      "DEF closest in defensive zone: recovery remains available",
+      "Own possession: safe distribution, never PRESS",
+      "Equal distance, HOME/AWAY, low stamina and missing state",
+      "Joint same-tick team decisions and physical defensive coverage"
+    ],
+    "limitations": [
+      "Static prompt defect/risk, not diagnosed cause of live losses",
+      "Longer prompt; latency improvement unmeasured",
+      "Existing role suite alone does not validate this new tactical rule",
+      "No newly required possession field or coordinate scale",
+      "Do not stack with P01, P02, model or deployment changes"
+    ],
+    "rollback": {
+      "promptFile": "research/v3/schema-clean/def.txt",
+      "promptSha256": "86426b2320f5e40e444ebe553b0827b3707ff6f5cd22599478f71e5391c838d9",
+      "freshFitnessRequired": true
+    }
+  },
+  {
+    "id": "P04",
+    "parentHypothesis": "C02",
+    "role": "mid",
+    "status": "queued_review_only; no inference or Fitness",
+    "source": "research/v3/schema-clean/mid.txt",
+    "baselineVersion": "15",
+    "promptBeforeSha256": "7b05fe872d47c532c374390642006759924d84048a61577bf4f3a9bba400c729",
+    "promptAfterSha256": "f96e6d9b689202a9fcce0724f38d48dde308b4c018dcf60776326f42758cb0a2",
+    "promptBytesBefore": 3989,
+    "promptBytesAfter": 4164,
+    "modelIdUnchanged": "global.amazon.nova-2-lite-v1:0",
+    "patch": "research/v3/model-prompt-lab/candidate/mid-pass-lane-v1.patch",
+    "formationUnchanged": "1-1-2",
+    "otherRolesUnchanged": true,
+    "freshModelCalls": 0,
+    "pairedPlanReady": false,
+    "fitnessResult": null,
+    "eligibleForPromotion": false,
+    "requiredScenarioFamilies": [
+      "Open forward with blocked lane: do not force that pass",
+      "Free forward and clear lane: keep the progressive pass",
+      "Both forwards marked, defender available: recycle",
+      "No safe pass, clear shot: do not suppress finishing",
+      "No safe pass/shot: improve position without inventing a receiver",
+      "HOME/AWAY, possession changes, stale MOVE history, physical pass outcomes"
+    ],
+    "limitations": [
+      "Static prompt defect/risk, not diagnosed cause of live losses",
+      "Longer prompt; latency improvement unmeasured",
+      "Existing role suite alone does not validate this new tactical rule",
+      "No newly required possession field or coordinate scale",
+      "Do not stack with P01, P02, model or deployment changes"
+    ],
+    "rollback": {
+      "promptFile": "research/v3/schema-clean/mid.txt",
+      "promptSha256": "7b05fe872d47c532c374390642006759924d84048a61577bf4f3a9bba400c729",
+      "freshFitnessRequired": true
+    }
+  }
+]

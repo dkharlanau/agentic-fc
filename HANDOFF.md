@@ -1,5 +1,27 @@
 # Agentic FC continuation
 
+## Offline latency / player update — 2026-10-25
+
+Owner's current baseline series: four complete,3W1L,6:3; fifth pending per latest
+message. Source is owner reports, not linked primary receipts. Third/fourth saved
+under model-prompt-lab/results/owner-series-update-03/04.json. Never treat this as
+P01 evidence or as a completed series. Live checkpoint3cdf5a7 may be older.
+
+Read model-prompt-lab/DECISION_LATENCY.ru.md, PLAYER_UPDATES.ru.md and
+GAME_FLOW_REQUEST.ru.md. Offline replay adds17 partially overlapping archived
+probes,10 history pairs,native route stages,pinned batch12 histograms. First native
+FWD2 call2910ms without model; subsequent p50104.7/p95108.7ms(n3). GK wall versus
+model residual unlocalized; no cause proven for series11games3/7/9. Shortening
+truncation count is not proven to shorten every turn. Exact game traces missing.
+
+D02 caller-only timing patch prepared,5 synthetic stream checks pass; no native
+execution or agent deployment. P03 DEF closest-presser and P04 MID safe-lane
+single-line patches queued independently under C03/C02, no paired plans yet.
+P01 remains the sole next proposed gameplay candidate; old156plan unchanged.
+P01/P02/P03/P04 all unpromoted; no fresh inference/Fitness.31 lab checks pass.
+Research branch only; no AWS,live-worktree edits,matches or messages to other chat.
+Do not carry this research HANDOFF over the live game's current checkpoint.
+
 ## Interim owner result — 2026-10-25
 
 Owner reports first game: BlackEagle W2:1, shots7:1, possession53%,405actions,

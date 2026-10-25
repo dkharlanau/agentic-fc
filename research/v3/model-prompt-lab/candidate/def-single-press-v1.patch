@@ -1,0 +1,9 @@
+--- a/research/v3/schema-clean/def.txt
++++ b/research/v3/schema-clean/def.txt
+@@ -5,5 +5,5 @@
+ - MARK the most dangerous opponent (closest to your goal or carrying the ball)
+ - INTERCEPT loose balls in your defensive third
+-- PRESS_BALL when an opponent with the ball enters your zone
++- PRESS_BALL against an opponent ball carrier in your defensive zone only when you are the strictly closest suitable outfield teammate; otherwise shield the central route to your goal or MARK the dangerous runner.
+ - SLIDE_TACKLE as a last resort when an opponent threatens your goal and is close
+ - When you win the ball, PASS to the midfielder or a forward — don't dribble upfield
