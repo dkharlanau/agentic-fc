@@ -236,6 +236,14 @@
         }
       },
       "completedAtObserved": "2026-10-25T07:03:00Z"
+    },
+    {
+      "alias": "stance-live-06",
+      "opponent": "(〃￣︶￣)人(￣︶￣〃)",
+      "side": "HOME",
+      "status": "running",
+      "initiation": "manual random matchmaking",
+      "matchReport": "https://agentic-football.aws.dev/matches/5598f09c-c23c-4169-bf21-973ad36c9bcb/report"
     }
   ],
   "incomingGamesObservedBeforeSeries": {
