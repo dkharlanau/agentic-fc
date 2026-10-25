@@ -1,8 +1,8 @@
 {
   "id": "ranked-batch-20",
-  "status": "in-progress-0of5",
+  "status": "in-progress-2of5",
   "targetCompletedGames": 5,
-  "completedGames": 0,
+  "completedGames": 2,
   "setup": "registered baseline, formation 1-1-2; GK/DEF/MID/FWD4 show global.amazon.nova-2-lite-v1:0; FWD5 remains existing fast path, model not verified",
   "preflight": {
     "portalState": "READY TO PLAY; no active match",
@@ -19,6 +19,77 @@
     "losses": 66,
     "goals": "251-148"
   },
-  "games": [],
+  "games": [
+    {
+      "opponent": "Tajfun Komary",
+      "result": "WIN",
+      "score": "1-0",
+      "possessionPct": "54-46",
+      "shots": "2-9",
+      "shotsOnTarget": "1-0",
+      "teamAverageLatencyMs": 15941,
+      "teamCommands": 0,
+      "roleLatencyMs": [11170, 11202, 19205, 19195, 18933],
+      "successPct": "100% all roles",
+      "actions": {},
+      "goals": [{"minute": "1'", "scorer": "MID 3"}],
+      "opponentReport": {
+        "teamAverageLatencyMs": 25,
+        "teamCommands": 2,
+        "roleLatencyMs": [7, 6, 6, 5, 100],
+        "successPct": "100% all roles",
+        "actions": {"CLEAR": 2},
+        "leaderboardAfterMatch": null,
+        "leaderboardRank": "not yet checked"
+      },
+      "reportAiOverview": "The report remained at 'Generating summary'; no AI-generated explanation was used.",
+      "observations": [
+        "Won 1-0 with 54% possession, 2 shots and 1 on target; Tajfun Komary had 46%, 9 shots and 0 on target.",
+        "The report shows zero own commands but a 15941ms team average and role latencies 11170/11202/19205/19195/18933ms. All roles reported 100% success; the discrepancy between zero commands and role/latency data is unresolved.",
+        "Tajfun Komary reported two commands, both CLEAR, 25ms team average and role latencies 7/6/6/5/100ms; all roles reported 100% success.",
+        "MID3 scored at 1'. Opponent rank and post-match row not yet checked. A single match does not establish an opponent weakness or a cause for our latency."
+      ]
+    },
+    {
+      "opponent": "Amber Geysers 2",
+      "result": "WIN",
+      "score": "2-1",
+      "finish": "sudden death",
+      "possessionPct": "42-58",
+      "shots": "11-4",
+      "shotsOnTarget": "2-1",
+      "teamAverageLatencyMs": 847,
+      "teamCommands": 599,
+      "roleLatencyMs": [633, 981, 884, 660, 884],
+      "successPct": "100% all roles",
+      "actions": {"PRESS": 286, "MOVE": 250, "INTERCEPT": 37, "CLEAR": 24, "FOLLOW": 1, "MARK": 1},
+      "goals": [
+        {"minute": "1'", "scorer": "Amber Geysers 2 MID 3"},
+        {"minute": "1'", "scorer": "No Human in the Loop FWD 4"},
+        {"minute": "4'", "scorer": "No Human in the Loop FWD 4 (sudden death)"}
+      ],
+      "opponentReport": {
+        "teamAverageLatencyMs": 15,
+        "teamCommands": 76,
+        "roleLatencyMs": [3, 2, 2, 2, 69],
+        "successPct": "100% all roles",
+        "actions": {"CLEAR": 61, "PASS": 10, "PRESS": 3, "INTERCEPT": 2},
+        "leaderboardAfterMatch": null,
+        "leaderboardRank": "not yet checked"
+      },
+      "reportAiOverview": "The report remained at 'Generating summary'; no AI-generated explanation was used.",
+      "liveCommentaryObservations": [
+        "The match commentary described Amber Geysers 2 as cranking up the press, hunting the ball down and swarming it; it also described them as keeping possession and probing for a gap. These are commentary cues, not verified formation or policy labels."
+      ],
+      "observations": [
+        "Won 2-1 after sudden death. Possession was 42-58, shots 11-4, shots on target 2-1.",
+        "Our 599 commands were PRESS286 (48%), MOVE250 (42%), INTERCEPT37 (6%), CLEAR24, FOLLOW1, MARK1; report mean847ms, role means633/981/884/660/884ms. All roles reported 100% success.",
+        "Amber Geysers 2 reported 76 commands and 15ms team mean; CLEAR61 (80%), PASS10, PRESS3, INTERCEPT2. Role means3/2/2/2/69ms; all roles reported 100% success.",
+        "Opponent score came from MID3 at 1'; FWD4 equalized at 1' and scored the sudden-death winner at 4'. Despite 58% possession and the commentary's pressure/probing cues, the opponent recorded four shots and one on target. This single game cannot establish a stable weakness."
+      ]
+    }
+  ],
+  "leaderboardAfterGame1": {"rank": 10, "played": 185, "points": 345, "wins": 113, "draws": 6, "losses": 66, "goals": "252-148"},
+  "leaderboardAfterGame2": {"rank": 10, "played": 186, "points": 348, "wins": 114, "draws": 6, "losses": 66, "goals": "254-149"},
   "note": "Collect five consecutive real ranked matches with the setup unchanged. Capture each official report and opponent profile, then analyze at 5/5. No benchmarks or practice games."
 }
