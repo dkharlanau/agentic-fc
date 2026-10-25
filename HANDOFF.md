@@ -724,3 +724,11 @@ no SHOOT label despite four shots. The 1590ms report and action/shot mismatch
 are leads for investigation, not proven causes. <=10ms remains unmet. No
 lineup/model/prompt changes or L02 trial. At this checkpoint Codex usage showed
 24% used; no need to stop for quota.
+## 2026-10-25 — ranked batch19 started
+
+Batch18 is complete and pushed at `2983e00`. A new five-game real-ranked series
+is staged in `research/v3/ranked-batch-19.json`; baseline unchanged, 1-1-2,
+pre-table rank12, 179 played, 327 points, 107W/6D/66L, goals243:147. Codex
+usage last read 24% used. No active game at this checkpoint. Continue one game
+at a time, capture reports/opponent details, and analyze only after 5/5. No
+practice, benchmarks, candidate install, or configuration changes.

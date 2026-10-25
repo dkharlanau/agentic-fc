@@ -1,0 +1,24 @@
+{
+  "id": "ranked-batch-19",
+  "status": "in-progress-0of5",
+  "targetCompletedGames": 5,
+  "completedGames": 0,
+  "setup": "registered baseline, formation 1-1-2; GK/DEF/MID/FWD4 show global.amazon.nova-2-lite-v1:0; FWD5 remains existing fast path, model not verified",
+  "preflight": {
+    "portalState": "READY TO PLAY; no active match",
+    "freshFitness": "not rerun; continuing same registered baseline",
+    "formation": "1-1-2",
+    "candidateInstalled": false
+  },
+  "beforeLeaderboard": {
+    "rank": 12,
+    "played": 179,
+    "points": 327,
+    "wins": 107,
+    "draws": 6,
+    "losses": 66,
+    "goals": "243-147"
+  },
+  "games": [],
+  "note": "Collect five consecutive real ranked matches with the setup unchanged. Capture each official report and opponent profile, then analyze at 5/5. No benchmarks or practice games."
+}
