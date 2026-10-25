@@ -1,8 +1,8 @@
 {
   "id": "ranked-batch-16",
-  "status": "in-progress-owner-resumed-baseline-while-L02-prepares",
+  "status": "complete-5of5-baseline",
   "targetCompletedGames": 5,
-  "completedGames": 4,
+  "completedGames": 5,
   "setup": "unchanged live baseline, FWD1v16, existing FWD2 fast path, formation 1-1-2",
   "preflight": {
     "portalState": "READY TO PLAY",
@@ -202,6 +202,59 @@
         "Leaderboard after the match lists Amber Arcs 2 at rank 37: 63 played, 36W/0D/27L, 85:61 goals, 108 points. It was rank37 with 62 played, 36W/0D/26L before this game, consistent with the reported 2-1 loss.",
         "This report is internally inconsistent: our command breakdown totals 15, while the award says FWD 5 had 41 commands. It also reports 1ms team average with only CLEAR commands despite three listed goals. Preserve the values as displayed, but exclude them from latency/action conclusions pending a better data source."
       ]
+    },
+    {
+      "opponent": "FantasyFootball",
+      "result": "LOSS",
+      "score": "0-1",
+      "possessionPct": "49-51",
+      "shots": "5-1",
+      "shotsOnTarget": "0-1",
+      "teamAverageLatencyMs": 1,
+      "teamCommands": 8,
+      "roleLatencyMs": [
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "successPct": "100% all roles",
+      "actions": {
+        "CLEAR": 8
+      },
+      "opponentReport": {
+        "teamAverageLatencyMs": 16,
+        "teamCommands": 25,
+        "roleLatencyMs": [
+          3,
+          3,
+          2,
+          2,
+          71
+        ],
+        "successPct": "100% all roles",
+        "actions": {
+          "CLEAR": 24,
+          "PASS": 1
+        },
+        "leaderboardAfterMatch": {
+          "rank": 39,
+          "played": 47,
+          "points": 99,
+          "wins": 33,
+          "draws": 0,
+          "losses": 14,
+          "goals": "60-36",
+          "goalDifference": 24
+        }
+      },
+      "observations": [
+        "FantasyFootball scored at 1' and won 1-0. The report shows 51% possession, 1 shot and 1 on target, versus our 49%, 5 shots and 0 on target.",
+        "FantasyFootball used CLEAR 24/25 commands (96%) and PASS once; role latencies were 3/3/2/2/71ms. Formation, pass completion, field position and defensive sequence are unknown.",
+        "Leaderboard after the match lists FantasyFootball rank39, 47 played, 99 points, 33W/0D/14L, goals60:36. Before the game its row was 46 played, 32W/0D/14L, goals59:36 and 96 points; the increment agrees with the 1-0 win.",
+        "Our report is inconsistent: it lists only 8 team commands, all CLEAR, while the FWD5 award says 19 commands. Its 1ms mean is also unverified and should not be used as latency proof."
+      ]
     }
   ],
   "leaderboardAfterGame2": {
@@ -213,12 +266,14 @@
     "losses": 63,
     "goals": "224-141"
   },
-  "continuationNote": "One final baseline game remains in batch16 (4/5). Continue collecting both teams’ reports and exact leaderboard rows. L02 is not installed; prioritize a new release only after all gates pass.",
+  "continuationNote": "Batch16 is complete on the unchanged verified baseline. The five recorded games were 4W/0D/1L, 11:3, 12 points. The first two row outcomes do not reconcile with the wider account-counter snapshot (which moved by five matches and 13 points); do not assign the unexplained difference to these rows. Recent three-game deltas do reconcile. L02/V2 remains failed and uninstalled; improve its cold-start gate before any candidate installation.",
   "limitations": [
     "Series incomplete at 3/5; no conclusions until the block finishes.",
     "HOME/random matchmaking; setup remains unchanged.",
     "Opponent action labels and aggregate reports do not establish tactical intent or command effectiveness.",
-    "Amber Arcs 2 report has a cross-field inconsistency (15 team commands vs 41 FWD5 award commands), so do not use its latency or action breakdown as performance proof."
+    "Amber Arcs 2 report has a cross-field inconsistency (15 team commands vs 41 FWD5 award commands), so do not use its latency or action breakdown as performance proof.",
+    "The initial leaderboard snapshot and first two recorded rows do not reconcile: the account counters moved by five games and 13 points, while only two rows are recorded in that interval. Unmatched results remain unattributed.",
+    "Amber Arcs 2 and FantasyFootball reports have cross-field command/award inconsistencies; their displayed team actions and latencies are not reliable proof."
   ],
   "leaderboardAfterGame3": {
     "rank": 13,
@@ -237,5 +292,27 @@
     "draws": 5,
     "losses": 63,
     "goals": "231-142"
+  },
+  "seriesSummary": {
+    "record": "4W-0D-1L",
+    "goals": "11-3",
+    "pointsFromRecordedResults": 12,
+    "shots": "37-7",
+    "shotsOnTarget": "11-3",
+    "reportCaveat": "All match reports are aggregate portal data. Amber Arcs and FantasyFootball reports conflict internally on our command totals/award counts; one unusually low 1ms latency report occurred. Treat aggregate tactical and latency trends as provisional.",
+    "opponentFindings": [
+      "Across the four opponents with available reports, possession ranged 51%-84% for the opponent. Ada and Shalqar each recorded at most one / zero shots, Amber Arcs 2 recorded five shots (one on target), and FantasyFootball one shot (on target). Possession alone did not distinguish outcomes in this small sample.",
+      "Clearance share was high in all four opponent reports (69%-96%); this is an observed common report label, not proof of a deliberate tactic or successful clearances.",
+      "Only FantasyFootball converted its lone shot into the winning goal; no event-level locations, formation, or pass completion were available."
+    ]
+  },
+  "leaderboardAfterGame5": {
+    "rank": 13,
+    "played": 169,
+    "points": 305,
+    "wins": 100,
+    "draws": 5,
+    "losses": 64,
+    "goals": "231-143"
   }
 }

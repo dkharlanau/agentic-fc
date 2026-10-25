@@ -628,3 +628,26 @@ Keep the displayed values for audit, but exclude this match's own command mix
 and latency from tactical or speed conclusions. Amber's action profile is more
 coherent, but its success and tactical purpose remain unknown. See the 4/5
 series row in `research/v3/ranked-batch-16.json`.
+
+## 2026-10-25 — batch16 complete; FantasyFootball opponent profile
+
+The five recorded baseline games finished 4W/0D/1L, 11:3, worth 12 points from
+those results. The reports sum to 37–7 shots and 11–3 on target. The current
+leaderboard is rank13, 169 played, 305 points, 100W/5D/64L, goals231:143. The
+first two recorded rows do not reconcile with the account snapshot (five extra
+matches and 13 points between snapshots); leave those unmatched results
+unattributed. The latest three-game counter delta does reconcile exactly.
+
+FantasyFootball beat us 1:0 with 51% possession, one shot, one on target, and a
+goal at 1'. We had 49%, five shots, zero on target. Their report lists 24/25
+CLEAR, one PASS; leaderboard rank39, 47 games, 99 points, 33W/0D/14L, goals
+60:36. This reinforces that possession share alone is not a useful outcome
+proxy in the observed sample. Four opponents had 51–84% possession; all showed
+high CLEAR shares (69–96%), but report labels do not reveal intent or success.
+
+**Data quality limits the tactical read.** Amber Arcs 2 reports 15 team commands
+while its FWD5 award says 41; FantasyFootball reports 8 while the award says 19.
+Both show a 1ms mean for our side, unlike earlier reports. Exclude these
+command and latency values from speed/action analysis. The five-match run is a
+small, random-HOME sample; keep the lineup unchanged until a properly gated
+candidate exists. Full rows and caveats: `research/v3/ranked-batch-16.json`.
