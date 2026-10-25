@@ -769,5 +769,10 @@ analytics and opponent reports are in `research/v3/ranked-batch-19.json` and
 456-2434ms; four of five exceeded one second. Team CLEAR-heavy opponents were
 5/5 (80-95%). We had 33:22 shots, 8:1 on target, despite 41.6% mean possession.
 The <=10ms target remains unmet; no setup changed. Codex usage was read after
-batch19 and showed 24% used. Before any more games, check usage and save all results. No
-model/prompt/formation changes or L02 install; continue real matches only.
+batch19 and showed 24% used. No model/prompt/formation changes or L02 install.
+
+Batch20 checkpoint: opened a new five-game real-ranked cohort in
+`research/v3/ranked-batch-20.json`; baseline unchanged, pre-table #10, 184
+played, 342 points, 112W/6D/66L, goals251:148. Continue one real match at a
+time, capture reports/opponents, analyze only at 5/5, and check quota before
+the next series. No benchmarks or practice games.
