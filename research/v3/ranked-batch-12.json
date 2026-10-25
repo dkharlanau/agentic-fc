@@ -3,7 +3,7 @@
   "coachVersion": "coach-v1.0",
   "status": "running",
   "targetCompletedGames": 10,
-  "completedGames": 6,
+  "completedGames": 8,
   "createdAtUTC": "2026-10-25T07:02:19.911385+00:00",
   "setup": {
     "sourceCommit": "931af03",
@@ -486,6 +486,132 @@
           "privateScreenshot": "game06-live-b.png"
         }
       ]
+    },
+    {
+      "alias": "batch12-live-07",
+      "opponent": "kera",
+      "side": "HOME",
+      "status": "complete",
+      "initiation": "manual random matchmaking",
+      "liveObservedAtUTC": "2026-10-25T07:39:32.191Z",
+      "matchReport": "https://agentic-football.aws.dev/matches/39ba240b-a3dc-4a9e-91ba-a4a3cffb8745/report",
+      "scoreFor": 1,
+      "scoreAgainst": 2,
+      "result": "LOSS",
+      "completedAtObserved": "2026-10-25T07:44:53.866931+00:00",
+      "rawReportFacts": {
+        "possessionPct": 50,
+        "shotsFor": 4,
+        "shotsAgainst": 6,
+        "shotsOnTargetFor": 1,
+        "shotsOnTargetAgainst": 2,
+        "teamAverageLatencyMs": 1,
+        "teamCommands": 11,
+        "opponentAverageLatencyMs": 15,
+        "opponentCommands": 58,
+        "agentLatencyMs": [
+          2,
+          1,
+          1,
+          1,
+          1
+        ],
+        "opponentAgentLatencyMs": [
+          3,
+          2,
+          2,
+          2,
+          70
+        ],
+        "teamCommandCounts": {
+          "CLEAR_OVERRIDE": 11
+        },
+        "opponentCommandCounts": {
+          "CLEAR_OVERRIDE": 51,
+          "PASS": 4,
+          "PRESS_BALL": 3
+        },
+        "agentSuccessPct": [
+          100,
+          100,
+          100,
+          100,
+          100
+        ],
+        "opponentAgentSuccessPct": [
+          100,
+          100,
+          100,
+          100,
+          100
+        ]
+      }
+    },
+    {
+      "alias": "batch12-live-08",
+      "opponent": "Prashanth Pokkula",
+      "side": "HOME",
+      "status": "complete",
+      "initiation": "manual random matchmaking",
+      "liveObservedAtUTC": "2026-10-25T07:46:42.455Z",
+      "matchReport": "https://agentic-football.aws.dev/matches/c281db2e-85a9-45c2-9027-1e9eb7b50aaa/report",
+      "scoreFor": 3,
+      "scoreAgainst": 0,
+      "result": "WIN",
+      "completedAtObserved": "2026-10-25T07:50:13.285040+00:00",
+      "rawReportFacts": {
+        "possessionPct": 26,
+        "shotsFor": 7,
+        "shotsAgainst": 3,
+        "shotsOnTargetFor": 3,
+        "shotsOnTargetAgainst": 0,
+        "teamAverageLatencyMs": 880,
+        "teamCommands": 322,
+        "opponentAverageLatencyMs": 15,
+        "opponentCommands": 63,
+        "agentLatencyMs": [
+          580,
+          1134,
+          921,
+          628,
+          792
+        ],
+        "opponentAgentLatencyMs": [
+          4,
+          3,
+          3,
+          3,
+          74
+        ],
+        "teamCommandCounts": {
+          "PRESS_BALL": 148,
+          "MOVE_TO": 123,
+          "CLEAR_OVERRIDE": 25,
+          "INTERCEPT": 16,
+          "MARK": 6,
+          "GK_DISTRIBUTE": 2,
+          "SHOOT": 2
+        },
+        "opponentCommandCounts": {
+          "CLEAR_OVERRIDE": 60,
+          "PASS": 2,
+          "SHOOT": 1
+        },
+        "agentSuccessPct": [
+          100,
+          100,
+          100,
+          100,
+          100
+        ],
+        "opponentAgentSuccessPct": [
+          100,
+          100,
+          100,
+          100,
+          100
+        ]
+      }
     }
   ],
   "ownerDirective": "Ten real games per cohort; analyze only after all ten complete",
