@@ -1,8 +1,8 @@
 {
   "id": "ranked-batch-21",
-  "status": "in-progress-0of5",
+  "status": "in-progress-2of5",
   "targetCompletedGames": 5,
-  "completedGames": 0,
+  "completedGames": 2,
   "setup": "registered baseline, formation 1-1-2; GK/DEF/MID/FWD4 show global.amazon.nova-2-lite-v1:0; FWD5 remains existing fast path, model not verified",
   "preflight": {
     "portalState": "leaderboard loaded; no active match alert; READY TO PLAY",
@@ -20,6 +20,212 @@
     "losses": 67,
     "goals": "257-151"
   },
-  "games": [],
-  "note": "Play five real ranked matches, one at a time, unchanged baseline. Capture opponent match reports and visible standings, then analyze at 5/5. No benchmarks or practice games."
+  "games": [
+    {
+      "opponent": "The Drunkards",
+      "opponentLeaderboardBeforeObserved": {
+        "rank": 6,
+        "played": 268,
+        "wins": 190,
+        "draws": 5,
+        "losses": 73,
+        "goals": "500-233",
+        "goalDifference": 267,
+        "points": 575
+      },
+      "result": "LOSS",
+      "score": "1-2",
+      "finish": "sudden death",
+      "homeAway": "HOME",
+      "possessionPct": "43-57",
+      "shots": "10-5",
+      "shotsOnTarget": "1-2",
+      "teamAverageLatencyMs": 75,
+      "teamCommands": 525,
+      "roleLatencyMs": [
+        77,
+        78,
+        75,
+        81,
+        73
+      ],
+      "successPct": "100% all roles",
+      "actions": {
+        "MOVE": 420,
+        "PRESS": 42,
+        "CLEAR": 26,
+        "PASS": 15,
+        "MARK": 7,
+        "GK_DIST": 6,
+        "INTERCEPT": 6,
+        "SHOOT": 3
+      },
+      "goals": [
+        {
+          "minute": "2'",
+          "scorer": "No Human in the Loop Unknown"
+        },
+        {
+          "minute": "2'",
+          "scorer": "The Drunkards DEF Gin"
+        },
+        {
+          "minute": "3'",
+          "scorer": "The Drunkards MID Whiskey"
+        }
+      ],
+      "opponentReport": {
+        "teamAverageLatencyMs": 16,
+        "teamCommands": 74,
+        "roleLatencyMs": [
+          3,
+          3,
+          3,
+          2,
+          75
+        ],
+        "successPct": "100% all roles",
+        "actions": {
+          "CLEAR": 68,
+          "PASS": 6
+        },
+        "leaderboardAfterMatch": {
+          "rank": 6,
+          "played": 270,
+          "points": 581,
+          "wins": 192,
+          "draws": 5,
+          "losses": 73,
+          "goals": "506-234",
+          "goalDifference": 272
+        },
+        "leaderboardRank": "not yet checked",
+        "comparisonNote": "Two games were added between the last pre-match and post-match snapshots; both appear as wins in the row delta. Our loss to them is consistent with one added win and +2 goals, while the other concurrent game is unattributed."
+      },
+      "reportAiOverview": "The report remained at 'Generating summary'; no AI-generated explanation was used.",
+      "liveCommentaryObservations": [
+        "The Drunkards were described as building patiently, keeping possession/probing for a gap, knocking the ball around, and pressing the door for a goal."
+      ],
+      "observations": [
+        "Lost 1-2 after sudden death. We had 43% possession, 10 shots and 1 on target; The Drunkards had 57%, 5 shots and 2 on target.",
+        "Our 525 commands were MOVE420 (80%), PRESS42 (8%), CLEAR26, PASS15, MARK7, GK_DIST6, INTERCEPT6, SHOOT3; mean75ms, role means77/78/75/81/73ms. All roles reported 100% success.",
+        "The Drunkards reported 74 commands: CLEAR68 (92%), PASS6, PRESS0; mean16ms, role means3/3/3/2/75ms. All roles reported 100% success.",
+        "Opponent defenders Gin and midfielder Whiskey scored at 2' and 3'; our report marks the scorer Unknown at 2'. Their 5 shots generated 2 on target, versus our 10 shots/1 on target; potential finishing-quality issue is descriptive, not causal.",
+        "The opponent was rank6 in the last pre-match snapshot (268 played, 575 points). Post-match row not yet checked; movement may include concurrent matches."
+      ]
+    },
+    {
+      "opponent": "FC LTX",
+      "result": "LOSS",
+      "score": "0-1",
+      "finish": "full time",
+      "homeAway": "HOME",
+      "opponentLeaderboardBeforeObserved": {
+        "rank": 16,
+        "played": 164,
+        "wins": 90,
+        "draws": 12,
+        "losses": 62,
+        "goals": "197-176",
+        "goalDifference": 21,
+        "points": 282
+      },
+      "possessionPct": "54-46",
+      "shots": "1-8",
+      "shotsOnTarget": "0-1",
+      "teamAverageLatencyMs": 77,
+      "teamCommands": 310,
+      "roleLatencyMs": [
+        79,
+        82,
+        74,
+        79,
+        78
+      ],
+      "successPct": "100% all roles",
+      "actions": {
+        "MOVE": 250,
+        "PRESS": 27,
+        "INTERCEPT": 14,
+        "CLEAR": 9,
+        "SHOOT": 6,
+        "PASS": 3,
+        "MARK": 1
+      },
+      "goals": [
+        {
+          "minute": "2'",
+          "scorer": "FC LTX MID Ranalda"
+        }
+      ],
+      "opponentReport": {
+        "teamAverageLatencyMs": 16,
+        "teamCommands": 39,
+        "roleLatencyMs": [
+          3,
+          3,
+          2,
+          2,
+          71
+        ],
+        "successPct": "100% all roles",
+        "actions": {
+          "CLEAR": 27,
+          "PASS": 10,
+          "PRESS": 2
+        },
+        "leaderboardAfterMatch": {
+          "rank": 16,
+          "played": 165,
+          "points": 285,
+          "wins": 91,
+          "draws": 12,
+          "losses": 62,
+          "goals": "198-176",
+          "goalDifference": 22
+        },
+        "leaderboardBeforeObserved": {
+          "rank": 16,
+          "played": 164,
+          "points": 282,
+          "wins": 90,
+          "draws": 12,
+          "losses": 62,
+          "goals": "197-176",
+          "goalDifference": 21
+        },
+        "comparisonNote": "The immediate observed row delta (+1 game, +1 win, +1 goal for, +3 points) matches FC LTX winning this match."
+      },
+      "reportAiOverview": "The report remained at 'Generating summary'; no AI-generated explanation was used.",
+      "liveCommentaryObservations": [
+        "FC LTX was described as taking time to build, keeping possession/probing for a gap, and knocking the ball around."
+      ],
+      "observations": [
+        "Lost 0-1 with 54% possession, 1 shot and 0 on target; FC LTX had 46%, 8 shots and 1 on target.",
+        "Our report lists 310 commands: MOVE250 (81%), PRESS27 (9%), INTERCEPT14, CLEAR9, SHOOT6, PASS3, MARK1; mean77ms and role means79/82/74/79/78ms. All roles reported 100% success.",
+        "FC LTX reported 39 commands: CLEAR27 (69%), PASS10 (26%), PRESS2; mean16ms and role means3/3/2/2/71ms. All roles reported 100% success.",
+        "The report lists six SHOOT commands but one actual shot and zero on target; issued action count and match shot statistics diverge substantially. No causal explanation is available.",
+        "FC LTX scored at 2' through MID Ranalda. Their pre-match observed leaderboard row was rank16, 164 played, 282 points; post-match row not yet checked."
+      ]
+    }
+  ],
+  "note": "Play five real ranked matches, one at a time, unchanged baseline. Capture opponent match reports and visible standings, then analyze at 5/5. No benchmarks or practice games.",
+  "leaderboardAfterGame1": {
+    "rank": 10,
+    "played": 190,
+    "points": 354,
+    "wins": 116,
+    "draws": 6,
+    "losses": 68,
+    "goals": "258-153"
+  },
+  "leaderboardAfterGame2": {
+    "rank": 10,
+    "played": 191,
+    "points": 354,
+    "wins": 116,
+    "draws": 6,
+    "losses": 69,
+    "goals": "258-154"
+  }
 }

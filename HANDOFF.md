@@ -805,3 +805,13 @@ merged main branch only adds native-latency diagnostics, not a gameplay release.
 Continue one real ranked game at a time on unchanged baseline, capture opponent
 reports/visible leaderboard rows, analyze only after 5/5, and check quota at the
 boundary. See `research/v3/ranked-batch-21.json`.
+
+Batch21 progress: 2/5 real ranked games complete on unchanged baseline.
+The Drunkards 1-2 loss after sudden death; FC LTX 0-1 loss. Current row #10,
+191 played, 354 points, 116W/6D/69L, goals258:154 (started #9/189/354/
+116W/6D/67L/257:151). Both reports show 100% role success; latency means
+75/77ms. The Drunkards reported 68/74 CLEAR (92%); FC LTX 27/39 CLEAR (69%),
+10 PASS. In FC LTX, 310 commands included six SHOOT but only one actual shot
+and zero on target; 54% possession did not yield shots. Keep command counts
+and match outcomes as separate measures. Full opponent data and uncertainty:
+`research/v3/ranked-batch-21.json`. Continue three games one at a time.
