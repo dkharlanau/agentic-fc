@@ -295,9 +295,54 @@
       "alias": "stance-live-07",
       "opponent": "FootballCore",
       "side": "HOME",
-      "status": "running",
+      "status": "complete",
       "initiation": "manual random matchmaking",
-      "matchReport": "https://agentic-football.aws.dev/matches/862c811e-8294-4df0-b3ff-890ae1a01304/report"
+      "matchReport": "https://agentic-football.aws.dev/matches/862c811e-8294-4df0-b3ff-890ae1a01304/report",
+      "result": "WIN",
+      "scoreFor": 2,
+      "scoreAgainst": 0,
+      "rawReportFacts": {
+        "possessionPct": 36,
+        "shotsFor": 6,
+        "shotsAgainst": 2,
+        "shotsOnTargetFor": 2,
+        "shotsOnTargetAgainst": 0,
+        "teamAverageLatencyMs": 2277,
+        "teamCommands": 219,
+        "opponentAverageLatencyMs": 15,
+        "opponentCommands": 29,
+        "agentLatencyMs": [
+          2933,
+          3100,
+          2603,
+          1675,
+          1647
+        ],
+        "opponentAgentLatencyMs": [
+          5,
+          5,
+          4,
+          4,
+          82
+        ],
+        "teamCommandBreakdownPct": {
+          "press": 46,
+          "move": 44,
+          "clear": 5,
+          "mark": 3,
+          "intercept": 2
+        },
+        "opponentCommandBreakdownPct": {
+          "clear": 79,
+          "pass": 17,
+          "intercept": 3
+        },
+        "opponentVisibleTacticalCommentary": [
+          "FootballCore crank up the press, hunting it down.",
+          "FootballCore keep possession, probing for a gap."
+        ]
+      },
+      "completedAtObserved": "2026-10-25T07:39:00Z"
     }
   ],
   "incomingGamesObservedBeforeSeries": {
@@ -319,5 +364,5 @@
     "automaticShutdown": false,
     "noNewAutomations": true
   },
-  "completedGames": 6
+  "completedGames": 7
 }
