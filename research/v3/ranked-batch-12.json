@@ -3,7 +3,7 @@
   "coachVersion": "coach-v1.0",
   "status": "running",
   "targetCompletedGames": 10,
-  "completedGames": 8,
+  "completedGames": 9,
   "createdAtUTC": "2026-10-25T07:02:19.911385+00:00",
   "setup": {
     "sourceCommit": "931af03",
@@ -596,6 +596,72 @@
           "CLEAR_OVERRIDE": 60,
           "PASS": 2,
           "SHOOT": 1
+        },
+        "agentSuccessPct": [
+          100,
+          100,
+          100,
+          100,
+          100
+        ],
+        "opponentAgentSuccessPct": [
+          100,
+          100,
+          100,
+          100,
+          100
+        ]
+      }
+    },
+    {
+      "alias": "batch12-live-09",
+      "opponent": "WKS MUCHOBÓR WROCŁAW",
+      "side": "HOME",
+      "status": "complete",
+      "initiation": "manual random matchmaking",
+      "liveObservedAtUTC": "2026-10-25T07:51:44Z",
+      "matchReport": "https://agentic-football.aws.dev/matches/cae28e35-654e-441f-a956-9971d35afe73/report",
+      "scoreFor": 3,
+      "scoreAgainst": 0,
+      "result": "WIN",
+      "completedAtObserved": "2026-10-25T07:55:16Z",
+      "rawReportFacts": {
+        "possessionPct": 34,
+        "shotsFor": 7,
+        "shotsAgainst": 2,
+        "shotsOnTargetFor": 3,
+        "shotsOnTargetAgainst": 0,
+        "teamAverageLatencyMs": 529,
+        "teamCommands": 405,
+        "opponentAverageLatencyMs": 18,
+        "opponentCommands": 52,
+        "agentLatencyMs": [
+          444,
+          414,
+          409,
+          415,
+          406
+        ],
+        "opponentAgentLatencyMs": [
+          3,
+          3,
+          2,
+          3,
+          72
+        ],
+        "teamCommandCounts": {
+          "MOVE_TO": 302,
+          "INTERCEPT": 52,
+          "PRESS_BALL": 30,
+          "CLEAR_OVERRIDE": 12,
+          "PASS": 7,
+          "GK_DISTRIBUTE": 2
+        },
+        "opponentCommandCounts": {
+          "CLEAR_OVERRIDE": 33,
+          "PASS": 17,
+          "INTERCEPT": 1,
+          "PRESS_BALL": 1
         },
         "agentSuccessPct": [
           100,
