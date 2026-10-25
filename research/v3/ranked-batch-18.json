@@ -1,11 +1,11 @@
 {
   "id": "ranked-batch-18",
-  "status": "in-progress-2of5",
+  "status": "in-progress-3of5",
   "targetCompletedGames": 5,
-  "completedGames": 2,
+  "completedGames": 3,
   "setup": "unchanged registered baseline, formation 1-1-2; existing FWD5 fast path; no L02 candidate installed",
   "preflight": {
-    "portalState": "two matches completed; no further match was started by this update",
+    "portalState": "three matches completed; no active match visible after the third report",
     "freshFitness": "not rerun; no candidate or configuration change",
     "formation": "1-1-2",
     "candidateInstalled": false
@@ -132,33 +132,68 @@
         "The match viewer showed the opponent score first, then our equalizer and winner; the report lists two goals at 2' but does not identify the second scorer. Preserve the report's unknown attribution.",
         "The post-match Hallucination FC2 leaderboard row was rank 21, 142 played and 235 points. No pre-match row was captured, so no opponent table delta is inferred."
       ]
+    },
+    {
+      "opponent": "FC Zukko",
+      "result": "WIN",
+      "score": "2-0",
+      "possessionPct": "51-49",
+      "shots": "5-3",
+      "shotsOnTarget": "2-0",
+      "teamAverageLatencyMs": null,
+      "teamCommands": null,
+      "roleLatencyMs": [2, 2, 2, 1, 1],
+      "successPct": "100% all roles",
+      "actions": null,
+      "goals": [
+        {"minute": "1'", "scorer": "FWD 4"},
+        {"minute": "2'", "scorer": "FWD 4"}
+      ],
+      "opponentReport": {
+        "teamAverageLatencyMs": 16,
+        "teamCommands": 48,
+        "roleLatencyMs": [4, 3, 3, 3, 70],
+        "successPct": "100% all roles",
+        "actions": {"CLEAR": 38, "PASS": 9, "PRESS": 1},
+        "leaderboardAfterMatch": null,
+        "leaderboardRank": "not visible in loaded top 48 rows"
+      },
+      "dataQuality": "Our report lists 11 total CLEAR commands and 2ms mean, but the FWD4 award says 32 commands and the displayed per-agent latencies are much lower than recent unchanged-setup summaries. Preserve the displayed numbers but exclude own command volume/action mix and latency from comparisons.",
+      "reportAiOverview": "Generated report says two early FWD goals caught FC Zukko unprepared and it failed to turn command volume into shots on target. Its causal and tactical explanation is not verified event-level evidence.",
+      "observations": [
+        "No Human in the Loop won 2-0 with 51% possession, 5 shots and 2 on target; FC Zukko had 49%, 3 shots and 0 on target.",
+        "FC Zukko logged CLEAR 38/48 (79%), PASS 9 and PRESS 1. This is a one-match action profile, not a confirmed fixed strategy.",
+        "FC Zukko's reported team latency was 16ms; role means were 4/3/3/3/70ms. All roles reported 100% success.",
+        "Our report shows role latency 2/2/2/1/1ms and team mean 2ms, but it conflicts with recent comparable reports and command totals; latency and action counts are excluded from analysis pending corroboration.",
+        "FC Zukko was not present in the loaded top-48 standings rows; rank and pre/post leaderboard change are unknown."
+      ]
     }
   ],
   "leaderboardAfterGame2": {
     "rank": 12,
-    "played": 176,
-    "points": 324,
-    "wins": 106,
+    "played": 177,
+    "points": 327,
+    "wins": 107,
     "draws": 6,
     "losses": 64,
-    "goals": "241-144"
+    "goals": "243-144"
   },
   "seriesAnalysis": {
-    "record": "2W/0D/0L so far",
-    "goals": "4-1",
-    "points": 6,
+    "record": "3W/0D/0L so far",
+    "goals": "6-1",
+    "points": 9,
     "leaderboardDelta": {
       "rank": "12 to 12",
-      "played": "174 to 176",
-      "points": "318 to 324",
-      "wins": "+2",
+      "played": "174 to 177",
+      "points": "318 to 327",
+      "wins": "+3",
       "draws": "+0",
       "losses": "+0",
-      "goals": "237-143 to 241-144"
+      "goals": "237-143 to 243-144"
     },
-    "opponentPatterns": "Both reports in this partial cohort show opponents with CLEAR as their most frequent listed action (Feyenoord 42/49, Hallucination FC2 43/54). This is a repeated label in two matches only, not proof of common tactics or successful defensive clears.",
-    "latencyReview": "Our reported team averages were 73 and 75ms, above the previously stated <=10ms target. Opponent team means were 14 and 15ms, but each opponent's FWD5 latency was 72-74ms. These are report summary values, not full response-time distributions or independent timeout audits.",
-    "decision": "Partial cohort only; do not change setup based on these two wins. Continue unchanged configuration through five completed matches, then analyze the cohort."
+    "opponentPatterns": "All three opponents in the partial cohort list CLEAR as their most frequent action (Feyenoord 42/49, Hallucination FC2 43/54, FC Zukko 38/48). This repeated label is an observation across three matches, not proof of common tactics or successful defensive clears.",
+    "latencyReview": "Our report averages are 73ms and 75ms in two matches; FC Zukko's report showed anomalous 2ms and is excluded. The <=10ms goal is not established. Opponent team means were 14-16ms, but FWD5 values were 70-74ms. These are summary values, not full response-time distributions or independent timeout audits.",
+    "decision": "Partial cohort only; do not change setup based on these three wins. Continue unchanged configuration through five completed matches, then analyze the cohort."
   },
-  "note": "These two games appeared in the portal's real-match flow after batch17 while no configuration changes were made. No match identifiers, credentials, ARNs, account IDs, or raw states are recorded."
+  "note": "The first two games appeared in the portal's real-match flow after batch17; the third was started by selecting Surprise me from ready ranked teams. Configuration remained unchanged throughout. No match identifiers, credentials, ARNs, account IDs, or raw states are recorded."
 }

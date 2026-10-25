@@ -702,12 +702,13 @@ candidate exists. Full rows and caveats: `research/v3/ranked-batch-16.json`.
 
 ## 2026-10-25 — ranked batch18 partial; Feyenoord and Hallucination FC2
 
-Two further real ranked matches were completed with the registered baseline and
-1-1-2 unchanged: Feyenoord 0:2, then Hallucination FC2 1:2. The portal
-leaderboard now shows rank 12, 176 games, 324 points, 106W/6D/64L and goals
-241:144, versus the batch17 close at rank12, 174 games, 318 points and 237:143.
-The two-game delta reconciles with +2 wins, +4 scored, +1 conceded. Batch18 is
-only 2/5; retain the setup and analyze after the remaining three results.
+Three real ranked matches were completed with the registered baseline and
+1-1-2 unchanged: Feyenoord 0:2, Hallucination FC2 1:2, and FC Zukko 2:0. The
+portal leaderboard now shows rank 12, 177 games, 327 points, 107W/6D/64L and
+goals 243:144, versus the batch17 close at rank12, 174 games, 318 points and
+237:143. The three-game delta reconciles with +3 wins, +6 scored, +1 conceded.
+Batch18 is only 3/5; retain the setup and analyze after the remaining two
+results.
 
 Feyenoord's report shows 56% possession, 4:3 shots, 2:0 on target; it listed
 42/49 CLEAR (86%). Our report mean was 73ms with 364 commands; the action mix
@@ -718,12 +719,16 @@ first and won 2:1; report lists our equalizer and second goal at minute 2 but
 does not identify the second scorer. AI Overview's causal explanations remain
 generated interpretation, not event evidence.
 
-Both opponents' reports are CLEAR-heavy, consistent with the last five
-batch17 opponents, but seven matches across mixed opponents remain too small
-to infer a common defense or CLEAR effectiveness. Both wins had more shots and
-shots on target for us; the sample does not isolate the role of setup, variance,
-or opponent strength. Our latency remains well above the <=10ms goal. Opponent
-summary means were 14-15ms but opponent FWD5 was 72-74ms, so the headline mean
-is not evidence that every action is faster. Role success is report-level only.
-The complete sanitized partial-series data is `research/v3/ranked-batch-18.json`.
-No configuration change or L02 installation occurred.
+All three opponents' reports are CLEAR-heavy (Feyenoord 42/49, Hallucination
+FC2 43/54, FC Zukko 38/48), consistent with the last five batch17 opponents,
+but eight matches across mixed opponents remain too small to infer a common
+defense or CLEAR effectiveness. All three wins had more shots and shots on
+target for us; the sample does not isolate setup, variance, or opponent
+strength. Our latency remains above the <=10ms goal. Opponent summary means
+were 14-16ms but opponent FWD5 was 70-74ms, so the headline mean is not evidence
+that every action is faster. FC Zukko's report showed our team mean 2ms and 11
+CLEAR commands, but FWD4's award reported 32 commands; exclude those own-side
+latency and action values as internally inconsistent. Role success is
+report-level only. The complete sanitized partial-series data is
+`research/v3/ranked-batch-18.json`. No configuration change or L02 installation
+occurred.

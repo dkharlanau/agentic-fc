@@ -710,14 +710,14 @@ COACHv1.0readandreviewedbeforeblock. OriginalFWD1v16exactrollbackprivate.
 
 ## 2026-10-25 — ranked batch18 underway
 
-Two real ranked games completed after batch17 with unchanged registered baseline
-and 1-1-2: Feyenoord 0:2, Hallucination FC2 1:2. Standings now show rank12,
-176 played, 324 points, 106W/6D/64L, goals241:144 (batch17 close was 174/318,
-104W/6D/64L, 237:143). Batch18 remains 2/5. Reports, opponent action profiles,
-latencies, scorelines, and data caveats are in `research/v3/ranked-batch-18.json`
-and `COACH_REVIEWS.md`. Both opponents logged CLEAR as their top command (86%
-and 80%), an observation only. Our report means were 73 and 75ms; <=10ms is
-still unmet. No lineup/model/prompt changes and no L02 trial. Continue the same
-setup until 5 completed real ranked games, then analyze; do not start benchmarks.
-No active match was visible on the portal after capturing game2's report and
-leaderboard.
+Three real ranked games completed after batch17 with unchanged registered
+baseline and 1-1-2: Feyenoord 0:2, Hallucination FC2 1:2, FC Zukko 2:0.
+Standings now show rank12, 177 played, 327 points, 107W/6D/64L, goals243:144
+(batch17 close was 174/318, 104W/6D/64L, 237:143). Batch18 remains 3/5.
+Reports, opponent action profiles, latencies, scorelines, and caveats are in
+`research/v3/ranked-batch-18.json` and `COACH_REVIEWS.md`. All three opponents'
+reports list CLEAR as their top command (79-86%), observation only. Our coherent
+report means were 73 and 75ms; FC Zukko's 2ms/11-command own report conflicted
+with its FWD4 award and was excluded. <=10ms is still unmet. No lineup/model/
+prompt changes and no L02 trial. Continue the same setup until 5 completed real
+ranked games, then analyze; do not start benchmarks.
