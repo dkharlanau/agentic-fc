@@ -26,9 +26,39 @@
       "alias": "stance-live-01",
       "opponent": "Singularity FC",
       "side": "HOME",
-      "status": "running",
+      "status": "complete",
       "startedAt": "2026-10-25T06:07:09.282022+00:00",
-      "initiation": "manual random matchmaking"
+      "initiation": "manual random matchmaking",
+      "result": "WIN",
+      "scoreFor": 2,
+      "scoreAgainst": 0,
+      "matchReport": "https://agentic-football.aws.dev/matches/b3306055-d1e2-4371-9b27-836845a667e7/report",
+      "rawReportFacts": {
+        "possessionPct": 47,
+        "shotsFor": 4,
+        "shotsAgainst": 2,
+        "shotsOnTargetFor": 2,
+        "shotsOnTargetAgainst": 0,
+        "teamAverageLatencyMs": 73,
+        "teamCommands": 370,
+        "opponentAverageLatencyMs": 18,
+        "opponentCommands": 46,
+        "agentLatencyMs": [
+          80,
+          76,
+          76,
+          77,
+          76
+        ],
+        "opponentAgentLatencyMs": [
+          4,
+          3,
+          3,
+          3,
+          75
+        ]
+      },
+      "completedAtObserved": "2026-10-25T06:14:00Z"
     }
   ],
   "incomingGamesObservedBeforeSeries": {
@@ -49,5 +79,6 @@
     "activeMatch": true,
     "automaticShutdown": false,
     "noNewAutomations": true
-  }
+  },
+  "completedGames": 1
 }
