@@ -688,3 +688,18 @@ Fitness was not run and L01 was not registered. See
 `research/v3/model-prompt-lab/results/mid-l01-native-screen-20261025.json`.
 Investigate cold-start/session behaviour as a new experiment; do not weaken the
 gate or change the active lineup based on these data.
+
+## 2026-10-25 — L02 startup correction after L01 failure
+
+HANDOFF, coach-v1.0 and latest reviews actually read. C01: preserve the active
+series and one operator; owner explicitly requests autonomous release after
+gates. L01 failed all six first calls despite 224 valid responses; EPAM is
+baseline evidence. C02/C03: no tactical/model changes justified by this startup
+failure. L02 preserves the L01 decision engine and changes only HTTP/startup
+packaging: 20.6MB SDK archive becomes 16.5KB stdlib archive, same SSE bytes.
+23 focused checks and 224 extracted-archive HTTP replays pass locally. This
+does not establish AWS deadline compliance, stronger passing, or tournament
+advantage. Next single experiment: isolated L02 native first/later timings and
+startup/handler stages. Any >1s response rejects it. Only after native PASS and
+fresh Fitness5/5 may MID L02 enter five ranked games; rollback MID15/Fitness.
+Details and exact release commands: `mid_fast_v2/README.ru.md`.

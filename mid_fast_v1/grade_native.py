@@ -33,13 +33,20 @@ def decode_response(raw):
     return json.dumps(value,separators=(',',':'),allow_nan=False)
 
 
-def grade(receipts, deadline_ms=None, deadline_source=None):
+def artifact_for(candidate):
+    paths = {'L01': 'mid_fast_v1/artifact.json', 'L02': 'mid_fast_v2/artifact.json'}
+    if candidate not in paths:
+        raise ValueError('Unsupported MID candidate')
+    return json.loads((ROOT / paths[candidate]).read_text())
+
+
+def grade(receipts, deadline_ms=None, deadline_source=None, candidate='L01'):
     if deadline_ms is not None and (type(deadline_ms) not in (int,float) or not math.isfinite(deadline_ms) or deadline_ms<=0):
         raise ValueError('Invalid verified deadline')
     if (deadline_ms is None)!=(deadline_source is None) or (deadline_source is not None and not deadline_source.strip()):
         raise ValueError('Deadline and its verified source must be supplied together')
     expected=plan();bykey={r['key']:r for r in expected};seen=set();rows=[];order=[]
-    artifact=json.loads((ROOT/'mid_fast_v1/artifact.json').read_text())
+    artifact=artifact_for(candidate)
     for receipt in receipts:
         key=receipt.get('key')
         if key not in bykey or key in seen:raise ValueError('Unknown or duplicate receipt')
@@ -63,7 +70,7 @@ def grade(receipts, deadline_ms=None, deadline_source=None):
     target=None if deadline_ms is None else min(800, .8*deadline_ms)
     passed=bool(full and rows and not any(r['errors'] for r in rows) and deadline_ms is not None
                 and not any(r['late'] for r in rows) and all_times['p95']<=target)
-    return {'kind':'externally measured complete native calls; not game-server latency',
+    return {'kind':'externally measured complete native calls; not game-server latency','candidate':candidate,
             'planSha256':digest(expected),'expected':len(expected),'received':len(rows),'completeOrderedSet':full,
             'validDecisions':sum(not r['errors'] for r in rows),'fullRequestMs':all_times,
             'firstInSessionMs':lab.distribution([r['requestWallMs'] for r in rows if r['firstInSession']]),
@@ -78,9 +85,10 @@ if __name__=='__main__':
     parser.add_argument('receipts',type=Path)
     parser.add_argument('--deadline-ms',type=float)
     parser.add_argument('--deadline-source')
+    parser.add_argument('--candidate',choices=('L01','L02'),default='L01')
     parser.add_argument('--output',type=Path,required=True)
     args=parser.parse_args()
-    report=grade(json.loads(args.receipts.read_text()),args.deadline_ms,args.deadline_source)
+    report=grade(json.loads(args.receipts.read_text()),args.deadline_ms,args.deadline_source,args.candidate)
     args.output.parent.mkdir(parents=True,exist_ok=True)
     args.output.write_text(json.dumps(report,indent=2,allow_nan=False)+'\n')
     print(json.dumps({k:v for k,v in report.items() if k!='rows'}))

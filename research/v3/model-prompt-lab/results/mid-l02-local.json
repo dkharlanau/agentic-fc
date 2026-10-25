@@ -1,0 +1,40 @@
+{
+  "candidate": "L02",
+  "kind": "local extracted archive, six fresh Python processes with site packages disabled",
+  "python": "3.9.6",
+  "system": "Darwin",
+  "machine": "arm64",
+  "archiveSha256": "10dedb7c3cadd4074e09dfc3fc4bad0e6d058c84838147aab1d11d60542cfcd3",
+  "planSha256": "a25c417f1981f1c34262ba58e993f661eaaeaf63e8fabd555582f472cd6dd3f2",
+  "requests": 224,
+  "passed": 224,
+  "processes": 6,
+  "localProcessReadyMs": {
+    "n": 6,
+    "p50": 192.017,
+    "p95": 211.769,
+    "max": 216.34675
+  },
+  "localImportMs": {
+    "n": 6,
+    "p50": 164.386,
+    "p95": 180.251,
+    "max": 183.297083
+  },
+  "localHTTPMs": {
+    "n": 224,
+    "p50": 0.479,
+    "p95": 0.663,
+    "max": 1.058542
+  },
+  "excluded": [
+    "AWS microVM startup",
+    "AWS CodeZip launcher",
+    "remote network",
+    "game command application"
+  ],
+  "native": null,
+  "fitness": null,
+  "promotion": false,
+  "failures": []
+}

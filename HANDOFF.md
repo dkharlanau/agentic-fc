@@ -1,3 +1,23 @@
+# Agentic FC — current research checkpoint, 2026-10-25
+
+L01 native failed: 224 valid decisions, six first-session calls 2.37–3.42s
+against 1s deadline. Never registered; Fitness not run. EPAM played baseline.
+Receipt: research/v3/model-prompt-lab/results/mid-l01-native-screen-20261025.json.
+Owner explicitly requests autonomous corrections and release handoff after gates.
+
+L02 prepared in mid_fast_v2/README.ru.md: same L01 policy/source hashes, stdlib
+HTTP/SSE adapter instead of SDK/dependencies. Archive 16,499 bytes instead of
+20,613,452. 23 focused tests and extracted archive 224/224 replay pass; local
+process startup is not AWS startup. Native/Fitness pending, not deployed.
+Use --candidate L02 with native_probe.py and grade_native.py; archive hash is
+strictly candidate-bound. First responses remain mandatory; no deadline weakening.
+Only game operator owns AWS/portal. At idle series boundary: isolated Runtime,
+native224/224 with zero late replies and p95<=800ms, then MID binding/Fitness5/5,
+then five games. Preserve all other roles/formation. Rollback MID15 + Fitness.
+If first calls still fail, export startup/handler/headers/full-call stages and
+diagnose platform-vs-application cost; do not retry arbitrary tactical edits.
+Latest game status must come from operator/portal, not historical notes below.
+
 # Agentic FC — unified main checkpoint, 2026-10-25
 
 Owner explicitly requested merging all current research and game work to GitHub
