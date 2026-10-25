@@ -69,7 +69,7 @@ def main(argv=None):
     parser.add_argument('--binding',type=Path,required=True)
     parser.add_argument('--output',type=Path,required=True)
     parser.add_argument('--apply',action='store_true')
-    parser.add_argument('--candidate',choices=('L01','L02'),default='L01')
+    parser.add_argument('--candidate',choices=('L01','L02','L02B'),default='L01')
     args=parser.parse_args(argv)
     p=plan()
     if not args.apply:

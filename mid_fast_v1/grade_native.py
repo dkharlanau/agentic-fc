@@ -29,7 +29,8 @@ def decode_response(raw):
 
 
 def artifact_for(candidate):
-    paths = {'L01': 'mid_fast_v1/artifact.json', 'L02': 'mid_fast_v2/artifact.json'}
+    paths = {'L01': 'mid_fast_v1/artifact.json', 'L02': 'mid_fast_v2/artifact.json',
+             'L02B': 'mid_fast_v2/artifact-b.json'}
     if candidate not in paths:
         raise ValueError('Unsupported MID candidate')
     return json.loads((ROOT / paths[candidate]).read_text())
@@ -85,7 +86,7 @@ def main(argv=None):
     parser.add_argument('receipts',type=Path)
     parser.add_argument('--deadline-ms',type=float)
     parser.add_argument('--deadline-source')
-    parser.add_argument('--candidate',choices=('L01','L02'),default='L01')
+    parser.add_argument('--candidate',choices=('L01','L02','L02B'),default='L01')
     parser.add_argument('--output',type=Path,required=True)
     args=parser.parse_args(argv)
     if args.output.resolve()==args.receipts.resolve():

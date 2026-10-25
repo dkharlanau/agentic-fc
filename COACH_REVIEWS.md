@@ -715,3 +715,18 @@ advantage. Next single experiment: isolated L02 native first/later timings and
 startup/handler stages. Any >1s response rejects it. Only after native PASS and
 fresh Fitness5/5 may MID L02 enter five ranked games; rollback MID15/Fitness.
 Details and exact release commands: `mid_fast_v2/README.ru.md`.
+
+## 2026-10-25 — L02B measured startup correction
+
+HANDOFF, coach-v1.0 and latest reviews actually read on resume. C01: current
+live series belongs to the game operator; boundary and workshop window must be
+confirmed there. C02/C03: unchanged L01 passing policy; no new tactical claim.
+L02/V1 first1.280–1.341s failed despite ~1ms handler and168–236ms readiness.
+L02B removes unused HTTP imports/reverse DNS, uses one complete TCP write, and
+adds first-health timing. Same eight policy source hashes. Local224/224;
+readiness median123ms versus220ms with audit enabled is not native compliance.
+Next single test: isolated L02B V1 native, all first calls within1s and p95≤800ms;
+then MID-only binding/fresh Fitness5/5 and five unchanged real games if PASS.
+If import improves but wall stays late, reject and investigate session/delivery
+path; do not repeat or soften the gate. Rollback MID15/Fitness. Details:
+[mid_fast_v2/FASTBOOT.ru.md](mid_fast_v2/FASTBOOT.ru.md).

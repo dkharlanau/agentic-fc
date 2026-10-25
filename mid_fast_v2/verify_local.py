@@ -27,12 +27,13 @@ sys.path.insert(0, '.')
 import main
 server = main.Server(('127.0.0.1', 0))
 print(main.json.dumps({'port': server.server_address[1], 'importMs': main.IMPORT_MS}), flush=True)
+sys.stdout = sys.stderr
 server.serve_forever()
 """
 
 
-def verify(archive):
-    artifact = artifact_for('L02')
+def verify(archive, candidate='L02'):
+    artifact = artifact_for(candidate)
     if hashlib.sha256(archive.read_bytes()).hexdigest() != artifact['archiveSha256']:
         raise ValueError('Archive mismatch')
     groups = defaultdict(list)
@@ -44,8 +45,9 @@ def verify(archive):
             source.extractall(scratch)  # Hash-pinned archive produced by our builder.
         for group, cases in groups.items():
             started = time.perf_counter_ns()
+            log = tempfile.TemporaryFile()
             child = subprocess.Popen([sys.executable, '-I', '-S', '-c', BOOT_CODE], cwd=scratch,
-                env={'PLAYER_ID': '2', 'MID_AUDIT': '0'}, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                env={'PLAYER_ID': '2', 'MID_AUDIT': '1'}, stdout=subprocess.PIPE, stderr=log)
             client = None
             try:
                 with selectors.DefaultSelector() as ready:
@@ -54,7 +56,8 @@ def verify(archive):
                         raise RuntimeError('Local archive did not start')
                 line = child.stdout.readline()
                 if not line:
-                    raise RuntimeError('Archive startup failed: ' + child.stderr.read().decode())
+                    log.seek(0)
+                    raise RuntimeError('Archive startup failed: ' + log.read().decode())
                 info = json.loads(line)
                 boots.append((time.perf_counter_ns() - started) / 1e6)
                 imports.append(info['importMs'])
@@ -85,11 +88,13 @@ def verify(archive):
                 except subprocess.TimeoutExpired:
                     child.kill()
                     child.communicate()
+                log.close()
     return {
-        'candidate': 'L02', 'kind': 'local extracted archive, six fresh Python processes with site packages disabled',
+        'candidate': candidate, 'kind': 'local extracted archive, six fresh Python processes with site packages disabled',
         'python': platform.python_version(), 'system': platform.system(), 'machine': platform.machine(),
         'archiveSha256': artifact['archiveSha256'], 'planSha256': digest(plan()),
         'requests': len(rows), 'passed': sum(not row['errors'] for row in rows),
+        'auditEnabled': True,
         'processes': len(boots), 'localProcessReadyMs': lab.distribution(boots),
         'localImportMs': lab.distribution(imports), 'localHTTPMs': lab.distribution([r['localHTTPMs'] for r in rows]),
         'excluded': ['AWS microVM startup', 'AWS CodeZip launcher', 'remote network', 'game command application'],
@@ -100,10 +105,13 @@ def verify(archive):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--archive', type=Path, default=ROOT / '.local/mid-fast-v2/deployment.zip')
-    parser.add_argument('--output', type=Path, default=ROOT / 'research/v3/model-prompt-lab/results/mid-l02-local.json')
+    parser.add_argument('--candidate', choices=('L02', 'L02B'), default='L02')
+    parser.add_argument('--archive', type=Path)
+    parser.add_argument('--output', type=Path)
     args = parser.parse_args()
-    report = verify(args.archive)
+    args.archive = args.archive or ROOT / ('.local/mid-fast-v2' + ('b' if args.candidate == 'L02B' else '') + '/deployment.zip')
+    args.output = args.output or ROOT / ('research/v3/model-prompt-lab/results/mid-' + args.candidate.lower() + '-local.json')
+    report = verify(args.archive, args.candidate)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(report, indent=2) + '\n')
     print(json.dumps(report))

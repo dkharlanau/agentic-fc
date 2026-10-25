@@ -1,0 +1,89 @@
+{
+  "kind": "sequential local audit-enabled extracted-archive comparison, not AWS",
+  "baseline": {
+    "candidate": "L02",
+    "kind": "local extracted archive, six fresh Python processes with site packages disabled",
+    "python": "3.9.6",
+    "system": "Darwin",
+    "machine": "arm64",
+    "archiveSha256": "10dedb7c3cadd4074e09dfc3fc4bad0e6d058c84838147aab1d11d60542cfcd3",
+    "planSha256": "a25c417f1981f1c34262ba58e993f661eaaeaf63e8fabd555582f472cd6dd3f2",
+    "requests": 224,
+    "passed": 224,
+    "auditEnabled": true,
+    "processes": 6,
+    "localProcessReadyMs": {
+      "n": 6,
+      "p50": 220.175,
+      "p95": 249.837,
+      "max": 256.724417
+    },
+    "localImportMs": {
+      "n": 6,
+      "p50": 188.867,
+      "p95": 221.541,
+      "max": 229.4295
+    },
+    "localHTTPMs": {
+      "n": 224,
+      "p50": 0.52,
+      "p95": 0.683,
+      "max": 1.566916
+    },
+    "excluded": [
+      "AWS microVM startup",
+      "AWS CodeZip launcher",
+      "remote network",
+      "game command application"
+    ],
+    "native": null,
+    "fitness": null,
+    "promotion": false,
+    "failures": []
+  },
+  "candidate": {
+    "candidate": "L02B",
+    "kind": "local extracted archive, six fresh Python processes with site packages disabled",
+    "python": "3.9.6",
+    "system": "Darwin",
+    "machine": "arm64",
+    "archiveSha256": "2d0d5c43d10a3ed704b5a30a0543736fa468c1f9a1bb1a52dcc0351dca835375",
+    "planSha256": "a25c417f1981f1c34262ba58e993f661eaaeaf63e8fabd555582f472cd6dd3f2",
+    "requests": 224,
+    "passed": 224,
+    "auditEnabled": true,
+    "processes": 6,
+    "localProcessReadyMs": {
+      "n": 6,
+      "p50": 122.859,
+      "p95": 139.292,
+      "max": 142.566667
+    },
+    "localImportMs": {
+      "n": 6,
+      "p50": 100.585,
+      "p95": 111.188,
+      "max": 114.345833
+    },
+    "localHTTPMs": {
+      "n": 224,
+      "p50": 0.457,
+      "p95": 0.622,
+      "max": 2.9235
+    },
+    "excluded": [
+      "AWS microVM startup",
+      "AWS CodeZip launcher",
+      "remote network",
+      "game command application"
+    ],
+    "native": null,
+    "fitness": null,
+    "promotion": false,
+    "failures": []
+  },
+  "readyMedianReductionMs": 97.316,
+  "nativeGatePassed": null,
+  "fitness": null,
+  "promoted": false
+}

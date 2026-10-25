@@ -1,3 +1,16 @@
+# L02B release candidate — 2026-10-25
+
+Owner requests urgent autonomous L02/V1 correction and release after native
+and Fitness5/5. L02B changes only startup/HTTP transport; all eight shared L01
+policy modules are unchanged. Local224/224, strict framing/concurrency checks,
+audit-enabled readiness p50 123ms vs220ms L02; these are NOT AWS timings.
+Archive2d0d5c43d10a3ed704b5a30a0543736fa468c1f9a1bb1a52dcc0351dca835375.
+Exact reproducible instructions: mid_fast_v2/FASTBOOT.ru.md.
+Native/Fitness/binding/real-game build are still pending. Original L02 remains
+failed on V1/V2. Do not claim deployment or use warm-only admission. The game
+operator owns AWS/portal and must verify actual series/window. Only MID changes
+if all gates pass; rollback MID15/Fitness. No concurrent game/probe.
+
 # Agentic FC — current research checkpoint, 2026-10-25
 
 L01 native failed: 224 valid decisions, six first-session calls 2.37–3.42s
