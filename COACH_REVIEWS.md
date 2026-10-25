@@ -538,3 +538,16 @@ Five unchanged-baseline ranked matches: 2W/0D/3L, 2:5, 6 points; see `research/v
 **C03 — inspect early transitions before changing shape.** Against BOYS753, one win and two losses, 1:3 goals and 13:24 shots. Two goals conceded in one loss occurred in minutes 1 and 2, while our win came from a minute-3 MID goal. Scorers and short narratives do not establish cause; do not assign blame to GK or DEF.
 
 Latency reports were all below one second (93–978ms, median240ms), with only two role averages above one second across 25 role rows. This contrasts with the prior cohort but is not a model effect: configuration remained unchanged. Rounded aggregate latency is not per-call deadline evidence. Next step is read-only per-invocation trace correlation, plus report/event review of the BOYS753 opening.
+
+
+## 2026-10-25 — batch15 review
+
+Five unchanged-baseline ranked games: 4W/0D/1L, 10:3, 12 points. Fresh Fitness 5/5 before start. See `research/v3/ranked-batch-15-analysis.ru.md`. Table changed 15th/156/274 to 15th/161/286; all five match/goal deltas reconcile.
+
+**C01 — retain baseline.** The 4/5 record is a positive block, not a comparison against a competing setup. Three wins came with 23–30% possession, suggesting possession share alone is not a sufficient target.
+
+**C02 — insufficient evidence on distance.** 10/48 shots were on target. Shot distance and chance context are unknown; request event-level data before changing long-shot policy.
+
+**C03 — review the single 0:1 loss, do not blame GK.** Three clean wins and one goal conceded in the loss are team outcomes; no event sequence establishes responsibility. The reported 44 RESET actions in the Team AA game are team-level only.
+
+**Latency — no causal claim.** Team report averages were 405–2219ms. The Dinamo Minsk win had the highest average, while Team AA loss was 803ms. All match summaries showed 100% success; that is not deadline proof. Invariant FC report is internally inconsistent (16 team commands vs FWD5 award of 52); treat its aggregate command count as unreliable.

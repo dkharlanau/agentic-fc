@@ -1,12 +1,14 @@
 # Agentic FC continuation
 
-## Current checkpoint — 2026-10-25 (after ranked batch 14)
+## Current checkpoint — 2026-10-25 (after ranked batch 15)
 
-Batch14 complete: five real ranked matches, unchanged baseline FWD1v16 / existing FWD2 fast path / formation 1-1-2. Result 2W/0D/3L, 2:5 goals, 6 points. Analysis: `research/v3/ranked-batch-14-analysis.ru.md`; per-game data: `research/v3/ranked-batch-14.json`. P01 failed paired screen gates and was never installed. Fresh baseline Fitness 5/5 passed immediately before this series. No active match; portal READY to play.
+Batch15 complete: five real ranked matches, unchanged baseline FWD1v16 / existing FWD2 fast path / formation 1-1-2. Result 4W/0D/1L, 10:3 goals, 12 points. Fresh Fitness 5/5 passed before series. See `research/v3/ranked-batch-15-analysis.ru.md` and `research/v3/ranked-batch-15.json`. No active match after completion; portal table was inspected. P01 remains rejected at paired screen and was never installed.
 
-Leaderboard snapshot: rank16, 151 games, 268 points before series; rank15, 156 games, 274 points after. Deltas match 2W/3L and goals 204:131 to 206:136. All five were HOME random-matchmaking games; three were against BOYS753. Repeated opponent results are observations, not controlled comparison. Team report averages were 978/240/252/193/93ms, median240ms; all under 1s, but these are rounded report aggregates, not proof that every invocation met its deadline. Fitness 0ms is not end-to-end latency.
+Leaderboard before/after: rank15, 156 games, 274 points, 206:136 to rank15, 161 games, 286 points, 216:139. Deltas agree with 4W/1L. At final snapshot #14 Zorja had 288 points, #10 AgentCore Fighters 321, #8 Amber Dragons X 367. Rivals are actively playing, so these are moving gaps, not fixed targets. Next series can continue only after quota and workshop window are refreshed.
 
-Next useful work: review first-two-minute concessions vs BOYS753 from available match reports; collect per-invocation timestamps through command application using read-only observability before changing setup. Do not infer shot distance or blame GK/DEF from aggregate stats. Codex quota last checked 16% used before this work; recheck before next batch. Workshop countdown last observed 4h33m during batch14; recheck before a further batch. At <=5% remaining, start no new match, finish any in-flight match, checkpoint safe records, and verify remote.
+Across batch15: 48:17 shots, 10:3 on target, 34% average possession; 10:3 goals. The three wins at 23–30% possession suggest low possession is not automatically harmful, but this small all-HOME sample does not prove it is an advantage. Report latencies 405/647/2219/744/803ms, median744ms; one match-average exceeded 1s. An internal inconsistency in the Invariant FC report shows 16 total commands but FWD5 award says 52; preserve as anomalous and exclude its command total from interpretation. No distance-of-shot/event timelines confirmed. Do not change setup; seek exact traces and event-level evidence.
+
+Codex quota last checked 17% used after batch14. Workshop last observed 4h24m remaining before batch15 began. Recheck both. At <=5% allowance remaining, do not start new matches; finish in-flight and checkpoint safe data, then verify remote.
 
 ## Current checkpoint — 2026-10-25T07:02:19.911385+00:00
 

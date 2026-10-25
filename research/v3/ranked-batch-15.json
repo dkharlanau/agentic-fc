@@ -1,8 +1,8 @@
 {
   "id": "ranked-batch-15",
-  "status": "in_progress",
+  "status": "complete",
   "targetCompletedGames": 5,
-  "completedGames": 4,
+  "completedGames": 5,
   "setup": "unchanged live baseline, FWD1v16, existing FWD2 fast path, formation 1-1-2",
   "preflight": {
     "portalState": "READY TO PLAY",
@@ -138,7 +138,69 @@
     }
   ],
   "limitations": [
-    "Series incomplete; no conclusions until five games finish.",
-    "HOME/random matchmaking; setup remains unchanged."
-  ]
+    "All matches were HOME random matchmaking; opponent strength and match conditions were not controlled.",
+    "Report command counts for Invariant FC are internally inconsistent; values retained as displayed.",
+    "Latencies are rounded report averages, not per-call traces; a 100% success rate is not deadline compliance.",
+    "Shot distance and event-level chance quality are unavailable.",
+    "RESET action attribution is unavailable."
+  ],
+  "aggregate": {
+    "record": "4W-0D-1L",
+    "goals": "10-3",
+    "points": 12,
+    "shots": "48-17",
+    "shotsOnTarget": "10-3",
+    "averagePossessionPct": 34.0,
+    "teamCommands": 1308,
+    "actions": {
+      "MOVE": 620,
+      "PRESS": 349,
+      "INTERCEPT": 114,
+      "CLEAR": 84,
+      "SHOOT": 27,
+      "MARK": 17,
+      "PASS": 31,
+      "GK_DIST": 13,
+      "RESET": 44,
+      "FOLLOW": 9
+    },
+    "teamAverageLatencyMs": {
+      "values": [
+        405,
+        647,
+        2219,
+        744,
+        803
+      ],
+      "mean": 963.6,
+      "median": 744,
+      "above1000msGames": 1
+    },
+    "roleLatencyObservations": {
+      "count": 25,
+      "above1000ms": 5
+    },
+    "successPct": "100% reported, not a timeliness measure",
+    "reportAnomalies": [
+      "Invariant FC report totals only 16 commands (all CLEAR) while the same report's award shows FWD5 with 52 commands."
+    ]
+  },
+  "afterLeaderboard": {
+    "rank": 15,
+    "played": 161,
+    "points": 286,
+    "wins": 94,
+    "draws": 4,
+    "losses": 63,
+    "goals": "216-139"
+  },
+  "leaderboardDelta": {
+    "rank": "15 to 15",
+    "played": 5,
+    "points": 12,
+    "wins": 4,
+    "draws": 0,
+    "losses": 1,
+    "goals": "+10-3"
+  }
 }
