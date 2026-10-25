@@ -592,3 +592,22 @@ L02 из research `53a409b` — только новый стартовый тр�
 привязки, Fitness 5/5 и проверки новой сборки в реальной игровой сессии.
 Следующее решение: создать отдельный Runtime и прогнать все 224 запроса с
 первыми вызовами включительно; не менять другие четыре роли и 1-1-2.
+
+## 2026-10-25 — ranked match vs Shalqar United; opponent profile captured
+
+On the unchanged registered baseline, No Human in the Loop won 5:0. The report
+shows 16% possession, 18:0 shots and 5:0 on target; 474 commands at 980 ms
+team average, compared with Shalqar's 88 commands at 16 ms. Our roles were
+577/1187/887/867/1278 ms; Shalqar's were 3/3/2/2/76 ms. Our breakdown was
+MARK 327, MOVE 86, INTERCEPT 37, CLEAR 24. Shalqar used CLEAR 65/88 (74%),
+PASS 22/88 (25%), PRESS once, and recorded zero shots. The report attributes
+two goals to MID 3 and three to FWD 4, all between minutes 1 and 2. Current
+leaderboard: rank 13, 167 games, 302 points, 99W/5D/63L, goals 229:141.
+
+**Opponent intelligence — observation, not diagnosis.** Shalqar's high clearance
+share and zero shots are a useful profile to compare against later, but the
+report does not show clearance success, formation, pass completion, or field
+locations. Our low-possession win and perfect 5/5 shot-on-target conversion are
+one match only; do not tune the policy from this result alone. The very low
+reported Shalqar latency and our 980 ms team average do not establish a causal
+latency effect. Full sanitized row: `research/v3/ranked-batch-16.json` (3/5).

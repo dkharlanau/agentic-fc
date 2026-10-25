@@ -1,6 +1,11 @@
 # Agentic FC continuation
 
-## Latest checkpoint — 2026-10-25, Ada ranked match and L02 priority
+## Latest checkpoint — 2026-10-25, Shalqar United ranked match and opponent profile
+
+Batch16 is now 3/5 on the unchanged live baseline: Gork ’n’ Mork Boyz 2:0, Ada 2:1, Shalqar United 5:0. Shalqar report: 16–84 possession, 18–0 shots, 5–0 on target; 474 vs 88 commands at 980 vs 16 ms team means. Their action mix was CLEAR 65/88 (74%), PASS 22/88 (25%), PRESS 1, and zero shots. Our role means were 577/1187/887/867/1278 ms. The low-possession, 5/5 on-target result is one observation, not proof of a repeatable advantage. Formation, pass completion, field locations and clearance effectiveness are unknown. Leaderboard: rank13, 167 played, 302 points, 99W/5D/63L, goals229:141.
+
+L02 native V2 failed its predeclared first-call latency gate (all six first-in-session calls exceeded one second); it is not installed, Fitness was not run, and no L02 games were played. Continue the baseline series while collecting comparable opponent reports. Candidate release remains priority once a new exact build passes native screening, fresh Fitness, and verified configuration readback. See `research/v3/ranked-batch-16.json` and latest coach review.
+
 
 Owner resumed live play while a new MID release is prepared and asked to
 prioritize deployment and games on that release as soon as it is ready. Ranked

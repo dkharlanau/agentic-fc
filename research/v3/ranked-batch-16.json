@@ -2,7 +2,7 @@
   "id": "ranked-batch-16",
   "status": "in-progress-owner-resumed-baseline-while-L02-prepares",
   "targetCompletedGames": 5,
-  "completedGames": 2,
+  "completedGames": 3,
   "setup": "unchanged live baseline, FWD1v16, existing FWD2 fast path, formation 1-1-2",
   "preflight": {
     "portalState": "READY TO PLAY",
@@ -58,7 +58,13 @@
       "shotsOnTarget": "2-1",
       "teamAverageLatencyMs": 845,
       "teamCommands": 324,
-      "roleLatencyMs": [623, 926, 902, 613, 891],
+      "roleLatencyMs": [
+        623,
+        926,
+        902,
+        613,
+        891
+      ],
       "successPct": "100% all roles",
       "actions": {
         "MOVE": 206,
@@ -71,9 +77,20 @@
       "opponentReport": {
         "teamAverageLatencyMs": 15,
         "teamCommands": 58,
-        "roleLatencyMs": [2, 2, 2, 2, 73],
+        "roleLatencyMs": [
+          2,
+          2,
+          2,
+          2,
+          73
+        ],
         "successPct": "100% all roles",
-        "actions": {"CLEAR": 54, "PASS": 2, "INTERCEPT": 1, "SHOOT": 1}
+        "actions": {
+          "CLEAR": 54,
+          "PASS": 2,
+          "INTERCEPT": 1,
+          "SHOOT": 1
+        }
       },
       "observations": [
         "Live commentary described Ada building patiently, keeping possession, and probing for a gap; Ada scored first, No Human in the Loop equalized, then took the lead.",
@@ -81,6 +98,54 @@
         "The report lists 2-1 shots and 2-1 shots on target. Goals: Ada FWD 4 at 1', Unknown No Human in the Loop at 2', and MID 3 at 2'.",
         "No Human in the Loop won with 36% possession and 845ms team-average latency; Ada reported 15ms. This single match does not establish a causal relationship between possession, latency, and outcome.",
         "Player models, detailed event locations, and pass completion were not present in the report."
+      ]
+    },
+    {
+      "opponent": "Shalqar United",
+      "result": "WIN",
+      "score": "5-0",
+      "possessionPct": "16-84",
+      "shots": "18-0",
+      "shotsOnTarget": "5-0",
+      "teamAverageLatencyMs": 980,
+      "teamCommands": 474,
+      "roleLatencyMs": [
+        577,
+        1187,
+        887,
+        867,
+        1278
+      ],
+      "successPct": "100% all roles",
+      "actions": {
+        "MARK": 327,
+        "MOVE": 86,
+        "INTERCEPT": 37,
+        "CLEAR": 24
+      },
+      "opponentReport": {
+        "teamAverageLatencyMs": 16,
+        "teamCommands": 88,
+        "roleLatencyMs": [
+          3,
+          3,
+          2,
+          2,
+          76
+        ],
+        "successPct": "100% all roles",
+        "actions": {
+          "CLEAR": 65,
+          "PASS": 22,
+          "PRESS": 1
+        },
+        "rank": "unknown; not visible in loaded leaderboard rows"
+      },
+      "observations": [
+        "The report lists 16% possession for No Human in the Loop and 18-0 shots, 5-0 on target; this was a highly efficient win despite low possession, but one match does not establish a repeatable tactical advantage.",
+        "Shalqar United recorded CLEAR for 65/88 commands (74%) and PASS for 22/88 (25%), with 0 shots. The report does not reveal why clearances were chosen or their success, so treat this as an observed match profile only.",
+        "Report lists goals at 1' MID 3, 1' FWD 4, 2' FWD 4 twice, and 2' MID 3; attributed totals are MID 3 twice and FWD 4 three times.",
+        "No opponent formation, pass completion, field locations, or event-by-event defensive context was available. Role award attribution is ambiguous in the report and omitted."
       ]
     }
   ],
@@ -93,9 +158,19 @@
     "losses": 63,
     "goals": "224-141"
   },
-  "continuationNote": "Owner resumed baseline games while the separate L02 release is prepared. If L02 passes its native gate, finish any in-flight match and prioritize installing it at the next boundary; do not count baseline games as L02 trials.",
+  "continuationNote": "Owner requested continued live ranked play and opponent data collection. L02 failed its first-session native latency gate and is not installed; continue only on the verified baseline until a new candidate passes all gates. Capture both teams’ report metrics and mark unavailable tactical fields unknown.",
   "limitations": [
-    "Series incomplete; no conclusions until five games finish.",
-    "HOME/random matchmaking; setup remains unchanged."
-  ]
+    "Series incomplete at 3/5; no conclusions until the block finishes.",
+    "HOME/random matchmaking; setup remains unchanged.",
+    "Opponent action labels and aggregate reports do not establish tactical intent or command effectiveness."
+  ],
+  "leaderboardAfterGame3": {
+    "rank": 13,
+    "played": 167,
+    "points": 302,
+    "wins": 99,
+    "draws": 5,
+    "losses": 63,
+    "goals": "229-141"
+  }
 }
