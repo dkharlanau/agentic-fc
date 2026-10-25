@@ -700,15 +700,15 @@ command and latency values from speed/action analysis. The five-match run is a
 small, random-HOME sample; keep the lineup unchanged until a properly gated
 candidate exists. Full rows and caveats: `research/v3/ranked-batch-16.json`.
 
-## 2026-10-25 — ranked batch18 partial; Feyenoord and Hallucination FC2
+## 2026-10-25 — ranked batch18 complete; five real ranked matches
 
-Four real ranked matches were completed with the registered baseline and
-1-1-2 unchanged: Feyenoord 0:2, Hallucination FC2 1:2, FC Zukko 2:0, and Human
-Override Disab 1:0. The portal leaderboard now shows rank 12, 178 games, 327
-points, 107W/6D/65L and goals 243:145, versus the batch17 close at rank12, 174
-games, 318 points and 237:143. The four-game delta reconciles with +3 wins,
-1 loss, +6 scored and +2 conceded. Batch18 is 4/5; retain the setup through
-the final game, then analyze.
+Five real ranked matches were completed with the registered baseline and
+1-1-2 unchanged: Feyenoord 0:2, Hallucination FC2 1:2, FC Zukko 2:0, Human
+Override Disab 1:0, and FC RAM 0:2. The portal leaderboard now shows rank 12,
+179 games, 327 points, 107W/6D/66L and goals 243:147, versus the batch17 close
+at rank12, 174 games, 318 points and 237:143. The five-game delta reconciles
+with +3 wins, +2 losses, +6 scored and +4 conceded. The team stayed rank12 and
+earned 9 points in this cohort.
 
 Feyenoord's report shows 56% possession, 4:3 shots, 2:0 on target; it listed
 42/49 CLEAR (86%). Our report mean was 73ms with 364 commands; the action mix
@@ -719,21 +719,23 @@ first and won 2:1; report lists our equalizer and second goal at minute 2 but
 does not identify the second scorer. AI Overview's causal explanations remain
 generated interpretation, not event evidence.
 
-All four opponents' reports are CLEAR-heavy: Feyenoord 42/49, Hallucination
-FC2 43/54, FC Zukko 38/48, Human Override Disab 28/31. This repeated pattern
-across eight matches is still too small and heterogeneous to infer common
-strategy or CLEAR effectiveness. Three wins had higher shot and on-target
-counts; the loss had 4:2 shots but 0:1 on target. That points to shot placement
-or chance quality as a useful question, without isolating cause.
+All five opponents' reports are CLEAR-heavy: Feyenoord 42/49, Hallucination
+FC2 43/54, FC Zukko 38/48, Human Override Disab 28/31, and FC RAM 46/54. The
+five different match samples are still too small to infer a shared strategy or
+CLEAR effectiveness. Across the series, we had 23:20 shots and 6:4 on-target
+shots, but both losses had no shots on target: Human Override Disab 4:2 shots
+and 0:1 target; FC RAM 5:9 and 0:2. Shot placement/chance quality remains a
+useful question, without isolating the cause.
 
 Latency split sharply: coherent reports against Feyenoord and Hallucination FC2
 showed 73 and 75ms; FC Zukko's 2ms own mean conflicts with its 11-command
 breakdown and 32-command FWD4 award, so exclude it. Against Human Override
 Disab the report showed 1590ms overall and 1183-1880ms by role, against 19ms
-for the opponent. The loss also had 193/310 MOVE commands and no SHOOT command
-despite four shots. This is the first four-digit latency match in this cohort,
-but report-level 100% role success does not rule out slow responses or timeouts,
-and neither timing nor action mix proves the defeat's cause. Target <=10ms is
-unmet. The complete sanitized partial-series data is
+for the opponent. Against FC RAM we had 75ms, 289/370 MOVE commands and 11
+SHOOT commands but no shots on target; FC RAM recorded 15ms. The 0:1 loss had
+193/310 MOVE commands and no SHOOT command despite four shots. This is the
+cohort's only four-digit latency match; report-level 100% role success does not
+rule out slow responses or timeouts, and neither timing nor action mix proves
+the defeats' causes. Target <=10ms is unmet. The complete sanitized series is
 `research/v3/ranked-batch-18.json`. No configuration change or L02 installation
 occurred.
