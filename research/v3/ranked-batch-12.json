@@ -3,7 +3,7 @@
   "coachVersion": "coach-v1.0",
   "status": "running",
   "targetCompletedGames": 10,
-  "completedGames": 4,
+  "completedGames": 5,
   "createdAtUTC": "2026-10-25T07:02:19.911385+00:00",
   "setup": {
     "sourceCommit": "931af03",
@@ -98,7 +98,8 @@
           100,
           100
         ]
-      }
+      },
+      "renderedReportSha256": "30dcbceafcea02b1574cd79485893866f23ec461ffd29d2778d0d4ab3d085f48"
     },
     {
       "alias": "batch12-live-02",
@@ -167,7 +168,8 @@
           100,
           100
         ]
-      }
+      },
+      "renderedReportSha256": "729bbb351593e971bf08134edf4293131dab54f17101dae2f6ee638b321d3ec1"
     },
     {
       "alias": "batch12-live-03",
@@ -250,7 +252,8 @@
       "dataQualityNotes": [
         "Final viewer header and match report show 1:0 WIN; generated commentary says ends 1:1. Commentary is not used as score evidence."
       ],
-      "scoreVerifiedInMatchHistory": true
+      "scoreVerifiedInMatchHistory": true,
+      "renderedReportSha256": "b82e62f651611aca66272bcac16023dd23be5c7fee75b31e7de5202d5788baa8"
     },
     {
       "alias": "batch12-live-04",
@@ -300,6 +303,84 @@
           "CLEAR_OVERRIDE": 68,
           "PRESS_BALL": 3,
           "PASS": 2
+        },
+        "agentSuccessPct": [
+          100,
+          100,
+          100,
+          100,
+          100
+        ],
+        "opponentAgentSuccessPct": [
+          100,
+          100,
+          100,
+          100,
+          100
+        ]
+      },
+      "renderedReportSha256": "64a7c9354950e2f3264cf3476d586fbb7f03155bce0d96f8cd943eb4380fb908"
+    },
+    {
+      "alias": "batch12-live-05",
+      "opponent": "Meerut United",
+      "side": "HOME",
+      "status": "complete",
+      "initiation": "manual random matchmaking",
+      "liveObservedAtUTC": "2026-10-25T07:28:11.408Z",
+      "matchReport": "https://agentic-football.aws.dev/matches/031dc77c-2956-49bf-bc10-e0ef57b94da3/report",
+      "liveObservations": [
+        {
+          "observedAtUTC": "2026-10-25T07:31:04.047543+00:00",
+          "displayedTimer": "01:41",
+          "displayedScore": [
+            1,
+            0
+          ],
+          "observation": "Visible ball duel near left touchline with own DEF 2 and MID 3 nearby and opponent player; ownership and decision cause not inferred.",
+          "privateScreenshot": "game05-live.png"
+        }
+      ],
+      "scoreFor": 1,
+      "scoreAgainst": 0,
+      "result": "WIN",
+      "completedAtObserved": "2026-10-25T07:32:15.749059+00:00",
+      "rawReportFacts": {
+        "possessionPct": 20,
+        "shotsFor": 4,
+        "shotsAgainst": 0,
+        "shotsOnTargetFor": 1,
+        "shotsOnTargetAgainst": 0,
+        "teamAverageLatencyMs": 81,
+        "teamCommands": 333,
+        "opponentAverageLatencyMs": 17,
+        "opponentCommands": 37,
+        "agentLatencyMs": [
+          81,
+          80,
+          79,
+          82,
+          87
+        ],
+        "opponentAgentLatencyMs": [
+          3,
+          3,
+          3,
+          2,
+          79
+        ],
+        "teamCommandCounts": {
+          "MOVE_TO": 265,
+          "PASS": 27,
+          "INTERCEPT": 22,
+          "PRESS_BALL": 8,
+          "CLEAR_OVERRIDE": 6,
+          "GK_DISTRIBUTE": 5
+        },
+        "opponentCommandCounts": {
+          "CLEAR_OVERRIDE": 31,
+          "PASS": 5,
+          "PRESS_BALL": 1
         },
         "agentSuccessPct": [
           100,
