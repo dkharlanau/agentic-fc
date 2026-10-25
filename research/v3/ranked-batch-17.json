@@ -1,8 +1,8 @@
 {
   "id": "ranked-batch-17",
-  "status": "in-progress-3of5-baseline",
+  "status": "in-progress-4of5-baseline",
   "targetCompletedGames": 5,
-  "completedGames": 3,
+  "completedGames": 4,
   "setup": "unchanged registered baseline, formation 1-1-2; existing FWD5 fast path; no L02 candidate installed",
   "preflight": {
     "portalState": "READY TO PLAY before search; match completed",
@@ -209,6 +209,61 @@
         "Our team average was 430ms (roles 75/72/612/658/645); opponent average 17ms (roles 3/2/2/2/68). All roles reported 100% success.",
         "Generated coach advice suggests increasing SHOOT and PASS after a move-heavy 0-0. Keep this as a hypothesis for evaluation after the five-match series; do not change the current lineup mid-series."
       ]
+    },
+    {
+      "opponent": "Apocalypse",
+      "result": "WIN",
+      "score": "1-0",
+      "possessionPct": "51-49",
+      "shots": "5-1",
+      "shotsOnTarget": "1-0",
+      "teamAverageLatencyMs": 442,
+      "teamCommands": 345,
+      "roleLatencyMs": [
+        440,
+        451,
+        448,
+        453,
+        445
+      ],
+      "successPct": "100% all roles",
+      "actions": {
+        "MOVE": 340,
+        "CLEAR": 4,
+        "PRESS": 1
+      },
+      "goals": [
+        {
+          "minute": "3'",
+          "scorer": "MID 3"
+        }
+      ],
+      "opponentReport": {
+        "teamAverageLatencyMs": 17,
+        "teamCommands": 24,
+        "roleLatencyMs": [
+          4,
+          3,
+          3,
+          3,
+          75
+        ],
+        "successPct": "100% all roles",
+        "actions": {
+          "CLEAR": 19,
+          "PASS": 4,
+          "SHOOT": 1
+        },
+        "leaderboardRank": "not visible in the loaded top 48 rows"
+      },
+      "reportAiOverview": "Generated report described near-even possession, our territorial advantage, and Apocalypse relying heavily on defensive clears. It attributed our goal to territory established by MOVE_TO commands. This is an AI-generated interpretation, not an event-level trace.",
+      "observations": [
+        "No Human in the Loop won 1-0. Possession was 51-49, shots 5-1, and shots on target 1-0. Goal: MID 3 at 3'.",
+        "Our 345 reported commands are internally consistent: 340 MOVE (99%), 4 CLEAR, 1 PRESS. The team mean was 442ms; role means 440/451/448/453/445ms; all roles reported 100% success.",
+        "Apocalypse recorded CLEAR 19/24 (79%), PASS 4 and SHOOT 1. Its team mean was 17ms; role means 4/3/3/3/75ms; all roles reported 100% success.",
+        "This is the second match in this cohort with a very high MOVE share: Agents United had 555/600 MOVE in a 0-0 draw. Apocalypse had 340/345 MOVE in a 1-0 win. Different opponents and outcomes do not establish that MOVE frequency helps or hurts; test command utility after the cohort, with locations and events if available.",
+        "The report did not show formation, pass completion, or field event details. Apocalypse rank was not visible in the loaded leaderboard rows."
+      ]
     }
   ],
   "leaderboardAfterGame1": {
@@ -221,7 +276,7 @@
     "goals": "233-143"
   },
   "seriesAnalysis": null,
-  "note": "Three completed games of the five-game baseline cohort: 2W/1D/0L, score 3-0. No setup changes or cohort-level analysis before five games; game3 has no possession/shots stats in the report.",
+  "note": "Four completed games of the five-game baseline cohort: 3W/1D/0L, score 4-0, 10 points. Do not change setup before the fifth game.",
   "leaderboardAfterGame2": {
     "rank": 13,
     "played": 171,
@@ -239,5 +294,14 @@
     "draws": 6,
     "losses": 64,
     "goals": "234-143"
+  },
+  "leaderboardAfterGame4": {
+    "rank": 13,
+    "played": 173,
+    "points": 315,
+    "wins": 103,
+    "draws": 6,
+    "losses": 64,
+    "goals": "235-143"
   }
 }
