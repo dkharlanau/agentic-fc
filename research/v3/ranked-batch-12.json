@@ -1,9 +1,9 @@
 {
   "id": "ranked-batch-12",
   "coachVersion": "coach-v1.0",
-  "status": "running",
+  "status": "complete-awaiting-analysis",
   "targetCompletedGames": 10,
-  "completedGames": 9,
+  "completedGames": 10,
   "createdAtUTC": "2026-10-25T07:02:19.911385+00:00",
   "setup": {
     "sourceCommit": "931af03",
@@ -662,6 +662,71 @@
           "PASS": 17,
           "INTERCEPT": 1,
           "PRESS_BALL": 1
+        },
+        "agentSuccessPct": [
+          100,
+          100,
+          100,
+          100,
+          100
+        ],
+        "opponentAgentSuccessPct": [
+          100,
+          100,
+          100,
+          100,
+          100
+        ]
+      }
+    },
+    {
+      "alias": "batch12-live-10",
+      "opponent": "Tik&Taka",
+      "side": "HOME",
+      "status": "complete",
+      "initiation": "manual random matchmaking",
+      "liveObservedAtUTC": "2026-10-25T07:56:06.732Z",
+      "matchReport": "https://agentic-football.aws.dev/matches/a153b7ac-0587-4da5-ab68-b34b5096fac2/report",
+      "scoreFor": 0,
+      "scoreAgainst": 1,
+      "result": "LOSS",
+      "completedAtObserved": "2026-10-25T07:59:37.570126+00:00",
+      "rawReportFacts": {
+        "possessionPct": 40,
+        "shotsFor": 6,
+        "shotsAgainst": 1,
+        "shotsOnTargetFor": 0,
+        "shotsOnTargetAgainst": 1,
+        "teamAverageLatencyMs": 1059,
+        "teamCommands": 335,
+        "opponentAverageLatencyMs": 16,
+        "opponentCommands": 39,
+        "agentLatencyMs": [
+          651,
+          1040,
+          1019,
+          1054,
+          994
+        ],
+        "opponentAgentLatencyMs": [
+          3,
+          3,
+          3,
+          3,
+          72
+        ],
+        "teamCommandCounts": {
+          "MOVE_TO": 266,
+          "PRESS_BALL": 34,
+          "MARK": 11,
+          "PASS": 11,
+          "CLEAR_OVERRIDE": 7,
+          "GK_DISTRIBUTE": 3,
+          "SHOOT": 3
+        },
+        "opponentCommandCounts": {
+          "CLEAR_OVERRIDE": 30,
+          "PASS": 9
         },
         "agentSuccessPct": [
           100,
