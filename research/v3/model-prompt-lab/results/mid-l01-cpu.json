@@ -1,0 +1,23 @@
+{
+  "kind": "local CPU only; engine construction + JSON decode + decision + JSON encode",
+  "excludes": [
+    "HTTP",
+    "SDK dispatch",
+    "audit logger",
+    "AWS startup",
+    "network",
+    "game command application"
+  ],
+  "python": "3.9.6",
+  "system": "Darwin",
+  "machine": "arm64",
+  "rounds": 100,
+  "timingsMs": {
+    "n": 6800,
+    "p50": 0.28,
+    "p95": 0.47,
+    "max": 1.870792
+  },
+  "freshEngineEveryCall": true,
+  "engineSha256": "2a2154411e673c4305da9c7f1960f341246f16edac47a4629658e02b251c6635"
+}

@@ -1,0 +1,69 @@
+{
+  "id": "P01-fwd1-shot-priority-v1",
+  "status": "rejected_at_paired_screen_reported_by_game_flow",
+  "liveScreeningEvidence": {
+    "sourceCommit": "cbde2741594864155feb48eb289ff4e35ef0be04",
+    "path": "research/v3/ranked-batch-13.json",
+    "rawReceiptsRegraded": false,
+    "nextAction": "Retrieve failed-screen receipts; do not repeat or install unchanged P01"
+  },
+  "sourceBaseline": "research/v3/cohort-setup-20261025.json",
+  "sourceBaselineSha256": "9d1d13ef1d60c864e9a8ae9dcc26c8b915422db19136674cbd82a78122016069",
+  "change": "FWD1 prompt only: remove conflicting distance-only instruction; no new ownership field requirement",
+  "candidatePrompt": "research/v3/model-prompt-lab/candidate/fwd1-shot-priority-v1.txt",
+  "promptBeforeSha256": "ee4c92203e6fcbc86d14329913933ba68d8cd2092947bebd2c66d5ed14c17b15",
+  "promptAfterSha256": "7f038dbe13e2fcd36deddaa164337458011ed4e0ce8a59a1cd8dd78cf112f49b",
+  "modelId": "global.amazon.nova-2-lite-v1:0",
+  "formation": "1-1-2",
+  "unchangedRoles": [
+    "GK13 Nova2Lite",
+    "DEF19 Nova2Lite",
+    "MID15 Nova2Lite",
+    "FWD2 stance rev9 source931af03"
+  ],
+  "freshModelCalls": null,
+  "newModelCallsByResearch": 0,
+  "fitnessResult": null,
+  "eligibleForPromotion": false,
+  "rollback": {
+    "fwd1Version": "16",
+    "promptFile": "research/v3/schema-clean/fwd1.txt",
+    "promptSha256": "ee4c92203e6fcbc86d14329913933ba68d8cd2092947bebd2c66d5ed14c17b15",
+    "modelId": "global.amazon.nova-2-lite-v1:0",
+    "requireFreshFitness": true
+  },
+  "gates": [
+    "Same-input baseline/candidate FWD1 inference: 24 synthetic and 2 observed inputs, 3 repeats, interleaved, isolated allowed idle window",
+    "100% strict command schema; zero illegal ownership actions; clear-shot and safe-pass positive controls retained",
+    "Usable decisions no worse than baseline in any scenario family; full-command p95 <= 1.10 * baseline",
+    "No risky receiver/blocked pass lane in synthetic checks; no late/incomplete candidate responses under an independently verified deadline",
+    "Exact candidate readback and native contract, then fresh Fitness 5/5 before any ranked promotion",
+    "Human transfer to live chat; stable owner-sized cohort at a boundary, never change a running series"
+  ],
+  "rejectedBeforeInference": {
+    "id": "ownership-guard-draft",
+    "reason": "Two captured physical inputs lack possessionTeamCode and hasBall; forcing explicit ownership risks disabling attack",
+    "evidence": "results/input-contract.json"
+  },
+  "queuedNotBundled": [
+    {
+      "id": "P02",
+      "change": "FWD1 current-energy sprint instruction only",
+      "status": "queued independently; no inference or Fitness; thresholds uncalibrated",
+      "manifest": "research/v3/model-prompt-lab/candidate/energy-manifest.json"
+    },
+    {
+      "id": "M01",
+      "change": "Micro FWD1 model-only with unchanged M8 prompt",
+      "modelFrom": "global.amazon.nova-2-lite-v1:0",
+      "modelTo": "amazon.nova-micro-v1:0",
+      "status": "requires same-prompt inference first; selector20/20 is not this configuration"
+    },
+    {
+      "id": "D01",
+      "change": "FWD2 opt-in timing patch, TRACE_TIMING=1",
+      "status": "local byte-equivalence tested only; independent diagnostic, not bundled with P01",
+      "patch": "research/v3/model-prompt-lab/candidate/fwd2-timing.patch"
+    }
+  ]
+}

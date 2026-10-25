@@ -1,0 +1,23 @@
+{
+  "id": "D02-caller-stream-timing",
+  "status": "prepared_local_synthetic_stream_tests_only",
+  "purpose": "Separate first event, first/last text, message stops and full/error stream completion; never return on a JSON prefix",
+  "source": "research/v3/allcash-benchmark/harness_route_probe.py",
+  "sourceSha256": "b093b1db6f3370e18b2632e1ac254440afa65c852353bca05d9feeae4a007dc0",
+  "candidateSha256": "be02b6064360348d5e6ecf893c435d8cf3a255ed889cd162bc7ce769517deb39",
+  "patch": "research/v3/model-prompt-lab/candidate/harness-route-timing.patch",
+  "changesGameConfiguration": false,
+  "changesGameplayPolicy": false,
+  "networkCallsExecuted": 0,
+  "nativeTested": false,
+  "fitnessResult": null,
+  "performanceImprovementMeasured": false,
+  "allowedExecution": "Only if later explicitly authorized in an idle window; existing traces first; private .local outputs; never an active game session",
+  "rollback": "Discard this caller-side diagnostic; no agent deployment to roll back",
+  "limitations": [
+    "CloudShell caller timing is not game-server timing",
+    "No server receipt/application timestamps",
+    "Transport-complete is not schema-valid or tactically correct",
+    "Do not bypass the full-response JSON contract by taking the first array"
+  ]
+}

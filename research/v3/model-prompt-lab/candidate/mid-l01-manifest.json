@@ -1,0 +1,29 @@
+{
+  "candidate": "L01-mid-safe-outlet-v1",
+  "status": "offline-ready-for-native-screening",
+  "formation": "1-1-2",
+  "change": "Only MID: original Harness15 to separate deterministic Runtime; other four bindings unchanged",
+  "playerId": 2,
+  "artifact": "mid_fast_v1/artifact.json",
+  "archiveSha256": "fb02b3abb1808991ebd2a714f2e2f5868fb7e6045f3a1de8043a86cf0ba0152a",
+  "environment": {
+    "PLAYER_ID": "2",
+    "MID_AUDIT": "1",
+    "BUILD_COMMIT": "exact source commit containing this manifest"
+  },
+  "rollback": {
+    "registeredKind": "original Harness",
+    "currentVersion": "15",
+    "exportSourceVersion": "15",
+    "modelId": "global.amazon.nova-2-lite-v1:0",
+    "promptFile": "research/v3/schema-clean/mid.txt",
+    "promptSha256": "7b05fe872d47c532c374390642006759924d84048a61577bf4f3a9bba400c729",
+    "configurationSha256": "dffba3d7e6e03a63510440520eedef2e03ebb951adee0222692ac963a2038e86"
+  },
+  "native": null,
+  "fitness": null,
+  "promotion": false,
+  "modelCallsPerTick": 0,
+  "offBall": "CLEAR_OVERRIDE to built-in engine; no custom defensive or pressing policy",
+  "note": "Whole-role execution and on-ball policy change, not an isolated model A/B"
+}

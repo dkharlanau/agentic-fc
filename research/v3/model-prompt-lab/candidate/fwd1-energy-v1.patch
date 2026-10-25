@@ -1,0 +1,9 @@
+--- a/research/v3/schema-clean/fwd1.txt
++++ b/research/v3/schema-clean/fwd1.txt
+@@ -9,5 +9,5 @@
+ - PRESS_BALL high up the pitch when the opponent has the ball (high press)
+ - Coordinate with Forward 2 — try to stay on the left/center side
+-- Sprint when making attacking runs, conserve stamina when tracking back
++- Use current stamina (not the Stamina skill): below 40%, do not sprint; from 40% through 70%, sprint only for a clear scoring run or immediate recovery; above 70%, sprint only when useful. Use a verified stamina scale (fraction 0..1 or percent 0..100); if unclear, do not guess. Low stamina alone must not veto a close, clear shot.
+
+ ## Available Commands (commandType → parameters)

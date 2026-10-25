@@ -1,0 +1,5337 @@
+{
+  "mode": "offline archived-response replay; zero new inference calls",
+  "quantile": "Hyndman-Fan type7; p50/p95 over recorded calls, small n; one sample per scenario",
+  "sources": [
+    {
+      "path": "research/v3/role-package-r1/model-eval-v1.json",
+      "sha256": "7b23195bb76eb46dc746996d7d4535c00b6febf4e300a55b9dd1b33be79a29dd",
+      "promptCommit": "f2b34be"
+    },
+    {
+      "path": "research/v3/role-package-r1/model-eval-v2.json",
+      "sha256": "e0d6b87003b8c65e735499923706f61e21006c469f77e81e0eb9b66b0c5b4e01",
+      "promptCommit": "a2887e0"
+    },
+    {
+      "path": "research/v3/role-package-r1/model-eval-v3.json",
+      "sha256": "b3fe8a1fd24cabdb5c3eb1153c3ef60e28dce2b886c8e7fce7b21bca472e07eb",
+      "promptCommit": "9310c75"
+    },
+    {
+      "path": "research/v3/compact-role-r2/model-screen.json",
+      "sha256": "ee5b6ab27bfe153ca178a24a50ce5d66610577036862386eb2771ed33c87f5a5"
+    },
+    {
+      "path": "research/v3/fwd1-direct-model-probes.json",
+      "sha256": "f0ccb1f29458b8123e81d46e7c54f221a99e871440f3c995c4bd8a0928cb1976"
+    },
+    {
+      "path": "research/v3/tactical-model-orders2.json",
+      "sha256": "781ae4d4d5fc9286f30e0a4f606255a21a133764a7fc722af70f3999680c2737"
+    }
+  ],
+  "rows": [
+    {
+      "suite": "role-package",
+      "prompt": "r1-v1",
+      "model": "nova2",
+      "role": "gk",
+      "case": "gk-own-ball-far",
+      "inputSha256": "905976599a9bc764ce0d63d52f767b5a4913cd67a6edd0fc02a981102664299e",
+      "promptSha256": "102cb9d3147803ce9a2933616bb39ee0710c743064e680400a16bf7952126dde",
+      "metric": "Converse request wall",
+      "latencyMs": 867,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ],
+      "inputTokens": null
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v1",
+      "model": "nova2",
+      "role": "gk",
+      "case": "gk-ambiguous-owner",
+      "inputSha256": "eacd1315246060205d051249a37946cc2cbd65bfb2a50b7b263637dcc68d8c57",
+      "promptSha256": "102cb9d3147803ce9a2933616bb39ee0710c743064e680400a16bf7952126dde",
+      "metric": "Converse request wall",
+      "latencyMs": 556,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ],
+      "inputTokens": null
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v1",
+      "model": "nova2",
+      "role": "def",
+      "case": "def-own-ball-far",
+      "inputSha256": "f66e75629e33f91dbfea68af2badd2a4113cd5302c32fae7b3aaef7bec41c098",
+      "promptSha256": "0adbead4e347831db1602487e2b1dc118affe240a95065e59c6cc1947a18206a",
+      "metric": "Converse request wall",
+      "latencyMs": 604,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ],
+      "inputTokens": null
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v1",
+      "model": "nova2",
+      "role": "def",
+      "case": "def-ambiguous-owner",
+      "inputSha256": "bf78e08b91abc7965c92815ab0288e9405183f6812ecb509fd4d7fe88d179db3",
+      "promptSha256": "0adbead4e347831db1602487e2b1dc118affe240a95065e59c6cc1947a18206a",
+      "metric": "Converse request wall",
+      "latencyMs": 1118,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ],
+      "inputTokens": null
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v1",
+      "model": "nova2",
+      "role": "mid",
+      "case": "mid-own-ball-far",
+      "inputSha256": "a5e59da88981c19695fe83c46a74c566e7c880d14ff3242f30c8636a2e836f46",
+      "promptSha256": "e96638500f333941b69f7fc45ce0163de6c06643bfcb9fdebdc0a788752336cd",
+      "metric": "Converse request wall",
+      "latencyMs": 674,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ],
+      "inputTokens": null
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v1",
+      "model": "nova2",
+      "role": "mid",
+      "case": "mid-ambiguous-owner",
+      "inputSha256": "33bddc85cd63e40ace3bc3960c79e2cb2132448554e8b493e4c838fc95d27afe",
+      "promptSha256": "e96638500f333941b69f7fc45ce0163de6c06643bfcb9fdebdc0a788752336cd",
+      "metric": "Converse request wall",
+      "latencyMs": 904,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ],
+      "inputTokens": null
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v1",
+      "model": "nova2",
+      "role": "fwd1",
+      "case": "fwd1-own-ball-far",
+      "inputSha256": "631abb2960bd2093c34d573c5e2e864e2fa3c2c18ddb848b97acb2ac48e13ecb",
+      "promptSha256": "19706176c2feabcd7874df1c4a5c00765400b89fb15575c475f7a204ff53da73",
+      "metric": "Converse request wall",
+      "latencyMs": 711,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ],
+      "inputTokens": null
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v1",
+      "model": "nova2",
+      "role": "fwd1",
+      "case": "fwd1-ambiguous-owner",
+      "inputSha256": "d5754102a07f3549e6c4de36aafd65bb454e033265bdabe2ce86322434fdba11",
+      "promptSha256": "19706176c2feabcd7874df1c4a5c00765400b89fb15575c475f7a204ff53da73",
+      "metric": "Converse request wall",
+      "latencyMs": 575,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ],
+      "inputTokens": null
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v1",
+      "model": "haiku",
+      "role": "fwd2",
+      "case": "fwd2-own-ball-far",
+      "inputSha256": "d966ac8924f0382e99cce164eff200906ef1dfd2ba621e185c4427f5d2d58639",
+      "promptSha256": "ff355d49405e004c5c8fc0dc85317bcf94208368b6d919b250d0eb056fc47622",
+      "metric": "Converse request wall",
+      "latencyMs": 2509,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ],
+      "inputTokens": null
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v1",
+      "model": "haiku",
+      "role": "fwd2",
+      "case": "fwd2-ambiguous-owner",
+      "inputSha256": "e74c2421a4b63f56340f6910fa07190c43f044f5bbea75addf36b7c4a07083cb",
+      "promptSha256": "ff355d49405e004c5c8fc0dc85317bcf94208368b6d919b250d0eb056fc47622",
+      "metric": "Converse request wall",
+      "latencyMs": 1388,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ],
+      "inputTokens": null
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v1",
+      "model": "nova2",
+      "role": "fwd1",
+      "case": "fwd1-close-open-shot",
+      "inputSha256": "c663b649503c08bbe8abe907c94509bfd60d1e031df2cca0e9ecd5579d248c19",
+      "promptSha256": "19706176c2feabcd7874df1c4a5c00765400b89fb15575c475f7a204ff53da73",
+      "metric": "Converse request wall",
+      "latencyMs": 628,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ],
+      "inputTokens": null
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v1",
+      "model": "haiku",
+      "role": "fwd2",
+      "case": "fwd2-close-blocked-pass",
+      "inputSha256": "801ecb79c6fcafb3237794d4f6fd1b84a0f7e2432cb6d4e7a13138693172e8fb",
+      "promptSha256": "ff355d49405e004c5c8fc0dc85317bcf94208368b6d919b250d0eb056fc47622",
+      "metric": "Converse request wall",
+      "latencyMs": 2429,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ],
+      "inputTokens": null
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v1",
+      "model": "nova2",
+      "role": "gk",
+      "case": "gk-reject-marked-defender",
+      "inputSha256": "bb282cd62e9ad74f4ac0cfd3409c1e48d2c394bafba1f2d88d12331b22a71e43",
+      "promptSha256": "102cb9d3147803ce9a2933616bb39ee0710c743064e680400a16bf7952126dde",
+      "metric": "Converse request wall",
+      "latencyMs": 675,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ],
+      "inputTokens": null
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v1",
+      "model": "nova2",
+      "role": "fwd1",
+      "case": "fwd1-low-energy-cover",
+      "inputSha256": "c38a6e5d7d1db1ca3e046462435286844218a0b6b152cd08537772e51f9f94d1",
+      "promptSha256": "19706176c2feabcd7874df1c4a5c00765400b89fb15575c475f7a204ff53da73",
+      "metric": "Converse request wall",
+      "latencyMs": 710,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ],
+      "inputTokens": null
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v1",
+      "model": "nova2",
+      "role": "mid",
+      "case": "mid-malformed-players",
+      "inputSha256": "a6c8be96008ed240c1c4f021a5a8e13087312b501b935e940c55ed131491a69c",
+      "promptSha256": "e96638500f333941b69f7fc45ce0163de6c06643bfcb9fdebdc0a788752336cd",
+      "metric": "Converse request wall",
+      "latencyMs": 560,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ],
+      "inputTokens": null
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v1",
+      "model": "haiku",
+      "role": "fwd2",
+      "case": "fwd2-wrong-player-binding",
+      "inputSha256": "2e608dc2f39b4f142b03dfc23ff3b918c6dd9369833303e33853fc1cd77bdeb2",
+      "promptSha256": "ff355d49405e004c5c8fc0dc85317bcf94208368b6d919b250d0eb056fc47622",
+      "metric": "Converse request wall",
+      "latencyMs": 1205,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ],
+      "inputTokens": null
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v1",
+      "model": "nova2",
+      "role": "gk",
+      "case": "gk-own-ball-far-away",
+      "inputSha256": "d14fb7e1c919a9dc7eda1bddee2db168eb105eca199640a7124be70eea1283d3",
+      "promptSha256": "102cb9d3147803ce9a2933616bb39ee0710c743064e680400a16bf7952126dde",
+      "metric": "Converse request wall",
+      "latencyMs": 797,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ],
+      "inputTokens": null
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v1",
+      "model": "nova2",
+      "role": "def",
+      "case": "def-own-ball-far-away",
+      "inputSha256": "9e114d5af644b4138958b4c7930a2aab4618fc3e246e548814a40d2ea048460f",
+      "promptSha256": "0adbead4e347831db1602487e2b1dc118affe240a95065e59c6cc1947a18206a",
+      "metric": "Converse request wall",
+      "latencyMs": 874,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ],
+      "inputTokens": null
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v1",
+      "model": "nova2",
+      "role": "mid",
+      "case": "mid-own-ball-far-away",
+      "inputSha256": "b6803eecb1e693cba5b91837b80a5e6356904587ff16f1888265b497c73f3de2",
+      "promptSha256": "e96638500f333941b69f7fc45ce0163de6c06643bfcb9fdebdc0a788752336cd",
+      "metric": "Converse request wall",
+      "latencyMs": 591,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ],
+      "inputTokens": null
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v1",
+      "model": "nova2",
+      "role": "fwd1",
+      "case": "fwd1-own-ball-far-away",
+      "inputSha256": "813f2a914f4589e7a325387ef1d44cebee364f1efcc1276917cbf03c2630be78",
+      "promptSha256": "19706176c2feabcd7874df1c4a5c00765400b89fb15575c475f7a204ff53da73",
+      "metric": "Converse request wall",
+      "latencyMs": 549,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ],
+      "inputTokens": null
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v1",
+      "model": "haiku",
+      "role": "fwd2",
+      "case": "fwd2-own-ball-far-away",
+      "inputSha256": "0533ebbb950c050678add572796b0fae184601871f0809a185a7795f73213a10",
+      "promptSha256": "ff355d49405e004c5c8fc0dc85317bcf94208368b6d919b250d0eb056fc47622",
+      "metric": "Converse request wall",
+      "latencyMs": 1379,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ],
+      "inputTokens": null
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v2",
+      "model": "nova2",
+      "role": "gk",
+      "case": "gk-own-ball-far",
+      "inputSha256": "905976599a9bc764ce0d63d52f767b5a4913cd67a6edd0fc02a981102664299e",
+      "promptSha256": "a7e09482e6bb5aa17618dead15283305788ba5819d2bd0da7a18f36df08266b4",
+      "metric": "Converse request wall",
+      "latencyMs": 628,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "not_one_command"
+      ],
+      "inputTokens": 1985
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v2",
+      "model": "nova2",
+      "role": "gk",
+      "case": "gk-ambiguous-owner",
+      "inputSha256": "eacd1315246060205d051249a37946cc2cbd65bfb2a50b7b263637dcc68d8c57",
+      "promptSha256": "a7e09482e6bb5aa17618dead15283305788ba5819d2bd0da7a18f36df08266b4",
+      "metric": "Converse request wall",
+      "latencyMs": 439,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "not_one_command"
+      ],
+      "inputTokens": 1977
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v2",
+      "model": "nova2",
+      "role": "def",
+      "case": "def-own-ball-far",
+      "inputSha256": "f66e75629e33f91dbfea68af2badd2a4113cd5302c32fae7b3aaef7bec41c098",
+      "promptSha256": "1fdcbb787f155d3f6f8384b673b1519bb33f4bbb0ee7e83d23c439d7b5191e7a",
+      "metric": "Converse request wall",
+      "latencyMs": 462,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "not_one_command"
+      ],
+      "inputTokens": 2020
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v2",
+      "model": "nova2",
+      "role": "def",
+      "case": "def-ambiguous-owner",
+      "inputSha256": "bf78e08b91abc7965c92815ab0288e9405183f6812ecb509fd4d7fe88d179db3",
+      "promptSha256": "1fdcbb787f155d3f6f8384b673b1519bb33f4bbb0ee7e83d23c439d7b5191e7a",
+      "metric": "Converse request wall",
+      "latencyMs": 428,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "not_one_command"
+      ],
+      "inputTokens": 2012
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v2",
+      "model": "nova2",
+      "role": "mid",
+      "case": "mid-own-ball-far",
+      "inputSha256": "a5e59da88981c19695fe83c46a74c566e7c880d14ff3242f30c8636a2e836f46",
+      "promptSha256": "fcf61511fa98d2beb2fad6a3d90e9c7447d85b4cb4e9c1cd544672a16b652437",
+      "metric": "Converse request wall",
+      "latencyMs": 453,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "not_one_command"
+      ],
+      "inputTokens": 2020
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v2",
+      "model": "nova2",
+      "role": "mid",
+      "case": "mid-ambiguous-owner",
+      "inputSha256": "33bddc85cd63e40ace3bc3960c79e2cb2132448554e8b493e4c838fc95d27afe",
+      "promptSha256": "fcf61511fa98d2beb2fad6a3d90e9c7447d85b4cb4e9c1cd544672a16b652437",
+      "metric": "Converse request wall",
+      "latencyMs": 671,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "not_one_command"
+      ],
+      "inputTokens": 2012
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v2",
+      "model": "nova2",
+      "role": "fwd1",
+      "case": "fwd1-own-ball-far",
+      "inputSha256": "631abb2960bd2093c34d573c5e2e864e2fa3c2c18ddb848b97acb2ac48e13ecb",
+      "promptSha256": "47d309218724d9db3077e148925fa1fe3969de8d1dcd537611e637dbb74b2847",
+      "metric": "Converse request wall",
+      "latencyMs": 534,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "not_one_command"
+      ],
+      "inputTokens": 2034
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v2",
+      "model": "nova2",
+      "role": "fwd1",
+      "case": "fwd1-ambiguous-owner",
+      "inputSha256": "d5754102a07f3549e6c4de36aafd65bb454e033265bdabe2ce86322434fdba11",
+      "promptSha256": "47d309218724d9db3077e148925fa1fe3969de8d1dcd537611e637dbb74b2847",
+      "metric": "Converse request wall",
+      "latencyMs": 467,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "not_one_command"
+      ],
+      "inputTokens": 2026
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v2",
+      "model": "haiku",
+      "role": "fwd2",
+      "case": "fwd2-own-ball-far",
+      "inputSha256": "d966ac8924f0382e99cce164eff200906ef1dfd2ba621e185c4427f5d2d58639",
+      "promptSha256": "2839ae6a7c340f7467271249e7b846662baa4ea5d00148c34146fdf8802766e9",
+      "metric": "Converse request wall",
+      "latencyMs": 1589,
+      "contractValid": true,
+      "decisionAgreement": false,
+      "historicalStrictPassed": false,
+      "errors": [
+        "wrong_action"
+      ],
+      "historicalErrors": [
+        "scenario_decision"
+      ],
+      "inputTokens": 2213
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v2",
+      "model": "haiku",
+      "role": "fwd2",
+      "case": "fwd2-ambiguous-owner",
+      "inputSha256": "e74c2421a4b63f56340f6910fa07190c43f044f5bbea75addf36b7c4a07083cb",
+      "promptSha256": "2839ae6a7c340f7467271249e7b846662baa4ea5d00148c34146fdf8802766e9",
+      "metric": "Converse request wall",
+      "latencyMs": 2471,
+      "contractValid": true,
+      "decisionAgreement": false,
+      "historicalStrictPassed": false,
+      "errors": [
+        "wrong_action"
+      ],
+      "historicalErrors": [
+        "scenario_decision"
+      ],
+      "inputTokens": 2203
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v2",
+      "model": "nova2",
+      "role": "fwd1",
+      "case": "fwd1-close-open-shot",
+      "inputSha256": "c663b649503c08bbe8abe907c94509bfd60d1e031df2cca0e9ecd5579d248c19",
+      "promptSha256": "47d309218724d9db3077e148925fa1fe3969de8d1dcd537611e637dbb74b2847",
+      "metric": "Converse request wall",
+      "latencyMs": 513,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "not_one_command"
+      ],
+      "inputTokens": 2034
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v2",
+      "model": "haiku",
+      "role": "fwd2",
+      "case": "fwd2-close-blocked-pass",
+      "inputSha256": "801ecb79c6fcafb3237794d4f6fd1b84a0f7e2432cb6d4e7a13138693172e8fb",
+      "promptSha256": "2839ae6a7c340f7467271249e7b846662baa4ea5d00148c34146fdf8802766e9",
+      "metric": "Converse request wall",
+      "latencyMs": 4706,
+      "contractValid": true,
+      "decisionAgreement": false,
+      "historicalStrictPassed": false,
+      "errors": [
+        "wrong_action"
+      ],
+      "historicalErrors": [
+        "scenario_decision"
+      ],
+      "inputTokens": 2215
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v2",
+      "model": "nova2",
+      "role": "gk",
+      "case": "gk-reject-marked-defender",
+      "inputSha256": "bb282cd62e9ad74f4ac0cfd3409c1e48d2c394bafba1f2d88d12331b22a71e43",
+      "promptSha256": "a7e09482e6bb5aa17618dead15283305788ba5819d2bd0da7a18f36df08266b4",
+      "metric": "Converse request wall",
+      "latencyMs": 511,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "not_one_command"
+      ],
+      "inputTokens": 1985
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v2",
+      "model": "nova2",
+      "role": "fwd1",
+      "case": "fwd1-low-energy-cover",
+      "inputSha256": "c38a6e5d7d1db1ca3e046462435286844218a0b6b152cd08537772e51f9f94d1",
+      "promptSha256": "47d309218724d9db3077e148925fa1fe3969de8d1dcd537611e637dbb74b2847",
+      "metric": "Converse request wall",
+      "latencyMs": 431,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "not_one_command"
+      ],
+      "inputTokens": 2034
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v2",
+      "model": "nova2",
+      "role": "mid",
+      "case": "mid-malformed-players",
+      "inputSha256": "a6c8be96008ed240c1c4f021a5a8e13087312b501b935e940c55ed131491a69c",
+      "promptSha256": "fcf61511fa98d2beb2fad6a3d90e9c7447d85b4cb4e9c1cd544672a16b652437",
+      "metric": "Converse request wall",
+      "latencyMs": 536,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "not_one_command"
+      ],
+      "inputTokens": 1292
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v2",
+      "model": "haiku",
+      "role": "fwd2",
+      "case": "fwd2-wrong-player-binding",
+      "inputSha256": "2e608dc2f39b4f142b03dfc23ff3b918c6dd9369833303e33853fc1cd77bdeb2",
+      "promptSha256": "2839ae6a7c340f7467271249e7b846662baa4ea5d00148c34146fdf8802766e9",
+      "metric": "Converse request wall",
+      "latencyMs": 1242,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "historicalStrictPassed": true,
+      "errors": [],
+      "historicalErrors": [],
+      "inputTokens": 2213
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v2",
+      "model": "nova2",
+      "role": "gk",
+      "case": "gk-own-ball-far-away",
+      "inputSha256": "d14fb7e1c919a9dc7eda1bddee2db168eb105eca199640a7124be70eea1283d3",
+      "promptSha256": "a7e09482e6bb5aa17618dead15283305788ba5819d2bd0da7a18f36df08266b4",
+      "metric": "Converse request wall",
+      "latencyMs": 413,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "not_one_command"
+      ],
+      "inputTokens": 1985
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v2",
+      "model": "nova2",
+      "role": "def",
+      "case": "def-own-ball-far-away",
+      "inputSha256": "9e114d5af644b4138958b4c7930a2aab4618fc3e246e548814a40d2ea048460f",
+      "promptSha256": "1fdcbb787f155d3f6f8384b673b1519bb33f4bbb0ee7e83d23c439d7b5191e7a",
+      "metric": "Converse request wall",
+      "latencyMs": 610,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "not_one_command"
+      ],
+      "inputTokens": 2020
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v2",
+      "model": "nova2",
+      "role": "mid",
+      "case": "mid-own-ball-far-away",
+      "inputSha256": "b6803eecb1e693cba5b91837b80a5e6356904587ff16f1888265b497c73f3de2",
+      "promptSha256": "fcf61511fa98d2beb2fad6a3d90e9c7447d85b4cb4e9c1cd544672a16b652437",
+      "metric": "Converse request wall",
+      "latencyMs": 497,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "not_one_command"
+      ],
+      "inputTokens": 2020
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v2",
+      "model": "nova2",
+      "role": "fwd1",
+      "case": "fwd1-own-ball-far-away",
+      "inputSha256": "813f2a914f4589e7a325387ef1d44cebee364f1efcc1276917cbf03c2630be78",
+      "promptSha256": "47d309218724d9db3077e148925fa1fe3969de8d1dcd537611e637dbb74b2847",
+      "metric": "Converse request wall",
+      "latencyMs": 442,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "not_one_command"
+      ],
+      "inputTokens": 2034
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v2",
+      "model": "haiku",
+      "role": "fwd2",
+      "case": "fwd2-own-ball-far-away",
+      "inputSha256": "0533ebbb950c050678add572796b0fae184601871f0809a185a7795f73213a10",
+      "promptSha256": "2839ae6a7c340f7467271249e7b846662baa4ea5d00148c34146fdf8802766e9",
+      "metric": "Converse request wall",
+      "latencyMs": 1427,
+      "contractValid": true,
+      "decisionAgreement": false,
+      "historicalStrictPassed": false,
+      "errors": [
+        "wrong_action"
+      ],
+      "historicalErrors": [
+        "scenario_decision"
+      ],
+      "inputTokens": 2213
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v2",
+      "model": "nova2",
+      "role": "gk",
+      "case": "gk-ambiguous-owner-stale-context",
+      "inputSha256": "eacd1315246060205d051249a37946cc2cbd65bfb2a50b7b263637dcc68d8c57",
+      "promptSha256": "a7e09482e6bb5aa17618dead15283305788ba5819d2bd0da7a18f36df08266b4",
+      "metric": "Converse request wall",
+      "latencyMs": 711,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "historicalStrictPassed": true,
+      "errors": [],
+      "historicalErrors": [],
+      "inputTokens": 5629
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v2",
+      "model": "nova2",
+      "role": "def",
+      "case": "def-ambiguous-owner-stale-context",
+      "inputSha256": "bf78e08b91abc7965c92815ab0288e9405183f6812ecb509fd4d7fe88d179db3",
+      "promptSha256": "1fdcbb787f155d3f6f8384b673b1519bb33f4bbb0ee7e83d23c439d7b5191e7a",
+      "metric": "Converse request wall",
+      "latencyMs": 788,
+      "contractValid": true,
+      "decisionAgreement": false,
+      "historicalStrictPassed": false,
+      "errors": [
+        "wrong_action"
+      ],
+      "historicalErrors": [
+        "scenario_decision"
+      ],
+      "inputTokens": 5644
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v2",
+      "model": "nova2",
+      "role": "mid",
+      "case": "mid-ambiguous-owner-stale-context",
+      "inputSha256": "33bddc85cd63e40ace3bc3960c79e2cb2132448554e8b493e4c838fc95d27afe",
+      "promptSha256": "fcf61511fa98d2beb2fad6a3d90e9c7447d85b4cb4e9c1cd544672a16b652437",
+      "metric": "Converse request wall",
+      "latencyMs": 739,
+      "contractValid": true,
+      "decisionAgreement": false,
+      "historicalStrictPassed": false,
+      "errors": [
+        "wrong_action"
+      ],
+      "historicalErrors": [
+        "scenario_decision"
+      ],
+      "inputTokens": 5644
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v2",
+      "model": "nova2",
+      "role": "fwd1",
+      "case": "fwd1-ambiguous-owner-stale-context",
+      "inputSha256": "d5754102a07f3549e6c4de36aafd65bb454e033265bdabe2ce86322434fdba11",
+      "promptSha256": "47d309218724d9db3077e148925fa1fe3969de8d1dcd537611e637dbb74b2847",
+      "metric": "Converse request wall",
+      "latencyMs": 707,
+      "contractValid": true,
+      "decisionAgreement": false,
+      "historicalStrictPassed": false,
+      "errors": [
+        "wrong_action"
+      ],
+      "historicalErrors": [
+        "scenario_decision"
+      ],
+      "inputTokens": 5658
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v2",
+      "model": "haiku",
+      "role": "fwd2",
+      "case": "fwd2-ambiguous-owner-stale-context",
+      "inputSha256": "e74c2421a4b63f56340f6910fa07190c43f044f5bbea75addf36b7c4a07083cb",
+      "promptSha256": "2839ae6a7c340f7467271249e7b846662baa4ea5d00148c34146fdf8802766e9",
+      "metric": "Converse request wall",
+      "latencyMs": 1732,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "historicalStrictPassed": true,
+      "errors": [],
+      "historicalErrors": [],
+      "inputTokens": 6059
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v3",
+      "model": "nova2",
+      "role": "gk",
+      "case": "gk-own-ball-far",
+      "inputSha256": "905976599a9bc764ce0d63d52f767b5a4913cd67a6edd0fc02a981102664299e",
+      "promptSha256": "ba8cc43c1c39dca4dbb5b9e18f721419b554901730248bfe9d9b9ed3a6796e92",
+      "metric": "Converse request wall",
+      "latencyMs": 696,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ],
+      "inputTokens": 2147
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v3",
+      "model": "nova2",
+      "role": "gk",
+      "case": "gk-ambiguous-owner",
+      "inputSha256": "eacd1315246060205d051249a37946cc2cbd65bfb2a50b7b263637dcc68d8c57",
+      "promptSha256": "ba8cc43c1c39dca4dbb5b9e18f721419b554901730248bfe9d9b9ed3a6796e92",
+      "metric": "Converse request wall",
+      "latencyMs": 617,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ],
+      "inputTokens": 2139
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v3",
+      "model": "nova2",
+      "role": "def",
+      "case": "def-own-ball-far",
+      "inputSha256": "f66e75629e33f91dbfea68af2badd2a4113cd5302c32fae7b3aaef7bec41c098",
+      "promptSha256": "1051b151fbe84f464bdc78583b867bbe6a1ef5c0ed4d5ed1e304aca948daf637",
+      "metric": "Converse request wall",
+      "latencyMs": 793,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ],
+      "inputTokens": 2182
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v3",
+      "model": "nova2",
+      "role": "def",
+      "case": "def-ambiguous-owner",
+      "inputSha256": "bf78e08b91abc7965c92815ab0288e9405183f6812ecb509fd4d7fe88d179db3",
+      "promptSha256": "1051b151fbe84f464bdc78583b867bbe6a1ef5c0ed4d5ed1e304aca948daf637",
+      "metric": "Converse request wall",
+      "latencyMs": 1159,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ],
+      "inputTokens": 2174
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v3",
+      "model": "nova2",
+      "role": "mid",
+      "case": "mid-own-ball-far",
+      "inputSha256": "a5e59da88981c19695fe83c46a74c566e7c880d14ff3242f30c8636a2e836f46",
+      "promptSha256": "ad0d332cd118326e6d3c27b101d21ae5d962f8a3309b61696964e15d25c62c73",
+      "metric": "Converse request wall",
+      "latencyMs": 675,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ],
+      "inputTokens": 2182
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v3",
+      "model": "nova2",
+      "role": "mid",
+      "case": "mid-ambiguous-owner",
+      "inputSha256": "33bddc85cd63e40ace3bc3960c79e2cb2132448554e8b493e4c838fc95d27afe",
+      "promptSha256": "ad0d332cd118326e6d3c27b101d21ae5d962f8a3309b61696964e15d25c62c73",
+      "metric": "Converse request wall",
+      "latencyMs": 625,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ],
+      "inputTokens": 2174
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v3",
+      "model": "nova2",
+      "role": "fwd1",
+      "case": "fwd1-own-ball-far",
+      "inputSha256": "631abb2960bd2093c34d573c5e2e864e2fa3c2c18ddb848b97acb2ac48e13ecb",
+      "promptSha256": "396916c49d1e2a44b52c85d6cc197a29a084846fd65abb96109f1209c85cebb2",
+      "metric": "Converse request wall",
+      "latencyMs": 658,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ],
+      "inputTokens": 2196
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v3",
+      "model": "nova2",
+      "role": "fwd1",
+      "case": "fwd1-ambiguous-owner",
+      "inputSha256": "d5754102a07f3549e6c4de36aafd65bb454e033265bdabe2ce86322434fdba11",
+      "promptSha256": "396916c49d1e2a44b52c85d6cc197a29a084846fd65abb96109f1209c85cebb2",
+      "metric": "Converse request wall",
+      "latencyMs": 575,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ],
+      "inputTokens": 2188
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v3",
+      "model": "haiku",
+      "role": "fwd2",
+      "case": "fwd2-own-ball-far",
+      "inputSha256": "d966ac8924f0382e99cce164eff200906ef1dfd2ba621e185c4427f5d2d58639",
+      "promptSha256": "7a08ee74e4b501d393e8b92d98955190432a5d589fbcef5b82501aaa2615b16f",
+      "metric": "Converse request wall",
+      "latencyMs": 1501,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ],
+      "inputTokens": 2392
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v3",
+      "model": "haiku",
+      "role": "fwd2",
+      "case": "fwd2-ambiguous-owner",
+      "inputSha256": "e74c2421a4b63f56340f6910fa07190c43f044f5bbea75addf36b7c4a07083cb",
+      "promptSha256": "7a08ee74e4b501d393e8b92d98955190432a5d589fbcef5b82501aaa2615b16f",
+      "metric": "Converse request wall",
+      "latencyMs": 1415,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ],
+      "inputTokens": 2382
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v3",
+      "model": "nova2",
+      "role": "fwd1",
+      "case": "fwd1-close-open-shot",
+      "inputSha256": "c663b649503c08bbe8abe907c94509bfd60d1e031df2cca0e9ecd5579d248c19",
+      "promptSha256": "396916c49d1e2a44b52c85d6cc197a29a084846fd65abb96109f1209c85cebb2",
+      "metric": "Converse request wall",
+      "latencyMs": 793,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ],
+      "inputTokens": 2196
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v3",
+      "model": "haiku",
+      "role": "fwd2",
+      "case": "fwd2-close-blocked-pass",
+      "inputSha256": "801ecb79c6fcafb3237794d4f6fd1b84a0f7e2432cb6d4e7a13138693172e8fb",
+      "promptSha256": "7a08ee74e4b501d393e8b92d98955190432a5d589fbcef5b82501aaa2615b16f",
+      "metric": "Converse request wall",
+      "latencyMs": 1457,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ],
+      "inputTokens": 2394
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v3",
+      "model": "nova2",
+      "role": "gk",
+      "case": "gk-reject-marked-defender",
+      "inputSha256": "bb282cd62e9ad74f4ac0cfd3409c1e48d2c394bafba1f2d88d12331b22a71e43",
+      "promptSha256": "ba8cc43c1c39dca4dbb5b9e18f721419b554901730248bfe9d9b9ed3a6796e92",
+      "metric": "Converse request wall",
+      "latencyMs": 643,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ],
+      "inputTokens": 2147
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v3",
+      "model": "nova2",
+      "role": "fwd1",
+      "case": "fwd1-low-energy-cover",
+      "inputSha256": "c38a6e5d7d1db1ca3e046462435286844218a0b6b152cd08537772e51f9f94d1",
+      "promptSha256": "396916c49d1e2a44b52c85d6cc197a29a084846fd65abb96109f1209c85cebb2",
+      "metric": "Converse request wall",
+      "latencyMs": 583,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ],
+      "inputTokens": 2196
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v3",
+      "model": "nova2",
+      "role": "mid",
+      "case": "mid-malformed-players",
+      "inputSha256": "a6c8be96008ed240c1c4f021a5a8e13087312b501b935e940c55ed131491a69c",
+      "promptSha256": "ad0d332cd118326e6d3c27b101d21ae5d962f8a3309b61696964e15d25c62c73",
+      "metric": "Converse request wall",
+      "latencyMs": 652,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ],
+      "inputTokens": 1454
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v3",
+      "model": "haiku",
+      "role": "fwd2",
+      "case": "fwd2-wrong-player-binding",
+      "inputSha256": "2e608dc2f39b4f142b03dfc23ff3b918c6dd9369833303e33853fc1cd77bdeb2",
+      "promptSha256": "7a08ee74e4b501d393e8b92d98955190432a5d589fbcef5b82501aaa2615b16f",
+      "metric": "Converse request wall",
+      "latencyMs": 1491,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ],
+      "inputTokens": 2392
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v3",
+      "model": "nova2",
+      "role": "gk",
+      "case": "gk-own-ball-far-away",
+      "inputSha256": "d14fb7e1c919a9dc7eda1bddee2db168eb105eca199640a7124be70eea1283d3",
+      "promptSha256": "ba8cc43c1c39dca4dbb5b9e18f721419b554901730248bfe9d9b9ed3a6796e92",
+      "metric": "Converse request wall",
+      "latencyMs": 576,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ],
+      "inputTokens": 2147
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v3",
+      "model": "nova2",
+      "role": "def",
+      "case": "def-own-ball-far-away",
+      "inputSha256": "9e114d5af644b4138958b4c7930a2aab4618fc3e246e548814a40d2ea048460f",
+      "promptSha256": "1051b151fbe84f464bdc78583b867bbe6a1ef5c0ed4d5ed1e304aca948daf637",
+      "metric": "Converse request wall",
+      "latencyMs": 543,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ],
+      "inputTokens": 2182
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v3",
+      "model": "nova2",
+      "role": "mid",
+      "case": "mid-own-ball-far-away",
+      "inputSha256": "b6803eecb1e693cba5b91837b80a5e6356904587ff16f1888265b497c73f3de2",
+      "promptSha256": "ad0d332cd118326e6d3c27b101d21ae5d962f8a3309b61696964e15d25c62c73",
+      "metric": "Converse request wall",
+      "latencyMs": 653,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ],
+      "inputTokens": 2182
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v3",
+      "model": "nova2",
+      "role": "fwd1",
+      "case": "fwd1-own-ball-far-away",
+      "inputSha256": "813f2a914f4589e7a325387ef1d44cebee364f1efcc1276917cbf03c2630be78",
+      "promptSha256": "396916c49d1e2a44b52c85d6cc197a29a084846fd65abb96109f1209c85cebb2",
+      "metric": "Converse request wall",
+      "latencyMs": 1214,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ],
+      "inputTokens": 2196
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v3",
+      "model": "haiku",
+      "role": "fwd2",
+      "case": "fwd2-own-ball-far-away",
+      "inputSha256": "0533ebbb950c050678add572796b0fae184601871f0809a185a7795f73213a10",
+      "promptSha256": "7a08ee74e4b501d393e8b92d98955190432a5d589fbcef5b82501aaa2615b16f",
+      "metric": "Converse request wall",
+      "latencyMs": 1412,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ],
+      "inputTokens": 2392
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v3",
+      "model": "nova2",
+      "role": "gk",
+      "case": "gk-ambiguous-owner-stale-context",
+      "inputSha256": "eacd1315246060205d051249a37946cc2cbd65bfb2a50b7b263637dcc68d8c57",
+      "promptSha256": "ba8cc43c1c39dca4dbb5b9e18f721419b554901730248bfe9d9b9ed3a6796e92",
+      "metric": "Converse request wall",
+      "latencyMs": 596,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "historicalStrictPassed": true,
+      "errors": [],
+      "historicalErrors": [],
+      "inputTokens": 5791
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v3",
+      "model": "nova2",
+      "role": "def",
+      "case": "def-ambiguous-owner-stale-context",
+      "inputSha256": "bf78e08b91abc7965c92815ab0288e9405183f6812ecb509fd4d7fe88d179db3",
+      "promptSha256": "1051b151fbe84f464bdc78583b867bbe6a1ef5c0ed4d5ed1e304aca948daf637",
+      "metric": "Converse request wall",
+      "latencyMs": 805,
+      "contractValid": true,
+      "decisionAgreement": false,
+      "historicalStrictPassed": false,
+      "errors": [
+        "wrong_action"
+      ],
+      "historicalErrors": [
+        "scenario_decision"
+      ],
+      "inputTokens": 5806
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v3",
+      "model": "nova2",
+      "role": "mid",
+      "case": "mid-ambiguous-owner-stale-context",
+      "inputSha256": "33bddc85cd63e40ace3bc3960c79e2cb2132448554e8b493e4c838fc95d27afe",
+      "promptSha256": "ad0d332cd118326e6d3c27b101d21ae5d962f8a3309b61696964e15d25c62c73",
+      "metric": "Converse request wall",
+      "latencyMs": 696,
+      "contractValid": true,
+      "decisionAgreement": false,
+      "historicalStrictPassed": false,
+      "errors": [
+        "wrong_action"
+      ],
+      "historicalErrors": [
+        "scenario_decision"
+      ],
+      "inputTokens": 5806
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v3",
+      "model": "nova2",
+      "role": "fwd1",
+      "case": "fwd1-ambiguous-owner-stale-context",
+      "inputSha256": "d5754102a07f3549e6c4de36aafd65bb454e033265bdabe2ce86322434fdba11",
+      "promptSha256": "396916c49d1e2a44b52c85d6cc197a29a084846fd65abb96109f1209c85cebb2",
+      "metric": "Converse request wall",
+      "latencyMs": 903,
+      "contractValid": true,
+      "decisionAgreement": false,
+      "historicalStrictPassed": false,
+      "errors": [
+        "wrong_action"
+      ],
+      "historicalErrors": [
+        "scenario_decision"
+      ],
+      "inputTokens": 5820
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v3",
+      "model": "haiku",
+      "role": "fwd2",
+      "case": "fwd2-ambiguous-owner-stale-context",
+      "inputSha256": "e74c2421a4b63f56340f6910fa07190c43f044f5bbea75addf36b7c4a07083cb",
+      "promptSha256": "7a08ee74e4b501d393e8b92d98955190432a5d589fbcef5b82501aaa2615b16f",
+      "metric": "Converse request wall",
+      "latencyMs": 1233,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "historicalStrictPassed": true,
+      "errors": [],
+      "historicalErrors": [],
+      "inputTokens": 6238
+    },
+    {
+      "suite": "compact-model-screen",
+      "prompt": "compact-r2",
+      "model": "nova2",
+      "role": "fwd2",
+      "case": "fwd2-own-ball-far",
+      "inputSha256": "d966ac8924f0382e99cce164eff200906ef1dfd2ba621e185c4427f5d2d58639",
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "metric": "Converse request wall",
+      "latencyMs": 571,
+      "modelReportedMs": 545,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ]
+    },
+    {
+      "suite": "compact-model-screen",
+      "prompt": "compact-r2",
+      "model": "haiku",
+      "role": "fwd2",
+      "case": "fwd2-own-ball-far",
+      "inputSha256": "d966ac8924f0382e99cce164eff200906ef1dfd2ba621e185c4427f5d2d58639",
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "metric": "Converse request wall",
+      "latencyMs": 1478,
+      "modelReportedMs": 1466,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ]
+    },
+    {
+      "suite": "compact-model-screen",
+      "prompt": "compact-r2",
+      "model": "sonnet",
+      "role": "fwd2",
+      "case": "fwd2-own-ball-far",
+      "inputSha256": "d966ac8924f0382e99cce164eff200906ef1dfd2ba621e185c4427f5d2d58639",
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "metric": "Converse request wall",
+      "latencyMs": 2713,
+      "modelReportedMs": 2698,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ]
+    },
+    {
+      "suite": "compact-model-screen",
+      "prompt": "compact-r2",
+      "model": "micro",
+      "role": "fwd2",
+      "case": "fwd2-own-ball-far",
+      "inputSha256": "d966ac8924f0382e99cce164eff200906ef1dfd2ba621e185c4427f5d2d58639",
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "metric": "Converse request wall",
+      "latencyMs": 511,
+      "modelReportedMs": 501,
+      "contractValid": false,
+      "decisionAgreement": false,
+      "historicalStrictPassed": false,
+      "errors": [
+        "duration",
+        "wrong_action"
+      ],
+      "historicalErrors": [
+        "wrong_duration",
+        "scenario_decision"
+      ]
+    },
+    {
+      "suite": "compact-model-screen",
+      "prompt": "compact-r2",
+      "model": "nova2",
+      "role": "fwd2",
+      "case": "fwd2-ambiguous-owner",
+      "inputSha256": "e74c2421a4b63f56340f6910fa07190c43f044f5bbea75addf36b7c4a07083cb",
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "metric": "Converse request wall",
+      "latencyMs": 616,
+      "modelReportedMs": 604,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ]
+    },
+    {
+      "suite": "compact-model-screen",
+      "prompt": "compact-r2",
+      "model": "haiku",
+      "role": "fwd2",
+      "case": "fwd2-ambiguous-owner",
+      "inputSha256": "e74c2421a4b63f56340f6910fa07190c43f044f5bbea75addf36b7c4a07083cb",
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "metric": "Converse request wall",
+      "latencyMs": 1364,
+      "modelReportedMs": 1354,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ]
+    },
+    {
+      "suite": "compact-model-screen",
+      "prompt": "compact-r2",
+      "model": "sonnet",
+      "role": "fwd2",
+      "case": "fwd2-ambiguous-owner",
+      "inputSha256": "e74c2421a4b63f56340f6910fa07190c43f044f5bbea75addf36b7c4a07083cb",
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "metric": "Converse request wall",
+      "latencyMs": 1055,
+      "modelReportedMs": 1016,
+      "contractValid": true,
+      "decisionAgreement": false,
+      "historicalStrictPassed": false,
+      "errors": [
+        "wrong_action"
+      ],
+      "historicalErrors": [
+        "scenario_decision"
+      ]
+    },
+    {
+      "suite": "compact-model-screen",
+      "prompt": "compact-r2",
+      "model": "micro",
+      "role": "fwd2",
+      "case": "fwd2-ambiguous-owner",
+      "inputSha256": "e74c2421a4b63f56340f6910fa07190c43f044f5bbea75addf36b7c4a07083cb",
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "metric": "Converse request wall",
+      "latencyMs": 457,
+      "modelReportedMs": 446,
+      "contractValid": false,
+      "decisionAgreement": false,
+      "historicalStrictPassed": false,
+      "errors": [
+        "duration",
+        "wrong_action"
+      ],
+      "historicalErrors": [
+        "wrong_duration",
+        "scenario_decision"
+      ]
+    },
+    {
+      "suite": "compact-model-screen",
+      "prompt": "compact-r2",
+      "model": "nova2",
+      "role": "fwd2",
+      "case": "fwd2-close-blocked-pass",
+      "inputSha256": "801ecb79c6fcafb3237794d4f6fd1b84a0f7e2432cb6d4e7a13138693172e8fb",
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "metric": "Converse request wall",
+      "latencyMs": 573,
+      "modelReportedMs": 560,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ]
+    },
+    {
+      "suite": "compact-model-screen",
+      "prompt": "compact-r2",
+      "model": "haiku",
+      "role": "fwd2",
+      "case": "fwd2-close-blocked-pass",
+      "inputSha256": "801ecb79c6fcafb3237794d4f6fd1b84a0f7e2432cb6d4e7a13138693172e8fb",
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "metric": "Converse request wall",
+      "latencyMs": 1578,
+      "modelReportedMs": 1565,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ]
+    },
+    {
+      "suite": "compact-model-screen",
+      "prompt": "compact-r2",
+      "model": "sonnet",
+      "role": "fwd2",
+      "case": "fwd2-close-blocked-pass",
+      "inputSha256": "801ecb79c6fcafb3237794d4f6fd1b84a0f7e2432cb6d4e7a13138693172e8fb",
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "metric": "Converse request wall",
+      "latencyMs": 2908,
+      "modelReportedMs": 2896,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ]
+    },
+    {
+      "suite": "compact-model-screen",
+      "prompt": "compact-r2",
+      "model": "micro",
+      "role": "fwd2",
+      "case": "fwd2-close-blocked-pass",
+      "inputSha256": "801ecb79c6fcafb3237794d4f6fd1b84a0f7e2432cb6d4e7a13138693172e8fb",
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "metric": "Converse request wall",
+      "latencyMs": 431,
+      "modelReportedMs": 415,
+      "contractValid": false,
+      "decisionAgreement": false,
+      "historicalStrictPassed": false,
+      "errors": [
+        "duration",
+        "wrong_action"
+      ],
+      "historicalErrors": [
+        "wrong_duration",
+        "scenario_decision"
+      ]
+    },
+    {
+      "suite": "compact-model-screen",
+      "prompt": "compact-r2",
+      "model": "nova2",
+      "role": "fwd2",
+      "case": "fwd2-wrong-player-binding",
+      "inputSha256": "2e608dc2f39b4f142b03dfc23ff3b918c6dd9369833303e33853fc1cd77bdeb2",
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "metric": "Converse request wall",
+      "latencyMs": 642,
+      "modelReportedMs": 622,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ]
+    },
+    {
+      "suite": "compact-model-screen",
+      "prompt": "compact-r2",
+      "model": "haiku",
+      "role": "fwd2",
+      "case": "fwd2-wrong-player-binding",
+      "inputSha256": "2e608dc2f39b4f142b03dfc23ff3b918c6dd9369833303e33853fc1cd77bdeb2",
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "metric": "Converse request wall",
+      "latencyMs": 1450,
+      "modelReportedMs": 1438,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ]
+    },
+    {
+      "suite": "compact-model-screen",
+      "prompt": "compact-r2",
+      "model": "sonnet",
+      "role": "fwd2",
+      "case": "fwd2-wrong-player-binding",
+      "inputSha256": "2e608dc2f39b4f142b03dfc23ff3b918c6dd9369833303e33853fc1cd77bdeb2",
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "metric": "Converse request wall",
+      "latencyMs": 2865,
+      "modelReportedMs": 2855,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ]
+    },
+    {
+      "suite": "compact-model-screen",
+      "prompt": "compact-r2",
+      "model": "micro",
+      "role": "fwd2",
+      "case": "fwd2-wrong-player-binding",
+      "inputSha256": "2e608dc2f39b4f142b03dfc23ff3b918c6dd9369833303e33853fc1cd77bdeb2",
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "metric": "Converse request wall",
+      "latencyMs": 441,
+      "modelReportedMs": 431,
+      "contractValid": false,
+      "decisionAgreement": false,
+      "historicalStrictPassed": false,
+      "errors": [
+        "duration",
+        "wrong_action"
+      ],
+      "historicalErrors": [
+        "wrong_duration",
+        "scenario_decision"
+      ]
+    },
+    {
+      "suite": "compact-model-screen",
+      "prompt": "compact-r2",
+      "model": "nova2",
+      "role": "fwd2",
+      "case": "fwd2-own-ball-far-away",
+      "inputSha256": "0533ebbb950c050678add572796b0fae184601871f0809a185a7795f73213a10",
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "metric": "Converse request wall",
+      "latencyMs": 569,
+      "modelReportedMs": 556,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ]
+    },
+    {
+      "suite": "compact-model-screen",
+      "prompt": "compact-r2",
+      "model": "haiku",
+      "role": "fwd2",
+      "case": "fwd2-own-ball-far-away",
+      "inputSha256": "0533ebbb950c050678add572796b0fae184601871f0809a185a7795f73213a10",
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "metric": "Converse request wall",
+      "latencyMs": 1571,
+      "modelReportedMs": 1562,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ]
+    },
+    {
+      "suite": "compact-model-screen",
+      "prompt": "compact-r2",
+      "model": "sonnet",
+      "role": "fwd2",
+      "case": "fwd2-own-ball-far-away",
+      "inputSha256": "0533ebbb950c050678add572796b0fae184601871f0809a185a7795f73213a10",
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "metric": "Converse request wall",
+      "latencyMs": 1046,
+      "modelReportedMs": 1000,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "historicalStrictPassed": true,
+      "errors": [],
+      "historicalErrors": []
+    },
+    {
+      "suite": "compact-model-screen",
+      "prompt": "compact-r2",
+      "model": "micro",
+      "role": "fwd2",
+      "case": "fwd2-own-ball-far-away",
+      "inputSha256": "0533ebbb950c050678add572796b0fae184601871f0809a185a7795f73213a10",
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "metric": "Converse request wall",
+      "latencyMs": 387,
+      "modelReportedMs": 376,
+      "contractValid": false,
+      "decisionAgreement": false,
+      "historicalStrictPassed": false,
+      "errors": [
+        "duration",
+        "wrong_action"
+      ],
+      "historicalErrors": [
+        "wrong_duration",
+        "scenario_decision"
+      ]
+    },
+    {
+      "suite": "compact-model-screen",
+      "prompt": "compact-r2",
+      "model": "nova2",
+      "role": "fwd2",
+      "case": "fwd2-ambiguous-owner-stale-context",
+      "inputSha256": "e74c2421a4b63f56340f6910fa07190c43f044f5bbea75addf36b7c4a07083cb",
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "metric": "Converse request wall",
+      "latencyMs": 702,
+      "modelReportedMs": 689,
+      "contractValid": true,
+      "decisionAgreement": false,
+      "historicalStrictPassed": false,
+      "errors": [
+        "wrong_action"
+      ],
+      "historicalErrors": [
+        "scenario_decision"
+      ]
+    },
+    {
+      "suite": "compact-model-screen",
+      "prompt": "compact-r2",
+      "model": "haiku",
+      "role": "fwd2",
+      "case": "fwd2-ambiguous-owner-stale-context",
+      "inputSha256": "e74c2421a4b63f56340f6910fa07190c43f044f5bbea75addf36b7c4a07083cb",
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "metric": "Converse request wall",
+      "latencyMs": 1550,
+      "modelReportedMs": 1539,
+      "contractValid": true,
+      "decisionAgreement": false,
+      "historicalStrictPassed": false,
+      "errors": [
+        "wrong_action"
+      ],
+      "historicalErrors": [
+        "scenario_decision"
+      ]
+    },
+    {
+      "suite": "compact-model-screen",
+      "prompt": "compact-r2",
+      "model": "sonnet",
+      "role": "fwd2",
+      "case": "fwd2-ambiguous-owner-stale-context",
+      "inputSha256": "e74c2421a4b63f56340f6910fa07190c43f044f5bbea75addf36b7c4a07083cb",
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "metric": "Converse request wall",
+      "latencyMs": 1548,
+      "modelReportedMs": 1537,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ]
+    },
+    {
+      "suite": "compact-model-screen",
+      "prompt": "compact-r2",
+      "model": "micro",
+      "role": "fwd2",
+      "case": "fwd2-ambiguous-owner-stale-context",
+      "inputSha256": "e74c2421a4b63f56340f6910fa07190c43f044f5bbea75addf36b7c4a07083cb",
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "metric": "Converse request wall",
+      "latencyMs": 438,
+      "modelReportedMs": 427,
+      "contractValid": true,
+      "decisionAgreement": false,
+      "historicalStrictPassed": false,
+      "errors": [
+        "wrong_action"
+      ],
+      "historicalErrors": [
+        "scenario_decision"
+      ]
+    },
+    {
+      "suite": "compact-model-screen",
+      "prompt": "compact-r2",
+      "model": "nova2",
+      "role": "fwd2",
+      "case": "fwd2-close-open-shot",
+      "inputSha256": "8fd1979fd5ddc8d4771881c6e5939511b18afe017a5d82f55483e50b0bbd8585",
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "metric": "Converse request wall",
+      "latencyMs": 551,
+      "modelReportedMs": 537,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ]
+    },
+    {
+      "suite": "compact-model-screen",
+      "prompt": "compact-r2",
+      "model": "haiku",
+      "role": "fwd2",
+      "case": "fwd2-close-open-shot",
+      "inputSha256": "8fd1979fd5ddc8d4771881c6e5939511b18afe017a5d82f55483e50b0bbd8585",
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "metric": "Converse request wall",
+      "latencyMs": 1467,
+      "modelReportedMs": 1456,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ]
+    },
+    {
+      "suite": "compact-model-screen",
+      "prompt": "compact-r2",
+      "model": "sonnet",
+      "role": "fwd2",
+      "case": "fwd2-close-open-shot",
+      "inputSha256": "8fd1979fd5ddc8d4771881c6e5939511b18afe017a5d82f55483e50b0bbd8585",
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "metric": "Converse request wall",
+      "latencyMs": 3077,
+      "modelReportedMs": 3066,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ]
+    },
+    {
+      "suite": "compact-model-screen",
+      "prompt": "compact-r2",
+      "model": "micro",
+      "role": "fwd2",
+      "case": "fwd2-close-open-shot",
+      "inputSha256": "8fd1979fd5ddc8d4771881c6e5939511b18afe017a5d82f55483e50b0bbd8585",
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "metric": "Converse request wall",
+      "latencyMs": 532,
+      "modelReportedMs": 521,
+      "contractValid": false,
+      "decisionAgreement": true,
+      "historicalStrictPassed": false,
+      "errors": [
+        "duration"
+      ],
+      "historicalErrors": [
+        "wrong_duration"
+      ]
+    },
+    {
+      "suite": "compact-model-screen",
+      "prompt": "compact-r2",
+      "model": "nova2",
+      "role": "fwd2",
+      "case": "fwd2-teammate-ball-support",
+      "inputSha256": "e170f8f8ab45bfebc641ed30e9eb651e422d0748be394666ef5cea4a1327055e",
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "metric": "Converse request wall",
+      "latencyMs": 531,
+      "modelReportedMs": 519,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ]
+    },
+    {
+      "suite": "compact-model-screen",
+      "prompt": "compact-r2",
+      "model": "haiku",
+      "role": "fwd2",
+      "case": "fwd2-teammate-ball-support",
+      "inputSha256": "e170f8f8ab45bfebc641ed30e9eb651e422d0748be394666ef5cea4a1327055e",
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "metric": "Converse request wall",
+      "latencyMs": 1217,
+      "modelReportedMs": 1206,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ]
+    },
+    {
+      "suite": "compact-model-screen",
+      "prompt": "compact-r2",
+      "model": "sonnet",
+      "role": "fwd2",
+      "case": "fwd2-teammate-ball-support",
+      "inputSha256": "e170f8f8ab45bfebc641ed30e9eb651e422d0748be394666ef5cea4a1327055e",
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "metric": "Converse request wall",
+      "latencyMs": 1003,
+      "modelReportedMs": 991,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "historicalStrictPassed": true,
+      "errors": [],
+      "historicalErrors": []
+    },
+    {
+      "suite": "compact-model-screen",
+      "prompt": "compact-r2",
+      "model": "micro",
+      "role": "fwd2",
+      "case": "fwd2-teammate-ball-support",
+      "inputSha256": "e170f8f8ab45bfebc641ed30e9eb651e422d0748be394666ef5cea4a1327055e",
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "metric": "Converse request wall",
+      "latencyMs": 488,
+      "modelReportedMs": 477,
+      "contractValid": true,
+      "decisionAgreement": false,
+      "historicalStrictPassed": false,
+      "errors": [
+        "wrong_action"
+      ],
+      "historicalErrors": [
+        "scenario_decision"
+      ]
+    },
+    {
+      "suite": "compact-model-screen",
+      "prompt": "compact-r2",
+      "model": "nova2",
+      "role": "fwd2",
+      "case": "fwd2-low-energy-cover",
+      "inputSha256": "a18f16b71244d29cb44672a7feaa0be71d6f8f1b43f87a42c377cfce2fa37d2a",
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "metric": "Converse request wall",
+      "latencyMs": 540,
+      "modelReportedMs": 528,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ]
+    },
+    {
+      "suite": "compact-model-screen",
+      "prompt": "compact-r2",
+      "model": "haiku",
+      "role": "fwd2",
+      "case": "fwd2-low-energy-cover",
+      "inputSha256": "a18f16b71244d29cb44672a7feaa0be71d6f8f1b43f87a42c377cfce2fa37d2a",
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "metric": "Converse request wall",
+      "latencyMs": 2533,
+      "modelReportedMs": 2523,
+      "contractValid": false,
+      "decisionAgreement": null,
+      "historicalStrictPassed": false,
+      "errors": [
+        "not_exact_json_command_array"
+      ],
+      "historicalErrors": [
+        "invalid_json"
+      ]
+    },
+    {
+      "suite": "compact-model-screen",
+      "prompt": "compact-r2",
+      "model": "sonnet",
+      "role": "fwd2",
+      "case": "fwd2-low-energy-cover",
+      "inputSha256": "a18f16b71244d29cb44672a7feaa0be71d6f8f1b43f87a42c377cfce2fa37d2a",
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "metric": "Converse request wall",
+      "latencyMs": 1109,
+      "modelReportedMs": 1096,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "historicalStrictPassed": true,
+      "errors": [],
+      "historicalErrors": []
+    },
+    {
+      "suite": "compact-model-screen",
+      "prompt": "compact-r2",
+      "model": "micro",
+      "role": "fwd2",
+      "case": "fwd2-low-energy-cover",
+      "inputSha256": "a18f16b71244d29cb44672a7feaa0be71d6f8f1b43f87a42c377cfce2fa37d2a",
+      "promptSha256": "75cad8603ab293979b66cff529f7217a80aa20dbb63e5548612c09089ae24d44",
+      "metric": "Converse request wall",
+      "latencyMs": 390,
+      "modelReportedMs": 378,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "historicalStrictPassed": true,
+      "errors": [],
+      "historicalErrors": []
+    },
+    {
+      "suite": "m8-fwd1-three-cases",
+      "prompt": "schema-clean",
+      "model": "nova2",
+      "role": "fwd1",
+      "case": "home-clear-shot",
+      "metric": "reported Playground",
+      "latencyMs": 724,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "errors": [],
+      "validationEvidence": "archived full-message audit; cannot recompute missing text"
+    },
+    {
+      "suite": "m8-fwd1-three-cases",
+      "prompt": "schema-clean",
+      "model": "nova2",
+      "role": "fwd1",
+      "case": "away-clear-shot",
+      "metric": "reported Playground",
+      "latencyMs": 655,
+      "contractValid": true,
+      "decisionAgreement": false,
+      "errors": [],
+      "validationEvidence": "archived full-message audit; cannot recompute missing text"
+    },
+    {
+      "suite": "m8-fwd1-three-cases",
+      "prompt": "schema-clean",
+      "model": "nova2",
+      "role": "fwd1",
+      "case": "home-teammate-possession",
+      "metric": "reported Playground",
+      "latencyMs": 611,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "errors": [],
+      "validationEvidence": "archived full-message audit; cannot recompute missing text"
+    },
+    {
+      "suite": "m8-fwd1-three-cases",
+      "prompt": "schema-clean",
+      "model": "haiku",
+      "role": "fwd1",
+      "case": "home-clear-shot",
+      "metric": "reported Playground",
+      "latencyMs": 1364,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "errors": [],
+      "validationEvidence": "archived full-message audit; cannot recompute missing text"
+    },
+    {
+      "suite": "m8-fwd1-three-cases",
+      "prompt": "schema-clean",
+      "model": "haiku",
+      "role": "fwd1",
+      "case": "away-clear-shot",
+      "metric": "reported Playground",
+      "latencyMs": 3119,
+      "contractValid": false,
+      "decisionAgreement": true,
+      "errors": [
+        "archived_format_failure"
+      ],
+      "validationEvidence": "archived full-message audit; cannot recompute missing text"
+    },
+    {
+      "suite": "m8-fwd1-three-cases",
+      "prompt": "schema-clean",
+      "model": "haiku",
+      "role": "fwd1",
+      "case": "home-teammate-possession",
+      "metric": "reported Playground",
+      "latencyMs": 1397,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "errors": [],
+      "validationEvidence": "archived full-message audit; cannot recompute missing text"
+    },
+    {
+      "suite": "tactical-selector-cyclic",
+      "prompt": "selector+tactics",
+      "model": "nova2",
+      "role": "fwd1",
+      "case": "switch-outlet-home:order0",
+      "metric": "Harness full stream wall",
+      "latencyMs": 3160,
+      "modelReportedMs": 401,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "errors": [],
+      "validationEvidence": "reconstructed offered command; original response format is archived"
+    },
+    {
+      "suite": "tactical-selector-cyclic",
+      "prompt": "selector+tactics",
+      "model": "nova2",
+      "role": "fwd1",
+      "case": "switch-outlet-home:order1",
+      "metric": "Harness full stream wall",
+      "latencyMs": 3199,
+      "modelReportedMs": 637,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "errors": [],
+      "validationEvidence": "reconstructed offered command; original response format is archived"
+    },
+    {
+      "suite": "tactical-selector-cyclic",
+      "prompt": "selector+tactics",
+      "model": "nova2",
+      "role": "fwd1",
+      "case": "switch-outlet-home:order2",
+      "metric": "Harness full stream wall",
+      "latencyMs": 2908,
+      "modelReportedMs": 468,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "errors": [],
+      "validationEvidence": "reconstructed offered command; original response format is archived"
+    },
+    {
+      "suite": "tactical-selector-cyclic",
+      "prompt": "selector+tactics",
+      "model": "nova2",
+      "role": "fwd1",
+      "case": "switch-outlet-away:order0",
+      "metric": "Harness full stream wall",
+      "latencyMs": 1823,
+      "modelReportedMs": 501,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "errors": [],
+      "validationEvidence": "reconstructed offered command; original response format is archived"
+    },
+    {
+      "suite": "tactical-selector-cyclic",
+      "prompt": "selector+tactics",
+      "model": "nova2",
+      "role": "fwd1",
+      "case": "switch-outlet-away:order1",
+      "metric": "Harness full stream wall",
+      "latencyMs": 1716,
+      "modelReportedMs": 354,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "errors": [],
+      "validationEvidence": "reconstructed offered command; original response format is archived"
+    },
+    {
+      "suite": "tactical-selector-cyclic",
+      "prompt": "selector+tactics",
+      "model": "nova2",
+      "role": "fwd1",
+      "case": "switch-outlet-away:order2",
+      "metric": "Harness full stream wall",
+      "latencyMs": 2736,
+      "modelReportedMs": 379,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "errors": [],
+      "validationEvidence": "reconstructed offered command; original response format is archived"
+    },
+    {
+      "suite": "tactical-selector-cyclic",
+      "prompt": "selector+tactics",
+      "model": "nova2",
+      "role": "fwd1",
+      "case": "high-line-home:order0",
+      "metric": "Harness full stream wall",
+      "latencyMs": 1901,
+      "modelReportedMs": 398,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "errors": [],
+      "validationEvidence": "reconstructed offered command; original response format is archived"
+    },
+    {
+      "suite": "tactical-selector-cyclic",
+      "prompt": "selector+tactics",
+      "model": "nova2",
+      "role": "fwd1",
+      "case": "high-line-home:order1",
+      "metric": "Harness full stream wall",
+      "latencyMs": 2221,
+      "modelReportedMs": 381,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "errors": [],
+      "validationEvidence": "reconstructed offered command; original response format is archived"
+    },
+    {
+      "suite": "tactical-selector-cyclic",
+      "prompt": "selector+tactics",
+      "model": "nova2",
+      "role": "fwd1",
+      "case": "high-line-home:order2",
+      "metric": "Harness full stream wall",
+      "latencyMs": 1692,
+      "modelReportedMs": 382,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "errors": [],
+      "validationEvidence": "reconstructed offered command; original response format is archived"
+    },
+    {
+      "suite": "tactical-selector-cyclic",
+      "prompt": "selector+tactics",
+      "model": "nova2",
+      "role": "fwd1",
+      "case": "high-line-away:order0",
+      "metric": "Harness full stream wall",
+      "latencyMs": 3169,
+      "modelReportedMs": 382,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "errors": [],
+      "validationEvidence": "reconstructed offered command; original response format is archived"
+    },
+    {
+      "suite": "tactical-selector-cyclic",
+      "prompt": "selector+tactics",
+      "model": "nova2",
+      "role": "fwd1",
+      "case": "high-line-away:order1",
+      "metric": "Harness full stream wall",
+      "latencyMs": 3124,
+      "modelReportedMs": 389,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "errors": [],
+      "validationEvidence": "reconstructed offered command; original response format is archived"
+    },
+    {
+      "suite": "tactical-selector-cyclic",
+      "prompt": "selector+tactics",
+      "model": "nova2",
+      "role": "fwd1",
+      "case": "high-line-away:order2",
+      "metric": "Harness full stream wall",
+      "latencyMs": 2356,
+      "modelReportedMs": 357,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "errors": [],
+      "validationEvidence": "reconstructed offered command; original response format is archived"
+    },
+    {
+      "suite": "tactical-selector-cyclic",
+      "prompt": "selector+tactics",
+      "model": "nova2",
+      "role": "fwd1",
+      "case": "deep-block-home:order0",
+      "metric": "Harness full stream wall",
+      "latencyMs": 1286,
+      "modelReportedMs": 380,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "errors": [],
+      "validationEvidence": "reconstructed offered command; original response format is archived"
+    },
+    {
+      "suite": "tactical-selector-cyclic",
+      "prompt": "selector+tactics",
+      "model": "nova2",
+      "role": "fwd1",
+      "case": "deep-block-home:order1",
+      "metric": "Harness full stream wall",
+      "latencyMs": 2962,
+      "modelReportedMs": 413,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "errors": [],
+      "validationEvidence": "reconstructed offered command; original response format is archived"
+    },
+    {
+      "suite": "tactical-selector-cyclic",
+      "prompt": "selector+tactics",
+      "model": "nova2",
+      "role": "fwd1",
+      "case": "deep-block-home:order2",
+      "metric": "Harness full stream wall",
+      "latencyMs": 32247,
+      "modelReportedMs": 432,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "errors": [],
+      "validationEvidence": "reconstructed offered command; original response format is archived"
+    },
+    {
+      "suite": "tactical-selector-cyclic",
+      "prompt": "selector+tactics",
+      "model": "nova2",
+      "role": "fwd1",
+      "case": "deep-block-away:order0",
+      "metric": "Harness full stream wall",
+      "latencyMs": 1088,
+      "modelReportedMs": 362,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "errors": [],
+      "validationEvidence": "reconstructed offered command; original response format is archived"
+    },
+    {
+      "suite": "tactical-selector-cyclic",
+      "prompt": "selector+tactics",
+      "model": "nova2",
+      "role": "fwd1",
+      "case": "deep-block-away:order1",
+      "metric": "Harness full stream wall",
+      "latencyMs": 1216,
+      "modelReportedMs": 376,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "errors": [],
+      "validationEvidence": "reconstructed offered command; original response format is archived"
+    },
+    {
+      "suite": "tactical-selector-cyclic",
+      "prompt": "selector+tactics",
+      "model": "nova2",
+      "role": "fwd1",
+      "case": "deep-block-away:order2",
+      "metric": "Harness full stream wall",
+      "latencyMs": 1241,
+      "modelReportedMs": 484,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "errors": [],
+      "validationEvidence": "reconstructed offered command; original response format is archived"
+    },
+    {
+      "suite": "tactical-selector-cyclic",
+      "prompt": "selector+tactics",
+      "model": "nova2",
+      "role": "fwd1",
+      "case": "corner-cover-home:order0",
+      "metric": "Harness full stream wall",
+      "latencyMs": 1345,
+      "modelReportedMs": 479,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "errors": [],
+      "validationEvidence": "reconstructed offered command; original response format is archived"
+    },
+    {
+      "suite": "tactical-selector-cyclic",
+      "prompt": "selector+tactics",
+      "model": "nova2",
+      "role": "fwd1",
+      "case": "corner-cover-away:order0",
+      "metric": "Harness full stream wall",
+      "latencyMs": 1171,
+      "modelReportedMs": 444,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "errors": [],
+      "validationEvidence": "reconstructed offered command; original response format is archived"
+    },
+    {
+      "suite": "tactical-selector-cyclic",
+      "prompt": "selector+tactics",
+      "model": "micro",
+      "role": "fwd1",
+      "case": "switch-outlet-home:order0",
+      "metric": "Harness full stream wall",
+      "latencyMs": 1109,
+      "modelReportedMs": 340,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "errors": [],
+      "validationEvidence": "reconstructed offered command; original response format is archived"
+    },
+    {
+      "suite": "tactical-selector-cyclic",
+      "prompt": "selector+tactics",
+      "model": "micro",
+      "role": "fwd1",
+      "case": "switch-outlet-home:order1",
+      "metric": "Harness full stream wall",
+      "latencyMs": 1027,
+      "modelReportedMs": 227,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "errors": [],
+      "validationEvidence": "reconstructed offered command; original response format is archived"
+    },
+    {
+      "suite": "tactical-selector-cyclic",
+      "prompt": "selector+tactics",
+      "model": "micro",
+      "role": "fwd1",
+      "case": "switch-outlet-home:order2",
+      "metric": "Harness full stream wall",
+      "latencyMs": 1186,
+      "modelReportedMs": 285,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "errors": [],
+      "validationEvidence": "reconstructed offered command; original response format is archived"
+    },
+    {
+      "suite": "tactical-selector-cyclic",
+      "prompt": "selector+tactics",
+      "model": "micro",
+      "role": "fwd1",
+      "case": "switch-outlet-away:order0",
+      "metric": "Harness full stream wall",
+      "latencyMs": 1115,
+      "modelReportedMs": 257,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "errors": [],
+      "validationEvidence": "reconstructed offered command; original response format is archived"
+    },
+    {
+      "suite": "tactical-selector-cyclic",
+      "prompt": "selector+tactics",
+      "model": "micro",
+      "role": "fwd1",
+      "case": "switch-outlet-away:order1",
+      "metric": "Harness full stream wall",
+      "latencyMs": 1247,
+      "modelReportedMs": 524,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "errors": [],
+      "validationEvidence": "reconstructed offered command; original response format is archived"
+    },
+    {
+      "suite": "tactical-selector-cyclic",
+      "prompt": "selector+tactics",
+      "model": "micro",
+      "role": "fwd1",
+      "case": "switch-outlet-away:order2",
+      "metric": "Harness full stream wall",
+      "latencyMs": 1170,
+      "modelReportedMs": 263,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "errors": [],
+      "validationEvidence": "reconstructed offered command; original response format is archived"
+    },
+    {
+      "suite": "tactical-selector-cyclic",
+      "prompt": "selector+tactics",
+      "model": "micro",
+      "role": "fwd1",
+      "case": "high-line-home:order0",
+      "metric": "Harness full stream wall",
+      "latencyMs": 1140,
+      "modelReportedMs": 252,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "errors": [],
+      "validationEvidence": "reconstructed offered command; original response format is archived"
+    },
+    {
+      "suite": "tactical-selector-cyclic",
+      "prompt": "selector+tactics",
+      "model": "micro",
+      "role": "fwd1",
+      "case": "high-line-home:order1",
+      "metric": "Harness full stream wall",
+      "latencyMs": 1130,
+      "modelReportedMs": 261,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "errors": [],
+      "validationEvidence": "reconstructed offered command; original response format is archived"
+    },
+    {
+      "suite": "tactical-selector-cyclic",
+      "prompt": "selector+tactics",
+      "model": "micro",
+      "role": "fwd1",
+      "case": "high-line-home:order2",
+      "metric": "Harness full stream wall",
+      "latencyMs": 1165,
+      "modelReportedMs": 320,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "errors": [],
+      "validationEvidence": "reconstructed offered command; original response format is archived"
+    },
+    {
+      "suite": "tactical-selector-cyclic",
+      "prompt": "selector+tactics",
+      "model": "micro",
+      "role": "fwd1",
+      "case": "high-line-away:order0",
+      "metric": "Harness full stream wall",
+      "latencyMs": 32054,
+      "modelReportedMs": 244,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "errors": [],
+      "validationEvidence": "reconstructed offered command; original response format is archived"
+    },
+    {
+      "suite": "tactical-selector-cyclic",
+      "prompt": "selector+tactics",
+      "model": "micro",
+      "role": "fwd1",
+      "case": "high-line-away:order1",
+      "metric": "Harness full stream wall",
+      "latencyMs": 1083,
+      "modelReportedMs": 317,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "errors": [],
+      "validationEvidence": "reconstructed offered command; original response format is archived"
+    },
+    {
+      "suite": "tactical-selector-cyclic",
+      "prompt": "selector+tactics",
+      "model": "micro",
+      "role": "fwd1",
+      "case": "high-line-away:order2",
+      "metric": "Harness full stream wall",
+      "latencyMs": 1018,
+      "modelReportedMs": 255,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "errors": [],
+      "validationEvidence": "reconstructed offered command; original response format is archived"
+    },
+    {
+      "suite": "tactical-selector-cyclic",
+      "prompt": "selector+tactics",
+      "model": "micro",
+      "role": "fwd1",
+      "case": "deep-block-home:order0",
+      "metric": "Harness full stream wall",
+      "latencyMs": 944,
+      "modelReportedMs": 233,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "errors": [],
+      "validationEvidence": "reconstructed offered command; original response format is archived"
+    },
+    {
+      "suite": "tactical-selector-cyclic",
+      "prompt": "selector+tactics",
+      "model": "micro",
+      "role": "fwd1",
+      "case": "deep-block-home:order1",
+      "metric": "Harness full stream wall",
+      "latencyMs": 1011,
+      "modelReportedMs": 251,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "errors": [],
+      "validationEvidence": "reconstructed offered command; original response format is archived"
+    },
+    {
+      "suite": "tactical-selector-cyclic",
+      "prompt": "selector+tactics",
+      "model": "micro",
+      "role": "fwd1",
+      "case": "deep-block-home:order2",
+      "metric": "Harness full stream wall",
+      "latencyMs": 1004,
+      "modelReportedMs": 252,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "errors": [],
+      "validationEvidence": "reconstructed offered command; original response format is archived"
+    },
+    {
+      "suite": "tactical-selector-cyclic",
+      "prompt": "selector+tactics",
+      "model": "micro",
+      "role": "fwd1",
+      "case": "deep-block-away:order0",
+      "metric": "Harness full stream wall",
+      "latencyMs": 1050,
+      "modelReportedMs": 251,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "errors": [],
+      "validationEvidence": "reconstructed offered command; original response format is archived"
+    },
+    {
+      "suite": "tactical-selector-cyclic",
+      "prompt": "selector+tactics",
+      "model": "micro",
+      "role": "fwd1",
+      "case": "deep-block-away:order1",
+      "metric": "Harness full stream wall",
+      "latencyMs": 1190,
+      "modelReportedMs": 256,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "errors": [],
+      "validationEvidence": "reconstructed offered command; original response format is archived"
+    },
+    {
+      "suite": "tactical-selector-cyclic",
+      "prompt": "selector+tactics",
+      "model": "micro",
+      "role": "fwd1",
+      "case": "deep-block-away:order2",
+      "metric": "Harness full stream wall",
+      "latencyMs": 1161,
+      "modelReportedMs": 267,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "errors": [],
+      "validationEvidence": "reconstructed offered command; original response format is archived"
+    },
+    {
+      "suite": "tactical-selector-cyclic",
+      "prompt": "selector+tactics",
+      "model": "micro",
+      "role": "fwd1",
+      "case": "corner-cover-home:order0",
+      "metric": "Harness full stream wall",
+      "latencyMs": 1117,
+      "modelReportedMs": 364,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "errors": [],
+      "validationEvidence": "reconstructed offered command; original response format is archived"
+    },
+    {
+      "suite": "tactical-selector-cyclic",
+      "prompt": "selector+tactics",
+      "model": "micro",
+      "role": "fwd1",
+      "case": "corner-cover-away:order0",
+      "metric": "Harness full stream wall",
+      "latencyMs": 1046,
+      "modelReportedMs": 274,
+      "contractValid": true,
+      "decisionAgreement": true,
+      "errors": [],
+      "validationEvidence": "reconstructed offered command; original response format is archived"
+    }
+  ],
+  "groups": [
+    {
+      "suite": "compact-model-screen",
+      "prompt": "compact-r2",
+      "role": "fwd2",
+      "model": "haiku",
+      "metric": "Converse request wall",
+      "n": 9,
+      "contractValid": 1,
+      "decisionAgreementDecoded": 0,
+      "decisionEvaluable": 1,
+      "usableDecision": 0,
+      "historicalStrictPassed": 0,
+      "latencyMs": {
+        "n": 9,
+        "p50": 1478.0,
+        "p95": 2151.0,
+        "max": 2533
+      },
+      "usableLatencyMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "modelReportedMs": {
+        "n": 9,
+        "p50": 1466.0,
+        "p95": 2139.8,
+        "max": 2523
+      },
+      "errors": {
+        "not_exact_json_command_array": 8,
+        "wrong_action": 1
+      }
+    },
+    {
+      "suite": "compact-model-screen",
+      "prompt": "compact-r2",
+      "role": "fwd2",
+      "model": "micro",
+      "metric": "Converse request wall",
+      "n": 9,
+      "contractValid": 3,
+      "decisionAgreementDecoded": 2,
+      "decisionEvaluable": 9,
+      "usableDecision": 1,
+      "historicalStrictPassed": 1,
+      "latencyMs": {
+        "n": 9,
+        "p50": 441.0,
+        "p95": 523.6,
+        "max": 532
+      },
+      "usableLatencyMs": {
+        "n": 1,
+        "p50": 390.0,
+        "p95": 390.0,
+        "max": 390
+      },
+      "modelReportedMs": {
+        "n": 9,
+        "p50": 431.0,
+        "p95": 513.0,
+        "max": 521
+      },
+      "errors": {
+        "duration": 6,
+        "wrong_action": 7
+      }
+    },
+    {
+      "suite": "compact-model-screen",
+      "prompt": "compact-r2",
+      "role": "fwd2",
+      "model": "nova2",
+      "metric": "Converse request wall",
+      "n": 9,
+      "contractValid": 1,
+      "decisionAgreementDecoded": 0,
+      "decisionEvaluable": 1,
+      "usableDecision": 0,
+      "historicalStrictPassed": 0,
+      "latencyMs": {
+        "n": 9,
+        "p50": 571.0,
+        "p95": 678.0,
+        "max": 702
+      },
+      "usableLatencyMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "modelReportedMs": {
+        "n": 9,
+        "p50": 556.0,
+        "p95": 662.2,
+        "max": 689
+      },
+      "errors": {
+        "not_exact_json_command_array": 8,
+        "wrong_action": 1
+      }
+    },
+    {
+      "suite": "compact-model-screen",
+      "prompt": "compact-r2",
+      "role": "fwd2",
+      "model": "sonnet",
+      "metric": "Converse request wall",
+      "n": 9,
+      "contractValid": 4,
+      "decisionAgreementDecoded": 3,
+      "decisionEvaluable": 4,
+      "usableDecision": 3,
+      "historicalStrictPassed": 3,
+      "latencyMs": {
+        "n": 9,
+        "p50": 1548.0,
+        "p95": 3009.4,
+        "max": 3077
+      },
+      "usableLatencyMs": {
+        "n": 3,
+        "p50": 1046.0,
+        "p95": 1102.7,
+        "max": 1109
+      },
+      "modelReportedMs": {
+        "n": 9,
+        "p50": 1537.0,
+        "p95": 2998.0,
+        "max": 3066
+      },
+      "errors": {
+        "not_exact_json_command_array": 5,
+        "wrong_action": 1
+      }
+    },
+    {
+      "suite": "m8-fwd1-three-cases",
+      "prompt": "schema-clean",
+      "role": "fwd1",
+      "model": "haiku",
+      "metric": "reported Playground",
+      "n": 3,
+      "contractValid": 2,
+      "decisionAgreementDecoded": 3,
+      "decisionEvaluable": 3,
+      "usableDecision": 2,
+      "historicalStrictPassed": null,
+      "latencyMs": {
+        "n": 3,
+        "p50": 1397.0,
+        "p95": 2946.8,
+        "max": 3119
+      },
+      "usableLatencyMs": {
+        "n": 2,
+        "p50": 1380.5,
+        "p95": 1395.35,
+        "max": 1397
+      },
+      "modelReportedMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "errors": {
+        "archived_format_failure": 1
+      }
+    },
+    {
+      "suite": "m8-fwd1-three-cases",
+      "prompt": "schema-clean",
+      "role": "fwd1",
+      "model": "nova2",
+      "metric": "reported Playground",
+      "n": 3,
+      "contractValid": 3,
+      "decisionAgreementDecoded": 2,
+      "decisionEvaluable": 3,
+      "usableDecision": 2,
+      "historicalStrictPassed": null,
+      "latencyMs": {
+        "n": 3,
+        "p50": 655.0,
+        "p95": 717.1,
+        "max": 724
+      },
+      "usableLatencyMs": {
+        "n": 2,
+        "p50": 667.5,
+        "p95": 718.35,
+        "max": 724
+      },
+      "modelReportedMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "errors": {}
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v1",
+      "role": "def",
+      "model": "nova2",
+      "metric": "Converse request wall",
+      "n": 3,
+      "contractValid": 0,
+      "decisionAgreementDecoded": 0,
+      "decisionEvaluable": 0,
+      "usableDecision": 0,
+      "historicalStrictPassed": 0,
+      "latencyMs": {
+        "n": 3,
+        "p50": 874.0,
+        "p95": 1093.6,
+        "max": 1118
+      },
+      "usableLatencyMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "modelReportedMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "errors": {
+        "not_exact_json_command_array": 3
+      }
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v1",
+      "role": "fwd1",
+      "model": "nova2",
+      "metric": "Converse request wall",
+      "n": 5,
+      "contractValid": 0,
+      "decisionAgreementDecoded": 0,
+      "decisionEvaluable": 0,
+      "usableDecision": 0,
+      "historicalStrictPassed": 0,
+      "latencyMs": {
+        "n": 5,
+        "p50": 628.0,
+        "p95": 710.8,
+        "max": 711
+      },
+      "usableLatencyMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "modelReportedMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "errors": {
+        "not_exact_json_command_array": 5
+      }
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v1",
+      "role": "fwd2",
+      "model": "haiku",
+      "metric": "Converse request wall",
+      "n": 5,
+      "contractValid": 0,
+      "decisionAgreementDecoded": 0,
+      "decisionEvaluable": 0,
+      "usableDecision": 0,
+      "historicalStrictPassed": 0,
+      "latencyMs": {
+        "n": 5,
+        "p50": 1388.0,
+        "p95": 2493.0,
+        "max": 2509
+      },
+      "usableLatencyMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "modelReportedMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "errors": {
+        "not_exact_json_command_array": 5
+      }
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v1",
+      "role": "gk",
+      "model": "nova2",
+      "metric": "Converse request wall",
+      "n": 4,
+      "contractValid": 0,
+      "decisionAgreementDecoded": 0,
+      "decisionEvaluable": 0,
+      "usableDecision": 0,
+      "historicalStrictPassed": 0,
+      "latencyMs": {
+        "n": 4,
+        "p50": 736.0,
+        "p95": 856.5,
+        "max": 867
+      },
+      "usableLatencyMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "modelReportedMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "errors": {
+        "not_exact_json_command_array": 4
+      }
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v1",
+      "role": "mid",
+      "model": "nova2",
+      "metric": "Converse request wall",
+      "n": 4,
+      "contractValid": 0,
+      "decisionAgreementDecoded": 0,
+      "decisionEvaluable": 0,
+      "usableDecision": 0,
+      "historicalStrictPassed": 0,
+      "latencyMs": {
+        "n": 4,
+        "p50": 632.5,
+        "p95": 869.5,
+        "max": 904
+      },
+      "usableLatencyMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "modelReportedMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "errors": {
+        "not_exact_json_command_array": 4
+      }
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v2",
+      "role": "def",
+      "model": "nova2",
+      "metric": "Converse request wall",
+      "n": 4,
+      "contractValid": 1,
+      "decisionAgreementDecoded": 0,
+      "decisionEvaluable": 1,
+      "usableDecision": 0,
+      "historicalStrictPassed": 0,
+      "latencyMs": {
+        "n": 4,
+        "p50": 536.0,
+        "p95": 761.3,
+        "max": 788
+      },
+      "usableLatencyMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "modelReportedMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "errors": {
+        "not_exact_json_command_array": 3,
+        "wrong_action": 1
+      }
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v2",
+      "role": "fwd1",
+      "model": "nova2",
+      "metric": "Converse request wall",
+      "n": 6,
+      "contractValid": 1,
+      "decisionAgreementDecoded": 0,
+      "decisionEvaluable": 1,
+      "usableDecision": 0,
+      "historicalStrictPassed": 0,
+      "latencyMs": {
+        "n": 6,
+        "p50": 490.0,
+        "p95": 663.75,
+        "max": 707
+      },
+      "usableLatencyMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "modelReportedMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "errors": {
+        "not_exact_json_command_array": 5,
+        "wrong_action": 1
+      }
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v2",
+      "role": "fwd2",
+      "model": "haiku",
+      "metric": "Converse request wall",
+      "n": 6,
+      "contractValid": 6,
+      "decisionAgreementDecoded": 2,
+      "decisionEvaluable": 6,
+      "usableDecision": 2,
+      "historicalStrictPassed": 2,
+      "latencyMs": {
+        "n": 6,
+        "p50": 1660.5,
+        "p95": 4147.25,
+        "max": 4706
+      },
+      "usableLatencyMs": {
+        "n": 2,
+        "p50": 1487.0,
+        "p95": 1707.5,
+        "max": 1732
+      },
+      "modelReportedMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "errors": {
+        "wrong_action": 4
+      }
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v2",
+      "role": "gk",
+      "model": "nova2",
+      "metric": "Converse request wall",
+      "n": 5,
+      "contractValid": 1,
+      "decisionAgreementDecoded": 1,
+      "decisionEvaluable": 1,
+      "usableDecision": 1,
+      "historicalStrictPassed": 1,
+      "latencyMs": {
+        "n": 5,
+        "p50": 511.0,
+        "p95": 694.4,
+        "max": 711
+      },
+      "usableLatencyMs": {
+        "n": 1,
+        "p50": 711.0,
+        "p95": 711.0,
+        "max": 711
+      },
+      "modelReportedMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "errors": {
+        "not_exact_json_command_array": 4
+      }
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v2",
+      "role": "mid",
+      "model": "nova2",
+      "metric": "Converse request wall",
+      "n": 5,
+      "contractValid": 1,
+      "decisionAgreementDecoded": 0,
+      "decisionEvaluable": 1,
+      "usableDecision": 0,
+      "historicalStrictPassed": 0,
+      "latencyMs": {
+        "n": 5,
+        "p50": 536.0,
+        "p95": 725.4,
+        "max": 739
+      },
+      "usableLatencyMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "modelReportedMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "errors": {
+        "not_exact_json_command_array": 4,
+        "wrong_action": 1
+      }
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v3",
+      "role": "def",
+      "model": "nova2",
+      "metric": "Converse request wall",
+      "n": 4,
+      "contractValid": 1,
+      "decisionAgreementDecoded": 0,
+      "decisionEvaluable": 1,
+      "usableDecision": 0,
+      "historicalStrictPassed": 0,
+      "latencyMs": {
+        "n": 4,
+        "p50": 799.0,
+        "p95": 1105.9,
+        "max": 1159
+      },
+      "usableLatencyMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "modelReportedMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "errors": {
+        "not_exact_json_command_array": 3,
+        "wrong_action": 1
+      }
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v3",
+      "role": "fwd1",
+      "model": "nova2",
+      "metric": "Converse request wall",
+      "n": 6,
+      "contractValid": 1,
+      "decisionAgreementDecoded": 0,
+      "decisionEvaluable": 1,
+      "usableDecision": 0,
+      "historicalStrictPassed": 0,
+      "latencyMs": {
+        "n": 6,
+        "p50": 725.5,
+        "p95": 1136.25,
+        "max": 1214
+      },
+      "usableLatencyMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "modelReportedMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "errors": {
+        "not_exact_json_command_array": 5,
+        "wrong_action": 1
+      }
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v3",
+      "role": "fwd2",
+      "model": "haiku",
+      "metric": "Converse request wall",
+      "n": 6,
+      "contractValid": 1,
+      "decisionAgreementDecoded": 1,
+      "decisionEvaluable": 1,
+      "usableDecision": 1,
+      "historicalStrictPassed": 1,
+      "latencyMs": {
+        "n": 6,
+        "p50": 1436.0,
+        "p95": 1498.5,
+        "max": 1501
+      },
+      "usableLatencyMs": {
+        "n": 1,
+        "p50": 1233.0,
+        "p95": 1233.0,
+        "max": 1233
+      },
+      "modelReportedMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "errors": {
+        "not_exact_json_command_array": 5
+      }
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v3",
+      "role": "gk",
+      "model": "nova2",
+      "metric": "Converse request wall",
+      "n": 5,
+      "contractValid": 1,
+      "decisionAgreementDecoded": 1,
+      "decisionEvaluable": 1,
+      "usableDecision": 1,
+      "historicalStrictPassed": 1,
+      "latencyMs": {
+        "n": 5,
+        "p50": 617.0,
+        "p95": 685.4,
+        "max": 696
+      },
+      "usableLatencyMs": {
+        "n": 1,
+        "p50": 596.0,
+        "p95": 596.0,
+        "max": 596
+      },
+      "modelReportedMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "errors": {
+        "not_exact_json_command_array": 4
+      }
+    },
+    {
+      "suite": "role-package",
+      "prompt": "r1-v3",
+      "role": "mid",
+      "model": "nova2",
+      "metric": "Converse request wall",
+      "n": 5,
+      "contractValid": 1,
+      "decisionAgreementDecoded": 0,
+      "decisionEvaluable": 1,
+      "usableDecision": 0,
+      "historicalStrictPassed": 0,
+      "latencyMs": {
+        "n": 5,
+        "p50": 653.0,
+        "p95": 691.8,
+        "max": 696
+      },
+      "usableLatencyMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "modelReportedMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "errors": {
+        "not_exact_json_command_array": 4,
+        "wrong_action": 1
+      }
+    },
+    {
+      "suite": "tactical-selector-cyclic",
+      "prompt": "selector+tactics",
+      "role": "fwd1",
+      "model": "micro",
+      "metric": "Harness full stream wall",
+      "n": 20,
+      "contractValid": 20,
+      "decisionAgreementDecoded": 20,
+      "decisionEvaluable": 20,
+      "usableDecision": 20,
+      "historicalStrictPassed": null,
+      "latencyMs": {
+        "n": 20,
+        "p50": 1116.0,
+        "p95": 2787.35,
+        "max": 32054
+      },
+      "usableLatencyMs": {
+        "n": 20,
+        "p50": 1116.0,
+        "p95": 2787.35,
+        "max": 32054
+      },
+      "modelReportedMs": {
+        "n": 20,
+        "p50": 259.0,
+        "p95": 372.0,
+        "max": 524
+      },
+      "errors": {}
+    },
+    {
+      "suite": "tactical-selector-cyclic",
+      "prompt": "selector+tactics",
+      "role": "fwd1",
+      "model": "nova2",
+      "metric": "Harness full stream wall",
+      "n": 20,
+      "contractValid": 20,
+      "decisionAgreementDecoded": 20,
+      "decisionEvaluable": 20,
+      "usableDecision": 20,
+      "historicalStrictPassed": null,
+      "latencyMs": {
+        "n": 20,
+        "p50": 2061.0,
+        "p95": 4651.4,
+        "max": 32247
+      },
+      "usableLatencyMs": {
+        "n": 20,
+        "p50": 2061.0,
+        "p95": 4651.4,
+        "max": 32247
+      },
+      "modelReportedMs": {
+        "n": 20,
+        "p50": 393.5,
+        "p95": 507.8,
+        "max": 637
+      },
+      "errors": {}
+    }
+  ],
+  "pairedPromptGroups": [
+    {
+      "suite": "role-package-common-21",
+      "prompt": "r1-v1",
+      "role": "def",
+      "model": "nova2",
+      "metric": "Converse request wall",
+      "n": 3,
+      "contractValid": 0,
+      "decisionAgreementDecoded": 0,
+      "decisionEvaluable": 0,
+      "usableDecision": 0,
+      "historicalStrictPassed": 0,
+      "latencyMs": {
+        "n": 3,
+        "p50": 874.0,
+        "p95": 1093.6,
+        "max": 1118
+      },
+      "usableLatencyMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "modelReportedMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "errors": {
+        "not_exact_json_command_array": 3
+      }
+    },
+    {
+      "suite": "role-package-common-21",
+      "prompt": "r1-v1",
+      "role": "fwd1",
+      "model": "nova2",
+      "metric": "Converse request wall",
+      "n": 5,
+      "contractValid": 0,
+      "decisionAgreementDecoded": 0,
+      "decisionEvaluable": 0,
+      "usableDecision": 0,
+      "historicalStrictPassed": 0,
+      "latencyMs": {
+        "n": 5,
+        "p50": 628.0,
+        "p95": 710.8,
+        "max": 711
+      },
+      "usableLatencyMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "modelReportedMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "errors": {
+        "not_exact_json_command_array": 5
+      }
+    },
+    {
+      "suite": "role-package-common-21",
+      "prompt": "r1-v1",
+      "role": "fwd2",
+      "model": "haiku",
+      "metric": "Converse request wall",
+      "n": 5,
+      "contractValid": 0,
+      "decisionAgreementDecoded": 0,
+      "decisionEvaluable": 0,
+      "usableDecision": 0,
+      "historicalStrictPassed": 0,
+      "latencyMs": {
+        "n": 5,
+        "p50": 1388.0,
+        "p95": 2493.0,
+        "max": 2509
+      },
+      "usableLatencyMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "modelReportedMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "errors": {
+        "not_exact_json_command_array": 5
+      }
+    },
+    {
+      "suite": "role-package-common-21",
+      "prompt": "r1-v1",
+      "role": "gk",
+      "model": "nova2",
+      "metric": "Converse request wall",
+      "n": 4,
+      "contractValid": 0,
+      "decisionAgreementDecoded": 0,
+      "decisionEvaluable": 0,
+      "usableDecision": 0,
+      "historicalStrictPassed": 0,
+      "latencyMs": {
+        "n": 4,
+        "p50": 736.0,
+        "p95": 856.5,
+        "max": 867
+      },
+      "usableLatencyMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "modelReportedMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "errors": {
+        "not_exact_json_command_array": 4
+      }
+    },
+    {
+      "suite": "role-package-common-21",
+      "prompt": "r1-v1",
+      "role": "mid",
+      "model": "nova2",
+      "metric": "Converse request wall",
+      "n": 4,
+      "contractValid": 0,
+      "decisionAgreementDecoded": 0,
+      "decisionEvaluable": 0,
+      "usableDecision": 0,
+      "historicalStrictPassed": 0,
+      "latencyMs": {
+        "n": 4,
+        "p50": 632.5,
+        "p95": 869.5,
+        "max": 904
+      },
+      "usableLatencyMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "modelReportedMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "errors": {
+        "not_exact_json_command_array": 4
+      }
+    },
+    {
+      "suite": "role-package-common-21",
+      "prompt": "r1-v2",
+      "role": "def",
+      "model": "nova2",
+      "metric": "Converse request wall",
+      "n": 3,
+      "contractValid": 0,
+      "decisionAgreementDecoded": 0,
+      "decisionEvaluable": 0,
+      "usableDecision": 0,
+      "historicalStrictPassed": 0,
+      "latencyMs": {
+        "n": 3,
+        "p50": 462.0,
+        "p95": 595.2,
+        "max": 610
+      },
+      "usableLatencyMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "modelReportedMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "errors": {
+        "not_exact_json_command_array": 3
+      }
+    },
+    {
+      "suite": "role-package-common-21",
+      "prompt": "r1-v2",
+      "role": "fwd1",
+      "model": "nova2",
+      "metric": "Converse request wall",
+      "n": 5,
+      "contractValid": 0,
+      "decisionAgreementDecoded": 0,
+      "decisionEvaluable": 0,
+      "usableDecision": 0,
+      "historicalStrictPassed": 0,
+      "latencyMs": {
+        "n": 5,
+        "p50": 467.0,
+        "p95": 529.8,
+        "max": 534
+      },
+      "usableLatencyMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "modelReportedMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "errors": {
+        "not_exact_json_command_array": 5
+      }
+    },
+    {
+      "suite": "role-package-common-21",
+      "prompt": "r1-v2",
+      "role": "fwd2",
+      "model": "haiku",
+      "metric": "Converse request wall",
+      "n": 5,
+      "contractValid": 5,
+      "decisionAgreementDecoded": 1,
+      "decisionEvaluable": 5,
+      "usableDecision": 1,
+      "historicalStrictPassed": 1,
+      "latencyMs": {
+        "n": 5,
+        "p50": 1589.0,
+        "p95": 4259.0,
+        "max": 4706
+      },
+      "usableLatencyMs": {
+        "n": 1,
+        "p50": 1242.0,
+        "p95": 1242.0,
+        "max": 1242
+      },
+      "modelReportedMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "errors": {
+        "wrong_action": 4
+      }
+    },
+    {
+      "suite": "role-package-common-21",
+      "prompt": "r1-v2",
+      "role": "gk",
+      "model": "nova2",
+      "metric": "Converse request wall",
+      "n": 4,
+      "contractValid": 0,
+      "decisionAgreementDecoded": 0,
+      "decisionEvaluable": 0,
+      "usableDecision": 0,
+      "historicalStrictPassed": 0,
+      "latencyMs": {
+        "n": 4,
+        "p50": 475.0,
+        "p95": 610.45,
+        "max": 628
+      },
+      "usableLatencyMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "modelReportedMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "errors": {
+        "not_exact_json_command_array": 4
+      }
+    },
+    {
+      "suite": "role-package-common-21",
+      "prompt": "r1-v2",
+      "role": "mid",
+      "model": "nova2",
+      "metric": "Converse request wall",
+      "n": 4,
+      "contractValid": 0,
+      "decisionAgreementDecoded": 0,
+      "decisionEvaluable": 0,
+      "usableDecision": 0,
+      "historicalStrictPassed": 0,
+      "latencyMs": {
+        "n": 4,
+        "p50": 516.5,
+        "p95": 650.75,
+        "max": 671
+      },
+      "usableLatencyMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "modelReportedMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "errors": {
+        "not_exact_json_command_array": 4
+      }
+    },
+    {
+      "suite": "role-package-common-21",
+      "prompt": "r1-v3",
+      "role": "def",
+      "model": "nova2",
+      "metric": "Converse request wall",
+      "n": 3,
+      "contractValid": 0,
+      "decisionAgreementDecoded": 0,
+      "decisionEvaluable": 0,
+      "usableDecision": 0,
+      "historicalStrictPassed": 0,
+      "latencyMs": {
+        "n": 3,
+        "p50": 793.0,
+        "p95": 1122.4,
+        "max": 1159
+      },
+      "usableLatencyMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "modelReportedMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "errors": {
+        "not_exact_json_command_array": 3
+      }
+    },
+    {
+      "suite": "role-package-common-21",
+      "prompt": "r1-v3",
+      "role": "fwd1",
+      "model": "nova2",
+      "metric": "Converse request wall",
+      "n": 5,
+      "contractValid": 0,
+      "decisionAgreementDecoded": 0,
+      "decisionEvaluable": 0,
+      "usableDecision": 0,
+      "historicalStrictPassed": 0,
+      "latencyMs": {
+        "n": 5,
+        "p50": 658.0,
+        "p95": 1129.8,
+        "max": 1214
+      },
+      "usableLatencyMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "modelReportedMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "errors": {
+        "not_exact_json_command_array": 5
+      }
+    },
+    {
+      "suite": "role-package-common-21",
+      "prompt": "r1-v3",
+      "role": "fwd2",
+      "model": "haiku",
+      "metric": "Converse request wall",
+      "n": 5,
+      "contractValid": 0,
+      "decisionAgreementDecoded": 0,
+      "decisionEvaluable": 0,
+      "usableDecision": 0,
+      "historicalStrictPassed": 0,
+      "latencyMs": {
+        "n": 5,
+        "p50": 1457.0,
+        "p95": 1499.0,
+        "max": 1501
+      },
+      "usableLatencyMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "modelReportedMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "errors": {
+        "not_exact_json_command_array": 5
+      }
+    },
+    {
+      "suite": "role-package-common-21",
+      "prompt": "r1-v3",
+      "role": "gk",
+      "model": "nova2",
+      "metric": "Converse request wall",
+      "n": 4,
+      "contractValid": 0,
+      "decisionAgreementDecoded": 0,
+      "decisionEvaluable": 0,
+      "usableDecision": 0,
+      "historicalStrictPassed": 0,
+      "latencyMs": {
+        "n": 4,
+        "p50": 630.0,
+        "p95": 688.05,
+        "max": 696
+      },
+      "usableLatencyMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "modelReportedMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "errors": {
+        "not_exact_json_command_array": 4
+      }
+    },
+    {
+      "suite": "role-package-common-21",
+      "prompt": "r1-v3",
+      "role": "mid",
+      "model": "nova2",
+      "metric": "Converse request wall",
+      "n": 4,
+      "contractValid": 0,
+      "decisionAgreementDecoded": 0,
+      "decisionEvaluable": 0,
+      "usableDecision": 0,
+      "historicalStrictPassed": 0,
+      "latencyMs": {
+        "n": 4,
+        "p50": 652.5,
+        "p95": 671.7,
+        "max": 675
+      },
+      "usableLatencyMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "modelReportedMs": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "max": null
+      },
+      "errors": {
+        "not_exact_json_command_array": 4
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "role": "gk",
+      "prompt": "schema-clean",
+      "model": "nova2",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "gk",
+      "prompt": "schema-clean",
+      "model": "haiku",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "gk",
+      "prompt": "schema-clean",
+      "model": "sonnet",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "gk",
+      "prompt": "schema-clean",
+      "model": "micro",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "gk",
+      "prompt": "r1-v1",
+      "model": "nova2",
+      "n": 4,
+      "status": "archived_evidence",
+      "p50Ms": 736.0,
+      "p95Ms": 856.5
+    },
+    {
+      "role": "gk",
+      "prompt": "r1-v1",
+      "model": "haiku",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "gk",
+      "prompt": "r1-v1",
+      "model": "sonnet",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "gk",
+      "prompt": "r1-v1",
+      "model": "micro",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "gk",
+      "prompt": "r1-v2",
+      "model": "nova2",
+      "n": 5,
+      "status": "archived_evidence",
+      "p50Ms": 511.0,
+      "p95Ms": 694.4
+    },
+    {
+      "role": "gk",
+      "prompt": "r1-v2",
+      "model": "haiku",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "gk",
+      "prompt": "r1-v2",
+      "model": "sonnet",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "gk",
+      "prompt": "r1-v2",
+      "model": "micro",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "gk",
+      "prompt": "r1-v3",
+      "model": "nova2",
+      "n": 5,
+      "status": "archived_evidence",
+      "p50Ms": 617.0,
+      "p95Ms": 685.4
+    },
+    {
+      "role": "gk",
+      "prompt": "r1-v3",
+      "model": "haiku",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "gk",
+      "prompt": "r1-v3",
+      "model": "sonnet",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "gk",
+      "prompt": "r1-v3",
+      "model": "micro",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "gk",
+      "prompt": "compact-r2",
+      "model": "nova2",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "gk",
+      "prompt": "compact-r2",
+      "model": "haiku",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "gk",
+      "prompt": "compact-r2",
+      "model": "sonnet",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "gk",
+      "prompt": "compact-r2",
+      "model": "micro",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "gk",
+      "prompt": "selector+tactics",
+      "model": "nova2",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "gk",
+      "prompt": "selector+tactics",
+      "model": "haiku",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "gk",
+      "prompt": "selector+tactics",
+      "model": "sonnet",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "gk",
+      "prompt": "selector+tactics",
+      "model": "micro",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "def",
+      "prompt": "schema-clean",
+      "model": "nova2",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "def",
+      "prompt": "schema-clean",
+      "model": "haiku",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "def",
+      "prompt": "schema-clean",
+      "model": "sonnet",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "def",
+      "prompt": "schema-clean",
+      "model": "micro",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "def",
+      "prompt": "r1-v1",
+      "model": "nova2",
+      "n": 3,
+      "status": "archived_evidence",
+      "p50Ms": 874.0,
+      "p95Ms": 1093.6
+    },
+    {
+      "role": "def",
+      "prompt": "r1-v1",
+      "model": "haiku",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "def",
+      "prompt": "r1-v1",
+      "model": "sonnet",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "def",
+      "prompt": "r1-v1",
+      "model": "micro",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "def",
+      "prompt": "r1-v2",
+      "model": "nova2",
+      "n": 4,
+      "status": "archived_evidence",
+      "p50Ms": 536.0,
+      "p95Ms": 761.3
+    },
+    {
+      "role": "def",
+      "prompt": "r1-v2",
+      "model": "haiku",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "def",
+      "prompt": "r1-v2",
+      "model": "sonnet",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "def",
+      "prompt": "r1-v2",
+      "model": "micro",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "def",
+      "prompt": "r1-v3",
+      "model": "nova2",
+      "n": 4,
+      "status": "archived_evidence",
+      "p50Ms": 799.0,
+      "p95Ms": 1105.9
+    },
+    {
+      "role": "def",
+      "prompt": "r1-v3",
+      "model": "haiku",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "def",
+      "prompt": "r1-v3",
+      "model": "sonnet",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "def",
+      "prompt": "r1-v3",
+      "model": "micro",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "def",
+      "prompt": "compact-r2",
+      "model": "nova2",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "def",
+      "prompt": "compact-r2",
+      "model": "haiku",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "def",
+      "prompt": "compact-r2",
+      "model": "sonnet",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "def",
+      "prompt": "compact-r2",
+      "model": "micro",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "def",
+      "prompt": "selector+tactics",
+      "model": "nova2",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "def",
+      "prompt": "selector+tactics",
+      "model": "haiku",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "def",
+      "prompt": "selector+tactics",
+      "model": "sonnet",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "def",
+      "prompt": "selector+tactics",
+      "model": "micro",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "mid",
+      "prompt": "schema-clean",
+      "model": "nova2",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "mid",
+      "prompt": "schema-clean",
+      "model": "haiku",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "mid",
+      "prompt": "schema-clean",
+      "model": "sonnet",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "mid",
+      "prompt": "schema-clean",
+      "model": "micro",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "mid",
+      "prompt": "r1-v1",
+      "model": "nova2",
+      "n": 4,
+      "status": "archived_evidence",
+      "p50Ms": 632.5,
+      "p95Ms": 869.5
+    },
+    {
+      "role": "mid",
+      "prompt": "r1-v1",
+      "model": "haiku",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "mid",
+      "prompt": "r1-v1",
+      "model": "sonnet",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "mid",
+      "prompt": "r1-v1",
+      "model": "micro",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "mid",
+      "prompt": "r1-v2",
+      "model": "nova2",
+      "n": 5,
+      "status": "archived_evidence",
+      "p50Ms": 536.0,
+      "p95Ms": 725.4
+    },
+    {
+      "role": "mid",
+      "prompt": "r1-v2",
+      "model": "haiku",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "mid",
+      "prompt": "r1-v2",
+      "model": "sonnet",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "mid",
+      "prompt": "r1-v2",
+      "model": "micro",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "mid",
+      "prompt": "r1-v3",
+      "model": "nova2",
+      "n": 5,
+      "status": "archived_evidence",
+      "p50Ms": 653.0,
+      "p95Ms": 691.8
+    },
+    {
+      "role": "mid",
+      "prompt": "r1-v3",
+      "model": "haiku",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "mid",
+      "prompt": "r1-v3",
+      "model": "sonnet",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "mid",
+      "prompt": "r1-v3",
+      "model": "micro",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "mid",
+      "prompt": "compact-r2",
+      "model": "nova2",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "mid",
+      "prompt": "compact-r2",
+      "model": "haiku",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "mid",
+      "prompt": "compact-r2",
+      "model": "sonnet",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "mid",
+      "prompt": "compact-r2",
+      "model": "micro",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "mid",
+      "prompt": "selector+tactics",
+      "model": "nova2",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "mid",
+      "prompt": "selector+tactics",
+      "model": "haiku",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "mid",
+      "prompt": "selector+tactics",
+      "model": "sonnet",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "mid",
+      "prompt": "selector+tactics",
+      "model": "micro",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "fwd1",
+      "prompt": "schema-clean",
+      "model": "nova2",
+      "n": 3,
+      "status": "archived_evidence",
+      "p50Ms": 655.0,
+      "p95Ms": 717.1
+    },
+    {
+      "role": "fwd1",
+      "prompt": "schema-clean",
+      "model": "haiku",
+      "n": 3,
+      "status": "archived_evidence",
+      "p50Ms": 1397.0,
+      "p95Ms": 2946.8
+    },
+    {
+      "role": "fwd1",
+      "prompt": "schema-clean",
+      "model": "sonnet",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "fwd1",
+      "prompt": "schema-clean",
+      "model": "micro",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "fwd1",
+      "prompt": "r1-v1",
+      "model": "nova2",
+      "n": 5,
+      "status": "archived_evidence",
+      "p50Ms": 628.0,
+      "p95Ms": 710.8
+    },
+    {
+      "role": "fwd1",
+      "prompt": "r1-v1",
+      "model": "haiku",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "fwd1",
+      "prompt": "r1-v1",
+      "model": "sonnet",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "fwd1",
+      "prompt": "r1-v1",
+      "model": "micro",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "fwd1",
+      "prompt": "r1-v2",
+      "model": "nova2",
+      "n": 6,
+      "status": "archived_evidence",
+      "p50Ms": 490.0,
+      "p95Ms": 663.75
+    },
+    {
+      "role": "fwd1",
+      "prompt": "r1-v2",
+      "model": "haiku",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "fwd1",
+      "prompt": "r1-v2",
+      "model": "sonnet",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "fwd1",
+      "prompt": "r1-v2",
+      "model": "micro",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "fwd1",
+      "prompt": "r1-v3",
+      "model": "nova2",
+      "n": 6,
+      "status": "archived_evidence",
+      "p50Ms": 725.5,
+      "p95Ms": 1136.25
+    },
+    {
+      "role": "fwd1",
+      "prompt": "r1-v3",
+      "model": "haiku",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "fwd1",
+      "prompt": "r1-v3",
+      "model": "sonnet",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "fwd1",
+      "prompt": "r1-v3",
+      "model": "micro",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "fwd1",
+      "prompt": "compact-r2",
+      "model": "nova2",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "fwd1",
+      "prompt": "compact-r2",
+      "model": "haiku",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "fwd1",
+      "prompt": "compact-r2",
+      "model": "sonnet",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "fwd1",
+      "prompt": "compact-r2",
+      "model": "micro",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "fwd1",
+      "prompt": "selector+tactics",
+      "model": "nova2",
+      "n": 20,
+      "status": "archived_evidence",
+      "p50Ms": 2061.0,
+      "p95Ms": 4651.4
+    },
+    {
+      "role": "fwd1",
+      "prompt": "selector+tactics",
+      "model": "haiku",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "fwd1",
+      "prompt": "selector+tactics",
+      "model": "sonnet",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "fwd1",
+      "prompt": "selector+tactics",
+      "model": "micro",
+      "n": 20,
+      "status": "archived_evidence",
+      "p50Ms": 1116.0,
+      "p95Ms": 2787.35
+    },
+    {
+      "role": "fwd2",
+      "prompt": "schema-clean",
+      "model": "nova2",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "fwd2",
+      "prompt": "schema-clean",
+      "model": "haiku",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "fwd2",
+      "prompt": "schema-clean",
+      "model": "sonnet",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "fwd2",
+      "prompt": "schema-clean",
+      "model": "micro",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "fwd2",
+      "prompt": "r1-v1",
+      "model": "nova2",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "fwd2",
+      "prompt": "r1-v1",
+      "model": "haiku",
+      "n": 5,
+      "status": "archived_evidence",
+      "p50Ms": 1388.0,
+      "p95Ms": 2493.0
+    },
+    {
+      "role": "fwd2",
+      "prompt": "r1-v1",
+      "model": "sonnet",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "fwd2",
+      "prompt": "r1-v1",
+      "model": "micro",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "fwd2",
+      "prompt": "r1-v2",
+      "model": "nova2",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "fwd2",
+      "prompt": "r1-v2",
+      "model": "haiku",
+      "n": 6,
+      "status": "archived_evidence",
+      "p50Ms": 1660.5,
+      "p95Ms": 4147.25
+    },
+    {
+      "role": "fwd2",
+      "prompt": "r1-v2",
+      "model": "sonnet",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "fwd2",
+      "prompt": "r1-v2",
+      "model": "micro",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "fwd2",
+      "prompt": "r1-v3",
+      "model": "nova2",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "fwd2",
+      "prompt": "r1-v3",
+      "model": "haiku",
+      "n": 6,
+      "status": "archived_evidence",
+      "p50Ms": 1436.0,
+      "p95Ms": 1498.5
+    },
+    {
+      "role": "fwd2",
+      "prompt": "r1-v3",
+      "model": "sonnet",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "fwd2",
+      "prompt": "r1-v3",
+      "model": "micro",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "fwd2",
+      "prompt": "compact-r2",
+      "model": "nova2",
+      "n": 9,
+      "status": "archived_evidence",
+      "p50Ms": 571.0,
+      "p95Ms": 678.0
+    },
+    {
+      "role": "fwd2",
+      "prompt": "compact-r2",
+      "model": "haiku",
+      "n": 9,
+      "status": "archived_evidence",
+      "p50Ms": 1478.0,
+      "p95Ms": 2151.0
+    },
+    {
+      "role": "fwd2",
+      "prompt": "compact-r2",
+      "model": "sonnet",
+      "n": 9,
+      "status": "archived_evidence",
+      "p50Ms": 1548.0,
+      "p95Ms": 3009.4
+    },
+    {
+      "role": "fwd2",
+      "prompt": "compact-r2",
+      "model": "micro",
+      "n": 9,
+      "status": "archived_evidence",
+      "p50Ms": 441.0,
+      "p95Ms": 523.6
+    },
+    {
+      "role": "fwd2",
+      "prompt": "selector+tactics",
+      "model": "nova2",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "fwd2",
+      "prompt": "selector+tactics",
+      "model": "haiku",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "fwd2",
+      "prompt": "selector+tactics",
+      "model": "sonnet",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    },
+    {
+      "role": "fwd2",
+      "prompt": "selector+tactics",
+      "model": "micro",
+      "n": 0,
+      "status": "not_measured",
+      "p50Ms": null,
+      "p95Ms": null
+    }
+  ],
+  "selectorConstantIndex0": {
+    "cases": 20,
+    "targetAgreementCount": 12
+  },
+  "promotion": {
+    "eligible": false,
+    "fitness": "not_run",
+    "modelWinner": null
+  },
+  "limitations": [
+    "No complete current-prompt model matrix across all five roles.",
+    "Scenario labels are policy hypotheses, not measured football quality.",
+    "FWD1 three-case, cyclic selector and FWD2 nine-case suites are not comparable.",
+    "Invalid/empty fast responses are excluded from usable-command latency.",
+    "No retries/cold-start timing attribution beyond recorded metadata.",
+    "Synthetic input hashes are reconstructed, not captured invocation hashes."
+  ]
+}

@@ -1,3 +1,34 @@
+# Agentic FC — unified main checkpoint, 2026-10-25
+
+Owner explicitly requested merging all current research and game work to GitHub
+main and continuing on main. The research checkout now uses main; the live
+operator's active checkout is preserved until it safely transitions itself.
+Branches/commits remain available; no force push or deletion. Private .local
+archives/credentials/session data remain ignored, not published.
+
+Game snapshot integrated:6b896d8, batch15 COMPLETE4W1L,10:3; batch16 started
+on unchanged baseline. This is Git evidence, not a claim that the portal is idle.
+Use the latest live series/portal state before native tests or changes.
+
+L01 candidate source93f14b1e7fbcd96904c94efcdc66518a168698d8 and handoff d04c216
+are preserved. Owner authorizes deploying only MID after native/Fitness at a
+series boundary and explicitly authorized sending it to the game chat; message
+was delivered. The game operator owns portal/AWS; do not race it. No L01 native,
+Fitness or deployment success has been observed by research. See
+[mid_fast_v1/README.ru.md](mid_fast_v1/README.ru.md), exact artifact manifest,
+and [handoff receipt](research/v3/model-prompt-lab/results/mid-l01-handoff.json).
+P01 remains rejected. Other four roles/formation stay unchanged for L01.
+
+224/224 offline replay and61 focused tests passed before integration. Local
+CPU-only p50/p95 .28/.47ms is not full latency. Package/replay byte-identical
+rebuild confirmed; primary batch15game3 means2219ms(team),2827(MID),1775(model-free
+FWD2) leave exact latency stages unresolved. Never equate100%success with deadline.
+
+Historical research notes are preserved in
+[research snapshot](research/v3/model-prompt-lab/HANDOFF_RESEARCH_20261025.md).
+Historical restrictions below yield to the newer explicit owner directions
+above; current-series protection and native/Fitness gates still apply.
+
 # Agentic FC continuation
 
 ## Current checkpoint — 2026-10-25 (after ranked batch 15)

@@ -1,0 +1,9 @@
+--- a/research/v3/schema-clean/mid.txt
++++ b/research/v3/schema-clean/mid.txt
+@@ -55,5 +55,5 @@
+ IF YOU HAVE THE BALL:
+ - Never choose PRESS_BALL, MARK, INTERCEPT or FOLLOW_PLAYER.
+-- MID (player 2): prioritize PASS to an open forward (player 3 or 4).
++- MID (player 2): prioritize PASS to an open forward (player 3 or 4) with a clear passing lane; when neither forward offers a safe pass, recycle to an open defender with a clear lane. If no pass is safe, use the existing shot or movement rules.
+ - FWD (players 3 and 4): SHOOT when close to the opponent's goal with a clear shooting lane.
+ - If the shooting lane is blocked, PASS to an open teammate.

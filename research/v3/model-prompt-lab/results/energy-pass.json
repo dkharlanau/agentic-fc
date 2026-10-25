@@ -1,0 +1,1220 @@
+{
+  "kind": "offline features, no model responses or game commands",
+  "newModelCalls": 0,
+  "fitnessResult": null,
+  "eligibleForPromotion": false,
+  "thresholds": {
+    "syntheticLongPassUnits": 23,
+    "maximumGroundDistance": 65,
+    "minReceiverSpaceExclusive": 4,
+    "minGroundLaneSpaceExclusive": 2,
+    "routineSprintEnergyExclusive": 0.7,
+    "decisiveSprintEnergyInclusive": 0.4
+  },
+  "rows": [
+    {
+      "case": "long-switch-over-marked-short-home",
+      "inputSha256": "95223f12f2d164ef5f68f545362a235b8c730f64ff62addfb47a705c74349296",
+      "assessed": true,
+      "reason": "SYNTHETIC_GEOMETRY_ONLY",
+      "energy": {
+        "fraction": 0.8,
+        "routineSprintEligible": true,
+        "decisiveSprintEligible": true,
+        "shotAccuracyPenalty": null,
+        "closeClearShotVetoFromEnergyAlone": false
+      },
+      "outlets": [
+        {
+          "receiver": 0,
+          "distance": 50.0,
+          "longByResearchThreshold": true,
+          "receiverSpace": 56.0089,
+          "groundLaneSpace": 6.0828,
+          "progress": -50,
+          "groundRisks": [],
+          "receiverEnergy": {
+            "fraction": 0.8,
+            "routineSprintEligible": true,
+            "decisiveSprintEligible": true,
+            "shotAccuracyPenalty": null,
+            "closeClearShotVetoFromEnergyAlone": false
+          },
+          "throughFeasible": null,
+          "aerialFeasible": null,
+          "heuristicRank": -49.0
+        },
+        {
+          "receiver": 1,
+          "distance": 29.1548,
+          "longByResearchThreshold": true,
+          "receiverSpace": 34.0147,
+          "groundLaneSpace": 6.0828,
+          "progress": -25,
+          "groundRisks": [],
+          "receiverEnergy": {
+            "fraction": 0.8,
+            "routineSprintEligible": true,
+            "decisiveSprintEligible": true,
+            "shotAccuracyPenalty": null,
+            "closeClearShotVetoFromEnergyAlone": false
+          },
+          "throughFeasible": null,
+          "aerialFeasible": null,
+          "heuristicRank": -21.9155
+        },
+        {
+          "receiver": 2,
+          "distance": 6.0,
+          "longByResearchThreshold": false,
+          "receiverSpace": 1.0,
+          "groundLaneSpace": 1.0,
+          "progress": 6,
+          "groundRisks": [
+            "marked_receiver",
+            "blocked_ground_lane"
+          ],
+          "receiverEnergy": {
+            "fraction": 0.8,
+            "routineSprintEligible": true,
+            "decisiveSprintEligible": true,
+            "shotAccuracyPenalty": null,
+            "closeClearShotVetoFromEnergyAlone": false
+          },
+          "throughFeasible": null,
+          "aerialFeasible": null,
+          "heuristicRank": 5.9
+        },
+        {
+          "receiver": 4,
+          "distance": 39.3573,
+          "longByResearchThreshold": true,
+          "receiverSpace": 23.4307,
+          "groundLaneSpace": 3.6334,
+          "progress": 35,
+          "groundRisks": [],
+          "receiverEnergy": {
+            "fraction": 0.8,
+            "routineSprintEligible": true,
+            "decisiveSprintEligible": true,
+            "shotAccuracyPenalty": null,
+            "closeClearShotVetoFromEnergyAlone": false
+          },
+          "throughFeasible": null,
+          "aerialFeasible": null,
+          "heuristicRank": 37.0643
+        }
+      ],
+      "preferredGroundReceiver": 4,
+      "passCompleted": null,
+      "turnoverOccurred": null
+    },
+    {
+      "case": "long-switch-over-marked-short-away",
+      "inputSha256": "06efaa24bcb48accef18d7daf875808fb7d91d5df59cc9fb119c89e381ce385c",
+      "assessed": true,
+      "reason": "SYNTHETIC_GEOMETRY_ONLY",
+      "energy": {
+        "fraction": 0.8,
+        "routineSprintEligible": true,
+        "decisiveSprintEligible": true,
+        "shotAccuracyPenalty": null,
+        "closeClearShotVetoFromEnergyAlone": false
+      },
+      "outlets": [
+        {
+          "receiver": 0,
+          "distance": 50.0,
+          "longByResearchThreshold": true,
+          "receiverSpace": 56.0089,
+          "groundLaneSpace": 6.0828,
+          "progress": -50,
+          "groundRisks": [],
+          "receiverEnergy": {
+            "fraction": 0.8,
+            "routineSprintEligible": true,
+            "decisiveSprintEligible": true,
+            "shotAccuracyPenalty": null,
+            "closeClearShotVetoFromEnergyAlone": false
+          },
+          "throughFeasible": null,
+          "aerialFeasible": null,
+          "heuristicRank": -49.0
+        },
+        {
+          "receiver": 1,
+          "distance": 29.1548,
+          "longByResearchThreshold": true,
+          "receiverSpace": 34.0147,
+          "groundLaneSpace": 6.0828,
+          "progress": -25,
+          "groundRisks": [],
+          "receiverEnergy": {
+            "fraction": 0.8,
+            "routineSprintEligible": true,
+            "decisiveSprintEligible": true,
+            "shotAccuracyPenalty": null,
+            "closeClearShotVetoFromEnergyAlone": false
+          },
+          "throughFeasible": null,
+          "aerialFeasible": null,
+          "heuristicRank": -21.9155
+        },
+        {
+          "receiver": 2,
+          "distance": 6.0,
+          "longByResearchThreshold": false,
+          "receiverSpace": 1.0,
+          "groundLaneSpace": 1.0,
+          "progress": 6,
+          "groundRisks": [
+            "marked_receiver",
+            "blocked_ground_lane"
+          ],
+          "receiverEnergy": {
+            "fraction": 0.8,
+            "routineSprintEligible": true,
+            "decisiveSprintEligible": true,
+            "shotAccuracyPenalty": null,
+            "closeClearShotVetoFromEnergyAlone": false
+          },
+          "throughFeasible": null,
+          "aerialFeasible": null,
+          "heuristicRank": 5.9
+        },
+        {
+          "receiver": 4,
+          "distance": 39.3573,
+          "longByResearchThreshold": true,
+          "receiverSpace": 23.4307,
+          "groundLaneSpace": 3.6334,
+          "progress": 35,
+          "groundRisks": [],
+          "receiverEnergy": {
+            "fraction": 0.8,
+            "routineSprintEligible": true,
+            "decisiveSprintEligible": true,
+            "shotAccuracyPenalty": null,
+            "closeClearShotVetoFromEnergyAlone": false
+          },
+          "throughFeasible": null,
+          "aerialFeasible": null,
+          "heuristicRank": 37.0643
+        }
+      ],
+      "preferredGroundReceiver": 4,
+      "passCompleted": null,
+      "turnoverOccurred": null
+    },
+    {
+      "case": "blocked-long-lane-home",
+      "inputSha256": "a633d8ab91216438a88fbc0496b40de08983b4a5bdf854f2fbd2eaaa40c2b31d",
+      "assessed": true,
+      "reason": "SYNTHETIC_GEOMETRY_ONLY",
+      "energy": {
+        "fraction": 0.8,
+        "routineSprintEligible": true,
+        "decisiveSprintEligible": true,
+        "shotAccuracyPenalty": null,
+        "closeClearShotVetoFromEnergyAlone": false
+      },
+      "outlets": [
+        {
+          "receiver": 0,
+          "distance": 50.0,
+          "longByResearchThreshold": true,
+          "receiverSpace": 56.0089,
+          "groundLaneSpace": 6.0828,
+          "progress": -50,
+          "groundRisks": [],
+          "receiverEnergy": {
+            "fraction": 0.8,
+            "routineSprintEligible": true,
+            "decisiveSprintEligible": true,
+            "shotAccuracyPenalty": null,
+            "closeClearShotVetoFromEnergyAlone": false
+          },
+          "throughFeasible": null,
+          "aerialFeasible": null,
+          "heuristicRank": -49.0
+        },
+        {
+          "receiver": 1,
+          "distance": 29.1548,
+          "longByResearchThreshold": true,
+          "receiverSpace": 34.0147,
+          "groundLaneSpace": 6.0828,
+          "progress": -25,
+          "groundRisks": [],
+          "receiverEnergy": {
+            "fraction": 0.8,
+            "routineSprintEligible": true,
+            "decisiveSprintEligible": true,
+            "shotAccuracyPenalty": null,
+            "closeClearShotVetoFromEnergyAlone": false
+          },
+          "throughFeasible": null,
+          "aerialFeasible": null,
+          "heuristicRank": -21.9155
+        },
+        {
+          "receiver": 2,
+          "distance": 6.0,
+          "longByResearchThreshold": false,
+          "receiverSpace": 1.0,
+          "groundLaneSpace": 1.0,
+          "progress": 6,
+          "groundRisks": [
+            "marked_receiver",
+            "blocked_ground_lane"
+          ],
+          "receiverEnergy": {
+            "fraction": 0.8,
+            "routineSprintEligible": true,
+            "decisiveSprintEligible": true,
+            "shotAccuracyPenalty": null,
+            "closeClearShotVetoFromEnergyAlone": false
+          },
+          "throughFeasible": null,
+          "aerialFeasible": null,
+          "heuristicRank": 5.9
+        },
+        {
+          "receiver": 4,
+          "distance": 39.3573,
+          "longByResearchThreshold": true,
+          "receiverSpace": 19.6787,
+          "groundLaneSpace": 0.0,
+          "progress": 35,
+          "groundRisks": [
+            "blocked_ground_lane"
+          ],
+          "receiverEnergy": {
+            "fraction": 0.8,
+            "routineSprintEligible": true,
+            "decisiveSprintEligible": true,
+            "shotAccuracyPenalty": null,
+            "closeClearShotVetoFromEnergyAlone": false
+          },
+          "throughFeasible": null,
+          "aerialFeasible": null,
+          "heuristicRank": 37.0643
+        }
+      ],
+      "preferredGroundReceiver": 1,
+      "passCompleted": null,
+      "turnoverOccurred": null
+    },
+    {
+      "case": "blocked-long-lane-away",
+      "inputSha256": "447aca76ec4bc03ece2103d058cdc2f20143eddbeec09ecc2ce9de65493ca3ea",
+      "assessed": true,
+      "reason": "SYNTHETIC_GEOMETRY_ONLY",
+      "energy": {
+        "fraction": 0.8,
+        "routineSprintEligible": true,
+        "decisiveSprintEligible": true,
+        "shotAccuracyPenalty": null,
+        "closeClearShotVetoFromEnergyAlone": false
+      },
+      "outlets": [
+        {
+          "receiver": 0,
+          "distance": 50.0,
+          "longByResearchThreshold": true,
+          "receiverSpace": 56.0089,
+          "groundLaneSpace": 6.0828,
+          "progress": -50,
+          "groundRisks": [],
+          "receiverEnergy": {
+            "fraction": 0.8,
+            "routineSprintEligible": true,
+            "decisiveSprintEligible": true,
+            "shotAccuracyPenalty": null,
+            "closeClearShotVetoFromEnergyAlone": false
+          },
+          "throughFeasible": null,
+          "aerialFeasible": null,
+          "heuristicRank": -49.0
+        },
+        {
+          "receiver": 1,
+          "distance": 29.1548,
+          "longByResearchThreshold": true,
+          "receiverSpace": 34.0147,
+          "groundLaneSpace": 6.0828,
+          "progress": -25,
+          "groundRisks": [],
+          "receiverEnergy": {
+            "fraction": 0.8,
+            "routineSprintEligible": true,
+            "decisiveSprintEligible": true,
+            "shotAccuracyPenalty": null,
+            "closeClearShotVetoFromEnergyAlone": false
+          },
+          "throughFeasible": null,
+          "aerialFeasible": null,
+          "heuristicRank": -21.9155
+        },
+        {
+          "receiver": 2,
+          "distance": 6.0,
+          "longByResearchThreshold": false,
+          "receiverSpace": 1.0,
+          "groundLaneSpace": 1.0,
+          "progress": 6,
+          "groundRisks": [
+            "marked_receiver",
+            "blocked_ground_lane"
+          ],
+          "receiverEnergy": {
+            "fraction": 0.8,
+            "routineSprintEligible": true,
+            "decisiveSprintEligible": true,
+            "shotAccuracyPenalty": null,
+            "closeClearShotVetoFromEnergyAlone": false
+          },
+          "throughFeasible": null,
+          "aerialFeasible": null,
+          "heuristicRank": 5.9
+        },
+        {
+          "receiver": 4,
+          "distance": 39.3573,
+          "longByResearchThreshold": true,
+          "receiverSpace": 19.6787,
+          "groundLaneSpace": 0.0,
+          "progress": 35,
+          "groundRisks": [
+            "blocked_ground_lane"
+          ],
+          "receiverEnergy": {
+            "fraction": 0.8,
+            "routineSprintEligible": true,
+            "decisiveSprintEligible": true,
+            "shotAccuracyPenalty": null,
+            "closeClearShotVetoFromEnergyAlone": false
+          },
+          "throughFeasible": null,
+          "aerialFeasible": null,
+          "heuristicRank": 37.0643
+        }
+      ],
+      "preferredGroundReceiver": 1,
+      "passCompleted": null,
+      "turnoverOccurred": null
+    },
+    {
+      "case": "marked-long-receiver-home",
+      "inputSha256": "a2cee3a957ac1853367557a208ed1f2f07823411af331d935a473cdee85aa857",
+      "assessed": true,
+      "reason": "SYNTHETIC_GEOMETRY_ONLY",
+      "energy": {
+        "fraction": 0.8,
+        "routineSprintEligible": true,
+        "decisiveSprintEligible": true,
+        "shotAccuracyPenalty": null,
+        "closeClearShotVetoFromEnergyAlone": false
+      },
+      "outlets": [
+        {
+          "receiver": 0,
+          "distance": 50.0,
+          "longByResearchThreshold": true,
+          "receiverSpace": 56.0089,
+          "groundLaneSpace": 6.0828,
+          "progress": -50,
+          "groundRisks": [],
+          "receiverEnergy": {
+            "fraction": 0.8,
+            "routineSprintEligible": true,
+            "decisiveSprintEligible": true,
+            "shotAccuracyPenalty": null,
+            "closeClearShotVetoFromEnergyAlone": false
+          },
+          "throughFeasible": null,
+          "aerialFeasible": null,
+          "heuristicRank": -49.0
+        },
+        {
+          "receiver": 1,
+          "distance": 29.1548,
+          "longByResearchThreshold": true,
+          "receiverSpace": 34.0147,
+          "groundLaneSpace": 6.0828,
+          "progress": -25,
+          "groundRisks": [],
+          "receiverEnergy": {
+            "fraction": 0.8,
+            "routineSprintEligible": true,
+            "decisiveSprintEligible": true,
+            "shotAccuracyPenalty": null,
+            "closeClearShotVetoFromEnergyAlone": false
+          },
+          "throughFeasible": null,
+          "aerialFeasible": null,
+          "heuristicRank": -21.9155
+        },
+        {
+          "receiver": 2,
+          "distance": 6.0,
+          "longByResearchThreshold": false,
+          "receiverSpace": 1.0,
+          "groundLaneSpace": 1.0,
+          "progress": 6,
+          "groundRisks": [
+            "marked_receiver",
+            "blocked_ground_lane"
+          ],
+          "receiverEnergy": {
+            "fraction": 0.8,
+            "routineSprintEligible": true,
+            "decisiveSprintEligible": true,
+            "shotAccuracyPenalty": null,
+            "closeClearShotVetoFromEnergyAlone": false
+          },
+          "throughFeasible": null,
+          "aerialFeasible": null,
+          "heuristicRank": 5.9
+        },
+        {
+          "receiver": 4,
+          "distance": 39.3573,
+          "longByResearchThreshold": true,
+          "receiverSpace": 1.0,
+          "groundLaneSpace": 1.0,
+          "progress": 35,
+          "groundRisks": [
+            "marked_receiver",
+            "blocked_ground_lane"
+          ],
+          "receiverEnergy": {
+            "fraction": 0.8,
+            "routineSprintEligible": true,
+            "decisiveSprintEligible": true,
+            "shotAccuracyPenalty": null,
+            "closeClearShotVetoFromEnergyAlone": false
+          },
+          "throughFeasible": null,
+          "aerialFeasible": null,
+          "heuristicRank": 31.5643
+        }
+      ],
+      "preferredGroundReceiver": 1,
+      "passCompleted": null,
+      "turnoverOccurred": null
+    },
+    {
+      "case": "marked-long-receiver-away",
+      "inputSha256": "672d95a859bb5c8ebbba0d5a42c2e94b14b164f0e7c9396e11b29e48e8d5d0e5",
+      "assessed": true,
+      "reason": "SYNTHETIC_GEOMETRY_ONLY",
+      "energy": {
+        "fraction": 0.8,
+        "routineSprintEligible": true,
+        "decisiveSprintEligible": true,
+        "shotAccuracyPenalty": null,
+        "closeClearShotVetoFromEnergyAlone": false
+      },
+      "outlets": [
+        {
+          "receiver": 0,
+          "distance": 50.0,
+          "longByResearchThreshold": true,
+          "receiverSpace": 56.0089,
+          "groundLaneSpace": 6.0828,
+          "progress": -50,
+          "groundRisks": [],
+          "receiverEnergy": {
+            "fraction": 0.8,
+            "routineSprintEligible": true,
+            "decisiveSprintEligible": true,
+            "shotAccuracyPenalty": null,
+            "closeClearShotVetoFromEnergyAlone": false
+          },
+          "throughFeasible": null,
+          "aerialFeasible": null,
+          "heuristicRank": -49.0
+        },
+        {
+          "receiver": 1,
+          "distance": 29.1548,
+          "longByResearchThreshold": true,
+          "receiverSpace": 34.0147,
+          "groundLaneSpace": 6.0828,
+          "progress": -25,
+          "groundRisks": [],
+          "receiverEnergy": {
+            "fraction": 0.8,
+            "routineSprintEligible": true,
+            "decisiveSprintEligible": true,
+            "shotAccuracyPenalty": null,
+            "closeClearShotVetoFromEnergyAlone": false
+          },
+          "throughFeasible": null,
+          "aerialFeasible": null,
+          "heuristicRank": -21.9155
+        },
+        {
+          "receiver": 2,
+          "distance": 6.0,
+          "longByResearchThreshold": false,
+          "receiverSpace": 1.0,
+          "groundLaneSpace": 1.0,
+          "progress": 6,
+          "groundRisks": [
+            "marked_receiver",
+            "blocked_ground_lane"
+          ],
+          "receiverEnergy": {
+            "fraction": 0.8,
+            "routineSprintEligible": true,
+            "decisiveSprintEligible": true,
+            "shotAccuracyPenalty": null,
+            "closeClearShotVetoFromEnergyAlone": false
+          },
+          "throughFeasible": null,
+          "aerialFeasible": null,
+          "heuristicRank": 5.9
+        },
+        {
+          "receiver": 4,
+          "distance": 39.3573,
+          "longByResearchThreshold": true,
+          "receiverSpace": 1.0,
+          "groundLaneSpace": 1.0,
+          "progress": 35,
+          "groundRisks": [
+            "marked_receiver",
+            "blocked_ground_lane"
+          ],
+          "receiverEnergy": {
+            "fraction": 0.8,
+            "routineSprintEligible": true,
+            "decisiveSprintEligible": true,
+            "shotAccuracyPenalty": null,
+            "closeClearShotVetoFromEnergyAlone": false
+          },
+          "throughFeasible": null,
+          "aerialFeasible": null,
+          "heuristicRank": 31.5643
+        }
+      ],
+      "preferredGroundReceiver": 1,
+      "passCompleted": null,
+      "turnoverOccurred": null
+    },
+    {
+      "case": "defender-beyond-receiver-home",
+      "inputSha256": "74d6b7ce179e2d84d1fa89f2de81f7aa9092c5965cd0ab72df574a84106366eb",
+      "assessed": true,
+      "reason": "SYNTHETIC_GEOMETRY_ONLY",
+      "energy": {
+        "fraction": 0.8,
+        "routineSprintEligible": true,
+        "decisiveSprintEligible": true,
+        "shotAccuracyPenalty": null,
+        "closeClearShotVetoFromEnergyAlone": false
+      },
+      "outlets": [
+        {
+          "receiver": 0,
+          "distance": 50.0,
+          "longByResearchThreshold": true,
+          "receiverSpace": 56.0089,
+          "groundLaneSpace": 6.0828,
+          "progress": -50,
+          "groundRisks": [],
+          "receiverEnergy": {
+            "fraction": 0.8,
+            "routineSprintEligible": true,
+            "decisiveSprintEligible": true,
+            "shotAccuracyPenalty": null,
+            "closeClearShotVetoFromEnergyAlone": false
+          },
+          "throughFeasible": null,
+          "aerialFeasible": null,
+          "heuristicRank": -49.0
+        },
+        {
+          "receiver": 1,
+          "distance": 29.1548,
+          "longByResearchThreshold": true,
+          "receiverSpace": 34.0147,
+          "groundLaneSpace": 6.0828,
+          "progress": -25,
+          "groundRisks": [],
+          "receiverEnergy": {
+            "fraction": 0.8,
+            "routineSprintEligible": true,
+            "decisiveSprintEligible": true,
+            "shotAccuracyPenalty": null,
+            "closeClearShotVetoFromEnergyAlone": false
+          },
+          "throughFeasible": null,
+          "aerialFeasible": null,
+          "heuristicRank": -21.9155
+        },
+        {
+          "receiver": 2,
+          "distance": 6.0,
+          "longByResearchThreshold": false,
+          "receiverSpace": 1.0,
+          "groundLaneSpace": 1.0,
+          "progress": 6,
+          "groundRisks": [
+            "marked_receiver",
+            "blocked_ground_lane"
+          ],
+          "receiverEnergy": {
+            "fraction": 0.8,
+            "routineSprintEligible": true,
+            "decisiveSprintEligible": true,
+            "shotAccuracyPenalty": null,
+            "closeClearShotVetoFromEnergyAlone": false
+          },
+          "throughFeasible": null,
+          "aerialFeasible": null,
+          "heuristicRank": 5.9
+        },
+        {
+          "receiver": 4,
+          "distance": 39.3573,
+          "longByResearchThreshold": true,
+          "receiverSpace": 11.1803,
+          "groundLaneSpace": 3.6334,
+          "progress": 35,
+          "groundRisks": [],
+          "receiverEnergy": {
+            "fraction": 0.8,
+            "routineSprintEligible": true,
+            "decisiveSprintEligible": true,
+            "shotAccuracyPenalty": null,
+            "closeClearShotVetoFromEnergyAlone": false
+          },
+          "throughFeasible": null,
+          "aerialFeasible": null,
+          "heuristicRank": 36.6544
+        }
+      ],
+      "preferredGroundReceiver": 4,
+      "passCompleted": null,
+      "turnoverOccurred": null
+    },
+    {
+      "case": "defender-beyond-receiver-away",
+      "inputSha256": "341b06d61f624572be828df5b9604649f34a8a94448c6c2c1df4ddbe28332d45",
+      "assessed": true,
+      "reason": "SYNTHETIC_GEOMETRY_ONLY",
+      "energy": {
+        "fraction": 0.8,
+        "routineSprintEligible": true,
+        "decisiveSprintEligible": true,
+        "shotAccuracyPenalty": null,
+        "closeClearShotVetoFromEnergyAlone": false
+      },
+      "outlets": [
+        {
+          "receiver": 0,
+          "distance": 50.0,
+          "longByResearchThreshold": true,
+          "receiverSpace": 56.0089,
+          "groundLaneSpace": 6.0828,
+          "progress": -50,
+          "groundRisks": [],
+          "receiverEnergy": {
+            "fraction": 0.8,
+            "routineSprintEligible": true,
+            "decisiveSprintEligible": true,
+            "shotAccuracyPenalty": null,
+            "closeClearShotVetoFromEnergyAlone": false
+          },
+          "throughFeasible": null,
+          "aerialFeasible": null,
+          "heuristicRank": -49.0
+        },
+        {
+          "receiver": 1,
+          "distance": 29.1548,
+          "longByResearchThreshold": true,
+          "receiverSpace": 34.0147,
+          "groundLaneSpace": 6.0828,
+          "progress": -25,
+          "groundRisks": [],
+          "receiverEnergy": {
+            "fraction": 0.8,
+            "routineSprintEligible": true,
+            "decisiveSprintEligible": true,
+            "shotAccuracyPenalty": null,
+            "closeClearShotVetoFromEnergyAlone": false
+          },
+          "throughFeasible": null,
+          "aerialFeasible": null,
+          "heuristicRank": -21.9155
+        },
+        {
+          "receiver": 2,
+          "distance": 6.0,
+          "longByResearchThreshold": false,
+          "receiverSpace": 1.0,
+          "groundLaneSpace": 1.0,
+          "progress": 6,
+          "groundRisks": [
+            "marked_receiver",
+            "blocked_ground_lane"
+          ],
+          "receiverEnergy": {
+            "fraction": 0.8,
+            "routineSprintEligible": true,
+            "decisiveSprintEligible": true,
+            "shotAccuracyPenalty": null,
+            "closeClearShotVetoFromEnergyAlone": false
+          },
+          "throughFeasible": null,
+          "aerialFeasible": null,
+          "heuristicRank": 5.9
+        },
+        {
+          "receiver": 4,
+          "distance": 39.3573,
+          "longByResearchThreshold": true,
+          "receiverSpace": 11.1803,
+          "groundLaneSpace": 3.6334,
+          "progress": 35,
+          "groundRisks": [],
+          "receiverEnergy": {
+            "fraction": 0.8,
+            "routineSprintEligible": true,
+            "decisiveSprintEligible": true,
+            "shotAccuracyPenalty": null,
+            "closeClearShotVetoFromEnergyAlone": false
+          },
+          "throughFeasible": null,
+          "aerialFeasible": null,
+          "heuristicRank": 36.6544
+        }
+      ],
+      "preferredGroundReceiver": 4,
+      "passCompleted": null,
+      "turnoverOccurred": null
+    },
+    {
+      "case": "tired-receiver-is-not-a-proven-through-run-home",
+      "inputSha256": "376b1de30657ba4a81774ea30b0a697a2bb1e1d1b0cb48a7d63335bc4aa4110d",
+      "assessed": true,
+      "reason": "SYNTHETIC_GEOMETRY_ONLY",
+      "energy": {
+        "fraction": 0.8,
+        "routineSprintEligible": true,
+        "decisiveSprintEligible": true,
+        "shotAccuracyPenalty": null,
+        "closeClearShotVetoFromEnergyAlone": false
+      },
+      "outlets": [
+        {
+          "receiver": 0,
+          "distance": 50.0,
+          "longByResearchThreshold": true,
+          "receiverSpace": 56.0089,
+          "groundLaneSpace": 6.0828,
+          "progress": -50,
+          "groundRisks": [],
+          "receiverEnergy": {
+            "fraction": 0.8,
+            "routineSprintEligible": true,
+            "decisiveSprintEligible": true,
+            "shotAccuracyPenalty": null,
+            "closeClearShotVetoFromEnergyAlone": false
+          },
+          "throughFeasible": null,
+          "aerialFeasible": null,
+          "heuristicRank": -49.0
+        },
+        {
+          "receiver": 1,
+          "distance": 29.1548,
+          "longByResearchThreshold": true,
+          "receiverSpace": 34.0147,
+          "groundLaneSpace": 6.0828,
+          "progress": -25,
+          "groundRisks": [],
+          "receiverEnergy": {
+            "fraction": 0.8,
+            "routineSprintEligible": true,
+            "decisiveSprintEligible": true,
+            "shotAccuracyPenalty": null,
+            "closeClearShotVetoFromEnergyAlone": false
+          },
+          "throughFeasible": null,
+          "aerialFeasible": null,
+          "heuristicRank": -21.9155
+        },
+        {
+          "receiver": 2,
+          "distance": 6.0,
+          "longByResearchThreshold": false,
+          "receiverSpace": 1.0,
+          "groundLaneSpace": 1.0,
+          "progress": 6,
+          "groundRisks": [
+            "marked_receiver",
+            "blocked_ground_lane"
+          ],
+          "receiverEnergy": {
+            "fraction": 0.8,
+            "routineSprintEligible": true,
+            "decisiveSprintEligible": true,
+            "shotAccuracyPenalty": null,
+            "closeClearShotVetoFromEnergyAlone": false
+          },
+          "throughFeasible": null,
+          "aerialFeasible": null,
+          "heuristicRank": 5.9
+        },
+        {
+          "receiver": 4,
+          "distance": 39.3573,
+          "longByResearchThreshold": true,
+          "receiverSpace": 23.4307,
+          "groundLaneSpace": 3.6334,
+          "progress": 35,
+          "groundRisks": [],
+          "receiverEnergy": {
+            "fraction": 0.1,
+            "routineSprintEligible": false,
+            "decisiveSprintEligible": false,
+            "shotAccuracyPenalty": null,
+            "closeClearShotVetoFromEnergyAlone": false
+          },
+          "throughFeasible": null,
+          "aerialFeasible": null,
+          "heuristicRank": 37.0643
+        }
+      ],
+      "preferredGroundReceiver": 4,
+      "passCompleted": null,
+      "turnoverOccurred": null
+    },
+    {
+      "case": "tired-receiver-is-not-a-proven-through-run-away",
+      "inputSha256": "fc27eb1edea26bdd8851361865815072ba30be835c60849c77b49206685ffd8b",
+      "assessed": true,
+      "reason": "SYNTHETIC_GEOMETRY_ONLY",
+      "energy": {
+        "fraction": 0.8,
+        "routineSprintEligible": true,
+        "decisiveSprintEligible": true,
+        "shotAccuracyPenalty": null,
+        "closeClearShotVetoFromEnergyAlone": false
+      },
+      "outlets": [
+        {
+          "receiver": 0,
+          "distance": 50.0,
+          "longByResearchThreshold": true,
+          "receiverSpace": 56.0089,
+          "groundLaneSpace": 6.0828,
+          "progress": -50,
+          "groundRisks": [],
+          "receiverEnergy": {
+            "fraction": 0.8,
+            "routineSprintEligible": true,
+            "decisiveSprintEligible": true,
+            "shotAccuracyPenalty": null,
+            "closeClearShotVetoFromEnergyAlone": false
+          },
+          "throughFeasible": null,
+          "aerialFeasible": null,
+          "heuristicRank": -49.0
+        },
+        {
+          "receiver": 1,
+          "distance": 29.1548,
+          "longByResearchThreshold": true,
+          "receiverSpace": 34.0147,
+          "groundLaneSpace": 6.0828,
+          "progress": -25,
+          "groundRisks": [],
+          "receiverEnergy": {
+            "fraction": 0.8,
+            "routineSprintEligible": true,
+            "decisiveSprintEligible": true,
+            "shotAccuracyPenalty": null,
+            "closeClearShotVetoFromEnergyAlone": false
+          },
+          "throughFeasible": null,
+          "aerialFeasible": null,
+          "heuristicRank": -21.9155
+        },
+        {
+          "receiver": 2,
+          "distance": 6.0,
+          "longByResearchThreshold": false,
+          "receiverSpace": 1.0,
+          "groundLaneSpace": 1.0,
+          "progress": 6,
+          "groundRisks": [
+            "marked_receiver",
+            "blocked_ground_lane"
+          ],
+          "receiverEnergy": {
+            "fraction": 0.8,
+            "routineSprintEligible": true,
+            "decisiveSprintEligible": true,
+            "shotAccuracyPenalty": null,
+            "closeClearShotVetoFromEnergyAlone": false
+          },
+          "throughFeasible": null,
+          "aerialFeasible": null,
+          "heuristicRank": 5.9
+        },
+        {
+          "receiver": 4,
+          "distance": 39.3573,
+          "longByResearchThreshold": true,
+          "receiverSpace": 23.4307,
+          "groundLaneSpace": 3.6334,
+          "progress": 35,
+          "groundRisks": [],
+          "receiverEnergy": {
+            "fraction": 0.1,
+            "routineSprintEligible": false,
+            "decisiveSprintEligible": false,
+            "shotAccuracyPenalty": null,
+            "closeClearShotVetoFromEnergyAlone": false
+          },
+          "throughFeasible": null,
+          "aerialFeasible": null,
+          "heuristicRank": 37.0643
+        }
+      ],
+      "preferredGroundReceiver": 4,
+      "passCompleted": null,
+      "turnoverOccurred": null
+    },
+    {
+      "case": "tired-passer-still-has-an-outlet-home",
+      "inputSha256": "1d84653c39e72a0c66cf37dadb918ea4d9d4f5e362635265275da9233e74ab06",
+      "assessed": true,
+      "reason": "SYNTHETIC_GEOMETRY_ONLY",
+      "energy": {
+        "fraction": 0.1,
+        "routineSprintEligible": false,
+        "decisiveSprintEligible": false,
+        "shotAccuracyPenalty": null,
+        "closeClearShotVetoFromEnergyAlone": false
+      },
+      "outlets": [
+        {
+          "receiver": 0,
+          "distance": 50.0,
+          "longByResearchThreshold": true,
+          "receiverSpace": 56.0089,
+          "groundLaneSpace": 6.0828,
+          "progress": -50,
+          "groundRisks": [],
+          "receiverEnergy": {
+            "fraction": 0.8,
+            "routineSprintEligible": true,
+            "decisiveSprintEligible": true,
+            "shotAccuracyPenalty": null,
+            "closeClearShotVetoFromEnergyAlone": false
+          },
+          "throughFeasible": null,
+          "aerialFeasible": null,
+          "heuristicRank": -49.0
+        },
+        {
+          "receiver": 1,
+          "distance": 29.1548,
+          "longByResearchThreshold": true,
+          "receiverSpace": 34.0147,
+          "groundLaneSpace": 6.0828,
+          "progress": -25,
+          "groundRisks": [],
+          "receiverEnergy": {
+            "fraction": 0.8,
+            "routineSprintEligible": true,
+            "decisiveSprintEligible": true,
+            "shotAccuracyPenalty": null,
+            "closeClearShotVetoFromEnergyAlone": false
+          },
+          "throughFeasible": null,
+          "aerialFeasible": null,
+          "heuristicRank": -21.9155
+        },
+        {
+          "receiver": 2,
+          "distance": 6.0,
+          "longByResearchThreshold": false,
+          "receiverSpace": 1.0,
+          "groundLaneSpace": 1.0,
+          "progress": 6,
+          "groundRisks": [
+            "marked_receiver",
+            "blocked_ground_lane"
+          ],
+          "receiverEnergy": {
+            "fraction": 0.8,
+            "routineSprintEligible": true,
+            "decisiveSprintEligible": true,
+            "shotAccuracyPenalty": null,
+            "closeClearShotVetoFromEnergyAlone": false
+          },
+          "throughFeasible": null,
+          "aerialFeasible": null,
+          "heuristicRank": 5.9
+        },
+        {
+          "receiver": 4,
+          "distance": 39.3573,
+          "longByResearchThreshold": true,
+          "receiverSpace": 23.4307,
+          "groundLaneSpace": 3.6334,
+          "progress": 35,
+          "groundRisks": [],
+          "receiverEnergy": {
+            "fraction": 0.8,
+            "routineSprintEligible": true,
+            "decisiveSprintEligible": true,
+            "shotAccuracyPenalty": null,
+            "closeClearShotVetoFromEnergyAlone": false
+          },
+          "throughFeasible": null,
+          "aerialFeasible": null,
+          "heuristicRank": 37.0643
+        }
+      ],
+      "preferredGroundReceiver": 4,
+      "passCompleted": null,
+      "turnoverOccurred": null
+    },
+    {
+      "case": "tired-passer-still-has-an-outlet-away",
+      "inputSha256": "08567e1570ac5007eaa94406ed982c0c8e6b8191a7d3e3a5d7ad984dfb7fa441",
+      "assessed": true,
+      "reason": "SYNTHETIC_GEOMETRY_ONLY",
+      "energy": {
+        "fraction": 0.1,
+        "routineSprintEligible": false,
+        "decisiveSprintEligible": false,
+        "shotAccuracyPenalty": null,
+        "closeClearShotVetoFromEnergyAlone": false
+      },
+      "outlets": [
+        {
+          "receiver": 0,
+          "distance": 50.0,
+          "longByResearchThreshold": true,
+          "receiverSpace": 56.0089,
+          "groundLaneSpace": 6.0828,
+          "progress": -50,
+          "groundRisks": [],
+          "receiverEnergy": {
+            "fraction": 0.8,
+            "routineSprintEligible": true,
+            "decisiveSprintEligible": true,
+            "shotAccuracyPenalty": null,
+            "closeClearShotVetoFromEnergyAlone": false
+          },
+          "throughFeasible": null,
+          "aerialFeasible": null,
+          "heuristicRank": -49.0
+        },
+        {
+          "receiver": 1,
+          "distance": 29.1548,
+          "longByResearchThreshold": true,
+          "receiverSpace": 34.0147,
+          "groundLaneSpace": 6.0828,
+          "progress": -25,
+          "groundRisks": [],
+          "receiverEnergy": {
+            "fraction": 0.8,
+            "routineSprintEligible": true,
+            "decisiveSprintEligible": true,
+            "shotAccuracyPenalty": null,
+            "closeClearShotVetoFromEnergyAlone": false
+          },
+          "throughFeasible": null,
+          "aerialFeasible": null,
+          "heuristicRank": -21.9155
+        },
+        {
+          "receiver": 2,
+          "distance": 6.0,
+          "longByResearchThreshold": false,
+          "receiverSpace": 1.0,
+          "groundLaneSpace": 1.0,
+          "progress": 6,
+          "groundRisks": [
+            "marked_receiver",
+            "blocked_ground_lane"
+          ],
+          "receiverEnergy": {
+            "fraction": 0.8,
+            "routineSprintEligible": true,
+            "decisiveSprintEligible": true,
+            "shotAccuracyPenalty": null,
+            "closeClearShotVetoFromEnergyAlone": false
+          },
+          "throughFeasible": null,
+          "aerialFeasible": null,
+          "heuristicRank": 5.9
+        },
+        {
+          "receiver": 4,
+          "distance": 39.3573,
+          "longByResearchThreshold": true,
+          "receiverSpace": 23.4307,
+          "groundLaneSpace": 3.6334,
+          "progress": 35,
+          "groundRisks": [],
+          "receiverEnergy": {
+            "fraction": 0.8,
+            "routineSprintEligible": true,
+            "decisiveSprintEligible": true,
+            "shotAccuracyPenalty": null,
+            "closeClearShotVetoFromEnergyAlone": false
+          },
+          "throughFeasible": null,
+          "aerialFeasible": null,
+          "heuristicRank": 37.0643
+        }
+      ],
+      "preferredGroundReceiver": 4,
+      "passCompleted": null,
+      "turnoverOccurred": null
+    }
+  ],
+  "physicalInputs": [
+    {
+      "fixture": "observed-fwd1-fitness-kickoff.json",
+      "sha256": "3da1735f5e73d443a42a884f1a77fa3c9a313b75c1c910a1f2137861ad319254",
+      "assessed": false,
+      "reason": "UNVERIFIED_FRAME",
+      "energy": null,
+      "outlets": [],
+      "preferredGroundReceiver": null,
+      "passCompleted": null,
+      "turnoverOccurred": null
+    },
+    {
+      "fixture": "observed-live-away-open-play.json",
+      "sha256": "6efef0bc9e20c1497759b628403170ceff7e711ce56533e0a6333a896a34d11f",
+      "assessed": false,
+      "reason": "UNVERIFIED_FRAME",
+      "energy": null,
+      "outlets": [],
+      "preferredGroundReceiver": null,
+      "passCompleted": null,
+      "turnoverOccurred": null
+    }
+  ],
+  "limits": [
+    "Thresholds and ranking are uncalibrated research choices, not engine physics.",
+    "No shot-accuracy penalty is known; tired players retain close clear shots.",
+    "THROUGH/AERIAL flight, receiver arrival and dynamic interceptions are unknown.",
+    "Unknown physical frames are ungraded, not zero-risk or failed gameplay."
+  ]
+}

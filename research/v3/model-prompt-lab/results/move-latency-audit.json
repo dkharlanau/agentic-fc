@@ -1,0 +1,1128 @@
+{
+  "kind": "Offline archived MOVE/latency audit; no fresh inference",
+  "quantiles": "Hyndman-Fan type 7; tiny, unequal samples, no causal model ranking",
+  "deadline": {
+    "1000MsUsedOnlyAsReference": true,
+    "verifiedGameEnforcement": null
+  },
+  "sources": [
+    {
+      "path": "research/v3/possession-probes.json",
+      "gitCommit": null,
+      "sha256": "e87b644c432fa0a29685448ef0e887fb8f4b4995a693a943db60c03ecf92a675"
+    },
+    {
+      "path": "research/v3/fwd1-direct-model-probes.json",
+      "gitCommit": null,
+      "sha256": "f0ccb1f29458b8123e81d46e7c54f221a99e871440f3c995c4bd8a0928cb1976"
+    },
+    {
+      "path": "research/v3/fwd1-sonnet-probes.json",
+      "gitCommit": null,
+      "sha256": "7c6c7b4c21197705a28dd07f66760e84ac6a1d44e8c0823d92ba658114e76e46"
+    },
+    {
+      "path": "research/v3/role-package-r1/model-eval-v2.json",
+      "gitCommit": null,
+      "sha256": "e0d6b87003b8c65e735499923706f61e21006c469f77e81e0eb9b66b0c5b4e01"
+    },
+    {
+      "path": "research/v3/role-package-r1/model-eval-v3.json",
+      "gitCommit": null,
+      "sha256": "b3fe8a1fd24cabdb5c3eb1153c3ef60e28dce2b886c8e7fce7b21bca472e07eb"
+    },
+    {
+      "path": "research/v3/allcash-benchmark/gk-route.json",
+      "gitCommit": null,
+      "sha256": "f2850826b2aa7b8cd56e0857ba45bfb2096e650331717c64106c694052f4b8f9"
+    },
+    {
+      "path": "research/v3/allcash-benchmark/fast-route.json",
+      "gitCommit": null,
+      "sha256": "8065053e1c39f2a3aa628c28a44f88ab43282bc6c5a07f8386f39a4a2a10e419"
+    },
+    {
+      "path": "research/v3/ranked-batch-12.json",
+      "gitCommit": "3cdf5a76e5e87b103c631f829af80983f6991667",
+      "sha256": "34eb92864281e4be52cf043fbe09d511b49bdab0f981b605257b135d9a283d31"
+    },
+    {
+      "path": "research/v3/recovery/bundle.json",
+      "gitCommit": null,
+      "sha256": "5dedbda8af69b6e4d4424d6f230f21dc74ab2f267ef5ecae26323e88a7eb5f96"
+    },
+    {
+      "path": "research/v3/ranked-batch-13.json",
+      "gitCommit": "cbde2741594864155feb48eb289ff4e35ef0be04",
+      "sha256": "4d2e2141aafc29687bf1d7682c1daaf67efb78f9e25fe9c56ef0b435f5429f95"
+    },
+    {
+      "path": "research/v3/ranked-batch-14.json",
+      "gitCommit": "cbde2741594864155feb48eb289ff4e35ef0be04",
+      "sha256": "c2ec2ca249aac1bd4a312c8176bb50395bd6fe58a6fda106257893ff8ae6baae"
+    },
+    {
+      "path": "research/v3/ranked-batch-13-analysis.ru.md",
+      "gitCommit": "cbde2741594864155feb48eb289ff4e35ef0be04",
+      "sha256": "68b70c1619f97caf4e68a22dcd68624640bae9850e021fd6feb38215304c4e0e"
+    },
+    {
+      "path": "HANDOFF.md",
+      "gitCommit": "cbde2741594864155feb48eb289ff4e35ef0be04",
+      "sha256": "9224ffd31e95666be95a5143f4e4a332b3f0c428b442e5bb1fec5499ade2798f"
+    }
+  ],
+  "archivedProbeRows": [
+    {
+      "source": "possession-probes.json",
+      "sampleOrdinal": 1,
+      "role": "fwd2",
+      "model": "nova2",
+      "prompt": "schema-clean/fwd2.txt",
+      "promptSha256": "03ed589df3ebe560294ac54966bfc27156aa27391c8079dae5aab93ba096a13f",
+      "case": "home-clear-shot",
+      "action": "SHOOT",
+      "strictValid": true,
+      "formatEvidence": "saved full-message audit; full text not re-parsed",
+      "categoryAgreement": true,
+      "usable": true,
+      "latencyMs": 645,
+      "inputTokens": 1804,
+      "outputTokens": 37
+    },
+    {
+      "source": "possession-probes.json",
+      "sampleOrdinal": 2,
+      "role": "fwd2",
+      "model": "nova2",
+      "prompt": "schema-clean/fwd2.txt",
+      "promptSha256": "03ed589df3ebe560294ac54966bfc27156aa27391c8079dae5aab93ba096a13f",
+      "case": "away-clear-shot",
+      "action": "MOVE_TO",
+      "strictValid": true,
+      "formatEvidence": "saved full-message audit; full text not re-parsed",
+      "categoryAgreement": false,
+      "usable": false,
+      "latencyMs": 600,
+      "inputTokens": 1802,
+      "outputTokens": 34
+    },
+    {
+      "source": "possession-probes.json",
+      "sampleOrdinal": 3,
+      "role": "fwd2",
+      "model": "nova2",
+      "prompt": "schema-clean/fwd2.txt",
+      "promptSha256": "03ed589df3ebe560294ac54966bfc27156aa27391c8079dae5aab93ba096a13f",
+      "case": "home-teammate-possession",
+      "action": "MOVE_TO",
+      "strictValid": true,
+      "formatEvidence": "saved full-message audit; full text not re-parsed",
+      "categoryAgreement": true,
+      "usable": true,
+      "latencyMs": 902,
+      "inputTokens": 1805,
+      "outputTokens": 40
+    },
+    {
+      "source": "possession-probes.json",
+      "sampleOrdinal": 4,
+      "role": "fwd2",
+      "model": "nova2",
+      "prompt": "schema-clean/fwd2.txt",
+      "promptSha256": "03ed589df3ebe560294ac54966bfc27156aa27391c8079dae5aab93ba096a13f",
+      "case": "away-clear-shot",
+      "action": "MOVE_TO",
+      "strictValid": true,
+      "formatEvidence": "saved full-message audit; full text not re-parsed",
+      "categoryAgreement": false,
+      "usable": false,
+      "latencyMs": 627,
+      "inputTokens": 1802,
+      "outputTokens": 40
+    },
+    {
+      "source": "possession-probes.json",
+      "sampleOrdinal": 5,
+      "role": "fwd2",
+      "model": "haiku",
+      "prompt": "schema-clean/fwd2.txt",
+      "promptSha256": "03ed589df3ebe560294ac54966bfc27156aa27391c8079dae5aab93ba096a13f",
+      "case": "away-clear-shot",
+      "action": "SHOOT",
+      "strictValid": true,
+      "formatEvidence": "saved full-message audit; full text not re-parsed",
+      "categoryAgreement": true,
+      "usable": true,
+      "latencyMs": 1347,
+      "inputTokens": 2239,
+      "outputTokens": 43
+    },
+    {
+      "source": "possession-probes.json",
+      "sampleOrdinal": 6,
+      "role": "fwd2",
+      "model": "haiku",
+      "prompt": "schema-clean/fwd2.txt",
+      "promptSha256": "03ed589df3ebe560294ac54966bfc27156aa27391c8079dae5aab93ba096a13f",
+      "case": "home-clear-shot",
+      "action": "SHOOT",
+      "strictValid": true,
+      "formatEvidence": "saved full-message audit; full text not re-parsed",
+      "categoryAgreement": true,
+      "usable": true,
+      "latencyMs": 1393,
+      "inputTokens": 2241,
+      "outputTokens": 43
+    },
+    {
+      "source": "possession-probes.json",
+      "sampleOrdinal": 7,
+      "role": "fwd2",
+      "model": "haiku",
+      "prompt": "schema-clean/fwd2.txt",
+      "promptSha256": "03ed589df3ebe560294ac54966bfc27156aa27391c8079dae5aab93ba096a13f",
+      "case": "home-teammate-possession",
+      "action": "MOVE_TO",
+      "strictValid": true,
+      "formatEvidence": "saved full-message audit; full text not re-parsed",
+      "categoryAgreement": true,
+      "usable": true,
+      "latencyMs": 1329,
+      "inputTokens": 2242,
+      "outputTokens": 52
+    },
+    {
+      "source": "fwd1-direct-model-probes.json",
+      "sampleOrdinal": 1,
+      "role": "fwd1",
+      "model": "nova2",
+      "prompt": "schema-clean/fwd1.txt",
+      "promptSha256": "ee4c92203e6fcbc86d14329913933ba68d8cd2092947bebd2c66d5ed14c17b15",
+      "case": "home-clear-shot",
+      "action": "SHOOT",
+      "strictValid": true,
+      "formatEvidence": "saved full-message audit; full text not re-parsed",
+      "categoryAgreement": true,
+      "usable": true,
+      "latencyMs": 724,
+      "inputTokens": 1751,
+      "outputTokens": 37
+    },
+    {
+      "source": "fwd1-direct-model-probes.json",
+      "sampleOrdinal": 2,
+      "role": "fwd1",
+      "model": "nova2",
+      "prompt": "schema-clean/fwd1.txt",
+      "promptSha256": "ee4c92203e6fcbc86d14329913933ba68d8cd2092947bebd2c66d5ed14c17b15",
+      "case": "away-clear-shot",
+      "action": "CLEAR_OVERRIDE",
+      "strictValid": true,
+      "formatEvidence": "saved full-message audit; full text not re-parsed",
+      "categoryAgreement": false,
+      "usable": false,
+      "latencyMs": 655,
+      "inputTokens": 1751,
+      "outputTokens": 22
+    },
+    {
+      "source": "fwd1-direct-model-probes.json",
+      "sampleOrdinal": 3,
+      "role": "fwd1",
+      "model": "nova2",
+      "prompt": "schema-clean/fwd1.txt",
+      "promptSha256": "ee4c92203e6fcbc86d14329913933ba68d8cd2092947bebd2c66d5ed14c17b15",
+      "case": "home-teammate-possession",
+      "action": "MOVE_TO",
+      "strictValid": true,
+      "formatEvidence": "saved full-message audit; full text not re-parsed",
+      "categoryAgreement": true,
+      "usable": true,
+      "latencyMs": 611,
+      "inputTokens": 1751,
+      "outputTokens": 40
+    },
+    {
+      "source": "fwd1-direct-model-probes.json",
+      "sampleOrdinal": 4,
+      "role": "fwd1",
+      "model": "haiku",
+      "prompt": "schema-clean/fwd1.txt",
+      "promptSha256": "ee4c92203e6fcbc86d14329913933ba68d8cd2092947bebd2c66d5ed14c17b15",
+      "case": "home-clear-shot",
+      "action": "SHOOT",
+      "strictValid": true,
+      "formatEvidence": "saved full-message audit; full text not re-parsed",
+      "categoryAgreement": true,
+      "usable": true,
+      "latencyMs": 1364,
+      "inputTokens": 1993,
+      "outputTokens": 42
+    },
+    {
+      "source": "fwd1-direct-model-probes.json",
+      "sampleOrdinal": 5,
+      "role": "fwd1",
+      "model": "haiku",
+      "prompt": "schema-clean/fwd1.txt",
+      "promptSha256": "ee4c92203e6fcbc86d14329913933ba68d8cd2092947bebd2c66d5ed14c17b15",
+      "case": "away-clear-shot",
+      "action": "SHOOT",
+      "strictValid": false,
+      "formatEvidence": "saved full-message audit; full text not re-parsed",
+      "categoryAgreement": true,
+      "usable": false,
+      "latencyMs": 3119,
+      "inputTokens": 1991,
+      "outputTokens": 178
+    },
+    {
+      "source": "fwd1-direct-model-probes.json",
+      "sampleOrdinal": 6,
+      "role": "fwd1",
+      "model": "haiku",
+      "prompt": "schema-clean/fwd1.txt",
+      "promptSha256": "ee4c92203e6fcbc86d14329913933ba68d8cd2092947bebd2c66d5ed14c17b15",
+      "case": "home-teammate-possession",
+      "action": "MOVE_TO",
+      "strictValid": true,
+      "formatEvidence": "saved full-message audit; full text not re-parsed",
+      "categoryAgreement": true,
+      "usable": true,
+      "latencyMs": 1397,
+      "inputTokens": 1994,
+      "outputTokens": 52
+    },
+    {
+      "source": "fwd1-sonnet-probes.json",
+      "sampleOrdinal": 1,
+      "role": "fwd1",
+      "model": "sonnet",
+      "prompt": "schema-clean/fwd1.txt",
+      "promptSha256": "ee4c92203e6fcbc86d14329913933ba68d8cd2092947bebd2c66d5ed14c17b15",
+      "case": "home-clear-shot",
+      "action": "SHOOT",
+      "strictValid": true,
+      "formatEvidence": "saved full-message audit; full text not re-parsed",
+      "categoryAgreement": true,
+      "usable": true,
+      "latencyMs": 1061,
+      "inputTokens": 1994,
+      "outputTokens": 37
+    },
+    {
+      "source": "fwd1-sonnet-probes.json",
+      "sampleOrdinal": 2,
+      "role": "fwd1",
+      "model": "sonnet",
+      "prompt": "schema-clean/fwd1.txt",
+      "promptSha256": "ee4c92203e6fcbc86d14329913933ba68d8cd2092947bebd2c66d5ed14c17b15",
+      "case": "away-clear-shot",
+      "action": "SHOOT",
+      "strictValid": false,
+      "formatEvidence": "saved full-message audit; full text not re-parsed",
+      "categoryAgreement": true,
+      "usable": false,
+      "latencyMs": 4687,
+      "inputTokens": 1992,
+      "outputTokens": 363
+    },
+    {
+      "source": "fwd1-sonnet-probes.json",
+      "sampleOrdinal": 3,
+      "role": "fwd1",
+      "model": "sonnet",
+      "prompt": "schema-clean/fwd1.txt",
+      "promptSha256": "ee4c92203e6fcbc86d14329913933ba68d8cd2092947bebd2c66d5ed14c17b15",
+      "case": "home-teammate-possession",
+      "action": "MOVE_TO",
+      "strictValid": false,
+      "formatEvidence": "saved full-message audit; full text not re-parsed",
+      "categoryAgreement": true,
+      "usable": false,
+      "latencyMs": 4272,
+      "inputTokens": 1995,
+      "outputTokens": 299
+    },
+    {
+      "source": "fwd1-sonnet-probes.json",
+      "sampleOrdinal": 4,
+      "role": "fwd1",
+      "model": "sonnet",
+      "prompt": "json-contract/fwd1.txt",
+      "promptSha256": "892c97611df1073eba7a98456cb51aa8854e5180b5830030db47d44e5176b32d",
+      "case": "away-clear-shot",
+      "action": "MOVE_TO",
+      "strictValid": true,
+      "formatEvidence": "saved full-message audit; full text not re-parsed",
+      "categoryAgreement": false,
+      "usable": false,
+      "latencyMs": 4593,
+      "inputTokens": 2139,
+      "outputTokens": 47
+    }
+  ],
+  "probeComparisons": [
+    {
+      "role": "fwd1",
+      "model": "haiku",
+      "prompt": "schema-clean/fwd1.txt",
+      "n": 3,
+      "valid": 2,
+      "usable": 2,
+      "reportedPlaygroundMs": {
+        "n": 3,
+        "p50": 1397.0,
+        "p95": 2946.8,
+        "max": 3119
+      },
+      "over1000MsReferenceCount": 3
+    },
+    {
+      "role": "fwd1",
+      "model": "nova2",
+      "prompt": "schema-clean/fwd1.txt",
+      "n": 3,
+      "valid": 3,
+      "usable": 2,
+      "reportedPlaygroundMs": {
+        "n": 3,
+        "p50": 655.0,
+        "p95": 717.1,
+        "max": 724
+      },
+      "over1000MsReferenceCount": 0
+    },
+    {
+      "role": "fwd1",
+      "model": "sonnet",
+      "prompt": "json-contract/fwd1.txt",
+      "n": 1,
+      "valid": 1,
+      "usable": 0,
+      "reportedPlaygroundMs": {
+        "n": 1,
+        "p50": 4593.0,
+        "p95": 4593.0,
+        "max": 4593
+      },
+      "over1000MsReferenceCount": 1
+    },
+    {
+      "role": "fwd1",
+      "model": "sonnet",
+      "prompt": "schema-clean/fwd1.txt",
+      "n": 3,
+      "valid": 1,
+      "usable": 1,
+      "reportedPlaygroundMs": {
+        "n": 3,
+        "p50": 4272.0,
+        "p95": 4645.5,
+        "max": 4687
+      },
+      "over1000MsReferenceCount": 3
+    },
+    {
+      "role": "fwd2",
+      "model": "haiku",
+      "prompt": "schema-clean/fwd2.txt",
+      "n": 3,
+      "valid": 3,
+      "usable": 3,
+      "reportedPlaygroundMs": {
+        "n": 3,
+        "p50": 1347.0,
+        "p95": 1388.4,
+        "max": 1393
+      },
+      "over1000MsReferenceCount": 3
+    },
+    {
+      "role": "fwd2",
+      "model": "nova2",
+      "prompt": "schema-clean/fwd2.txt",
+      "n": 4,
+      "valid": 4,
+      "usable": 2,
+      "reportedPlaygroundMs": {
+        "n": 4,
+        "p50": 636.0,
+        "p95": 863.45,
+        "max": 902
+      },
+      "over1000MsReferenceCount": 0
+    }
+  ],
+  "historyPairs": [
+    {
+      "revision": "v2",
+      "role": "gk",
+      "withoutHistory": {
+        "inputTokens": 1977,
+        "wallMs": 439,
+        "strictValid": false,
+        "originalPolicyGatePassed": false,
+        "action": null
+      },
+      "withFourOldPairs": {
+        "inputTokens": 5629,
+        "wallMs": 711,
+        "strictValid": true,
+        "originalPolicyGatePassed": true,
+        "action": "CLEAR_OVERRIDE"
+      },
+      "inputTokenRatio": 2.847
+    },
+    {
+      "revision": "v2",
+      "role": "def",
+      "withoutHistory": {
+        "inputTokens": 2012,
+        "wallMs": 428,
+        "strictValid": false,
+        "originalPolicyGatePassed": false,
+        "action": null
+      },
+      "withFourOldPairs": {
+        "inputTokens": 5644,
+        "wallMs": 788,
+        "strictValid": true,
+        "originalPolicyGatePassed": false,
+        "action": "PASS"
+      },
+      "inputTokenRatio": 2.805
+    },
+    {
+      "revision": "v2",
+      "role": "mid",
+      "withoutHistory": {
+        "inputTokens": 2012,
+        "wallMs": 671,
+        "strictValid": false,
+        "originalPolicyGatePassed": false,
+        "action": null
+      },
+      "withFourOldPairs": {
+        "inputTokens": 5644,
+        "wallMs": 739,
+        "strictValid": true,
+        "originalPolicyGatePassed": false,
+        "action": "PASS"
+      },
+      "inputTokenRatio": 2.805
+    },
+    {
+      "revision": "v2",
+      "role": "fwd1",
+      "withoutHistory": {
+        "inputTokens": 2026,
+        "wallMs": 467,
+        "strictValid": false,
+        "originalPolicyGatePassed": false,
+        "action": null
+      },
+      "withFourOldPairs": {
+        "inputTokens": 5658,
+        "wallMs": 707,
+        "strictValid": true,
+        "originalPolicyGatePassed": false,
+        "action": "PASS"
+      },
+      "inputTokenRatio": 2.793
+    },
+    {
+      "revision": "v2",
+      "role": "fwd2",
+      "withoutHistory": {
+        "inputTokens": 2203,
+        "wallMs": 2471,
+        "strictValid": true,
+        "originalPolicyGatePassed": false,
+        "action": "SHOOT"
+      },
+      "withFourOldPairs": {
+        "inputTokens": 6059,
+        "wallMs": 1732,
+        "strictValid": true,
+        "originalPolicyGatePassed": true,
+        "action": "CLEAR_OVERRIDE"
+      },
+      "inputTokenRatio": 2.75
+    },
+    {
+      "revision": "v3",
+      "role": "gk",
+      "withoutHistory": {
+        "inputTokens": 2139,
+        "wallMs": 617,
+        "strictValid": false,
+        "originalPolicyGatePassed": false,
+        "action": null
+      },
+      "withFourOldPairs": {
+        "inputTokens": 5791,
+        "wallMs": 596,
+        "strictValid": true,
+        "originalPolicyGatePassed": true,
+        "action": "CLEAR_OVERRIDE"
+      },
+      "inputTokenRatio": 2.707
+    },
+    {
+      "revision": "v3",
+      "role": "def",
+      "withoutHistory": {
+        "inputTokens": 2174,
+        "wallMs": 1159,
+        "strictValid": false,
+        "originalPolicyGatePassed": false,
+        "action": null
+      },
+      "withFourOldPairs": {
+        "inputTokens": 5806,
+        "wallMs": 805,
+        "strictValid": true,
+        "originalPolicyGatePassed": false,
+        "action": "PASS"
+      },
+      "inputTokenRatio": 2.671
+    },
+    {
+      "revision": "v3",
+      "role": "mid",
+      "withoutHistory": {
+        "inputTokens": 2174,
+        "wallMs": 625,
+        "strictValid": false,
+        "originalPolicyGatePassed": false,
+        "action": null
+      },
+      "withFourOldPairs": {
+        "inputTokens": 5806,
+        "wallMs": 696,
+        "strictValid": true,
+        "originalPolicyGatePassed": false,
+        "action": "PASS"
+      },
+      "inputTokenRatio": 2.671
+    },
+    {
+      "revision": "v3",
+      "role": "fwd1",
+      "withoutHistory": {
+        "inputTokens": 2188,
+        "wallMs": 575,
+        "strictValid": false,
+        "originalPolicyGatePassed": false,
+        "action": null
+      },
+      "withFourOldPairs": {
+        "inputTokens": 5820,
+        "wallMs": 903,
+        "strictValid": true,
+        "originalPolicyGatePassed": false,
+        "action": "PASS"
+      },
+      "inputTokenRatio": 2.66
+    },
+    {
+      "revision": "v3",
+      "role": "fwd2",
+      "withoutHistory": {
+        "inputTokens": 2382,
+        "wallMs": 1415,
+        "strictValid": false,
+        "originalPolicyGatePassed": false,
+        "action": null
+      },
+      "withFourOldPairs": {
+        "inputTokens": 6238,
+        "wallMs": 1233,
+        "strictValid": true,
+        "originalPolicyGatePassed": true,
+        "action": "CLEAR_OVERRIDE"
+      },
+      "inputTokenRatio": 2.619
+    }
+  ],
+  "nativeGk": {
+    "timingBoundary": "Native InvokeHarness; CloudShell path, not game server",
+    "sameSession": true,
+    "calls": [
+      {
+        "ordinal": 1,
+        "headersMs": 1394.428,
+        "firstEventMs": 2195.257,
+        "completeMs": 2389.916,
+        "reportedModelMs": 897,
+        "wallMinusReportedModelMs": 1492.916,
+        "strictValid": false,
+        "inputTokens": 2090,
+        "outputTokens": 46,
+        "firstTextMs": null,
+        "messageStopMs": null,
+        "serverApplyMs": null
+      },
+      {
+        "ordinal": 2,
+        "headersMs": 331.331,
+        "firstEventMs": 949.346,
+        "completeMs": 1039.474,
+        "reportedModelMs": 644,
+        "wallMinusReportedModelMs": 395.474,
+        "strictValid": false,
+        "inputTokens": 3373,
+        "outputTokens": 46,
+        "firstTextMs": null,
+        "messageStopMs": null,
+        "serverApplyMs": null
+      }
+    ],
+    "limit": "Wall-minus-model is an unlocalized residual, not network latency. Both full texts violate strict JSON."
+  },
+  "modelFreeFwd2": {
+    "timingBoundary": "Native fast Runtime timing split; CloudShell, not game server",
+    "calls": [
+      {
+        "ordinal": 1,
+        "headersMs": 2909.918,
+        "completeMs": 2910.036,
+        "bodyReadAfterHeadersMs": 0.118
+      },
+      {
+        "ordinal": 2,
+        "headersMs": 101.426,
+        "completeMs": 101.596,
+        "bodyReadAfterHeadersMs": 0.17
+      },
+      {
+        "ordinal": 3,
+        "headersMs": 108.86,
+        "completeMs": 109.155,
+        "bodyReadAfterHeadersMs": 0.295
+      },
+      {
+        "ordinal": 4,
+        "headersMs": 104.379,
+        "completeMs": 104.661,
+        "bodyReadAfterHeadersMs": 0.282
+      }
+    ],
+    "subsequentCallMs": {
+      "n": 3,
+      "p50": 104.661,
+      "p95": 108.706,
+      "max": 109.155
+    },
+    "limit": "First call is observed; infrastructure cold-start causation unproven."
+  },
+  "batch12": {
+    "sourceCommit": "3cdf5a76e5e87b103c631f829af80983f6991667",
+    "completedGames": 10,
+    "additionalIncomingMatchesExcluded": true,
+    "games": [
+      {
+        "alias": "batch12-live-01",
+        "side": "HOME",
+        "scoreFor": 0,
+        "scoreAgainst": 1,
+        "teamReportMeanMs": 1850,
+        "commands": 57,
+        "histogramReconciled": true,
+        "movePct": 36.842,
+        "passCount": 0,
+        "shootCount": 2,
+        "perInvocationP50Ms": null,
+        "perInvocationP95Ms": null
+      },
+      {
+        "alias": "batch12-live-02",
+        "side": "HOME",
+        "scoreFor": 2,
+        "scoreAgainst": 0,
+        "teamReportMeanMs": 1018,
+        "commands": 370,
+        "histogramReconciled": true,
+        "movePct": 82.432,
+        "passCount": 8,
+        "shootCount": 5,
+        "perInvocationP50Ms": null,
+        "perInvocationP95Ms": null
+      },
+      {
+        "alias": "batch12-live-03",
+        "side": "HOME",
+        "scoreFor": 1,
+        "scoreAgainst": 0,
+        "teamReportMeanMs": 74,
+        "commands": 335,
+        "histogramReconciled": true,
+        "movePct": 71.94,
+        "passCount": 3,
+        "shootCount": 6,
+        "perInvocationP50Ms": null,
+        "perInvocationP95Ms": null
+      },
+      {
+        "alias": "batch12-live-04",
+        "side": "HOME",
+        "scoreFor": 2,
+        "scoreAgainst": 3,
+        "teamReportMeanMs": 1048,
+        "commands": 284,
+        "histogramReconciled": true,
+        "movePct": 1.408,
+        "passCount": 0,
+        "shootCount": 0,
+        "perInvocationP50Ms": null,
+        "perInvocationP95Ms": null
+      },
+      {
+        "alias": "batch12-live-05",
+        "side": "HOME",
+        "scoreFor": 1,
+        "scoreAgainst": 0,
+        "teamReportMeanMs": 81,
+        "commands": 333,
+        "histogramReconciled": true,
+        "movePct": 79.58,
+        "passCount": 27,
+        "shootCount": 0,
+        "perInvocationP50Ms": null,
+        "perInvocationP95Ms": null
+      },
+      {
+        "alias": "batch12-live-06",
+        "side": "HOME",
+        "scoreFor": 3,
+        "scoreAgainst": 0,
+        "teamReportMeanMs": 885,
+        "commands": 405,
+        "histogramReconciled": true,
+        "movePct": 38.765,
+        "passCount": 62,
+        "shootCount": 1,
+        "perInvocationP50Ms": null,
+        "perInvocationP95Ms": null
+      },
+      {
+        "alias": "batch12-live-07",
+        "side": "HOME",
+        "scoreFor": 1,
+        "scoreAgainst": 2,
+        "teamReportMeanMs": 1,
+        "commands": 11,
+        "histogramReconciled": true,
+        "movePct": 0.0,
+        "passCount": 0,
+        "shootCount": 0,
+        "perInvocationP50Ms": null,
+        "perInvocationP95Ms": null
+      },
+      {
+        "alias": "batch12-live-08",
+        "side": "HOME",
+        "scoreFor": 3,
+        "scoreAgainst": 0,
+        "teamReportMeanMs": 880,
+        "commands": 322,
+        "histogramReconciled": true,
+        "movePct": 38.199,
+        "passCount": 0,
+        "shootCount": 2,
+        "perInvocationP50Ms": null,
+        "perInvocationP95Ms": null
+      },
+      {
+        "alias": "batch12-live-09",
+        "side": "HOME",
+        "scoreFor": 3,
+        "scoreAgainst": 0,
+        "teamReportMeanMs": 529,
+        "commands": 405,
+        "histogramReconciled": true,
+        "movePct": 74.568,
+        "passCount": 7,
+        "shootCount": 0,
+        "perInvocationP50Ms": null,
+        "perInvocationP95Ms": null
+      },
+      {
+        "alias": "batch12-live-10",
+        "side": "HOME",
+        "scoreFor": 0,
+        "scoreAgainst": 1,
+        "teamReportMeanMs": 1059,
+        "commands": 335,
+        "histogramReconciled": true,
+        "movePct": 79.403,
+        "passCount": 11,
+        "shootCount": 3,
+        "perInvocationP50Ms": null,
+        "perInvocationP95Ms": null
+      }
+    ]
+  },
+  "savedOriginalHarnessConfiguration": [
+    {
+      "role": "gk",
+      "sourceVersion": "13",
+      "truncation": {
+        "strategy": "sliding_window",
+        "config": {
+          "slidingWindow": {
+            "messagesCount": 10
+          }
+        }
+      },
+      "maxIterations": 75,
+      "timeoutSeconds": 3600,
+      "toolCount": 0,
+      "inferenceConfig": null
+    },
+    {
+      "role": "def",
+      "sourceVersion": "19",
+      "truncation": {
+        "strategy": "sliding_window",
+        "config": {
+          "slidingWindow": {
+            "messagesCount": 10
+          }
+        }
+      },
+      "maxIterations": 75,
+      "timeoutSeconds": 3600,
+      "toolCount": 0,
+      "inferenceConfig": null
+    },
+    {
+      "role": "mid",
+      "sourceVersion": "15",
+      "truncation": {
+        "strategy": "sliding_window",
+        "config": {
+          "slidingWindow": {
+            "messagesCount": 10
+          }
+        }
+      },
+      "maxIterations": 75,
+      "timeoutSeconds": 3600,
+      "toolCount": 0,
+      "inferenceConfig": null
+    },
+    {
+      "role": "fwd1",
+      "sourceVersion": "15",
+      "truncation": {
+        "strategy": "sliding_window",
+        "config": {
+          "slidingWindow": {
+            "messagesCount": 10
+          }
+        }
+      },
+      "maxIterations": 75,
+      "timeoutSeconds": 3600,
+      "toolCount": 0,
+      "inferenceConfig": null
+    },
+    {
+      "role": "fwd2",
+      "sourceVersion": "14",
+      "truncation": {
+        "strategy": "sliding_window",
+        "config": {
+          "slidingWindow": {
+            "messagesCount": 10
+          }
+        }
+      },
+      "maxIterations": 75,
+      "timeoutSeconds": 3600,
+      "toolCount": 0,
+      "inferenceConfig": null
+    }
+  ],
+  "latestLiveUpdate": {
+    "sourceCommit": "cbde2741594864155feb48eb289ff4e35ef0be04",
+    "p01": {
+      "status": "rejected_at_paired_screen_reported_by_game_flow",
+      "sourceStatement": "rejected at paired screen; not installed",
+      "installed": false,
+      "rawReceiptsAvailableLocally": false,
+      "testedRequestHashesVerified": false,
+      "caseFailures": null,
+      "fullResponseP50Ms": null,
+      "fullResponseP95Ms": null,
+      "numberOfExecutedModelCalls": null,
+      "independentlyRegraded": false,
+      "eligibleForPromotion": false
+    },
+    "batch13": {
+      "games": [
+        {
+          "alias": "batch13-game-1",
+          "result": "WIN",
+          "scoreFor": 2,
+          "scoreAgainst": 1,
+          "shotsFor": 7,
+          "shotsAgainst": 1,
+          "onTargetFor": 2,
+          "onTargetAgainst": 1,
+          "teamReportMeanMs": 64,
+          "roleReportMeansMs": [
+            75,
+            72,
+            74,
+            74,
+            72
+          ],
+          "teamCommands": 405,
+          "actionsReported": {
+            "MOVE": 352,
+            "INTERCEPT": 24,
+            "CLEAR": 16,
+            "PASS": 7,
+            "GK_DIST": 5,
+            "PRESS": 1
+          }
+        },
+        {
+          "alias": "batch13-game-2",
+          "result": "WIN",
+          "scoreFor": 1,
+          "scoreAgainst": 0,
+          "shotsFor": 6,
+          "shotsAgainst": 2,
+          "onTargetFor": 1,
+          "onTargetAgainst": 0,
+          "teamReportMeanMs": 3934,
+          "roleReportMeansMs": [
+            4200,
+            5016,
+            4537,
+            3270,
+            2645
+          ],
+          "teamCommands": 62,
+          "actionsReported": {
+            "MOVE": 43,
+            "PASS": 9,
+            "INTERCEPT": 6,
+            "MARK": 4
+          }
+        },
+        {
+          "alias": "batch13-game-3",
+          "result": "LOSS",
+          "scoreFor": 0,
+          "scoreAgainst": 1,
+          "shotsFor": 4,
+          "shotsAgainst": 5,
+          "onTargetFor": 0,
+          "onTargetAgainst": 1,
+          "teamReportMeanMs": 2405,
+          "roleReportMeansMs": [
+            2450,
+            3239,
+            2784,
+            1715,
+            1700
+          ],
+          "teamCommands": 210,
+          "actionsReported": {
+            "PRESS": 111,
+            "MOVE": 90,
+            "INTERCEPT": 5,
+            "CLEAR": 4
+          }
+        },
+        {
+          "alias": "batch13-game-4",
+          "result": "WIN",
+          "scoreFor": 3,
+          "scoreAgainst": 1,
+          "shotsFor": 9,
+          "shotsAgainst": 1,
+          "onTargetFor": 3,
+          "onTargetAgainst": 1,
+          "teamReportMeanMs": 1036,
+          "roleReportMeansMs": [
+            914,
+            883,
+            1211,
+            904,
+            937
+          ],
+          "teamCommands": 445,
+          "actionsReported": {
+            "MOVE": 203,
+            "PRESS": 138,
+            "MARK": 61,
+            "CLEAR": 24,
+            "INTERCEPT": 19
+          }
+        },
+        {
+          "alias": "batch13-game-5",
+          "result": "LOSS",
+          "scoreFor": 1,
+          "scoreAgainst": 3,
+          "shotsFor": 5,
+          "shotsAgainst": 10,
+          "onTargetFor": 1,
+          "onTargetAgainst": 3,
+          "teamReportMeanMs": 865,
+          "roleReportMeansMs": [
+            626,
+            827,
+            1075,
+            629,
+            988
+          ],
+          "teamCommands": 440,
+          "actionsReported": {
+            "MOVE": 268,
+            "PRESS": 92,
+            "RESET": 43,
+            "SHOOT": 20,
+            "CLEAR": 17
+          }
+        }
+      ],
+      "byResultRecomputed": {
+        "WIN": {
+          "shotsFor": 22,
+          "onTargetFor": 6,
+          "scoreFor": 6,
+          "scoreAgainst": 2,
+          "games": 3
+        },
+        "LOSS": {
+          "shotsFor": 9,
+          "onTargetFor": 1,
+          "scoreFor": 1,
+          "scoreAgainst": 4,
+          "games": 2
+        }
+      },
+      "medianOfFiveReportMeansMs": 1036.0,
+      "roleMeansOver1000Reference": 12,
+      "fullResponseP95Ms": null
+    },
+    "batch14": {
+      "status": "in_progress",
+      "completedGames": 2,
+      "target": 5,
+      "setup": "unchanged live baseline, FWD1v16, existing FWD2 fast path, formation 1-1-2"
+    },
+    "nextStep": "Existing exact trace and P01 receipt export; no repeat P01 unchanged or candidate series"
+  },
+  "currentLiveReadback": null,
+  "modelCallsExecuted": 0,
+  "promotionEligible": false
+}

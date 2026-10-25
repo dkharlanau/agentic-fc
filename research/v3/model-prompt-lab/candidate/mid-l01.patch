@@ -1,0 +1,1154 @@
+diff --git a/mid_fast_v1/README.ru.md b/mid_fast_v1/README.ru.md
+new file mode 100644
+index 0000000..ef450e7
+--- /dev/null
++++ b/mid_fast_v1/README.ru.md
+@@ -0,0 +1,49 @@
++# L01: быстрый MID с проверкой адресата и линии
++
++**Готов к native-проверке, не установлен; native/Fitness ещё не пройдены.** Владелец разрешил последующий деплой; текущую серию не прерывать. Предлагаемая пятёрка: GK13 / DEF19 / MID L01 / FWD1v16 / FWD2 stance rev9, формация1-1-2. Это одно изменение MID. P01 отклонён, P02/P03/P04 не добавлять.
++
++## Поведение и пределы
++
++При подтверждённом владении MID: близкий центральный удар по открытой линии; иначе пас свободному FWD1/FWD2 по свободному пути с учётом движения; иначе безопасный возврат DEF. Дальний GROUND допустим только после проверок получателя и линии. Проекция0,35с и геометрические пороги — непроверенные ограничения, не физическая модель полёта. Энергия не запрещает открытый удар или пас в ноги: формула её влияния на точность неизвестна. Спринт, THROUGH и AERIAL не вводятся.
++
++При неизвестном/противоречивом владении, старом кадре, рестарте, чужом мяче или отсутствии безопасного решения — CLEAR_OVERRIDE. Дальше играет встроенный движок, который может двигаться, дриблинговать и терять мяч. Поэтому общий MOVE в отчёте не обязан исчезнуть. Новая оборона MID не реализуется. Это смена исполнения и on-ball политики одной роли, не причинный A/B только модели.
++
++Цели всей пятёрки: GK — надёжный ввод; DEF — страховка центра; MID — выход из давления; FWD1 — завершение открытых моментов; FWD2 — второй адресат и ширина. Выполнение этих целей остальными четырьмя надо проверять эпизодами. Следующий отдельный кандидат DEF/P03 допустим после анализа L01, если подтвердится лишний прессинг/пустой центр.
++
++## Проверено локально
++
++224/224 решений:68 синтетических ситуаций ×3 прохода +20 последовательных кадров смены/подтверждения владения, повтора, рестарта, воздушного мяча. HOME/AWAY, XY/XZ;174 PASS,24 SHOOT,26 CLEAR_OVERRIDE. Оракулы задают желаемое поведение, не доказывают завершённые пасы. Два FWD1-входа с заменой роли — только counterfactual contract, не реальные наблюдения MID.
++
++17 новых unit-проверок,13 FastEngine,31 lab проходят. SDK entrypoint проверен заглушкой; настоящий Python3.13/AgentCore требует native. CPU macOS/Python3.9.6:6800 измерений, p50/p95=0,28/0,47мс. Граница: создание движка, JSON decode, решение, JSON encode. Исключены SDK/logger/HTTP/AWS/сеть/применение в игре. Реальные потери, завершение передач и полная latency L01 пока null. Артефакт Linux ARM64 и точные хеши — `artifact.json`.
++
++## Воспроизведение
++
++Из корня research checkout:
++
++```sh
++python3 -m unittest discover -s tests -p 'test_mid*.py' -v
++python3 mid_fast_v1/evaluate.py --plan .local/mid-fast-v1/native-plan.json
++python3 mid_fast_v1/evaluate.py --benchmark-rounds 100 --output .local/mid-fast-v1/cpu-repeat.json
++python3 mid_fast_v1/build_package.py --dependencies .local/mid-fast-v1/dependencies
++```
++
++При отсутствии dependencies: pip install с `--target .local/mid-fast-v1/dependencies --platform manylinux2014_aarch64 --python-version 3.13 --only-binary=:all: -r runtime_v1/requirements.lock.txt`. Альтернатива: builder `--recover-from <существующий CodeZip>` с новым каталогом dependencies. Проверяются закреплённые версии и ARM64 ELF, старое приложение исключается. Сборка ничего не развёртывает.
++
++## Native → установка → Fitness
++
++1. Завершить текущую серию. Сверить портал READY, отсутствие входящего матча, действующее окно и единственного оператора. Сохранить приватный readback пяти bindings, особенно MID15.
++2. В отдельном checkout точного research commit собрать/сверить CodeZip. Загрузить в существующий code bucket под отдельным `mid-l01/<sha256>.zip`. Создать отдельный Runtime, не обновляя FWD2 или исходный MID: CodeZip, PYTHON_3_13, main.py, существующая execution role, network PUBLIC, idle900/maxLifetime28800. IAM не расширять. Environment строго PLAYER_ID=2, MID_AUDIT=1, BUILD_COMMIT=<точный source commit>.
++3. Дождаться READY; сверить role, code/archive, network/lifecycle/environment. Записать region/runtimeId/runtimeArn/buildCommit в приватный `.local/mid-fast-v1/binding.json`. Пять исходных bindings пока сохраняются.
++4. В свободном окне запустить собственные диагностические сессии. Скрипт сверяет фактический загруженный архив, читает весь stream, без retry; останавливает только свои session:
++
++```sh
++python3 mid_fast_v1/native_probe.py --binding .local/mid-fast-v1/binding.json --output .local/mid-fast-v1/native.json --apply
++python3 mid_fast_v1/grade_native.py .local/mid-fast-v1/native.json --output .local/mid-fast-v1/native-grade.json
++```
++
++Без verified deadline grader оставляет gate=false. После проверки официального источника добавить `--deadline-ms <число> --deadline-source <источник>`. Требуется224/224 полных валидных ожидаемых ответа, ноль просрочек, p95≤min(800мс,80%deadline). 800мс — инженерный запас, не правило турнира. Первые и последующие вызовы видны отдельно, медленные первые нельзя выбрасывать. CloudShell path не равен игровому пути. Проверь доступные реальные MID-входы: player2/сторону/владение/координаты; один CLEAR_OVERRIDE не доказывает работу пасов. Недоступное покрытие явно пометь.
++
++5. При native PASS заменить только MID новым Runtime, пройти свежий Fitness5/5 и сверить остальные bindings. При ошибке/неверной роли/просрочке — вернуть MID15 и Fitness, без рейтинговой серии кандидата.
++6. После успешных проверок — отдельные пять матчей в игровом потоке на неизменном L01. Fitness проверяет совместимость, не победную тактику. По роли сохранять полную p50/p95, первые/поздние ответы, ошибки и применение; по MID — адресатов, причины fallback, реальные потери и завершённые пасы с явным знаменателем/покрытием. Без traces — null. Итог: W/D/L, голы, моменты, соперники и стороны; обычное поражение не меняет состав посреди блока.
++
++Rollback: исходный MID15 Nova2Lite, prompt SHA `7b05fe872d47c532c374390642006759924d84048a61577bf4f3a9bba400c729`, приватный свежий baseline binding; остальные4 без изменений, свежий Fitness5/5. Не переносить исследовательский HANDOFF поверх игрового. Старый fast_path_v2/pilot.py --apply предназначен для другого игрока.
+diff --git a/mid_fast_v1/__init__.py b/mid_fast_v1/__init__.py
+new file mode 100644
+index 0000000..5ed370b
+--- /dev/null
++++ b/mid_fast_v1/__init__.py
+@@ -0,0 +1 @@
++"""L01: experimental MID-only, model-free on-ball decisions."""
+diff --git a/mid_fast_v1/artifact.json b/mid_fast_v1/artifact.json
+new file mode 100644
+index 0000000..30c356e
+--- /dev/null
++++ b/mid_fast_v1/artifact.json
+@@ -0,0 +1,45 @@
++{
++  "kind": "L01 MID candidate; offline build, not deployed or Fitness approved",
++  "runtime": "PYTHON_3_13",
++  "architecture": "linux-arm64",
++  "entryPoint": [
++    "main.py"
++  ],
++  "archiveSha256": "fb02b3abb1808991ebd2a714f2e2f5868fb7e6045f3a1de8043a86cf0ba0152a",
++  "archiveBytes": 20613452,
++  "uncompressedBytes": 34380450,
++  "fileCount": 2733,
++  "sourceSha256": {
++    "agentic_fc/__init__.py": "246ba241608bece9b9a1e940dd5401385aeed762ba8306d2e2a0eba7d0556df0",
++    "agentic_fc/state.py": "37729e42408e71d62525876ba79199c5d1dbf5b9526b8c91c05f996dac151690",
++    "agentic_fc/geometry.py": "5bcef6483b35c0c84089de4382b2d665baea51f1857d55f5a9ab8be5f78302f3",
++    "agentic_fc/policy.py": "94f53ee7715d8523c2e699c42d96fa929844d8769c034de77a1239a7da0f9e69",
++    "runtime_v1/__init__.py": "d6637c179056b2cc42cc2439f1f9eca4b96faae74c22a009204b6201afa24a05",
++    "runtime_v1/sensing.py": "74a8d38db31806ed8e5b426ae16ce4e3692830e2bfa08583f62744dd339cfe1e",
++    "mid_fast_v1/__init__.py": "926b0f8b20cdecb03cd9eab2664a111999c1aab63a0ff68ac907f3570f43ae3e",
++    "mid_fast_v1/engine.py": "2a2154411e673c4305da9c7f1960f341246f16edac47a4629658e02b251c6635",
++    "mid_fast_v1/main.py": "083f8da29069b023949d16e5f8abb012e4bd6be7ed3fa936ce9b64404ec1f132"
++  },
++  "dependencies": {
++    "annotated-types": "0.8.0",
++    "anyio": "4.15.1",
++    "bedrock-agentcore": "1.25.0",
++    "boto3": "1.43.118",
++    "botocore": "1.43.118",
++    "click": "8.5.0",
++    "h11": "0.16.0",
++    "idna": "3.20",
++    "jmespath": "1.1.0",
++    "pydantic": "2.14.1",
++    "pydantic-core": "2.50.1",
++    "python-dateutil": "2.9.0.post0",
++    "s3transfer": "0.19.3",
++    "six": "1.17.0",
++    "starlette": "1.9.0",
++    "typing-extensions": "4.16.0",
++    "typing-inspection": "0.4.4",
++    "urllib3": "2.8.0",
++    "uvicorn": "0.54.0",
++    "websockets": "17.3"
++  }
++}
+diff --git a/mid_fast_v1/build_package.py b/mid_fast_v1/build_package.py
+new file mode 100644
+index 0000000..841d5f4
+--- /dev/null
++++ b/mid_fast_v1/build_package.py
+@@ -0,0 +1,49 @@
++"""Offline L01 CodeZip builder. Does not create or update any AWS resource."""
++import argparse
++from pathlib import Path, PurePosixPath
++import sys
++import zipfile
++
++ROOT = Path(__file__).resolve().parents[1]
++sys.path.insert(0, str(ROOT))
++from runtime_v1.build_package import build
++
++SOURCES = ('agentic_fc/__init__.py', 'agentic_fc/state.py', 'agentic_fc/geometry.py',
++           'agentic_fc/policy.py', 'runtime_v1/__init__.py', 'runtime_v1/sensing.py',
++           'mid_fast_v1/__init__.py', 'mid_fast_v1/engine.py')
++
++
++def recover_dependencies(archive, destination):
++    """Reuse a local pinned ARM64 archive; never copy its old application code."""
++    if destination.exists():
++        raise ValueError('Dependency recovery requires a new directory')
++    if '.local' not in destination.resolve().parts:
++        raise ValueError('Recovered dependencies must stay in .local')
++    with zipfile.ZipFile(archive) as source:
++        entries = []
++        for info in source.infolist():
++            path = PurePosixPath(info.filename)
++            if path.is_absolute() or '..' in path.parts or not path.parts:
++                raise ValueError('Unsafe archive path')
++            if (info.external_attr >> 16) & 0o170000 == 0o120000:
++                raise ValueError('Symlink in dependency archive')
++            if path.parts[0] in ('main.py','agentic_fc','runtime_v1','fast_path_v2','mid_fast_v1') or info.is_dir():
++                continue
++            entries.append(info)
++        for info in entries:
++            target = destination / info.filename
++            target.parent.mkdir(parents=True,exist_ok=True)
++            target.write_bytes(source.read(info))
++
++
++if __name__ == '__main__':
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument('--dependencies',type=Path,required=True)
++    parser.add_argument('--recover-from',type=Path)
++    parser.add_argument('--archive',type=Path,default=ROOT/'.local/mid-fast-v1/deployment.zip')
++    parser.add_argument('--manifest',type=Path,default=ROOT/'mid_fast_v1/artifact.json')
++    args = parser.parse_args()
++    if args.recover_from:
++        recover_dependencies(args.recover_from,args.dependencies)
++    build(args.dependencies,args.archive,args.manifest,sources=SOURCES,
++          main_source='mid_fast_v1/main.py',kind='L01 MID candidate; offline build, not deployed or Fitness approved')
+diff --git a/mid_fast_v1/engine.py b/mid_fast_v1/engine.py
+new file mode 100644
+index 0000000..d906afa
+--- /dev/null
++++ b/mid_fast_v1/engine.py
+@@ -0,0 +1,265 @@
++"""L01 MID candidate. No model, tools, network, or cached offensive command.
++
++Distances are fractions of a keeper-anchored pitch proxy. The constants below
++are research guardrails, not calibrated flight, interception or turnover odds.
++Unknown/off-ball/restart/no-safe-option states release to the built-in engine.
++"""
++from collections import OrderedDict
++from dataclasses import replace
++import json
++import math
++import time
++
++from agentic_fc.geometry import line_distance
++from agentic_fc.state import parse_payload
++from runtime_v1.sensing import live_coordinates, contact_candidate
++
++POLICY = 'L01-mid-safe-outlet-v1'
++PARAMETERS = {'min_pass_span': .035, 'max_pass_span': .45,
++              'receiver_clearance_span': .05, 'lane_clearance_span': .025,
++              'unknown_velocity_extra_span': .01, 'release_segment_span': .02,
++              'prediction_seconds': .35, 'max_prediction_span': .06,
++              'shot_range_span': .18, 'shot_width_span': .10,
++              'max_contact_gap_seconds': 1.0, 'max_ball_height_span': .025}
++
++
++def finite(value):
++    return type(value) in (int, float) and math.isfinite(value)
++
++
++def unwrap(payload):
++    for _ in range(6):
++        if isinstance(payload, str):
++            try:
++                payload = json.loads(payload)
++            except (ValueError, TypeError):
++                return {}
++        if not isinstance(payload, dict):
++            return {}
++        if 'gameState' in payload:
++            return payload
++        payload = payload.get('prompt')
++    return {}
++
++
++def segment_gap(a, b, c, d):
++    """Minimum distance between finite segments, including a crossing."""
++    def cross(u, v, w):
++        return (v[0]-u[0])*(w[1]-u[1]) - (v[1]-u[1])*(w[0]-u[0])
++    ab_c, ab_d, cd_a, cd_b = cross(a,b,c), cross(a,b,d), cross(c,d,a), cross(c,d,b)
++    if ab_c * ab_d < 0 and cd_a * cd_b < 0:
++        return 0.0
++    return min(line_distance(*c,*a,*b), line_distance(*d,*a,*b),
++               line_distance(*a,*c,*d), line_distance(*b,*c,*d))
++
++
++def predicted(player, span):
++    dx, dy = player.vx * PARAMETERS['prediction_seconds'], player.vy * PARAMETERS['prediction_seconds']
++    distance = math.hypot(dx, dy)
++    cap = PARAMETERS['max_prediction_span'] * span
++    if distance > cap:
++        dx, dy = dx * cap / distance, dy * cap / distance
++    return player.x + dx, player.y + dy
++
++
++def path_clearance(me, target, opponents, span):
++    """Exclude a short release segment: a presser behind MID must not block
++    every escape pass. Opponents ahead and closing toward the lane still count.
++    Projection is a guard, not an estimate of ball travel time.
++    """
++    origin = (me.x, me.y)
++    distance = math.dist(origin, target)
++    offset = min(PARAMETERS['release_segment_span'] * span, distance / 4)
++    start = tuple(a + (b-a) * offset / distance for a,b in zip(origin,target)) if distance else origin
++    return min(segment_gap(start, target, (o.x,o.y), predicted(o,span)) for o in opponents)
++
++
++def receiver_clearance(target, opponents, span):
++    """Current and projected closing pressure with simultaneous relative motion."""
++    end = predicted(target, span)
++    values = []
++    for opponent in opponents:
++        other = predicted(opponent, span)
++        now = (target.x-opponent.x, target.y-opponent.y)
++        later = (end[0]-other[0], end[1]-other[1])
++        values.append(line_distance(0, 0, *now, *later))
++    return min(values)
++
++
++def validate(root):
++    """Validate before the legacy adapter can replace missing numbers with 0."""
++    if root.get('myPlayers') != [2] or type(root['myPlayers'][0]) is not int or type(root.get('teamId')) is not int or root['teamId'] not in (0,1):
++        return 'WRONG_BINDING'
++    gs = root.get('gameState')
++    if not isinstance(gs, dict) or not isinstance(gs.get('ball'), dict):
++        return 'MALFORMED_STATE'
++    if type(gs.get('tick')) is not int or gs['tick'] < 0 or not finite(gs.get('gameTime')) or gs['gameTime'] < 0:
++        return 'UNKNOWN_TIME'
++    rows = gs.get('players')
++    if not isinstance(rows, list) or len(rows) != 10:
++        return 'INCOMPLETE_PLAYERS'
++    identities = set()
++    for row in rows:
++        if not isinstance(row, dict):
++            return 'MALFORMED_PLAYER'
++        key = (row.get('teamCode'), row.get('agentId'))
++        if key[0] not in ('home','away') or key[1] not in tuple('agentId_'+str(i) for i in range(5)) or key in identities:
++            return 'AMBIGUOUS_PLAYERS'
++        identities.add(key)
++        if 'hasBall' in row and type(row['hasBall']) is not bool:
++            return 'MALFORMED_OWNERSHIP'
++    for row in [*rows, gs['ball']]:
++        pos = row.get('position')
++        axes = ('x','y','z') if row is gs['ball'] and isinstance(pos,dict) and 'z' in pos else ('x','y')
++        if not isinstance(pos,dict) or any(not finite(pos.get(k)) for k in axes):
++            return 'MALFORMED_POSITION'
++        if 'velocity' in row and (not isinstance(row['velocity'],dict) or
++                                 any(not finite(row['velocity'].get(k)) for k in axes)):
++            return 'MALFORMED_VELOCITY'
++    ball = gs['ball']
++    if type(ball.get('isFree')) is not bool:
++        return 'UNKNOWN_POSSESSION'
++    if 'unlockedCommands' in root and (not isinstance(root['unlockedCommands'],list) or
++                                      any(not isinstance(c,str) for c in root['unlockedCommands'])):
++        return 'MALFORMED_UNLOCKS'
++    for field in ('possessionTeamCode', 'possessionTeamId'):
++        if field in ball and ball[field] is not None and ball[field] not in (('home','away') if field.endswith('Code') else (0,1)):
++            return 'MALFORMED_OWNERSHIP'
++    team_id = ball.get('possessionTeamId')
++    team_code = ball.get('possessionTeamCode')
++    if team_id is not None and type(team_id) is not int:
++        return 'MALFORMED_OWNERSHIP'
++    if team_id is not None and team_code is not None and ('home','away')[team_id] != team_code:
++        return 'CONTRADICTORY_POSSESSION'
++    agent_id, player_id = ball.get('possessionAgentId'), ball.get('possessionPlayerId')
++    if agent_id is not None and agent_id not in tuple('agentId_'+str(i) for i in range(5)):
++        return 'MALFORMED_OWNERSHIP'
++    if player_id is not None and (type(player_id) is not int or player_id not in range(5)):
++        return 'MALFORMED_OWNERSHIP'
++    if agent_id is not None and player_id is not None and agent_id != 'agentId_'+str(player_id):
++        return 'CONTRADICTORY_POSSESSION'
++    return None
++
++
++class MidEngine:
++    def __init__(self):
++        self.sessions = OrderedDict()
++
++    def choose(self, payload, session=None):
++        started = time.perf_counter_ns()
++        root = unwrap(payload)
++        facts = {'policy': POLICY, 'modelAttempted': False, 'frame': None,
++                 'ownershipEvidence': None, 'safeOutlets': 0,
++                 'passCompleted': None, 'ballRetained': None}
++
++        def done(reason, name='CLEAR_OVERRIDE', params=None):
++            allowed = root.get('unlockedCommands')
++            # The captured live payload uses []; existing verified fast Runtime
++            # treats an empty list as unspecified, not a ban on every command.
++            if name != 'CLEAR_OVERRIDE' and isinstance(allowed,list) and allowed and name not in allowed:
++                reason, name, params = 'COMMAND_NOT_UNLOCKED', 'CLEAR_OVERRIDE', None
++            command = {'commandType': name, 'playerId': 2, 'parameters': params or {}, 'duration': 0}
++            return [command], {**facts, 'reason': reason,
++                               'computeMs': (time.perf_counter_ns()-started)/1e6}
++
++        error = validate(root)
++        if error:
++            # A bad intervening frame must not reinforce contact inference.
++            if session in self.sessions:
++                self.sessions[session]['contact'] = None
++            return done(error)
++        gs = root['gameState']; tick = gs['tick']; game_time = gs['gameTime']; side = root['teamId']
++        previous = self.sessions.get(session, {}) if session else {}
++        if previous and previous['side'] != side:
++            previous = {}
++        if previous and (tick <= previous['tick'] or game_time < previous['time']):
++            previous['contact'] = None
++            return done('STALE_OR_DUPLICATE_FRAME')
++        normalized, profile, calibration = live_coordinates(root, previous.get('calibration'))
++        facts['frame'] = profile['kind']
++        state = parse_payload(normalized, 2)
++        keepers = {p.team:p for p in (*state.teammates,*state.opponents) if p.pid == 0}
++        reference = previous.get('reference') if previous.get('frame') == profile['kind'] else None
++        if profile['kind'] == 'keeper_reference_xz':
++            reference = (-55.0, 55.0)
++        elif profile['kind'] == 'documented_xy' and reference is None and set(keepers)=={0,1}:
++            if -60 < keepers[0].x < -35 and 35 < keepers[1].x < 60 and all(abs(p.y)<10 for p in keepers.values()):
++                reference = (keepers[0].x, keepers[1].x)
++        elif profile['kind'] not in ('documented_xy','keeper_reference_xz'):
++            reference = None
++        candidate = contact_candidate(normalized) if profile['kind']=='keeper_reference_xz' else None
++        contact_evidence = None
++        if candidate:
++            ball_height = abs(gs['ball']['position']['y']) * profile['scale']
++            if ball_height > PARAMETERS['max_ball_height_span'] * 110:
++                candidate = None
++            elif candidate['movingWithBall'] and candidate['carrierAction']:
++                contact_evidence = 'current_contact_action_and_velocity'
++            elif (previous.get('contact') and previous['contact']['key'] == candidate['key'] and
++                  0 < game_time-previous['time'] <= PARAMETERS['max_contact_gap_seconds']):
++                contact_evidence = 'two_fresh_contact_frames'
++        if session:
++            self.sessions[session] = {'side':side,'tick':tick,'time':game_time,
++                                      'frame':profile['kind'],'calibration':calibration,
++                                      'reference':reference,'contact':candidate}
++            self.sessions.move_to_end(session)
++            while len(self.sessions)>64:
++                self.sessions.popitem(last=False)
++        if state.ball_status=='UNKNOWN' and contact_evidence:
++            state = replace(state, ball_status='OURS' if candidate['team']==side else 'THEIRS',
++                            holder=(candidate['team'],candidate['pid']))
++            facts['ownershipEvidence'] = contact_evidence
++        elif state.ball_status!='UNKNOWN':
++            facts['ownershipEvidence'] = 'explicit_current_state'
++        if state.play_mode != 'PLAY_ON':
++            return done('ENGINE_RESTART')
++        if state.ball_status=='UNKNOWN':
++            return done('UNKNOWN_POSSESSION')
++        if not state.i_have_ball:
++            return done('ENGINE_OFF_BALL')
++        if profile['kind']=='keeper_reference_xz' and abs(gs['ball']['position']['y']) * profile['scale'] > PARAMETERS['max_ball_height_span'] * 110:
++            return done('AIRBORNE_BALL')
++        if state.my.has_ball is False:
++            return done('CONTRADICTORY_POSSESSION')
++        if reference is None:
++            return done('UNKNOWN_GEOMETRY')
++        span = reference[1]-reference[0]; me = state.my
++        # A qualified holder very far from the ball is not usable on-ball evidence.
++        if math.hypot(me.x-state.ball_x, me.y-state.ball_y) > .03*span:
++            return done('HOLDER_BALL_SEPARATED')
++        moving_known = all(isinstance(p.get('velocity'),dict) for p in gs['players'])
++        margin = 0 if moving_known else PARAMETERS['unknown_velocity_extra_span']*span
++        facts['velocityCoverage'] = 'complete' if moving_known else 'static_with_extra_margin'
++        facts['pressureDistanceSpan'] = round(min(math.hypot(o.x-me.x,o.y-me.y) for o in state.opponents)/span,4)
++        goal = (reference[1] if side==0 else reference[0], 0)
++        field_opponents = [o for o in state.opponents if o.pid!=0]
++        if (math.dist((me.x,me.y),goal) <= PARAMETERS['shot_range_span']*span and
++            abs(me.y) <= PARAMETERS['shot_width_span']*span and
++            path_clearance(me,goal,field_opponents,span) > PARAMETERS['lane_clearance_span']*span+margin):
++            keeper = keepers[1-side]
++            return done('CLOSE_CLEAR_SHOT','SHOOT',{'aim_location':'BL' if keeper.y>0 else 'TR','power':.8})
++        choices = []
++        for mate in state.teammates:
++            if mate.pid not in (1,3,4):
++                continue
++            distance = math.hypot(mate.x-me.x,mate.y-me.y)
++            if not PARAMETERS['min_pass_span']*span <= distance <= PARAMETERS['max_pass_span']*span:
++                continue
++            space = receiver_clearance(mate,state.opponents,span)
++            lane = path_clearance(me,(mate.x,mate.y),state.opponents,span)
++            if space <= PARAMETERS['receiver_clearance_span']*span+margin or lane <= PARAMETERS['lane_clearance_span']*span+margin:
++                continue
++            progress = state.sign*(mate.x-me.x)/span
++            safety = min(space/span,.15) + min(lane/span,.08)
++            # Positive forward outlets first; capped progression cannot overwhelm
++            # hard safety gates. Ties are independent of player array ordering.
++            forward = mate.pid in (3,4) and progress >= .02
++            score = safety + .25*max(-.2,min(.3,progress)) - .1*distance/span
++            choices.append((int(forward),score,-mate.pid,mate.pid,space/span,lane/span))
++        facts['safeOutlets'] = len(choices)
++        if not choices:
++            return done('NO_SAFE_OUTLET')
++        best = max(choices)
++        facts.update(receiver=best[3],receiverClearanceSpan=round(best[4],4),laneClearanceSpan=round(best[5],4))
++        return done('SAFE_PROGRESSIVE_PASS' if best[0] else 'SAFE_RECYCLE_PASS',
++                    'PASS',{'target_player_id':best[3],'type':'GROUND'})
+diff --git a/mid_fast_v1/evaluate.py b/mid_fast_v1/evaluate.py
+new file mode 100644
+index 0000000..b5c92de
+--- /dev/null
++++ b/mid_fast_v1/evaluate.py
+@@ -0,0 +1,117 @@
++"""Reproducible local L01 checks and private native plan; never invokes AWS."""
++import argparse
++from collections import Counter
++import copy
++import hashlib
++import json
++from pathlib import Path
++import platform
++import sys
++import time
++
++ROOT=Path(__file__).resolve().parents[1]
++sys.path.insert(0,str(ROOT))
++sys.path.insert(0,str(ROOT/'research/v3/model-prompt-lab'))
++import lab
++from mid_fast_v1.engine import MidEngine, PARAMETERS, POLICY
++from mid_fast_v1.fixtures import cases, sequences
++
++
++def digest(value):
++    return hashlib.sha256(json.dumps(value,sort_keys=True,separators=(',',':'),allow_nan=False).encode()).hexdigest()
++
++
++def plan():
++    """Four logical sessions, three rounds, monotonically increasing frames.
++
++    Inputs are synthetic. Session keys are local labels, not AWS session IDs.
++    Native runner must preserve order and isolate these from game sessions.
++    """
++    out=[];counts=Counter()
++    for repeat in range(3):
++        for case in cases():
++            group='-'.join(case['id'].split('-')[-2:]);index=counts[group];counts[group]+=1
++            root=copy.deepcopy(case['input'])
++            root['gameState'].update(tick=100+index,gameTime=10+index*.1)
++            request={'prompt':json.dumps(root,separators=(',',':'),allow_nan=False)}
++            out.append({'key':case['id']+':'+str(repeat),'sessionKey':group,
++                        'sequence':index,'firstInSession':index==0,'repeat':repeat,
++                        'request':request,'requestSha256':digest(request),
++                        'expectedAction':case['expectedAction'],'expectedReceiver':case['expectedReceiver']})
++    for case in sequences():
++        group=case['sessionKey'];index=counts[group];counts[group]+=1
++        request={'prompt':json.dumps(case['input'],separators=(',',':'),allow_nan=False)}
++        out.append({'key':case['id'],'sessionKey':group,'sequence':index,'firstInSession':index==0,
++                    'repeat':0,'request':request,'requestSha256':digest(request),
++                    'expectedAction':case['expectedAction'],'expectedReceiver':case['expectedReceiver']})
++    return out
++
++
++def errors(row, text):
++    problems=lab.command_errors(text,'mid')
++    if not problems:
++        command=json.loads(text)[0]
++        if command['commandType']!=row['expectedAction']:
++            problems.append('wrong_action')
++        if command['parameters'].get('target_player_id')!=row['expectedReceiver']:
++            problems.append('wrong_receiver')
++    return problems
++
++
++def evaluate():
++    engine=MidEngine();rows=[]
++    for row in plan():
++        commands,audit=engine.choose(row['request'],row['sessionKey'])
++        encoded=json.dumps(commands,separators=(',',':'))
++        rows.append({k:row[k] for k in ('key','sessionKey','sequence','requestSha256')}
++                    | {'command':commands[0],'reason':audit['reason'],'errors':errors(row,encoded)})
++    observed=[]
++    for name in ('observed-fwd1-fitness-kickoff.json','observed-live-away-open-play.json'):
++        path=ROOT/'research/v3/fixtures'/name
++        original=json.loads(path.read_text())['decodedState'];root=copy.deepcopy(original);root['myPlayers']=[2]
++        commands,audit=MidEngine().choose(root)
++        observed.append({'fixture':path.relative_to(ROOT).as_posix(),'sourceSha256':hashlib.sha256(path.read_bytes()).hexdigest(),
++                         'roleRebound':True,'kind':'counterfactual contract only, not captured MID decision',
++                         'command':commands[0],'reason':audit['reason'],
++                         'schemaErrors':lab.command_errors(json.dumps(commands),'mid')})
++    sources=['mid_fast_v1/engine.py','mid_fast_v1/main.py','mid_fast_v1/fixtures.py','mid_fast_v1/evaluate.py',
++             'agentic_fc/state.py','agentic_fc/geometry.py','runtime_v1/sensing.py']
++    return {'policy':POLICY,'kind':'synthetic decision replay; no physical simulation or fresh inference',
++            'parameters':PARAMETERS,'planSha256':digest(plan()),'requests':len(rows),'uniqueSituations':len(cases()),
++            'statefulGuardFrames':len(sequences()),
++            'passed':sum(not r['errors'] for r in rows),'actions':dict(Counter(r['command']['commandType'] for r in rows)),
++            'sourceSha256':{p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in sources},
++            'observedContractOnly':observed,'rows':rows,'native':None,'fitness':None,
++            'turnoverRate':None,'passCompletion':None,'fullRequestLatency':None,'eligibleForRankedPromotion':False}
++
++
++def benchmark(rounds):
++    encoded=[json.dumps(c['input'],separators=(',',':')) for c in cases()]
++    elapsed=[]
++    for _ in range(rounds):
++        for raw in encoded:
++            started=time.perf_counter_ns()
++            commands,_=MidEngine().choose(json.loads(raw))
++            json.dumps(commands,separators=(',',':'),allow_nan=False)
++            elapsed.append((time.perf_counter_ns()-started)/1e6)
++    return {'kind':'local CPU only; engine construction + JSON decode + decision + JSON encode',
++            'excludes':['HTTP','SDK dispatch','audit logger','AWS startup','network','game command application'],
++            'python':platform.python_version(),'system':platform.system(),'machine':platform.machine(),
++            'rounds':rounds,'timingsMs':lab.distribution(elapsed),'freshEngineEveryCall':True,
++            'engineSha256':hashlib.sha256((ROOT/'mid_fast_v1/engine.py').read_bytes()).hexdigest()}
++
++
++if __name__=='__main__':
++    parser=argparse.ArgumentParser(description=__doc__)
++    parser.add_argument('--plan',type=Path)
++    parser.add_argument('--benchmark-rounds',type=int,default=0)
++    parser.add_argument('--output',type=Path,default=ROOT/'research/v3/model-prompt-lab/results/mid-l01-offline.json')
++    args=parser.parse_args()
++    if args.plan:
++        if '.local' not in args.plan.resolve().parts:raise ValueError('Native requests belong in .local')
++        args.plan.parent.mkdir(parents=True,exist_ok=True)
++        args.plan.write_text(json.dumps({'planSha256':digest(plan()),'requests':plan()},indent=2)+'\n')
++    report=benchmark(args.benchmark_rounds) if args.benchmark_rounds else evaluate()
++    args.output.parent.mkdir(parents=True,exist_ok=True)
++    args.output.write_text(json.dumps(report,indent=2,allow_nan=False)+'\n')
++    print(json.dumps({k:v for k,v in report.items() if k in ('policy','requests','passed','uniqueSituations','actions','timingsMs')}))
+diff --git a/mid_fast_v1/fixtures.py b/mid_fast_v1/fixtures.py
+new file mode 100644
+index 0000000..ce1d7a3
+--- /dev/null
++++ b/mid_fast_v1/fixtures.py
+@@ -0,0 +1,116 @@
++"""Synthetic, explicitly labelled MID scenarios; never captured live states."""
++import copy
++
++
++def base():
++    positions = [(-50,0),(-15,-15),(0,0),(20,0),(15,20),
++                 (50,0),(8,-20),(30,-20),(40,20),(-20,25)]
++    players = [{'teamCode':'home' if i<5 else 'away','agentId':'agentId_'+str(i%5),
++                'position':{'x':x,'y':y},'velocity':{'x':0,'y':0},
++                'hasBall':i==2,'stamina':.8,'lastAction':'StayNearGoal' if i%5==0 else 'Stay'}
++               for i,(x,y) in enumerate(positions)]
++    return {'teamId':0,'myPlayers':[2], 'unlockedCommands':[],
++            'gameState':{'tick':100,'gameTime':10.0,'playMode':'PLAY_ON',
++                         'players':players,'ball':{'position':{'x':0,'y':0},
++                         'velocity':{'x':0,'y':0},'isFree':False,
++                         'possessionTeamCode':'home','possessionAgentId':'agentId_2'}}}
++
++
++def move(root, index, x, y, vx=0, vy=0):
++    p = root['gameState']['players'][index]
++    p['position'] = {'x':x,'y':y}; p['velocity'] = {'x':vx,'y':vy}
++    if index==2:
++        root['gameState']['ball']['position']={'x':x,'y':y}
++        root['gameState']['ball']['velocity']={'x':vx,'y':vy}
++
++
++def mirror(root):
++    root = copy.deepcopy(root); root['teamId'] = 1-root['teamId']
++    for row in root['gameState']['players']:
++        row['teamCode'] = 'away' if row['teamCode']=='home' else 'home'
++        row['position']['x'] *= -1
++        if 'velocity' in row: row['velocity']['x'] *= -1
++    ball = root['gameState']['ball']; ball['position']['x'] *= -1
++    if 'velocity' in ball: ball['velocity']['x'] *= -1
++    if ball.get('possessionTeamCode') in ('home','away'):
++        ball['possessionTeamCode']='away' if ball['possessionTeamCode']=='home' else 'home'
++    return root
++
++
++def small_frame(root):
++    """Counterfactual XZ mapping; this is not an additional physical capture."""
++    root = copy.deepcopy(root); scale=50/6
++    for player in root['gameState']['players']:
++        for field in ('position','velocity'):
++            if field in player:
++                player[field]={k:v/scale for k,v in player[field].items()}
++    ball = root['gameState']['ball']
++    for field in ('position','velocity'):
++        p=ball[field]; ball[field]={'x':p['x']/scale,'y':0,'z':p['y']/scale}
++    return root
++
++
++def cases():
++    variants=[]
++    def add(name, edits=(), action='PASS', receiver=3):
++        root=base()
++        for values in edits: move(root,*values)
++        variants.append({'id':name,'input':root,'expectedAction':action,'expectedReceiver':receiver})
++        return root
++    add('open-forward')
++    add('escape-presser-behind',[(6,-1,0)])
++    add('blocked-forward-line',[(6,10,0)],receiver=4)
++    add('marked-forward',[(6,20,1)],receiver=4)
++    add('both-forwards-marked',[(6,20,1),(7,15,21)],receiver=1)
++    add('all-outlets-marked',[(6,20,1),(7,15,21),(8,-15,-14)],action='CLEAR_OVERRIDE',receiver=None)
++    add('defender-beyond-receiver',[(6,30,0),(7,15,21)])
++    add('opponent-crossing-pass',[(6,10,3,0,-20)],receiver=4)
++    add('receiver-running-into-pressure',[(3,20,0,0,20),(6,20,9)],receiver=4)
++    add('pressure-ahead-escape-back',[(6,1,0)],receiver=1)
++    add('open-long-ground',[(3,40,-10),(7,15,21)])
++    add('too-long-use-other-forward',[(3,49,-15)],receiver=4)
++    add('clear-close-shot',[(2,38,0)],action='SHOOT',receiver=None)
++    add('blocked-close-shot-safe-pass',[(2,38,0),(6,44,0)],receiver=3)
++    tired=add('tired-passer-retains-safe-pass');tired['gameState']['players'][2]['stamina']=.05
++    tired=add('tired-receiver-to-feet');tired['gameState']['players'][3]['stamina']=.05
++    tired=add('tired-clear-shot',[(2,38,0)],action='SHOOT',receiver=None);tired['gameState']['players'][2]['stamina']=.05
++    out=[]
++    for case in variants:
++        for side in ('home','away'):
++            root=case['input'] if side=='home' else mirror(case['input'])
++            for frame in ('xy','xz'):
++                out.append({**case,'id':case['id']+'-'+side+'-'+frame,
++                            'input':copy.deepcopy(root) if frame=='xy' else small_frame(root)})
++    return out
++
++
++def sequences():
++    """Stateful guard cases; expected releases are part of tactical safety."""
++    rows=[]
++    for side in ('home','away'):
++        root=small_frame(base());gs=root['gameState']
++        for p in gs['players']:p.pop('hasBall')
++        gs['ball'].pop('possessionTeamCode')
++        def add(name, source, action='CLEAR_OVERRIDE', receiver=None):
++            value=source if side=='home' else mirror(source)
++            rows.append({'id':name+'-'+side,'sessionKey':'contact-'+side,
++                         'input':copy.deepcopy(value),'expectedAction':action,'expectedReceiver':receiver})
++        add('first-ambiguous-contact',root)
++        gs['tick']+=1;gs['gameTime']+=.1
++        add('confirmed-contact',root,'PASS',3)
++        add('duplicate-frame',root)
++        gs['tick']+=1;gs['gameTime']+=.1
++        add('contact-after-duplicate',root)
++        gs['tick']+=1;gs['gameTime']+=.1
++        add('reconfirmed-contact',root,'PASS',3)
++        gs['tick']+=1;gs['gameTime']+=.1;gs['ball']['possessionTeamCode']='away'
++        add('opponent-qualified-same-id',root)
++        gs['tick']+=1;gs['gameTime']+=.1;gs['ball']['possessionTeamCode']='home'
++        add('own-qualified-recovered',root,'PASS',3)
++        gs['tick']+=1;gs['gameTime']+=.1;gs['ball']['position']['y']=1
++        add('airborne-explicit-owner',root)
++        gs['tick']+=1;gs['gameTime']+=.1;gs['ball']['position']['y']=0;gs['playMode']='KICK_OFF'
++        add('restart',root)
++        gs['tick']+=1;gs['gameTime']+=.1;gs['playMode']='PLAY_ON';gs['ball']['isFree']=True
++        add('free-ball',root)
++    return rows
+diff --git a/mid_fast_v1/grade_native.py b/mid_fast_v1/grade_native.py
+new file mode 100644
+index 0000000..dc0b74c
+--- /dev/null
++++ b/mid_fast_v1/grade_native.py
+@@ -0,0 +1,86 @@
++"""Offline grader for externally collected L01 native receipts; no AWS calls.
++
++The collector must measure to full stream completion, include the first calls,
++record errors, and decode the complete SSE body with decode_response below.
++Native passage is permission to try Fitness, never proof of football efficacy.
++"""
++import argparse
++import json
++import math
++from pathlib import Path
++import sys
++
++ROOT=Path(__file__).resolve().parents[1]
++sys.path.insert(0,str(ROOT))
++from mid_fast_v1.evaluate import digest, errors, plan, lab
++
++
++def decode_response(raw):
++    """One complete JSON array, optionally wrapped in ONE SSE data event.
++
++    No extraction of the first convenient array; extra text/events fail closed.
++    This is the observed Runtime contract, not a generic SSE implementation.
++    """
++    text=raw.strip()
++    if text.startswith('data:'):
++        lines=[line for line in text.splitlines() if line.strip()]
++        if len(lines)!=1 or not lines[0].startswith('data:'):
++            raise ValueError('Expected exactly one complete command event')
++        text=lines[0][5:].strip()
++    value=json.loads(text)
++    if isinstance(value,str):value=json.loads(value)
++    if not isinstance(value,list):raise ValueError('Expected command array')
++    return json.dumps(value,separators=(',',':'),allow_nan=False)
++
++
++def grade(receipts, deadline_ms=None, deadline_source=None):
++    if deadline_ms is not None and (type(deadline_ms) not in (int,float) or not math.isfinite(deadline_ms) or deadline_ms<=0):
++        raise ValueError('Invalid verified deadline')
++    if (deadline_ms is None)!=(deadline_source is None) or (deadline_source is not None and not deadline_source.strip()):
++        raise ValueError('Deadline and its verified source must be supplied together')
++    expected=plan();bykey={r['key']:r for r in expected};seen=set();rows=[];order=[]
++    artifact=json.loads((ROOT/'mid_fast_v1/artifact.json').read_text())
++    for receipt in receipts:
++        key=receipt.get('key')
++        if key not in bykey or key in seen:raise ValueError('Unknown or duplicate receipt')
++        source=bykey[key];seen.add(key);order.append(key)
++        for field,want in [('requestSha256',source['requestSha256']),('planSha256',digest(expected)),
++                           ('archiveSha256',artifact['archiveSha256']),('sessionKey',source['sessionKey']),
++                           ('sequence',source['sequence'])]:
++            if receipt.get(field)!=want:raise ValueError('Receipt mismatch: '+field)
++        wall=receipt.get('requestWallMs')
++        if type(wall) not in (int,float) or not math.isfinite(wall) or wall<0:raise ValueError('Missing full-call timing')
++        valid_complete=receipt.get('complete') is True and receipt.get('streamError') is None
++        problems=['incomplete_or_failed_stream'] if not valid_complete else []
++        if valid_complete:
++            try:problems=errors(source,decode_response(receipt.get('rawResponse','')))
++            except (TypeError,ValueError,AttributeError):problems=['invalid_full_response']
++        rows.append({'key':key,'requestWallMs':wall,'firstInSession':source['firstInSession'],
++                     'errors':problems,'late':None if deadline_ms is None else wall>deadline_ms})
++    full=order==[r['key'] for r in expected]
++    all_times=lab.distribution([r['requestWallMs'] for r in rows])
++    # 800 ms is an engineering target with headroom, not a published rule.
++    target=None if deadline_ms is None else min(800, .8*deadline_ms)
++    passed=bool(full and rows and not any(r['errors'] for r in rows) and deadline_ms is not None
++                and not any(r['late'] for r in rows) and all_times['p95']<=target)
++    return {'kind':'externally measured complete native calls; not game-server latency',
++            'planSha256':digest(expected),'expected':len(expected),'received':len(rows),'completeOrderedSet':full,
++            'validDecisions':sum(not r['errors'] for r in rows),'fullRequestMs':all_times,
++            'firstInSessionMs':lab.distribution([r['requestWallMs'] for r in rows if r['firstInSession']]),
++            'laterInSessionMs':lab.distribution([r['requestWallMs'] for r in rows if not r['firstInSession']]),
++            'deadlineMs':deadline_ms,'deadlineSource':deadline_source,'p95TargetMs':target,
++            'lateOrInvalid':None if deadline_ms is None else sum(bool(r['errors']) or r['late'] for r in rows),
++            'nativeGatePassed':passed,'fitness':None,'eligibleForRankedPromotion':False,'rows':rows}
++
++
++if __name__=='__main__':
++    parser=argparse.ArgumentParser(description=__doc__)
++    parser.add_argument('receipts',type=Path)
++    parser.add_argument('--deadline-ms',type=float)
++    parser.add_argument('--deadline-source')
++    parser.add_argument('--output',type=Path,required=True)
++    args=parser.parse_args()
++    report=grade(json.loads(args.receipts.read_text()),args.deadline_ms,args.deadline_source)
++    args.output.parent.mkdir(parents=True,exist_ok=True)
++    args.output.write_text(json.dumps(report,indent=2,allow_nan=False)+'\n')
++    print(json.dumps({k:v for k,v in report.items() if k!='rows'}))
+diff --git a/mid_fast_v1/main.py b/mid_fast_v1/main.py
+new file mode 100644
+index 0000000..8166d7f
+--- /dev/null
++++ b/mid_fast_v1/main.py
+@@ -0,0 +1,32 @@
++"""MID-only experimental Runtime entrypoint. Never invokes a foundation model."""
++import json
++import os
++from bedrock_agentcore.runtime import BedrockAgentCoreApp
++from mid_fast_v1.engine import MidEngine
++
++if os.environ.get('PLAYER_ID','2') != '2':
++    raise ValueError('L01 can only control MID/player 2')
++app = BedrockAgentCoreApp()
++engine = MidEngine()
++
++
++def stream(commands):
++    yield json.dumps(commands,separators=(',',':'),allow_nan=False)
++
++
++@app.entrypoint
++async def invoke(payload, context):
++    commands, audit = engine.choose(payload, getattr(context,'session_id',None))
++    if os.environ.get('MID_AUDIT','0') == '1':
++        # Optional compact diagnostics; never logs payload, raw positions or IDs.
++        audit['commandType'] = commands[0]['commandType']
++        audit['buildCommit'] = os.environ.get('BUILD_COMMIT','local')
++        try:
++            app.logger.info('MID_L01 '+json.dumps(audit,separators=(',',':'),allow_nan=False))
++        except Exception:
++            pass
++    return stream(commands)
++
++
++if __name__ == '__main__':
++    app.run()
+diff --git a/mid_fast_v1/native_probe.py b/mid_fast_v1/native_probe.py
+new file mode 100644
+index 0000000..e14c2e3
+--- /dev/null
++++ b/mid_fast_v1/native_probe.py
+@@ -0,0 +1,85 @@
++"""Explicit idle-window native probe of an isolated L01 Runtime. No deployment.
++
++Private binding JSON: region, runtimeId, runtimeArn, buildCommit.
++Use only after the game operator has yielded an idle series boundary.
++"""
++import argparse
++import hashlib
++import json
++from pathlib import Path
++import sys
++import time
++import uuid
++
++ROOT=Path(__file__).resolve().parents[1]
++sys.path.insert(0,str(ROOT))
++from mid_fast_v1.evaluate import digest, plan
++
++
++def save(path,value):
++    path.parent.mkdir(parents=True,exist_ok=True)
++    path.write_text(json.dumps(value,indent=2,allow_nan=False)+'\n');path.chmod(0o600)
++
++
++def main():
++    parser=argparse.ArgumentParser(description=__doc__)
++    parser.add_argument('--binding',type=Path,required=True)
++    parser.add_argument('--output',type=Path,required=True)
++    parser.add_argument('--apply',action='store_true')
++    args=parser.parse_args()
++    if not args.apply:
++        print(json.dumps({'requests':len(plan()),'planSha256':digest(plan()),'executed':False}));return
++    if '.local' not in args.output.resolve().parts or args.output.exists():
++        raise ValueError('Use a NEW private .local output path')
++    import boto3
++    from botocore.config import Config
++    binding=json.loads(args.binding.read_text())
++    manifest=json.loads((ROOT/'mid_fast_v1/artifact.json').read_text())
++    config=Config(connect_timeout=5,read_timeout=30,retries={'total_max_attempts':1})
++    control=boto3.client('bedrock-agentcore-control',region_name=binding['region'],config=config)
++    actual=control.get_agent_runtime(agentRuntimeId=binding['runtimeId'])
++    if actual['status']!='READY' or actual['agentRuntimeArn']!=binding['runtimeArn']:
++        raise ValueError('Runtime identity/readiness mismatch')
++    if actual.get('environmentVariables')!={'PLAYER_ID':'2','MID_AUDIT':'1','BUILD_COMMIT':binding['buildCommit']}:
++        raise ValueError('L01 environment mismatch; never probe another player')
++    code=actual['agentRuntimeArtifact']['codeConfiguration']
++    if code['runtime']!='PYTHON_3_13' or code['entryPoint']!=['main.py']:
++        raise ValueError('Runtime code configuration mismatch')
++    s3=boto3.client('s3',region_name=binding['region'],config=config)
++    source=code['code']['s3']
++    blob=s3.get_object(Bucket=source['bucket'],Key=source['prefix'])['Body'].read()
++    if hashlib.sha256(blob).hexdigest()!=manifest['archiveSha256']:
++        raise ValueError('Deployed archive differs from reviewed L01')
++    client=boto3.client('bedrock-agentcore',region_name=binding['region'],config=config)
++    sessions={};rows=[];stopped={};p=plan()
++    try:
++        for row in p:
++            key=row['sessionKey']
++            sid=sessions.setdefault(key,'mid-l01-native-'+str(uuid.uuid4()))
++            result={k:row[k] for k in ('key','sessionKey','sequence','requestSha256')}
++            result.update(planSha256=digest(p),archiveSha256=manifest['archiveSha256'],complete=False,
++                          streamError=None,rawResponse=None)
++            start=time.perf_counter_ns()
++            try:
++                response=client.invoke_agent_runtime(agentRuntimeArn=binding['runtimeArn'],runtimeSessionId=sid,
++                    qualifier='DEFAULT',contentType='application/json',payload=json.dumps(row['request']).encode())
++                result['headersMs']=(time.perf_counter_ns()-start)/1e6
++                result['rawResponse']=response['response'].read().decode('utf-8')
++                result['complete']=True
++            except Exception as error:
++                result['streamError']=type(error).__name__
++            result['requestWallMs']=(time.perf_counter_ns()-start)/1e6
++            rows.append(result);save(args.output,rows)
++            print(json.dumps({'completed':len(rows),'expected':len(p),'wallMs':round(result['requestWallMs'],2),
++                              'streamComplete':result['complete']}),flush=True)
++            if not result['complete']:break
++    finally:
++        for key,sid in sessions.items():
++            try:
++                client.stop_runtime_session(agentRuntimeArn=binding['runtimeArn'],runtimeSessionId=sid,qualifier='DEFAULT')
++                stopped[key]=True
++            except Exception:stopped[key]=False
++        save(args.output.with_suffix('.sessions.json'),{'sessions':sessions,'stopped':stopped})
++
++
++if __name__=='__main__':main()
+diff --git a/research/v3/model-prompt-lab/candidate/mid-l01-manifest.json b/research/v3/model-prompt-lab/candidate/mid-l01-manifest.json
+new file mode 100644
+index 0000000..269913d
+--- /dev/null
++++ b/research/v3/model-prompt-lab/candidate/mid-l01-manifest.json
+@@ -0,0 +1,29 @@
++{
++  "candidate": "L01-mid-safe-outlet-v1",
++  "status": "offline-ready-for-native-screening",
++  "formation": "1-1-2",
++  "change": "Only MID: original Harness15 to separate deterministic Runtime; other four bindings unchanged",
++  "playerId": 2,
++  "artifact": "mid_fast_v1/artifact.json",
++  "archiveSha256": "fb02b3abb1808991ebd2a714f2e2f5868fb7e6045f3a1de8043a86cf0ba0152a",
++  "environment": {
++    "PLAYER_ID": "2",
++    "MID_AUDIT": "1",
++    "BUILD_COMMIT": "exact source commit containing this manifest"
++  },
++  "rollback": {
++    "registeredKind": "original Harness",
++    "currentVersion": "15",
++    "exportSourceVersion": "15",
++    "modelId": "global.amazon.nova-2-lite-v1:0",
++    "promptFile": "research/v3/schema-clean/mid.txt",
++    "promptSha256": "7b05fe872d47c532c374390642006759924d84048a61577bf4f3a9bba400c729",
++    "configurationSha256": "dffba3d7e6e03a63510440520eedef2e03ebb951adee0222692ac963a2038e86"
++  },
++  "native": null,
++  "fitness": null,
++  "promotion": false,
++  "modelCallsPerTick": 0,
++  "offBall": "CLEAR_OVERRIDE to built-in engine; no custom defensive or pressing policy",
++  "note": "Whole-role execution and on-ball policy change, not an isolated model A/B"
++}
+diff --git a/tests/test_mid_fast_v1.py b/tests/test_mid_fast_v1.py
+new file mode 100644
+index 0000000..c48d2ef
+--- /dev/null
++++ b/tests/test_mid_fast_v1.py
+@@ -0,0 +1,156 @@
++import asyncio
++import copy
++import importlib.util
++import json
++import random
++from pathlib import Path
++import sys
++import types
++import unittest
++from unittest.mock import patch
++
++from mid_fast_v1.engine import MidEngine, segment_gap
++from mid_fast_v1.fixtures import base, move, mirror, small_frame, cases
++
++ROOT=Path(__file__).resolve().parents[1]
++sys.path.insert(0,str(ROOT/'research/v3/model-prompt-lab'))
++import lab
++
++
++class MidFastTests(unittest.TestCase):
++    def test_labelled_passing_and_finishing_on_both_sides_and_frames(self):
++        for case in cases():
++            with self.subTest(case=case['id']):
++                out,audit=MidEngine().choose(case['input'])
++                self.assertEqual(lab.command_errors(json.dumps(out),'mid'),[])
++                self.assertEqual(out[0]['commandType'],case['expectedAction'])
++                self.assertEqual(out[0]['parameters'].get('target_player_id'),case['expectedReceiver'])
++                self.assertFalse(audit['modelAttempted'])
++
++    def test_independent_of_player_order_and_mirrors_receiver(self):
++        rng=random.Random(20261025)
++        for case in cases():
++            original=MidEngine().choose(case['input'])[0]
++            root=copy.deepcopy(case['input']);rng.shuffle(root['gameState']['players'])
++            self.assertEqual(MidEngine().choose(root)[0],original)
++            self.assertEqual(MidEngine().choose(mirror(root))[0],original)
++
++    def test_current_opponent_with_same_id_never_authorizes_our_pass(self):
++        root=base();gs=root['gameState'];gs['players'][2]['hasBall']=False
++        gs['players'][7]['hasBall']=True;gs['ball']['possessionTeamCode']='away'
++        out,_=MidEngine().choose(root);self.assertEqual(out[0]['commandType'],'CLEAR_OVERRIDE')
++        for p in gs['players']:p.pop('hasBall')
++        gs['ball'].pop('possessionTeamCode')
++        self.assertEqual(MidEngine().choose(root)[0][0]['commandType'],'CLEAR_OVERRIDE')
++
++    def test_ownership_conflicts_free_ball_and_far_ball_release(self):
++        for change in ('free','two-holders','denied','far'):
++            with self.subTest(change=change):
++                root=base();gs=root['gameState']
++                if change=='free':gs['ball']['isFree']=True
++                if change=='two-holders':gs['players'][7]['hasBall']=True
++                if change=='denied':gs['players'][2]['hasBall']=False
++                if change=='far':gs['ball']['position']['x']=30
++                self.assertEqual(MidEngine().choose(root)[0][0]['commandType'],'CLEAR_OVERRIDE')
++
++    def test_conflicting_qualified_ids_and_invalid_unlocks_release(self):
++        for field,value in [('possessionTeamId',1),('possessionTeamId',True),
++                            ('possessionPlayerId',3),('possessionPlayerId',2.0),
++                            ('possessionAgentId','unexpected')]:
++            root=base();root['gameState']['ball'][field]=value
++            self.assertEqual(MidEngine().choose(root)[0][0]['commandType'],'CLEAR_OVERRIDE')
++        for value in (None,'PASS',[{}]):
++            root=base();root['unlockedCommands']=value
++            self.assertEqual(MidEngine().choose(root)[0][0]['commandType'],'CLEAR_OVERRIDE')
++        root=small_frame(base());root['gameState']['ball']['position']['y']=1
++        self.assertEqual(MidEngine().choose(root)[1]['reason'],'AIRBORNE_BALL')
++
++    def test_stale_commands_do_not_survive_ownership_transition(self):
++        root=base();e=MidEngine();self.assertEqual(e.choose(root,'game')[0][0]['commandType'],'PASS')
++        gs=root['gameState'];gs['tick']+=1;gs['gameTime']+=.1
++        gs['players'][2]['hasBall']=False;gs['players'][7]['hasBall']=True;gs['ball']['possessionTeamCode']='away'
++        self.assertEqual(e.choose(root,'game')[0][0]['commandType'],'CLEAR_OVERRIDE')
++        self.assertEqual(e.choose(base(),'game')[1]['reason'],'STALE_OR_DUPLICATE_FRAME')
++        self.assertEqual(e.choose(base(),'another-game')[0][0]['commandType'],'PASS')
++
++    def contact_root(self):
++        root=small_frame(base());gs=root['gameState']
++        for p in gs['players']:p.pop('hasBall')
++        gs['ball'].pop('possessionTeamCode')
++        return root
++
++    def test_geometric_contact_requires_fresh_evidence_and_is_session_local(self):
++        root=self.contact_root();e=MidEngine()
++        self.assertEqual(e.choose(root,'one')[0][0]['commandType'],'CLEAR_OVERRIDE')
++        self.assertEqual(e.choose(root,'one')[1]['reason'],'STALE_OR_DUPLICATE_FRAME')
++        # Duplicate interrupted confirmation. Restart with a genuinely fresh pair.
++        root['gameState']['tick']+=1;root['gameState']['gameTime']+=.1
++        self.assertEqual(e.choose(root,'one')[0][0]['commandType'],'CLEAR_OVERRIDE')
++        root['gameState']['tick']+=1;root['gameState']['gameTime']+=.1
++        out,a=e.choose(root,'one');self.assertEqual(out[0]['commandType'],'PASS')
++        self.assertEqual(a['ownershipEvidence'],'two_fresh_contact_frames')
++        self.assertEqual(e.choose(root,'other')[0][0]['commandType'],'CLEAR_OVERRIDE')
++        far=copy.deepcopy(root);far['gameState']['tick']+=50;far['gameState']['gameTime']+=2
++        self.assertEqual(e.choose(far,'one')[0][0]['commandType'],'CLEAR_OVERRIDE')
++
++    def test_airborne_or_ambiguous_contact_never_proves_possession(self):
++        for mode in ('airborne','both-near'):
++            root=self.contact_root();e=MidEngine()
++            if mode=='airborne':root['gameState']['ball']['position']['y']=1
++            else:root['gameState']['players'][7]['position']={'x':.01,'y':0}
++            e.choose(root,'x');root['gameState']['tick']+=1;root['gameState']['gameTime']+=.1
++            self.assertEqual(e.choose(root,'x')[0][0]['commandType'],'CLEAR_OVERRIDE')
++
++    def test_malformed_and_partial_state_cannot_invent_space(self):
++        samples=[None,[],{},'{bad',{'prompt':{'gameState':None}}]
++        for change in ('missing','duplicate','nan','bool','bad-velocity','wrong-role','float-role','no-time','unresolved-3d'):
++            r=base();g=r['gameState']
++            if change=='missing':g['players'].pop()
++            if change=='duplicate':g['players'][-1]=g['players'][0]
++            if change=='nan':g['players'][6]['position']['x']=float('nan')
++            if change=='bool':g['ball']['position']['x']=True
++            if change=='bad-velocity':g['players'][3]['velocity']={'x':0}
++            if change=='wrong-role':r['myPlayers']=[3]
++            if change=='float-role':r['myPlayers']=[2.0]
++            if change=='no-time':g.pop('tick')
++            if change=='unresolved-3d':g['ball']['position']['z']=0
++            samples.append(r)
++        for sample in samples:
++            out,_=MidEngine().choose(sample)
++            self.assertEqual(out[0]['commandType'],'CLEAR_OVERRIDE')
++
++    def test_restart_offball_unlocks_and_missing_velocity(self):
++        root=base();root['gameState']['playMode']='KICK_OFF'
++        self.assertEqual(MidEngine().choose(root)[0][0]['commandType'],'CLEAR_OVERRIDE')
++        root=base();root['unlockedCommands']=['CLEAR_OVERRIDE']
++        self.assertEqual(MidEngine().choose(root)[1]['reason'],'COMMAND_NOT_UNLOCKED')
++        root=base()
++        for p in root['gameState']['players']:p.pop('velocity')
++        out,a=MidEngine().choose(root)
++        self.assertEqual(out[0]['commandType'],'PASS')
++        self.assertEqual(a['velocityCoverage'],'static_with_extra_margin')
++
++    def test_segments_cross_without_extending_past_receiver(self):
++        self.assertEqual(segment_gap((0,0),(10,0),(5,-2),(5,2)),0)
++        self.assertEqual(segment_gap((0,0),(10,0),(12,-2),(12,2)),2)
++
++    def test_session_limit_and_input_not_mutated(self):
++        root=base();original=copy.deepcopy(root);e=MidEngine()
++        for i in range(80):e.choose(root,str(i))
++        self.assertEqual(len(e.sessions),64);self.assertEqual(root,original)
++
++    def test_entrypoint_single_full_array_and_logging_failure_does_not_change_it(self):
++        class App:
++            def __init__(self):self.logger=types.SimpleNamespace(info=lambda text: (_ for _ in ()).throw(RuntimeError()))
++            def entrypoint(self,f):return f
++        sdk=types.ModuleType('bedrock_agentcore.runtime');sdk.BedrockAgentCoreApp=App
++        with patch.dict(sys.modules,{'bedrock_agentcore.runtime':sdk}),patch.dict('os.environ',{'PLAYER_ID':'2','MID_AUDIT':'1'}):
++            spec=importlib.util.spec_from_file_location('mid_test_main',ROOT/'mid_fast_v1/main.py')
++            module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
++            result=asyncio.run(module.invoke({'prompt':json.dumps(base())},types.SimpleNamespace(session_id='test')))
++            chunks=list(result);self.assertEqual(len(chunks),1)
++            self.assertEqual(lab.command_errors(chunks[0],'mid'),[])
++            self.assertEqual(json.loads(chunks[0])[0]['commandType'],'PASS')
++
++
++if __name__=='__main__':unittest.main()
+diff --git a/tests/test_mid_native_grade.py b/tests/test_mid_native_grade.py
+new file mode 100644
+index 0000000..b318852
+--- /dev/null
++++ b/tests/test_mid_native_grade.py
+@@ -0,0 +1,46 @@
++import copy
++import json
++from pathlib import Path
++import unittest
++
++from mid_fast_v1.engine import MidEngine
++from mid_fast_v1.evaluate import plan, digest
++from mid_fast_v1.grade_native import grade, decode_response
++
++ROOT=Path(__file__).resolve().parents[1]
++
++
++class NativeGradeTests(unittest.TestCase):
++    @classmethod
++    def setUpClass(cls):
++        engine=MidEngine();p=plan();artifact=json.loads((ROOT/'mid_fast_v1/artifact.json').read_text());cls.receipts=[]
++        for row in p:
++            commands,_=engine.choose(row['request'],row['sessionKey'])
++            cls.receipts.append({k:row[k] for k in ('key','sessionKey','sequence','requestSha256')} |
++                {'planSha256':digest(p),'archiveSha256':artifact['archiveSha256'],'requestWallMs':100.,
++                 'complete':True,'streamError':None,'rawResponse':'data: '+json.dumps(json.dumps(commands))+'\n\n'})
++
++    def test_mock_native_pass_does_not_promote_and_missing_deadline_fails(self):
++        self.assertTrue(grade(self.receipts,1000,'synthetic unit-test deadline')['nativeGatePassed'])
++        self.assertFalse(grade(self.receipts,1000,'synthetic unit-test deadline')['eligibleForRankedPromotion'])
++        self.assertFalse(grade(self.receipts)['nativeGatePassed'])
++
++    def test_first_call_and_stream_failure_count(self):
++        for field,value in [('requestWallMs',1200),('complete',False),('streamError','Error')]:
++            rows=copy.deepcopy(self.receipts);rows[0][field]=value
++            self.assertFalse(grade(rows,1000,'synthetic')['nativeGatePassed'])
++        self.assertFalse(grade(self.receipts[1:],1000,'synthetic')['nativeGatePassed'])
++        self.assertFalse(grade(list(reversed(self.receipts)),1000,'synthetic')['nativeGatePassed'])
++
++    def test_exact_hash_and_unique_receipts(self):
++        rows=copy.deepcopy(self.receipts);rows[0]['archiveSha256']='wrong'
++        with self.assertRaises(ValueError):grade(rows)
++        with self.assertRaises(ValueError):grade(self.receipts+self.receipts[:1])
++
++    def test_full_body_must_have_only_one_command_event(self):
++        self.assertEqual(json.loads(decode_response(self.receipts[0]['rawResponse']))[0]['commandType'],'PASS')
++        for extra in ('explanation','data: []','event: error'):
++            with self.assertRaises(ValueError):decode_response(self.receipts[0]['rawResponse']+extra)
++
++
++if __name__=='__main__':unittest.main()

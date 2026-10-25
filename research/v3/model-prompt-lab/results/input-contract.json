@@ -1,0 +1,22 @@
+{
+  "rows": [
+    {
+      "source": "research/v3/fixtures/observed-fwd1-fitness-kickoff.json",
+      "sha256": "3da1735f5e73d443a42a884f1a77fa3c9a313b75c1c910a1f2137861ad319254",
+      "possessionAgentIdPresent": true,
+      "possessionTeamCodePresent": false,
+      "playersWithHasBall": 0,
+      "strictExplicitOwnershipGateCanResolve": false
+    },
+    {
+      "source": "research/v3/fixtures/observed-live-away-open-play.json",
+      "sha256": "6efef0bc9e20c1497759b628403170ceff7e711ce56533e0a6333a896a34d11f",
+      "possessionAgentIdPresent": true,
+      "possessionTeamCodePresent": false,
+      "playersWithHasBall": 0,
+      "strictExplicitOwnershipGateCanResolve": false
+    }
+  ],
+  "scope": "two saved physical observations, not all live inputs",
+  "decision": "reject mandatory-explicit-ownership prompt draft before inference; do not invent missing team ownership"
+}

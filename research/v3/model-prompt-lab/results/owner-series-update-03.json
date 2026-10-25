@@ -1,0 +1,59 @@
+{
+  "recordedDate": "2026-10-25",
+  "source": "Owner message in research chat; primary report not linked",
+  "officialMatchAlias": null,
+  "seriesId": null,
+  "completedAtUTC": null,
+  "side": null,
+  "configurationReported": "unchanged baseline; final game pending",
+  "exactAppliedConfiguration": null,
+  "candidateP01VerifiedForThisGame": false,
+  "candidateFitnessEvidence": null,
+  "fullResponseP50Ms": null,
+  "fullResponseP95Ms": null,
+  "lateCommandShare": null,
+  "actionCountsByType": null,
+  "safePassOpportunitiesWhileOwningBall": null,
+  "repeatedMoveTargets": null,
+  "physicalProgressAfterMove": null,
+  "newModelCalls": 0,
+  "newMatchesStartedByResearch": 0,
+  "liveWorktreeModified": false,
+  "id": "owner-series-update-03",
+  "seriesOrdinalReported": 3,
+  "opponent": "FootballCore",
+  "resultReported": "LOSS",
+  "scoreFor": 0,
+  "scoreAgainst": 1,
+  "possessionPctReported": 44,
+  "shotsForReported": 4,
+  "shotsAgainstReported": 5,
+  "shotsOnTargetForReported": 0,
+  "shotsOnTargetAgainstReported": 1,
+  "teamActionsReported": 210,
+  "teamAverageLatencyMsReported": null,
+  "roleAverageLatencyRangeMsReported": [
+    1700,
+    3239
+  ],
+  "roleSuccessPctReported": [
+    100,
+    100,
+    100,
+    100,
+    100
+  ],
+  "actionSharesPctReported": {
+    "PRESS": 53,
+    "MOVE": 43
+  },
+  "afterThreeReported": {
+    "wins": 2,
+    "draws": 0,
+    "losses": 1,
+    "goalsFor": 3,
+    "goalsAgainst": 2,
+    "medianOfThreeTeamReportMeansMsApprox": 2400,
+    "notPerInvocationMedian": true
+  }
+}

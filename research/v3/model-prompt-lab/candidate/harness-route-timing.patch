@@ -1,0 +1,114 @@
+--- a/research/v3/allcash-benchmark/harness_route_probe.py
++++ b/research/v3/allcash-benchmark/harness_route_probe.py
+@@ -4,10 +4,53 @@
+ session. Private original export is never included in the public result.
+ """
+ import argparse
++import hashlib
+ import json
+ from pathlib import Path
+ import time
+ import uuid
++
++
++def collect_stream(stream, started, now=time.perf_counter):
++    """Consume the entire stream, including text after a valid JSON prefix.
++
++    Times share the caller's monotonic clock. A text delta/messageStop is not
++    proof of a complete command, transport delivery, or server application.
++    Partial/error streams retain elapsed time and never receive completeMs.
++    """
++    texts, event_types, metadata, errors, stops = [], [], [], [], []
++    first_event_ms = first_text_ms = last_text_ms = None
++    failure = None
++    try:
++        for event in stream:
++            elapsed = (now() - started) * 1000
++            if first_event_ms is None:
++                first_event_ms = elapsed
++            event_types.extend(event.keys())
++            delta = event.get('contentBlockDelta', {}).get('delta', {})
++            if delta.get('text'):
++                if first_text_ms is None:
++                    first_text_ms = elapsed
++                last_text_ms = elapsed
++                texts.append(delta['text'])
++            if 'messageStop' in event:
++                stops.append(elapsed)
++            if 'metadata' in event:
++                metadata.append(event['metadata'])
++            for key, value in event.items():
++                if key.endswith('Exception') or key == 'runtimeClientError':
++                    errors.append({'type': key, 'detail': value})
++    except Exception as exc:
++        failure = type(exc).__name__
++    elapsed = (now() - started) * 1000
++    complete = failure is None and not errors
++    return {'firstEventMs': first_event_ms, 'firstTextMs': first_text_ms,
++            'lastTextMs': last_text_ms, 'messageStopMs': stops,
++            'observedElapsedMs': elapsed, 'streamComplete': complete,
++            'completeMs': elapsed if complete else None,
++            'streamFailureType': failure, 'eventTypes': sorted(set(event_types)),
++            'metadata': metadata, 'text': ''.join(texts), 'errors': errors,
++            'serverReceiveMs': None, 'serverApplyMs': None}
+
+
+ def main():
+@@ -21,19 +64,24 @@
+                     help='Test whether the same Harness ARN accepts the Runtime prompt envelope')
+     ap.add_argument('--calls', type=int, choices=(1, 2), default=2)
+     args = ap.parse_args()
++    if ".local" not in args.output.resolve().parts:
++        ap.error("Raw diagnostic output must stay under a private .local directory")
+     import boto3
+     from botocore.config import Config
+     originals = json.loads(args.originals.read_text())
+     original = next(h for h in originals if h['harnessName'] == args.name)
+     frame = json.loads(args.fixture.read_text())['decodedState']
+     frame['myPlayers'] = [args.player]
++    request_hash = hashlib.sha256(json.dumps(frame, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
+     client = boto3.client('bedrock-agentcore', region_name='us-east-1',
+                          config=Config(connect_timeout=5, read_timeout=60,
+                                        retries={'max_attempts': 0}))
+     session = 'nhitl-route-probe-' + str(uuid.uuid4())
+     report = {'kind': ('InvokeAgentRuntime with Harness ARN' if args.runtime_envelope
+                        else 'Native InvokeHarness') + '; CloudShell path, not game server',
+-              'role': args.name, 'player': args.player, 'calls': [], 'stopped': False}
++              'role': args.name, 'player': args.player, 'calls': [], 'stopped': False,
++              'timingVersion': 'D02', 'clock': 'caller monotonic; milliseconds from request start',
++              'requestStateSha256': request_hash, 'isGameServerPath': False}
+     args.output.parent.mkdir(parents=True, exist_ok=True)
+     receipt = args.output.with_suffix('.private-session.json')
+     receipt.write_text(json.dumps({'sessionId': session, 'harnessArn': original['arn']}))
+@@ -65,28 +113,13 @@
+                 save()
+                 print('ROUTE_CALL', json.dumps(row), flush=True)
+                 continue
+-            texts, event_types, metadata, errors = [], [], [], []
+-            first_event_ms = None
+-            for event in response['stream']:
+-                if first_event_ms is None:
+-                    first_event_ms = (time.perf_counter() - started) * 1000
+-                event_types.extend(event.keys())
+-                delta = event.get('contentBlockDelta', {}).get('delta', {})
+-                if 'text' in delta:
+-                    texts.append(delta['text'])
+-                if 'metadata' in event:
+-                    metadata.append(event['metadata'])
+-                for key in ('internalServerException', 'validationException', 'runtimeClientError'):
+-                    if key in event:
+-                        errors.append(event[key])
+             row = {'repeat': repeat, 'headersMs': headers_ms,
+-                   'firstEventMs': first_event_ms,
+-                   'completeMs': (time.perf_counter() - started) * 1000,
+-                   'eventTypes': sorted(set(event_types)), 'metadata': metadata,
+-                   'text': ''.join(texts), 'errors': errors}
++                   **collect_stream(response['stream'], started)}
+             report['calls'].append(row)
+             save()
+             print('ROUTE_CALL', json.dumps(row), flush=True)
++            if not row['streamComplete']:
++                raise RuntimeError('Incomplete or error-bearing stream; partial receipt saved')
+     except Exception as exc:
+         report['failureType'] = type(exc).__name__
+         report['failureElapsedMs'] = (time.perf_counter() - started) * 1000
