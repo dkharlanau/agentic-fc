@@ -3,7 +3,7 @@
   "coachVersion": "coach-v1.0",
   "status": "running",
   "targetCompletedGames": 10,
-  "completedGames": 2,
+  "completedGames": 3,
   "createdAtUTC": "2026-10-25T07:02:19.911385+00:00",
   "setup": {
     "sourceCommit": "931af03",
@@ -72,6 +72,18 @@
           3,
           98
         ],
+        "teamCommandCounts": {
+          "MOVE_TO": 21,
+          "PRESS_BALL": 21,
+          "INTERCEPT": 8,
+          "FOLLOW_PLAYER": 5,
+          "SHOOT": 2
+        },
+        "opponentCommandCounts": {
+          "CLEAR_OVERRIDE": 4,
+          "PRESS_BALL": 2,
+          "PASS": 1
+        },
         "agentSuccessPct": [
           100,
           100,
@@ -85,19 +97,7 @@
           100,
           100,
           100
-        ],
-        "teamCommandCounts": {
-          "move": 21,
-          "press": 21,
-          "intercept": 8,
-          "follow": 5,
-          "shoot": 2
-        },
-        "opponentCommandCounts": {
-          "clear": 4,
-          "press": 2,
-          "pass": 1
-        }
+        ]
       }
     },
     {
@@ -168,6 +168,88 @@
           100
         ]
       }
+    },
+    {
+      "alias": "batch12-live-03",
+      "opponent": "Amber Dragons X",
+      "side": "HOME",
+      "status": "complete",
+      "initiation": "manual random matchmaking",
+      "liveObservedAtUTC": "2026-10-25T07:15:04.183Z",
+      "matchReport": "https://agentic-football.aws.dev/matches/02201641-2c49-4586-a99a-08eac038da18/report",
+      "opponentLeaderboardAtCohortStart": {
+        "rank": 8,
+        "points": 352,
+        "played": 143,
+        "wins": 117,
+        "draws": 1,
+        "losses": 25,
+        "goalsFor": 408,
+        "goalsAgainst": 188
+      },
+      "privateEvidence": [
+        "game03-live.png"
+      ],
+      "scoreFor": 1,
+      "scoreAgainst": 0,
+      "result": "WIN",
+      "completedAtObserved": "2026-10-25T07:19:33.969585+00:00",
+      "rawReportFacts": {
+        "possessionPct": 52,
+        "shotsFor": 2,
+        "shotsAgainst": 5,
+        "shotsOnTargetFor": 1,
+        "shotsOnTargetAgainst": 0,
+        "teamAverageLatencyMs": 74,
+        "teamCommands": 335,
+        "opponentAverageLatencyMs": 16,
+        "opponentCommands": 44,
+        "agentLatencyMs": [
+          84,
+          82,
+          79,
+          79,
+          76
+        ],
+        "opponentAgentLatencyMs": [
+          3,
+          3,
+          2,
+          2,
+          79
+        ],
+        "teamCommandCounts": {
+          "MOVE_TO": 241,
+          "CLEAR_OVERRIDE": 51,
+          "PRESS_BALL": 25,
+          "INTERCEPT": 8,
+          "SHOOT": 6,
+          "PASS": 3,
+          "GK_DISTRIBUTE": 1
+        },
+        "opponentCommandCounts": {
+          "CLEAR_OVERRIDE": 33,
+          "PASS": 10,
+          "INTERCEPT": 1
+        },
+        "agentSuccessPct": [
+          100,
+          100,
+          100,
+          100,
+          100
+        ],
+        "opponentAgentSuccessPct": [
+          100,
+          100,
+          100,
+          100,
+          100
+        ]
+      },
+      "dataQualityNotes": [
+        "Final viewer header and match report show 1:0 WIN; generated commentary says ends 1:1. Commentary is not used as score evidence."
+      ]
     }
   ],
   "ownerDirective": "Ten real games per cohort; analyze only after all ten complete",
@@ -177,7 +259,7 @@
     "activeMatch": false,
     "automaticShutdown": false,
     "quotaGuardPercent": 5,
-    "remainingQuotaPercentLastCheck": 97
+    "remainingQuotaPercentLastCheck": 94
   },
   "ownerScope": "This branch plays real matches, collects data and observations, pushes GitHub checkpoints, and changes lineup/setup only on explicit request."
 }
