@@ -1,8 +1,8 @@
 {
   "id": "ranked-batch-16",
-  "status": "stopped-on-owner-request-after-game1",
+  "status": "in-progress-owner-resumed-baseline-while-L02-prepares",
   "targetCompletedGames": 5,
-  "completedGames": 1,
+  "completedGames": 2,
   "setup": "unchanged live baseline, FWD1v16, existing FWD2 fast path, formation 1-1-2",
   "preflight": {
     "portalState": "READY TO PLAY",
@@ -48,9 +48,52 @@
         "34% possession but 7-0 shots and 2-0 shots on target; opponent had 66% possession and zero shots.",
         "Report coach note recommends adding SHOOT commands; our command breakdown records zero SHOOT despite two goals, so treat this as a mismatch between advice and observed commands."
       ]
+    },
+    {
+      "opponent": "Ada",
+      "result": "WIN",
+      "score": "2-1",
+      "possessionPct": "36-64",
+      "shots": "2-1",
+      "shotsOnTarget": "2-1",
+      "teamAverageLatencyMs": 845,
+      "teamCommands": 324,
+      "roleLatencyMs": [623, 926, 902, 613, 891],
+      "successPct": "100% all roles",
+      "actions": {
+        "MOVE": 206,
+        "PRESS": 62,
+        "INTERCEPT": 32,
+        "CLEAR": 18,
+        "GK_DIST": 4,
+        "SHOOT": 2
+      },
+      "opponentReport": {
+        "teamAverageLatencyMs": 15,
+        "teamCommands": 58,
+        "roleLatencyMs": [2, 2, 2, 2, 73],
+        "successPct": "100% all roles",
+        "actions": {"CLEAR": 54, "PASS": 2, "INTERCEPT": 1, "SHOOT": 1}
+      },
+      "observations": [
+        "Live commentary described Ada building patiently, keeping possession, and probing for a gap; Ada scored first, No Human in the Loop equalized, then took the lead.",
+        "Ada chose CLEAR for 93% of its 58 commands; this is a report label, not proof that all clears were forced or ineffective.",
+        "The report lists 2-1 shots and 2-1 shots on target. Goals: Ada FWD 4 at 1', Unknown No Human in the Loop at 2', and MID 3 at 2'.",
+        "No Human in the Loop won with 36% possession and 845ms team-average latency; Ada reported 15ms. This single match does not establish a causal relationship between possession, latency, and outcome.",
+        "Player models, detailed event locations, and pass completion were not present in the report."
+      ]
     }
   ],
-  "stoppedReason": "Owner redirected priority from the baseline cohort to installing L01. The later EPAM Spor match was already incoming/autostarted, used the previous setup, and is recorded separately in COACH_REVIEWS.md.",
+  "leaderboardAfterGame2": {
+    "rank": 13,
+    "played": 166,
+    "points": 299,
+    "wins": 98,
+    "draws": 5,
+    "losses": 63,
+    "goals": "224-141"
+  },
+  "continuationNote": "Owner resumed baseline games while the separate L02 release is prepared. If L02 passes its native gate, finish any in-flight match and prioritize installing it at the next boundary; do not count baseline games as L02 trials.",
   "limitations": [
     "Series incomplete; no conclusions until five games finish.",
     "HOME/random matchmaking; setup remains unchanged."

@@ -1,5 +1,26 @@
 # Agentic FC continuation
 
+## Latest checkpoint — 2026-10-25, Ada ranked match and L02 priority
+
+Owner resumed live play while a new MID release is prepared and asked to
+prioritize deployment and games on that release as soon as it is ready. Ranked
+batch16 now has 2/5 baseline games recorded: Gork ’n’ Mork Boyz 2:0 and Ada
+2:1. Ada report: 36–64 possession, 2–1 shots/on-target, 324 vs 58 commands,
+845 vs 15 ms team mean; Ada used CLEAR on 54/58 commands (93%). Our per-role
+means were 623/926/902/613/891 ms; Ada 2/2/2/2/73 ms. These are match report
+averages, not per-invocation deadlines. Leaderboard now rank13, 166 played, 299
+points, 98W/5D/63L, goals224:141. No causal claim from this single game.
+
+Research main now contains L02 at exact commit
+`53a409b51297781db512b694df0cb627dd14a951`. L02 keeps L01 policy byte-for-byte
+and changes only the stdlib HTTP/SSE runtime entrypoint; native gate and Fitness
+remain pending. Current lineup is unchanged, formation1-1-2. Finish any live
+match before native checks or lineup change. Create an isolated L02 Runtime from
+the exact commit; require 224/224 complete valid calls, zero late including all
+six first calls, p95<=800ms, then fresh Fitness5/5. Only then replace MID and
+prioritize five ranked L02 games. Keep MID15 rollback and all four other slots
+and formation unchanged. See the research checkout's `mid_fast_v2/README.ru.md`.
+
 ## Latest checkpoint — 2026-10-25, L01 installation attempt
 
 Owner redirected priority from the baseline series to installing L01; ranked
