@@ -1,0 +1,11 @@
+{
+  "id": "ranked-batch-15",
+  "status": "in_progress",
+  "targetCompletedGames": 5,
+  "completedGames": 0,
+  "setup": "unchanged live baseline, FWD1v16, existing FWD2 fast path, formation 1-1-2",
+  "preflight": {"portalState": "READY TO PLAY", "freshFitness": "5/5 PASS", "p01Installed": false},
+  "beforeLeaderboard": {"rank": 15, "played": 156, "points": 274, "wins": 90, "draws": 4, "losses": 62, "goals": "206-136"},
+  "games": [],
+  "limitations": ["Series incomplete; no conclusions until five games finish.", "HOME/random matchmaking; setup remains unchanged."]
+}
