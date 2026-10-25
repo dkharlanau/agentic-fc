@@ -17,6 +17,9 @@ owner consent is still pending. Do not accept terms without that consent. Do
 not start the requested five P01 matches until screening, deadline gate, exact
 readback, and fresh Fitness 5/5 all pass. Current Codex usage check: 13% used,
 87% remaining. Keep this research checkpoint separate from the live AWS setup.
+Revalidated after continuation: AWS tab still says session expired; AWS CLI is
+not installed. The local paired plan regenerated successfully (156 requests,
+zero executed); its private request/response artifacts stay under `.local`.
 
 The batch12 base setup remains four original M8 Nova2Lite Harnesses plus FWD2
 stance rev9/source931af03, formation1-1-2. Do not use the additional incoming
