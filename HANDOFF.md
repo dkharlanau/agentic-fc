@@ -5,25 +5,19 @@ against 1s deadline. Never registered; Fitness not run. EPAM played baseline.
 Receipt: research/v3/model-prompt-lab/results/mid-l01-native-screen-20261025.json.
 Owner explicitly requests autonomous corrections and release handoff after gates.
 
-UPDATE: game operator reports L02/V2 native FAIL, all224 valid but all6 first
-responses about1.9–3.1s. No MID binding or Fitness. Exact stage/receipt export
-pending. Next handed-off check is the IDENTICAL L02 archive on V1 (new isolated
-runtime/sessions/output); no new policy. Another baseline match is underway,
-so the operator waits for a free boundary. Do not mistake the prepared code
-or overall p95~150ms for promotion. See mid-l02-handoff.json in results.
+UPDATE: Exact L02 V1 receipt and correlated runtime logs are now available.
+Both V2 and V1 failed: 224/224 valid replies, but all six first-session calls
+exceeded the 1s hard deadline (V2 1.667–3.100s; V1 1.280–1.341s). In V1,
+response headers consumed almost the entire first-call wall; logged app work was
+about 1ms and Python import/readiness 168–236ms. This localizes delay before
+response headers, not its exact AWS/network component. No Fitness, no MID
+binding, and no L02 games. All owned probe sessions stopped. The exact same
+archive has now failed on both V1 and V2; do not repeat without a new measured
+cold-call hypothesis. Live baseline remains unchanged and READY. Sanitized
+receipt: `research/v3/model-prompt-lab/results/mid-l02-native-screen-20261025.json`.
+The next useful technical step is to trace the engine's real invoke/session path,
+then design a candidate specifically against that measurement.
 
-L02 prepared in mid_fast_v2/README.ru.md: same L01 policy/source hashes, stdlib
-HTTP/SSE adapter instead of SDK/dependencies. Archive 16,499 bytes instead of
-20,613,452. 23 focused tests and extracted archive 224/224 replay pass; local
-process startup is not AWS startup. V2 native failed; V1/Fitness pending, unregistered.
-Use --candidate L02 with native_probe.py and grade_native.py; archive hash is
-strictly candidate-bound. First responses remain mandatory; no deadline weakening.
-Only game operator owns AWS/portal. At idle series boundary: isolated Runtime,
-native224/224 with zero late replies and p95<=800ms, then MID binding/Fitness5/5,
-then five games. Preserve all other roles/formation. Rollback MID15 + Fitness.
-If first calls still fail, export startup/handler/headers/full-call stages and
-diagnose platform-vs-application cost; do not retry arbitrary tactical edits.
-Latest game status must come from operator/portal, not historical notes below.
 
 # Agentic FC — unified main checkpoint, 2026-10-25
 

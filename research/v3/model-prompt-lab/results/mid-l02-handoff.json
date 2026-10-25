@@ -10,8 +10,26 @@
   "messageDelivered": true,
   "operatorAcknowledged": true,
   "operatorReported": "L02/V2 native FAIL: 224 valid replies, overall p95 approximately 150ms, six first calls approximately 1.9-3.1s; no binding or Fitness; new baseline match started",
-  "sourceOfStatus": "game operator commentary; not an independent AWS readback",
-  "native": {"platform": "V2", "passed": false, "source": "operator commentary; exact receipt export pending", "receivedReported": 224, "validReported": 224, "lateFirstCallsReported": 6},
+  "sourceOfStatus": "exact native receipts and correlated sanitized CloudWatch runtime metrics, 2026-10-25",
+  "native": {
+    "platforms": {
+      "V2": {
+        "passed": false,
+        "valid": 224,
+        "lateFirstCalls": 6,
+        "p95Ms": 150.404,
+        "maxMs": 3100.351
+      },
+      "V1": {
+        "passed": false,
+        "valid": 224,
+        "lateFirstCalls": 6,
+        "p95Ms": 132.321,
+        "maxMs": 1340.758
+      }
+    },
+    "receipt": "mid-l02-native-screen-20261025.json"
+  },
   "fitness": null,
   "registered": false,
   "promotion": false,
@@ -19,6 +37,6 @@
   "localArchiveReplayPassed": 224,
   "githubCI": "both workflows passed for sourceCommit",
   "archiveByteIdenticalRebuild": true,
-  "nextCheck": "Identical L02 archive on V1; handed off, not yet measured; require unchanged full native/Fitness gates",
+  "nextCheck": "Both V2 and V1 runs of the exact same archive failed the 1s first-call gate. Do not repeat without a measured new cold-call hypothesis; inspect engine invocation/session path.",
   "note": "Handoff progress only. A later exact native/Fitness/binding receipt supersedes this snapshot."
 }

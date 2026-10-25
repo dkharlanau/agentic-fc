@@ -1,3 +1,15 @@
+## 2026-10-25 — L02 cold-call gate failed on V1 and V2
+
+Both isolated native runs returned 224/224 valid full responses, but all six
+first calls exceeded the 1-second tournament deadline. V2 first calls were
+1.667–3.100 s; V1 were 1.280–1.341 s. V1 response headers consumed nearly all
+wall time while measured application work was around 1 ms and Python import /
+server readiness 168–236 ms. This points to delay before response headers; the
+exact AWS/network layer is not identified. L02 remains unregistered; Fitness
+and ranked L02 games were not run. Keep the unchanged live baseline. Do not
+repeat the same archive/platform experiment without a new measured hypothesis.
+Full sanitized evidence: `research/v3/model-prompt-lab/results/mid-l02-native-screen-20261025.json`.
+
 ## 2026-10-24T21:44:47.767478+00:00 — серия10 и порог сохранения
 
 Coach-v1.0 C01–C03 сверены. Пять HOME игр на revision9 stance:2W3L,6:6голы,
