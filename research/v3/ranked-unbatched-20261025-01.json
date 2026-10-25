@@ -1,0 +1,46 @@
+{
+  "id": "ranked-unbatched-20261025-01",
+  "status": "complete-observed-outside-recorded-batch",
+  "origin": "Not initiated by this assistant; exact origin unknown. Portal briefly showed Finding you an opponent, then this finished match appeared in match history.",
+  "setupBeforeMatch": "unknown; we made no changes during this turn. After match, portal showed formation 1-1-2; GK/DEF/MID/FWD4 Nova 2 Lite; FWD5 model not verified.",
+  "opponent": "EL Real de AI",
+  "result": "LOSS",
+  "score": "1-2",
+  "homeAway": "AWAY",
+  "possessionPct": "51-49",
+  "shots": "8-4",
+  "shotsOnTarget": "1-2",
+  "goals": [
+    {"minute": "1'", "scorer": "EL Real de AI FWD Muller"},
+    {"minute": "2'", "scorer": "EL Real de AI MID Kroos"},
+    {"minute": "2'", "scorer": "No Human in the Loop MID 3"}
+  ],
+  "teamReport": {
+    "teamAverageLatencyMs": 200,
+    "teamCommands": 405,
+    "roleLatencyMs": [74, 225, 234, 272, 283],
+    "successPct": "100% all roles",
+    "actions": {"MOVE": 203, "CLEAR": 91, "PRESS": 52, "INTERCEPT": 22, "PASS": 19, "MARK": 11, "SHOOT": 5, "GK_DIST": 2}
+  },
+  "opponentReport": {
+    "teamAverageLatencyMs": 17,
+    "teamCommands": 61,
+    "roleLatencyMs": [2, 1, 1, 1, 79],
+    "successPct": "100% all roles",
+    "actions": {"CLEAR": 60, "PASS": 1},
+    "leaderboardAfterObserved": {"rank": 23, "played": 116, "wins": 71, "draws": 3, "losses": 42, "goals": "234-193", "goalDifference": 41, "points": 216},
+    "leaderboardBeforeObservedAtBatch21Close": {"rank": 23, "played": 114, "wins": 69, "draws": 3, "losses": 42, "goals": "229-192", "goalDifference": 37, "points": 210},
+    "comparisonNote": "The opponent row gained two games and two wins between the batch-close and current snapshots. This match explains one win and +2 goals scored/+1 conceded for them; the other concurrent/unattributed win is not assigned to this match."
+  },
+  "teamLeaderboardAfterObserved": {"rank": 10, "played": 195, "wins": 118, "draws": 6, "losses": 71, "goals": "267-160", "goalDifference": 107, "points": 360},
+  "reportAiOverview": "Generating summary; no AI-generated explanation used.",
+  "opponentIntelligence": [
+    "EL Real de AI report listed CLEAR 60/61 commands (98%) and one PASS. This is an observed command mix, not evidence of tactical intent or clearance success.",
+    "The opponent had four shots and two on target against our eight shots and one on target, while holding 49% possession."
+  ],
+  "dataCaveats": [
+    "The exact match origin and pre-match setup are unknown; do not add this row to the controlled baseline batch21.",
+    "The opponent standings pre-snapshot was the batch21 close, not a timestamp-adjacent pre-match snapshot; concurrent activity is evident in the two-match delta.",
+    "Per-role success is portal-reported and is not an independent deadline or timeout audit."
+  ]
+}

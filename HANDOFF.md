@@ -848,3 +848,24 @@ and 2 on-target for us. Opponent commands totaled 297 with CLEAR251 (84.5%),
 mean latency16.2ms; opponents were Clear-heavy across the cohort. These are
 observations only, not evidence of a causal strategy effect. Full game and
 opponent details: `research/v3/ranked-batch-21.json`.
+
+Unbatched live match observed after batch21: EL Real de AI beat No Human in the
+Loop 2-1. Exact origin/pre-match setup unknown; do not mix it into batch21 or a
+controlled candidate cohort. Report: 51-49 possession, 8-4 shots, 1-2 on target;
+our 405 commands/200ms mean, role 74/225/234/272/283ms; opponent 61/17ms,
+CLEAR60 (98%), PASS1. Our row now #10, 195 played, 360 points, 118W/6D/71L,
+goals267:160. EL Real row #23 now 116 played/216 points; last observed at batch21
+close was114/210, so one additional concurrent win remains unattributed. Details
+and caveats: `research/v3/ranked-unbatched-20261025-01.json`.
+
+L02B is now published at exact main commit `ba1506bc7f91a556e9d8d4a0cff23848b7f45bbb`,
+archive SHA `2d0d5c43d10a3ed704b5a30a0543736fa468c1f9a1bb1a52dcc0351dca835375`.
+This is a new artifact relative to rejected L02, not yet native-qualified or
+installed. At the current safe boundary, inspect exact instructions and run only
+the isolated V1 native gate. Keep baseline bound until native PASS, MID-only
+binding/readback and fresh Fitness5/5. CloudWatch listing exposed only one
+application log-group alias (DEF); CloudTrail lookup for InvokeAgentRuntime and
+InvokeHarness returned AccessDenied. No IAM changes. Real MID/FWD2 game-session
+bootstrap reuse/timing therefore remains unavailable from this read-only audit.
+Competition public season is stated as Sep-Oct 2026; exact close/admission time
+is not published in the page checked, so remaining exact window is unknown.
