@@ -1,12 +1,12 @@
 # Agentic FC continuation
 
-## Current checkpoint — 2026-10-25 (after ranked batch 13)
+## Current checkpoint — 2026-10-25 (after ranked batch 14)
 
-Batch13: five completed real ranked matches on the unchanged baseline, 3W/0D/2L, 7:6 goals, 9 points. Detailed safe summary: `research/v3/ranked-batch-13.json`; review: `research/v3/ranked-batch-13-analysis.ru.md`. Portal verified READY TO PLAY after the fifth match; no active match. Current team page showed formation 1-1-2 and the completed results. Post-series table snapshot: rank16, 151 played, 268 points. There was no immediately preceding leaderboard snapshot, so the cohort's table delta is unknown.
+Batch14 complete: five real ranked matches, unchanged baseline FWD1v16 / existing FWD2 fast path / formation 1-1-2. Result 2W/0D/3L, 2:5 goals, 6 points. Analysis: `research/v3/ranked-batch-14-analysis.ru.md`; per-game data: `research/v3/ranked-batch-14.json`. P01 failed paired screen gates and was never installed. Fresh baseline Fitness 5/5 passed immediately before this series. No active match; portal READY to play.
 
-P01 was screened in the restored Workshop session and FAILED its paired-screen decision/quality/deadline gates. It was never installed. Baseline remained selected; its fresh Fitness passed 5/5 before this five-game series. Do not describe these matches as P01 results. No live settings changed during the series. AWS terms were accepted by the owner. CloudShell held private screening artifacts; no credentials, raw states, ARNs, account/session IDs, or match IDs belong in Git.
+Leaderboard snapshot: rank16, 151 games, 268 points before series; rank15, 156 games, 274 points after. Deltas match 2W/3L and goals 204:131 to 206:136. All five were HOME random-matchmaking games; three were against BOYS753. Repeated opponent results are observations, not controlled comparison. Team report averages were 978/240/252/193/93ms, median240ms; all under 1s, but these are rounded report aggregates, not proof that every invocation met its deadline. Fitness 0ms is not end-to-end latency.
 
-The five report-average latencies were 64, 3934, 2405, 1036 and 865 ms; they are inconsistent across matches and are not per-invocation measurements. Next useful work: while idle, correlate one invocation's timestamps through response application, using read-only telemetry. Do not switch model/prompt/formation until the cause and a candidate pass their gates. Check Codex quota before any further batch; at <=5% remaining, start no new match, finish in-flight work, checkpoint safe results, and verify the remote.
+Next useful work: review first-two-minute concessions vs BOYS753 from available match reports; collect per-invocation timestamps through command application using read-only observability before changing setup. Do not infer shot distance or blame GK/DEF from aggregate stats. Codex quota last checked 16% used before this work; recheck before next batch. Workshop countdown last observed 4h33m during batch14; recheck before a further batch. At <=5% remaining, start no new match, finish any in-flight match, checkpoint safe records, and verify remote.
 
 ## Current checkpoint — 2026-10-25T07:02:19.911385+00:00
 

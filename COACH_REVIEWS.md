@@ -525,3 +525,16 @@ Coach-v1.0 reviewed after five unchanged-baseline ranked games: 3W/0D/2L, 7:6, 9
 **C03 — insufficient evidence.** Six goals conceded across two losses do not isolate GK or formation responsibility. No event timeline or save attribution was available.
 
 **Latency — diagnostic priority.** Match-average reports ranged from 64 to 3934 ms at unchanged configuration; three of five exceeded one second. Dinamo Minsk was won at 3934 ms, while BlackEagle was won at 64 ms, so this small set does not demonstrate a direct outcome relationship. Reported 100% success is not timeliness. Next step: read-only per-invocation timestamp correlation from harness entry to applied command, while idle. Do not change models/prompts based on these aggregates. The 43 team-level RESET commands in Agentic Arsenal cannot be attributed to a role.
+
+
+## 2026-10-25 — batch14 review
+
+Five unchanged-baseline ranked matches: 2W/0D/3L, 2:5, 6 points; see `research/v3/ranked-batch-14-analysis.ru.md`. Fresh Fitness was 5/5 before start. P01 was screened and rejected, never installed. Rank16/151/268 points moved to rank15/156/274; game and goal deltas match the five-game cohort.
+
+**C01 — retain baseline as control.** No alternative was compared, and all matches were HOME/random.
+
+**C02 — insufficient evidence; stronger shot-quality signal.** Only 2 of 17 shots were on target. Distances and chance context remain unknown; do not impose a shot-distance threshold without event evidence.
+
+**C03 — inspect early transitions before changing shape.** Against BOYS753, one win and two losses, 1:3 goals and 13:24 shots. Two goals conceded in one loss occurred in minutes 1 and 2, while our win came from a minute-3 MID goal. Scorers and short narratives do not establish cause; do not assign blame to GK or DEF.
+
+Latency reports were all below one second (93–978ms, median240ms), with only two role averages above one second across 25 role rows. This contrasts with the prior cohort but is not a model effect: configuration remained unchanged. Rounded aggregate latency is not per-call deadline evidence. Next step is read-only per-invocation trace correlation, plus report/event review of the BOYS753 opening.
