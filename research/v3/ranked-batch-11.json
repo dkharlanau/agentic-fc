@@ -59,6 +59,14 @@
         ]
       },
       "completedAtObserved": "2026-10-25T06:14:00Z"
+    },
+    {
+      "alias": "stance-live-02",
+      "opponent": "Mr Football FC",
+      "side": "HOME",
+      "status": "running",
+      "initiation": "manual random matchmaking",
+      "matchReport": "https://agentic-football.aws.dev/matches/02dfb5bf-804c-4af0-9bc0-ad0eaa3dce1d/report"
     }
   ],
   "incomingGamesObservedBeforeSeries": {
