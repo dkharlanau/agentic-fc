@@ -1,7 +1,6 @@
-"""Offline grader for externally collected L01 native receipts; no AWS calls.
+"""Offline grader for externally collected L01/L02 native receipts; no AWS calls.
 
-The collector must measure to full stream completion, include the first calls,
-record errors, and decode the complete SSE body with decode_response below.
+Exit 0 = native PASS only; 1 = failed gate; 2 = malformed input or I/O error.
 Native passage is permission to try Fitness, never proof of football efficacy.
 """
 import argparse
@@ -12,15 +11,11 @@ import sys
 
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
-from mid_fast_v1.evaluate import digest, errors, plan, lab
+from mid_fast_v1.native_telemetry import gate_diagnostics, session_diagnostics
 
 
 def decode_response(raw):
-    """One complete JSON array, optionally wrapped in ONE SSE data event.
-
-    No extraction of the first convenient array; extra text/events fail closed.
-    This is the observed Runtime contract, not a generic SSE implementation.
-    """
+    """One complete JSON array, optionally wrapped in ONE SSE data event."""
     text=raw.strip()
     if text.startswith('data:'):
         lines=[line for line in text.splitlines() if line.strip()]
@@ -41,6 +36,9 @@ def artifact_for(candidate):
 
 
 def grade(receipts, deadline_ms=None, deadline_source=None, candidate='L01'):
+    # Lazy import keeps CLI/transport tests independent of tactical fixtures.
+    from mid_fast_v1.evaluate import digest, errors, plan, lab
+    if not isinstance(receipts,list):raise ValueError('Receipts must be an array')
     if deadline_ms is not None and (type(deadline_ms) not in (int,float) or not math.isfinite(deadline_ms) or deadline_ms<=0):
         raise ValueError('Invalid verified deadline')
     if (deadline_ms is None)!=(deadline_source is None) or (deadline_source is not None and not deadline_source.strip()):
@@ -48,6 +46,7 @@ def grade(receipts, deadline_ms=None, deadline_source=None, candidate='L01'):
     expected=plan();bykey={r['key']:r for r in expected};seen=set();rows=[];order=[]
     artifact=artifact_for(candidate)
     for receipt in receipts:
+        if not isinstance(receipt,dict):raise ValueError('Invalid receipt')
         key=receipt.get('key')
         if key not in bykey or key in seen:raise ValueError('Unknown or duplicate receipt')
         source=bykey[key];seen.add(key);order.append(key)
@@ -68,8 +67,8 @@ def grade(receipts, deadline_ms=None, deadline_source=None, candidate='L01'):
     all_times=lab.distribution([r['requestWallMs'] for r in rows])
     # 800 ms is an engineering target with headroom, not a published rule.
     target=None if deadline_ms is None else min(800, .8*deadline_ms)
-    passed=bool(full and rows and not any(r['errors'] for r in rows) and deadline_ms is not None
-                and not any(r['late'] for r in rows) and all_times['p95']<=target)
+    diagnostics=gate_diagnostics(rows,full,deadline_ms,all_times['p95'],target,session_diagnostics(receipts))
+    passed=bool(full and rows and not diagnostics['failureReasons'])
     return {'kind':'externally measured complete native calls; not game-server latency','candidate':candidate,
             'planSha256':digest(expected),'expected':len(expected),'received':len(rows),'completeOrderedSet':full,
             'validDecisions':sum(not r['errors'] for r in rows),'fullRequestMs':all_times,
@@ -77,18 +76,38 @@ def grade(receipts, deadline_ms=None, deadline_source=None, candidate='L01'):
             'laterInSessionMs':lab.distribution([r['requestWallMs'] for r in rows if not r['firstInSession']]),
             'deadlineMs':deadline_ms,'deadlineSource':deadline_source,'p95TargetMs':target,
             'lateOrInvalid':None if deadline_ms is None else sum(bool(r['errors']) or r['late'] for r in rows),
-            'nativeGatePassed':passed,'fitness':None,'eligibleForRankedPromotion':False,'rows':rows}
+            'nativeGatePassed':passed,'fitness':None,'eligibleForRankedPromotion':False,
+            **diagnostics,'rows':rows}
 
 
-if __name__=='__main__':
+def main(argv=None):
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('receipts',type=Path)
     parser.add_argument('--deadline-ms',type=float)
     parser.add_argument('--deadline-source')
     parser.add_argument('--candidate',choices=('L01','L02'),default='L01')
     parser.add_argument('--output',type=Path,required=True)
-    args=parser.parse_args()
-    report=grade(json.loads(args.receipts.read_text()),args.deadline_ms,args.deadline_source,args.candidate)
-    args.output.parent.mkdir(parents=True,exist_ok=True)
-    args.output.write_text(json.dumps(report,indent=2,allow_nan=False)+'\n')
-    print(json.dumps({k:v for k,v in report.items() if k!='rows'}))
+    args=parser.parse_args(argv)
+    if args.output.resolve()==args.receipts.resolve():
+        print('Input and output paths must differ',file=sys.stderr)
+        return 2
+    try:
+        report=grade(json.loads(args.receipts.read_text()),args.deadline_ms,args.deadline_source,args.candidate)
+        exit_code=0 if report['nativeGatePassed'] is True else 1
+    except (OSError,UnicodeError,ValueError,TypeError,KeyError,AttributeError) as error:
+        # Replace a stale PASS report on bad input. Do not print private payloads.
+        report={'nativeGatePassed':False,'eligibleForRankedPromotion':False,
+                'failureReasons':['invalid_receipt_or_io_error'],'errorType':type(error).__name__}
+        exit_code=2
+    try:
+        args.output.parent.mkdir(parents=True,exist_ok=True)
+        args.output.write_text(json.dumps(report,indent=2,allow_nan=False)+'\n')
+    except (OSError,ValueError):
+        print('Unable to save native grade',file=sys.stderr)
+        return 2
+    print(json.dumps({k:v for k,v in report.items() if k!='rows'},allow_nan=False))
+    return exit_code
+
+
+if __name__=='__main__':
+    raise SystemExit(main())
