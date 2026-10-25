@@ -96,6 +96,14 @@
         ]
       },
       "completedAtObserved": "2026-10-25T06:21:00Z"
+    },
+    {
+      "alias": "stance-live-03",
+      "opponent": "FootballCore",
+      "side": "HOME",
+      "status": "running",
+      "initiation": "manual random matchmaking",
+      "matchReport": "https://agentic-football.aws.dev/matches/318043d8-7d09-48c8-9c65-c0a1bb28287a/report"
     }
   ],
   "incomingGamesObservedBeforeSeries": {
