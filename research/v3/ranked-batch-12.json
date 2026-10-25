@@ -3,7 +3,7 @@
   "coachVersion": "coach-v1.0",
   "status": "running",
   "targetCompletedGames": 10,
-  "completedGames": 1,
+  "completedGames": 2,
   "createdAtUTC": "2026-10-25T07:02:19.911385+00:00",
   "setup": {
     "sourceCommit": "931af03",
@@ -98,6 +98,75 @@
           "press": 2,
           "pass": 1
         }
+      }
+    },
+    {
+      "alias": "batch12-live-02",
+      "opponent": "Tik&Taka",
+      "side": "HOME",
+      "status": "complete",
+      "initiation": "manual random matchmaking",
+      "liveObservedAtUTC": "2026-10-25T07:09:34.440485+00:00",
+      "matchReport": "https://agentic-football.aws.dev/matches/31f11d99-27d6-42e8-8090-c5745616f330/report",
+      "opponentFormationObserved": "1-2-1",
+      "opponentFormationEvidence": "Visible Unity opponent lineup screen; not inferred from tactics commentary",
+      "scoreFor": 2,
+      "scoreAgainst": 0,
+      "result": "WIN",
+      "completedAtObserved": "2026-10-25T07:13:13.217444+00:00",
+      "rawReportFacts": {
+        "possessionPct": 38,
+        "shotsFor": 4,
+        "shotsAgainst": 5,
+        "shotsOnTargetFor": 2,
+        "shotsOnTargetAgainst": 0,
+        "teamAverageLatencyMs": 1018,
+        "teamCommands": 370,
+        "opponentAverageLatencyMs": 17,
+        "opponentCommands": 49,
+        "agentLatencyMs": [
+          692,
+          1028,
+          1072,
+          1081,
+          1033
+        ],
+        "opponentAgentLatencyMs": [
+          5,
+          4,
+          4,
+          4,
+          75
+        ],
+        "teamCommandCounts": {
+          "MOVE_TO": 305,
+          "PRESS_BALL": 33,
+          "CLEAR_OVERRIDE": 12,
+          "PASS": 8,
+          "MARK": 6,
+          "SHOOT": 5,
+          "INTERCEPT": 1
+        },
+        "opponentCommandCounts": {
+          "CLEAR_OVERRIDE": 34,
+          "PASS": 11,
+          "INTERCEPT": 2,
+          "PRESS_BALL": 2
+        },
+        "agentSuccessPct": [
+          100,
+          100,
+          100,
+          100,
+          100
+        ],
+        "opponentAgentSuccessPct": [
+          100,
+          100,
+          100,
+          100,
+          100
+        ]
       }
     }
   ],
