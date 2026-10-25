@@ -348,7 +348,7 @@
       "alias": "stance-live-08",
       "opponent": "Agents United",
       "side": "HOME",
-      "status": "preparing",
+      "status": "running",
       "initiation": "manual random matchmaking",
       "matchReport": "https://agentic-football.aws.dev/matches/6ac0e4b4-1dac-49ba-b560-714f585015f9/report"
     }
