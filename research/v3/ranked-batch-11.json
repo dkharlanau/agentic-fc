@@ -443,6 +443,14 @@
         ]
       },
       "completedAtObserved": "2026-10-25T08:34:00Z"
+    },
+    {
+      "alias": "stance-live-10",
+      "opponent": "Mobile United FC",
+      "side": "HOME",
+      "status": "running",
+      "initiation": "manual random matchmaking",
+      "matchReport": "https://agentic-football.aws.dev/matches/f5efc679-8ebc-42d7-b37c-f36c53108729/report"
     }
   ],
   "incomingGamesObservedBeforeSeries": {
