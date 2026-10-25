@@ -1,0 +1,58 @@
+{
+  "id": "ranked-unbatched-20261025-02",
+  "recordedAtUtc": "2026-10-25T13:59:27Z",
+  "status": "complete-observed-outside-recorded-batch",
+  "origin": "The portal showed a LIVE match when work resumed; the user then confirmed it had ended. Exact start/origin unknown.",
+  "opponent": "Next-gen",
+  "result": "LOSS",
+  "score": "0-1",
+  "homeAway": "unknown",
+  "possessionPct": "50-50",
+  "shots": "11-9",
+  "shotsOnTarget": "0-1",
+  "goals": [
+    { "minute": "4'", "scorer": "Next-gen MID 3" }
+  ],
+  "teamReport": {
+    "teamAverageLatencyMs": 1,
+    "teamCommands": 12,
+    "roleLatencyMs": [2, 2, 2, 1, 1],
+    "successPct": "100% all roles",
+    "actions": { "CLEAR": 12 }
+  },
+  "opponentReport": {
+    "teamAverageLatencyMs": 4,
+    "teamCommands": 17,
+    "roleLatencyMs": [4, 3, 3, 3, 11],
+    "successPct": "100% all roles",
+    "actions": { "CLEAR": 10, "PASS": 7 },
+    "leaderboard": "unknown"
+  },
+  "teamLeaderboardAfterObserved": {
+    "rank": 10,
+    "played": 196,
+    "wins": 118,
+    "draws": 6,
+    "losses": 72,
+    "goals": "267-161",
+    "goalDifference": 106,
+    "points": 360
+  },
+  "postMatchFitnessObservation": {
+    "positionsPassed": 0,
+    "positionsTotal": 5,
+    "failedPositions": ["GK", "DEF", "MID", "FWD1", "FWD2"],
+    "invocationsDisplayedPerPosition": 0,
+    "latencyDisplayedMsPerPosition": 0,
+    "modelDisplayed": "Not verified yet for all positions",
+    "awsConsoleHarnessListing": "0 Harnesses displayed; console returned 'The security token included in the request is invalid.'",
+    "exactFitnessExceptionPerPosition": "not exposed by portal",
+    "configurationChangedByAssistant": false
+  },
+  "dataCaveats": [
+    "The exact match origin and pre-match configuration are unknown; keep this outside the controlled batch21 and any L02B cohort.",
+    "The 1ms team report and 12 all-CLEAR commands conflict with 11 shots; do not infer latency quality or full tactical intent from this report.",
+    "Opponent report labels describe observed command counts, not tactical intent or success.",
+    "Invalid AWS console security token coincided with 0/5 Fitness and 0 invocations, but the portal did not expose each position's underlying exception; treat expired AWS authorization as the leading explanation, not a proven per-role diagnosis."
+  ]
+}

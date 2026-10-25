@@ -869,3 +869,27 @@ InvokeHarness returned AccessDenied. No IAM changes. Real MID/FWD2 game-session
 bootstrap reuse/timing therefore remains unavailable from this read-only audit.
 Competition public season is stated as Sep-Oct 2026; exact close/admission time
 is not published in the page checked, so remaining exact window is unknown.
+
+## 2026-10-25 — Next-gen loss; AWS Fitness authorization failure blocks L02B
+
+Observed match No Human in the Loop 0-1 Next-gen (exact start and pre-match
+configuration unknown; outside batch21). Report: 50-50 possession, 11-9 shots,
+0-1 on target. Our report listed 12 all-CLEAR commands and 1ms mean; Next-gen
+listed 10 CLEAR / 7 PASS and 4ms mean. These report counters conflict with our
+11 shots and are not a reliable full action trace. Leaderboard after: #10,
+196 played, 360 points, 118W/6D/72L, goals267:161. See
+`research/v3/ranked-unbatched-20261025-02.json`.
+
+Portal now reports Fitness 0/5 (GK, DEF, MID, FWD1, FWD2), zero displayed
+invocations/latency and Model “Not verified yet” for all five; Find opponent is
+disabled. No lineup, prompt, ARN or model setting was changed by this assistant.
+The AWS Harness console returned “The security token included in the request is
+invalid” and listed 0 Harnesses. This strongly suggests the AWS console session
+is no longer authorized, but per-position Fitness exceptions were not exposed.
+CloudShell also failed to restore/create its environment after a page refresh.
+Do not create/register an L02B runtime or begin another match until AWS workshop
+authorization is refreshed, exact Harness/runtime state is visible, and baseline
+Fitness is healthy. L02B remains uninstalled; its native V1 probe, config
+readback, and candidate Fitness5/5 have not run. The next required operator
+step is to sign back into the existing AWS Workshop/console in the open tab; no
+IAM edits or destructive recovery actions are warranted.

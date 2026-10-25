@@ -831,3 +831,22 @@ one-millisecond report is unknown. A further L02 attempt should wait for a new
 measured artifact and a clean native/Fitness/config-readback gate; the previous
 exact archive failed its cold-start gate. This five-match cohort is descriptive
 and too small for causal strategy claims. Full rows: `research/v3/ranked-batch-21.json`.
+
+## 2026-10-25 — Next-gen loss and five-position Fitness failure
+
+Next-gen beat No Human in the Loop 1:0. The report shows 50% possession each,
+11:9 shots and 0:1 on target. Next-gen recorded seven PASS and ten CLEAR
+commands; our report shows twelve CLEAR only, despite eleven shots. Treat the
+action report as incomplete/inconsistent. The opponent's passing share is a
+useful question for a future trace, not proof that passing caused the win.
+
+After the match, the portal Fitness check reported 0/5, all roles failed,
+zero displayed invocations and “Model: Not verified yet” across the lineup.
+The AWS Harness page independently returned an invalid security-token error
+and zero listed Harnesses; the precise per-role exception remains unavailable.
+This is an infrastructure/authentication gate, not evidence that five role
+prompts broke simultaneously. The assistant did not change the lineup. Restore
+valid workshop authorization and inspect current Harness bindings first; only
+then rerun baseline Fitness. Do not install L02B or play another match until
+this gate clears. Full sanitized snapshot:
+`research/v3/ranked-unbatched-20261025-02.json`.
