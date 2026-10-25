@@ -1,5 +1,16 @@
 # Agentic FC continuation
 
+## Interim owner result — 2026-10-25
+
+Owner reports first game: BlackEagle W2:1, shots7:1, possession53%,405actions,
+team mean64ms, role means72–75ms, MOVE87%/INTERCEPT6%/PASS2%. Saved as
+model-prompt-lab/results/owner-series-update-01.json; primary report/config
+unlinked. Live branch checkpoint3cdf5a7 still says P01 uninstalled, with screening,
+readback and fresh Fitness pending; it may precede the message. Do not count this
+as a verified P01 trial. Team64ms versus all role72–75ms needs population/metric
+clarification. MOVE share alone does not establish a repeated-target defect.
+Owner keeps the series unchanged; detailed interpretation waits for its boundary.
+
 ## Research energy/pass update — 2026-10-25
 
 Owner asks about fatigue, finishing, situational long passes and lower latency.
