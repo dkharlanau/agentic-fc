@@ -186,6 +186,14 @@
         ]
       },
       "completedAtObserved": "2026-10-25T06:40:00Z"
+    },
+    {
+      "alias": "stance-live-05",
+      "opponent": "Divide by Zero",
+      "side": "HOME",
+      "status": "preparing",
+      "initiation": "manual random matchmaking",
+      "matchReport": "https://agentic-football.aws.dev/matches/8716c7a2-49f0-4c0f-bc48-66f722a069aa/report"
     }
   ],
   "incomingGamesObservedBeforeSeries": {
