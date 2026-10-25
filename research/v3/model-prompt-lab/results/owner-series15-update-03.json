@@ -1,0 +1,48 @@
+{
+  "kind": "interim primary report, not a completed cohort or exact invocation trace",
+  "sourceCommit": "d2c6a2f38a3dbb622bef714ef55610de6e81be5e",
+  "sourcePath": "research/v3/ranked-batch-15.json",
+  "sourceSha256": "2f17ad043818bd0dd26dfea660101785d0d0abc5204066363c6ad28f409276ed",
+  "series": 15,
+  "game": 3,
+  "setup": "unchanged live baseline, FWD1v16, existing FWD2 fast path, formation 1-1-2",
+  "report": {
+    "opponent": "Dinamo Minsk",
+    "result": "WIN",
+    "score": "2-1",
+    "possessionPct": 45,
+    "shots": "11-9",
+    "shotsOnTarget": "2-1",
+    "teamAverageLatencyMs": 2219,
+    "teamCommands": 185,
+    "roleLatencyMs": [
+      1860,
+      2711,
+      2827,
+      2993,
+      1775
+    ],
+    "successPct": "100% all roles",
+    "actions": {
+      "MOVE": 106,
+      "INTERCEPT": 33,
+      "PASS": 20,
+      "CLEAR": 16,
+      "GK_DIST": 9,
+      "MARK": 1
+    },
+    "observations": [
+      "Report lists own FWD 4 goal at minute 1, opponent MID goal at minute 1, and own MID 3 goal at minute 4.",
+      "Despite victory, report average latency was 2219ms; role averages 1775-2993ms."
+    ]
+  },
+  "analysis": {
+    "modelFreeFwd2ReportMeanMs": 1775,
+    "allRoleMeansAbove1000ms": true,
+    "fullCallP50": null,
+    "fullCallP95": null,
+    "lateCommandRate": null,
+    "causalLatencyEffectOnWin": null,
+    "conclusion": "Slow reported means include model-free FWD2; shared path or attribution remains a hypothesis, not a proven cause."
+  }
+}

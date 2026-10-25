@@ -1,0 +1,45 @@
+{
+  "kind": "L01 MID candidate; offline build, not deployed or Fitness approved",
+  "runtime": "PYTHON_3_13",
+  "architecture": "linux-arm64",
+  "entryPoint": [
+    "main.py"
+  ],
+  "archiveSha256": "fb02b3abb1808991ebd2a714f2e2f5868fb7e6045f3a1de8043a86cf0ba0152a",
+  "archiveBytes": 20613452,
+  "uncompressedBytes": 34380450,
+  "fileCount": 2733,
+  "sourceSha256": {
+    "agentic_fc/__init__.py": "246ba241608bece9b9a1e940dd5401385aeed762ba8306d2e2a0eba7d0556df0",
+    "agentic_fc/state.py": "37729e42408e71d62525876ba79199c5d1dbf5b9526b8c91c05f996dac151690",
+    "agentic_fc/geometry.py": "5bcef6483b35c0c84089de4382b2d665baea51f1857d55f5a9ab8be5f78302f3",
+    "agentic_fc/policy.py": "94f53ee7715d8523c2e699c42d96fa929844d8769c034de77a1239a7da0f9e69",
+    "runtime_v1/__init__.py": "d6637c179056b2cc42cc2439f1f9eca4b96faae74c22a009204b6201afa24a05",
+    "runtime_v1/sensing.py": "74a8d38db31806ed8e5b426ae16ce4e3692830e2bfa08583f62744dd339cfe1e",
+    "mid_fast_v1/__init__.py": "926b0f8b20cdecb03cd9eab2664a111999c1aab63a0ff68ac907f3570f43ae3e",
+    "mid_fast_v1/engine.py": "2a2154411e673c4305da9c7f1960f341246f16edac47a4629658e02b251c6635",
+    "mid_fast_v1/main.py": "083f8da29069b023949d16e5f8abb012e4bd6be7ed3fa936ce9b64404ec1f132"
+  },
+  "dependencies": {
+    "annotated-types": "0.8.0",
+    "anyio": "4.15.1",
+    "bedrock-agentcore": "1.25.0",
+    "boto3": "1.43.118",
+    "botocore": "1.43.118",
+    "click": "8.5.0",
+    "h11": "0.16.0",
+    "idna": "3.20",
+    "jmespath": "1.1.0",
+    "pydantic": "2.14.1",
+    "pydantic-core": "2.50.1",
+    "python-dateutil": "2.9.0.post0",
+    "s3transfer": "0.19.3",
+    "six": "1.17.0",
+    "starlette": "1.9.0",
+    "typing-extensions": "4.16.0",
+    "typing-inspection": "0.4.4",
+    "urllib3": "2.8.0",
+    "uvicorn": "0.54.0",
+    "websockets": "17.3"
+  }
+}

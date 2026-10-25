@@ -1,3 +1,24 @@
+## Research checkpoint — L01 MID ready for native screening, 2026-10-25
+
+Owner now authorizes deployment after preparation/native/Fitness at a series
+boundary, and explicitly authorizes sending the concrete candidate to the game
+chat. Do not change an active series or race the game operator. Last read-only
+live checkpoint d2c6a2f: batch15 in progress,3/5; no portal-state claim from that.
+
+L01 is now IMPLEMENTED, superseding earlier design-only notes below. Separate
+MID-only model-free Runtime, safe receiver/lane/motion checks, close clear shot,
+otherwise release to built-in engine. Package/source hashes in mid_fast_v1/artifact.json;
+README contains exact native runner/grader/deploy/Fitness/rollback instructions.
+224/224 offline replay passes,17 new unit+13 existing FastEngine+31 lab pass.
+CPU-only p50/p95 .28/.47ms,6800 samples; no native or game-latency claim.
+Native/Fitness/deployment NOT run by research; promotion=false. CodeZip private.
+P01 remains rejected; P02/P03/P04 queued independently, not bundled with L01.
+
+Latest pinned primary batch15game3:W2:1,team2219ms,MID2827,FWD2(no model)1775;
+all role means >1s,100%success. No individual-call p95 or application evidence.
+See owner-series15-update-03.json and updated GAME_FLOW_REQUEST. This HANDOFF is
+research-only: never copy over the game branch's current checkpoint.
+
 # Agentic FC continuation
 
 ## Latest live evidence supersedes the P01 proposal — 2026-10-25

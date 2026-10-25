@@ -1,0 +1,3808 @@
+{
+  "policy": "L01-mid-safe-outlet-v1",
+  "kind": "synthetic decision replay; no physical simulation or fresh inference",
+  "parameters": {
+    "min_pass_span": 0.035,
+    "max_pass_span": 0.45,
+    "receiver_clearance_span": 0.05,
+    "lane_clearance_span": 0.025,
+    "unknown_velocity_extra_span": 0.01,
+    "release_segment_span": 0.02,
+    "prediction_seconds": 0.35,
+    "max_prediction_span": 0.06,
+    "shot_range_span": 0.18,
+    "shot_width_span": 0.1,
+    "max_contact_gap_seconds": 1.0,
+    "max_ball_height_span": 0.025
+  },
+  "planSha256": "a25c417f1981f1c34262ba58e993f661eaaeaf63e8fabd555582f472cd6dd3f2",
+  "requests": 224,
+  "uniqueSituations": 68,
+  "statefulGuardFrames": 20,
+  "passed": 224,
+  "actions": {
+    "PASS": 174,
+    "CLEAR_OVERRIDE": 26,
+    "SHOOT": 24
+  },
+  "sourceSha256": {
+    "mid_fast_v1/engine.py": "2a2154411e673c4305da9c7f1960f341246f16edac47a4629658e02b251c6635",
+    "mid_fast_v1/main.py": "083f8da29069b023949d16e5f8abb012e4bd6be7ed3fa936ce9b64404ec1f132",
+    "mid_fast_v1/fixtures.py": "5158504b8e4cd8116d9ff535fb8f13dda0944e7f16a8348c80ff7a7fc52d11c7",
+    "mid_fast_v1/evaluate.py": "067854818b59a19182d0334d00ef07248fdfcc99acdb26aef9fd309a4805da8e",
+    "agentic_fc/state.py": "37729e42408e71d62525876ba79199c5d1dbf5b9526b8c91c05f996dac151690",
+    "agentic_fc/geometry.py": "5bcef6483b35c0c84089de4382b2d665baea51f1857d55f5a9ab8be5f78302f3",
+    "runtime_v1/sensing.py": "74a8d38db31806ed8e5b426ae16ce4e3692830e2bfa08583f62744dd339cfe1e"
+  },
+  "observedContractOnly": [
+    {
+      "fixture": "research/v3/fixtures/observed-fwd1-fitness-kickoff.json",
+      "sourceSha256": "3da1735f5e73d443a42a884f1a77fa3c9a313b75c1c910a1f2137861ad319254",
+      "roleRebound": true,
+      "kind": "counterfactual contract only, not captured MID decision",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 2,
+        "parameters": {},
+        "duration": 0
+      },
+      "reason": "ENGINE_RESTART",
+      "schemaErrors": []
+    },
+    {
+      "fixture": "research/v3/fixtures/observed-live-away-open-play.json",
+      "sourceSha256": "6efef0bc9e20c1497759b628403170ceff7e711ce56533e0a6333a896a34d11f",
+      "roleRebound": true,
+      "kind": "counterfactual contract only, not captured MID decision",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "schemaErrors": []
+    }
+  ],
+  "rows": [
+    {
+      "key": "open-forward-home-xy:0",
+      "sessionKey": "home-xy",
+      "sequence": 0,
+      "requestSha256": "afaff05791b50bce6d01def96ae91a297c61ec42384f2588a19a36cb8b627ce4",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "open-forward-home-xz:0",
+      "sessionKey": "home-xz",
+      "sequence": 0,
+      "requestSha256": "53e1caf9a1e7c37bde9f4b5c63aaaad62289f19cfb612d3a79fbceea974ad595",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "open-forward-away-xy:0",
+      "sessionKey": "away-xy",
+      "sequence": 0,
+      "requestSha256": "c498bf0f185fd2c136fa7339bbfd04c4616bc7dd50503a08399c685da742561e",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "open-forward-away-xz:0",
+      "sessionKey": "away-xz",
+      "sequence": 0,
+      "requestSha256": "782018a8bd2be24887db91fa48bea9b38e6fa7b001e252b9cc64af1e455cab93",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "escape-presser-behind-home-xy:0",
+      "sessionKey": "home-xy",
+      "sequence": 1,
+      "requestSha256": "562a12d69bffd1c324e35389e85ef6dbaf8def883a6d361afe0f85dc7f7e3ff9",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "escape-presser-behind-home-xz:0",
+      "sessionKey": "home-xz",
+      "sequence": 1,
+      "requestSha256": "aebad36725108773dd0c2a63622e8d18d5151221f26e2d50c9aef5492768fd2f",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "escape-presser-behind-away-xy:0",
+      "sessionKey": "away-xy",
+      "sequence": 1,
+      "requestSha256": "ae9f6a58f9ca53347079b3872034570e87f72e43feaf5a9de54250c0acf21bc9",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "escape-presser-behind-away-xz:0",
+      "sessionKey": "away-xz",
+      "sequence": 1,
+      "requestSha256": "e6e2b5a87d7f693e6b37536d8b3783ec2d27af48b8cf4c99c84021e64a3a3fc5",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "blocked-forward-line-home-xy:0",
+      "sessionKey": "home-xy",
+      "sequence": 2,
+      "requestSha256": "5d34b5414307a3f3c1947ec30f92b42eccb1452037de20f5b76511abe738c8ca",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "blocked-forward-line-home-xz:0",
+      "sessionKey": "home-xz",
+      "sequence": 2,
+      "requestSha256": "24d705091ce44ea1fd4ebb6a966cfdf4035e633f3c8ee35d05ac2f7a6a071abc",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "blocked-forward-line-away-xy:0",
+      "sessionKey": "away-xy",
+      "sequence": 2,
+      "requestSha256": "132711c617e0775f7c1a63b93d24d653fb6d3a018955f16bd98bf63124864319",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "blocked-forward-line-away-xz:0",
+      "sessionKey": "away-xz",
+      "sequence": 2,
+      "requestSha256": "8551d150c287388b0c2bed646c84a792b6ccc0b68fb9a05642709ddd13f7fb11",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "marked-forward-home-xy:0",
+      "sessionKey": "home-xy",
+      "sequence": 3,
+      "requestSha256": "a7c7f8b1edadc06871fda7524149ec66adef9914e7eadb511688874e85bb5785",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "marked-forward-home-xz:0",
+      "sessionKey": "home-xz",
+      "sequence": 3,
+      "requestSha256": "16ef72d595970049b34989f0c455c3bc6d08bfeeef350726babc27e22f39ee92",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "marked-forward-away-xy:0",
+      "sessionKey": "away-xy",
+      "sequence": 3,
+      "requestSha256": "f10da8a0196fbe7260110da095b7cf76ccb1e61772803edcf4a4a3355307a0dc",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "marked-forward-away-xz:0",
+      "sessionKey": "away-xz",
+      "sequence": 3,
+      "requestSha256": "958393a1a1b9a3ade0e0c5d429a757e777309ab2894ba4c0597f315879bb6074",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "both-forwards-marked-home-xy:0",
+      "sessionKey": "home-xy",
+      "sequence": 4,
+      "requestSha256": "aa7fc9dcf8d817694416f8f8815337d6931af693b6aa40d9d87694595b2c04c8",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 1,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_RECYCLE_PASS",
+      "errors": []
+    },
+    {
+      "key": "both-forwards-marked-home-xz:0",
+      "sessionKey": "home-xz",
+      "sequence": 4,
+      "requestSha256": "30d73bfdadd43300a8a3271ba993df551045ac480f295ebe919a916c72cbe350",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 1,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_RECYCLE_PASS",
+      "errors": []
+    },
+    {
+      "key": "both-forwards-marked-away-xy:0",
+      "sessionKey": "away-xy",
+      "sequence": 4,
+      "requestSha256": "f83dd2f71120d3668cdf2fda9cbdccb2a99925c20197b0fee41a1620b13bef0e",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 1,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_RECYCLE_PASS",
+      "errors": []
+    },
+    {
+      "key": "both-forwards-marked-away-xz:0",
+      "sessionKey": "away-xz",
+      "sequence": 4,
+      "requestSha256": "0211c15b03e32e92ff58d19b07dcc9cc2bfad4ff1b8b904a204e97df351a3843",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 1,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_RECYCLE_PASS",
+      "errors": []
+    },
+    {
+      "key": "all-outlets-marked-home-xy:0",
+      "sessionKey": "home-xy",
+      "sequence": 5,
+      "requestSha256": "b4cb175faa9ab8ae3a9bc4f0ff482c18ea92fc0370eb581d167081d9c2af6a95",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 2,
+        "parameters": {},
+        "duration": 0
+      },
+      "reason": "NO_SAFE_OUTLET",
+      "errors": []
+    },
+    {
+      "key": "all-outlets-marked-home-xz:0",
+      "sessionKey": "home-xz",
+      "sequence": 5,
+      "requestSha256": "ecf4f3c4c9b239e808fa1bb166c7a463360bdcde00478b25c6db8e906b7ac55a",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 2,
+        "parameters": {},
+        "duration": 0
+      },
+      "reason": "NO_SAFE_OUTLET",
+      "errors": []
+    },
+    {
+      "key": "all-outlets-marked-away-xy:0",
+      "sessionKey": "away-xy",
+      "sequence": 5,
+      "requestSha256": "78c5aceff3f1c3d23ff411bc73d85c783fd6cffdd20cbdd2ea8fd56114aec273",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 2,
+        "parameters": {},
+        "duration": 0
+      },
+      "reason": "NO_SAFE_OUTLET",
+      "errors": []
+    },
+    {
+      "key": "all-outlets-marked-away-xz:0",
+      "sessionKey": "away-xz",
+      "sequence": 5,
+      "requestSha256": "313ceb43b29d894fae7d96bc4bde870b2852b1efe7de68e87772422b8a1e6948",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 2,
+        "parameters": {},
+        "duration": 0
+      },
+      "reason": "NO_SAFE_OUTLET",
+      "errors": []
+    },
+    {
+      "key": "defender-beyond-receiver-home-xy:0",
+      "sessionKey": "home-xy",
+      "sequence": 6,
+      "requestSha256": "8c4e42317641c43f7b4c9b7c4211f7e70d7eab899e41b61502e72c92726c4840",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "defender-beyond-receiver-home-xz:0",
+      "sessionKey": "home-xz",
+      "sequence": 6,
+      "requestSha256": "cebbb4d6bee714c220da9a9f8cd6ae63eaf98ffe87133323dca0f4a170ae50de",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "defender-beyond-receiver-away-xy:0",
+      "sessionKey": "away-xy",
+      "sequence": 6,
+      "requestSha256": "b72ef8b1f3ed04bae925459161d8ae7c3a73f6b3fa2a320ceb80fda044c30bc6",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "defender-beyond-receiver-away-xz:0",
+      "sessionKey": "away-xz",
+      "sequence": 6,
+      "requestSha256": "6c1984d6426a9d017ca35c50e1198b641511bcdbfef380ed39d5dfeb6691c533",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "opponent-crossing-pass-home-xy:0",
+      "sessionKey": "home-xy",
+      "sequence": 7,
+      "requestSha256": "83814bd72036c1a54a210c0260af04bb8138b3a6134ca92746f5ac701c994c60",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "opponent-crossing-pass-home-xz:0",
+      "sessionKey": "home-xz",
+      "sequence": 7,
+      "requestSha256": "e5e7d91cf1516acd1a5a80c69268f845f246d6deefe032482d89697637970de1",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "opponent-crossing-pass-away-xy:0",
+      "sessionKey": "away-xy",
+      "sequence": 7,
+      "requestSha256": "dbf8ece506c37de4b1f8374baa0222f00b77d63bbb42211ba1ee45d9e6689e48",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "opponent-crossing-pass-away-xz:0",
+      "sessionKey": "away-xz",
+      "sequence": 7,
+      "requestSha256": "2d148a9d5b33d7cb29d1043c9d8dd0f91fa658de87f56b681321e889ca6075e4",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "receiver-running-into-pressure-home-xy:0",
+      "sessionKey": "home-xy",
+      "sequence": 8,
+      "requestSha256": "1782c22cf06c08b7620e20aad9581a666d44312a322caca311754d4328ce733a",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "receiver-running-into-pressure-home-xz:0",
+      "sessionKey": "home-xz",
+      "sequence": 8,
+      "requestSha256": "e709318bf6150a228d3fa4a6de9ab19ca90f2f8b07ae541d20e0636f4624a81e",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "receiver-running-into-pressure-away-xy:0",
+      "sessionKey": "away-xy",
+      "sequence": 8,
+      "requestSha256": "f1e582fe7e04ff78f30c2c70b27eec7061ad6515de97d0a0af8e4a5dfd67bbab",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "receiver-running-into-pressure-away-xz:0",
+      "sessionKey": "away-xz",
+      "sequence": 8,
+      "requestSha256": "ea164d2d1d3f7354827a40f236b4733a6519b94324fe899a8f2ba52c6229cf1e",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "pressure-ahead-escape-back-home-xy:0",
+      "sessionKey": "home-xy",
+      "sequence": 9,
+      "requestSha256": "fd221399cafd7797d9c5776d1071923a45530be120cc982e888edbf5f0925433",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 1,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_RECYCLE_PASS",
+      "errors": []
+    },
+    {
+      "key": "pressure-ahead-escape-back-home-xz:0",
+      "sessionKey": "home-xz",
+      "sequence": 9,
+      "requestSha256": "15d47c206fff885d2bdcc97377f1c8477334a936f270000008e81271079f465b",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 1,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_RECYCLE_PASS",
+      "errors": []
+    },
+    {
+      "key": "pressure-ahead-escape-back-away-xy:0",
+      "sessionKey": "away-xy",
+      "sequence": 9,
+      "requestSha256": "e14ffda0b4aced37ee45c5074a90dac8eeeacadb9d27ed201fd49f2a7a91931c",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 1,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_RECYCLE_PASS",
+      "errors": []
+    },
+    {
+      "key": "pressure-ahead-escape-back-away-xz:0",
+      "sessionKey": "away-xz",
+      "sequence": 9,
+      "requestSha256": "48fb5a55d5e29ab28f8c28dd06309d4cc6723a4e9b71e3748b9601338c732920",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 1,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_RECYCLE_PASS",
+      "errors": []
+    },
+    {
+      "key": "open-long-ground-home-xy:0",
+      "sessionKey": "home-xy",
+      "sequence": 10,
+      "requestSha256": "eadebf163c2c3284ab020354570b1f1e02ba1d9f70b51fbcc77595929e90c300",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "open-long-ground-home-xz:0",
+      "sessionKey": "home-xz",
+      "sequence": 10,
+      "requestSha256": "abd8a859007e3b04f60faaa58803bcfafde923ca2e13688f1df2839b4a3619cc",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "open-long-ground-away-xy:0",
+      "sessionKey": "away-xy",
+      "sequence": 10,
+      "requestSha256": "22f67eea7860ec69b68dee021c5bc364573bff62680bf086aec0f4b3392aa786",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "open-long-ground-away-xz:0",
+      "sessionKey": "away-xz",
+      "sequence": 10,
+      "requestSha256": "167b09d25861d8744407e244505941a49daabf774c063774ff91624aea171213",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "too-long-use-other-forward-home-xy:0",
+      "sessionKey": "home-xy",
+      "sequence": 11,
+      "requestSha256": "145733c6bc17a6b81a31891490904c27541ddf7a73737744121af6a231fddbbe",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "too-long-use-other-forward-home-xz:0",
+      "sessionKey": "home-xz",
+      "sequence": 11,
+      "requestSha256": "2c56e4b3e15ca1181929f8a645bc3aebd2d1005cdb7edd59f9a3fed52a088802",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "too-long-use-other-forward-away-xy:0",
+      "sessionKey": "away-xy",
+      "sequence": 11,
+      "requestSha256": "272a70ae1c8c1aba4a21582a0863cb8d91e2ab13e62cf02974e7630e4b19c0a6",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "too-long-use-other-forward-away-xz:0",
+      "sessionKey": "away-xz",
+      "sequence": 11,
+      "requestSha256": "721ac30a9585f4a923de35a5d85689a9e053021007f4e937c14a2ae2e35f9c18",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "clear-close-shot-home-xy:0",
+      "sessionKey": "home-xy",
+      "sequence": 12,
+      "requestSha256": "16ba6343a9c64c626b33f0ef5d263875b56bfa10a428c45f6639e908f7589323",
+      "command": {
+        "commandType": "SHOOT",
+        "playerId": 2,
+        "parameters": {
+          "aim_location": "TR",
+          "power": 0.8
+        },
+        "duration": 0
+      },
+      "reason": "CLOSE_CLEAR_SHOT",
+      "errors": []
+    },
+    {
+      "key": "clear-close-shot-home-xz:0",
+      "sessionKey": "home-xz",
+      "sequence": 12,
+      "requestSha256": "32b6292f911d8b840481c9a369b8b84c8a5c672cf9908949de3b8267a9f45bac",
+      "command": {
+        "commandType": "SHOOT",
+        "playerId": 2,
+        "parameters": {
+          "aim_location": "TR",
+          "power": 0.8
+        },
+        "duration": 0
+      },
+      "reason": "CLOSE_CLEAR_SHOT",
+      "errors": []
+    },
+    {
+      "key": "clear-close-shot-away-xy:0",
+      "sessionKey": "away-xy",
+      "sequence": 12,
+      "requestSha256": "35d831276ffcc91c13e255f1b4272331f43fbc6d8926bb75b9a285f893394176",
+      "command": {
+        "commandType": "SHOOT",
+        "playerId": 2,
+        "parameters": {
+          "aim_location": "TR",
+          "power": 0.8
+        },
+        "duration": 0
+      },
+      "reason": "CLOSE_CLEAR_SHOT",
+      "errors": []
+    },
+    {
+      "key": "clear-close-shot-away-xz:0",
+      "sessionKey": "away-xz",
+      "sequence": 12,
+      "requestSha256": "358779d09f2dc04c53a177d08ae0c45223bb442fc218035c931597e01df485eb",
+      "command": {
+        "commandType": "SHOOT",
+        "playerId": 2,
+        "parameters": {
+          "aim_location": "TR",
+          "power": 0.8
+        },
+        "duration": 0
+      },
+      "reason": "CLOSE_CLEAR_SHOT",
+      "errors": []
+    },
+    {
+      "key": "blocked-close-shot-safe-pass-home-xy:0",
+      "sessionKey": "home-xy",
+      "sequence": 13,
+      "requestSha256": "b5870f4b70413466b8c0e011f547139563e3c48839ce56ac65653329add2a177",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_RECYCLE_PASS",
+      "errors": []
+    },
+    {
+      "key": "blocked-close-shot-safe-pass-home-xz:0",
+      "sessionKey": "home-xz",
+      "sequence": 13,
+      "requestSha256": "015fb48a90f879bcb9ef2280ad28e438fe417a94217f0963a1bbd4486842fbb2",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_RECYCLE_PASS",
+      "errors": []
+    },
+    {
+      "key": "blocked-close-shot-safe-pass-away-xy:0",
+      "sessionKey": "away-xy",
+      "sequence": 13,
+      "requestSha256": "b519c49838e95ac0c948223a6e185378bcf26646c73f9592517f45b5eebdd964",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_RECYCLE_PASS",
+      "errors": []
+    },
+    {
+      "key": "blocked-close-shot-safe-pass-away-xz:0",
+      "sessionKey": "away-xz",
+      "sequence": 13,
+      "requestSha256": "21ad073bf5777d4380f6b85e763bc488ef8a6330e02539f8fdd0124be4aa02db",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_RECYCLE_PASS",
+      "errors": []
+    },
+    {
+      "key": "tired-passer-retains-safe-pass-home-xy:0",
+      "sessionKey": "home-xy",
+      "sequence": 14,
+      "requestSha256": "50d6da3a93038fbc48b1b63bd277923b6ed7bddfe553bbe3782b6cc943e82177",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "tired-passer-retains-safe-pass-home-xz:0",
+      "sessionKey": "home-xz",
+      "sequence": 14,
+      "requestSha256": "850b66eea5b2da3da7390fc849ba07dc60d79e4d2c5125ff5e8a4471e14e451d",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "tired-passer-retains-safe-pass-away-xy:0",
+      "sessionKey": "away-xy",
+      "sequence": 14,
+      "requestSha256": "4d6307b65ea261c952e7d2cfd6bf8707037a7b8d4e99db3aff5fda41fe2532c7",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "tired-passer-retains-safe-pass-away-xz:0",
+      "sessionKey": "away-xz",
+      "sequence": 14,
+      "requestSha256": "8ea42fc82189ea8896bd422a9bddb9736d2ab2bbbde1de39bc15cf7545b90086",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "tired-receiver-to-feet-home-xy:0",
+      "sessionKey": "home-xy",
+      "sequence": 15,
+      "requestSha256": "b0f6195cc7bd7efe92411703401913a76f85621699a6c9349dd6226f7dbfa239",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "tired-receiver-to-feet-home-xz:0",
+      "sessionKey": "home-xz",
+      "sequence": 15,
+      "requestSha256": "7cf2dc2ad6d356e2aac348aa421ae9b04c8b522cc004c70e8451113e3060c4ff",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "tired-receiver-to-feet-away-xy:0",
+      "sessionKey": "away-xy",
+      "sequence": 15,
+      "requestSha256": "fafc6081b4ff72e602da45dca828f171d00814a3eb6d4a14b1c5e5ab0bd2dbaa",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "tired-receiver-to-feet-away-xz:0",
+      "sessionKey": "away-xz",
+      "sequence": 15,
+      "requestSha256": "165468747a03e4613cb5383a114194adf308b08affd2e135a56fe6d7d38a6fa5",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "tired-clear-shot-home-xy:0",
+      "sessionKey": "home-xy",
+      "sequence": 16,
+      "requestSha256": "942f5c21fa6592340a554e65e284ea3593decd283b68c8e6606c0c42947d0dc7",
+      "command": {
+        "commandType": "SHOOT",
+        "playerId": 2,
+        "parameters": {
+          "aim_location": "TR",
+          "power": 0.8
+        },
+        "duration": 0
+      },
+      "reason": "CLOSE_CLEAR_SHOT",
+      "errors": []
+    },
+    {
+      "key": "tired-clear-shot-home-xz:0",
+      "sessionKey": "home-xz",
+      "sequence": 16,
+      "requestSha256": "83494eb7b1b8b0d37e0b1d59f9318a92dc328bbe043260120bc1ab86ab2371ce",
+      "command": {
+        "commandType": "SHOOT",
+        "playerId": 2,
+        "parameters": {
+          "aim_location": "TR",
+          "power": 0.8
+        },
+        "duration": 0
+      },
+      "reason": "CLOSE_CLEAR_SHOT",
+      "errors": []
+    },
+    {
+      "key": "tired-clear-shot-away-xy:0",
+      "sessionKey": "away-xy",
+      "sequence": 16,
+      "requestSha256": "a6a910ffa802bb9a29edf2627255212cc4e2cdd0f62653378a6fd92b1f678121",
+      "command": {
+        "commandType": "SHOOT",
+        "playerId": 2,
+        "parameters": {
+          "aim_location": "TR",
+          "power": 0.8
+        },
+        "duration": 0
+      },
+      "reason": "CLOSE_CLEAR_SHOT",
+      "errors": []
+    },
+    {
+      "key": "tired-clear-shot-away-xz:0",
+      "sessionKey": "away-xz",
+      "sequence": 16,
+      "requestSha256": "00bcc6fae4e13b728dcf1fc8841b349e21bf6fd663e208b0506a7d9ca7fe8e44",
+      "command": {
+        "commandType": "SHOOT",
+        "playerId": 2,
+        "parameters": {
+          "aim_location": "TR",
+          "power": 0.8
+        },
+        "duration": 0
+      },
+      "reason": "CLOSE_CLEAR_SHOT",
+      "errors": []
+    },
+    {
+      "key": "open-forward-home-xy:1",
+      "sessionKey": "home-xy",
+      "sequence": 17,
+      "requestSha256": "a689823b2c5e1b7b82282b59d864118830f02ef8ae221f8040706a3e706b26fe",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "open-forward-home-xz:1",
+      "sessionKey": "home-xz",
+      "sequence": 17,
+      "requestSha256": "828f15e454b04b619126201347d265a85d726a773c46a53eff60d4a2a6005641",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "open-forward-away-xy:1",
+      "sessionKey": "away-xy",
+      "sequence": 17,
+      "requestSha256": "aeb0698198d8c36fbb9dee4f2e1e81f26103ed483b1d517da86880a9d683a577",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "open-forward-away-xz:1",
+      "sessionKey": "away-xz",
+      "sequence": 17,
+      "requestSha256": "b3c2e594cf5e39ee8195e4869bf8a364a1f4033ea9a5eeb669b198eb0a12b90d",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "escape-presser-behind-home-xy:1",
+      "sessionKey": "home-xy",
+      "sequence": 18,
+      "requestSha256": "0136c72f338fefc4b811bab1f5e3917a92f3358a10d4145207c86e2ec17bf88e",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "escape-presser-behind-home-xz:1",
+      "sessionKey": "home-xz",
+      "sequence": 18,
+      "requestSha256": "7e203fabf9b50acda556fb5b1f6b172463fb34c94de1e0c2ba515a0210d6fb7f",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "escape-presser-behind-away-xy:1",
+      "sessionKey": "away-xy",
+      "sequence": 18,
+      "requestSha256": "3c75021ba7afc155de839e29b873f86f49b575a21f8e082ab3029452f995a64d",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "escape-presser-behind-away-xz:1",
+      "sessionKey": "away-xz",
+      "sequence": 18,
+      "requestSha256": "ca8f66c7e2cc25640ecba934bcde363516f730b47d20cc4fccf9d8a9d95a6f5e",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "blocked-forward-line-home-xy:1",
+      "sessionKey": "home-xy",
+      "sequence": 19,
+      "requestSha256": "4a2a3d15310aa7173119e7e77e8dd71633d2c275d8317eef8cb03338a795b2b1",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "blocked-forward-line-home-xz:1",
+      "sessionKey": "home-xz",
+      "sequence": 19,
+      "requestSha256": "0b62e8f1d7ea2d15d609f41c528e7aa8dc0fb5b5653bea076609ea82c0a8eb56",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "blocked-forward-line-away-xy:1",
+      "sessionKey": "away-xy",
+      "sequence": 19,
+      "requestSha256": "c26cece7f47c450d1c699c71d3253b0d6079140609ea249cc8ad0a8d2872944b",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "blocked-forward-line-away-xz:1",
+      "sessionKey": "away-xz",
+      "sequence": 19,
+      "requestSha256": "b701a174840d9d10d352130ecc20a9abb8f57224d117101c0c7c0bd7d6dd40d7",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "marked-forward-home-xy:1",
+      "sessionKey": "home-xy",
+      "sequence": 20,
+      "requestSha256": "f0475c60b2ff758ad96930e178eec986c2f6bad231582d7de459c4ced10bf4af",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "marked-forward-home-xz:1",
+      "sessionKey": "home-xz",
+      "sequence": 20,
+      "requestSha256": "0e930ab7dc81aa7ee729e6e781f6019d44bdbdfa1d71e3bb224113d03f29862e",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "marked-forward-away-xy:1",
+      "sessionKey": "away-xy",
+      "sequence": 20,
+      "requestSha256": "2408addf705ff3d480edac1a122527a535139743ac215fae0ef76570d902619d",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "marked-forward-away-xz:1",
+      "sessionKey": "away-xz",
+      "sequence": 20,
+      "requestSha256": "66994181330c6b9991535b5c50fca4bce457f6156839dc5515415b2226b12fc6",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "both-forwards-marked-home-xy:1",
+      "sessionKey": "home-xy",
+      "sequence": 21,
+      "requestSha256": "3a6d70e624d548b47d79fffdbec052872b75b631a54a54bea187c1ef13b9859e",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 1,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_RECYCLE_PASS",
+      "errors": []
+    },
+    {
+      "key": "both-forwards-marked-home-xz:1",
+      "sessionKey": "home-xz",
+      "sequence": 21,
+      "requestSha256": "e09c7c604439e0f16e2a82f1cdf330f86284eee3cf9606254ac2357dbc9b9769",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 1,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_RECYCLE_PASS",
+      "errors": []
+    },
+    {
+      "key": "both-forwards-marked-away-xy:1",
+      "sessionKey": "away-xy",
+      "sequence": 21,
+      "requestSha256": "9f092ec9d31b4b000074cbc9c2e6e25f8131d92d3730e4ab306d90131a95a60a",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 1,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_RECYCLE_PASS",
+      "errors": []
+    },
+    {
+      "key": "both-forwards-marked-away-xz:1",
+      "sessionKey": "away-xz",
+      "sequence": 21,
+      "requestSha256": "acb80e865dbfd3b45a879851cff1785ee7f86b584b9da533290c3cdade513d88",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 1,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_RECYCLE_PASS",
+      "errors": []
+    },
+    {
+      "key": "all-outlets-marked-home-xy:1",
+      "sessionKey": "home-xy",
+      "sequence": 22,
+      "requestSha256": "ac6055c4b88e3710e547cea7440c82aa149fe1998d164c5dad0532f9456c9310",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 2,
+        "parameters": {},
+        "duration": 0
+      },
+      "reason": "NO_SAFE_OUTLET",
+      "errors": []
+    },
+    {
+      "key": "all-outlets-marked-home-xz:1",
+      "sessionKey": "home-xz",
+      "sequence": 22,
+      "requestSha256": "c9647d40932c2ccce039c7a2e42fee1f9090c58d0e22c198b0201e8766400704",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 2,
+        "parameters": {},
+        "duration": 0
+      },
+      "reason": "NO_SAFE_OUTLET",
+      "errors": []
+    },
+    {
+      "key": "all-outlets-marked-away-xy:1",
+      "sessionKey": "away-xy",
+      "sequence": 22,
+      "requestSha256": "f101b8d6b6919cd449613e83634e0bdf4facb8714edbda7a14669f470e782379",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 2,
+        "parameters": {},
+        "duration": 0
+      },
+      "reason": "NO_SAFE_OUTLET",
+      "errors": []
+    },
+    {
+      "key": "all-outlets-marked-away-xz:1",
+      "sessionKey": "away-xz",
+      "sequence": 22,
+      "requestSha256": "bb272b963b40083f1c3cc0a49944b7db21084bb26bfe0d46770781baa54a7557",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 2,
+        "parameters": {},
+        "duration": 0
+      },
+      "reason": "NO_SAFE_OUTLET",
+      "errors": []
+    },
+    {
+      "key": "defender-beyond-receiver-home-xy:1",
+      "sessionKey": "home-xy",
+      "sequence": 23,
+      "requestSha256": "d58f003a0bea669c6f76c7d51e132dafa3cdefdcc3f71f7e525d4e04c6344447",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "defender-beyond-receiver-home-xz:1",
+      "sessionKey": "home-xz",
+      "sequence": 23,
+      "requestSha256": "2457fe04d8313a1cd7340864d13bbc24ba3874cf9d0df3caa6b02082bed8d41f",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "defender-beyond-receiver-away-xy:1",
+      "sessionKey": "away-xy",
+      "sequence": 23,
+      "requestSha256": "bd3834be9afca5c327cfee1241c620234c0089bf83ffb4ae17da03f7adef76fb",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "defender-beyond-receiver-away-xz:1",
+      "sessionKey": "away-xz",
+      "sequence": 23,
+      "requestSha256": "f5e0087e5ca9f419ed6d02d98addb25522cde92eee02c6b7602852d3faab7f42",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "opponent-crossing-pass-home-xy:1",
+      "sessionKey": "home-xy",
+      "sequence": 24,
+      "requestSha256": "8f30a790477ad934093d662241fc11e99ec5b615401734b072dc05fd6750fed1",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "opponent-crossing-pass-home-xz:1",
+      "sessionKey": "home-xz",
+      "sequence": 24,
+      "requestSha256": "44afbe1c8c1080bd4b3287e392c2ce602e53560da33e6349a9f2f66c8b82543e",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "opponent-crossing-pass-away-xy:1",
+      "sessionKey": "away-xy",
+      "sequence": 24,
+      "requestSha256": "dea06614fa21db23567b4f5b0e64b35bf11ba8e8d2cced5ff26a464c80c63df6",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "opponent-crossing-pass-away-xz:1",
+      "sessionKey": "away-xz",
+      "sequence": 24,
+      "requestSha256": "4c8d0f277657890a426d583cfbd631e2638f057fed39d03a06b431880207e9c8",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "receiver-running-into-pressure-home-xy:1",
+      "sessionKey": "home-xy",
+      "sequence": 25,
+      "requestSha256": "dfdbc1f4fca3451717ede7604ec4b9ff4cd59d6725b744a04d80a4807e3a488b",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "receiver-running-into-pressure-home-xz:1",
+      "sessionKey": "home-xz",
+      "sequence": 25,
+      "requestSha256": "ba77d31873223ec4ace1d281ef7533d15889721488ff7e6dc42177c2a4b038d2",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "receiver-running-into-pressure-away-xy:1",
+      "sessionKey": "away-xy",
+      "sequence": 25,
+      "requestSha256": "b626c884df78bdce8469907e9c6777f552c2a25d64069a74879eff29e8b42d5c",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "receiver-running-into-pressure-away-xz:1",
+      "sessionKey": "away-xz",
+      "sequence": 25,
+      "requestSha256": "9010822ea0d97d330ec2d09cc040202d2c458538c2e7ba4f41ff98efbd35af69",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "pressure-ahead-escape-back-home-xy:1",
+      "sessionKey": "home-xy",
+      "sequence": 26,
+      "requestSha256": "7b03dc4e210d4e14ee8472c5196829c4322cde80a9c9466353f2c48599c9cf56",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 1,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_RECYCLE_PASS",
+      "errors": []
+    },
+    {
+      "key": "pressure-ahead-escape-back-home-xz:1",
+      "sessionKey": "home-xz",
+      "sequence": 26,
+      "requestSha256": "9b0636f8e83e970943d6e5a3b9b1d035ebb2edfbc3f606d46837e8a35144245b",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 1,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_RECYCLE_PASS",
+      "errors": []
+    },
+    {
+      "key": "pressure-ahead-escape-back-away-xy:1",
+      "sessionKey": "away-xy",
+      "sequence": 26,
+      "requestSha256": "17ec945f0c996b0f90ab9e63ca637906c65e2050fa05806b5dfa74391ce966ab",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 1,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_RECYCLE_PASS",
+      "errors": []
+    },
+    {
+      "key": "pressure-ahead-escape-back-away-xz:1",
+      "sessionKey": "away-xz",
+      "sequence": 26,
+      "requestSha256": "461d6ccb3b940d65971f26a0b1ab61d0c814bd871ba8e1ba5fb72030a03e4a64",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 1,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_RECYCLE_PASS",
+      "errors": []
+    },
+    {
+      "key": "open-long-ground-home-xy:1",
+      "sessionKey": "home-xy",
+      "sequence": 27,
+      "requestSha256": "5fdb6b9e885eabc9860e48ff98c7bee2738cd2a10dde0e6ed8b3c0c9eab4518a",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "open-long-ground-home-xz:1",
+      "sessionKey": "home-xz",
+      "sequence": 27,
+      "requestSha256": "4f9678bdb007d8eeb49df2b1eca68ddd873db3c64330473128b7374a0e4f261f",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "open-long-ground-away-xy:1",
+      "sessionKey": "away-xy",
+      "sequence": 27,
+      "requestSha256": "de32c76d27c68c6dbda04b58e9d89704cd08ba51c0cc5a64e6e62841eb1ac363",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "open-long-ground-away-xz:1",
+      "sessionKey": "away-xz",
+      "sequence": 27,
+      "requestSha256": "503d98104c6d56d676f4e6177bf45b17c879af2e7f5c5aac1e5859a3a3143cd9",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "too-long-use-other-forward-home-xy:1",
+      "sessionKey": "home-xy",
+      "sequence": 28,
+      "requestSha256": "b805e93edc54d19f4f0c1b181727e9f76b5f1f6e329e1d624840ac5fa1232798",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "too-long-use-other-forward-home-xz:1",
+      "sessionKey": "home-xz",
+      "sequence": 28,
+      "requestSha256": "1997c633f8a448bea93084fb9a01a69d65002605940be5d7971a59a0d0663860",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "too-long-use-other-forward-away-xy:1",
+      "sessionKey": "away-xy",
+      "sequence": 28,
+      "requestSha256": "015c019e97b5363af57df661cece58c86e678ae52fee7fc677cb42f477963c4f",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "too-long-use-other-forward-away-xz:1",
+      "sessionKey": "away-xz",
+      "sequence": 28,
+      "requestSha256": "dc7c639f9bc8fc976618df2a7e0d120e7bf04c39ed911f4e5ef730c288021383",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "clear-close-shot-home-xy:1",
+      "sessionKey": "home-xy",
+      "sequence": 29,
+      "requestSha256": "fa097ee8a7d02160390969626a58edc6d12bfb31fb63bf8cabc6fee078999b5d",
+      "command": {
+        "commandType": "SHOOT",
+        "playerId": 2,
+        "parameters": {
+          "aim_location": "TR",
+          "power": 0.8
+        },
+        "duration": 0
+      },
+      "reason": "CLOSE_CLEAR_SHOT",
+      "errors": []
+    },
+    {
+      "key": "clear-close-shot-home-xz:1",
+      "sessionKey": "home-xz",
+      "sequence": 29,
+      "requestSha256": "20f4abd9a107d4599cf19d7e3f28f65f850f244fcfd44fadac5589d73a3fde74",
+      "command": {
+        "commandType": "SHOOT",
+        "playerId": 2,
+        "parameters": {
+          "aim_location": "TR",
+          "power": 0.8
+        },
+        "duration": 0
+      },
+      "reason": "CLOSE_CLEAR_SHOT",
+      "errors": []
+    },
+    {
+      "key": "clear-close-shot-away-xy:1",
+      "sessionKey": "away-xy",
+      "sequence": 29,
+      "requestSha256": "d68a4c6484cddcb4763999a481f4f883032635d383a90cfd9b3fd2cd55bf0e6b",
+      "command": {
+        "commandType": "SHOOT",
+        "playerId": 2,
+        "parameters": {
+          "aim_location": "TR",
+          "power": 0.8
+        },
+        "duration": 0
+      },
+      "reason": "CLOSE_CLEAR_SHOT",
+      "errors": []
+    },
+    {
+      "key": "clear-close-shot-away-xz:1",
+      "sessionKey": "away-xz",
+      "sequence": 29,
+      "requestSha256": "b18de80b10b1383f673a21102916be332da90dfac2ed949abbaf2155f2a1481e",
+      "command": {
+        "commandType": "SHOOT",
+        "playerId": 2,
+        "parameters": {
+          "aim_location": "TR",
+          "power": 0.8
+        },
+        "duration": 0
+      },
+      "reason": "CLOSE_CLEAR_SHOT",
+      "errors": []
+    },
+    {
+      "key": "blocked-close-shot-safe-pass-home-xy:1",
+      "sessionKey": "home-xy",
+      "sequence": 30,
+      "requestSha256": "172f55bab0ee5f5c8de21f468b5f308064433cdf463ed5bb68592836c8a17914",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_RECYCLE_PASS",
+      "errors": []
+    },
+    {
+      "key": "blocked-close-shot-safe-pass-home-xz:1",
+      "sessionKey": "home-xz",
+      "sequence": 30,
+      "requestSha256": "bb1a75b0c19ba668d324bf542d59ed260e02081aef0376a07659b140a4b6de02",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_RECYCLE_PASS",
+      "errors": []
+    },
+    {
+      "key": "blocked-close-shot-safe-pass-away-xy:1",
+      "sessionKey": "away-xy",
+      "sequence": 30,
+      "requestSha256": "aa9d044bc714deb6721efb7ac18e9abccd87b55be38816a9ac9331b1ccd35dec",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_RECYCLE_PASS",
+      "errors": []
+    },
+    {
+      "key": "blocked-close-shot-safe-pass-away-xz:1",
+      "sessionKey": "away-xz",
+      "sequence": 30,
+      "requestSha256": "34d3315b71e62a32f22b21ab5b0b311510591344a924414575db2ca75071f712",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_RECYCLE_PASS",
+      "errors": []
+    },
+    {
+      "key": "tired-passer-retains-safe-pass-home-xy:1",
+      "sessionKey": "home-xy",
+      "sequence": 31,
+      "requestSha256": "253f27113218b6c46c9950cb0d29085f9ca24719be92b8accb3fca3500294a5c",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "tired-passer-retains-safe-pass-home-xz:1",
+      "sessionKey": "home-xz",
+      "sequence": 31,
+      "requestSha256": "3b2518481f17c5772e8ac57ae524cd206944426417e706739af1c6f8f9a53c2d",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "tired-passer-retains-safe-pass-away-xy:1",
+      "sessionKey": "away-xy",
+      "sequence": 31,
+      "requestSha256": "bbd9db50dc6e2c07b610210a1d42c1eff6ac8d69779a3ae951c1a27992f47dd0",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "tired-passer-retains-safe-pass-away-xz:1",
+      "sessionKey": "away-xz",
+      "sequence": 31,
+      "requestSha256": "830d17ad7e4785eadae3b97684686d38629a10ab8ef6c402505929ca3dfc1d5c",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "tired-receiver-to-feet-home-xy:1",
+      "sessionKey": "home-xy",
+      "sequence": 32,
+      "requestSha256": "93d8f4d698983d7bd234db9c3aa6f9c19cf9957b3f95c364903ca4c8f326c797",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "tired-receiver-to-feet-home-xz:1",
+      "sessionKey": "home-xz",
+      "sequence": 32,
+      "requestSha256": "83e23cbdc77e9c139488f81597410af35d8a8774157ef13d542a6eef90851294",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "tired-receiver-to-feet-away-xy:1",
+      "sessionKey": "away-xy",
+      "sequence": 32,
+      "requestSha256": "06088999dd8b6abbd097714e6a787507ffe57f2af2c89e6133f88d2899eaf884",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "tired-receiver-to-feet-away-xz:1",
+      "sessionKey": "away-xz",
+      "sequence": 32,
+      "requestSha256": "c20bb7cd8b5c33ecfc0ce78f54446bb23217dbc9726e3aaad20a7f80c19f9eda",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "tired-clear-shot-home-xy:1",
+      "sessionKey": "home-xy",
+      "sequence": 33,
+      "requestSha256": "1a001b74d1d68115d873b5059e7e56015a74a4849cf7ce710483d0422ea3d923",
+      "command": {
+        "commandType": "SHOOT",
+        "playerId": 2,
+        "parameters": {
+          "aim_location": "TR",
+          "power": 0.8
+        },
+        "duration": 0
+      },
+      "reason": "CLOSE_CLEAR_SHOT",
+      "errors": []
+    },
+    {
+      "key": "tired-clear-shot-home-xz:1",
+      "sessionKey": "home-xz",
+      "sequence": 33,
+      "requestSha256": "0680dd53df4b2f7dc381cd07234d68c7c988ff7542d3e7c6f31be7ae8b8f4ff7",
+      "command": {
+        "commandType": "SHOOT",
+        "playerId": 2,
+        "parameters": {
+          "aim_location": "TR",
+          "power": 0.8
+        },
+        "duration": 0
+      },
+      "reason": "CLOSE_CLEAR_SHOT",
+      "errors": []
+    },
+    {
+      "key": "tired-clear-shot-away-xy:1",
+      "sessionKey": "away-xy",
+      "sequence": 33,
+      "requestSha256": "05fb08db7e81b061f3b92db8b590c38997b7ef25eed108a4f6aa25432dc4f7b3",
+      "command": {
+        "commandType": "SHOOT",
+        "playerId": 2,
+        "parameters": {
+          "aim_location": "TR",
+          "power": 0.8
+        },
+        "duration": 0
+      },
+      "reason": "CLOSE_CLEAR_SHOT",
+      "errors": []
+    },
+    {
+      "key": "tired-clear-shot-away-xz:1",
+      "sessionKey": "away-xz",
+      "sequence": 33,
+      "requestSha256": "0be6cb87adf3cf369ce5f32fa4365843387e3a933b76e088455ed70ab3e6c925",
+      "command": {
+        "commandType": "SHOOT",
+        "playerId": 2,
+        "parameters": {
+          "aim_location": "TR",
+          "power": 0.8
+        },
+        "duration": 0
+      },
+      "reason": "CLOSE_CLEAR_SHOT",
+      "errors": []
+    },
+    {
+      "key": "open-forward-home-xy:2",
+      "sessionKey": "home-xy",
+      "sequence": 34,
+      "requestSha256": "47b24df1e36ab9e35658712552955c37aaf3f743a09794e8fbe5aec5e7705f76",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "open-forward-home-xz:2",
+      "sessionKey": "home-xz",
+      "sequence": 34,
+      "requestSha256": "bab1e381d525342c61e8869ec2e06892e193ee62920d6b51012da13021a3e2ce",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "open-forward-away-xy:2",
+      "sessionKey": "away-xy",
+      "sequence": 34,
+      "requestSha256": "d3d4d431d56f2f84f224ec27953f35472253a6dd567ba643ea1e9ff1a0a1de0a",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "open-forward-away-xz:2",
+      "sessionKey": "away-xz",
+      "sequence": 34,
+      "requestSha256": "675680740eb71b76e9da6068a2c25dd945f762377aa5a8a56bf1b97540adc894",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "escape-presser-behind-home-xy:2",
+      "sessionKey": "home-xy",
+      "sequence": 35,
+      "requestSha256": "860fafdf551e9735c36780bcbb5347ca02ab17954a1a308bd4468a7f892b8b81",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "escape-presser-behind-home-xz:2",
+      "sessionKey": "home-xz",
+      "sequence": 35,
+      "requestSha256": "b729802727285548f074c0ba48cd27171833e1cb2c5a27e2a400c7735f587804",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "escape-presser-behind-away-xy:2",
+      "sessionKey": "away-xy",
+      "sequence": 35,
+      "requestSha256": "f1ddf8d7d5d74ec299e193c07350c22ebe655e3394df4e016fbe75f2575e7957",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "escape-presser-behind-away-xz:2",
+      "sessionKey": "away-xz",
+      "sequence": 35,
+      "requestSha256": "cdcc6c20f52cb577e482aa2f9e8d438f3a744a907a42d4e4f4da081d090ad175",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "blocked-forward-line-home-xy:2",
+      "sessionKey": "home-xy",
+      "sequence": 36,
+      "requestSha256": "d9950858939858d4259be0053bd5eec35a3a10d58f16087aff1fc89b1892e93c",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "blocked-forward-line-home-xz:2",
+      "sessionKey": "home-xz",
+      "sequence": 36,
+      "requestSha256": "62ac1b3ccd09819e1930a46a282240cafe9fa7e8ebc3a617d3db4e5a7a435c15",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "blocked-forward-line-away-xy:2",
+      "sessionKey": "away-xy",
+      "sequence": 36,
+      "requestSha256": "39468eb9cff4e3a9f46ab8b690a3cf956e78ffd7f203e77d4a264f08277772d7",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "blocked-forward-line-away-xz:2",
+      "sessionKey": "away-xz",
+      "sequence": 36,
+      "requestSha256": "221528d7a7a8b88788c6c94bde424826e23b3db80e4dec44a89e027fbf597709",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "marked-forward-home-xy:2",
+      "sessionKey": "home-xy",
+      "sequence": 37,
+      "requestSha256": "81ea5106adb4537aac3f1e95e4f6c41090680cee2b76ed4608fc80e92f7ab53a",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "marked-forward-home-xz:2",
+      "sessionKey": "home-xz",
+      "sequence": 37,
+      "requestSha256": "5b3410b41725e087fa8283367249b7058ae7564bf21586a3579c8aefe2cac655",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "marked-forward-away-xy:2",
+      "sessionKey": "away-xy",
+      "sequence": 37,
+      "requestSha256": "d236f08d666a298edf26838e9c9cccdce0bb6df9fcb85bbde97ffd6e2e5cdf48",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "marked-forward-away-xz:2",
+      "sessionKey": "away-xz",
+      "sequence": 37,
+      "requestSha256": "a41dab83eb7353c32e612e123f616a2eed2d8f71130d94986d81b08beff3378f",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "both-forwards-marked-home-xy:2",
+      "sessionKey": "home-xy",
+      "sequence": 38,
+      "requestSha256": "86ef304e673c4826af9d1309956380364328b465355e4174248a30d7908d6cbf",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 1,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_RECYCLE_PASS",
+      "errors": []
+    },
+    {
+      "key": "both-forwards-marked-home-xz:2",
+      "sessionKey": "home-xz",
+      "sequence": 38,
+      "requestSha256": "8a373027bbcfa541b4ee481091c3ff2d8211ddf9655c5f699681e4454bd5d1d1",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 1,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_RECYCLE_PASS",
+      "errors": []
+    },
+    {
+      "key": "both-forwards-marked-away-xy:2",
+      "sessionKey": "away-xy",
+      "sequence": 38,
+      "requestSha256": "f5d6281c7b0d4609e06cf7ca08a1176883b4ab7c65b9cf67e07fe6e18b71467f",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 1,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_RECYCLE_PASS",
+      "errors": []
+    },
+    {
+      "key": "both-forwards-marked-away-xz:2",
+      "sessionKey": "away-xz",
+      "sequence": 38,
+      "requestSha256": "c70afb3cc63a66f470f128fe9ec69d950c42db1eab6e2f8e79a59400ea7926db",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 1,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_RECYCLE_PASS",
+      "errors": []
+    },
+    {
+      "key": "all-outlets-marked-home-xy:2",
+      "sessionKey": "home-xy",
+      "sequence": 39,
+      "requestSha256": "8e592ab2046b3ca1bb940acf84711d096177f3b4a95cd01475a96c50efb5fed7",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 2,
+        "parameters": {},
+        "duration": 0
+      },
+      "reason": "NO_SAFE_OUTLET",
+      "errors": []
+    },
+    {
+      "key": "all-outlets-marked-home-xz:2",
+      "sessionKey": "home-xz",
+      "sequence": 39,
+      "requestSha256": "654afb052055fb99ed4f544bc192bd8998a17c5c242b1e668125ade51af8f29e",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 2,
+        "parameters": {},
+        "duration": 0
+      },
+      "reason": "NO_SAFE_OUTLET",
+      "errors": []
+    },
+    {
+      "key": "all-outlets-marked-away-xy:2",
+      "sessionKey": "away-xy",
+      "sequence": 39,
+      "requestSha256": "a6dfb64fd9eeeeaed6e7a2e9825efec631f34aeb02993aec956efbb1a897f4d7",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 2,
+        "parameters": {},
+        "duration": 0
+      },
+      "reason": "NO_SAFE_OUTLET",
+      "errors": []
+    },
+    {
+      "key": "all-outlets-marked-away-xz:2",
+      "sessionKey": "away-xz",
+      "sequence": 39,
+      "requestSha256": "5d5079fe37e4d12b02b6fe3f01acc805d7d652295915dbd05e4bf9ccea0071bd",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 2,
+        "parameters": {},
+        "duration": 0
+      },
+      "reason": "NO_SAFE_OUTLET",
+      "errors": []
+    },
+    {
+      "key": "defender-beyond-receiver-home-xy:2",
+      "sessionKey": "home-xy",
+      "sequence": 40,
+      "requestSha256": "dd054dfc051397184f54d220b2397fc4ee093a793595a7284f32c7d83303562b",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "defender-beyond-receiver-home-xz:2",
+      "sessionKey": "home-xz",
+      "sequence": 40,
+      "requestSha256": "ce727fb04f7be6f7f097e36fa297d924b08fe4fb83a02e375e556bdf886d3aec",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "defender-beyond-receiver-away-xy:2",
+      "sessionKey": "away-xy",
+      "sequence": 40,
+      "requestSha256": "ef96bfc8110062b3e73d841e94afd9ebcff0f92b13969f7e4699986a0cbc5ffc",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "defender-beyond-receiver-away-xz:2",
+      "sessionKey": "away-xz",
+      "sequence": 40,
+      "requestSha256": "4adab6b29c892b2ca092a1c3d587449e6b06b28e7249b00cc7894bd54be4163f",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "opponent-crossing-pass-home-xy:2",
+      "sessionKey": "home-xy",
+      "sequence": 41,
+      "requestSha256": "4136de2e074ea7345808de9276d59e91d5fe1e947722a33637e61acf0864e2ca",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "opponent-crossing-pass-home-xz:2",
+      "sessionKey": "home-xz",
+      "sequence": 41,
+      "requestSha256": "f7a2af10af9bd3cce28a58c898f86cad24e017e0bb0ecd4ae625cee02f774eb4",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "opponent-crossing-pass-away-xy:2",
+      "sessionKey": "away-xy",
+      "sequence": 41,
+      "requestSha256": "75f27685f8afcdcdf602290a52ccd51d3a381b6112f904a38cdb9496ec6f7689",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "opponent-crossing-pass-away-xz:2",
+      "sessionKey": "away-xz",
+      "sequence": 41,
+      "requestSha256": "45ef82f689c1a9f27d0c51a10ce38d1480fdecdf294ba535d1042cc6c92e39fa",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "receiver-running-into-pressure-home-xy:2",
+      "sessionKey": "home-xy",
+      "sequence": 42,
+      "requestSha256": "66ee0531f98d2dfd064ca076c3bbcd673756ec9da2f889b75c06b35316e6f3b7",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "receiver-running-into-pressure-home-xz:2",
+      "sessionKey": "home-xz",
+      "sequence": 42,
+      "requestSha256": "ef1de3743aaff082137b6b1f443d8df808060f0bd6fa34c9c57a363dd964046b",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "receiver-running-into-pressure-away-xy:2",
+      "sessionKey": "away-xy",
+      "sequence": 42,
+      "requestSha256": "e6722fdae5418ad2626d54c167e51585b98474826f93c1844a05d0326360ff9d",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "receiver-running-into-pressure-away-xz:2",
+      "sessionKey": "away-xz",
+      "sequence": 42,
+      "requestSha256": "2db63bb6f60896980a33d91c28d819ea80bf4a57dc5b2286c05e3850fe2f020a",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "pressure-ahead-escape-back-home-xy:2",
+      "sessionKey": "home-xy",
+      "sequence": 43,
+      "requestSha256": "04c29f8c996941d37307c7ff08cff829e7c74ea9c5e0963fd0645b87235edf7c",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 1,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_RECYCLE_PASS",
+      "errors": []
+    },
+    {
+      "key": "pressure-ahead-escape-back-home-xz:2",
+      "sessionKey": "home-xz",
+      "sequence": 43,
+      "requestSha256": "af89875b1b156c0344c671d25266cf6bd3eb882d0bf55aa2aa3c5f164812f070",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 1,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_RECYCLE_PASS",
+      "errors": []
+    },
+    {
+      "key": "pressure-ahead-escape-back-away-xy:2",
+      "sessionKey": "away-xy",
+      "sequence": 43,
+      "requestSha256": "ec498bedd41c8277349bbc302da417e59adb657fda32fa8907007aa4b1ac6238",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 1,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_RECYCLE_PASS",
+      "errors": []
+    },
+    {
+      "key": "pressure-ahead-escape-back-away-xz:2",
+      "sessionKey": "away-xz",
+      "sequence": 43,
+      "requestSha256": "57d2da5a4b9e9a0b3fdcb62e91be619e2a54bab83a758b01db24755e554db79d",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 1,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_RECYCLE_PASS",
+      "errors": []
+    },
+    {
+      "key": "open-long-ground-home-xy:2",
+      "sessionKey": "home-xy",
+      "sequence": 44,
+      "requestSha256": "deae2d7a225aaf0b947b9e3d08f77bf84a2c70add1d201ecd62a5250842f52b1",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "open-long-ground-home-xz:2",
+      "sessionKey": "home-xz",
+      "sequence": 44,
+      "requestSha256": "407d23828224bb1be89ee0fd025d02591ca637c959ac6280b656b1ce327508f1",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "open-long-ground-away-xy:2",
+      "sessionKey": "away-xy",
+      "sequence": 44,
+      "requestSha256": "7d7ca7e03bd1e686bade064da60c52cc3456d42049c21ac8614a043635965bd0",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "open-long-ground-away-xz:2",
+      "sessionKey": "away-xz",
+      "sequence": 44,
+      "requestSha256": "89cb131c89e13ea67205e85ffa403e46ad0c1bdf4098177ddee2141d77ed7612",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "too-long-use-other-forward-home-xy:2",
+      "sessionKey": "home-xy",
+      "sequence": 45,
+      "requestSha256": "ae354334a2216e88f542a79a809fd4928c4caa5ec4a562bdd5d756867b8d301c",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "too-long-use-other-forward-home-xz:2",
+      "sessionKey": "home-xz",
+      "sequence": 45,
+      "requestSha256": "69da4bb0b905e1d085bfbc582efc0e7669ccad6947849298a34ccb22c21cd1e9",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "too-long-use-other-forward-away-xy:2",
+      "sessionKey": "away-xy",
+      "sequence": 45,
+      "requestSha256": "f7ebf171240e5a48fc6e861df1cdddf5fce5cd2986aad7cf1a93ed02bca7ba70",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "too-long-use-other-forward-away-xz:2",
+      "sessionKey": "away-xz",
+      "sequence": 45,
+      "requestSha256": "6942eb7f6cec1beb5d6fb96acf8f9830eacc35ed42a9bcc7474d1e84ff60db8b",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 4,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "clear-close-shot-home-xy:2",
+      "sessionKey": "home-xy",
+      "sequence": 46,
+      "requestSha256": "420473557c98877cd79f91672bb50519274330a21c6d9174f8bc5a29e1f9da22",
+      "command": {
+        "commandType": "SHOOT",
+        "playerId": 2,
+        "parameters": {
+          "aim_location": "TR",
+          "power": 0.8
+        },
+        "duration": 0
+      },
+      "reason": "CLOSE_CLEAR_SHOT",
+      "errors": []
+    },
+    {
+      "key": "clear-close-shot-home-xz:2",
+      "sessionKey": "home-xz",
+      "sequence": 46,
+      "requestSha256": "9c379f927890a6629a268e6a3076e7fdbc87b29fc3a8cbf0262ce2b1b22516f7",
+      "command": {
+        "commandType": "SHOOT",
+        "playerId": 2,
+        "parameters": {
+          "aim_location": "TR",
+          "power": 0.8
+        },
+        "duration": 0
+      },
+      "reason": "CLOSE_CLEAR_SHOT",
+      "errors": []
+    },
+    {
+      "key": "clear-close-shot-away-xy:2",
+      "sessionKey": "away-xy",
+      "sequence": 46,
+      "requestSha256": "03bbdd730561d072e8a5cad4cfddd7f101d8b5c529194dcef66faaf671aac4ea",
+      "command": {
+        "commandType": "SHOOT",
+        "playerId": 2,
+        "parameters": {
+          "aim_location": "TR",
+          "power": 0.8
+        },
+        "duration": 0
+      },
+      "reason": "CLOSE_CLEAR_SHOT",
+      "errors": []
+    },
+    {
+      "key": "clear-close-shot-away-xz:2",
+      "sessionKey": "away-xz",
+      "sequence": 46,
+      "requestSha256": "4b701a281336a1d45027920d825cdb5891a1b3926905ebfd11e4b05d4544bb18",
+      "command": {
+        "commandType": "SHOOT",
+        "playerId": 2,
+        "parameters": {
+          "aim_location": "TR",
+          "power": 0.8
+        },
+        "duration": 0
+      },
+      "reason": "CLOSE_CLEAR_SHOT",
+      "errors": []
+    },
+    {
+      "key": "blocked-close-shot-safe-pass-home-xy:2",
+      "sessionKey": "home-xy",
+      "sequence": 47,
+      "requestSha256": "484290907356c4b6afc565682b911faa1760a24928701f079fa424718cf87a64",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_RECYCLE_PASS",
+      "errors": []
+    },
+    {
+      "key": "blocked-close-shot-safe-pass-home-xz:2",
+      "sessionKey": "home-xz",
+      "sequence": 47,
+      "requestSha256": "49da641617b25279c072f9a2f2d6a3774f33d43cd60c29702551ecedb538de21",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_RECYCLE_PASS",
+      "errors": []
+    },
+    {
+      "key": "blocked-close-shot-safe-pass-away-xy:2",
+      "sessionKey": "away-xy",
+      "sequence": 47,
+      "requestSha256": "184746eba453eee2a0a977b62c46a8279277893338c63f22fc5d2e2653a7ae9c",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_RECYCLE_PASS",
+      "errors": []
+    },
+    {
+      "key": "blocked-close-shot-safe-pass-away-xz:2",
+      "sessionKey": "away-xz",
+      "sequence": 47,
+      "requestSha256": "affbc867167f7a185489467b89f029df95c5f9c1436e47972c4c321d3d0287f4",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_RECYCLE_PASS",
+      "errors": []
+    },
+    {
+      "key": "tired-passer-retains-safe-pass-home-xy:2",
+      "sessionKey": "home-xy",
+      "sequence": 48,
+      "requestSha256": "99953f843e4f0bb356aced05044522159a17817f022aa07ebcfd272f93740210",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "tired-passer-retains-safe-pass-home-xz:2",
+      "sessionKey": "home-xz",
+      "sequence": 48,
+      "requestSha256": "8b4c37ab767d4fa637340c7f821a6ea4177ea0133069b6169a19fb2ad052b3ce",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "tired-passer-retains-safe-pass-away-xy:2",
+      "sessionKey": "away-xy",
+      "sequence": 48,
+      "requestSha256": "1fc7a2fd6f77616459d686af10f12351299f80f74ebf9908bee36a60845d3011",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "tired-passer-retains-safe-pass-away-xz:2",
+      "sessionKey": "away-xz",
+      "sequence": 48,
+      "requestSha256": "b13de8a6d48e643b8f8f000c897ddf3bfe5ebb14e45b324313f4742666f1e32a",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "tired-receiver-to-feet-home-xy:2",
+      "sessionKey": "home-xy",
+      "sequence": 49,
+      "requestSha256": "20af08ee80a1ae247f6513907c2175042fe1cd278fc9e8708398653530144436",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "tired-receiver-to-feet-home-xz:2",
+      "sessionKey": "home-xz",
+      "sequence": 49,
+      "requestSha256": "f98a2c9a388aa6ffb6b461a335bbc19cb6f48198d272a7004bd04303ad3f6c3a",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "tired-receiver-to-feet-away-xy:2",
+      "sessionKey": "away-xy",
+      "sequence": 49,
+      "requestSha256": "b819f06f44680a207d3ed8f24d71397f3b40b415c56db9b6e138d76093954732",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "tired-receiver-to-feet-away-xz:2",
+      "sessionKey": "away-xz",
+      "sequence": 49,
+      "requestSha256": "f9b16a6b62ffc7e815b7b52ddf14138f31dd1aa90d8616f8f4626e760698dbed",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "tired-clear-shot-home-xy:2",
+      "sessionKey": "home-xy",
+      "sequence": 50,
+      "requestSha256": "c38a2ae4428f6e552de836370947e958b39d2fdf86e0ccc023357633f14b852f",
+      "command": {
+        "commandType": "SHOOT",
+        "playerId": 2,
+        "parameters": {
+          "aim_location": "TR",
+          "power": 0.8
+        },
+        "duration": 0
+      },
+      "reason": "CLOSE_CLEAR_SHOT",
+      "errors": []
+    },
+    {
+      "key": "tired-clear-shot-home-xz:2",
+      "sessionKey": "home-xz",
+      "sequence": 50,
+      "requestSha256": "d926ece87f1860a31b3c9dae2436a9273e7d8756f07bebbcdfa45e690f7540c7",
+      "command": {
+        "commandType": "SHOOT",
+        "playerId": 2,
+        "parameters": {
+          "aim_location": "TR",
+          "power": 0.8
+        },
+        "duration": 0
+      },
+      "reason": "CLOSE_CLEAR_SHOT",
+      "errors": []
+    },
+    {
+      "key": "tired-clear-shot-away-xy:2",
+      "sessionKey": "away-xy",
+      "sequence": 50,
+      "requestSha256": "31377055a9322533835ae70b7314d1affe91ebec8c6750781070f1627def508a",
+      "command": {
+        "commandType": "SHOOT",
+        "playerId": 2,
+        "parameters": {
+          "aim_location": "TR",
+          "power": 0.8
+        },
+        "duration": 0
+      },
+      "reason": "CLOSE_CLEAR_SHOT",
+      "errors": []
+    },
+    {
+      "key": "tired-clear-shot-away-xz:2",
+      "sessionKey": "away-xz",
+      "sequence": 50,
+      "requestSha256": "d9b7739bfcc19839145e8c5d558282d8c212810070d57b6adaa93618fa9e036e",
+      "command": {
+        "commandType": "SHOOT",
+        "playerId": 2,
+        "parameters": {
+          "aim_location": "TR",
+          "power": 0.8
+        },
+        "duration": 0
+      },
+      "reason": "CLOSE_CLEAR_SHOT",
+      "errors": []
+    },
+    {
+      "key": "first-ambiguous-contact-home",
+      "sessionKey": "contact-home",
+      "sequence": 0,
+      "requestSha256": "26cf11c0bd7096fd893d24dc45626d142a62735080a5971e2a2047366bd10fa8",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 2,
+        "parameters": {},
+        "duration": 0
+      },
+      "reason": "UNKNOWN_POSSESSION",
+      "errors": []
+    },
+    {
+      "key": "confirmed-contact-home",
+      "sessionKey": "contact-home",
+      "sequence": 1,
+      "requestSha256": "33076730338b12f8e23a61a94592020468fffc80eee74fc6e195c3f879779576",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "duplicate-frame-home",
+      "sessionKey": "contact-home",
+      "sequence": 2,
+      "requestSha256": "33076730338b12f8e23a61a94592020468fffc80eee74fc6e195c3f879779576",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 2,
+        "parameters": {},
+        "duration": 0
+      },
+      "reason": "STALE_OR_DUPLICATE_FRAME",
+      "errors": []
+    },
+    {
+      "key": "contact-after-duplicate-home",
+      "sessionKey": "contact-home",
+      "sequence": 3,
+      "requestSha256": "8b1f91f92e128152e4cf3cb034f94e48bffaa25e552f3bb50e863250b23b18a5",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 2,
+        "parameters": {},
+        "duration": 0
+      },
+      "reason": "UNKNOWN_POSSESSION",
+      "errors": []
+    },
+    {
+      "key": "reconfirmed-contact-home",
+      "sessionKey": "contact-home",
+      "sequence": 4,
+      "requestSha256": "8c6806eedc09a6569276a15f160f99f8e35dcde1e2fa79418896ad2b79779d0b",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "opponent-qualified-same-id-home",
+      "sessionKey": "contact-home",
+      "sequence": 5,
+      "requestSha256": "42ae01d4a4eeb097185bef91bc75560ee0b73fc910aafdd53145562c3160c447",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 2,
+        "parameters": {},
+        "duration": 0
+      },
+      "reason": "ENGINE_OFF_BALL",
+      "errors": []
+    },
+    {
+      "key": "own-qualified-recovered-home",
+      "sessionKey": "contact-home",
+      "sequence": 6,
+      "requestSha256": "88fe49c8ec204795bde35a1f2c517d87f3b819c303fbb625c9f8b35df9bac561",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "airborne-explicit-owner-home",
+      "sessionKey": "contact-home",
+      "sequence": 7,
+      "requestSha256": "2b3dbf07298ecc86983e4e841be3945d9f587a9dd376362e25b1c3a26939ba6f",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 2,
+        "parameters": {},
+        "duration": 0
+      },
+      "reason": "AIRBORNE_BALL",
+      "errors": []
+    },
+    {
+      "key": "restart-home",
+      "sessionKey": "contact-home",
+      "sequence": 8,
+      "requestSha256": "edd932a9b0ccb57154e2767401616840b1c37c74a2498c835019f44ad3973843",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 2,
+        "parameters": {},
+        "duration": 0
+      },
+      "reason": "ENGINE_RESTART",
+      "errors": []
+    },
+    {
+      "key": "free-ball-home",
+      "sessionKey": "contact-home",
+      "sequence": 9,
+      "requestSha256": "d32671b11f31fc026a73608a5545c43299a354c02240c1257eab31ef830bd9fb",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 2,
+        "parameters": {},
+        "duration": 0
+      },
+      "reason": "ENGINE_OFF_BALL",
+      "errors": []
+    },
+    {
+      "key": "first-ambiguous-contact-away",
+      "sessionKey": "contact-away",
+      "sequence": 0,
+      "requestSha256": "28c83b8ee8d80681e258013d2810dc9221153b2257c9f01172cc1488fb6b5e32",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 2,
+        "parameters": {},
+        "duration": 0
+      },
+      "reason": "UNKNOWN_POSSESSION",
+      "errors": []
+    },
+    {
+      "key": "confirmed-contact-away",
+      "sessionKey": "contact-away",
+      "sequence": 1,
+      "requestSha256": "3f0cb52146cfcf0b995db2bf75bfa36286026d4a53ab0678160605314acb0e08",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "duplicate-frame-away",
+      "sessionKey": "contact-away",
+      "sequence": 2,
+      "requestSha256": "3f0cb52146cfcf0b995db2bf75bfa36286026d4a53ab0678160605314acb0e08",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 2,
+        "parameters": {},
+        "duration": 0
+      },
+      "reason": "STALE_OR_DUPLICATE_FRAME",
+      "errors": []
+    },
+    {
+      "key": "contact-after-duplicate-away",
+      "sessionKey": "contact-away",
+      "sequence": 3,
+      "requestSha256": "6a858a5480e6c8ce94f2fc87f2023da108323ec47ae9287c4b21ff8c510181f4",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 2,
+        "parameters": {},
+        "duration": 0
+      },
+      "reason": "UNKNOWN_POSSESSION",
+      "errors": []
+    },
+    {
+      "key": "reconfirmed-contact-away",
+      "sessionKey": "contact-away",
+      "sequence": 4,
+      "requestSha256": "42e34d6c7bdac1d3af561eb4fbfa980dbf313fbc905f59ec68d40b100d96da84",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "opponent-qualified-same-id-away",
+      "sessionKey": "contact-away",
+      "sequence": 5,
+      "requestSha256": "6b65e9352829c1a07b6d07d920e70e84fead88777b82a909f29796d10f03bd66",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 2,
+        "parameters": {},
+        "duration": 0
+      },
+      "reason": "ENGINE_OFF_BALL",
+      "errors": []
+    },
+    {
+      "key": "own-qualified-recovered-away",
+      "sessionKey": "contact-away",
+      "sequence": 6,
+      "requestSha256": "c7c8a4686dc8662a462e534694acf177bbe6f56e4b25cc06816eb2b0a482a98b",
+      "command": {
+        "commandType": "PASS",
+        "playerId": 2,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "reason": "SAFE_PROGRESSIVE_PASS",
+      "errors": []
+    },
+    {
+      "key": "airborne-explicit-owner-away",
+      "sessionKey": "contact-away",
+      "sequence": 7,
+      "requestSha256": "bbff916a323750ea401e34adf19b61b8b4821d22c8c00452396ce1c8a6f18b49",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 2,
+        "parameters": {},
+        "duration": 0
+      },
+      "reason": "AIRBORNE_BALL",
+      "errors": []
+    },
+    {
+      "key": "restart-away",
+      "sessionKey": "contact-away",
+      "sequence": 8,
+      "requestSha256": "7e437d353d27e715049e24331b99ae1369cfa283b7808b0fe2717eb107f6931c",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 2,
+        "parameters": {},
+        "duration": 0
+      },
+      "reason": "ENGINE_RESTART",
+      "errors": []
+    },
+    {
+      "key": "free-ball-away",
+      "sessionKey": "contact-away",
+      "sequence": 9,
+      "requestSha256": "16c0d4c88a153ab52309623d01eb46f47a5c1f012894549f4a714e08e538406a",
+      "command": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 2,
+        "parameters": {},
+        "duration": 0
+      },
+      "reason": "ENGINE_OFF_BALL",
+      "errors": []
+    }
+  ],
+  "native": null,
+  "fitness": null,
+  "turnoverRate": null,
+  "passCompletion": null,
+  "fullRequestLatency": null,
+  "eligibleForRankedPromotion": false
+}
