@@ -1,0 +1,39 @@
+{
+  "id": "P02-fwd1-energy-v1",
+  "parentHypothesis": "C02",
+  "status": "queued_only_not_inferred_not_fitness_tested",
+  "change": "Only the original FWD1 sprint instruction; independent of P01",
+  "promptBeforeSha256": "ee4c92203e6fcbc86d14329913933ba68d8cd2092947bebd2c66d5ed14c17b15",
+  "promptAfterSha256": "f0319144d00b6dd611d232be25d45ee4b6542fd5ac0e10ea0f23a6ad0f6b15bc",
+  "promptBytesBefore": 3908,
+  "promptBytesAfter": 4168,
+  "modelId": "global.amazon.nova-2-lite-v1:0",
+  "formation": "1-1-2",
+  "freshModelCalls": 0,
+  "fitnessResult": null,
+  "eligibleForPromotion": false,
+  "thresholdStatus": "Research thresholds, not measured engine constants",
+  "shotAccuracyEffect": null,
+  "latencyImprovement": null,
+  "physicalContractGap": "Live fractional stamina observed; runtime metadata does not yet explicitly label its scale for the model",
+  "rollback": {
+    "prompt": "research/v3/schema-clean/fwd1.txt",
+    "promptSha256": "ee4c92203e6fcbc86d14329913933ba68d8cd2092947bebd2c66d5ed14c17b15",
+    "modelId": "global.amazon.nova-2-lite-v1:0",
+    "requireFreshFitness": true
+  },
+  "requiredEvidence": [
+    "Same-input original/P02 full responses, verified units, both sides, repeated trials",
+    "Tired open-shot and safe-pass positives retained; unnecessary low-energy sprint reduced",
+    "Mid-energy decisive recovery and fresh useful run retained; no stale possession actions",
+    "Full-command p50/p95 and timely useful response rate; longer prompt may increase latency",
+    "Native/readback and fresh Fitness 5/5 before considering a stable live cohort"
+  ],
+  "doNotBundle": [
+    "P01 shot wording",
+    "model switch",
+    "long-pass policy",
+    "D01 timing",
+    "formation changes"
+  ]
+}

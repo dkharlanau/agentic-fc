@@ -1,0 +1,19 @@
+{
+  "boundary": "local feature extraction + JSON serialization; warm process",
+  "python": "3.9.6",
+  "cases": 12,
+  "repetitions": 100,
+  "wallMs": {
+    "n": 1200,
+    "p50": 0.069,
+    "p95": 0.073,
+    "max": 0.322625
+  },
+  "networkMs": null,
+  "modelMs": null,
+  "serverApplyMs": null,
+  "newModelCalls": 0,
+  "sourceSha256": "b6ce04b5f98e3713dcb524716a39fa5e3b976dbfb5dfa2f72e608be16ffaa704",
+  "measurementDate": "2026-10-25",
+  "timingIsMachineDependent": true
+}

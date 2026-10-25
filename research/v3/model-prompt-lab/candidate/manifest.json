@@ -40,6 +40,12 @@
   },
   "queuedNotBundled": [
     {
+      "id": "P02",
+      "change": "FWD1 current-energy sprint instruction only",
+      "status": "queued independently; no inference or Fitness; thresholds uncalibrated",
+      "manifest": "research/v3/model-prompt-lab/candidate/energy-manifest.json"
+    },
+    {
       "id": "M01",
       "change": "Micro FWD1 model-only with unchanged M8 prompt",
       "modelFrom": "global.amazon.nova-2-lite-v1:0",

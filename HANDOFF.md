@@ -1,5 +1,18 @@
 # Agentic FC continuation
 
+## Research energy/pass update — 2026-10-25
+
+Owner asks about fatigue, finishing, situational long passes and lower latency.
+Official AWS reference supports stamina affecting speed; direct accuracy effect
+remains unknown. Added local feature extraction and12 mirrored synthetic cases;
+no engine-shot penalty invented, THROUGH/AERIAL feasibility remains unknown.
+P02 queued: independent FWD1 sprint-line diff with explicit unit warning and
+uncalibrated40/70% bands, no close-shot veto. P01 stays the next proposal;
+do not stack changes. See model-prompt-lab/ENERGY_PASS.ru.md and energy-manifest.
+No new inference/native/Fitness/games/AWS; both candidates remain unpromoted.
+26 lab checks pass; deterministic artifacts reproduce; local CPU benchmark
+has its own timing boundary and source hash, not a game-latency claim.
+
 ## Research criteria update — 2026-10-25
 
 Owner prioritizes latency AND role understanding, safe possession/passing,

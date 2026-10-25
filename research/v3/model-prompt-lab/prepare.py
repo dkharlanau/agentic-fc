@@ -8,15 +8,53 @@ import lab
 HERE = Path(__file__).resolve().parent
 
 
-def patch_for(path, before, after):
+def patch_for(path, before, after, context=3):
     lines=difflib.unified_diff(before.splitlines(True),after.splitlines(True),
-                              fromfile='a/'+path,tofile='b/'+path)
+                              fromfile='a/'+path,tofile='b/'+path,n=context)
     # Git accepts empty context lines without a space prefix. This also keeps
     # checked-in patch artifacts clean under git diff --check.
     return ''.join('\n' if line==' \n' else line for line in lines)
 
 
+def prepare_energy():
+    """Independent queued experiment: never stack on P01 without a new design."""
+    target='research/v3/schema-clean/fwd1.txt'
+    original=(lab.ROOT/target).read_text()
+    old='- Sprint when making attacking runs, conserve stamina when tracking back'
+    new=('- Use current stamina (not the Stamina skill): below 40%, do not sprint; '
+         'from 40% through 70%, sprint only for a clear scoring run or immediate recovery; '
+         'above 70%, sprint only when useful. Use a verified stamina scale (fraction 0..1 '
+         'or percent 0..100); if unclear, do not guess. Low stamina alone must not veto '
+         'a close, clear shot.')
+    assert original.count(old)==1
+    candidate=original.replace(old,new)
+    output=HERE/'candidate/fwd1-energy-v1.txt'
+    output.write_text(candidate)
+    (HERE/'candidate/fwd1-energy-v1.patch').write_text(patch_for(target,original,candidate,context=2))
+    manifest={
+        'id':'P02-fwd1-energy-v1','parentHypothesis':'C02',
+        'status':'queued_only_not_inferred_not_fitness_tested',
+        'change':'Only the original FWD1 sprint instruction; independent of P01',
+        'promptBeforeSha256':lab.file_sha(lab.ROOT/target),'promptAfterSha256':lab.file_sha(output),
+        'promptBytesBefore':len(original.encode()),'promptBytesAfter':len(candidate.encode()),
+        'modelId':'global.amazon.nova-2-lite-v1:0','formation':'1-1-2',
+        'freshModelCalls':0,'fitnessResult':None,'eligibleForPromotion':False,
+        'thresholdStatus':'Research thresholds, not measured engine constants',
+        'shotAccuracyEffect':None,'latencyImprovement':None,
+        'physicalContractGap':'Live fractional stamina observed; runtime metadata does not yet explicitly label its scale for the model',
+        'rollback':{'prompt':target,'promptSha256':lab.file_sha(lab.ROOT/target),
+                    'modelId':'global.amazon.nova-2-lite-v1:0','requireFreshFitness':True},
+        'requiredEvidence':['Same-input original/P02 full responses, verified units, both sides, repeated trials',
+                            'Tired open-shot and safe-pass positives retained; unnecessary low-energy sprint reduced',
+                            'Mid-energy decisive recovery and fresh useful run retained; no stale possession actions',
+                            'Full-command p50/p95 and timely useful response rate; longer prompt may increase latency',
+                            'Native/readback and fresh Fitness 5/5 before considering a stable live cohort'],
+        'doNotBundle':['P01 shot wording','model switch','long-pass policy','D01 timing','formation changes']}
+    (HERE/'candidate/energy-manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
+
+
 def prepare():
+    prepare_energy()
     target='research/v3/schema-clean/fwd1.txt'
     original=(lab.ROOT/target).read_text()
     old='- SHOOT whenever you have the ball within shooting range (~25 units from goal)'
@@ -52,6 +90,9 @@ def prepare():
         'rejectedBeforeInference':{'id':'ownership-guard-draft','reason':'Two captured physical inputs lack possessionTeamCode and hasBall; forcing explicit ownership risks disabling attack',
                                   'evidence':'results/input-contract.json'},
         'queuedNotBundled':[
+            {'id':'P02','change':'FWD1 current-energy sprint instruction only',
+             'status':'queued independently; no inference or Fitness; thresholds uncalibrated',
+             'manifest':'research/v3/model-prompt-lab/candidate/energy-manifest.json'},
             {'id':'M01','change':'Micro FWD1 model-only with unchanged M8 prompt',
              'modelFrom':'global.amazon.nova-2-lite-v1:0','modelTo':'amazon.nova-micro-v1:0',
              'status':'requires same-prompt inference first; selector20/20 is not this configuration'},
