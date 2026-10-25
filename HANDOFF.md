@@ -771,17 +771,20 @@ analytics and opponent reports are in `research/v3/ranked-batch-19.json` and
 The <=10ms target remains unmet; no setup changed. Codex usage was read after
 batch19 and showed 24% used. No model/prompt/formation changes or L02 install.
 
-Batch20 is active (unchanged baseline, formation 1-1-2). Games 1-2 complete:
-Tajfun Komary 0-1 and Amber Geysers 2 1-2 after sudden death; both wins. Current
-row is rank #10, 186 played, 348 points, 114W/6D/66L, goals254:149. Reports
-saved in `research/v3/ranked-batch-20.json`; Tajfun was outside the visible top
-48, Amber Geysers 2 rank remains unknown. Tajfun's report is internally
-inconsistent: zero team commands but 15941ms team mean and 11-19s role latencies
-(success100%); cause unknown. Amber Geysers 2 report: 76 commands, CLEAR61
-(80%), PASS10, 15ms team mean; live commentary described hard pressing,
-swarming, possession and probing. This is one observed match, not a stable
-tactic/weakness. Our latency varied sharply between the two reports (15941ms,
-then 847ms); the <=10ms target remains unmet. No configuration changes.
-Continue the remaining three consecutive real ranked matches one at a time;
-analyze the cohort at 5/5. No benchmarks/practice. Check Codex quota after the
-batch before opening another cohort.
+Batch20 is active (unchanged baseline, formation 1-1-2). Games 1-3 complete:
+Tajfun Komary 1-0 win; Amber Geysers 2 2-1 win after sudden death; Le Masia
+1-0 win. Current row is rank #10, 187 played, 351 points, 115W/6D/66L,
+goals255:149. Reports are in `research/v3/ranked-batch-20.json`. Tajfun was
+outside the visible top 48; Amber Geysers 2 rank unknown. Le Masia was observed
+at #25, 105 games/169 points before and #25, 107/170 afterward; two concurrent
+games were added, so only a tentative row delta is attributable to our match.
+Tajfun's report is internally inconsistent: zero team commands but 15941ms
+team mean and 11-19s role latencies (success100%); cause unknown. Amber Geysers
+2: 76 commands, CLEAR61 (80%), PASS10, 15ms mean; commentary described hard
+pressing, swarming, possession and probing. Le Masia: 45 commands, CLEAR37
+(82%), PASS5, 16ms mean; commentary described patient build, possession,
+probing and pressure. They had 70% possession but 0 shots while we had 8 shots
+and won 1-0. These are single-match observations, not stable tactical facts.
+Our latency varied sharply (15941, 847, 807ms); <=10ms remains unmet. No setup
+changes. Continue two real ranked matches one at a time, analyze at 5/5, no
+benchmarks/practice, check quota before another cohort.

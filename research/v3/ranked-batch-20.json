@@ -1,8 +1,8 @@
 {
   "id": "ranked-batch-20",
-  "status": "in-progress-2of5",
+  "status": "in-progress-3of5",
   "targetCompletedGames": 5,
-  "completedGames": 2,
+  "completedGames": 3,
   "setup": "registered baseline, formation 1-1-2; GK/DEF/MID/FWD4 show global.amazon.nova-2-lite-v1:0; FWD5 remains existing fast path, model not verified",
   "preflight": {
     "portalState": "READY TO PLAY; no active match",
@@ -29,18 +29,37 @@
       "shotsOnTarget": "1-0",
       "teamAverageLatencyMs": 15941,
       "teamCommands": 0,
-      "roleLatencyMs": [11170, 11202, 19205, 19195, 18933],
+      "roleLatencyMs": [
+        11170,
+        11202,
+        19205,
+        19195,
+        18933
+      ],
       "successPct": "100% all roles",
       "actions": {},
-      "goals": [{"minute": "1'", "scorer": "MID 3"}],
+      "goals": [
+        {
+          "minute": "1'",
+          "scorer": "MID 3"
+        }
+      ],
       "opponentReport": {
         "teamAverageLatencyMs": 25,
         "teamCommands": 2,
-        "roleLatencyMs": [7, 6, 6, 5, 100],
+        "roleLatencyMs": [
+          7,
+          6,
+          6,
+          5,
+          100
+        ],
         "successPct": "100% all roles",
-        "actions": {"CLEAR": 2},
+        "actions": {
+          "CLEAR": 2
+        },
         "leaderboardAfterMatch": null,
-        "leaderboardRank": "not yet checked"
+        "leaderboardRank": "not yet checked at match report; outside loaded top 48 rows"
       },
       "reportAiOverview": "The report remained at 'Generating summary'; no AI-generated explanation was used.",
       "observations": [
@@ -60,20 +79,53 @@
       "shotsOnTarget": "2-1",
       "teamAverageLatencyMs": 847,
       "teamCommands": 599,
-      "roleLatencyMs": [633, 981, 884, 660, 884],
+      "roleLatencyMs": [
+        633,
+        981,
+        884,
+        660,
+        884
+      ],
       "successPct": "100% all roles",
-      "actions": {"PRESS": 286, "MOVE": 250, "INTERCEPT": 37, "CLEAR": 24, "FOLLOW": 1, "MARK": 1},
+      "actions": {
+        "PRESS": 286,
+        "MOVE": 250,
+        "INTERCEPT": 37,
+        "CLEAR": 24,
+        "FOLLOW": 1,
+        "MARK": 1
+      },
       "goals": [
-        {"minute": "1'", "scorer": "Amber Geysers 2 MID 3"},
-        {"minute": "1'", "scorer": "No Human in the Loop FWD 4"},
-        {"minute": "4'", "scorer": "No Human in the Loop FWD 4 (sudden death)"}
+        {
+          "minute": "1'",
+          "scorer": "Amber Geysers 2 MID 3"
+        },
+        {
+          "minute": "1'",
+          "scorer": "No Human in the Loop FWD 4"
+        },
+        {
+          "minute": "4'",
+          "scorer": "No Human in the Loop FWD 4 (sudden death)"
+        }
       ],
       "opponentReport": {
         "teamAverageLatencyMs": 15,
         "teamCommands": 76,
-        "roleLatencyMs": [3, 2, 2, 2, 69],
+        "roleLatencyMs": [
+          3,
+          2,
+          2,
+          2,
+          69
+        ],
         "successPct": "100% all roles",
-        "actions": {"CLEAR": 61, "PASS": 10, "PRESS": 3, "INTERCEPT": 2},
+        "actions": {
+          "CLEAR": 61,
+          "PASS": 10,
+          "PRESS": 3,
+          "INTERCEPT": 2
+        },
         "leaderboardAfterMatch": null,
         "leaderboardRank": "not yet checked"
       },
@@ -87,9 +139,111 @@
         "Amber Geysers 2 reported 76 commands and 15ms team mean; CLEAR61 (80%), PASS10, PRESS3, INTERCEPT2. Role means3/2/2/2/69ms; all roles reported 100% success.",
         "Opponent score came from MID3 at 1'; FWD4 equalized at 1' and scored the sudden-death winner at 4'. Despite 58% possession and the commentary's pressure/probing cues, the opponent recorded four shots and one on target. This single game cannot establish a stable weakness."
       ]
+    },
+    {
+      "opponent": "Le Masia",
+      "result": "WIN",
+      "score": "1-0",
+      "possessionPct": "30-70",
+      "shots": "8-0",
+      "shotsOnTarget": "1-0",
+      "teamAverageLatencyMs": 807,
+      "teamCommands": 272,
+      "roleLatencyMs": [
+        872,
+        903,
+        638,
+        885,
+        585
+      ],
+      "successPct": "100% all roles",
+      "actions": {
+        "PRESS": 178,
+        "MOVE": 75,
+        "CLEAR": 19
+      },
+      "goals": [
+        {
+          "minute": "1'",
+          "scorer": "MID 3"
+        }
+      ],
+      "opponentReport": {
+        "teamAverageLatencyMs": 16,
+        "teamCommands": 45,
+        "roleLatencyMs": [
+          3,
+          2,
+          2,
+          2,
+          72
+        ],
+        "successPct": "100% all roles",
+        "actions": {
+          "CLEAR": 37,
+          "PASS": 5,
+          "PRESS": 3
+        },
+        "leaderboardAfterMatch": {
+          "rank": 25,
+          "played": 107,
+          "points": 170,
+          "wins": 55,
+          "draws": 5,
+          "losses": 47,
+          "goals": "116-115",
+          "goalDifference": 1
+        },
+        "leaderboardBeforeObserved": {
+          "rank": 25,
+          "played": 105,
+          "points": 169,
+          "wins": 55,
+          "draws": 4,
+          "losses": 46,
+          "goals": "116-114",
+          "goalDifference": 2
+        },
+        "comparisonNote": "Two games were added between snapshots; one loss with +1 goal against matches this defeat, while the other added match appears to be a draw with no goals. Attribution is not definitive because standings may update concurrently."
+      },
+      "reportAiOverview": "The report remained at 'Generating summary'; no AI-generated explanation was used.",
+      "liveCommentaryObservations": [
+        "Commentary described Le Masia as building patiently, keeping possession and probing for a gap, then pressing hard and swarming the ball. These are observed commentary phrases, not verified tactical configuration."
+      ],
+      "observations": [
+        "Won 1-0 with 30% possession, 8 shots and 1 on target; Le Masia had 70%, 0 shots and 0 on target.",
+        "Our 272 commands were PRESS178 (65%), MOVE75 (28%) and CLEAR19; team mean807ms, role means872/903/638/885/585ms. All roles reported 100% success.",
+        "Le Masia reported 45 commands, 16ms team mean; CLEAR37 (82%), PASS5 and PRESS3. Role means3/2/2/2/72ms; all roles reported 100% success.",
+        "MID3 scored at 1'. Though the opponent commentary mentioned patient possession/probing, they produced no shots in this match. One match does not establish that possession is a weakness or prove the cause of the result."
+      ]
     }
   ],
-  "leaderboardAfterGame1": {"rank": 10, "played": 185, "points": 345, "wins": 113, "draws": 6, "losses": 66, "goals": "252-148"},
-  "leaderboardAfterGame2": {"rank": 10, "played": 186, "points": 348, "wins": 114, "draws": 6, "losses": 66, "goals": "254-149"},
+  "leaderboardAfterGame1": {
+    "rank": 10,
+    "played": 185,
+    "points": 345,
+    "wins": 113,
+    "draws": 6,
+    "losses": 66,
+    "goals": "252-148"
+  },
+  "leaderboardAfterGame2": {
+    "rank": 10,
+    "played": 186,
+    "points": 348,
+    "wins": 114,
+    "draws": 6,
+    "losses": 66,
+    "goals": "254-149"
+  },
+  "leaderboardAfterGame3": {
+    "rank": 10,
+    "played": 187,
+    "points": 351,
+    "wins": 115,
+    "draws": 6,
+    "losses": 66,
+    "goals": "255-149"
+  },
   "note": "Collect five consecutive real ranked matches with the setup unchanged. Capture each official report and opponent profile, then analyze at 5/5. No benchmarks or practice games."
 }
