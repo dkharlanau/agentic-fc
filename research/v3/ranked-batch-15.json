@@ -2,7 +2,7 @@
   "id": "ranked-batch-15",
   "status": "in_progress",
   "targetCompletedGames": 5,
-  "completedGames": 1,
+  "completedGames": 2,
   "setup": "unchanged live baseline, FWD1v16, existing FWD2 fast path, formation 1-1-2",
   "preflight": {
     "portalState": "READY TO PLAY",
@@ -49,6 +49,31 @@
       "observations": [
         "Report lists FWD 4 goal at minute 1 and MID 3 twice at minute 2.",
         "High output despite 28% possession; one-match observation only."
+      ]
+    },
+    {
+      "opponent": "Invariant FC",
+      "result": "WIN",
+      "score": "3-1",
+      "possessionPct": 23,
+      "shots": "14-3",
+      "shotsOnTarget": "3-1",
+      "teamAverageLatencyMs": 647,
+      "teamCommands": 16,
+      "roleLatencyMs": [
+        655,
+        666,
+        665,
+        677,
+        654
+      ],
+      "successPct": "100% all roles",
+      "actions": {
+        "CLEAR": 16
+      },
+      "observations": [
+        "Report lists two MID 3 goals at minute 1, an opponent MID 3 goal at minute 2, and a third own MID 3 goal at minute 2.",
+        "Report consistency anomaly: team command breakdown totals 16 (all CLEAR), but awards list FWD5 with 52 commands; preserve both display values as observed."
       ]
     }
   ],
