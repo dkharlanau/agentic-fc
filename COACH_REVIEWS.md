@@ -739,3 +739,36 @@ rule out slow responses or timeouts, and neither timing nor action mix proves
 the defeats' causes. Target <=10ms is unmet. The complete sanitized series is
 `research/v3/ranked-batch-18.json`. No configuration change or L02 installation
 occurred.
+
+## 2026-10-25 — ranked batch19 complete, unchanged baseline
+
+Five further real ranked matches completed unchanged: FootballCore 1:0, ERTT
+1:0, Lighting Cloud 2:0, Points Donors 2:0, Tik&Taka 2:1 in sudden death.
+Batch record 5W/0D/0L, 8:1 goals, 15 points. Leaderboard moved from rank12,
+179 played, 327 points, 107W/6D/66L and goals243:147 to rank10, 184 played,
+342 points, 112W/6D/66L and goals251:148.
+
+Across reports, we had 33:22 shots, 8:1 on target and 41.6% mean possession
+(individual shares 36/53/36/46/37%). Four opponents had over 50% possession;
+we won each match. That describes this sample only. Opponents' reports all
+listed CLEAR most frequently: FootballCore21/22 (95%), ERTT27/30 (90%),
+Lighting Cloud17/19 (89%), Points Donors37/40 (93%), Tik&Taka41/51 (80%). Their
+team means were 17-20ms, with FWD5 76-80ms. This repeated label does not prove
+common intent or clear effectiveness; those teams' rank was outside the loaded
+top48 except Tik&Taka (#45 post-match, no pre-match row).
+
+Own match-summary latency was 2434, 1172, 1905, 456 and 1079ms (median1172,
+mean1409.2); four of five exceeded one second. All reports showed 100% role
+success, but this does not replace an invocation-level timeout audit. The <=10ms
+goal is unmet. FWD5 role latency was 2640/1021/804/454/1041ms; the team page
+separately displayed around53-55ms, so those surfaces are not directly
+interchangeable. No report identifies model, runtime, network, or queue as the
+source of delay. Batch18 also had one 1590ms loss and another 75ms loss, so
+timing alone does not explain outcomes.
+
+Action profiles varied without configuration changes: PRESS99/169/55/5/32 by
+game; Points Donors' match recorded INTERCEPT244 and SHOOT27 in a 2:0 win,
+while Tik&Taka's match recorded MOVE335 and needed sudden death. This suggests
+auditing the relation between actions, chances, and outcomes; it does not
+support a specific prompt or formation edit. Complete sanitized evidence:
+`research/v3/ranked-batch-19.json`.

@@ -1,11 +1,11 @@
 {
   "id": "ranked-batch-19",
-  "status": "in-progress-4of5",
+  "status": "complete-5of5-baseline",
   "targetCompletedGames": 5,
-  "completedGames": 4,
+  "completedGames": 5,
   "setup": "registered baseline, formation 1-1-2; GK/DEF/MID/FWD4 show global.amazon.nova-2-lite-v1:0; FWD5 remains existing fast path, model not verified",
   "preflight": {
-    "portalState": "four matches completed; check for active queue before continuing",
+    "portalState": "five matches completed; no active match visible after report and leaderboard review",
     "freshFitness": "not rerun; continuing same registered baseline",
     "formation": "1-1-2",
     "candidateInstalled": false
@@ -149,11 +149,65 @@
         "Both goals were attributed to MID3 at 1'. This report has lower own average latency than the prior three games in this cohort; no cause for the difference is established.",
         "Points Donors was not visible in the loaded top48 rows. Our post-match leaderboard showed rank10, 183 played, 339 points, 111W/6D/66L and goals249-147: +1 win, +3 points and +2 goals scored from game3."
       ]
+    },
+    {
+      "opponent": "Tik&Taka",
+      "result": "WIN",
+      "score": "2-1",
+      "possessionPct": "37-63",
+      "shots": "5-4",
+      "shotsOnTarget": "2-1",
+      "teamAverageLatencyMs": 1079,
+      "teamCommands": 405,
+      "roleLatencyMs": [685, 1017, 1148, 1042, 1041],
+      "successPct": "100% all roles",
+      "actions": {"MOVE": 335, "PRESS": 32, "CLEAR": 18, "SHOOT": 7, "PASS": 6, "MARK": 5, "GK_DIST": 2},
+      "goals": [
+        {"minute": "1'", "scorer": "Tik&Taka FWD (NAInggolan)"},
+        {"minute": "1'", "scorer": "No Human in the Loop MID 3"},
+        {"minute": "3'", "scorer": "No Human in the Loop FWD 4 (sudden death)"}
+      ],
+      "opponentReport": {
+        "teamAverageLatencyMs": 20,
+        "teamCommands": 51,
+        "roleLatencyMs": [4, 4, 3, 3, 76],
+        "successPct": "100% all roles",
+        "actions": {"CLEAR": 41, "PASS": 9, "PRESS": 1},
+        "leaderboardAfterMatch": {"rank": 45, "played": 93, "points": 86, "wins": 28, "draws": 2, "losses": 63, "goals": "80-170", "goalDifference": -90},
+        "leaderboardBeforeObserved": {"rank": 45, "played": 91, "points": 83, "wins": 27, "draws": 2, "losses": 62, "goals": "76-168", "goalDifference": -92},
+        "comparisonNote": "The observed post-match row was two games later than the pre-match snapshot. One added loss with +2 goals conceded matches this 2:1 defeat; the second game's result is not recorded, despite the full snapshot adding one win and three points."
+      },
+      "reportAiOverview": "The report remained at 'Generating summary'; no AI-generated explanation was used.",
+      "observations": [
+        "No Human in the Loop won 2-1 in sudden death with 37% possession, 5 shots and 2 on target; Tik&Taka had 63%, 4 shots and 1 on target.",
+        "Our 405 commands sum to MOVE335 (83%), PRESS32, CLEAR18, SHOOT7, PASS6, MARK5 and GK_DIST2. Team mean latency was 1079ms; role values 685/1017/1148/1042/1041ms. All roles reported 100% success.",
+        "Tik&Taka reported CLEAR41/51 (80%), PASS9 and PRESS1; team mean20ms and role means4/4/3/3/76ms. All roles reported 100% success.",
+        "Tik&Taka scored at 1'; MID3 equalized at 1'; FWD4 scored the sudden-death winner at 3'. This was the only draw-at-regulation/sudden-death finish in the cohort.",
+        "The post-match leaderboard showed Tik&Taka at rank45, 93 played, 86 points, 28W/2D/63L, goals80-170; no pre-match snapshot exists, so no delta is attributed. Our post-match row was rank10, 184 played, 342 points, 112W/6D/66L and goals251-148, +1 win/+3 points/+2 goals from game4."
+      ]
     }
   ],
   "leaderboardAfterGame1": {"rank": 12, "played": 180, "points": 330, "wins": 108, "draws": 6, "losses": 66, "goals": "244-147"},
   "leaderboardAfterGame2": {"rank": 10, "played": 181, "points": 333, "wins": 109, "draws": 6, "losses": 66, "goals": "245-147"},
   "leaderboardAfterGame3": {"rank": 10, "played": 182, "points": 336, "wins": 110, "draws": 6, "losses": 66, "goals": "247-147"},
   "leaderboardAfterGame4": {"rank": 10, "played": 183, "points": 339, "wins": 111, "draws": 6, "losses": 66, "goals": "249-147"},
-  "note": "Collect five consecutive real ranked matches with the setup unchanged. Capture each official report and opponent profile, then analyze at 5/5. No benchmarks or practice games."
+  "leaderboardAfterGame5": {"rank": 10, "played": 184, "points": 342, "wins": 112, "draws": 6, "losses": 66, "goals": "251-148"},
+  "seriesAnalysis": {
+    "record": "5W/0D/0L",
+    "goals": "8-1",
+    "points": 15,
+    "leaderboardDelta": {"rank": "12 to 10", "played": "179 to 184", "points": "327 to 342", "wins": "+5", "draws": "+0", "losses": "+0", "goals": "243-147 to 251-148"},
+    "dataCoverage": {
+      "possession": "available 5/5; our shares 36%, 53%, 36%, 46%, 37% (mean 41.6%)",
+      "shots": "available 5/5; our-opponent total 33-22",
+      "shotsOnTarget": "available 5/5; our-opponent total 8-1",
+      "latency": "all five team means present: 2434, 1172, 1905, 456, 1079ms; median1172, mean1409.2ms. Full per-call distribution and independent timeout audit unavailable.",
+      "success": "all five reports show 100% per-role success; report-level success is not an independent timeout audit"
+    },
+    "opponentPatterns": "All five opponents listed CLEAR as their most frequent action: FootballCore21/22 (95%), ERTT27/30 (90%), Lighting Cloud17/19 (89%), Points Donors37/40 (93%), Tik&Taka41/51 (80%). This is a repeated report pattern, not evidence of a shared tactic or successful clear outcomes. Opponent team means were 17-20ms; their reported FWD5 means were 76-80ms.",
+    "tacticalReview": "The unchanged team went 5W/0D/0L, scored 8 and conceded 1. It had 33:22 shots and 8:1 on target despite only 41.6% mean possession. Four games had opponent possession above 50%, and we won all four. This sample shows possession was not necessary for wins, but does not establish the effect of the setup. Reported PRESS counts by game were 99, 169, 55, 5 and 32; INTERCEPT reached 244 vs Points Donors; MOVE reached 335 vs Tik&Taka. Both MID3 goals against Lighting Cloud and Points Donors came at 2' or 1'; Tik&Taka match went to sudden death. These observations do not isolate causal strategy.",
+    "latencyReview": "Own report team means were 2434,1172,1905,456,1079ms; four of five exceeded 1s. Median was1172ms, mean1409.2ms. In the 456ms match we won 2-0 with 244 INTERCEPT and 27 SHOOT; high-latency matches included both wins and, in prior batch18, losses. This makes a causal latency conclusion premature. The <=10ms target is not met; investigate per-invocation timestamps, provider first-byte and timeouts rather than tuning from team averages. Match summaries do not identify whether delay came from model, runtime, network, or queue.",
+    "decision": "Batch19 is a clean unchanged-baseline 5/5 cohort with 15 points and promotion from rank12 to rank10. Retain the lineup for now. The most useful next controlled investigation is latency decomposition across the five reports and a mapping between report shots, SHOOT commands, and shot outcomes; do not assert the repeated opponent CLEAR pattern explains the wins."
+  },
+  "note": "Five consecutive real ranked matches were completed with the setup unchanged. No benchmarks, practice games, match IDs, credentials, ARNs, account IDs, or raw states are recorded."
 }

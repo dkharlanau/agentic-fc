@@ -759,3 +759,15 @@ target. Our 332-command report showed 456ms, led by INTERCEPT244 and SHOOT27;
 Points Donors had CLEAR37/40 (93%) and 17ms. Leaderboard #10, 183 played, 339
 points, 111W/6D/66L, goals249:147. Batch19 is 4/5. Keep setup unchanged through
 the final game; full report is in `research/v3/ranked-batch-19.json`.
+
+Batch19 is now complete 5/5 on unchanged baseline: FootballCore 1:0, ERTT 1:0,
+Lighting Cloud 2:0, Points Donors 2:0, Tik&Taka 2:1 sudden death. Series 5W,
+8:1 goals, +15 points. Final standings #10, 184 played, 342 points,
+112W/6D/66L, goals251:148; start #12/179/327/107W/6D/66L/243:147. Batch
+analytics and opponent reports are in `research/v3/ranked-batch-19.json` and
+`COACH_REVIEWS.md`. Own reported latency median1172ms, mean1409.2, range
+456-2434ms; four of five exceeded one second. Team CLEAR-heavy opponents were
+5/5 (80-95%). We had 33:22 shots, 8:1 on target, despite 41.6% mean possession.
+The <=10ms target remains unmet; no setup changed. Codex usage was read after
+batch19 and showed 24% used. Before any more games, check usage and save all results. No
+model/prompt/formation changes or L02 install; continue real matches only.
