@@ -1,9 +1,9 @@
 {
   "id": "ranked-batch-12",
   "coachVersion": "coach-v1.0",
-  "status": "ready",
+  "status": "running",
   "targetCompletedGames": 10,
-  "completedGames": 0,
+  "completedGames": 1,
   "createdAtUTC": "2026-10-25T07:02:19.911385+00:00",
   "setup": {
     "sourceCommit": "931af03",
@@ -33,13 +33,82 @@
     "reportedFitnessLatencyMs": 0,
     "latencyInterpretation": "Portal metric only; not proof of zero end-to-end latency"
   },
-  "games": [],
+  "games": [
+    {
+      "alias": "batch12-live-01",
+      "status": "complete",
+      "initiation": "manual random matchmaking",
+      "matchmakingObservedAtUTC": "2026-10-25T07:02:47.797479+00:00",
+      "opponent": "nevertheless",
+      "side": "HOME",
+      "matchReport": "https://agentic-football.aws.dev/matches/0bf8cbaf-15fd-4764-ba84-e9e8fa615b42/report",
+      "preparingObservedAtUTC": "2026-10-25T07:03:09.123316+00:00",
+      "liveObservedAtUTC": "2026-10-25T07:04:19.059513+00:00",
+      "result": "LOSS",
+      "scoreFor": 0,
+      "scoreAgainst": 1,
+      "completedAtObserved": "2026-10-25T07:07:40.565590+00:00",
+      "rawReportFacts": {
+        "possessionPct": 53,
+        "shotsFor": 1,
+        "shotsAgainst": 5,
+        "shotsOnTargetFor": 0,
+        "shotsOnTargetAgainst": 1,
+        "teamAverageLatencyMs": 1850,
+        "teamCommands": 57,
+        "opponentAverageLatencyMs": 20,
+        "opponentCommands": 7,
+        "agentLatencyMs": [
+          539,
+          6381,
+          881,
+          557,
+          751
+        ],
+        "opponentAgentLatencyMs": [
+          5,
+          4,
+          3,
+          3,
+          98
+        ],
+        "agentSuccessPct": [
+          100,
+          100,
+          100,
+          100,
+          100
+        ],
+        "opponentAgentSuccessPct": [
+          100,
+          100,
+          100,
+          100,
+          100
+        ],
+        "teamCommandCounts": {
+          "move": 21,
+          "press": 21,
+          "intercept": 8,
+          "follow": 5,
+          "shoot": 2
+        },
+        "opponentCommandCounts": {
+          "clear": 4,
+          "press": 2,
+          "pass": 1
+        }
+      }
+    }
+  ],
   "ownerDirective": "Ten real games per cohort; analyze only after all ten complete",
   "operations": {
     "remainingQuotaPercentAtStart": 99,
     "newMatchesAllowed": true,
     "activeMatch": false,
     "automaticShutdown": false,
-    "quotaGuardPercent": 5
-  }
+    "quotaGuardPercent": 5,
+    "remainingQuotaPercentLastCheck": 97
+  },
+  "ownerScope": "This branch plays real matches, collects data and observations, pushes GitHub checkpoints, and changes lineup/setup only on explicit request."
 }
