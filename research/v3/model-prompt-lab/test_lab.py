@@ -13,6 +13,7 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0,str(HERE))
 import lab
 import candidate_check
+import tactical_quality
 from fast_path_v2.engine import FastEngine
 
 
@@ -47,13 +48,20 @@ class EvidenceTests(unittest.TestCase):
             name=cases[request['case']]['expected'].get('types',['CLEAR_OVERRIDE'])[0]
             parameters={'PASS':{'target_player_id':2,'type':'GROUND'},
                         'SHOOT':{'aim_location':'TR','power':.8},'CLEAR_OVERRIDE':{}}[name]
+            if name=='PASS':
+                for receiver in (0,1,2,4):
+                    option={'commandType':'PASS','playerId':3,'parameters':{'target_player_id':receiver,'type':'GROUND'},'duration':0}
+                    if not tactical_quality.review(cases[request['case']]['input'],option,'fwd1',True)['issues']:
+                        parameters=option['parameters'];break
             receipts.append({'key':request['key'],'modelId':request['modelId'],
                              'requestSha256':request['requestSha256'],'requestWallMs':500,
                              'complete':True,'responseText':json.dumps([{'commandType':name,
                              'playerId':3,'parameters':parameters,'duration':0}])})
-        report=candidate_check.grade(receipts)
+        report=candidate_check.grade(receipts,1000,'synthetic unit test, not a real deadline')
         self.assertTrue(report['offlineGatePassed'])
         self.assertFalse(report['eligibleForRankedPromotion'])
+        self.assertFalse(candidate_check.grade(receipts)['offlineGatePassed'])
+        self.assertFalse(candidate_check.grade(receipts,400,'synthetic unit test')['offlineGatePassed'])
         for receipt in receipts:
             if ':P01:' in receipt['key']:
                 receipt['responseText']='[{"commandType":"CLEAR_OVERRIDE","playerId":3,"parameters":{},"duration":0}]'

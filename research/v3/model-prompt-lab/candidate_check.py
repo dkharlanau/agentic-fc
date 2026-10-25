@@ -10,6 +10,7 @@ import hashlib
 import json
 from pathlib import Path
 import lab
+from tactical_quality import review, latency_review
 
 HERE=Path(__file__).resolve().parent
 MODEL='global.amazon.nova-2-lite-v1:0'
@@ -42,7 +43,12 @@ def plan():
     return result
 
 
-def grade(receipts):
+def grade(receipts, deadline_ms=None, deadline_source=None):
+    if (deadline_ms is None)!=(deadline_source is None):
+        raise ValueError('Provide both verified deadline and its evidence source, or neither')
+    if deadline_source is not None and (not isinstance(deadline_source,str) or not deadline_source.strip()):
+        raise ValueError('Deadline evidence source must be nonempty')
+    latency_review([],deadline_ms)
     requests={r['key']:r for r in plan()}
     cases={c['id']:c for c in evaluation_cases()}
     seen=set();rows=[]
@@ -61,18 +67,22 @@ def grade(receipts):
         contract=lab.command_errors(output,'fwd1')
         contract_only=cases[request['case']].get('contractOnly',False)
         decision=None if contract_only else lab.decision_errors(cases[request['case']],lab.parse_command(output))
+        quality=review(cases[request['case']]['input'],lab.parse_command(output),'fwd1',synthetic_xy=not contract_only)
         rows.append({'case':request['case'],'variant':request['variant'],'repeat':request['repeat'],
                      'requestWallMs':elapsed,'complete':complete,'contractValid':not contract,
                      'decisionAgreement':None if decision is None else not decision,
                      'contractOnly':contract_only,
-                     'usable':None if contract_only else not contract and decision==[],
-                     'errors':contract+(decision or [])})
+                     'usable':None if contract_only else not contract and decision==[] and not quality['issues'],
+                     'tacticalChecks':quality['checks'],'tacticalIssues':quality['issues'],
+                     'errors':contract+(decision or [])+quality['issues']})
     summary={}
     for variant in ('baseline','P01'):
         subset=[r for r in rows if r['variant']==variant]
         summary[variant]={'n':len(subset),'valid':sum(r['contractValid'] for r in subset),
                           'labelledN':sum(not r['contractOnly'] for r in subset),
                           'usable':sum(r['usable'] is True for r in subset),
+                          'tacticalRiskCount':sum(bool(r['tacticalIssues']) for r in subset),
+                          'latency':latency_review(subset,deadline_ms),
                           'requestWallMs':lab.distribution([r['requestWallMs'] for r in subset]),
                           'usableWallMs':lab.distribution([r['requestWallMs'] for r in subset if r['usable']])}
     complete_set=len(seen)==len(requests)
@@ -87,12 +97,16 @@ def grade(receipts):
     # Conservative safety gate: every new-sample decision must satisfy its oracle.
     # Passing this still never promotes a candidate without native + Fitness.
     a,b=summary['baseline'],summary['P01']
-    gate=bool(complete_set and b['n']>0 and b['valid']==b['n'] and b['usable']==b['labelledN'] and
+    decision_gate=bool(complete_set and b['n']>0 and b['valid']==b['n'] and b['usable']==b['labelledN'] and b['tacticalRiskCount']==0 and
               b['requestWallMs']['p95']<=1.10*a['requestWallMs']['p95'] and
               all(r['contractOnly'] or r['candidateUsable']>=r['baselineUsable'] for r in comparison))
+    latency_gate=None if deadline_ms is None else bool(complete_set and b['latency']['lateOrIncomplete']==0)
+    gate=decision_gate and latency_gate is True
     return {'kind':'new paired P01 receipts, NOT an archived replay or simulator',
             'expectedReceipts':len(requests),'received':len(rows),'complete':complete_set,
             'summary':summary,'byCase':comparison,'rows':rows,'offlineGatePassed':gate,
+            'schemaDecisionRelativeLatencyGatePassed':decision_gate,
+            'absoluteLatencyGatePassed':latency_gate,'deadlineSource':deadline_source,
             'fitnessResult':None,'eligibleForRankedPromotion':False,
             'remaining':['Independent native/physical command checks','Fresh Fitness 5/5','Human-approved transfer at series boundary']}
 
@@ -107,6 +121,8 @@ if __name__=='__main__':
     ap.add_argument('--plan',type=Path)
     ap.add_argument('--receipts',type=Path)
     ap.add_argument('--output',type=Path)
+    ap.add_argument('--deadline-ms',type=float)
+    ap.add_argument('--deadline-source',help='Public evidence reference for this invocation path; never assume a tournament limit')
     args=ap.parse_args()
     if args.plan:
         private(args.plan);args.plan.parent.mkdir(parents=True,exist_ok=True)
@@ -114,7 +130,7 @@ if __name__=='__main__':
         print(json.dumps({'plannedRequests':len(plan()),'executed':0}))
     elif args.receipts and args.output:
         private(args.receipts)
-        report=grade(json.loads(args.receipts.read_text()))
+        report=grade(json.loads(args.receipts.read_text()),args.deadline_ms,args.deadline_source)
         args.output.parent.mkdir(parents=True,exist_ok=True)
         args.output.write_text(json.dumps(report,indent=2)+'\n')
         print(json.dumps({k:report[k] for k in ('received','complete','offlineGatePassed','eligibleForRankedPromotion')}))

@@ -1,5 +1,16 @@
 # Agentic FC continuation
 
+## Research criteria update — 2026-10-25
+
+Owner prioritizes latency AND role understanding, safe possession/passing,
+coordinated recovery and defensive/attacking structure for the whole team.
+See model-prompt-lab/QUALITY_TARGETS.ru.md. Added archived tactical-risk review:
+109 full answers,24 schema-valid,11 with heuristic risk; NOT live turnovers.
+P01 gate now checks receiver/lane/ownership/energy and requires a verified
+absolute deadline as well as relative p95. Unknown deadline cannot pass.
+18 lab tests pass. No new inference/AWS/matches/promotion. P01 remains the
+only proposed next prompt change; team criteria do not authorize a bundle.
+
 ## Research-only checkpoint — 2026-10-25 07:22 UTC
 
 Branch `codex/model-prompt-lab-20261025`, worktree `agentic-fc-research`.

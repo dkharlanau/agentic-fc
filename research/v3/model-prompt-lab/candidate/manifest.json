@@ -29,6 +29,7 @@
     "Same-input baseline/candidate FWD1 inference: 24 synthetic and 2 observed inputs, 3 repeats, interleaved, isolated allowed idle window",
     "100% strict command schema; zero illegal ownership actions; clear-shot and safe-pass positive controls retained",
     "Usable decisions no worse than baseline in any scenario family; full-command p95 <= 1.10 * baseline",
+    "No risky receiver/blocked pass lane in synthetic checks; no late/incomplete candidate responses under an independently verified deadline",
     "Exact candidate readback and native contract, then fresh Fitness 5/5 before any ranked promotion",
     "Human transfer to live chat; stable owner-sized cohort at a boundary, never change a running series"
   ],
