@@ -1,8 +1,8 @@
 {
   "id": "ranked-batch-17",
-  "status": "in-progress-1of5-baseline",
+  "status": "in-progress-2of5-baseline",
   "targetCompletedGames": 5,
-  "completedGames": 1,
+  "completedGames": 2,
   "setup": "unchanged registered baseline, formation 1-1-2; existing FWD5 fast path; no L02 candidate installed",
   "preflight": {
     "portalState": "READY TO PLAY before search; match completed",
@@ -29,7 +29,13 @@
       "shotsOnTarget": "2-0",
       "teamAverageLatencyMs": 786,
       "teamCommands": 370,
-      "roleLatencyMs": [607, 902, 602, 909, 636],
+      "roleLatencyMs": [
+        607,
+        902,
+        602,
+        909,
+        636
+      ],
       "successPct": "100% all roles",
       "actions": {
         "PRESS": 116,
@@ -42,15 +48,31 @@
         "GK_DIST": 9
       },
       "goals": [
-        {"minute": "1'", "scorer": "MID 3"},
-        {"minute": "2'", "scorer": "MID 3"}
+        {
+          "minute": "1'",
+          "scorer": "MID 3"
+        },
+        {
+          "minute": "2'",
+          "scorer": "MID 3"
+        }
       ],
       "opponentReport": {
         "teamAverageLatencyMs": 16,
         "teamCommands": 41,
-        "roleLatencyMs": [2, 2, 1, 1, 76],
+        "roleLatencyMs": [
+          2,
+          2,
+          1,
+          1,
+          76
+        ],
         "successPct": "100% all roles",
-        "actions": {"CLEAR": 37, "PASS": 3, "PRESS": 1},
+        "actions": {
+          "CLEAR": 37,
+          "PASS": 3,
+          "PRESS": 1
+        },
         "leaderboardAfterMatch": {
           "rank": 26,
           "played": 95,
@@ -70,6 +92,70 @@
         "Both goals were attributed to MID 3 in minutes 1 and 2. This is one match and does not prove a general tactical effect.",
         "Leaderboard after the match listed Le Masia rank 26, 95 played, 159 points, 52W/3D/40L, goals108-102. Our row moved from rank13, 169 played, 305 points to rank13, 170 played, 308 points, 101W/5D/64L, goals233-143; the one-match delta agrees with the win."
       ]
+    },
+    {
+      "opponent": "Amber Arcs 2",
+      "result": "WIN",
+      "score": "1-0",
+      "possessionPct": "41-59",
+      "shots": "2-7",
+      "shotsOnTarget": "1-0",
+      "teamAverageLatencyMs": 1,
+      "teamCommands": 13,
+      "roleLatencyMs": [
+        2,
+        2,
+        2,
+        1,
+        1
+      ],
+      "successPct": "100% all roles",
+      "actions": {
+        "CLEAR": 13
+      },
+      "goals": [
+        {
+          "minute": "2'",
+          "scorer": "DEF 2"
+        }
+      ],
+      "opponentReport": {
+        "teamAverageLatencyMs": 16,
+        "teamCommands": 50,
+        "roleLatencyMs": [
+          4,
+          3,
+          3,
+          3,
+          71
+        ],
+        "successPct": "100% all roles",
+        "actions": {
+          "CLEAR": 36,
+          "PASS": 10,
+          "PRESS": 3,
+          "INTERCEPT": 1
+        },
+        "leaderboardAfterMatch": {
+          "rank": 36,
+          "played": 66,
+          "points": 114,
+          "wins": 38,
+          "draws": 0,
+          "losses": 28,
+          "goals": "90-65",
+          "goalDifference": 25
+        },
+        "comparisonWithPreviousObservedSnapshot": "Previous saved row: rank37, 63 played, 108 points, 36W/0D/27L, 85-61. Current row is three matches and six points later; this game accounts for one Amber Arcs 2 loss, while two intervening match results are not available."
+      },
+      "reportAiOverview": "Generated report says Amber Arcs 2 had 59% possession and 7 shots but no shots on target; it attributes the goal to exploiting an early setup imbalance and recommends less CLEAR_OVERRIDE. These are generated explanations, not verified event evidence.",
+      "dataQuality": "Our-side report is internally inconsistent: command breakdown is 13 CLEAR-only commands but FWD5 award says 36 commands. Its 1ms team mean and role means 1-2ms differ sharply from prior unchanged-baseline reports. Preserve displayed values but exclude own command/latency values from comparisons.",
+      "observations": [
+        "Amber Arcs 2 recorded 36/50 CLEAR (72%), 10 PASS (20%), 3 PRESS (6%), and 1 INTERCEPT (2%). This resembles its prior observed report of 36/52 CLEAR (69%), but only two observations and no action success/context are available.",
+        "Amber Arcs 2 had 59% possession and 7 shots but 0 on target; No Human in the Loop had 41%, 2 shots, 1 on target, and won 1-0. Possession and shot volume alone did not determine the result.",
+        "Amber Arcs 2 current leaderboard row: rank36, 66 played, 114 points, 38W/0D/28L, goals90-65. The row is three matches beyond the last saved observation; do not assign its full delta to this match.",
+        "The report says all agents were 100% successful. Formation, pass completion, locations, and event-level defensive sequence remain unavailable."
+      ]
     }
   ],
   "leaderboardAfterGame1": {
@@ -82,5 +168,14 @@
     "goals": "233-143"
   },
   "seriesAnalysis": null,
-  "note": "One completed game of the five-game baseline cohort. Do not infer strategy quality or modify setup before the cohort boundary."
+  "note": "Two completed games of the five-game baseline cohort. No setup changes or cohort-level analysis before five games; preserve report inconsistencies.",
+  "leaderboardAfterGame2": {
+    "rank": 13,
+    "played": 171,
+    "points": 311,
+    "wins": 102,
+    "draws": 5,
+    "losses": 64,
+    "goals": "234-143"
+  }
 }

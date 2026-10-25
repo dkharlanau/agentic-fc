@@ -10,12 +10,14 @@ baseline remains unchanged. Do not repeat this identical archive blindly.
 Research evidence is in the adjacent research repository at
 `research/v3/model-prompt-lab/results/mid-l02-native-screen-20261025.json`.
 
-Batch16 baseline was complete 4W/0D/1L, 11:3. Batch17 has started on the
-unchanged baseline. Game1: Le Masia 0:2 win; own-opponent stats 30:70
-possession, 7:3 shots, 2:0 on target; 786ms vs 16ms team means. Le Masia used
-CLEAR on 37/41 reported commands (90%). Both goals were attributed to MID3 at
-1' and 2'. The report's AI-generated tactical explanation is not a verified
-event trace. Table after the game: rank13, 170 played, 308 points. See
+Batch16 baseline was complete 4W/0D/1L, 11:3. Batch17 is underway, unchanged
+baseline, 2/5 complete: Le Masia 0:2 and Amber Arcs 2 0:1. In both games the
+opponent had most possession (70%, 59%) but fewer on-target shots (0, 0); we
+scored twice in the first and once from 2 shots in the second. Le Masia used
+CLEAR on 37/41 commands (90%); Amber used it on 36/50 (72%), similar to its
+prior observed 36/52 (69%). Amber's own-side latency/command fields conflict
+with its FWD5 award and prior reports; exclude them from comparison. Table is
+rank13, 171 played, 311 points. Detailed rows/caveats:
 `research/v3/ranked-batch-17.json`. The portal was checked idle and READY TO PLAY,
 formation 1-1-2. Continue real ranked matches on this unchanged approved lineup,
 recording each opponent's report/profile and caveats. Finish each five-game
