@@ -1,5 +1,17 @@
 # Agentic FC continuation
 
+## Current checkpoint — 2026-10-25T07:02:19.911385+00:00
+
+Quota freshly rechecked: 1% used / 99% remaining. Historical 5% stop below is superseded by changed quota and owner continuation. Latest owner cohort size is TEN real games, overriding older five-game notes. No shutdown or VPN change.
+
+Batch11 complete: 9W/0D/1L, 18:4; leaderboard 134P/78W/4D/52L, 180:116, 238points, rank17. Exact account delta matches these ten games. Analysis and timestamp-quality correction in research/v3/ranked-batch-11-analysis.ru.md. Legacy completion times were unreliable; Git record times are separately labelled.
+
+Batch12 READY, 0/10. Portal freshly READY TO PLAY, Fitness5/5 PASS; four original M8 Nova2Lite plus fastFWD2 stance/rev9/source931af03, formation112. Unchanged setup. Do not change bindings/models/prompts/formation or probe while a match runs. Check quota between games; stop new starts at <=5%.
+
+Separate research worktree ../agentic-fc-research, branch codex/model-prompt-lab-20261025. It must not mutate AWS/live configuration or launch matches. Research found teamwide report latency includes model-free FWD2; exact layer cause unknown. Next diagnostic is exact-session read-only timestamp correlation while idle.
+
+Current IAB portal tab7 MY TEAM; workshop16, CloudShell17.
+
 ## FINAL QUOTA CHECKPOINT — 2026-10-24T21:44:47.767478+00:00
 
 Owner quota guard reached:5% remaining. DO NOT start matches or experiments.

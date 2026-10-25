@@ -58,7 +58,12 @@
           75
         ]
       },
-      "completedAtObserved": "2026-10-25T06:14:00Z"
+      "legacyUnverifiedCompletedAt": "2026-10-25T06:14:00Z",
+      "completedAtObserved": null,
+      "completionRecordedInGit": {
+        "commit": "f69ea9bc05bab33083acf0f3d3bb74cbc7ef7eca",
+        "committedAtUTC": "2026-10-25T06:10:41+00:00"
+      }
     },
     {
       "alias": "stance-live-02",
@@ -95,7 +100,12 @@
           75
         ]
       },
-      "completedAtObserved": "2026-10-25T06:21:00Z"
+      "legacyUnverifiedCompletedAt": "2026-10-25T06:21:00Z",
+      "completedAtObserved": null,
+      "completionRecordedInGit": {
+        "commit": "e544b79e5349d3fe4ebeeaf9f78ecf29d03e2d22",
+        "committedAtUTC": "2026-10-25T06:15:08+00:00"
+      }
     },
     {
       "alias": "stance-live-03",
@@ -132,7 +142,12 @@
           86
         ]
       },
-      "completedAtObserved": "2026-10-25T06:29:00Z"
+      "legacyUnverifiedCompletedAt": "2026-10-25T06:29:00Z",
+      "completedAtObserved": null,
+      "completionRecordedInGit": {
+        "commit": "b22e9bcc48b73fee7c1f52d8bd11dd2b59850a31",
+        "committedAtUTC": "2026-10-25T06:20:04+00:00"
+      }
     },
     {
       "alias": "stance-live-04",
@@ -185,7 +200,12 @@
           "Amber Horns 2 are pressing hard — the agents are swarming the ball!"
         ]
       },
-      "completedAtObserved": "2026-10-25T06:40:00Z"
+      "legacyUnverifiedCompletedAt": "2026-10-25T06:40:00Z",
+      "completedAtObserved": null,
+      "completionRecordedInGit": {
+        "commit": "e7d24614cf715940a916bcbf11fc769a6a42194a",
+        "committedAtUTC": "2026-10-25T06:25:33+00:00"
+      }
     },
     {
       "alias": "stance-live-05",
@@ -235,7 +255,12 @@
           "pass": 12
         }
       },
-      "completedAtObserved": "2026-10-25T07:03:00Z"
+      "legacyUnverifiedCompletedAt": "2026-10-25T07:03:00Z",
+      "completedAtObserved": null,
+      "completionRecordedInGit": {
+        "commit": "2e97bb57a5a111d72a7d0b5181752c1ed4aa2d8c",
+        "committedAtUTC": "2026-10-25T06:29:51+00:00"
+      }
     },
     {
       "alias": "stance-live-06",
@@ -289,7 +314,12 @@
           "(〃￣︶￣)人(￣︶￣〃) keep possession, probing for a gap."
         ]
       },
-      "completedAtObserved": "2026-10-25T07:19:00Z"
+      "legacyUnverifiedCompletedAt": "2026-10-25T07:19:00Z",
+      "completedAtObserved": null,
+      "completionRecordedInGit": {
+        "commit": "bd9aef0cbec9eb8b8fa26515f403771e1adeb1b1",
+        "committedAtUTC": "2026-10-25T06:34:45+00:00"
+      }
     },
     {
       "alias": "stance-live-07",
@@ -342,7 +372,12 @@
           "FootballCore keep possession, probing for a gap."
         ]
       },
-      "completedAtObserved": "2026-10-25T07:39:00Z"
+      "legacyUnverifiedCompletedAt": "2026-10-25T07:39:00Z",
+      "completedAtObserved": null,
+      "completionRecordedInGit": {
+        "commit": "0e7133c7fbf5eaeecb90eaa8c67dea3803035ca9",
+        "committedAtUTC": "2026-10-25T06:39:29+00:00"
+      }
     },
     {
       "alias": "stance-live-08",
@@ -391,7 +426,12 @@
           "intercept": 3
         }
       },
-      "completedAtObserved": "2026-10-25T08:09:00Z"
+      "legacyUnverifiedCompletedAt": "2026-10-25T08:09:00Z",
+      "completedAtObserved": null,
+      "completionRecordedInGit": {
+        "commit": "3894a6c5999925c2409bbab6ca2a0dd1f39b1ef0",
+        "committedAtUTC": "2026-10-25T06:44:15+00:00"
+      }
     },
     {
       "alias": "stance-live-09",
@@ -442,7 +482,12 @@
           "MID 3 No Human in the Loop (2)"
         ]
       },
-      "completedAtObserved": "2026-10-25T08:34:00Z"
+      "legacyUnverifiedCompletedAt": "2026-10-25T08:34:00Z",
+      "completedAtObserved": null,
+      "completionRecordedInGit": {
+        "commit": "eb1a3e6a43de330d1034bef15b3b132ce246366c",
+        "committedAtUTC": "2026-10-25T06:49:15+00:00"
+      }
     },
     {
       "alias": "stance-live-10",
@@ -497,7 +542,12 @@
           "MID 3 No Human in the Loop (2)"
         ]
       },
-      "completedAtObserved": "2026-10-25T09:04:00Z"
+      "legacyUnverifiedCompletedAt": "2026-10-25T09:04:00Z",
+      "completedAtObserved": null,
+      "completionRecordedInGit": {
+        "commit": "136eccea04ea2fdcf4ed52d2fa697b3d0cbff082",
+        "committedAtUTC": "2026-10-25T06:54:55+00:00"
+      }
     }
   ],
   "incomingGamesObservedBeforeSeries": {
@@ -520,5 +570,30 @@
     "noNewAutomations": true
   },
   "analysis": "research/v3/ranked-batch-11-analysis.ru.md",
-  "completedGames": 10
+  "completedGames": 10,
+  "afterLeaderboard": {
+    "observedAtUTC": "2026-10-25T07:01:02.164864+00:00",
+    "rank": 17,
+    "points": 238,
+    "played": 134,
+    "wins": 78,
+    "draws": 4,
+    "losses": 52,
+    "goalsFor": 180,
+    "goalsAgainst": 116
+  },
+  "reconciliation": {
+    "playedDelta": 10,
+    "pointsDelta": 27,
+    "winsDelta": 9,
+    "drawsDelta": 0,
+    "lossesDelta": 1,
+    "goalsForDelta": 18,
+    "goalsAgainstDelta": 4,
+    "matchesCohortExactly": true
+  },
+  "timestampAudit": {
+    "checkedAtUTC": "2026-10-25T07:02:19.911385+00:00",
+    "finding": "Legacy completion timestamps conflict with earlier Git completion records, including values after current UTC. Exact completion times unknown; original strings retained as unverified. Git commit times prove recording time only, not match end time."
+  }
 }

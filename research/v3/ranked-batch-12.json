@@ -1,0 +1,45 @@
+{
+  "id": "ranked-batch-12",
+  "coachVersion": "coach-v1.0",
+  "status": "ready",
+  "targetCompletedGames": 10,
+  "completedGames": 0,
+  "createdAtUTC": "2026-10-25T07:02:19.911385+00:00",
+  "setup": {
+    "sourceCommit": "931af03",
+    "revision": 9,
+    "fwd2Mode": "stance",
+    "otherRoles": "original M8 GK13 DEF19 MID15 FWD1v16",
+    "formation": "1-1-2"
+  },
+  "setupSnapshot": "research/v3/cohort-setup-20261025.json",
+  "beforeLeaderboard": {
+    "observedAtUTC": "2026-10-25T07:01:02.164864+00:00",
+    "rank": 17,
+    "points": 238,
+    "played": 134,
+    "wins": 78,
+    "draws": 4,
+    "losses": 52,
+    "goalsFor": 180,
+    "goalsAgainst": 116
+  },
+  "preflight": {
+    "observedAtUTC": "2026-10-25T07:02:19.911385+00:00",
+    "portalState": "READY TO PLAY",
+    "fitness": "5/5 PASS",
+    "formation": "1-1-2",
+    "modelsObserved": "Nova 2 Lite on four Harness roles; code Runtime FWD2",
+    "reportedFitnessLatencyMs": 0,
+    "latencyInterpretation": "Portal metric only; not proof of zero end-to-end latency"
+  },
+  "games": [],
+  "ownerDirective": "Ten real games per cohort; analyze only after all ten complete",
+  "operations": {
+    "remainingQuotaPercentAtStart": 99,
+    "newMatchesAllowed": true,
+    "activeMatch": false,
+    "automaticShutdown": false,
+    "quotaGuardPercent": 5
+  }
+}
