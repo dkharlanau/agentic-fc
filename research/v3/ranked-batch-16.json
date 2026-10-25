@@ -2,10 +2,56 @@
   "id": "ranked-batch-16",
   "status": "in_progress",
   "targetCompletedGames": 5,
-  "completedGames": 0,
+  "completedGames": 1,
   "setup": "unchanged live baseline, FWD1v16, existing FWD2 fast path, formation 1-1-2",
-  "preflight": {"portalState": "READY TO PLAY", "freshFitness": "5/5 PASS", "p01Installed": false},
-  "beforeLeaderboard": {"rank": 15, "played": 161, "points": 286, "wins": 94, "draws": 4, "losses": 63, "goals": "216-139"},
-  "games": [],
-  "limitations": ["Series incomplete; no conclusions until five games finish.", "HOME/random matchmaking; setup remains unchanged."]
+  "preflight": {
+    "portalState": "READY TO PLAY",
+    "freshFitness": "5/5 PASS",
+    "p01Installed": false
+  },
+  "beforeLeaderboard": {
+    "rank": 15,
+    "played": 161,
+    "points": 286,
+    "wins": 94,
+    "draws": 4,
+    "losses": 63,
+    "goals": "216-139"
+  },
+  "games": [
+    {
+      "opponent": "Gork ’n’ Mork Boyz",
+      "result": "WIN",
+      "score": "2-0",
+      "possessionPct": 34,
+      "shots": "7-0",
+      "shotsOnTarget": "2-0",
+      "teamAverageLatencyMs": 69,
+      "teamCommands": 333,
+      "roleLatencyMs": [
+        74,
+        77,
+        74,
+        71,
+        79
+      ],
+      "successPct": "100% all roles",
+      "actions": {
+        "INTERCEPT": 188,
+        "MOVE": 61,
+        "PRESS": 60,
+        "CLEAR": 20,
+        "GK_DIST": 4
+      },
+      "observations": [
+        "Two goals at 1’ and 2’; report attributes first to MID 3 and second to Unknown.",
+        "34% possession but 7-0 shots and 2-0 shots on target; opponent had 66% possession and zero shots.",
+        "Report coach note recommends adding SHOOT commands; our command breakdown records zero SHOOT despite two goals, so treat this as a mismatch between advice and observed commands."
+      ]
+    }
+  ],
+  "limitations": [
+    "Series incomplete; no conclusions until five games finish.",
+    "HOME/random matchmaking; setup remains unchanged."
+  ]
 }
