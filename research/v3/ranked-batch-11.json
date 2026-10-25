@@ -392,6 +392,14 @@
         }
       },
       "completedAtObserved": "2026-10-25T08:09:00Z"
+    },
+    {
+      "alias": "stance-live-09",
+      "opponent": "Neman Grodno",
+      "side": "HOME",
+      "status": "running",
+      "initiation": "manual random matchmaking",
+      "matchReport": "https://agentic-football.aws.dev/matches/3495aa57-d26a-4aee-ad54-2d4c46a9cec0/report"
     }
   ],
   "incomingGamesObservedBeforeSeries": {
