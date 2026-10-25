@@ -1,11 +1,11 @@
 {
   "id": "ranked-batch-19",
-  "status": "in-progress-0of5",
+  "status": "in-progress-1of5",
   "targetCompletedGames": 5,
-  "completedGames": 0,
+  "completedGames": 1,
   "setup": "registered baseline, formation 1-1-2; GK/DEF/MID/FWD4 show global.amazon.nova-2-lite-v1:0; FWD5 remains existing fast path, model not verified",
   "preflight": {
-    "portalState": "READY TO PLAY; no active match",
+    "portalState": "one match completed; check for active queue before continuing",
     "freshFitness": "not rerun; continuing same registered baseline",
     "formation": "1-1-2",
     "candidateInstalled": false
@@ -19,6 +19,39 @@
     "losses": 66,
     "goals": "243-147"
   },
-  "games": [],
+  "games": [
+    {
+      "opponent": "FootballCore",
+      "result": "WIN",
+      "score": "1-0",
+      "possessionPct": "36-64",
+      "shots": "10-2",
+      "shotsOnTarget": "1-0",
+      "teamAverageLatencyMs": 2434,
+      "teamCommands": 210,
+      "roleLatencyMs": [2888, 1050, 3342, 3028, 2640],
+      "successPct": "100% all roles",
+      "actions": {"PRESS": 99, "MOVE": 72, "INTERCEPT": 17, "CLEAR": 14, "MARK": 8},
+      "goals": [{"minute": "3'", "scorer": "MID 3"}],
+      "opponentReport": {
+        "teamAverageLatencyMs": 18,
+        "teamCommands": 22,
+        "roleLatencyMs": [4, 4, 4, 3, 78],
+        "successPct": "100% all roles",
+        "actions": {"CLEAR": 21, "PRESS": 1},
+        "leaderboardAfterMatch": null,
+        "leaderboardRank": "not visible in loaded top 48 rows"
+      },
+      "reportAiOverview": "The report remained at 'Generating summary'; no AI-generated explanation was used.",
+      "observations": [
+        "No Human in the Loop won 1-0 with 36% possession, 10 shots and 1 on target; FootballCore had 64%, 2 shots and 0 on target.",
+        "Our report lists 210 commands: PRESS99, MOVE72, INTERCEPT17, CLEAR14, MARK8. Team mean latency was 2434ms; role values 2888/1050/3342/3028/2640ms. All roles reported 100% success.",
+        "FootballCore logged CLEAR 21/22 (95%), PRESS1, with team mean18ms and role means4/4/4/3/78ms. All roles reported 100% success.",
+        "The result is a win despite the largest report latency observed so far in this new cohort. The report provides no independent call/timeout audit, so the delay cause is unknown.",
+        "FootballCore was not visible in the loaded top48 standings rows; its rank and post-match record remain unknown. Our leaderboard moved from rank12/179 played/327 points to rank12/180/330, with +1 win and goals243-147 to244-147."
+      ]
+    }
+  ],
+  "leaderboardAfterGame1": {"rank": 12, "played": 180, "points": 330, "wins": 108, "draws": 6, "losses": 66, "goals": "244-147"},
   "note": "Collect five consecutive real ranked matches with the setup unchanged. Capture each official report and opponent profile, then analyze at 5/5. No benchmarks or practice games."
 }

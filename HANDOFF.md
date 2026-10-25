@@ -732,3 +732,10 @@ pre-table rank12, 179 played, 327 points, 107W/6D/66L, goals243:147. Codex
 usage last read 24% used. No active game at this checkpoint. Continue one game
 at a time, capture reports/opponent details, and analyze only after 5/5. No
 practice, benchmarks, candidate install, or configuration changes.
+
+Batch19 game1 is complete: FootballCore 0:1 loss, report latency 2434ms, 36%
+possession, 10:2 shots and 1:0 on target. FootballCore logged 21/22 CLEAR
+(95%) and 18ms average. Our post-game row is #12, 180 played, 330 points,
+108W/6D/66L, goals244:147. These details are recorded in
+`research/v3/ranked-batch-19.json`; the 2.4s team latency is unexplained, not
+yet attributed to model, service, or network. Continue batch unchanged.
