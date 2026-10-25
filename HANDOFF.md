@@ -771,20 +771,28 @@ analytics and opponent reports are in `research/v3/ranked-batch-19.json` and
 The <=10ms target remains unmet; no setup changed. Codex usage was read after
 batch19 and showed 24% used. No model/prompt/formation changes or L02 install.
 
-Batch20 is active (unchanged baseline, formation 1-1-2). Games 1-3 complete:
-Tajfun Komary 1-0 win; Amber Geysers 2 2-1 win after sudden death; Le Masia
-1-0 win. Current row is rank #10, 187 played, 351 points, 115W/6D/66L,
-goals255:149. Reports are in `research/v3/ranked-batch-20.json`. Tajfun was
-outside the visible top 48; Amber Geysers 2 rank unknown. Le Masia was observed
-at #25, 105 games/169 points before and #25, 107/170 afterward; two concurrent
-games were added, so only a tentative row delta is attributable to our match.
-Tajfun's report is internally inconsistent: zero team commands but 15941ms
-team mean and 11-19s role latencies (success100%); cause unknown. Amber Geysers
-2: 76 commands, CLEAR61 (80%), PASS10, 15ms mean; commentary described hard
-pressing, swarming, possession and probing. Le Masia: 45 commands, CLEAR37
-(82%), PASS5, 16ms mean; commentary described patient build, possession,
-probing and pressure. They had 70% possession but 0 shots while we had 8 shots
-and won 1-0. These are single-match observations, not stable tactical facts.
-Our latency varied sharply (15941, 847, 807ms); <=10ms remains unmet. No setup
-changes. Continue two real ranked matches one at a time, analyze at 5/5, no
-benchmarks/practice, check quota before another cohort.
+Batch20 complete 5/5 on the unchanged baseline and 1-1-2: Tajfun Komary 1-0,
+Amber Geysers 2 2-1 after sudden death, Le Masia 1-0, Mobile United FC 1-0
+after sudden death, Feyenoord 1-2. Record 4W/0D/1L, 6:3 goals, +12 points.
+Leaderboard moved #10/184/342 points/112W/6D/66L/goals251:148 to #9/189/354/
+116W/6D/67L/goals257:151. Full sanitized match and opponent records, snapshots,
+limitations and cohort analysis are in `research/v3/ranked-batch-20.json` and
+`COACH_REVIEWS.md`.
+
+Opponents' CLEAR action was the largest category in all five reports: pooled
+215/250 commands (86%). Live commentary called several teams high-press or
+patient buildup, though reported PRESS actions were typically 0-3; commentary
+is not ground truth about policy. Le Masia's observed row was #25 before/after
+adjacent snapshots; Mobile United FC #47 before and after our match; Feyenoord
+#4 before and after with row movement consistent with its win. Tajfun and Amber
+Geysers 2 were not in the loaded top48. These are timestamp-near snapshots with
+possible concurrent match movement.
+
+Own reported mean latencies were 15941/847/807/668/82ms (median807, mean3669);
+all exceeded the <=10ms target, four of five were below 1s. Tajfun's report is
+inconsistent (zero team commands but 15941ms mean and 11-19s roles), cause
+unknown. Feyenoord was 82ms overall; Mobile United FC split GK/DEF 2ms and
+MID/FWD ~1s. Opponent means were 15-25ms (median17). All report success values
+were 100%; no independent timeout audit was available. Codex allowance last
+checked after game3 at 24% used; check again before another cohort. No setup
+changes were made; do not infer tactical causality from this five-game sample.

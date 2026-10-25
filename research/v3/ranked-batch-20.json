@@ -1,8 +1,8 @@
 {
   "id": "ranked-batch-20",
-  "status": "in-progress-3of5",
+  "status": "complete-5of5-baseline",
   "targetCompletedGames": 5,
-  "completedGames": 3,
+  "completedGames": 5,
   "setup": "registered baseline, formation 1-1-2; GK/DEF/MID/FWD4 show global.amazon.nova-2-lite-v1:0; FWD5 remains existing fast path, model not verified",
   "preflight": {
     "portalState": "READY TO PLAY; no active match",
@@ -127,7 +127,7 @@
           "INTERCEPT": 2
         },
         "leaderboardAfterMatch": null,
-        "leaderboardRank": "not yet checked"
+        "leaderboardRank": "not present in loaded top 48 rows; rank unknown"
       },
       "reportAiOverview": "The report remained at 'Generating summary'; no AI-generated explanation was used.",
       "liveCommentaryObservations": [
@@ -216,6 +216,178 @@
         "Le Masia reported 45 commands, 16ms team mean; CLEAR37 (82%), PASS5 and PRESS3. Role means3/2/2/2/72ms; all roles reported 100% success.",
         "MID3 scored at 1'. Though the opponent commentary mentioned patient possession/probing, they produced no shots in this match. One match does not establish that possession is a weakness or prove the cause of the result."
       ]
+    },
+    {
+      "opponent": "Mobile United FC",
+      "result": "WIN",
+      "score": "1-0",
+      "finish": "sudden death",
+      "possessionPct": "44-56",
+      "shots": "11-4",
+      "shotsOnTarget": "1-0",
+      "teamAverageLatencyMs": 668,
+      "teamCommands": 374,
+      "roleLatencyMs": [
+        2,
+        2,
+        1050,
+        1036,
+        1007
+      ],
+      "successPct": "100% all roles",
+      "actions": {
+        "PRESS": 227,
+        "INTERCEPT": 111,
+        "CLEAR": 22,
+        "MOVE": 13,
+        "SHOOT": 1
+      },
+      "goals": [
+        {
+          "minute": "4'",
+          "scorer": "FWD 4 (sudden death)"
+        }
+      ],
+      "opponentReport": {
+        "teamAverageLatencyMs": 17,
+        "teamCommands": 76,
+        "roleLatencyMs": [
+          5,
+          4,
+          3,
+          3,
+          76
+        ],
+        "successPct": "100% all roles",
+        "actions": {
+          "CLEAR": 69,
+          "PASS": 6,
+          "INTERCEPT": 1
+        },
+        "leaderboardAfterMatch": {
+          "rank": 47,
+          "played": 59,
+          "wins": 26,
+          "draws": 3,
+          "losses": 30,
+          "goals": "55-64",
+          "goalDifference": -9,
+          "points": 81
+        }
+      },
+      "reportAiOverview": "The report remained at 'Generating summary'; no AI-generated explanation was used.",
+      "liveCommentaryObservations": [
+        "Commentary described Mobile United FC as cranking up the press and hunting the ball. The broadcast also described our agents as changing plan twice; no coach instructions were entered by us."
+      ],
+      "observations": [
+        "Won 1-0 in sudden death; 44% possession, 11 shots and 1 on target versus Mobile United FC's 56%, 4 shots and 0 on target.",
+        "Our report lists 374 commands: PRESS227 (61%), INTERCEPT111 (30%), CLEAR22 (6%), MOVE13, SHOOT1; team mean668ms. Role means were GK2/DEF2/MID1050/FWD1036/FWD1007ms; all roles reported 100% success.",
+        "Mobile United FC reported 76 commands, CLEAR69 (91%), PASS6, INTERCEPT1; team mean17ms and role means5/4/3/3/76ms. All roles reported 100% success.",
+        "FWD4 scored at 4' in sudden death. No shots-on-target were recorded for the opponent. The report shows sharply different latency by our roles; no cause is established."
+      ],
+      "opponentLeaderboardBeforeObserved": {
+        "rank": 47,
+        "played": 58,
+        "wins": 26,
+        "draws": 3,
+        "losses": 29,
+        "goals": "55-63",
+        "goalDifference": -8,
+        "points": 81
+      }
+    },
+    {
+      "opponent": "Feyenoord",
+      "opponentLeaderboardBeforeObserved": {
+        "rank": 4,
+        "played": 341,
+        "wins": 206,
+        "draws": 13,
+        "losses": 122,
+        "goals": "478-350",
+        "goalDifference": 128,
+        "points": 631
+      },
+      "result": "LOSS",
+      "score": "1-2",
+      "finish": "full time",
+      "homeAway": "AWAY",
+      "possessionPct": "47-53",
+      "shots": "8-4",
+      "shotsOnTarget": "1-2",
+      "teamAverageLatencyMs": 82,
+      "teamCommands": 395,
+      "roleLatencyMs": [
+        84,
+        81,
+        82,
+        82,
+        81
+      ],
+      "successPct": "100% all roles",
+      "actions": {
+        "MOVE": 312,
+        "INTERCEPT": 32,
+        "CLEAR": 16,
+        "MARK": 15,
+        "PASS": 12,
+        "PRESS": 4,
+        "GK_DIST": 3,
+        "SHOOT": 1
+      },
+      "goals": [
+        {
+          "minute": "1'",
+          "scorer": "Feyenoord MID Zechiel"
+        },
+        {
+          "minute": "1'",
+          "scorer": "No Human in the Loop Unknown"
+        },
+        {
+          "minute": "2'",
+          "scorer": "Feyenoord MID Zechiel"
+        }
+      ],
+      "opponentReport": {
+        "teamAverageLatencyMs": 17,
+        "teamCommands": 51,
+        "roleLatencyMs": [
+          2,
+          2,
+          1,
+          1,
+          80
+        ],
+        "successPct": "100% all roles",
+        "actions": {
+          "CLEAR": 46,
+          "INTERCEPT": 2,
+          "PRESS": 2,
+          "PASS": 1
+        },
+        "leaderboardAfterMatch": {
+          "rank": 4,
+          "played": 342,
+          "wins": 207,
+          "draws": 13,
+          "losses": 122,
+          "goals": "480-351",
+          "goalDifference": 129,
+          "points": 634
+        }
+      },
+      "reportAiOverview": "The report remained at 'Generating summary'; no AI-generated explanation was used.",
+      "liveCommentaryObservations": [
+        "Feyenoord's commentary described patient buildup, waiting for an opening, and probing for a gap."
+      ],
+      "observations": [
+        "Lost 1-2 as the away side; our team had 47% possession, 8 shots and 1 on target versus Feyenoord at 53%, 4 shots and 2 on target.",
+        "Our report lists 395 commands: MOVE312 (79%), INTERCEPT32, CLEAR16, MARK15, PASS12, PRESS4, GK_DIST3, SHOOT1; team mean82ms and role means84/81/82/82/81ms. All roles reported 100% success.",
+        "Feyenoord reported 51 commands, CLEAR46 (90%), INTERCEPT2, PRESS2, PASS1; team mean17ms and role means2/2/1/1/80ms. All roles reported 100% success.",
+        "Feyenoord MID Zechiel scored at 1' and 2'; our scorer was reported as Unknown at 1'. The pre-match standings row showed rank4, 341 played, 631 points, 206W/13D/122L, goals478-350. Post-match standings are not yet checked.",
+        "The shots/on-target gap favored Feyenoord (4 shots, 2 on target versus our 8, 1); a single match does not prove a repeatable tactical weakness."
+      ]
     }
   ],
   "leaderboardAfterGame1": {
@@ -245,5 +417,103 @@
     "losses": 66,
     "goals": "255-149"
   },
-  "note": "Collect five consecutive real ranked matches with the setup unchanged. Capture each official report and opponent profile, then analyze at 5/5. No benchmarks or practice games."
+  "note": "Collect five consecutive real ranked matches with the setup unchanged. Capture each official report and opponent profile, then analyze at 5/5. No benchmarks or practice games.",
+  "leaderboardAfterGame4": {
+    "rank": 9,
+    "played": 188,
+    "points": 354,
+    "wins": 116,
+    "draws": 6,
+    "losses": 66,
+    "goals": "256-149"
+  },
+  "leaderboardAfterGame5": {
+    "rank": 9,
+    "played": 189,
+    "points": 354,
+    "wins": 116,
+    "draws": 6,
+    "losses": 67,
+    "goals": "257-151"
+  },
+  "seriesAnalysis": {
+    "record": "4W/0D/1L",
+    "goals": "6-3",
+    "points": 12,
+    "leaderboardDelta": {
+      "rank": "10 to 9",
+      "played": "184 to 189",
+      "points": "342 to 354",
+      "wins": "+4",
+      "draws": "+0",
+      "losses": "+1",
+      "goals": "251-148 to 257-151"
+    },
+    "ownReportTeamAverageLatencyMs": {
+      "values": [
+        15941,
+        847,
+        807,
+        668,
+        82
+      ],
+      "mean": 3669,
+      "median": 807,
+      "min": 82,
+      "max": 15941,
+      "over10ms": 5,
+      "over1000ms": 1
+    },
+    "opponentReportTeamAverageLatencyMs": {
+      "values": [
+        25,
+        15,
+        16,
+        17,
+        17
+      ],
+      "mean": 18,
+      "median": 17
+    },
+    "shootingTotals": "40-21 shots; 6-3 on target",
+    "possessionPctMean": 43.4,
+    "actionsOwnReported": {
+      "PRESS": 695,
+      "MOVE": 650,
+      "INTERCEPT": 180,
+      "CLEAR": 81,
+      "FOLLOW": 1,
+      "MARK": 16,
+      "SHOOT": 2,
+      "PASS": 12,
+      "GK_DIST": 3
+    },
+    "opponentClearancePattern": {
+      "CLEAR": 215,
+      "reportedCommands": 250,
+      "sharePct": 86,
+      "teamCount": 5,
+      "note": "CLEAR was the largest reported action category in all five reports. Small sample; actions do not reveal the exact states, model or intended tactic."
+    },
+    "opponentTableCoverage": {
+      "Tajfun Komary": "not in loaded top48; rank unknown",
+      "Amber Geysers 2": "not in loaded top48; rank unknown",
+      "Le Masia": "rank25 before/after adjacent captured snapshots; live rank may since change",
+      "Mobile United FC": "rank47 before and immediately after our match; one other concurrent game changes the later row",
+      "Feyenoord": "rank4 before and after; row delta is consistent with its 2-1 win"
+    },
+    "findings": [
+      "Our four wins had 40-21 shots overall; the single loss to Feyenoord had 8-4 shots for us but 1-2 on target. The sample supports a recurring finishing/shot-quality question, not a causal conclusion.",
+      "The four wins came with a combined low 43.4% mean possession. Against Le Masia, 30% possession coincided with 8-0 shots; possession alone is not a useful quality proxy in this sample.",
+      "Opponent reports are consistently CLEAR-heavy (weighted 86% of 250 reported commands), while live commentary often described pressing or patient buildup. Commentary is not a verified action policy; test pressure-breaking and forward passing against actual match reports rather than assuming labels.",
+      "Own latency is unstable: four reports were 82-847ms while Tajfun report shows 15941ms despite zero own commands and 11-19s role latency. The cause is unknown. The <=10ms target was not met in any match; opponent team averages were 15-25ms.",
+      "All role success figures shown were 100%, but the reports do not supply independent request timeouts or runtime-health evidence. Do not infer reliability solely from these values."
+    ],
+    "candidateFollowUp": "Keep current baseline for the next comparison cohort unless a separately validated candidate is ready. First investigate why match-report command count can be zero while latency and role responses are populated. For tactics, test a concise transition plan that creates central/near-box shots, avoids unsupported long shots, and has an explicit response to high CLEAR frequency. Do not change this completed cohort or infer effects from it.",
+    "dataLimitations": [
+      "AI overview remained at Generating summary in all five reports.",
+      "No private match IDs, account IDs, runtime IDs, credentials, or raw game state are retained.",
+      "Rank snapshots may include concurrent matches and are labeled as observations, not causal opponent deltas."
+    ]
+  }
 }

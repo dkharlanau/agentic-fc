@@ -772,3 +772,41 @@ while Tik&Taka's match recorded MOVE335 and needed sudden death. This suggests
 auditing the relation between actions, chances, and outcomes; it does not
 support a specific prompt or formation edit. Complete sanitized evidence:
 `research/v3/ranked-batch-19.json`.
+
+## 2026-10-25 — ranked batch20 complete, unchanged baseline
+
+Five real ranked matches completed without configuration changes: Tajfun
+Komary 1:0, Amber Geysers 2 2:1 after sudden death, Le Masia 1:0, Mobile United
+FC 1:0 after sudden death, and Feyenoord 1:2. Batch record 4W/0D/1L, goals
+6:3, +12 points. Our leaderboard row moved from rank10, 184 played, 342 points,
+112W/6D/66L and goals251:148 to rank9, 189 played, 354 points,
+116W/6D/67L and goals257:151.
+
+We recorded 40:21 shots and 6:3 on target with mean possession 43.4% across the
+five games. Four wins included one match with 30% possession and 8:0 shots;
+against Feyenoord we had 8:4 shots but lost 1:2 with 1:2 on target. This is a
+small cohort and does not isolate shot quality, possession, opponent strength,
+or a tactical cause.
+
+Opponent reports were CLEAR-heavy in all five games: Tajfun Komary 2/2 (100%),
+Amber Geysers 2 61/76 (80%), Le Masia 37/45 (82%), Mobile United FC 69/76
+(91%), and Feyenoord 46/51 (90%). Pooled, this is 215/250 commands (86%).
+Live commentary described several opponents as pressing or building patiently,
+but action breakdowns often showed only 0-3 PRESS commands; commentary labels
+do not establish actual policies. Observed standings included Le Masia at #25
+(105/169 before and 107/170 after adjacent snapshots), Mobile United FC at #47
+(58/81 before and 59/81 after our match), and Feyenoord at #4 (341 games/631
+points before, 342/634 after). Concurrent matches can change these snapshots;
+Tajfun and Amber Geysers 2 were not in the loaded top48. Detailed rows and
+uncertainty live in `research/v3/ranked-batch-20.json`.
+
+Our report mean latencies were 15941, 847, 807, 668, and 82ms (median807ms,
+mean3669ms); <=10ms was unmet in all five. Four were below 1s. The Tajfun report
+is inconsistent: 0 team commands but 15941ms mean and 11-19s role values. Cause
+is unknown. Feyenoord's report was 82ms overall with uniform 81-84ms roles;
+Mobile United FC's report split GK/DEF at 2ms and MID/FWD around 1s. Opponent
+team means were 15-25ms, median17ms. Every report showed 100% per-role success,
+which is not an independent timeout or runtime-health audit. We should first
+investigate report-count/latency discrepancies, then compare the next candidate
+only through its specified preflight gates. No prompt/model/formation changes
+were made in this cohort.
