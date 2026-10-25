@@ -1,11 +1,11 @@
 {
   "id": "ranked-batch-19",
-  "status": "in-progress-1of5",
+  "status": "in-progress-2of5",
   "targetCompletedGames": 5,
-  "completedGames": 1,
+  "completedGames": 2,
   "setup": "registered baseline, formation 1-1-2; GK/DEF/MID/FWD4 show global.amazon.nova-2-lite-v1:0; FWD5 remains existing fast path, model not verified",
   "preflight": {
-    "portalState": "one match completed; check for active queue before continuing",
+    "portalState": "two matches completed; check for active queue before continuing",
     "freshFitness": "not rerun; continuing same registered baseline",
     "formation": "1-1-2",
     "candidateInstalled": false
@@ -50,8 +50,40 @@
         "The result is a win despite the largest report latency observed so far in this new cohort. The report provides no independent call/timeout audit, so the delay cause is unknown.",
         "FootballCore was not visible in the loaded top48 standings rows; its rank and post-match record remain unknown. Our leaderboard moved from rank12/179 played/327 points to rank12/180/330, with +1 win and goals243-147 to244-147."
       ]
+    },
+    {
+      "opponent": "ERTT",
+      "result": "WIN",
+      "score": "1-0",
+      "possessionPct": "53-47",
+      "shots": "4-6",
+      "shotsOnTarget": "1-0",
+      "teamAverageLatencyMs": 1172,
+      "teamCommands": 185,
+      "roleLatencyMs": [1166, 1093, 1016, 1116, 1021],
+      "successPct": "100% all roles",
+      "actions": {"PRESS": 169, "CLEAR": 12, "GK_DIST": 2, "INTERCEPT": 2},
+      "goals": [{"minute": "2'", "scorer": "GK 1"}],
+      "opponentReport": {
+        "teamAverageLatencyMs": 19,
+        "teamCommands": 30,
+        "roleLatencyMs": [4, 3, 3, 3, 80],
+        "successPct": "100% all roles",
+        "actions": {"CLEAR": 27, "PASS": 2, "INTERCEPT": 1},
+        "leaderboardAfterMatch": null,
+        "leaderboardRank": "not visible in loaded top 48 rows"
+      },
+      "reportAiOverview": "The report remained at 'Generating summary'; no AI-generated explanation was used.",
+      "observations": [
+        "No Human in the Loop won 1-0 with 53% possession, 4 shots and 1 on target; ERTT had 47%, 6 shots and 0 on target.",
+        "Our 185 commands sum to PRESS169 (91%), CLEAR12, GK_DIST2, INTERCEPT2. Team mean latency was 1172ms; role values 1166/1093/1016/1116/1021ms. All roles reported 100% success.",
+        "ERTT reported CLEAR27/30 (90%), PASS2 and INTERCEPT1; team mean19ms, role means4/3/3/3/80ms. All roles reported 100% success.",
+        "The goal was attributed to GK1 at 2'. The report shows a second consecutive match above 1s own team latency; cause is unknown and no independent timeout audit was captured.",
+        "ERTT was not visible in the loaded top48 rows. Our leaderboard after this match showed rank10, 181 played, 333 points, 109W/6D/66L, goals245-147; from batch19 game1 this is +1 played, +3 points, +1 win and +1 goal. Concurrent standings movement means only our row's arithmetic is used."
+      ]
     }
   ],
   "leaderboardAfterGame1": {"rank": 12, "played": 180, "points": 330, "wins": 108, "draws": 6, "losses": 66, "goals": "244-147"},
+  "leaderboardAfterGame2": {"rank": 10, "played": 181, "points": 333, "wins": 109, "draws": 6, "losses": 66, "goals": "245-147"},
   "note": "Collect five consecutive real ranked matches with the setup unchanged. Capture each official report and opponent profile, then analyze at 5/5. No benchmarks or practice games."
 }

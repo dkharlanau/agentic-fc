@@ -739,3 +739,10 @@ possession, 10:2 shots and 1:0 on target. FootballCore logged 21/22 CLEAR
 108W/6D/66L, goals244:147. These details are recorded in
 `research/v3/ranked-batch-19.json`; the 2.4s team latency is unexplained, not
 yet attributed to model, service, or network. Continue batch unchanged.
+
+Batch19 game2 is ERTT 0:1, a win: 53% possession, 4:6 shots, 1:0 on target;
+our report mean 1172ms, 169/185 commands PRESS (91%); ERTT had CLEAR27/30
+(90%) and 19ms mean. The GK scored at 2'. Post-game leaderboard #10, 181
+played, 333 points, 109W/6D/66L, goals245:147. Batch19 is 2/5. Two consecutive
+reports show own mean latency >1s (2434,1172ms); cause remains unknown. Details
+are in `research/v3/ranked-batch-19.json`; no configuration changed.
