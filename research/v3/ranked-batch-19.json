@@ -1,11 +1,11 @@
 {
   "id": "ranked-batch-19",
-  "status": "in-progress-2of5",
+  "status": "in-progress-3of5",
   "targetCompletedGames": 5,
-  "completedGames": 2,
+  "completedGames": 3,
   "setup": "registered baseline, formation 1-1-2; GK/DEF/MID/FWD4 show global.amazon.nova-2-lite-v1:0; FWD5 remains existing fast path, model not verified",
   "preflight": {
-    "portalState": "two matches completed; check for active queue before continuing",
+    "portalState": "three matches completed; check for active queue before continuing",
     "freshFitness": "not rerun; continuing same registered baseline",
     "formation": "1-1-2",
     "candidateInstalled": false
@@ -81,9 +81,44 @@
         "The goal was attributed to GK1 at 2'. The report shows a second consecutive match above 1s own team latency; cause is unknown and no independent timeout audit was captured.",
         "ERTT was not visible in the loaded top48 rows. Our leaderboard after this match showed rank10, 181 played, 333 points, 109W/6D/66L, goals245-147; from batch19 game1 this is +1 played, +3 points, +1 win and +1 goal. Concurrent standings movement means only our row's arithmetic is used."
       ]
+    },
+    {
+      "opponent": "Lighting Cloud",
+      "result": "WIN",
+      "score": "2-0",
+      "possessionPct": "36-64",
+      "shots": "11-2",
+      "shotsOnTarget": "2-0",
+      "teamAverageLatencyMs": 1905,
+      "teamCommands": 113,
+      "roleLatencyMs": [775, 5338, 805, 913, 804],
+      "successPct": "100% all roles",
+      "actions": {"PRESS": 55, "MOVE": 35, "INTERCEPT": 19, "CLEAR": 4},
+      "goals": [
+        {"minute": "2'", "scorer": "MID 3"},
+        {"minute": "2'", "scorer": "MID 3"}
+      ],
+      "opponentReport": {
+        "teamAverageLatencyMs": 17,
+        "teamCommands": 19,
+        "roleLatencyMs": [3, 3, 2, 2, 77],
+        "successPct": "100% all roles",
+        "actions": {"CLEAR": 17, "PASS": 2},
+        "leaderboardAfterMatch": null,
+        "leaderboardRank": "not visible in loaded top 48 rows"
+      },
+      "reportAiOverview": "The report remained at 'Generating summary'; no AI-generated explanation was used.",
+      "observations": [
+        "No Human in the Loop won 2-0 with 36% possession, 11 shots and 2 on target; Lighting Cloud had 64%, 2 shots and 0 on target.",
+        "Our report lists 113 commands: PRESS55, MOVE35, INTERCEPT19 and CLEAR4. Team mean latency was 1905ms; role values 775/5338/805/913/804ms. All roles reported 100% success.",
+        "Lighting Cloud reported CLEAR17/19 (89%) and PASS2; team mean17ms, role means3/3/2/2/77ms. All roles reported 100% success.",
+        "Both goals were attributed to MID3 at 2'. This is the third report in this new cohort with own team mean above 1s; cause is unknown and no independent timeout audit was captured.",
+        "Lighting Cloud was not visible in the loaded top48 rows. Our post-match leaderboard showed rank10, 182 played, 336 points, 110W/6D/66L and goals247-147: +1 win, +3 points, +2 goals scored from game2."
+      ]
     }
   ],
   "leaderboardAfterGame1": {"rank": 12, "played": 180, "points": 330, "wins": 108, "draws": 6, "losses": 66, "goals": "244-147"},
   "leaderboardAfterGame2": {"rank": 10, "played": 181, "points": 333, "wins": 109, "draws": 6, "losses": 66, "goals": "245-147"},
+  "leaderboardAfterGame3": {"rank": 10, "played": 182, "points": 336, "wins": 110, "draws": 6, "losses": 66, "goals": "247-147"},
   "note": "Collect five consecutive real ranked matches with the setup unchanged. Capture each official report and opponent profile, then analyze at 5/5. No benchmarks or practice games."
 }

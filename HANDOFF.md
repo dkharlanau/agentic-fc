@@ -746,3 +746,10 @@ our report mean 1172ms, 169/185 commands PRESS (91%); ERTT had CLEAR27/30
 played, 333 points, 109W/6D/66L, goals245:147. Batch19 is 2/5. Two consecutive
 reports show own mean latency >1s (2434,1172ms); cause remains unknown. Details
 are in `research/v3/ranked-batch-19.json`; no configuration changed.
+
+Batch19 game3 is Lighting Cloud 0:2, a win: 36% possession but 11:2 shots and
+2:0 on target. Our report showed 1905ms mean, with DEF 5338ms, while Lighting
+Cloud had 17ms and CLEAR17/19 (89%). Standings after match: #10, 182 played,
+336 points, 110W/6D/66L, goals247:147. This is the third consecutive report
+above 1s own latency; root cause still unknown. Batch19 is 3/5; continue without
+configuration changes. See `research/v3/ranked-batch-19.json`.
