@@ -1,0 +1,25 @@
+{
+  "id": "ranked-batch-14",
+  "status": "in_progress",
+  "targetCompletedGames": 5,
+  "completedGames": 1,
+  "setup": "unchanged live baseline, FWD1v16, existing FWD2 fast path, formation 1-1-2",
+  "preflight": {"portalState": "READY TO PLAY", "freshFitness": "5/5 PASS", "p01Installed": false},
+  "games": [
+    {
+      "opponent": "Divide by Zero",
+      "result": "WIN",
+      "score": "1-0",
+      "possessionPct": 45,
+      "shots": "2-3",
+      "shotsOnTarget": "1-0",
+      "teamAverageLatencyMs": 978,
+      "teamCommands": 275,
+      "roleLatencyMs": [767, 1018, 1085, 981, 870],
+      "successPct": "100% all roles",
+      "actions": {"MOVE": 178, "PRESS": 52, "MARK": 19, "PASS": 11, "CLEAR": 10, "SHOOT": 3, "INTERCEPT": 2},
+      "observation": "Match report says MID scored at minute 1; report interpretation only, not event-level causal proof."
+    }
+  ],
+  "limitations": ["Series is incomplete; no tactical conclusions until five games complete.", "Latencies are rounded report averages, not per-call traces."]
+}
