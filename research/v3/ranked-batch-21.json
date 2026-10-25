@@ -1,8 +1,8 @@
 {
   "id": "ranked-batch-21",
-  "status": "in-progress-3of5",
+  "status": "in-progress-4of5",
   "targetCompletedGames": 5,
-  "completedGames": 3,
+  "completedGames": 4,
   "setup": "registered baseline, formation 1-1-2; GK/DEF/MID/FWD4 show global.amazon.nova-2-lite-v1:0; FWD5 remains existing fast path, model not verified",
   "preflight": {
     "portalState": "leaderboard loaded; no active match alert; READY TO PLAY",
@@ -311,6 +311,109 @@
         "Amber Crests 2 reported 59 commands: CLEAR54 (92%), PASS4, PRESS1; mean16ms, role means4/3/3/3/80ms; all roles 100% success.",
         "Their observed row moved from 103 to 104 played, retained rank29 and 151 points, adding a loss and four goals against; consistent with this match."
       ]
+    },
+    {
+      "opponent": "Octopus",
+      "opponentLeaderboardBeforeObserved": {
+        "rank": 36,
+        "played": 107,
+        "wins": 40,
+        "draws": 6,
+        "losses": 61,
+        "goals": "122-164",
+        "goalDifference": -42,
+        "points": 126
+      },
+      "result": "WIN",
+      "score": "2-1",
+      "finish": "full time",
+      "homeAway": "HOME",
+      "possessionPct": "45-55",
+      "shots": "4-2",
+      "shotsOnTarget": "2-1",
+      "teamAverageLatencyMs": 79,
+      "teamCommands": 405,
+      "roleLatencyMs": [
+        84,
+        85,
+        80,
+        81,
+        82
+      ],
+      "successPct": "100% all roles",
+      "actions": {
+        "MOVE": 299,
+        "INTERCEPT": 52,
+        "CLEAR": 14,
+        "PASS": 14,
+        "PRESS": 14,
+        "MARK": 9,
+        "SHOOT": 2,
+        "GK_DIST": 1
+      },
+      "goals": [
+        {
+          "minute": "2'",
+          "scorer": "No Human in the Loop MID 3"
+        },
+        {
+          "minute": "2'",
+          "scorer": "No Human in the Loop MID 3"
+        },
+        {
+          "minute": "2'",
+          "scorer": "Octopus MID Gattuso"
+        }
+      ],
+      "opponentReport": {
+        "teamAverageLatencyMs": 17,
+        "teamCommands": 51,
+        "roleLatencyMs": [
+          4,
+          3,
+          3,
+          3,
+          83
+        ],
+        "successPct": "100% all roles",
+        "actions": {
+          "CLEAR": 47,
+          "PASS": 2,
+          "INTERCEPT": 1,
+          "PRESS": 1
+        },
+        "leaderboardAfterMatch": {
+          "rank": 36,
+          "played": 108,
+          "points": 126,
+          "wins": 40,
+          "draws": 6,
+          "losses": 62,
+          "goals": "123-166",
+          "goalDifference": -43
+        },
+        "leaderboardBeforeObserved": {
+          "rank": 36,
+          "played": 107,
+          "points": 126,
+          "wins": 40,
+          "draws": 6,
+          "losses": 61,
+          "goals": "122-164",
+          "goalDifference": -42
+        },
+        "comparisonNote": "Adjacent observed row added one played and one loss, with goals 123-166; this matches the 2-1 loss in this match."
+      },
+      "reportAiOverview": "The report remained at Generating summary; no AI-generated explanation was used.",
+      "liveCommentaryObservations": [
+        "Octopus was described as building patiently and knocking the ball around, looking for an opening."
+      ],
+      "observations": [
+        "Won 2-1 with 45% possession, 4 shots and 2 on target; Octopus had 55%, 2 shots and 1 on target.",
+        "Our 405 commands: MOVE299, INTERCEPT52, CLEAR14, PASS14, PRESS14, MARK9, SHOOT2, GK_DIST1; mean79ms and role means84/85/80/81/82ms. All roles 100% success.",
+        "Octopus reported 51 commands: CLEAR47 (92%), PASS2, INTERCEPT1, PRESS1; mean17ms and role means4/3/3/3/83ms. All roles 100% success.",
+        "Octopus row moved from 107 to 108 played, 61 to 62 losses, and goals122-164 to123-166, consistent with this 2-1 loss."
+      ]
     }
   ],
   "note": "Play five real ranked matches, one at a time, unchanged baseline. Capture opponent match reports and visible standings, then analyze at 5/5. No benchmarks or practice games.",
@@ -340,5 +443,14 @@
     "draws": 6,
     "losses": 69,
     "goals": "262-154"
+  },
+  "leaderboardAfterGame4": {
+    "rank": 10,
+    "played": 193,
+    "points": 360,
+    "wins": 118,
+    "draws": 6,
+    "losses": 69,
+    "goals": "264-155"
   }
 }

@@ -825,3 +825,13 @@ all 100% success. Adjacent leaderboard observation: our row #10, 192 played,
 points, 49W/4D/51L, 143:158. One-game/one-loss movement aligns with the result.
 Continue two games serially; retain unchanged baseline and gather each opponent
 report and standings row.
+
+Batch21 progress: 4/5. Beat Octopus 2-1, unchanged baseline. Octopus report:
+55% possession, 2 shots/1 on target, 51 commands with CLEAR47 (92%), mean17ms;
+our 45%, 4 shots/2 on target, 405 commands, mean79ms (roles84/85/80/81/82),
+all roles 100% success. Opponent row #36 moved 107 to108 played, 61 to62 losses,
+goals122-164 to123-166, consistent with this match. Our row #10 now 193 played,
+360 points, 118W/6D/69L, 264:155. One final match remains. Prompt from Slack
+requests a bounded L02 deployment attempt at safe idle; honor current match
+cohort first, then inspect candidate and admission evidence without changing
+setup until cohort closes.
