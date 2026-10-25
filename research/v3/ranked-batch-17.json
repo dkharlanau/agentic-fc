@@ -1,0 +1,86 @@
+{
+  "id": "ranked-batch-17",
+  "status": "in-progress-1of5-baseline",
+  "targetCompletedGames": 5,
+  "completedGames": 1,
+  "setup": "unchanged registered baseline, formation 1-1-2; existing FWD5 fast path; no L02 candidate installed",
+  "preflight": {
+    "portalState": "READY TO PLAY before search; match completed",
+    "freshFitness": "not rerun for this series",
+    "formation": "1-1-2",
+    "candidateInstalled": false
+  },
+  "beforeLeaderboard": {
+    "rank": 13,
+    "played": 169,
+    "points": 305,
+    "wins": 100,
+    "draws": 5,
+    "losses": 64,
+    "goals": "231-143"
+  },
+  "games": [
+    {
+      "opponent": "Le Masia",
+      "result": "WIN",
+      "score": "2-0",
+      "possessionPct": "30-70",
+      "shots": "7-3",
+      "shotsOnTarget": "2-0",
+      "teamAverageLatencyMs": 786,
+      "teamCommands": 370,
+      "roleLatencyMs": [607, 902, 602, 909, 636],
+      "successPct": "100% all roles",
+      "actions": {
+        "PRESS": 116,
+        "MOVE": 63,
+        "FOLLOW": 62,
+        "MARK": 38,
+        "SHOOT": 36,
+        "PASS": 34,
+        "CLEAR": 12,
+        "GK_DIST": 9
+      },
+      "goals": [
+        {"minute": "1'", "scorer": "MID 3"},
+        {"minute": "2'", "scorer": "MID 3"}
+      ],
+      "opponentReport": {
+        "teamAverageLatencyMs": 16,
+        "teamCommands": 41,
+        "roleLatencyMs": [2, 2, 1, 1, 76],
+        "successPct": "100% all roles",
+        "actions": {"CLEAR": 37, "PASS": 3, "PRESS": 1},
+        "leaderboardAfterMatch": {
+          "rank": 26,
+          "played": 95,
+          "points": 159,
+          "wins": 52,
+          "draws": 3,
+          "losses": 40,
+          "goals": "108-102",
+          "goalDifference": 6
+        }
+      },
+      "reportAiOverview": "Generated report attributes the first goal to PRESS_BALL and MOVE_TO disrupting buildup, and the second to FOLLOW_PLAYER and MARK coordination; it describes Le Masia as possession-heavy. These are AI-generated explanations, not a verified event trace.",
+      "observations": [
+        "Le Masia had 70% possession but 3 shots and 0 on target; No Human in the Loop had 30%, 7 shots and 2 on target. Possession share did not predict the winner in this match.",
+        "Le Masia's report labels 37/41 commands CLEAR (90%), with 3 PASS and 1 PRESS. Formation, pass completion, locations, and clear success are not shown.",
+        "No Human in the Loop had 370 reported commands at 786ms team mean; roles were GK 607, DEF 902, MID 602, FWD 909, FWD 636ms. All roles reported 100% success.",
+        "Both goals were attributed to MID 3 in minutes 1 and 2. This is one match and does not prove a general tactical effect.",
+        "Leaderboard after the match listed Le Masia rank 26, 95 played, 159 points, 52W/3D/40L, goals108-102. Our row moved from rank13, 169 played, 305 points to rank13, 170 played, 308 points, 101W/5D/64L, goals233-143; the one-match delta agrees with the win."
+      ]
+    }
+  ],
+  "leaderboardAfterGame1": {
+    "rank": 13,
+    "played": 170,
+    "points": 308,
+    "wins": 101,
+    "draws": 5,
+    "losses": 64,
+    "goals": "233-143"
+  },
+  "seriesAnalysis": null,
+  "note": "One completed game of the five-game baseline cohort. Do not infer strategy quality or modify setup before the cohort boundary."
+}
