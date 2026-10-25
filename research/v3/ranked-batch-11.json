@@ -64,9 +64,38 @@
       "alias": "stance-live-02",
       "opponent": "Mr Football FC",
       "side": "HOME",
-      "status": "running",
+      "status": "complete",
       "initiation": "manual random matchmaking",
-      "matchReport": "https://agentic-football.aws.dev/matches/02dfb5bf-804c-4af0-9bc0-ad0eaa3dce1d/report"
+      "matchReport": "https://agentic-football.aws.dev/matches/02dfb5bf-804c-4af0-9bc0-ad0eaa3dce1d/report",
+      "result": "LOSS",
+      "scoreFor": 0,
+      "scoreAgainst": 2,
+      "rawReportFacts": {
+        "possessionPct": 47,
+        "shotsFor": 3,
+        "shotsAgainst": 6,
+        "shotsOnTargetFor": 0,
+        "shotsOnTargetAgainst": 2,
+        "teamAverageLatencyMs": 81,
+        "teamCommands": 364,
+        "opponentAverageLatencyMs": 16,
+        "opponentCommands": 42,
+        "agentLatencyMs": [
+          77,
+          87,
+          86,
+          83,
+          83
+        ],
+        "opponentAgentLatencyMs": [
+          3,
+          2,
+          2,
+          2,
+          75
+        ]
+      },
+      "completedAtObserved": "2026-10-25T06:21:00Z"
     }
   ],
   "incomingGamesObservedBeforeSeries": {
@@ -88,5 +117,5 @@
     "automaticShutdown": false,
     "noNewAutomations": true
   },
-  "completedGames": 1
+  "completedGames": 2
 }
