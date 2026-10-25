@@ -3,7 +3,7 @@
   "coachVersion": "coach-v1.0",
   "status": "running",
   "targetCompletedGames": 10,
-  "completedGames": 5,
+  "completedGames": 6,
   "createdAtUTC": "2026-10-25T07:02:19.911385+00:00",
   "setup": {
     "sourceCommit": "931af03",
@@ -397,6 +397,95 @@
           100
         ]
       }
+    },
+    {
+      "alias": "batch12-live-06",
+      "opponent": "Spartak Ultimate",
+      "side": "HOME",
+      "status": "complete",
+      "initiation": "manual random matchmaking",
+      "liveObservedAtUTC": "2026-10-25T07:33:37.764Z",
+      "matchReport": "https://agentic-football.aws.dev/matches/0a4bd110-c60d-4c18-bb61-e87baa94e24a/report",
+      "scoreFor": 3,
+      "scoreAgainst": 0,
+      "result": "WIN",
+      "completedAtObserved": "2026-10-25T07:38:11.980852+00:00",
+      "rawReportFacts": {
+        "possessionPct": 47,
+        "shotsFor": 11,
+        "shotsAgainst": 0,
+        "shotsOnTargetFor": 3,
+        "shotsOnTargetAgainst": 0,
+        "teamAverageLatencyMs": 885,
+        "teamCommands": 405,
+        "opponentAverageLatencyMs": 18,
+        "opponentCommands": 58,
+        "agentLatencyMs": [
+          793,
+          894,
+          910,
+          953,
+          965
+        ],
+        "opponentAgentLatencyMs": [
+          5,
+          4,
+          4,
+          4,
+          79
+        ],
+        "teamCommandCounts": {
+          "MOVE_TO": 157,
+          "INTERCEPT": 100,
+          "PASS": 62,
+          "MARK": 60,
+          "CLEAR_OVERRIDE": 15,
+          "GK_DISTRIBUTE": 10,
+          "SHOOT": 1
+        },
+        "opponentCommandCounts": {
+          "CLEAR_OVERRIDE": 54,
+          "PASS": 3,
+          "PRESS_BALL": 1
+        },
+        "agentSuccessPct": [
+          100,
+          100,
+          100,
+          100,
+          100
+        ],
+        "opponentAgentSuccessPct": [
+          100,
+          100,
+          100,
+          100,
+          100
+        ]
+      },
+      "primaryViewerStats": {
+        "scoreFor": 3,
+        "scoreAgainst": 0,
+        "shotsFor": 11,
+        "shotsAgainst": 0,
+        "shotsOnTargetFor": 3,
+        "shotsOnTargetAgainst": 0,
+        "possessionPct": 47,
+        "displayedTimer": "02:00",
+        "privateScreenshot": "game06-final-view.png"
+      },
+      "primaryStatsAgreeWithReport": true,
+      "liveObservations": [
+        {
+          "displayedTimer": "01:02",
+          "displayedScore": [
+            1,
+            0
+          ],
+          "observation": "Own GK visible by own goal; own MID positioned between GK and central group near ball. Single frame, no causal inference.",
+          "privateScreenshot": "game06-live-b.png"
+        }
+      ]
     }
   ],
   "ownerDirective": "Ten real games per cohort; analyze only after all ten complete",
@@ -406,7 +495,7 @@
     "activeMatch": false,
     "automaticShutdown": false,
     "quotaGuardPercent": 5,
-    "remainingQuotaPercentLastCheck": 93
+    "remainingQuotaPercentLastCheck": 89
   },
   "ownerScope": "This branch plays real matches, collects data and observations, pushes GitHub checkpoints, and changes lineup/setup only on explicit request."
 }
