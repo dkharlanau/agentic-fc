@@ -2,10 +2,58 @@
   "id": "ranked-batch-15",
   "status": "in_progress",
   "targetCompletedGames": 5,
-  "completedGames": 0,
+  "completedGames": 1,
   "setup": "unchanged live baseline, FWD1v16, existing FWD2 fast path, formation 1-1-2",
-  "preflight": {"portalState": "READY TO PLAY", "freshFitness": "5/5 PASS", "p01Installed": false},
-  "beforeLeaderboard": {"rank": 15, "played": 156, "points": 274, "wins": 90, "draws": 4, "losses": 62, "goals": "206-136"},
-  "games": [],
-  "limitations": ["Series incomplete; no conclusions until five games finish.", "HOME/random matchmaking; setup remains unchanged."]
+  "preflight": {
+    "portalState": "READY TO PLAY",
+    "freshFitness": "5/5 PASS",
+    "p01Installed": false
+  },
+  "beforeLeaderboard": {
+    "rank": 15,
+    "played": 156,
+    "points": 274,
+    "wins": 90,
+    "draws": 4,
+    "losses": 62,
+    "goals": "206-136"
+  },
+  "games": [
+    {
+      "opponent": "Pandavas",
+      "result": "WIN",
+      "score": "3-0",
+      "possessionPct": 28,
+      "shots": "9-4",
+      "shotsOnTarget": "3-0",
+      "teamAverageLatencyMs": 405,
+      "teamCommands": 405,
+      "roleLatencyMs": [
+        459,
+        431,
+        428,
+        432,
+        369
+      ],
+      "successPct": "100% all roles",
+      "actions": {
+        "MOVE": 245,
+        "INTERCEPT": 65,
+        "PRESS": 28,
+        "SHOOT": 24,
+        "CLEAR": 16,
+        "MARK": 12,
+        "PASS": 11,
+        "GK_DIST": 4
+      },
+      "observations": [
+        "Report lists FWD 4 goal at minute 1 and MID 3 twice at minute 2.",
+        "High output despite 28% possession; one-match observation only."
+      ]
+    }
+  ],
+  "limitations": [
+    "Series incomplete; no conclusions until five games finish.",
+    "HOME/random matchmaking; setup remains unchanged."
+  ]
 }
