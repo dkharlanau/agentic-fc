@@ -133,6 +133,14 @@
         ]
       },
       "completedAtObserved": "2026-10-25T06:29:00Z"
+    },
+    {
+      "alias": "stance-live-04",
+      "opponent": "Amber Horns 2",
+      "side": "HOME",
+      "status": "running",
+      "initiation": "manual random matchmaking",
+      "matchReport": "https://agentic-football.aws.dev/matches/73ae86f7-944a-41c2-95fe-570a78d4dd8a/report"
     }
   ],
   "incomingGamesObservedBeforeSeries": {
