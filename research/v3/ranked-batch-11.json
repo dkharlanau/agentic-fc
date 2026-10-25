@@ -191,9 +191,51 @@
       "alias": "stance-live-05",
       "opponent": "Divide by Zero",
       "side": "HOME",
-      "status": "running",
+      "status": "complete",
       "initiation": "manual random matchmaking",
-      "matchReport": "https://agentic-football.aws.dev/matches/8716c7a2-49f0-4c0f-bc48-66f722a069aa/report"
+      "matchReport": "https://agentic-football.aws.dev/matches/8716c7a2-49f0-4c0f-bc48-66f722a069aa/report",
+      "result": "WIN",
+      "scoreFor": 1,
+      "scoreAgainst": 0,
+      "rawReportFacts": {
+        "possessionPct": 50,
+        "shotsFor": 3,
+        "shotsAgainst": 6,
+        "shotsOnTargetFor": 1,
+        "shotsOnTargetAgainst": 0,
+        "teamAverageLatencyMs": 949,
+        "teamCommands": 276,
+        "opponentAverageLatencyMs": 17,
+        "opponentCommands": 41,
+        "agentLatencyMs": [
+          793,
+          968,
+          1162,
+          975,
+          846
+        ],
+        "opponentAgentLatencyMs": [
+          4,
+          3,
+          3,
+          3,
+          77
+        ],
+        "teamCommandBreakdownPct": {
+          "move": 63,
+          "press": 17,
+          "mark": 8,
+          "clear": 4,
+          "pass": 3,
+          "shoot": 3,
+          "intercept": 2
+        },
+        "opponentCommandBreakdownPct": {
+          "clear": 88,
+          "pass": 12
+        }
+      },
+      "completedAtObserved": "2026-10-25T07:03:00Z"
     }
   ],
   "incomingGamesObservedBeforeSeries": {
@@ -215,5 +257,5 @@
     "automaticShutdown": false,
     "noNewAutomations": true
   },
-  "completedGames": 4
+  "completedGames": 5
 }
