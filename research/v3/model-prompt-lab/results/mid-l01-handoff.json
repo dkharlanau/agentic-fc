@@ -1,0 +1,19 @@
+{
+  "candidate": "L01-mid-safe-outlet-v1",
+  "sourceCommit": "93f14b1e7fbcd96904c94efcdc66518a168698d8",
+  "branch": "codex/model-prompt-lab-20261025",
+  "ownerAuthorizedDeployAfterChecks": true,
+  "ownerAuthorizedMessageToGameChat": true,
+  "messageDelivered": true,
+  "targetChatTitle": "Развернуть Agentic FC на AWS",
+  "native": null,
+  "fitness": null,
+  "deployed": false,
+  "latestReadOnlyLiveCheckpoint": "6b896d8",
+  "liveObservation": "Batch16 baseline started while handoff was delivered; preserve already-started series, check current portal before any candidate work.",
+  "reproducibility": {
+    "archiveByteIdenticalRebuild": true,
+    "offlineReplayByteIdentical": true
+  },
+  "note": "Handoff receipt only. Not an AWS deployment or acceptance receipt."
+}

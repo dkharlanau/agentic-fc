@@ -1,3 +1,12 @@
+## L01 handoff sent — 2026-10-25
+
+Candidate commit93f14b1e7fbcd96904c94efcdc66518a168698d8 pushed and sent, with
+explicit owner authorization, to the active game chat. Tool confirmed delivery.
+Live advanced to6b896d8/batch16 start before handoff acknowledgement; preserve
+already-started series. No deployment/native/Fitness claimed. See mid-l01-handoff.json.
+Archive rebuild and offline replay reproduced byte-for-byte. Game operator owns
+portal/AWS; research must not race it. Read fresh native/Fitness receipts next.
+
 ## Research checkpoint — L01 MID ready for native screening, 2026-10-25
 
 Owner now authorizes deployment after preparation/native/Fitness at a series
