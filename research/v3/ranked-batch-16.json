@@ -1,6 +1,6 @@
 {
   "id": "ranked-batch-16",
-  "status": "in_progress",
+  "status": "stopped-on-owner-request-after-game1",
   "targetCompletedGames": 5,
   "completedGames": 1,
   "setup": "unchanged live baseline, FWD1v16, existing FWD2 fast path, formation 1-1-2",
@@ -50,6 +50,7 @@
       ]
     }
   ],
+  "stoppedReason": "Owner redirected priority from the baseline cohort to installing L01. The later EPAM Spor match was already incoming/autostarted, used the previous setup, and is recorded separately in COACH_REVIEWS.md.",
   "limitations": [
     "Series incomplete; no conclusions until five games finish.",
     "HOME/random matchmaking; setup remains unchanged."

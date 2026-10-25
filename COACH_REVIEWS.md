@@ -551,3 +551,18 @@ Five unchanged-baseline ranked games: 4W/0D/1L, 10:3, 12 points. Fresh Fitness 5
 **C03 — review the single 0:1 loss, do not blame GK.** Three clean wins and one goal conceded in the loss are team outcomes; no event sequence establishes responsibility. The reported 44 RESET actions in the Team AA game are team-level only.
 
 **Latency — no causal claim.** Team report averages were 405–2219ms. The Dinamo Minsk win had the highest average, while Team AA loss was 803ms. All match summaries showed 100% success; that is not deadline proof. Invariant FC report is internally inconsistent (16 team commands vs FWD5 award of 52); treat its aggregate command count as unreliable.
+
+## 2026-10-25 — L01 installation gate
+
+The owner stopped the unchanged-baseline series to prioritize L01. The only
+already-recorded game in batch16 remains Gork ’n’ Mork Boyz 2:0; the incoming
+EPAM Spor match then finished 1:3 on the old setup and is kept separate. No
+additional baseline games are planned from this request.
+
+L01 passed contract validity for 224/224 native responses but failed the
+predeclared one-second first-call gate: six first-in-session calls took
+2.37–3.42 s. Overall p95 145 ms and later-session p95 127 ms do not remove the
+cold-start failures. All probe sessions stopped; no slot change, Fitness, or
+L01 ranked trial. See the sanitized result committed to research main at
+`726c826`. Keep the current registration until a new cold-start mitigation
+candidate passes the same gate.

@@ -1,5 +1,27 @@
 # Agentic FC continuation
 
+## Latest checkpoint — 2026-10-25, L01 installation attempt
+
+Owner redirected priority from the baseline series to installing L01; ranked
+batch16 is stopped after its first recorded game and is not being continued.
+An already-started incoming match versus EPAM Spor finished 1:3 on the previous
+setup; it is not an L01 trial and no shots, possession, or event timeline were
+captured. Portal returned READY TO PLAY afterward. No lineup settings changed.
+
+L01 candidate Runtime was independently read back as READY with the expected
+source commit, archive hash, Python 3.13 entry point, and MID player binding.
+Native screen produced 224/224 complete valid decisions, but failed the official
+1-second deadline: all six first-in-session calls were 2.37–3.42 seconds. Later
+calls had p95 127 ms; overall p95 was 145 ms. All six probe sessions were stopped.
+Candidate was not assigned to the MID slot; Fitness and ranked L01 games were
+not run. The previous MID and other four bindings remain registered. Do not
+relax the first-call gate. Sanitized receipt and reason are saved on GitHub main
+at `726c826` in the research checkout. Next step is a new cold-start mitigation
+experiment with the same gate; do not start more games on the previous setup.
+
+Current allowance last checked at 21% used. At 5% remaining, stop new matches,
+finish in-flight work and verify a safe GitHub checkpoint.
+
 ## Current checkpoint — 2026-10-25 (after ranked batch 15)
 
 Batch15 complete: five real ranked matches, unchanged baseline FWD1v16 / existing FWD2 fast path / formation 1-1-2. Result 4W/0D/1L, 10:3 goals, 12 points. Fresh Fitness 5/5 passed before series. See `research/v3/ranked-batch-15-analysis.ru.md` and `research/v3/ranked-batch-15.json`. No active match after completion; portal table was inspected. P01 remains rejected at paired screen and was never installed.
