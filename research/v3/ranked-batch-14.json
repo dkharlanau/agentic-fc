@@ -2,7 +2,7 @@
   "id": "ranked-batch-14",
   "status": "in_progress",
   "targetCompletedGames": 5,
-  "completedGames": 3,
+  "completedGames": 4,
   "setup": "unchanged live baseline, FWD1v16, existing FWD2 fast path, formation 1-1-2",
   "preflight": {
     "portalState": "READY TO PLAY",
@@ -95,6 +95,37 @@
         "GK_DIST": 4
       },
       "observation": "MID scored at minute 3 per match report; match appears to have reached sudden death based on live commentary."
+    },
+    {
+      "opponent": "BOYS753",
+      "result": "LOSS",
+      "score": "0-2",
+      "possessionPct": 51,
+      "shots": "2-8",
+      "shotsOnTarget": "0-2",
+      "teamAverageLatencyMs": 193,
+      "teamCommands": 375,
+      "roleLatencyMs": [
+        87,
+        240,
+        215,
+        283,
+        284
+      ],
+      "successPct": "100% all roles",
+      "actions": {
+        "MOVE": 239,
+        "PRESS": 45,
+        "INTERCEPT": 28,
+        "MARK": 27,
+        "CLEAR": 15,
+        "PASS": 10,
+        "SHOOT": 10,
+        "GK_DIST": 1
+      },
+      "observations": [
+        "Match report lists opponent goals at 1 minute (scorer unknown) and 2 minutes (DEF)."
+      ]
     }
   ],
   "limitations": [
