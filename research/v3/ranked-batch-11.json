@@ -348,9 +348,50 @@
       "alias": "stance-live-08",
       "opponent": "Agents United",
       "side": "HOME",
-      "status": "running",
+      "status": "complete",
       "initiation": "manual random matchmaking",
-      "matchReport": "https://agentic-football.aws.dev/matches/6ac0e4b4-1dac-49ba-b560-714f585015f9/report"
+      "matchReport": "https://agentic-football.aws.dev/matches/6ac0e4b4-1dac-49ba-b560-714f585015f9/report",
+      "result": "WIN",
+      "scoreFor": 2,
+      "scoreAgainst": 0,
+      "rawReportFacts": {
+        "possessionPct": 47,
+        "shotsFor": 3,
+        "shotsAgainst": 5,
+        "shotsOnTargetFor": 2,
+        "shotsOnTargetAgainst": 0,
+        "teamAverageLatencyMs": 393,
+        "teamCommands": 370,
+        "opponentAverageLatencyMs": 15,
+        "opponentCommands": 39,
+        "agentLatencyMs": [
+          77,
+          82,
+          551,
+          540,
+          578
+        ],
+        "opponentAgentLatencyMs": [
+          3,
+          2,
+          2,
+          2,
+          72
+        ],
+        "teamCommandBreakdownPct": {
+          "move": 92,
+          "pass": 3,
+          "clear": 2,
+          "press": 2,
+          "shoot": 1
+        },
+        "opponentCommandBreakdownPct": {
+          "clear": 72,
+          "pass": 26,
+          "intercept": 3
+        }
+      },
+      "completedAtObserved": "2026-10-25T08:09:00Z"
     }
   ],
   "incomingGamesObservedBeforeSeries": {
@@ -372,5 +413,5 @@
     "automaticShutdown": false,
     "noNewAutomations": true
   },
-  "completedGames": 7
+  "completedGames": 8
 }
