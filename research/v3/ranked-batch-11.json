@@ -101,9 +101,38 @@
       "alias": "stance-live-03",
       "opponent": "FootballCore",
       "side": "HOME",
-      "status": "running",
+      "status": "complete",
       "initiation": "manual random matchmaking",
-      "matchReport": "https://agentic-football.aws.dev/matches/318043d8-7d09-48c8-9c65-c0a1bb28287a/report"
+      "matchReport": "https://agentic-football.aws.dev/matches/318043d8-7d09-48c8-9c65-c0a1bb28287a/report",
+      "result": "WIN",
+      "scoreFor": 2,
+      "scoreAgainst": 0,
+      "rawReportFacts": {
+        "possessionPct": 31,
+        "shotsFor": 6,
+        "shotsAgainst": 1,
+        "shotsOnTargetFor": 2,
+        "shotsOnTargetAgainst": 0,
+        "teamAverageLatencyMs": 2410,
+        "teamCommands": 230,
+        "opponentAverageLatencyMs": 20,
+        "opponentCommands": 28,
+        "agentLatencyMs": [
+          2870,
+          2983,
+          2548,
+          1637,
+          1786
+        ],
+        "opponentAgentLatencyMs": [
+          3,
+          3,
+          3,
+          2,
+          86
+        ]
+      },
+      "completedAtObserved": "2026-10-25T06:29:00Z"
     }
   ],
   "incomingGamesObservedBeforeSeries": {
@@ -125,5 +154,5 @@
     "automaticShutdown": false,
     "noNewAutomations": true
   },
-  "completedGames": 2
+  "completedGames": 3
 }
