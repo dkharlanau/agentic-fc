@@ -1,5 +1,16 @@
 ## 2026-10-25 — L02 cold-call gate failed on V1 and V2
 
+## 2026-10-26 — M11 deep run завершён
+
+Coach-v1.0 и текущий handoff повторно сверены. Первоначальный pure-FastEngine MID не принят. Deep run выявил stale tick, binding/identity, contradictory ownership, central-pass safety и DEF+MID double-press risks; M11 переработан в hybrid v3.
+
+Финальный candidate сохраняет L01 для владения/неясности/restart и включает deterministic FastEngine только для off-ball OPEN_PLAY. В своей defensive third MID не press/intercept, а cover/mark. 6000 HOME random states + 6000 AWAY mirrors, adversarial cases и five-role deterministic shadow прошли с 0 critical invariant failures, 0 safety/mirror/crash/on-ball mismatch и 0 defensive-third chase. Это decision simulation, не physical football proof.
+
+Latency verdict: M11 не быстрее L02B локально значимо (~33.6 vs ~32.8ms p50 fresh-process CI). Главный риск — external first-session path. L02/V1 historical 6/6 cold calls >1s; optimistic import/startup saving всё равно не проходит. Native/Fitness остаются mandatory.
+
+Experiment-design correction: пять игр — screening, не причинное доказательство. 3W2L не продвигать как winner; 4W1L/5W0L требуют по возможности ещё пять. Ranking/possession/report-average latency не заменяют timely-useful action rate. A=L02B, B=M11 v3; остальные роли/112 фиксированы; rollback MID15 + Fitness.
+
+
 ## 2026-10-26 — подготовка M11 и A/B на 27 октября
 
 Повторно прочитаны HANDOFF и coach-v1.0. Новое явное указание владельца разрешает подготовить второй сетап, но не означает менять live-команду сегодня. Сохраняем принцип одного изменения: в A=L02B и B=M11 меняется только MID; GK/DEF/FWD1, deterministic FWD2 stance и 1-1-2 фиксированы. M11 убирает LLM у MID и использует уже проверяемую FastEngine policy в минимальном stdlib-only transport. Это гипотеза latency/reliability, не доказанное усиление.
