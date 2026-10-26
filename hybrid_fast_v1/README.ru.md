@@ -1,112 +1,185 @@
-# M11 Hybrid Fast MID
+# M11 Hybrid Fast MID v3
 
-Статус: подготовлен в Git, не деплоился, не регистрировался в портале и не играл рейтинговые матчи.
+Статус: **deep simulation PASS; не деплоился; AWS native, Fitness и реальные матчи не выполнены**.
 
-## Зачем нужен второй кандидат
+Актуальный M11 — не первоначальный pure-FastEngine MID. Deep run 26 октября изменил архитектуру после найденных counterexamples. Полный разбор: research/v3/M11_DEEP_RUN_RESULT_20261026.ru.md.
 
-Текущая рабочая база уже имеет model-free FWD2 stance. Четыре остальные роли используют Harness/Nova 2 Lite. История показала две независимые проблемы: модель может занимать сотни миллисекунд, но первый вызов model-free Runtime тоже может занимать секунды. Поэтому M11 не добавляет новый длинный prompt. Он убирает LLM только у MID и одновременно упаковывает уже проверенную FastEngine policy в маленький stdlib-only CodeZip.
+## Состав кандидата
 
-Состав M11:
-- GK13 — текущий M8, Nova 2 Lite, prompt без изменений.
-- DEF19 — текущий M8, Nova 2 Lite, prompt без изменений.
-- MID2 — M11 model-free FastEngine stance.
-- FWD1v16 — текущий M8, Nova 2 Lite, prompt без изменений.
+Formation 1-1-2 неизменна.
+
+- GK13 — текущий M8 / Nova 2 Lite / prompt без изменений.
+- DEF19 — текущий M8 / Nova 2 Lite / prompt без изменений.
+- MID2 — M11 v3.
+- FWD1v16 — текущий M8 / Nova 2 Lite / prompt без изменений.
 - FWD2 revision9 — текущий deterministic stance.
-- Formation — 1-1-2.
 
-То есть новая идея намеренно не меняет formation, GK, DEF, FWD1 и FWD2. У MID нет prompt вообще.
+Меняется только MID.
 
-## Чем M11 отличается от предыдущего L02B
+## Политика MID v3
 
-Setup A, L02B: model-free MID на отдельной L01 policy и fastboot transport.
+M11 не вызывает foundation model.
 
-Setup B, M11: model-free MID на общей FastEngine stance policy, которая уже использовалась для deterministic FWD2, плюс минимальный пакет без AgentCore SDK и без внешних Python dependencies.
+### С мячом и при неоднозначности
 
-Оба кандидата уменьшают число LLM-equipped roles с четырёх до трёх. Сравнение должно показать не только latency, но и насколько разные deterministic MID policies сохраняют атаку и центр.
+Используется L01 MidEngine. Он остаётся владельцем решений PASS/SHOOT и сохраняет более строгие центральные guardrails:
+- прогноз движения соперника;
+- проверку receiving space;
+- проверку линии паса;
+- safe progressive / recycle outlet;
+- close clear shot;
+- release, если безопасного решения нет.
 
-## Офлайн-проверка
+### Без мяча в OPEN_PLAY
 
-Запустить:
+Используется FastEngine:
+- при мяче у партнёра — support/stance;
+- против соперника — single-nearest local press либо central cover;
+- на свободном мяче — bounded intercept;
+- unknown possession — release.
 
-    python -m unittest tests.test_hybrid_fast_v1 -v
+Дополнительный hybrid guard запрещает MID становиться вторым пресером в своей defensive third. Там он MARK/Defend.
+
+KICK_OFF/RESETTING не переводятся на FastEngine — это оставляет restart path таким же, как у L01/default engine.
+
+## Безопасность состояния
+
+До футбольного действия M11 проверяет:
+- myPlayers должен быть ровно [2];
+- полный уникальный набор home/away × agentId_0..4;
+- monotonic tick/gameTime внутри session;
+- side не может молча измениться в той же session;
+- isFree/team code/team id/agent id/player id/hasBall должны быть согласованы;
+- malformed unlockedCommands запрещены;
+- duplicate/out-of-order frame -> CLEAR_OVERRIDE;
+- missing session id -> CLEAR_OVERRIDE.
+
+Session state bounded до 64 записей.
+
+## Deep-run результат
+
+Финальный CI:
+- 6 000 random HOME states + 6 000 AWAY mirrors;
+- M11 и L01 проверены отдельно;
+- adversarial malformed/binding/ownership/session cases;
+- full deterministic five-role shadow coordination check.
+
+Итог:
+- 0 critical invariant failures;
+- 0 safety issues;
+- 0 crashes;
+- 0 HOME/AWAY target/type mismatches;
+- 0 M11-vs-L01 mismatches при собственном владении в OPEN_PLAY;
+- 0 MID PRESS/INTERCEPT в defensive third;
+- 0 active actions при unknown possession;
+- 0 simultaneous pressers в full deterministic shadow.
+
+Это decision simulation, не физический футбольный симулятор.
+
+## Latency: что уже известно
+
+Local fresh-process CI, 12 процессов:
+- L02B p50 около 32.8 ms / p95 около 35.0 ms;
+- M11 p50 около 33.6 ms / p95 около 35.8 ms.
+
+То есть M11 не выигрывает у L02B локальный startup. Его потенциальная ценность — более полезная off-ball политика при сохранённой L01 on-ball safety.
+
+Главный риск — AWS first-session path. Исторический L02/V1 дал 6/6 first calls 1.28–1.34 s при later p50 около 95.5 ms. Локальное улучшение L02B само по себе не объясняет недостающие 184–283 ms. M11 должен пройти новый native screen; локальный CPU/HTTP PASS его не заменяет.
+
+## Сборка
+
     python hybrid_fast_v1/build_package.py
-    python hybrid_fast_v1/native_probe.py --binding .local/m11/binding.json --output .local/m11/native.json
 
-Последняя команда без --apply только печатает размер и hash плана и не вызывает AWS.
+Создаёт:
+- .local/hybrid-fast-v1/deployment.zip
+- hybrid_fast_v1/artifact.json
 
-Build создаёт .local/hybrid-fast-v1/deployment.zip и hybrid_fast_v1/artifact.json. Архив обязан оставаться под .local. Builder сверяет reviewed source hashes FastEngine и его зависимостей с fast_path_v2/artifact.json.
+Архив reproducible, dependency-free. Builder сверяет reviewed FastEngine и L01 policy hashes.
 
-## Native gate
+## Изолированный deployment
 
-Только на свободной границе серии и только в изолированном Runtime, который ещё не зарегистрирован как MID команды:
+По умолчанию ничего не меняет:
 
-1. Собрать archive на точном commit.
-2. Создать/обновить изолированный Runtime с PYTHON_3_13, entryPoint main.py, PUBLIC network и env:
-   PLAYER_ID=2
-   M11_MODE=stance
-   M11_AUDIT=1
-   BUILD_COMMIT=<exact commit>
-3. Сохранить private binding под .local: region, runtimeId, runtimeArn, buildCommit.
-4. Запустить native_probe.py с --apply.
-5. Запустить grade_native.py с тем же подтверждённым deadline и source, что используется для L02B.
+    python hybrid_fast_v1/deploy.py
 
-Пример формы команды:
+После сборки exact commit, на свободной границе серии:
 
-    python hybrid_fast_v1/grade_native.py .local/m11/native.json --deadline-ms 1000 --deadline-source "<verified source>" --output .local/m11/native-grade.json
+    python hybrid_fast_v1/deploy.py \
+      --source-commit <40-char SHA> \
+      --bucket <workshop bucket> \
+      --execution-role-arn <existing role ARN> \
+      --receipt .local/m11/deploy.json \
+      --apply
 
-Нельзя подставлять выдуманный source. Если дедлайн не подтверждён, кандидат не продвигается.
+Helper:
+- проверяет archive/source hashes;
+- пишет private receipt;
+- загружает content-addressed ZIP;
+- создаёт или явно обновляет только указанный isolated Runtime;
+- ждёт READY;
+- сверяет artifact/network/lifecycle/env readback.
 
-Gate:
-- полный ordered plan;
-- 0 decision mismatch;
-- 0 incomplete/failed response;
-- каждый первый вызов новой сессии внутри подтверждённого deadline;
-- общий p95 <= min(800 ms, 80% deadline);
-- owned probe sessions остановлены.
+READY не означает promotion. После него нужен native gate.
 
-CPU compute и локальный HTTP не считаются end-to-end latency.
+## Native screen
+
+Dry run:
+
+    python hybrid_fast_v1/native_probe.py \
+      --binding .local/m11/binding.json \
+      --output .local/m11/native.json
+
+Реальный collection — только когда матч не идёт:
+
+    python hybrid_fast_v1/native_probe.py \
+      --binding .local/m11/binding.json \
+      --output .local/m11/native.json \
+      --apply
+
+Затем:
+
+    python hybrid_fast_v1/grade_native.py .local/m11/native.json \
+      --deadline-ms 1000 \
+      --deadline-source "https://agenticfootballcup.com/" \
+      --output .local/m11/native-grade.json
+
+Gate не убирает первые вызовы из статистики.
+
+Дополнительно real-session audit должен различать:
+- first HTTP call;
+- first valid state;
+- first PLAY_ON call.
+
+В сохранённых FWD2 sessions встречается один bootstrap/malformed response на сессию, но это только гипотеза о prematch warmup, а не основание ослаблять официальный deadline.
 
 ## Завтрашний A/B
 
-Сначала текущий baseline остаётся recovery point.
+A = L02B.
+B = M11 v3.
 
-A. L02B:
-- isolated native;
-- если PASS — заменить только MID;
-- свежий Fitness 5/5;
-- пять рейтинговых матчей без правок;
-- сохранить HOME/AWAY, соперника, счёт, shots/on-target, possession, report latency, late-call evidence;
-- вернуть baseline MID15 и Fitness 5/5.
+Для каждого:
+1. idle/readback;
+2. isolated native;
+3. только PASS -> exact MID binding;
+4. свежий Fitness 5/5;
+5. 5 ranked games без изменения setup;
+6. checkpoint;
+7. rollback MID15 + Fitness перед следующим кандидатом.
 
-B. M11:
-- те же шаги и те же метрики;
-- пять рейтинговых матчей одной неизменной конфигурацией;
-- после блока вернуть baseline, если M11 не выигрывает одновременно по reliability и football outcome.
+Пять игр — screening. 3W2L не достаточно для promotion; 4W1L/5W0L — promising, желательно ещё 5, если окно позволяет.
 
-Не запускать B, пока A-матч или probe активен, и наоборот.
+Главные метрики:
+- first competitive PLAY_ON latency;
+- late/invalid share;
+- p50/p95/max later calls;
+- timely-useful decisions;
+- goals, shots on target, scoreless games;
+- central-cover regressions.
 
-## Что считать улучшением
-
-Latency:
-- first-call miss rate;
-- full-response p50/p95/max;
-- доля ответов после deadline;
-- отдельно first vs later calls.
-
-Football:
-- points/game и W/D/L;
-- goals for/against;
-- shots on target;
-- scoreless games;
-- потери структуры при переходе;
-- не использовать possession как самостоятельный KPI.
-
-M11 не принимается, если он быстрее, но подавляет атаку, ухудшает центр или даёт неправильную HOME/AWAY команду.
+Possession и UI average latency не являются самостоятельными критериями победы.
 
 ## Rollback
 
-Точный rollback — MID15 из current M8, остальные роли и 1-1-2 не трогать, затем свежий Fitness 5/5. Не делать force/reset и не менять другие роли одновременно.
+MID15 текущего M8, остальные роли и 1-1-2 не менять, затем свежий Fitness 5/5.
 
-## Почему здесь нет новых prompts
-
-Это сознательное решение. История проекта уже показала, что более длинная инструкция может увеличивать фактический контекст, а более короткий prompt сам по себе не устраняет multi-second first-call/runtime latency. M11 проверяет более сильную гипотезу: простые футбольные решения MID должны исполняться кодом, а не текстовым рассуждением модели.
+Если native/Fitness не проходят, M11 ranked block не запускается.
