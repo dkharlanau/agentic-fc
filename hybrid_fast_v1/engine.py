@@ -122,7 +122,9 @@ class HybridMidEngine:
             self._remember(session, side, tick, game_time)
             audit = dict(onball_audit)
             audit.update(policy='m11_hybrid_mid_v3', basePolicy='l01_onball',
-                         decisionLayer='l01_onball', freshnessGuard=True)
+                         decisionLayer='l01_onball', freshnessGuard=True,
+                         playMode=gs.get('playMode'), gameTime=game_time,
+                         tick=tick, teamId=side)
             return onball_commands, audit
 
         commands, audit = self.fast.choose(payload, session)
@@ -130,5 +132,7 @@ class HybridMidEngine:
         audit = dict(audit)
         audit.update(policy='m11_hybrid_mid_v3', basePolicy='fast_path_v2',
                      decisionLayer='fast_offball', freshnessGuard=True,
-                     l01RouteReason=onball_audit.get('reason'))
+                     l01RouteReason=onball_audit.get('reason'),
+                     playMode=gs.get('playMode'), gameTime=game_time,
+                     tick=tick, teamId=side)
         return commands, audit
