@@ -231,6 +231,7 @@ def simulate_states(samples, seed):
     liveness = {'M11':Counter(),'L01':Counter()}
     full_fast_multiple_pressers = 0
     overlap_potential = 0
+    m11_defensive_third_chases = 0
     onball_mismatch_vs_l01 = 0
     onball_compared = 0
     onball_mismatch_examples = []
@@ -304,10 +305,17 @@ def simulate_states(samples, seed):
         # on our half: overlap is possible, not observed or proven.
         try:
             cmd, _ = HybridMidEngine().choose(request(home), 'overlap-'+str(i))
-            if cmd[0]['commandType'] == 'PRESS_BALL':
-                bx = home['gameState']['ball']['position']['x']
-                if bx < 0:
-                    overlap_potential += 1
+            bx = home['gameState']['ball']['position']['x']
+            keepers=[p for p in home['gameState']['players'] if p['agentId']=='agentId_0']
+            home_x=next(p['position']['x'] for p in keepers if p['teamCode']=='home')
+            away_x=next(p['position']['x'] for p in keepers if p['teamCode']=='away')
+            center=(home_x+away_x)/2
+            span=abs(away_x-home_x)
+            in_defensive_third=(bx-center)<-span/6
+            if cmd[0]['commandType'] in ('PRESS_BALL','INTERCEPT') and in_defensive_third:
+                m11_defensive_third_chases += 1
+            if cmd[0]['commandType'] == 'PRESS_BALL' and in_defensive_third:
+                overlap_potential += 1
         except Exception:
             pass
 
@@ -333,6 +341,7 @@ def simulate_states(samples, seed):
         'fullFastShadowMultiplePressers':full_fast_multiple_pressers,
         'hybridDefMidPressOverlapPotentialHomeStates':overlap_potential,
         'overlapInterpretation':'Potential only: current DEF is still LLM and no joint live tick trace is simulated.',
+        'm11DefensiveThirdPressOrIntercept':m11_defensive_third_chases,
         'onballComparedVsL01':onball_compared,
         'onballActionMismatchVsL01':onball_mismatch_vs_l01,
         'onballMismatchExamples':onball_mismatch_examples
@@ -548,6 +557,7 @@ def main():
               + result['stateSimulation']['candidates']['M11']['mirrorTypeOrTargetMismatches']
               + result['stateSimulation']['candidates']['M11']['crashes']
               + result['stateSimulation']['fullFastShadowMultiplePressers']
+              + result['stateSimulation']['m11DefensiveThirdPressOrIntercept']
               + result['stateSimulation']['onballActionMismatchVsL01']
               + result['adversarial']['criticalFailures'])
     result['criticalInvariantFailures']=critical
@@ -560,6 +570,7 @@ def main():
         'm11':result['stateSimulation']['candidates']['M11'],
         'l01':result['stateSimulation']['candidates']['L01'],
         'pressOverlapPotential':result['stateSimulation']['hybridDefMidPressOverlapPotentialHomeStates'],
+        'defensiveThirdChases':result['stateSimulation']['m11DefensiveThirdPressOrIntercept'],
         'onballMismatch':result['stateSimulation']['onballActionMismatchVsL01'],
         'onballMismatchExamples':result['stateSimulation']['onballMismatchExamples'],
         'baseline':result['experimentRisk']['recentBaseline'],
