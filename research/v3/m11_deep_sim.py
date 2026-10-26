@@ -171,15 +171,18 @@ def safety_issues(state, command):
     team_id = ball.get('possessionTeamId')
     agent_id = ball.get('possessionAgentId')
     player_id = ball.get('possessionPlayerId')
+    contradiction = False
     if team_code is not None and team_id is not None and type(team_id) is int and team_id in (0,1) and ('home','away')[team_id] != team_code:
-        issues.append('contradictory_team_ownership_fields')
+        contradiction = True
     if agent_id is not None and player_id is not None and type(player_id) is int and agent_id != 'agentId_'+str(player_id):
-        issues.append('contradictory_player_ownership_fields')
+        contradiction = True
     true_flags=[(p.get('teamCode'),p.get('agentId')) for p in state['gameState']['players'] if p.get('hasBall') is True]
     if len(true_flags)>1:
-        issues.append('multiple_hasBall_true')
+        contradiction = True
     if ball.get('isFree') is True and (owner not in (None,'free') or true_flags):
-        issues.append('free_ball_with_owner')
+        contradiction = True
+    if contradiction and name != 'CLEAR_OVERRIDE':
+        issues.append('acted_on_contradictory_ownership')
     if owner is not None:
         if owner != mine and name in ON_BALL:
             issues.append('on_ball_action_without_explicit_ownership')
