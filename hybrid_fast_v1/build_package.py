@@ -14,6 +14,7 @@ SOURCES = (
     'runtime_v1/sensing.py',
     'fast_path_v2/__init__.py',
     'fast_path_v2/engine.py',
+    'mid_fast_v1/engine.py',
     'hybrid_fast_v1/__init__.py',
     'hybrid_fast_v1/engine.py',
     'hybrid_fast_v1/main.py',
