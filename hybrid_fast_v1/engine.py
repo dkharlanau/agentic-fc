@@ -114,11 +114,11 @@ class HybridMidEngine:
 
         # L01 owns every state where MID may have the ball. Its pass gate uses
         # predicted opponent motion and stricter receiver/lane clearance. Only
-        # clearly off-ball/restart states are delegated to FastEngine for active
-        # press/cover/support. This prevents the FWD2-oriented current-lane
+        # clearly off-ball OPEN_PLAY states are delegated to FastEngine for active
+        # press/cover/support. Restarts stay on L01/default-engine behavior. This prevents the FWD2-oriented current-lane
         # heuristic from replacing the safer central-distribution policy.
         onball_commands, onball_audit = self.onball.choose(payload, session)
-        if onball_audit.get('reason') not in ('ENGINE_OFF_BALL','ENGINE_RESTART'):
+        if onball_audit.get('reason') != 'ENGINE_OFF_BALL':
             self._remember(session, side, tick, game_time)
             audit = dict(onball_audit)
             audit.update(policy='m11_hybrid_mid_v3', basePolicy='l01_onball',
