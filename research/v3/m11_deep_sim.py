@@ -557,6 +557,8 @@ def main():
         'm11':result['stateSimulation']['candidates']['M11'],
         'l01':result['stateSimulation']['candidates']['L01'],
         'pressOverlapPotential':result['stateSimulation']['hybridDefMidPressOverlapPotentialHomeStates'],
+        'onballMismatch':result['stateSimulation']['onballActionMismatchVsL01'],
+        'onballMismatchExamples':result['stateSimulation']['onballMismatchExamples'],
         'baseline':result['experimentRisk']['recentBaseline'],
         'fiveGamePosterior':result['experimentRisk']['candidateBetterPosteriorAfter5'],
         'coldStartProjectedPasses':result['coldStartRisk']['projectedPasses']
