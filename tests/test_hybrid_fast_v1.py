@@ -161,6 +161,30 @@ class HybridFastHTTPTests(unittest.TestCase):
         self.assertEqual(commands[0]['commandType'], 'PRESS_BALL')
         self.assertEqual(audit['decisionLayer'], 'fast_offball')
 
+    def test_mid_covers_in_defensive_third_instead_of_second_press(self):
+        row = plan()[0]
+        payload = json.loads(json.dumps(row['request']))
+        state = json.loads(payload['prompt'])
+        state['teamId'] = 0
+        state['myPlayers'] = [2]
+        state['gameState']['playMode'] = 'OPEN_PLAY'
+        state['gameState']['tick'] += 300
+        state['gameState']['gameTime'] += 300
+        players={(p['teamCode'],p['agentId']):p for p in state['gameState']['players']}
+        players[('home','agentId_2')]['position']={'x':-29,'y':0}
+        players[('home','agentId_1')]['position']={'x':-40,'y':18}
+        players[('home','agentId_3')]['position']={'x':10,'y':20}
+        players[('home','agentId_4')]['position']={'x':15,'y':-20}
+        players[('away','agentId_2')]['position']={'x':-30,'y':0}
+        state['gameState']['ball'].update(isFree=False,possessionTeamCode='away',
+                                          possessionAgentId='agentId_2',
+                                          position={'x':-30,'y':0})
+        payload['prompt']=json.dumps(state)
+        commands,audit=HybridMidEngine().choose(payload,'def-third')
+        self.assertNotIn(commands[0]['commandType'], ('PRESS_BALL','INTERCEPT'))
+        self.assertIn(commands[0]['commandType'], ('MARK','SET_STANCE','CLEAR_OVERRIDE'))
+        self.assertEqual(audit['reason'], 'MID_DEFENSIVE_THIRD_COVER')
+
     def test_ping_and_transport_rejections(self):
         self.assertEqual(self.call('GET','/ping')[0], 200)
         self.assertEqual(self.call('POST','/invocations','{}',{'Content-Type':'text/plain'})[0], 415)
