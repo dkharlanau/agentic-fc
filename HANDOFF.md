@@ -1,3 +1,9 @@
+# M11 / dual-setup preparation — 2026-10-26
+
+Owner explicitly requested preparation of two MID setups for a possible 27 October test. No live deployment or match was requested in this preparation step. Setup A remains L02B from mid_fast_v2/FASTBOOT.ru.md. Setup B is new M11 Hybrid Fast MID in hybrid_fast_v1: player2 only, model-free FastEngine stance, stdlib-only HTTP package, while GK13/DEF19/FWD1v16/FWD2-rev9 and formation1-1-2 stay fixed. Exact manifest: research/v3/setup-m11-hybrid-fast.json; protocol: research/v3/DUAL_SETUP_TEST_20261027.ru.md.
+
+M11 must not be registered or ranked-tested until isolated native gate passes, then exact binding and fresh Fitness5/5. A and B are sequential, never concurrent with a match/probe. Each promoted candidate gets one unchanged five-match block, then rollback to MID15 baseline/Fitness before the next candidate. Do not add a model-family change, formation change or prompt rewrite to these blocks. Both candidates may fail; baseline remains the safe outcome.
+
 # L02B release candidate — 2026-10-25
 
 Owner requests urgent autonomous L02/V1 correction and release after native
