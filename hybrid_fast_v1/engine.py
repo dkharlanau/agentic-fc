@@ -50,6 +50,44 @@ class HybridMidEngine:
         if unlocked is not None and (not isinstance(unlocked, list)
                                      or any(not isinstance(value, str) for value in unlocked)):
             return self._clear('MALFORMED_UNLOCKS', started)
+        ball = gs.get('ball') if isinstance(gs, dict) else None
+        if not isinstance(ball, dict) or type(ball.get('isFree')) is not bool:
+            return self._clear('MALFORMED_OWNERSHIP', started)
+        team_code = ball.get('possessionTeamCode')
+        team_id = ball.get('possessionTeamId')
+        agent_id = ball.get('possessionAgentId')
+        player_id = ball.get('possessionPlayerId')
+        if team_code is not None and team_code not in ('home','away'):
+            return self._clear('MALFORMED_OWNERSHIP', started)
+        if team_id is not None and (type(team_id) is not int or team_id not in (0,1)):
+            return self._clear('MALFORMED_OWNERSHIP', started)
+        if team_code is not None and team_id is not None and ('home','away')[team_id] != team_code:
+            return self._clear('CONTRADICTORY_POSSESSION', started)
+        if agent_id is not None and agent_id not in {'agentId_'+str(pid) for pid in range(5)}:
+            return self._clear('MALFORMED_OWNERSHIP', started)
+        if player_id is not None and (type(player_id) is not int or player_id not in range(5)):
+            return self._clear('MALFORMED_OWNERSHIP', started)
+        if agent_id is not None and player_id is not None and agent_id != 'agentId_'+str(player_id):
+            return self._clear('CONTRADICTORY_POSSESSION', started)
+        flagged = [(row.get('teamCode'),row.get('agentId'),row.get('hasBall'))
+                   for row in players if row.get('hasBall') is not None]
+        if any(type(flag) is not bool for _,_,flag in flagged):
+            return self._clear('MALFORMED_OWNERSHIP', started)
+        true_flags = [(team,agent) for team,agent,flag in flagged if flag is True]
+        if len(true_flags) > 1:
+            return self._clear('CONTRADICTORY_POSSESSION', started)
+        explicit = ((team_code, agent_id) if team_code is not None and agent_id is not None else None)
+        if ball['isFree'] is True and (explicit is not None or true_flags):
+            return self._clear('CONTRADICTORY_POSSESSION', started)
+        if explicit is not None and true_flags and true_flags[0] != explicit:
+            return self._clear('CONTRADICTORY_POSSESSION', started)
+        if explicit is not None:
+            owner_row = next((row for row in players
+                              if row.get('teamCode')==explicit[0] and row.get('agentId')==explicit[1]), None)
+            if owner_row is None:
+                return self._clear('MALFORMED_OWNERSHIP', started)
+            if owner_row.get('hasBall') is False:
+                return self._clear('CONTRADICTORY_POSSESSION', started)
         tick = gs.get('tick') if isinstance(gs, dict) else None
         game_time = gs.get('gameTime') if isinstance(gs, dict) else None
         if (type(side) is not int or side not in (0,1)
