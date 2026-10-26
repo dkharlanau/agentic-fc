@@ -1,3 +1,15 @@
+# M11 v3 deep-run checkpoint — 2026-10-26
+
+Authoritative M11 after deep run is **hybrid v3**, not the earlier pure FastEngine MID. Exact result: research/v3/M11_DEEP_RUN_RESULT_20261026.ru.md; test protocol: research/v3/DUAL_SETUP_TEST_20261027.ru.md.
+
+Only MID changes. L01 MidEngine owns all on-ball/ambiguous/restart behavior; FastEngine is used only for clearly off-ball OPEN_PLAY. Extra guards: exact [2] binding, full identity set, ownership consistency, monotonic tick/time/session, side isolation, unknown release, and no MID PRESS/INTERCEPT in own defensive third. No foundation model call in M11 MID.
+
+Final deep CI on 6000 random HOME + 6000 AWAY mirrors: 0 critical invariant failures, 0 safety issues/crashes/mirror mismatches, 0 M11-vs-L01 on-ball mismatches, 0 defensive-third chases, 0 unknown-possession actions. Adversarial matrix PASS. Fresh-process local startup is effectively tied with L02B (~33.6ms vs ~32.8ms p50); this is not AWS latency.
+
+Historical L02/V1 cold calls remain 1.28–1.34s, 6/6 over official 1s. Even optimistic transfer of L02B local readiness saving would leave 0/6 under 1s; external reduction still ~184–283ms. Therefore M11/L02B promotion requires fresh native first-session evidence. M11 logging now records playMode/gameTime/tick/ordinal because prior real FWD2 audits show one bootstrap/malformed response per session; this is a hypothesis about prematch bootstrap, not permission to relax the deadline.
+
+Five ranked games are screening only. Deep-run power analysis: 3W2L is ambiguous; 4W1L promising; 5W0L strong but not proof. Prefer another five when window permits. Never mix model/formation/GK/DEF/FWD changes into A/B. Baseline MID15 + fresh Fitness remains rollback.
+
 # M11 / dual-setup preparation — 2026-10-26
 
 Owner explicitly requested preparation of two MID setups for a possible 27 October test. No live deployment or match was requested in this preparation step. Setup A remains L02B from mid_fast_v2/FASTBOOT.ru.md. Setup B is new M11 Hybrid Fast MID in hybrid_fast_v1: player2 only, model-free FastEngine stance, stdlib-only HTTP package, while GK13/DEF19/FWD1v16/FWD2-rev9 and formation1-1-2 stay fixed. Exact manifest: research/v3/setup-m11-hybrid-fast.json; protocol: research/v3/DUAL_SETUP_TEST_20261027.ru.md.
