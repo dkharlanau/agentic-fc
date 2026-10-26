@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "status": "prepared-not-deployed",
+  "preparedDate": "2026-10-26",
+  "name": "M11 Hybrid Fast MID",
+  "formation": "1-1-2",
+  "changeSurface": "MID only",
+  "roles": {
+    "gk": {
+      "source": "current M8 baseline",
+      "registeredVersion": "13",
+      "modelId": "global.amazon.nova-2-lite-v1:0",
+      "promptFile": "research/v3/schema-clean/gk.txt",
+      "promptSha256": "43a75e8e85225b14879c7c9b839a7f8b3e5d056d8a841a1a4019b8fc8263cd36"
+    },
+    "def": {
+      "source": "current M8 baseline",
+      "registeredVersion": "19",
+      "modelId": "global.amazon.nova-2-lite-v1:0",
+      "promptFile": "research/v3/schema-clean/def.txt",
+      "promptSha256": "86426b2320f5e40e444ebe553b0827b3707ff6f5cd22599478f71e5391c838d9"
+    },
+    "mid": {
+      "source": "hybrid_fast_v1",
+      "playerId": 2,
+      "mode": "stance",
+      "modelId": null,
+      "modelCallsPerTick": 0,
+      "policySource": "fast_path_v2/engine.py",
+      "entryPoint": "hybrid_fast_v1/main.py",
+      "prompt": null
+    },
+    "fwd1": {
+      "source": "current M8 baseline",
+      "registeredVersion": "16",
+      "modelId": "global.amazon.nova-2-lite-v1:0",
+      "promptFile": "research/v3/schema-clean/fwd1.txt",
+      "promptSha256": "ee4c92203e6fcbc86d14329913933ba68d8cd2092947bebd2c66d5ed14c17b15"
+    },
+    "fwd2": {
+      "source": "current deterministic stance baseline",
+      "runtimeRevision": 9,
+      "modelId": null,
+      "modelCallsPerTick": 0,
+      "policySource": "fast_path_v2/engine.py",
+      "policySourceSha256": "677aaf841b55040705ebf77068b9e6a3393e8acc221d0a22c30cd2ed1dca368e"
+    }
+  },
+  "comparison": {
+    "setupA": "L02B previous candidate: MID-only deterministic L01 policy with fastboot transport",
+    "setupB": "M11: MID-only FastEngine stance policy with minimal stdlib-only package",
+    "control": "current M8 plus deterministic FWD2 stance",
+    "reason": "A and B keep GK/DEF/FWD1/FWD2/formation fixed so football and latency differences are attributable mainly to MID candidate"
+  },
+  "promotionGate": {
+    "native": "complete ordered screen; zero invalid decisions; all fresh-session first calls <= verified deadline; p95 <= engineering target",
+    "fitness": "fresh 5/5 after exact binding",
+    "rankedPilot": "five completed games on one unchanged setup",
+    "rollback": "restore MID15 baseline, verify all other role hashes/versions and fresh Fitness 5/5"
+  },
+  "claimsNotMade": [
+    "not deployed",
+    "not Fitness-tested",
+    "not proven faster end-to-end",
+    "not proven stronger in matches",
+    "does not change foundation model on remaining LLM roles"
+  ]
+}
