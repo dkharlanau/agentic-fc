@@ -1,5 +1,12 @@
 ## 2026-10-25 — L02 cold-call gate failed on V1 and V2
 
+## 2026-10-26 — подготовка M11 и A/B на 27 октября
+
+Повторно прочитаны HANDOFF и coach-v1.0. Новое явное указание владельца разрешает подготовить второй сетап, но не означает менять live-команду сегодня. Сохраняем принцип одного изменения: в A=L02B и B=M11 меняется только MID; GK/DEF/FWD1, deterministic FWD2 stance и 1-1-2 фиксированы. M11 убирает LLM у MID и использует уже проверяемую FastEngine policy в минимальном stdlib-only transport. Это гипотеза latency/reliability, не доказанное усиление.
+
+До любого ranked: isolated native с first-call deadline и полным response gate -> exact binding -> свежий Fitness5/5. Затем пять завершённых игр без правок и rollback MID15/Fitness перед следующим кандидатом. Если native/Fitness не проходит, матчей кандидата нет. Не смешивать с новой моделью, формацией или большим prompt rewrite. C01 сохраняет baseline как контроль; C02/C03 оцениваются по shots-on-target/scoreless/центральной страховке после полного блока, а не по possession или одному матчу.
+
+
 Both isolated native runs returned 224/224 valid full responses, but all six
 first calls exceeded the 1-second tournament deadline. V2 first calls were
 1.667–3.100 s; V1 were 1.280–1.341 s. V1 response headers consumed nearly all
