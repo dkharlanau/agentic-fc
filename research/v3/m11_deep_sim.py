@@ -561,7 +561,9 @@ def main():
         'onballMismatchExamples':result['stateSimulation']['onballMismatchExamples'],
         'baseline':result['experimentRisk']['recentBaseline'],
         'fiveGamePosterior':result['experimentRisk']['candidateBetterPosteriorAfter5'],
-        'coldStartProjectedPasses':result['coldStartRisk']['projectedPasses']
+        'coldStartProjectedPasses':result['coldStartRisk']['projectedPasses'],
+        'adversarial':result['adversarial'],
+        'fullFastShadowMultiplePressers':result['stateSimulation']['fullFastShadowMultiplePressers']
     },allow_nan=False))
     return 0 if critical==0 else 1
 
