@@ -38,6 +38,18 @@ class HybridMidEngine:
         root = unwrap(payload)
         gs = root.get('gameState') if isinstance(root, dict) else None
         side = root.get('teamId') if isinstance(root, dict) else None
+        if root.get('myPlayers') != [2]:
+            return self._clear('WRONG_BINDING', started)
+        players = gs.get('players') if isinstance(gs, dict) else None
+        expected = {(team, 'agentId_' + str(pid)) for team in ('home','away') for pid in range(5)}
+        if (not isinstance(players, list) or len(players) != 10
+                or any(not isinstance(row, dict) for row in players)
+                or {(row.get('teamCode'), row.get('agentId')) for row in players} != expected):
+            return self._clear('INVALID_PLAYER_IDENTITY_SET', started)
+        unlocked = root.get('unlockedCommands')
+        if unlocked is not None and (not isinstance(unlocked, list)
+                                     or any(not isinstance(value, str) for value in unlocked)):
+            return self._clear('MALFORMED_UNLOCKS', started)
         tick = gs.get('tick') if isinstance(gs, dict) else None
         game_time = gs.get('gameTime') if isinstance(gs, dict) else None
         if (type(side) is not int or side not in (0,1)
