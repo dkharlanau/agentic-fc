@@ -8,7 +8,7 @@ import threading
 import unittest
 from unittest.mock import patch
 
-from fast_path_v2.engine import FastEngine
+from hybrid_fast_v1.engine import HybridMidEngine
 from hybrid_fast_v1.build_package import build
 from hybrid_fast_v1.evaluate import errors, plan
 from hybrid_fast_v1.main import Server, SESSION_HEADER
@@ -51,9 +51,46 @@ class HybridFastHTTPTests(unittest.TestCase):
 
     def test_policy_never_attempts_model(self):
         for row in plan()[:20]:
-            commands, audit = FastEngine(2, 'stance').choose(row['request'], row['sessionKey'])
+            commands, audit = HybridMidEngine().choose(row['request'], row['sessionKey'])
             self.assertFalse(audit['modelAttempted'])
             self.assertEqual(commands[0]['playerId'], 2)
+
+    def test_missing_session_releases_without_state(self):
+        row = plan()[0]
+        commands, audit = HybridMidEngine().choose(row['request'], None)
+        self.assertEqual(commands[0]['commandType'], 'CLEAR_OVERRIDE')
+        self.assertEqual(audit['reason'], 'MISSING_SESSION_ID')
+
+    def test_duplicate_and_out_of_order_frames_release(self):
+        row = plan()[0]
+        engine = HybridMidEngine()
+        first, a = engine.choose(row['request'], 'match')
+        self.assertNotEqual(a['reason'], 'STALE_OR_DUPLICATE_FRAME')
+        duplicate, a = engine.choose(row['request'], 'match')
+        self.assertEqual(duplicate[0]['commandType'], 'CLEAR_OVERRIDE')
+        self.assertEqual(a['reason'], 'STALE_OR_DUPLICATE_FRAME')
+        payload = json.loads(json.dumps(row['request']))
+        state = json.loads(payload['prompt'])
+        state['gameState']['tick'] -= 1
+        payload['prompt'] = json.dumps(state)
+        old, a = engine.choose(payload, 'match')
+        self.assertEqual(old[0]['commandType'], 'CLEAR_OVERRIDE')
+        self.assertEqual(a['reason'], 'STALE_OR_DUPLICATE_FRAME')
+
+    def test_side_change_clears_cached_fast_state(self):
+        row = plan()[0]
+        engine = HybridMidEngine()
+        engine.choose(row['request'], 'match')
+        payload = json.loads(json.dumps(row['request']))
+        state = json.loads(payload['prompt'])
+        state['teamId'] = 1
+        state['gameState']['tick'] += 1
+        state['gameState']['gameTime'] += 2
+        payload['prompt'] = json.dumps(state)
+        commands, audit = engine.choose(payload, 'match')
+        self.assertEqual(commands[0]['commandType'], 'CLEAR_OVERRIDE')
+        self.assertEqual(audit['reason'], 'SESSION_SIDE_CHANGED')
+        self.assertNotIn('match', engine.fast.sessions)
 
     def test_ping_and_transport_rejections(self):
         self.assertEqual(self.call('GET','/ping')[0], 200)
@@ -91,7 +128,7 @@ class HybridFastPlanTests(unittest.TestCase):
             b = build(root / 'b.zip', root / 'b.json')
             self.assertEqual(a['archiveSha256'], b['archiveSha256'])
             self.assertEqual(a['dependencies'], {})
-            self.assertEqual(a['fileCount'], 9)
+            self.assertEqual(a['fileCount'], 10)
             self.assertEqual(a['playerId'], 2)
             self.assertEqual(a['modelCallsPerTick'], 0)
             self.assertLess(a['archiveBytes'], 100000)
