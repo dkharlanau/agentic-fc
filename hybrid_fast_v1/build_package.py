@@ -25,10 +25,13 @@ def build(archive, manifest):
     if '.local' not in archive.resolve().parts:
         raise ValueError('Binary archives must stay under .local')
     baseline = json.loads((ROOT / 'fast_path_v2/artifact.json').read_text())
+    l01 = json.loads((ROOT / 'mid_fast_v1/artifact.json').read_text())
     hashes = {p: hashlib.sha256((ROOT / p).read_bytes()).hexdigest() for p in SOURCES}
     for path, expected in baseline['sourceSha256'].items():
         if path in hashes and hashes[path] != expected:
             raise ValueError('Reviewed fast-path dependency changed: ' + path)
+    if hashes['mid_fast_v1/engine.py'] != l01['sourceSha256']['mid_fast_v1/engine.py']:
+        raise ValueError('Reviewed L01 on-ball policy changed')
     files = {('main.py' if p == 'hybrid_fast_v1/main.py' else p): (ROOT / p).read_bytes()
              for p in SOURCES}
     archive.parent.mkdir(parents=True, exist_ok=True)
