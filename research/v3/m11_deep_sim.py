@@ -230,6 +230,7 @@ def simulate_states(samples, seed):
     overlap_potential = 0
     onball_mismatch_vs_l01 = 0
     onball_compared = 0
+    onball_mismatch_examples = []
 
     for i in range(samples):
         home, scenario = random_state(rng, i)
@@ -264,6 +265,18 @@ def simulate_states(samples, seed):
                 onball_compared += 1
                 if signature(m_cmd[0]) != signature(l_cmd[0]):
                     onball_mismatch_vs_l01 += 1
+                    if len(onball_mismatch_examples) < 5:
+                        onball_mismatch_examples.append({
+                            'ordinal':i,
+                            'm11':m_cmd[0],
+                            'l01':l_cmd[0],
+                            'm11Signature':signature(m_cmd[0]),
+                            'l01Signature':signature(l_cmd[0]),
+                            'unlockedCommands':home.get('unlockedCommands'),
+                            'ball':home['gameState']['ball'],
+                            'mid':next(p for p in home['gameState']['players']
+                                       if p['teamCode']=='home' and p['agentId']=='agentId_2')
+                        })
             except Exception:
                 onball_mismatch_vs_l01 += 1
 
@@ -318,7 +331,8 @@ def simulate_states(samples, seed):
         'hybridDefMidPressOverlapPotentialHomeStates':overlap_potential,
         'overlapInterpretation':'Potential only: current DEF is still LLM and no joint live tick trace is simulated.',
         'onballComparedVsL01':onball_compared,
-        'onballActionMismatchVsL01':onball_mismatch_vs_l01
+        'onballActionMismatchVsL01':onball_mismatch_vs_l01,
+        'onballMismatchExamples':onball_mismatch_examples
     }
 
 
