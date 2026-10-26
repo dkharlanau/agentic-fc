@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "status": "prepared-not-deployed",
+  "status": "deep-simulation-passed-native-fitness-live-pending",
   "preparedDate": "2026-10-26",
-  "name": "M11 Hybrid Fast MID",
+  "name": "M11 Hybrid Fast MID v3",
   "formation": "1-1-2",
   "changeSurface": "MID only",
   "roles": {
@@ -23,10 +23,20 @@
     "mid": {
       "source": "hybrid_fast_v1",
       "playerId": 2,
-      "mode": "stance",
+      "mode": "hybrid-v3",
       "modelId": null,
       "modelCallsPerTick": 0,
-      "policySource": "fast_path_v2/engine.py",
+      "onBallPolicy": "mid_fast_v1/engine.py (L01 safe outlet / shot policy)",
+      "offBallPolicy": "fast_path_v2/engine.py stance, OPEN_PLAY only",
+      "coordinationGuard": "MID cannot PRESS/INTERCEPT in own defensive third; cover/mark instead",
+      "safetyGuards": [
+        "exact myPlayers=[2]",
+        "unique 10-player identity set",
+        "ownership cross-check",
+        "fresh monotonic tick/gameTime",
+        "session/side isolation",
+        "unknown state releases"
+      ],
       "entryPoint": "hybrid_fast_v1/main.py",
       "prompt": null
     },
@@ -48,14 +58,14 @@
   },
   "comparison": {
     "setupA": "L02B previous candidate: MID-only deterministic L01 policy with fastboot transport",
-    "setupB": "M11: MID-only FastEngine stance policy with minimal stdlib-only package",
+    "setupB": "M11 v3: L01 on-ball + deterministic OPEN_PLAY off-ball, defensive-third cover and freshness/ownership guards",
     "control": "current M8 plus deterministic FWD2 stance",
     "reason": "A and B keep GK/DEF/FWD1/FWD2/formation fixed so football and latency differences are attributable mainly to MID candidate"
   },
   "promotionGate": {
-    "native": "complete ordered screen; zero invalid decisions; all fresh-session first calls <= verified deadline; p95 <= engineering target",
+    "native": "complete ordered screen; zero invalid decisions; fresh-session first calls and first competitive PLAY_ON calls recorded separately; official deadline not relaxed",
     "fitness": "fresh 5/5 after exact binding",
-    "rankedPilot": "five completed games on one unchanged setup",
+    "rankedPilot": "five completed games is screening only; extend another five for ambiguous/promising result when window permits",
     "rollback": "restore MID15 baseline, verify all other role hashes/versions and fresh Fitness 5/5"
   },
   "claimsNotMade": [
@@ -63,6 +73,22 @@
     "not Fitness-tested",
     "not proven faster end-to-end",
     "not proven stronger in matches",
-    "does not change foundation model on remaining LLM roles"
-  ]
+    "local simulation is not ball-physics simulation",
+    "five ranked games would be screening, not proof"
+  ],
+  "deepRun": {
+    "result": "PASS",
+    "document": "research/v3/M11_DEEP_RUN_RESULT_20261026.ru.md",
+    "randomHomeStates": 6000,
+    "mirroredAwayStates": 6000,
+    "criticalInvariantFailures": 0,
+    "onBallMismatchVsL01": 0,
+    "homeAwayMismatches": 0,
+    "crashes": 0,
+    "defensiveThirdPressOrIntercept": 0,
+    "unknownPossessionActiveRate": 0,
+    "awsNative": null,
+    "fitness": null,
+    "ranked": null
+  }
 }
