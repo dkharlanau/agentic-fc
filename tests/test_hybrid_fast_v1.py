@@ -110,6 +110,57 @@ class HybridFastHTTPTests(unittest.TestCase):
         self.assertEqual(audit['reason'], 'SESSION_SIDE_CHANGED')
         self.assertNotIn('match', engine.fast.sessions)
 
+    def test_onball_uses_l01_dynamic_lane_safety(self):
+        row = plan()[0]
+        payload = json.loads(json.dumps(row['request']))
+        state = json.loads(payload['prompt'])
+        state['teamId'] = 0
+        state['myPlayers'] = [2]
+        state['gameState']['playMode'] = 'OPEN_PLAY'
+        state['gameState']['tick'] += 100
+        state['gameState']['gameTime'] += 100
+        positions = {
+            ('home','agentId_0'):(-50,0), ('home','agentId_1'):(-20,-12),
+            ('home','agentId_2'):(0,0), ('home','agentId_3'):(25,0),
+            ('home','agentId_4'):(18,20), ('away','agentId_0'):(50,0),
+            ('away','agentId_1'):(10,5), ('away','agentId_2'):(-20,-12),
+            ('away','agentId_3'):(18,20), ('away','agentId_4'):(35,-20),
+        }
+        for player in state['gameState']['players']:
+            player['position'] = dict(zip(('x','y'), positions[(player['teamCode'],player['agentId'])]))
+            player['velocity'] = {'x':0,'y':0}
+            player.pop('hasBall', None)
+        crossing = next(p for p in state['gameState']['players']
+                        if p['teamCode']=='away' and p['agentId']=='agentId_1')
+        crossing['velocity'] = {'x':0,'y':-15}
+        state['gameState']['ball'].update(isFree=False,possessionTeamCode='home',
+                                          possessionAgentId='agentId_2',
+                                          position={'x':0,'y':0},velocity={'x':0,'y':0})
+        payload['prompt'] = json.dumps(state)
+        commands, audit = HybridMidEngine().choose(payload, 'crossing-lane')
+        self.assertEqual(commands[0]['commandType'], 'CLEAR_OVERRIDE')
+        self.assertEqual(audit['reason'], 'NO_SAFE_OUTLET')
+        self.assertEqual(audit['decisionLayer'], 'l01_onball')
+
+    def test_offball_delegates_to_fast_engine(self):
+        row = plan()[0]
+        payload = json.loads(json.dumps(row['request']))
+        state = json.loads(payload['prompt'])
+        state['gameState']['tick'] += 200
+        state['gameState']['gameTime'] += 200
+        own = {(p['teamCode'],p['agentId']):p for p in state['gameState']['players']}
+        own[('home','agentId_2')]['position'] = {'x':0,'y':0}
+        for pid,x in ((1,-30),(3,30),(4,35)):
+            own[('home','agentId_'+str(pid))]['position'] = {'x':x,'y':20}
+        own[('away','agentId_2')]['position'] = {'x':1,'y':0}
+        state['gameState']['ball'].update(isFree=False,possessionTeamCode='away',
+                                          possessionAgentId='agentId_2',
+                                          position={'x':1,'y':0})
+        payload['prompt'] = json.dumps(state)
+        commands, audit = HybridMidEngine().choose(payload, 'offball')
+        self.assertEqual(commands[0]['commandType'], 'PRESS_BALL')
+        self.assertEqual(audit['decisionLayer'], 'fast_offball')
+
     def test_ping_and_transport_rejections(self):
         self.assertEqual(self.call('GET','/ping')[0], 200)
         self.assertEqual(self.call('POST','/invocations','{}',{'Content-Type':'text/plain'})[0], 415)
@@ -146,7 +197,7 @@ class HybridFastPlanTests(unittest.TestCase):
             b = build(root / 'b.zip', root / 'b.json')
             self.assertEqual(a['archiveSha256'], b['archiveSha256'])
             self.assertEqual(a['dependencies'], {})
-            self.assertEqual(a['fileCount'], 10)
+            self.assertEqual(a['fileCount'], 11)
             self.assertEqual(a['playerId'], 2)
             self.assertEqual(a['modelCallsPerTick'], 0)
             self.assertLess(a['archiveBytes'], 100000)
