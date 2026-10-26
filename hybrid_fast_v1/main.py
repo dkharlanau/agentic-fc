@@ -14,7 +14,7 @@ import os
 from socketserver import StreamRequestHandler, ThreadingTCPServer
 import threading
 
-from fast_path_v2.engine import FastEngine
+from hybrid_fast_v1.engine import HybridMidEngine
 
 IMPORT_MS = (time.perf_counter_ns() - BOOT_NS) / 1e6
 SESSION_HEADER = 'X-Amzn-Bedrock-AgentCore-Runtime-Session-Id'
@@ -47,7 +47,7 @@ class Server(ThreadingTCPServer):
             raise ValueError('M11 can only control MID/player 2')
         if os.environ.get('M11_MODE', 'stance') != 'stance':
             raise ValueError('M11 supports stance mode only')
-        self.engine = FastEngine(2, 'stance')
+        self.engine = HybridMidEngine()
         self.engine_lock = threading.Lock()
         self.ping_lock = threading.Lock()
         self.first_ping = True
@@ -155,7 +155,7 @@ class Handler(StreamRequestHandler):
                         self.reject(400)
                         return
                     decoded = time.perf_counter_ns()
-                    session = headers.get(SESSION_HEADER.lower(), ['anonymous'])[0]
+                    session = headers.get(SESSION_HEADER.lower(), [None])[0]
                     with self.server.engine_lock:
                         decision_started = time.perf_counter_ns()
                         commands, audit = self.server.engine.choose(payload, session)
