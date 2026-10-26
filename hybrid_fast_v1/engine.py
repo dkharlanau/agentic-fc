@@ -10,18 +10,20 @@ import math
 import time
 
 from fast_path_v2.engine import FastEngine, unwrap
+from mid_fast_v1.engine import MidEngine
 
 
 class HybridMidEngine:
     def __init__(self):
         self.fast = FastEngine(2, 'stance')
+        self.onball = MidEngine()
         self.sessions = OrderedDict()
 
     @staticmethod
     def _clear(reason, started):
         return ([{'commandType':'CLEAR_OVERRIDE','playerId':2,'parameters':{},'duration':0}],
                 {'reason':reason,'computeMs':(time.perf_counter_ns()-started)/1e6,
-                 'modelAttempted':False,'policy':'m11_hybrid_mid_v2',
+                 'modelAttempted':False,'policy':'m11_hybrid_mid_v3',
                  'basePolicy':'fast_path_v2','freshnessGuard':True})
 
     def _remember(self, session, side, tick, game_time):
@@ -30,6 +32,7 @@ class HybridMidEngine:
         while len(self.sessions) > 64:
             old, _ = self.sessions.popitem(last=False)
             self.fast.sessions.pop(old, None)
+            self.onball.sessions.pop(old, None)
 
     def choose(self, payload, session):
         started = time.perf_counter_ns()
@@ -103,14 +106,29 @@ class HybridMidEngine:
                 # the same runtime session. Clear one tick, reset, then require a
                 # fresh subsequent state before acting again.
                 self.fast.sessions.pop(session, None)
+                self.onball.sessions.pop(session, None)
                 self._remember(session, side, tick, game_time)
                 return self._clear('SESSION_SIDE_CHANGED', started)
             if tick <= previous['tick'] or game_time < previous['time']:
                 return self._clear('STALE_OR_DUPLICATE_FRAME', started)
 
+        # L01 owns every state where MID may have the ball. Its pass gate uses
+        # predicted opponent motion and stricter receiver/lane clearance. Only
+        # clearly off-ball/restart states are delegated to FastEngine for active
+        # press/cover/support. This prevents the FWD2-oriented current-lane
+        # heuristic from replacing the safer central-distribution policy.
+        onball_commands, onball_audit = self.onball.choose(payload, session)
+        if onball_audit.get('reason') not in ('ENGINE_OFF_BALL','ENGINE_RESTART'):
+            self._remember(session, side, tick, game_time)
+            audit = dict(onball_audit)
+            audit.update(policy='m11_hybrid_mid_v3', basePolicy='l01_onball',
+                         decisionLayer='l01_onball', freshnessGuard=True)
+            return onball_commands, audit
+
         commands, audit = self.fast.choose(payload, session)
         self._remember(session, side, tick, game_time)
         audit = dict(audit)
-        audit.update(policy='m11_hybrid_mid_v2', basePolicy='fast_path_v2',
-                     freshnessGuard=True)
+        audit.update(policy='m11_hybrid_mid_v3', basePolicy='fast_path_v2',
+                     decisionLayer='fast_offball', freshnessGuard=True,
+                     l01RouteReason=onball_audit.get('reason'))
         return commands, audit
