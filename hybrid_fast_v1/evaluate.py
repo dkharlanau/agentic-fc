@@ -2,9 +2,10 @@
 import hashlib
 import importlib.util
 import json
+import copy
 from pathlib import Path
 
-from fast_path_v2.engine import FastEngine
+from hybrid_fast_v1.engine import HybridMidEngine
 
 ROOT = Path(__file__).resolve().parents[1]
 _spec = importlib.util.spec_from_file_location('role_eval', ROOT / 'research/v3/role-package-r1/evaluate.py')
@@ -29,9 +30,12 @@ def plan():
     rows = []
     for session_index in range(6):
         session = 'm11-session-' + str(session_index + 1)
-        engine = FastEngine(2, 'stance')
+        engine = HybridMidEngine()
         for sequence, case in enumerate(cases):
-            request = {'prompt': json.dumps(case['input'], separators=(',', ':'), allow_nan=False)}
+            state = copy.deepcopy(case['input'])
+            state['gameState']['tick'] = 6000 + sequence
+            state['gameState']['gameTime'] = 120 + sequence * 2
+            request = {'prompt': json.dumps(state, separators=(',', ':'), allow_nan=False)}
             commands, audit = engine.choose(request, session)
             if audit['modelAttempted']:
                 raise AssertionError('M11 plan unexpectedly attempted a model')
