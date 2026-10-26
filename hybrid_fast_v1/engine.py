@@ -11,6 +11,8 @@ import time
 
 from fast_path_v2.engine import FastEngine, unwrap
 from mid_fast_v1.engine import MidEngine
+from runtime_v1.sensing import live_coordinates
+from agentic_fc.state import parse_payload
 
 
 class HybridMidEngine:
@@ -128,6 +130,52 @@ class HybridMidEngine:
             return onball_commands, audit
 
         commands, audit = self.fast.choose(payload, session)
+
+        # Hybrid coordination guard: DEF19's prompt can press in its zone and
+        # does not carry the same explicit closest-player invariant. MID must
+        # therefore not become a second chaser deep in our defensive third.
+        # Keep MID pressing/intercepting in the middle; in our third cover the
+        # central route instead. This is deterministic and side-normalized.
+        if commands[0]['commandType'] in ('PRESS_BALL','INTERCEPT'):
+            try:
+                cache = self.fast.sessions.get(session, {})
+                normalized, _, _ = live_coordinates(root, cache.get('calibration'))
+                state = parse_payload(normalized, 2)
+                reference = cache.get('pitchReference')
+                if reference is not None:
+                    home_x, away_x = reference['homeX'], reference['awayX']
+                    center = (home_x + away_x) / 2
+                    span = abs(away_x - home_x)
+                    progress = state.sign * (state.ball_x - center)
+                    if progress < -span / 6:
+                        desired = ('SET_STANCE', {'stance':2}, 0)
+                        if state.ball_status == 'THEIRS':
+                            own_x = home_x if side == 0 else away_x
+                            threats = [o for o in state.opponents
+                                       if o.pid != 0 and abs(o.y) < .18 * span]
+                            if threats:
+                                target = min(threats,
+                                             key=lambda o: math.hypot(o.x-own_x,o.y))
+                                desired = ('MARK',
+                                           {'target_player_id':target.pid,
+                                            'tightness':'TIGHT'}, 1)
+                        name, params, duration = desired
+                        allowed = root.get('unlockedCommands')
+                        if isinstance(allowed,list) and allowed and name not in allowed:
+                            name, params, duration = 'CLEAR_OVERRIDE', {}, 0
+                            reason = 'MID_COVER_COMMAND_NOT_UNLOCKED'
+                        else:
+                            reason = 'MID_DEFENSIVE_THIRD_COVER'
+                        commands = [{'commandType':name,'playerId':2,
+                                     'parameters':params,'duration':duration}]
+                        audit = dict(audit)
+                        audit['reason'] = reason
+                        audit['defensiveThirdGuard'] = True
+            except (ValueError,TypeError,KeyError,AttributeError):
+                # FastEngine already validated its own decision. A failure in
+                # this extra coordination guard may not invent a replacement.
+                pass
+
         self._remember(session, side, tick, game_time)
         audit = dict(audit)
         audit.update(policy='m11_hybrid_mid_v3', basePolicy='fast_path_v2',
