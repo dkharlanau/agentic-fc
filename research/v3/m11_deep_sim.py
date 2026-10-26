@@ -164,8 +164,22 @@ def safety_issues(state, command):
     if type(duration) is not int:
         issues.append('duration_not_int')
     own_code = 'home' if state.get('teamId') == 0 else 'away'
+    ball = state['gameState']['ball']
     owner = explicit_owner(state)
     mine = (own_code, 'agentId_2')
+    team_code = ball.get('possessionTeamCode')
+    team_id = ball.get('possessionTeamId')
+    agent_id = ball.get('possessionAgentId')
+    player_id = ball.get('possessionPlayerId')
+    if team_code is not None and team_id is not None and type(team_id) is int and team_id in (0,1) and ('home','away')[team_id] != team_code:
+        issues.append('contradictory_team_ownership_fields')
+    if agent_id is not None and player_id is not None and type(player_id) is int and agent_id != 'agentId_'+str(player_id):
+        issues.append('contradictory_player_ownership_fields')
+    true_flags=[(p.get('teamCode'),p.get('agentId')) for p in state['gameState']['players'] if p.get('hasBall') is True]
+    if len(true_flags)>1:
+        issues.append('multiple_hasBall_true')
+    if ball.get('isFree') is True and (owner not in (None,'free') or true_flags):
+        issues.append('free_ball_with_owner')
     if owner is not None:
         if owner != mine and name in ON_BALL:
             issues.append('on_ball_action_without_explicit_ownership')
@@ -316,7 +330,7 @@ def adversarial_matrix():
     def contradiction(s):
         s['gameState']['ball'].update(isFree=False,possessionTeamCode='home',
                                      possessionTeamId=1,possessionAgentId='agentId_2')
-    add('contradictory-owner', contradiction, None)
+    add('contradictory-owner', contradiction, 'CONTRADICTORY_POSSESSION')
     def unresolved3d(s):
         s['gameState']['ball']['position']={'x':0,'y':0,'z':0}
         for p in s['gameState']['players']:
