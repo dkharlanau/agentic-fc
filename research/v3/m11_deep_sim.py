@@ -228,6 +228,8 @@ def simulate_states(samples, seed):
     liveness = {'M11':Counter(),'L01':Counter()}
     full_fast_multiple_pressers = 0
     overlap_potential = 0
+    onball_mismatch_vs_l01 = 0
+    onball_compared = 0
 
     for i in range(samples):
         home, scenario = random_state(rng, i)
@@ -254,6 +256,16 @@ def simulate_states(samples, seed):
                 liveness[label][scenario+':total'] += 1
             if signature(h) != signature(a):
                 counts[label]['mirrorMismatch'] += 1
+
+        if scenario == 'mid' and home['gameState']['playMode'] == 'OPEN_PLAY':
+            try:
+                m_cmd,_ = HybridMidEngine().choose(request(home),'compare-m11-'+str(i))
+                l_cmd,_ = MidEngine().choose(request(home),'compare-l01-'+str(i))
+                onball_compared += 1
+                if signature(m_cmd[0]) != signature(l_cmd[0]):
+                    onball_mismatch_vs_l01 += 1
+            except Exception:
+                onball_mismatch_vs_l01 += 1
 
         # Full FastEngine is only a shadow future architecture: it is not the
         # current hybrid team. It should machine-enforce <=1 presser.
@@ -304,7 +316,9 @@ def simulate_states(samples, seed):
         'candidates':result,
         'fullFastShadowMultiplePressers':full_fast_multiple_pressers,
         'hybridDefMidPressOverlapPotentialHomeStates':overlap_potential,
-        'overlapInterpretation':'Potential only: current DEF is still LLM and no joint live tick trace is simulated.'
+        'overlapInterpretation':'Potential only: current DEF is still LLM and no joint live tick trace is simulated.',
+        'onballComparedVsL01':onball_compared,
+        'onballActionMismatchVsL01':onball_mismatch_vs_l01
     }
 
 
@@ -517,6 +531,7 @@ def main():
               + result['stateSimulation']['candidates']['M11']['mirrorTypeOrTargetMismatches']
               + result['stateSimulation']['candidates']['M11']['crashes']
               + result['stateSimulation']['fullFastShadowMultiplePressers']
+              + result['stateSimulation']['onballActionMismatchVsL01']
               + result['adversarial']['criticalFailures'])
     result['criticalInvariantFailures']=critical
     if args.output:
