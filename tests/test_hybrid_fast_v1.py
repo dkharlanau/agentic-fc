@@ -3,11 +3,13 @@ from http.client import HTTPConnection
 import json
 import os
 from pathlib import Path
+import shutil
 import threading
 import unittest
 from unittest.mock import patch
 
 from fast_path_v2.engine import FastEngine
+from hybrid_fast_v1.build_package import build
 from hybrid_fast_v1.evaluate import errors, plan
 from hybrid_fast_v1.main import Server, SESSION_HEADER
 
@@ -78,6 +80,23 @@ class HybridFastPlanTests(unittest.TestCase):
             self.assertTrue(values[0]['firstInSession'])
             self.assertTrue(all(not row['firstInSession'] for row in values[1:]))
             self.assertEqual([row['sequence'] for row in values], list(range(len(values))))
+
+    def test_reproducible_stdlib_package(self):
+        root = ROOT / '.local' / 'm11-ci-package'
+        if root.exists():
+            shutil.rmtree(root)
+        root.mkdir(parents=True)
+        try:
+            a = build(root / 'a.zip', root / 'a.json')
+            b = build(root / 'b.zip', root / 'b.json')
+            self.assertEqual(a['archiveSha256'], b['archiveSha256'])
+            self.assertEqual(a['dependencies'], {})
+            self.assertEqual(a['fileCount'], 9)
+            self.assertEqual(a['playerId'], 2)
+            self.assertEqual(a['modelCallsPerTick'], 0)
+            self.assertLess(a['archiveBytes'], 100000)
+        finally:
+            shutil.rmtree(root, ignore_errors=True)
 
     def test_plan_has_both_sides_and_no_expected_model_metadata(self):
         sides = set()
