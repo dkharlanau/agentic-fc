@@ -15,8 +15,10 @@ import math
 from pathlib import Path
 import random
 import re
+import sys
 
 ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT))
 
 from fast_path_v2.engine import FastEngine
 from hybrid_fast_v1.engine import HybridMidEngine
