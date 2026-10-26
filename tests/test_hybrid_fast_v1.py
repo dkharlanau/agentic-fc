@@ -6,11 +6,13 @@ from pathlib import Path
 import shutil
 import threading
 import unittest
+from types import SimpleNamespace
 from unittest.mock import patch
 
 from hybrid_fast_v1.engine import HybridMidEngine
 from hybrid_fast_v1.build_package import build
 from hybrid_fast_v1.evaluate import errors, plan
+from hybrid_fast_v1.deploy import plan as deployment_plan
 from hybrid_fast_v1.main import Server, SESSION_HEADER
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -225,6 +227,28 @@ class HybridFastPlanTests(unittest.TestCase):
             self.assertEqual(a['playerId'], 2)
             self.assertEqual(a['modelCallsPerTick'], 0)
             self.assertLess(a['archiveBytes'], 100000)
+        finally:
+            shutil.rmtree(root, ignore_errors=True)
+
+    def test_deployment_helper_is_plan_only_and_exact_mid_env(self):
+        root = ROOT / '.local' / 'm11-ci-deploy'
+        if root.exists():
+            shutil.rmtree(root)
+        root.mkdir(parents=True)
+        try:
+            archive = root / 'deployment.zip'
+            manifest = root / 'artifact.json'
+            build(archive, manifest)
+            args = SimpleNamespace(
+                archive=archive, manifest=manifest, source_commit='0'*40,
+                name='nhitl_m11_mid', execution_role_arn='${NEW_EXECUTION_ROLE_ARN}',
+                bucket='${WORKSHOP_CODE_BUCKET}')
+            request, _, _, _ = deployment_plan(args)
+            self.assertEqual(request['environmentVariables'], {
+                'PLAYER_ID':'2','M11_MODE':'stance','M11_AUDIT':'1','BUILD_COMMIT':'0'*40})
+            self.assertEqual(request['agentRuntimeArtifact']['codeConfiguration']['runtime'], 'PYTHON_3_13')
+            self.assertEqual(request['agentRuntimeArtifact']['codeConfiguration']['entryPoint'], ['main.py'])
+            self.assertEqual(request['networkConfiguration'], {'networkMode':'PUBLIC'})
         finally:
             shutil.rmtree(root, ignore_errors=True)
 
