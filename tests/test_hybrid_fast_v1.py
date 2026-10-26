@@ -77,6 +77,24 @@ class HybridFastHTTPTests(unittest.TestCase):
         self.assertEqual(old[0]['commandType'], 'CLEAR_OVERRIDE')
         self.assertEqual(a['reason'], 'STALE_OR_DUPLICATE_FRAME')
 
+    def test_non_exact_binding_and_duplicate_identity_release(self):
+        row = plan()[0]
+        payload = json.loads(json.dumps(row['request']))
+        state = json.loads(payload['prompt'])
+        state['myPlayers'] = [2,3]
+        payload['prompt'] = json.dumps(state)
+        commands, audit = HybridMidEngine().choose(payload, 'binding')
+        self.assertEqual(commands[0]['commandType'], 'CLEAR_OVERRIDE')
+        self.assertEqual(audit['reason'], 'WRONG_BINDING')
+
+        payload = json.loads(json.dumps(row['request']))
+        state = json.loads(payload['prompt'])
+        state['gameState']['players'][6]['agentId'] = state['gameState']['players'][5]['agentId']
+        payload['prompt'] = json.dumps(state)
+        commands, audit = HybridMidEngine().choose(payload, 'identity')
+        self.assertEqual(commands[0]['commandType'], 'CLEAR_OVERRIDE')
+        self.assertEqual(audit['reason'], 'INVALID_PLAYER_IDENTITY_SET')
+
     def test_side_change_clears_cached_fast_state(self):
         row = plan()[0]
         engine = HybridMidEngine()
