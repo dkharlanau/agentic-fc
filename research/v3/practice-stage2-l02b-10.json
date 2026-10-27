@@ -4,7 +4,7 @@
   "status": "running",
   "ownerGoal": "Owner explicitly allowed temporary Practice testing during autonomous work",
   "targetCompletedMatches": 10,
-  "completedMatches": 8,
+  "completedMatches": 9,
   "sourceCommit": "912b687141c03f72b24ab002a8bd0d9d6d646804",
   "archiveSha256": "2fdad20a8e8a226d36ab81f5223c2c21cc16d80980c80db7c641a69bb79ac763",
   "formation": "1-1-2",
@@ -648,6 +648,83 @@
       "scoreless": false,
       "cleanSheet": false,
       "savedAtUTC": "2026-10-27T13:17:37.200987+00:00"
+    },
+    {
+      "opponent": "Fort Knox Athletic",
+      "opponentStyle": "defensive",
+      "side": "HOME",
+      "result": "WIN",
+      "goalsFor": 2,
+      "goalsAgainst": 0,
+      "shotsFor": 5,
+      "shotsAgainst": 1,
+      "shotsOnTargetFor": 2,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 39,
+      "teamReportAverageLatencyMs": 842,
+      "teamReportCommands": 370,
+      "teamReportCommandCounts": {
+        "MARK": 162,
+        "MOVE_TO": 79,
+        "PASS": 52,
+        "PRESS_BALL": 34,
+        "INTERCEPT": 30,
+        "CLEAR_OVERRIDE": 11,
+        "GK_DISTRIBUTE": 2
+      },
+      "perRoleReportLatencyMs": {
+        "GK": 676,
+        "DEF": 1045,
+        "MID": 921,
+        "FWD1": 656,
+        "FWD2": 1028
+      },
+      "perRoleReportedSuccessPercent": {
+        "GK": 100,
+        "DEF": 100,
+        "MID": 100,
+        "FWD1": 100,
+        "FWD2": 100
+      },
+      "candidateAudit": {
+        "scope": "Latest isolated Runtime process; includes startup/bootstrap; unique session and match-window mapping retained privately",
+        "requestCount": 72,
+        "commandCounts": {
+          "CLEAR_OVERRIDE": 70,
+          "PASS": 2
+        },
+        "reasonCounts": {
+          "INCOMPLETE_PLAYERS": 1,
+          "SAFE_PROGRESSIVE_PASS": 2,
+          "ENGINE_OFF_BALL": 34,
+          "UNKNOWN_POSSESSION": 23,
+          "ENGINE_RESTART": 12
+        },
+        "modelAttempted": 0,
+        "handlerMaxMs": 1.080171,
+        "fullNativeLatency": null,
+        "firstCompetitivePlayOnLatencyMs": null,
+        "lateActionRate": null,
+        "invalidResponseRate": null
+      },
+      "criticalFailure": null,
+      "primaryReportAlias": "practice-l02b-09-report",
+      "preMatchConnectivityLatencyMs": {
+        "GK": 395,
+        "DEF": 329,
+        "MID": 1222,
+        "FWD1": 294,
+        "FWD2": 1624
+      },
+      "telemetryInconsistencies": [
+        "Submitted Runtime commands differ from report/default-engine command counts; command application semantics unresolved",
+        "Reported100%success does not establish full native deadline compliance"
+      ],
+      "id": "stage2-practice-l02b-09",
+      "mode": "practice",
+      "scoreless": false,
+      "cleanSheet": true,
+      "savedAtUTC": "2026-10-27T13:25:48.708221+00:00"
     }
   ],
   "summary": null,
@@ -656,7 +733,7 @@
     "Native cold calls failed the original engineering gate; real-game pilot does not erase this result",
     "Unavailable per-game telemetry stays null"
   ],
-  "updatedAtUTC": "2026-10-27T13:17:37.200987+00:00",
+  "updatedAtUTC": "2026-10-27T13:25:48.708221+00:00",
   "bindingsDigestSha256": "12eb2eefa82d494b176974c69baa565f4c5ca4ad0c54e42883e38b2fcec1c848",
   "fitnessAttempts": [
     {
