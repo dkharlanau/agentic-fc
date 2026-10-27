@@ -1,3 +1,14 @@
+# M11 live cohort checkpoint — 2026-10-27
+
+M11 finalretry source912b687 / ZIPe259682c...:2/20 completed Practice,1W1L,3:4.
+Game1 Benchmark0:2, game2 TotalAttack3:2 after0:1. Next game3 FortKnox.
+All exact bindings/1-1-2 frozen, freshFitness5/5 before cohort. No tuning.
+Finish20 M11, canonicalMID15 Baseline rollback+freshFitness, then20 Baseline
+in same bot order; compare after both. L02B stopped10 by owner's redirect.
+Native/model checks completed and all own sessions cleaned; no further probe
+is active or required. Current live URL/status from private active-match.json
+and fresh portal takes precedence. Goal remainsactive; required Baseline0/20.
+
 # Current M11 readiness — 2026-10-27
 
 FinalM11 retry source912b687 is READY/readback verified, exact five portal

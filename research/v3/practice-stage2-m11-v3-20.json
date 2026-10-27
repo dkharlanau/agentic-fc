@@ -1,10 +1,10 @@
 {
   "schemaVersion": 2,
   "candidate": "M11 Hybrid v3",
-  "status": "ready-first-benchmark",
+  "status": "running",
   "ownerGoal": "Latest owner: test M11 then compare against canonical Baseline on same built-in benchmarks",
   "targetCompletedMatches": 20,
-  "completedMatches": 0,
+  "completedMatches": 2,
   "sourceCommit": "912b687141c03f72b24ab002a8bd0d9d6d646804",
   "archiveSha256": "e259682c101f5eae1d5d769cff524b98f3b0aa0628f572822f8ab97be139fbba",
   "formation": "1-1-2",
@@ -30,14 +30,172 @@
     "goalDifference": 107,
     "points": 366
   },
-  "matches": [],
+  "matches": [
+    {
+      "opponent": "The Benchmark FC",
+      "opponentStyle": "balanced",
+      "side": "HOME",
+      "result": "LOSS",
+      "goalsFor": 0,
+      "goalsAgainst": 2,
+      "shotsFor": 2,
+      "shotsAgainst": 8,
+      "shotsOnTargetFor": 0,
+      "shotsOnTargetAgainst": 2,
+      "possessionPercent": 41,
+      "teamReportAverageLatencyMs": 898,
+      "teamReportCommands": 370,
+      "teamReportCommandCounts": {
+        "PRESS_BALL": 127,
+        "MOVE_TO": 124,
+        "INTERCEPT": 49,
+        "SHOOT": 34,
+        "PASS": 18,
+        "CLEAR_OVERRIDE": 14,
+        "GK_DISTRIBUTE": 2,
+        "MARK": 2
+      },
+      "perRoleReportLatencyMs": {
+        "GK": 651,
+        "DEF": 885,
+        "MID": 993,
+        "FWD1": 681,
+        "FWD2": 1069
+      },
+      "perRoleReportedSuccessPercent": {
+        "GK": 100,
+        "DEF": 100,
+        "MID": 100,
+        "FWD1": 100,
+        "FWD2": 100
+      },
+      "candidateAudit": {
+        "sourceCommit": "912b687141c03f72b24ab002a8bd0d9d6d646804",
+        "scope": "Latest isolated Runtime process; includes startup/bootstrap; unique session and match-window mapping retained privately",
+        "requestCount": 72,
+        "commandCounts": {
+          "CLEAR_OVERRIDE": 69,
+          "PASS": 3
+        },
+        "reasonCounts": {
+          "INVALID_PLAYER_IDENTITY_SET": 1,
+          "UNKNOWN_POSSESSION": 39,
+          "UNKNOWN_GEOMETRY": 16,
+          "ENGINE_RESTART": 13,
+          "SAFE_RECYCLE_PASS": 3
+        },
+        "modelAttempted": 0,
+        "handlerMaxMs": 1.25693,
+        "fullNativeLatency": null,
+        "firstCompetitivePlayOnLatencyMs": null,
+        "lateActionRate": null,
+        "invalidResponseRate": null
+      },
+      "criticalFailure": null,
+      "primaryReportAlias": "practice-m11-01-report",
+      "preMatchConnectivityLatencyMs": {
+        "GK": 314,
+        "DEF": 526,
+        "MID": 1362,
+        "FWD1": 337,
+        "FWD2": 1101
+      },
+      "telemetryInconsistencies": [
+        "Submitted Runtime commands differ from report/default-engine command counts; command application semantics unresolved",
+        "Reported100%success does not establish full native deadline compliance"
+      ],
+      "id": "stage2-practice-m11-v3-01",
+      "mode": "practice",
+      "scoreless": true,
+      "cleanSheet": false,
+      "savedAtUTC": "2026-10-27T14:05:38.365388+00:00"
+    },
+    {
+      "opponent": "Total Attack United",
+      "opponentStyle": "aggressive",
+      "side": "HOME",
+      "result": "WIN",
+      "goalsFor": 3,
+      "goalsAgainst": 2,
+      "shotsFor": 5,
+      "shotsAgainst": 7,
+      "shotsOnTargetFor": 3,
+      "shotsOnTargetAgainst": 2,
+      "possessionPercent": 34,
+      "teamReportAverageLatencyMs": 938,
+      "teamReportCommands": 490,
+      "teamReportCommandCounts": {
+        "MOVE_TO": 262,
+        "PRESS_BALL": 145,
+        "SHOOT": 60,
+        "CLEAR_OVERRIDE": 19,
+        "GK_DISTRIBUTE": 2,
+        "INTERCEPT": 2
+      },
+      "perRoleReportLatencyMs": {
+        "GK": 706,
+        "DEF": 886,
+        "MID": 897,
+        "FWD1": 648,
+        "FWD2": 1067
+      },
+      "perRoleReportedSuccessPercent": {
+        "GK": 100,
+        "DEF": 100,
+        "MID": 100,
+        "FWD1": 100,
+        "FWD2": 100
+      },
+      "candidateAudit": {
+        "sourceCommit": "912b687141c03f72b24ab002a8bd0d9d6d646804",
+        "scope": "Latest isolated Runtime process; includes startup/bootstrap; unique session and match-window mapping retained privately",
+        "requestCount": 95,
+        "commandCounts": {
+          "CLEAR_OVERRIDE": 92,
+          "PASS": 3
+        },
+        "reasonCounts": {
+          "INVALID_PLAYER_IDENTITY_SET": 1,
+          "UNKNOWN_POSSESSION": 33,
+          "UNKNOWN_GEOMETRY": 30,
+          "SAFE_PROGRESSIVE_PASS": 3,
+          "ENGINE_RESTART": 27,
+          "NO_SAFE_OUTLET": 1
+        },
+        "modelAttempted": 0,
+        "handlerMaxMs": 1.009931,
+        "fullNativeLatency": null,
+        "firstCompetitivePlayOnLatencyMs": null,
+        "lateActionRate": null,
+        "invalidResponseRate": null
+      },
+      "criticalFailure": null,
+      "primaryReportAlias": "practice-m11-02-report",
+      "preMatchConnectivityLatencyMs": {
+        "GK": 266,
+        "DEF": 249,
+        "MID": 1140,
+        "FWD1": 264,
+        "FWD2": 1184
+      },
+      "telemetryInconsistencies": [
+        "Submitted Runtime commands differ from report/default-engine command counts; command application semantics unresolved",
+        "Reported100%success does not establish full native deadline compliance"
+      ],
+      "id": "stage2-practice-m11-v3-02",
+      "mode": "practice",
+      "scoreless": false,
+      "cleanSheet": false,
+      "savedAtUTC": "2026-10-27T14:16:35.879194+00:00"
+    }
+  ],
   "summary": null,
   "criticalFailure": null,
   "limitations": [
     "Native cold calls failed the original engineering gate; real-game pilot does not erase this result",
     "Unavailable per-game telemetry stays null"
   ],
-  "updatedAtUTC": "2026-10-27T12:07:54.113746+00:00",
+  "updatedAtUTC": "2026-10-27T14:16:35.879194+00:00",
   "historicalNativeGate": {
     "passed": false,
     "sourceCommit": "244065b0d3fe10447759c2afa8684f42fa566474",
