@@ -1,0 +1,43 @@
+{
+  "status": "local-validated-before-deploy",
+  "coachVersion": "coach-v1.0",
+  "ownerAuthorization": "Owner explicitly requests three coordinated corrections then Fitness/prematch and exactly two observed games; later correction preserves FWD4, retains DEF2 dribbling unless better safe scoring pass.",
+  "threeChanges": [
+    {
+      "id": "GK-INCOMING",
+      "role": "GK",
+      "change": "One-tick non-aggressive INTERCEPT for known low free ball flying into bounded goal-mouth corridor, arrival0.1\u20131.2s, already within0.30span. Else priorkeeping.",
+      "risk": "Action may not improve actual engine saves; test physical positioning and rollback on rush/keeper regression."
+    },
+    {
+      "id": "FWD2-COORDINATED",
+      "role": "FWD5/playerId4",
+      "change": "Distinct passing lane without sprint; remain midfield outlet on loss unless nearest local chaser. Confirmed own possession under pressure prioritises a nearby open field teammate. HOME positional gate only; AWAY retains prior positional policy.",
+      "risk": "Possession inference remains conservative; candidate may execute few passes. No blind ownership relaxation."
+    },
+    {
+      "id": "DEF-FORWARD-PASS",
+      "role": "DEF2/playerId1",
+      "change": "Preserve defensive rules; prefer immediate safe pass to better-positioned open forward, otherwise retain ball safely. Original model/settings unchanged.",
+      "risk": "Model prompt behaviour is not guaranteed; native checks plusFitness required."
+    }
+  ],
+  "preserved": [
+    "MID3 L02B retry5",
+    "FWD4 original",
+    "formation1-1-2",
+    "model selection",
+    "IAM and access"
+  ],
+  "replacedExperiment": "Open-goal extension not exercised in161FWD2calls across2games; benefits unproven, FWD2 returns baseline shot rule.",
+  "validation": "23 local unit tests; exact AWS readback; saved native role and mirrored/guard checks; Fitness5/5; prematchready;2Practice TotalAttack thenFortKnox.",
+  "rollback": "Exact open-goal-predecessor5bindings saved privately; restore affectedGK/DEF/FWD2, freshFitness5/5.",
+  "latency": "No additional model call forGK/FWD2, bounded geometry;DEFsame model and one response. Full/native/network latency measured separately.",
+  "limitations": [
+    "Goal anchors are proxies",
+    "INTERCEPT is documented but improved saving not yet demonstrated",
+    "HOME support movement verified historically; AWAY not assumed",
+    "Reports role/latency attribution unresolved",
+    "No guaranteed tournament win"
+  ]
+}

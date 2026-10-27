@@ -1,3 +1,20 @@
+## 2026-10-27 — shot pilot closed; owner requests three corrections
+
+coach-v1.0 actually reread on resume, unchanged. Completed2Practice:FortKnox2:0,
+TotalAttack2:3;4:3goals,12:7shots. FWD2 exact logs161calls,0SHOOT; extension
+unexercised, benefit unproven. GK168calls allCLEAR; near-goal positions in sampled
+owned logs contradict wandering/model-wait explanation. C02: owner empty-goal
+miss remains unattributed; screen00:08 vsTotalAttack showed two forwards clustered
+with low energy. At01:40 DEF2 had ball with a seemingly open diagonal forward;
+next goal cannot be attributed to that gap. C03: incoming-ball interception is
+a bounded new hypothesis, not a proven save fix. Owner explicitly authorises
+three corrections, overriding single-change guidance: GK incoming ball; FWD2
+separate outlet/pressure release; DEF2 safe scoring pass while preserving good
+carrying and defence. Owner corrects FWD4 is good: unchanged. MID3/112 unchanged.
+Plan:coach-three-stage2/plan.json. Fresh native/readback/Fitness5/5 before exactly
+two observedPractice games. Rollback exact previousbindings; quota reserve10%.
+No change during matches; no new agents or automation.
+
 ## 2026-10-27 — three-bot GK block closed; next open-goal shot pilot
 
 coach-v1.0 actually read on resume and hash rechecked unchanged after block.

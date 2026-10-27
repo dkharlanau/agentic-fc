@@ -2,8 +2,8 @@
   "cohort": "l02b-open-goal-01",
   "mode": "practice",
   "targetCompletedMatches": 2,
-  "completedMatches": 0,
-  "status": "running",
+  "completedMatches": 2,
+  "status": "completed",
   "sourceCommit": "5d3d13ab1b385abb205bf3a9054c0152a7391631",
   "archiveSha256": "180da69d21ef466a336cf43847682c2ed8bcd717cc7cf7e9c44c3de4bced39db",
   "formation": "1-1-2",
@@ -14,6 +14,135 @@
     "Fort Knox Athletic",
     "Total Attack United"
   ],
-  "matches": [],
-  "createdAtUTC": "2026-10-27T16:40:51.971487+00:00"
+  "matches": [
+    {
+      "opponent": "Fort Knox Athletic",
+      "opponentStyle": "defensive",
+      "side": "HOME",
+      "result": "WIN",
+      "goalsFor": 2,
+      "goalsAgainst": 0,
+      "shotsFor": 4,
+      "shotsAgainst": 1,
+      "shotsOnTargetFor": 2,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 42,
+      "teamReportAverageLatencyMs": 945,
+      "teamReportCommands": 370,
+      "teamReportCommandCounts": {
+        "MARK": 97,
+        "PRESS_BALL": 94,
+        "MOVE_TO": 68,
+        "PASS": 55,
+        "INTERCEPT": 32,
+        "CLEAR_OVERRIDE": 18,
+        "GK_DISTRIBUTE": 6
+      },
+      "perRoleReportLatencyMs": {
+        "GK": 612,
+        "DEF": 960,
+        "MID": 980,
+        "FWD1": 602,
+        "FWD2": 969
+      },
+      "perRoleReportedSuccessPercent": {
+        "GK": 100,
+        "DEF": 100,
+        "MID": 100,
+        "FWD1": 100,
+        "FWD2": 100
+      },
+      "id": "stage2-open-goal-01",
+      "mode": "practice",
+      "sourceCommit": "5d3d13ab1b385abb205bf3a9054c0152a7391631",
+      "scoreless": false,
+      "cleanSheet": true,
+      "visualEvidenceAlias": "open-goal-01-visual",
+      "passCompletionRate": null,
+      "actualPassAttempts": null,
+      "actualCompletedPasses": null,
+      "reportedShotAccuracy": 0.5,
+      "notes": [
+        "Owner observed a forward miss at an empty goal and uncoordinated play; the exact shot moment/kicker was not captured in assistant frames. Do not attribute it to the new branch without Runtime evidence.",
+        "Most match elapsed during context recovery; only opening and late samples observed. Not a continuous coaching review.",
+        "At01:43 DEF2 was central behind the contest, MID3 remained nearer own box; FWD4 contested a tight central cluster.",
+        "At01:54 FWD4 was near opponent upper-right corner with two defenders close; visible isolation suggests checking support/outlet positioning, not a proven passing fault.",
+        "Final2:0, report4:1shots; report goal labels MID3 and Unknown. Report role-command/latency attribution remains unresolved."
+      ],
+      "savedAtUTC": "2026-10-27T16:46:16.708075+00:00"
+    },
+    {
+      "opponent": "Total Attack United",
+      "opponentStyle": "aggressive",
+      "side": "HOME",
+      "result": "LOSS",
+      "goalsFor": 2,
+      "goalsAgainst": 3,
+      "shotsFor": 8,
+      "shotsAgainst": 6,
+      "shotsOnTargetFor": 2,
+      "shotsOnTargetAgainst": 3,
+      "possessionPercent": 40,
+      "teamReportAverageLatencyMs": 823,
+      "teamReportCommands": 475,
+      "teamReportCommandCounts": {
+        "MOVE_TO": 155,
+        "INTERCEPT": 142,
+        "PRESS_BALL": 79,
+        "SHOOT": 71,
+        "CLEAR_OVERRIDE": 26,
+        "GK_DISTRIBUTE": 2
+      },
+      "perRoleReportLatencyMs": {
+        "GK": 585,
+        "DEF": 892,
+        "MID": 962,
+        "FWD1": 596,
+        "FWD2": 929
+      },
+      "perRoleReportedSuccessPercent": {
+        "GK": 100,
+        "DEF": 100,
+        "MID": 100,
+        "FWD1": 100,
+        "FWD2": 100
+      },
+      "id": "stage2-open-goal-02",
+      "mode": "practice",
+      "sourceCommit": "5d3d13ab1b385abb205bf3a9054c0152a7391631",
+      "scoreless": false,
+      "cleanSheet": false,
+      "visualEvidenceAlias": "open-goal-02-visual",
+      "passCompletionRate": null,
+      "actualPassAttempts": null,
+      "actualCompletedPasses": null,
+      "reportedShotAccuracy": 0.25,
+      "notes": [
+        "00:08: both forwards in the same narrow central corridor outside opponent box; both visible stamina bars nearly depleted. MID3/DEF2 deeper. Supports testing role separation, not proof of exact pass loss.",
+        "00:17 ball reached opponent penalty area with keeper Max Fury far left of goal; origin/power of kick not captured.",
+        "00:27 ball approaching DEF2 in own half; MID3 up-left and FWD4/FWD5 separated beyond midfield. Own GK stayed near goal, opposing GK was near midfield. This is a counterexample to forwards always retreating together.",
+        "00:36 ball at opponent goalmouth beside Vic Surge; FWD4 trailing with low energy. Cannot infer shot aim/power from one frame.",
+        "00:44 FWD4 contesting near halfway with very low stamina; FWD5 separately lower down the pitch, DEF2 and MID3 behind. Separation already happens sometimes.",
+        "00:57 score0:1; scoring contact was between sampled frames. No claim about distance or goalkeeper error.",
+        "Next captured restart showed1:1 commentary; equalising strike itself not captured.",
+        "01:14 opponent keeper was near halfway, but Vic Surge covered the goal line; ball approaching him. Vacated keeper does not mean unobstructed goal. FWD4 was in a cluster outside box.",
+        "After01:14 next restart commentary confirmed2:1; ball crossing line was not sampled.",
+        "Next restart2:2 after opponent Al Frenzy had ball in own half at01:17. The shot flight and our goalkeeper contact were not captured; cannot classify as confirmed long-range goal.",
+        "01:40 DEF2 visibly controlled ball at midfield under pressure from behind; FWD5 was diagonally ahead below with no obvious intervening defender in this camera view, FWD4 wide above. Good concrete candidate for earlier safe forward pass.",
+        "After01:40 next scoring animation/report commentary2:3; intervening possession loss and shot not captured. Do not call DEF2 causal error from this gap.",
+        "01:53 MID3 carrying toward empty opponent goal with pursuers behind, FWD4 wide upper side/FWD5 lower. DEF2 behind center. Need actual possession-to-command joins before attributing decisions."
+      ],
+      "savedAtUTC": "2026-10-27T16:51:55.749052+00:00"
+    }
+  ],
+  "createdAtUTC": "2026-10-27T16:40:51.971487+00:00",
+  "summary": {
+    "wins": 1,
+    "losses": 1,
+    "goalsFor": 4,
+    "goalsAgainst": 3,
+    "shotsFor": 12,
+    "shotsAgainst": 7
+  },
+  "decision": "No new shot triggers in161FWD2calls; insufficient benefit. Owner requests next three-role corrections after completed block."
 }

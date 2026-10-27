@@ -45,15 +45,18 @@ def unwrap(payload):
 
 
 class FastEngine:
-    def __init__(self,player_id,support_mode='stance',shot_mode='baseline'):
+    def __init__(self,player_id,support_mode='stance',shot_mode='baseline',keeper_mode='baseline'):
         if type(player_id) is not int or player_id not in range(5):raise ValueError('player_id')
-        if support_mode not in ('stance','probe-wide','outlet'):raise ValueError('support_mode')
+        if support_mode not in ('stance','probe-wide','outlet','coordinated'):raise ValueError('support_mode')
         if support_mode!='stance' and player_id!=4:raise ValueError('FWD2-only mode')
         if shot_mode not in ('baseline','open-goal'):raise ValueError('shot_mode')
         if shot_mode!='baseline' and player_id!=4:raise ValueError('FWD2-only shot mode')
+        if keeper_mode not in ('baseline','incoming'):raise ValueError('keeper_mode')
+        if keeper_mode!='baseline' and player_id!=0:raise ValueError('GK-only mode')
         self.pid=player_id
         self.support_mode=support_mode
         self.shot_mode=shot_mode
+        self.keeper_mode=keeper_mode
         self.sessions={}
 
     def choose(self,payload,session='test'):
@@ -123,9 +126,28 @@ class FastEngine:
             # AWAY application are not assumed until the new trace verifies them.
             return done('MOVE_TO',{'target_x':-2.0*sign,'target_y':2.8,'sprint':False},'FWD2_CONTROL_PROBE')
         def dist(a,b):return math.hypot(a.x-b.x,a.y-b.y)
+        def safe_receivers():
+            targets=[]
+            for mate in state.teammates:
+                if mate.pid==pid:continue
+                space=min((dist(o,mate) for o in state.opponents),default=0)
+                lane=min((line_distance(o.x,o.y,me.x,me.y,mate.x,mate.y) for o in state.opponents),default=0)
+                if space>.04*span and lane>.02*span:
+                    value=sign*(mate.x-me.x)-.1*dist(me,mate)+(5 if mate.pid in (2,3,4) else 0)
+                    targets.append((value,-mate.pid,mate.pid))
+            return targets
         if state.i_have_ball:
             # Explicit hasBall=false overrides inferred/qualified ownership.
             if me.has_ball is False:return done(reason='CONTRADICTORY_POSSESSION')
+            targets=safe_receivers()
+            if self.support_mode=='coordinated' and state.play_mode=='PLAY_ON' and \
+                    min((dist(me,o) for o in state.opponents),default=span)<.06*span:
+                # A nearby open field player is a release from pressure, not a
+                # blind long clearance or a pass back across our own goal.
+                nearby=[t for t in targets if t[2]!=0 and
+                        .03*span<dist(me,next(p for p in state.teammates if p.pid==t[2]))<.35*span]
+                if nearby:
+                    return done('PASS',{'target_player_id':max(nearby)[2],'type':'GROUND'},'PRESSURE_RELEASE')
             corridor=min((line_distance(o.x,o.y,me.x,me.y,goal_x,0) for o in state.opponents if o.pid!=0),default=span)
             if self.shot_mode=='open-goal' and state.play_mode=='PLAY_ON':
                 # Fixed keeper anchors are goal proxies, not surveyed posts.
@@ -143,19 +165,53 @@ class FastEngine:
                     return done('SHOOT',{'aim_location':'CENTER','power':.8},'OPEN_GOAL_CENTER_SHOT')
             if state.play_mode=='PLAY_ON' and pid in (2,3,4) and math.hypot(me.x-goal_x,me.y)<=.20*span and abs(me.y)<=.10*span and corridor>.02*span:
                 return done('SHOOT',{'aim_location':'BL' if goalkeeper.y>0 else 'TR','power':.8},'CLOSE_CLEAR_SHOT')
-            targets=[]
-            for mate in state.teammates:
-                if mate.pid==pid or (pid==0 and mate.pid==0):continue
-                space=min((dist(o,mate) for o in state.opponents),default=0)
-                lane=min((line_distance(o.x,o.y,me.x,me.y,mate.x,mate.y) for o in state.opponents),default=0)
-                if space>.04*span and lane>.02*span:
-                    value=sign*(mate.x-me.x)-.1*dist(me,mate)+(5 if mate.pid in (2,3,4) else 0)
-                    targets.append((value,-mate.pid,mate.pid))
             if targets:
                 receiver=max(targets)[2]
                 return done('GK_DISTRIBUTE' if pid==0 else 'PASS',{'target_player_id':receiver,**({'method':'THROW' if dist(me,next(p for p in state.teammates if p.pid==receiver))<.25*span else 'KICK'} if pid==0 else {'type':'GROUND'})},'SAFE_OUTLET')
             return done(reason='NO_SAFE_OUTLET')
-        if pid==0:return done(reason='ENGINE_GOALKEEPER')
+        if pid==0:
+            # One-tick interception only for a low, free ball already flying
+            # toward our goal mouth. No guessed MOVE target, rush or slide.
+            raw_velocity=gs['ball'].get('velocity',{})
+            velocity_keys=('x','z') if 'z' in gs['ball']['position'] else ('x','y')
+            known_velocity=isinstance(raw_velocity,dict) and all(
+                type(raw_velocity.get(k)) in (int,float) and math.isfinite(raw_velocity[k]) for k in velocity_keys)
+            height=gs['ball']['position'].get('y',0) if 'z' in gs['ball']['position'] else 0
+            low_ball=type(height) in (int,float) and math.isfinite(height) and 0<=height<=.025*span/profile['scale']
+            if self.keeper_mode=='incoming' and state.play_mode=='PLAY_ON' and \
+                    state.ball_status=='FREE' and known_velocity and low_ball and \
+                    sign*state.ball_vx<-.15*span and \
+                    0<sign*(state.ball_x-own_x)<.30*span and \
+                    math.hypot(me.x-own_x,me.y)<.10*span:
+                arrival=(own_x-state.ball_x)/state.ball_vx
+                crossing=state.ball_y+state.ball_vy*arrival
+                if .10<=arrival<=1.2 and abs(crossing)<.04*span:
+                    facts['incomingBall']={'arrivalSeconds':arrival,'crossingSpan':crossing/span}
+                    return done('INTERCEPT',{'aggressive':False},'GK_INCOMING_BALL')
+            return done(reason='ENGINE_GOALKEEPER')
+        if self.support_mode=='coordinated' and state.side==0 and state.play_mode=='PLAY_ON' and \
+                profile['kind']=='keeper_reference_xz' and movement_frame_ready(profile):
+            # HOME raw MOVE units are observed; AWAY retains existing policy.
+            # One striker offers a separate lane instead of joining the crowd.
+            nearest=min(((math.hypot(p.x-state.ball_x,p.y-state.ball_y),p.pid)
+                         for p in state.teammates if p.pid!=0 and p.stamina>=.25),default=(float('inf'),-1))
+            local_chaser=state.ball_status in ('FREE','THEIRS') and nearest[1]==pid and nearest[0]<.08*span
+            if not local_chaser:
+                forward=next((p for p in state.teammates if p.pid==3),None)
+                occupied_y=forward.y if forward else state.ball_y
+                tx=max(0,min(.25*span,state.ball_x-.07*span)) if state.ball_status=='OURS' else .02*span
+                options=[]
+                for ty in (-.13*span,.13*span):
+                    space=min((math.hypot(o.x-tx,o.y-ty) for o in state.opponents),default=span)
+                    separation=min((math.hypot(p.x-tx,p.y-ty) for p in state.teammates if p.pid!=pid),default=span)
+                    lane=min((line_distance(o.x,o.y,state.ball_x,state.ball_y,tx,ty) for o in state.opponents),default=span)
+                    if space>.05*span and separation>.08*span and (state.ball_status!='OURS' or lane>.03*span):
+                        options.append((min(space,.15*span)+(.04*span if ty*occupied_y<=0 else 0)-.1*math.hypot(me.x-tx,me.y-ty),ty))
+                if options:
+                    ty=max(options)[1]
+                    move=movement_to_raw({'commandType':'MOVE_TO','playerId':pid,
+                        'parameters':{'target_x':tx,'target_y':ty,'sprint':False},'duration':0},profile)
+                    return done('MOVE_TO',move['parameters'],'SEPARATE_FORWARD_OUTLET')
         if self.support_mode=='outlet' and state.side==0 and state.ball_status=='OURS' and \
                 state.holder is not None and state.holder[0]==state.side and \
                 profile['kind']=='keeper_reference_xz' and movement_frame_ready(profile):
