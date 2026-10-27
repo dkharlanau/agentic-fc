@@ -1,13 +1,12 @@
 # Current Practice progress — 2026-10-27
 
-Owner permits Practice. L02B frozenbuild912b687:1/20 completed Practice,
-HOME3:1 The Benchmark FC. Primary shots4:9,SOT3:1,reportedMID1173ms;
-77 runtime requests including bootstrap,76CLEAR+1PASS,0modelAttempted,
-max application handler0.768ms. Report command/latency semantics differ from
-runtime audit; full deadline/late rate unavailable, not assumed zero.
-No candidate ranked game completed. Next Practice2 Total Attack United on
-same five bindings/formation; no runtime/probe mutation during live games.
-Current live handle/status must be read from private play-pilots/active-match.json.
+L02B frozen build912b687: 2/20 completed Practice; 2W0D0L,6:1.
+Latest3:0 Total Attack United. Full primary stats and audit:
+research/v3/practice-stage2-l02b-20.json. Current/next match handle is private
+.local/stage2-20261027/play-pilots/active-match.json; check fresh portal.
+Next Practice3 Fort Knox Athletic, same five bindings/formation1-1-2.
+Native cold FAIL retained; Fitness5/5. Report metrics are not full native timing.
+Candidate ranked0/20 each, M11 Practice0/20. No mid-match probes/deploy/changes.
 
 # Owner steering — Practice permitted 2026-10-27
 
