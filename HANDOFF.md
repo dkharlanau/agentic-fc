@@ -1,65 +1,74 @@
-# Current checkpoint — L02B coaching cycle, 2026-10-27
+# Current checkpoint — Dot handoff, 2026-10-27
 
-Owner wants short iterations: one change/deploy,2–3 observed games, concise
-coaching review, next improvement. Current block: one game with each benchmark
-TotalAttack, Benchmark, FortKnox. This supersedes older five-game development
-cadence. Watch real screen as user/coach. CLI/SDK preferred for AWS errors/deploy.
-Stop starting work at10% remaining agent/Codex quota; last verified24% remaining.
-No new agents, IAM expansion, automation or auto-merge.
+Owner cancelled the next two games and requested immediate GitHub upload plus an
+8-hour autonomous Dot prompt. Do NOT silently resume the cancelled cohort.
+Prompt: [research/v3/DOT_8H_PROMPT.ru.txt](research/v3/DOT_8H_PROMPT.ru.txt).
+Original executor ends after publication; no automation or other agent running.
 
-## Current game and evidence
+## Actual portal — NOT ready to play
 
-- Three-game GK block completed: TotalAttack1:0, Benchmark2:0, FortKnox5:0;
-  3W,8:0,18:13shots. Sampled screen evidence, no physical pass census.
-- New single change: FWD2 open-goal central shot, source5d3d13a, separateRuntime.
-  Registered; freshFitness5/5 and all5exactbindings verified. OldFWD2 preserved for exactrollback.
-  Local18testsPASS, native6/6 including2cold calls5321/3638ms; warm319–945ms.
-- Next2Practice: FortKnox, TotalAttack; observe carefully, then top3 improvements
-  requested by owner. Two-game cohort ready to start; use active-match.json for current status. Do not add outlet/clearance or
-  prompt changes to this shot pilot. Plan research/v3/shot-stage2/plan.json.
-- CUA readback open-goal-fwd2-readback.txt confirms newFWD2 binding. Other4 unchanged.
-- Report attribution unresolved: ownedGK onlyCLEAR but report owncolumn GKDist.
-  Internal GK/MID/FWD2 computation/flush mostly<1ms is not network latency.
-  Audit:research/v3/stage2-gk-fast-cohort-audit.json. Harness game latency unknown.
-- Private active-match.json is source of truth with fresh portal. No probes/settings
-  while pending/LIVE. Raw frames/logs/IDs remain ignored .local/.
+- All five restored bindings individually read back exactly: GK Fast source dcaf97c,
+  MID L02B retry5 source0028079, canonical DEF/FWD1 and original FWD2; formation1-1-2.
+  Private exact snapshot:.local/stage2-20261027/dot-handoff-bindings.json.
+- Latest freshFitness4/5: MID3 FAIL; other4PASS. Do not call historical5/5 current.
+  Evidence:private play-pilots/dot-handoff-fitness.txt. Next operator must resolve
+  or diagnose MID readiness and obtain fresh5/5 before any game. MID was unchanged
+  during latest deployment/rollback, so the recurrence is not attributed to new GK.
+- No active match:private play-pilots/active-match.json statusnone. No test sessions
+  left running. Use fresh portal plus active file before any mutation/probe.
+- Remaining Codex quota last checked16%; owner reserve10%. Stop starting work at
+  10%, finish active match and checkpoint. Dot8h is maximum, subject to that reserve.
 
-## Verified configuration
+## Prepared three-correction candidate — NOT installed as a package
 
-Actual freshFitness5/5,5commands100%active; exact5portalbindings read back before
-firstgame. Fitness0ms mean is not game latency. Formation1-1-2.
-- GK: separate fast_path_v2 Runtime PLAYER_ID0, source dcaf97c. Deterministic safe
-  distribution with explicit ownership/lane; built-in goalkeeping otherwise.
-  Holds own current position on validated full-size XY kickoff.14localtestsPASS;
-  native originalHOME/AWAYdistribution2/2, own sessions stopped, finalAWSreadback.
-- MID3: L02B original912 artifact plus restart_compat.py overlay0028079. Owner
-  explicitly requested fixing repeated pre-match failure. One exact initial
-  tick0/time0 positioning retry allowed within5s instead of1s; changed/intervening,
-  third, late and open-play frames still release.13testsPASS. All other deployed
-  module bytes unchanged (including original fastboot without local pass logger).
-- DEF/FWD1/FWD2 remain original canonical versions. CanonicalGK13 and original
-  L02B912 bindings preserved as rollback; require freshFitness after rollback.
-- Current private bindings:gk-fast-final-bindings.json. Deployment receipts:
-  gk-fast-r2-deploy.json and mid-retry5-deploy.json. This is GK plus a declared
-  MID startup transport repair, not a pureGK causal comparison.
+Owner requested GK/FWD5 improvement plus DEF2 safe scoring pass. Later correction:
+FWD4 on screen is GOOD (playerId3), leave unchanged. Weak forward is second slot
+FWD5/playerId4. DEF2 carries/protects well; pass only for a better safe opportunity.
 
-## Rejected approaches and queued questions
+Code source00d9325;24localtestsPASS. Plan/results/helpers:
+research/v3/coach-three-stage2/. Separate AWS resources created and exact configuration
+readback verified. No IAM expansion. Originals retained.
+- GK incoming: one-tick nonaggressive INTERCEPT only for known low free incoming
+  goalbound ball. Native6/6 mirrored/gates. Physical save benefit unknown.
+- FWD2 coordinated: separate HOME outlet without sprint; nearby safe pressure pass.
+  Native4/4; AWAY positional support retains old policy. No extra model calls.
+- DEF forward-pass prompt: SAME model/config. Native HOME PASS and ambiguous-owner
+  CLEAR passed, but AWAY returnedCLEAR instead of expectedPASS:2/3. NOT installed.
+  First native parsing attempt failed before response text preserved; no pass claimed.
+  Cold full nativeDEF28291ms retained; response/compute/game latency are distinct.
+- GK/FWD2 candidates were briefly registered while idle, then exactly rolled back
+  at owner handoff request. No match played with either new installed candidate.
+- Private deployment receipts:gk-incoming-deploy.json,fwd2-coach-deploy.json,
+  def-forward-pass-deploy.json; native evidence under play-pilots/coach-three*.json.
+  All own diagnostic sessions stopped. Do not overwrite evidence or blindly rerun.
+- Candidate cohort practice-stage2-l02b-coach-three-01.json cancelled at0/2.
 
-Micro model-only3/8 safety, G2prompt9/12 with AWAY errors: rejected. G3 delegate
-allopenplay12/12 policy but actualFitnessfailed: no games. FastGK initialFitness
-failed because FREE KICK_OFF producedCLEAR; misleading possession tip contradicted
-ownedlogs. GK startup fix passed. MID repeats1.19/2.23/2.46s exceeded old1s window;
-separate5s fix now passedFitness. Keep failures in keeper-stage2/results.json.
+## Completed preceding blocks and evidence
 
-Owner observations: DEF2 skips forward passes; weak shots; opponent long shots;
-high latency. FWD2 explicitshotpower0.8, FWD1prompt example0.9 is not measured
-actualpower. Evaluate after3; maximumone next tactical change. Native cold3–33s
-retained; SDKfull/modelmetadata/portalmean have different scopes. Command counts
-are not physical passes/shots. ReportSOT often equals goals; semantics unknown.
+GK3 block:TotalAttack1:0,Benchmark2:0,FortKnox5:0;3W,8:0,18:13shots.
+Shot pilot2:FortKnox2:0,TotalAttack2:3;1W1L,4:3,12:7shots. Closed, no restart.
+FWD2 open-goal extension0SHOOT in161calls; benefit unproven; originalFWD2 restored.
+OwnGK168CLEAR in last2 and near-goal positions; noLLM. Long-shot miss distance/
+contact not fully sampled. AtTotalAttack00:08 forwards crowded/low energy;
+01:40 DEF2 visibly controlled ball with seemingly open diagonal forward.
+Do not infer causality from missing intermediate frames. Visual coverage incomplete.
 
-Read EXPERT_COACH.md (coach-v1.0) and recent COACH_REVIEWS.md before/after block.
-Worktree stage2-native-screen, branch codex/stage2-native-screen-20261027; main
-checkout dirty, untouched. Draft PR9 attached, no merge. Commits dcaf97c/0028079
-local; documentation/results uncommitted. Closed historicalcohorts:L02B10 7W3L,
-M11stopped4 2W2L,Baseline2 1W1L,L02Bvisual2 2W/6:1. Never silently resume.
-[Prior handoff archive](research/v3/handoff-history-before-gk-20261027.md) is history.
+Portal role/command attribution unresolved: ownGKallCLEAR yet report owncolumnGKDist.
+ReportSOT often equalsgoals; semantics unknown. Internalcompute mostly<1ms is not
+network/model/server latency. Missing measurements unknown, not zero. Baseline/M11
+remain closed; owner focusesL02B. FWD1 compact prompt in shot-stage2 is draft only;
+owner explicitly preserves FWD4, so do not deploy it.
+
+## Working rules
+
+Read EXPERT_COACH.md coach-v1.0 and recent COACH_REVIEWS.md before/after cycles.
+Owner latest cadence:one limited change→deploy/native/readback→Fitness5/5→prematch
+ready→2unchanged observedPracticegames→review. Prepared3change package separately
+explicitly authorised; resolveDEF failure first or exclude it. No probes, deploy,
+formation/prompts changes or interruption during games. Watch actual screen.
+
+Checkout:stage2-native-screen; branch codex/stage2-native-screen-20261027.
+Main checkout is dirty and untouched. DraftPR9 attached; no merge. No force/reset.
+Public repo: code, sanitised results and handoff only. Secrets/ARN/account/session/
+match IDs, raw states/logs/screenshots stay ignored.local. Native/helper scripts
+require local private context and existing SDK; another computer needs own login.

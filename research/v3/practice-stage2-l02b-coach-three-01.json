@@ -1,0 +1,18 @@
+{
+  "cohort": "l02b-coach-three-01",
+  "mode": "practice",
+  "targetCompletedMatches": 2,
+  "completedMatches": 0,
+  "status": "cancelled-before-first-match-owner-requested-Dot-handoff",
+  "sourceCommit": "00d9325d18dd54d32cb2d68f36d2d7dac706f485",
+  "formation": "1-1-2",
+  "changeSurface": "GK incoming interception;FWD2 separate support and pressure release;DEF better safe forward pass. MID/FWD1 unchanged. Owner requested combined three corrections.",
+  "coachVersion": "coach-v1.0",
+  "fitnessPassed": null,
+  "opponentOrder": [
+    "Total Attack United",
+    "Fort Knox Athletic"
+  ],
+  "matches": [],
+  "createdAtUTC": "2026-10-27T17:02:53.993087+00:00"
+}

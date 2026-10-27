@@ -68,6 +68,20 @@ class CoachThreeTests(unittest.TestCase):
             p=incoming();p['gameState']['ball']['position'].update(z=0,y=bad)
             _,a=FastEngine(0,keeper_mode='incoming').choose(p)
             self.assertNotEqual(a['reason'],'GK_INCOMING_BALL')
+    def test_keeper_small_xz_ground_plane(self):
+        for side in (0,1):
+            p=incoming(side);gs=p['gameState']
+            for row in gs['players']:
+                row['position']={k:v*.12 for k,v in row['position'].items()}
+                if row['agentId']=='agentId_0':row['lastAction']='StayNearGoal'
+            bp=gs['ball']['position'];bv=gs['ball']['velocity']
+            gs['ball']['position']={'x':bp['x']*.12,'y':.1,'z':bp['y']*.12}
+            gs['ball']['velocity']={'x':bv['x']*.12,'y':0,'z':bv['y']*.12}
+            _,a=FastEngine(0,keeper_mode='incoming').choose(p)
+            self.assertEqual(a['reason'],'GK_INCOMING_BALL')
+            gs['ball']['position']['y']=1
+            _,a=FastEngine(0,keeper_mode='incoming').choose(p)
+            self.assertNotEqual(a['reason'],'GK_INCOMING_BALL')
     def test_pressure_release_both_sides_without_model(self):
         for side in (0,1):
             p=pressure(side);out,a=FastEngine(4,support_mode='coordinated').choose(p)

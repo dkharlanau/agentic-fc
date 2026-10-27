@@ -1,5 +1,5 @@
 {
-  "status": "local-validated-before-deploy",
+  "status": "prepared-not-game-validated-DEF-native-AWAY-failed",
   "coachVersion": "coach-v1.0",
   "ownerAuthorization": "Owner explicitly requests three coordinated corrections then Fitness/prematch and exactly two observed games; later correction preserves FWD4, retains DEF2 dribbling unless better safe scoring pass.",
   "threeChanges": [
@@ -18,7 +18,7 @@
     {
       "id": "DEF-FORWARD-PASS",
       "role": "DEF2/playerId1",
-      "change": "Preserve defensive rules; prefer immediate safe pass to better-positioned open forward, otherwise retain ball safely. Original model/settings unchanged.",
+      "change": "Preserve defensive rules and safe ball carrying; pass immediately only when an open forward has a better attacking opportunity and clear lane. Same model/settings.",
       "risk": "Model prompt behaviour is not guaranteed; native checks plusFitness required."
     }
   ],
@@ -39,5 +39,8 @@
     "HOME support movement verified historically; AWAY not assumed",
     "Reports role/latency attribution unresolved",
     "No guaranteed tournament win"
-  ]
+  ],
+  "localTests": 24,
+  "sourceCommit": "00d9325",
+  "ownerLatest": "Owner cancelled two games and requested GitHub upload plus8hDot prompt. Restore known lineup and hand off."
 }
