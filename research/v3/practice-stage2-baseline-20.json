@@ -2,10 +2,10 @@
   "schemaVersion": 2,
   "candidate": "Baseline M8 canonical MID15-equivalent",
   "mode": "practice",
-  "status": "ready-owner-approved-games-with-parallel-local-analysis",
+  "status": "closed-at-two-owner-redirect",
   "ownerGoal": "Compare M11 with canonical Baseline in same20 built-in benchmarks",
   "targetCompletedMatches": 20,
-  "completedMatches": 0,
+  "completedMatches": 2,
   "sourceCommit": "095e3994b8ea55f6671b7833171c0ff83b484b92",
   "formation": "1-1-2",
   "changeSurface": "MID only relative to M11; Nova2Lite MID15-equivalent restored",
@@ -78,8 +78,156 @@
     "The Benchmark FC",
     "Total Attack United"
   ],
-  "matches": [],
-  "summary": null,
+  "matches": [
+    {
+      "opponent": "The Benchmark FC",
+      "opponentStyle": "balanced",
+      "side": "HOME",
+      "result": "WIN",
+      "goalsFor": 4,
+      "goalsAgainst": 0,
+      "shotsFor": 5,
+      "shotsAgainst": 3,
+      "shotsOnTargetFor": 4,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 36,
+      "teamReportAverageLatencyMs": 796,
+      "teamReportCommands": 440,
+      "teamReportCommandCounts": {
+        "MOVE_TO": 174,
+        "PRESS_BALL": 133,
+        "INTERCEPT": 43,
+        "SHOOT": 32,
+        "CLEAR_OVERRIDE": 26,
+        "PASS": 25,
+        "GK_DISTRIBUTE": 6,
+        "MARK": 1
+      },
+      "perRoleReportLatencyMs": {
+        "GK": 604,
+        "DEF": 897,
+        "MID": 930,
+        "FWD1": 622,
+        "FWD2": 894
+      },
+      "perRoleReportedSuccessPercent": {
+        "GK": 100,
+        "DEF": 100,
+        "MID": 100,
+        "FWD1": 100,
+        "FWD2": 100
+      },
+      "candidateAudit": {
+        "scope": "Canonical managed MID Harness; per-match submitted command/reason/usage audit unavailable",
+        "requestCount": null,
+        "commandCounts": null,
+        "reasonCounts": null,
+        "modelAttempted": null,
+        "handlerMaxMs": null,
+        "fullNativeLatency": null,
+        "firstCompetitivePlayOnLatencyMs": null,
+        "lateActionRate": null,
+        "invalidResponseRate": null
+      },
+      "criticalFailure": null,
+      "primaryReportAlias": "practice-baseline-01-report",
+      "preMatchConnectivityLatencyMs": {
+        "GK": 254,
+        "DEF": 308,
+        "MID": 264,
+        "FWD1": 289,
+        "FWD2": 1144
+      },
+      "telemetryInconsistencies": [
+        "Managed MID command/reason audit unavailable; report team command counts do not isolate MID",
+        "Reported100%success does not establish full native deadline compliance"
+      ],
+      "id": "stage2-practice-baseline-01",
+      "mode": "practice",
+      "scoreless": false,
+      "cleanSheet": true,
+      "savedAtUTC": "2026-10-27T15:04:06.319004+00:00"
+    },
+    {
+      "opponent": "Total Attack United",
+      "opponentStyle": "aggressive",
+      "side": "HOME",
+      "result": "LOSS",
+      "goalsFor": 3,
+      "goalsAgainst": 6,
+      "shotsFor": 6,
+      "shotsAgainst": 9,
+      "shotsOnTargetFor": 3,
+      "shotsOnTargetAgainst": 6,
+      "possessionPercent": 36,
+      "teamReportAverageLatencyMs": 908,
+      "teamReportCommands": 580,
+      "teamReportCommandCounts": {
+        "MOVE_TO": 216,
+        "INTERCEPT": 170,
+        "SHOOT": 87,
+        "PRESS_BALL": 71,
+        "CLEAR_OVERRIDE": 36
+      },
+      "perRoleReportLatencyMs": {
+        "GK": 637,
+        "DEF": 1189,
+        "MID": 966,
+        "FWD1": 650,
+        "FWD2": 1083
+      },
+      "perRoleReportedSuccessPercent": {
+        "GK": 100,
+        "DEF": 100,
+        "MID": 100,
+        "FWD1": 100,
+        "FWD2": 100
+      },
+      "candidateAudit": {
+        "scope": "Canonical managed MID Harness; per-match submitted command/reason/usage audit unavailable",
+        "requestCount": null,
+        "commandCounts": null,
+        "reasonCounts": null,
+        "modelAttempted": null,
+        "handlerMaxMs": null,
+        "fullNativeLatency": null,
+        "firstCompetitivePlayOnLatencyMs": null,
+        "lateActionRate": null,
+        "invalidResponseRate": null
+      },
+      "criticalFailure": null,
+      "primaryReportAlias": "practice-baseline-02-report",
+      "preMatchConnectivityLatencyMs": {
+        "GK": 262,
+        "DEF": 310,
+        "MID": 298,
+        "FWD1": 303,
+        "FWD2": 1946
+      },
+      "telemetryInconsistencies": [
+        "Managed MID command/reason audit unavailable; report team command counts do not isolate MID",
+        "Reported100%success does not establish full native deadline compliance"
+      ],
+      "id": "stage2-practice-baseline-02",
+      "mode": "practice",
+      "scoreless": false,
+      "cleanSheet": false,
+      "savedAtUTC": "2026-10-27T15:13:49.925182+00:00"
+    }
+  ],
+  "summary": {
+    "completed": 2,
+    "wins": 1,
+    "draws": 0,
+    "losses": 1,
+    "goalsFor": 7,
+    "goalsAgainst": 6,
+    "shotsFor": 11,
+    "shotsAgainst": 12,
+    "shotsOnTargetFor": 7,
+    "shotsOnTargetAgainst": 6,
+    "passCompletionRate": null
+  },
   "blockReviews": [],
   "fitness": {
     "passed": 5,
@@ -102,5 +250,7 @@
     "Managed MID live command/reason/model usage audit may be unavailable; preserve unknown as null",
     "Same ordered bots; seeds uncontrolled; onlyHOME if actual portal supports onlyHOME",
     "Practice is separate from ranked; human performance unverified"
-  ]
+  ],
+  "updatedAtUTC": "2026-10-27T15:13:49.925182+00:00",
+  "closureReason": "Owner requested restoration and development of L02B only"
 }

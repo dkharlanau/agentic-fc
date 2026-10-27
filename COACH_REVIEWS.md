@@ -1,3 +1,19 @@
+## 2026-10-27 — owner selects L02B only; Baseline stopped after two
+
+HANDOFF, coach-v1.0 and latest reviews actually read on resume. The owner
+explicitly ends Baseline testing and requests L02B only, with direct on-screen
+coaching of passes, shots and conceded long-range goals. Baseline game2 was
+already completed3:6 vs Total Attack; no live match interrupted. The two-game
+partial cohort closes1W1L/7:6,11:12shots,7:6reported SOT. Not a completed5/20
+comparison and not proof that L02B wins against human opponents.
+C01: direct owner redirect overrides the planned fifth-game boundary; restore
+exact previously played L02B912b687 MID and freshFitness5/5, four roles/112 fixed.
+C02/C03: watch actual episodes; pass commands are not completed passes. Owner's
+long-shot observation is a hypothesis until distance/keeper position are observed.
+No new tactical change yet. Local logger-only patch remains undeployed. Next
+five unchanged L02B Practice games form a NEW visual-observation block; start
+with Total Attack to inspect the stated weakness. Rollback is canonicalMID15.
+
 ## 2026-10-27 — Baseline benchmark series starts; local analysis in parallel
 
 Coach-v1.0 unchanged, checked before start. Owner explicitly asks Baseline to

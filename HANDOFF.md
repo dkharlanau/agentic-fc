@@ -1,3 +1,20 @@
+# Current priority — L02B ONLY, owner redirect 2026-10-27
+
+Owner stopped Baseline after its second completed game (TotalAttack3:6) and
+requests restoring/developing only L02B. No more M11 or Baseline matches/probes.
+Baseline partial series closes2games,1W1L/7:6,11:12shots; all reports saved.
+Exact played L02B source912b687/archive2fdad20a... MID restored; all five
+bindings verified and1-1-2 unchanged. FreshFitness5/5 after resetting only the
+completed fixed Fitness session; first two attempts4/5 retained as evidence. Current
+private active-match.json and fresh portal override the older checkpoints below.
+Local pass-audit logger patch is NOT deployed; tactical policy unchanged.
+Next NEW five-game visual-observation block starts Total Attack, then Benchmark,
+Fort Knox, Total Attack, Benchmark. Owner explicitly wants on-screen coaching:
+actual pass receipt/loss, shot position and execution, keeper/central coverage.
+Command counts do not establish physical completion; missing metrics staynull.
+No probes or settings changes whileLIVE. Direct owner instruction supersedes
+old20game Baseline plan. Read coach before/after block; maximum one next change.
+
 # Live priority — Baseline games with parallel local analysis, 2026-10-27
 
 Owner explicitly asks Baseline to play while analysis continues. Start Baseline20

@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 2,
+  "candidate": "L02B",
+  "targetCompletedMatches": 5,
+  "sourceCommit": "912b687141c03f72b24ab002a8bd0d9d6d646804",
+  "archiveSha256": "2fdad20a8e8a226d36ab81f5223c2c21cc16d80980c80db7c641a69bb79ac763",
+  "formation": "1-1-2",
+  "changeSurface": "MID only",
+  "nativeGatePassed": null,
+  "nativeFailureRetained": true,
+  "pilotDecision": "Proceed with the bounded real-game pilot under the renewed concrete owner goal; do not claim native admission PASS",
+  "promotionEligibleFromNative": false,
+  "criticalFailure": null,
+  "limitations": [
+    "Native cold calls failed the original engineering gate; real-game pilot does not erase this result",
+    "Unavailable per-game telemetry stays null"
+  ],
+  "bindingsDigestSha256": "12eb2eefa82d494b176974c69baa565f4c5ca4ad0c54e42883e38b2fcec1c848",
+  "historicalNativeGate": {
+    "passed": false,
+    "sourceCommit": "095e3994b8ea55f6671b7833171c0ff83b484b92",
+    "archiveSha256": "2d0d5c43d10a3ed704b5a30a0543736fa468c1f9a1bb1a52dcc0351dca835375",
+    "note": "Earlier exact artifact cold calls failed; MIME-corrected artifact has not been declared native PASS"
+  },
+  "transportCorrection": "Bounded JSON parsing independent of MIME; all tactical module hashes unchanged",
+  "restartOwnerApproved": true,
+  "restartCompatibility": "Fresh validated full-size XY KICK_OFF: nonsprinting central own-half MOVE_TO; neutral stance when geometry unknown; all original guards retained",
+  "restartRetry": {
+    "scope": "One exact initial tick0/time0 own-half support retry within1s; no changed/late/third/PLAY_ON/ball-action retries",
+    "hypothesis": "Football bootstrap reuses exact initial frame; previous second release counted0/1active",
+    "verifiedFitness": true
+  },
+  "mode": "practice",
+  "rankedCohortCounted": false,
+  "claimsNotMade": [
+    "Practice performance does not validate performance against live players"
+  ],
+  "cohort": "l02b-coach-01",
+  "ownerGoal": "Develop only L02B; visually evaluate actual passing, shooting and defensive episodes",
+  "status": "running",
+  "completedMatches": 0,
+  "matches": [],
+  "opponentOrder": [
+    "Total Attack United",
+    "The Benchmark FC",
+    "Fort Knox Athletic",
+    "Total Attack United",
+    "The Benchmark FC"
+  ],
+  "parentReference": "practice-stage2-l02b-10.json",
+  "coachVersion": "coach-v1.0",
+  "visualProtocol": {
+    "primary": [
+      "pass origin and intended recipient when observable",
+      "actual ball receipt and next possession",
+      "turnover location",
+      "shot origin and outcome",
+      "keeper position and central defensive cover"
+    ],
+    "missingData": "unknown; no aggregate pass-completion rate without complete event coverage",
+    "noInGameMutations": true,
+    "reportSOTSemanticsUnverified": true
+  },
+  "blockReviews": [],
+  "fitness": {
+    "passed": 5,
+    "activeCommands": 5,
+    "activePercent": 100,
+    "attempt": 3,
+    "completedOwnFitnessSessionReset": true
+  },
+  "priorCohortFitness": "See historical L02B10; not current readiness",
+  "restoreReadback": "Original immutable artifact READY and exact saved AWS configuration re-read",
+  "returnFitnessAttempts": [
+    {
+      "attempt": 1,
+      "passed": 4,
+      "reason": "Initial positioning emitted; identical tick0 duplicate arrived2460.9ms later beyond1s replay window"
+    },
+    {
+      "attempt": 2,
+      "passed": 4,
+      "reason": "Same completed Fitness session and unchanged tick0 frame reused; freshness guard released"
+    },
+    {
+      "attempt": 3,
+      "passed": 5,
+      "reason": "Fresh test session after cleanup of completed fixed Fitness session; no code change"
+    }
+  ],
+  "cohortFrozenAtUTC": "2026-10-27T15:19:14.777670+00:00"
+}
