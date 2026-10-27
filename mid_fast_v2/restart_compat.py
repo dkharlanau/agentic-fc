@@ -53,9 +53,11 @@ def neutral_restart(payload, commands, audit, session=None):
 
 
 class KickoffRetry:
-    """One idempotent retry of a safe initial positioning response within 1 s.
+    """One idempotent retry of a safe initial positioning response within 5 s.
 
-    Actual Football startup sent the exact tick0/time0 payload twice in 0.5 s.
+    Football startup repeats the exact tick0/time0 payload; observed delays
+    include 0.5, 1.19, 2.23 and 2.46 seconds. This is a transport allowance,
+    not a relaxation of open-play freshness or a tournament time budget.
     Never replay a possession action or any competitive/open-play response.
     Every intervening changed/invalid request invalidates the cached response.
     """
@@ -82,7 +84,7 @@ class KickoffRetry:
         now = self.clock()
         if (previous and audit.get('reason') == 'STALE_OR_DUPLICATE_FRAME'
                 and fingerprint == previous['fingerprint']
-                and 0 <= now - previous['at'] <= 1.0):
+                and 0 <= now - previous['at'] <= 5.0):
             audit = dict(audit, reason='IDEMPOTENT_INITIAL_KICKOFF_RETRY',
                          retryOfReason='NEUTRAL_RESTART_SUPPORT')
             return json.loads(previous['commands']), audit

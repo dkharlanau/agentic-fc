@@ -79,7 +79,7 @@ class NeutralRestartTests(unittest.TestCase):
 
     def test_initial_kickoff_retry_is_exact_once_short_and_position_only(self):
         for cls in (MidEngine, HybridMidEngine):
-            for variant in ('exact', 'expired', 'changed', 'intervening', 'later-restart'):
+            for variant in ('exact', 'observed-delay', 'boundary', 'expired', 'changed', 'intervening', 'later-restart'):
                 with self.subTest(engine=cls.__name__, variant=variant):
                     root=self.state();root['gameState'].update(tick=0, gameTime=0)
                     if variant == 'later-restart': root['gameState']['tick']=100
@@ -88,12 +88,12 @@ class NeutralRestartTests(unittest.TestCase):
                         commands,audit=self.choose(engine,value)
                         return retry.apply(value,commands,audit,'restart-match')
                     first,_=call(root);self.assertEqual(first[0]['commandType'],'MOVE_TO')
-                    clock[0]=1.01 if variant=='expired' else .5
+                    clock[0]={'expired':5.01,'observed-delay':2.46,'boundary':5.0}.get(variant,.5)
                     if variant=='changed': root['gameState']['players'][2]['stamina']-=1
                     if variant=='intervening':
                         newer=copy.deepcopy(root);newer['gameState'].update(tick=1,gameTime=.1,playMode='PLAY_ON');call(newer)
                     second,audit=call(root)
-                    if variant=='exact':
+                    if variant in ('exact','observed-delay','boundary'):
                         self.assertEqual(second,first)
                         self.assertEqual(audit['reason'],'IDEMPOTENT_INITIAL_KICKOFF_RETRY')
                     else:self.assertEqual(second[0]['commandType'],'CLEAR_OVERRIDE')
