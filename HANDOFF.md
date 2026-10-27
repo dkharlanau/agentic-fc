@@ -1,3 +1,21 @@
+# Current owner-approved plan — 2026-10-27
+
+Owner explicitly authorizes autonomous M11 repair and matched comparison with
+canonical Baseline, considering L02B. Finish old M11 block at five unchanged;
+then Baseline20 with fixed benchmark order, then corrected M11 as a NEW20-game
+cohort. L02B10 remains a separate reference. All four other roles and1-1-2
+stay unchanged. Final selection must account for reliability/deadlines, useful
+actions, results and opponent mix; no human-player probability claims.
+
+Old M11 currently3 completed:2W1L/6:4; fourth Benchmark game is starting.
+Private active-match.json and fresh portal take precedence. No probes or
+settings/deployment changes during LIVE/PREPARING. Confirmed offline geometry
+handoff gap is queued for block boundary. First two actual games had46
+UNKNOWN_GEOMETRY and no active off-ball commands; third had25SET_STANCE+4MARK,
+so this is conditional, not universal inactivity. Exact live causal impact
+remains unknown. Original immutable archive/source912b687 must be preserved.
+No extra agents, automation, IAM expansion or automatic merge.
+
 # M11 live cohort checkpoint — 2026-10-27
 
 M11 finalretry source912b687 / ZIPe259682c...:2/20 completed Practice,1W1L,3:4.

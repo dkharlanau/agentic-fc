@@ -1,3 +1,16 @@
+## 2026-10-27 — owner-approved repair and matched comparison
+
+Coach-v1.0 actually reread, unchanged. C01: complete the current old-M11 block
+of five unchanged; owner authorizes a separate integration repair thereafter.
+C02/C03: no new on-ball thresholds, defensive roles, GK prompt or formation.
+Initial calibration-handoff reproduction is a concrete integration defect,
+not proof of a lost match. First two games lack active off-ball decisions;
+third Fort Knox3:0 includes25SET_STANCE+4MARK, showing conditional behavior.
+Next plan: Baseline20, isolated corrected-M11 verification and new20 on the
+same opponent order; compare against L02B10 separately. Rollback canonical
+MID15/current-account exact binding plus freshFitness5/5. Cold native failures
+remain disclosed; Practice results do not establish tournament promotion.
+
 ## 2026-10-27 — L02B first10 closed; owner requests M11 then Baseline
 
 Coach-v1.0 rechecked, unchanged. L02B games6–10:3W2L/12:5,27:22shots;
