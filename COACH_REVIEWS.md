@@ -1138,3 +1138,44 @@ no causal blame for the loss or shot-power conclusion follows. Retain evidence
 and restore original FWD5 with fresh Fitness. Next inspect actual ownership/aim
 contracts rather than adding more positional rules. FWD4, DEF, GK and MID policy
 unchanged. Details: research/v3/cloud-coach/fwd5-outlet/analysis.json.
+
+## 2026-10-27 — bounded finishing exception prepared
+
+coach-v1.0 C02 applied: inspect possession and actual opportunities before power.
+Four cloud match projections contain no baseline FWD5 shoot gate. One observed
+projection has established self-possession near halfway, a clear central lane,
+and the opponent keeper far behind the carrier. Prior open-goal range did not
+cover it. Test a separate wrapper: HOME only, attacking half, distance<=0.55span,
+lateral<=0.15span, energy>=0.5, clearfield lane and keeper displaced/clear.
+CENTER with unchanged0.8power; baseline close shots and all other actions remain.
+This is one hypothesis from sparse evidence, with overfitting risk, not a proven
+accuracy fix. Extracted actual archive305projections changes1only; four synthetic
+safety tests plus180full unit tests pass. Still uninstalled, native/Fitness/game
+evidence pending. OriginalFWD5 exact rollback retained. Owner's emergency own-goal
+clearance request is queued separately; do not call CLEAR_OVERRIDE a clearance.
+
+Finishing pre-admission receipt20:06UTC: source317dd9f, archive7cc73e91,
+isolated exactV1 configuration/archive verified. Native20/20 expected commands,
+fresh-session first3.461/2.916s, warmP95.480s after separately recorded client
+connection setup; no agent prewarming. All owned probes stopped. Baseline restored
+lineup remains exact until candidate registration completes; freshFitness required.
+
+FinishingV1 block closed partial1/2 after8:0, not a completed comparison: next
+prematchFWD5 took5566ms despite portalReady. No secondgame started. IsolatedV2
+keeps identical archive and policy; native20/20 plus12/12 across8freshsessions,
+firstcalls2.020–3.995s, latercalls<=.296s (separate receipts), all
+ownedprobes stopped. V2 registration/freshFitness and separatetwo-game block
+TotalAttack/FortKnox; do not retroactively reclassify theV1match.
+
+## 2026-10-27 — finishing V2 block closed, no promotion
+
+coach-v1.0's evidence chain retained: TotalAttack1:3, FortKnox4:0, exact unchanged
+V2setup. New finishing trigger1/0. After the TotalAttack command, the next sampled
+ball was away from the goal center and no immediate goal followed; sparse gaps
+prevent assigning a definite miss/deflection. EarlierV1 8:0 had one command, followed
+by possession/control changes before a goal, so no clean causal attribution.
+OriginalFWD5 restored, exactall5 andfreshFitness5/5 verified20:48. Keep candidate
+as evidence, not a proven improvement. Next prioritize owner-requested emergency
+forward escape only with established possession, own-third pressure and no safe
+pass. Baseline MID already rejects unsafe passes; any new kick must be separately
+validated. No change to protectedFWD4 or goodDEF carrying.

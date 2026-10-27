@@ -1,0 +1,43 @@
+{
+  "kind": "Extracted exact deployment code; projected MID inputs, NOT real FWD5 request replay",
+  "archiveSha256": "7cc73e9162b245c7936ed8f7da811877780f44d52467dd0805029877e1232ba1",
+  "syntheticHOMEAWAY": true,
+  "rows": [
+    {
+      "match": "trace01-fortknox",
+      "projectedStates": 56,
+      "changedDecisions": 0,
+      "changes": []
+    },
+    {
+      "match": "trace02-totalattack",
+      "projectedStates": 91,
+      "changedDecisions": 1,
+      "changes": [
+        {
+          "gameTime": 72.65982,
+          "context": {
+            "distanceSpan": 0.5136218569245312,
+            "lateralSpan": 0.12952962586627184,
+            "fieldLaneSpan": 0.042953110680576514,
+            "keeperLaneSpan": 0.5790547928239539,
+            "stamina": 0.653226
+          }
+        }
+      ]
+    },
+    {
+      "match": "outlet01-fortknox",
+      "projectedStates": 74,
+      "changedDecisions": 0,
+      "changes": []
+    },
+    {
+      "match": "outlet02-totalattack",
+      "projectedStates": 84,
+      "changedDecisions": 0,
+      "changes": []
+    }
+  ],
+  "benefitProven": false
+}
