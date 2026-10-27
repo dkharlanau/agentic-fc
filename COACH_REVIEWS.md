@@ -1,3 +1,22 @@
+## 2026-10-27 — L02B Practice block1, five completed
+
+Coach-v1.0 rechecked by actual content/hash, unchanged. Owner explicitly allows
+Practice; source912b687, fiveHOME bot games,4W1L/21:4, separate from ranked0.
+Primary bounds:stage2-practice-l02b-01..05; details in
+research/v3/practice-stage2-l02b-block-01-analysis.ru.md and companionJSON.
+C01 accepted operationally: exactMID-only/freshFitness5/5/frozen configuration,
+no changes or probes during matches. Continue twenty unchanged; no promotion.
+C02 insufficient: loss1:2 had2:9shots; largest9:0 strongly affects aggregate.
+Without it3W1L/12:4 and24:26shots. Nine explicitMID passes among430requests
+with421CLEAR mean default-engine contribution is large; wins do not prove the
+new passing policy is superior. C03 retained as hypothesis: observed1:0→1:2
+late reversal in game5; no verified turnover/coverage/GK causal trace. Same
+attacking bot was beaten3:0 earlier, so seed/opponent dynamics remain alternatives.
+ReportedMID means exceed1s in3/5; exact late rate unknown, native coldFAIL retained.
+Report command semantics differ from Runtime audit; generated coaching excluded.
+Next change:none during cohort. Critical-failure rollback canonicalMID15,
+unchanged four roles/1-1-2 and freshFitness5/5. Human/AWAY evidence absent.
+
 ## 2026-10-27 — startup duplicate experiment before first cohort
 
 Coach-v1.0 unchanged. C01: no candidate cohort yet; baseline restored after

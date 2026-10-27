@@ -1,0 +1,152 @@
+{
+  "scope": "First five completed Practice games; immutable L02B build; allHOME; bots only",
+  "coachVersion": "coach-v1.0",
+  "coachSha256": "f681ecf2534d9c532f9cb63c7c80a7d3e8d6810ed21723a6a0f7cabf7f5b9ef8",
+  "sourceCommit": "912b687141c03f72b24ab002a8bd0d9d6d646804",
+  "archiveSha256": "2fdad20a8e8a226d36ab81f5223c2c21cc16d80980c80db7c641a69bb79ac763",
+  "matchAliases": [
+    "stage2-practice-l02b-01",
+    "stage2-practice-l02b-02",
+    "stage2-practice-l02b-03",
+    "stage2-practice-l02b-04",
+    "stage2-practice-l02b-05"
+  ],
+  "completedMatches": 5,
+  "wins": 4,
+  "draws": 0,
+  "losses": 1,
+  "goalsFor": 21,
+  "goalsAgainst": 4,
+  "shotsFor": 34,
+  "shotsAgainst": 26,
+  "shotsOnTargetFor": 21,
+  "shotsOnTargetAgainst": 4,
+  "scorelessGames": 0,
+  "cleanSheets": 2,
+  "rankedMatchesCounted": 0,
+  "rankedPointsEarned": 0,
+  "pointsEquivalent": 12,
+  "pointsPerGameEquivalent": 2.4,
+  "byOpponent": {
+    "The Benchmark FC": {
+      "matches": 2,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "goalsFor": 8,
+      "goalsAgainst": 2,
+      "shotsFor": 11,
+      "shotsAgainst": 11
+    },
+    "Total Attack United": {
+      "matches": 2,
+      "wins": 1,
+      "draws": 0,
+      "losses": 1,
+      "goalsFor": 4,
+      "goalsAgainst": 2,
+      "shotsFor": 13,
+      "shotsAgainst": 15
+    },
+    "Fort Knox Athletic": {
+      "matches": 1,
+      "wins": 1,
+      "draws": 0,
+      "losses": 0,
+      "goalsFor": 9,
+      "goalsAgainst": 0,
+      "shotsFor": 10,
+      "shotsAgainst": 0
+    }
+  },
+  "excludingLargestWin": {
+    "matches": 4,
+    "wins": 3,
+    "losses": 1,
+    "goalsFor": 12,
+    "goalsAgainst": 4,
+    "shotsFor": 24,
+    "shotsAgainst": 26
+  },
+  "candidateAuditRequestsIncludingBootstrap": 430,
+  "candidateCommandCounts": {
+    "CLEAR_OVERRIDE": 421,
+    "PASS": 9
+  },
+  "candidateReasonCounts": {
+    "INCOMPLETE_PLAYERS": 5,
+    "UNKNOWN_POSSESSION": 95,
+    "ENGINE_OFF_BALL": 178,
+    "ENGINE_RESTART": 138,
+    "NO_SAFE_OUTLET": 5,
+    "SAFE_PROGRESSIVE_PASS": 6,
+    "SAFE_RECYCLE_PASS": 3
+  },
+  "modelAttempted": 0,
+  "handlerMaxMs": 1.01606,
+  "midPerMatchReportedMeanMs": [
+    1173,
+    917,
+    1113,
+    983,
+    1043
+  ],
+  "midReportedMatchMeansOver1000": 3,
+  "fullNativeInvocationLatency": null,
+  "firstCompetitivePlayOnLatencyMs": null,
+  "lateActionRate": null,
+  "invalidResponseRate": null,
+  "preMatchConnectivityMidMs": [
+    1184,
+    2941,
+    12858,
+    1140,
+    1143
+  ],
+  "leadLostObservation": {
+    "matchAlias": "stage2-practice-l02b-05",
+    "observedSequence": [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "ownShots": 2,
+    "opponentShots": 9,
+    "cause": null
+  },
+  "decision": "Continue the frozen twenty-game pilot; no tactical promotion or configuration change after ordinary loss",
+  "limitations": [
+    "Bots/allHOME/unknown seeds; no human-player validation",
+    "No same-mode Baseline control; historical ranked evidence is not a causal comparator",
+    "CLEAR_OVERRIDE permits built-in engine; most football success cannot be assigned to nine explicit MID passes",
+    "Submitted runtime and report/default-engine command semantics differ",
+    "Report100%success does not prove deadline compliance; native coldFAIL retained"
+  ],
+  "updatedAtUTC": "2026-10-27T12:46:58.455087+00:00",
+  "afterLeaderboard": {
+    "rank": 12,
+    "played": 199,
+    "wins": 120,
+    "draws": 6,
+    "losses": 73,
+    "goalsFor": 269,
+    "goalsAgainst": 162,
+    "goalDifference": 107,
+    "points": 366
+  },
+  "rankedDeltaVerified": {
+    "played": 0,
+    "points": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0
+  }
+}

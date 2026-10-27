@@ -1,12 +1,22 @@
-# Current Practice progress — 2026-10-27
+# Current Practice checkpoint — 2026-10-27 after five
 
-L02B frozen build912b687: 4/20 completed Practice; 4W0D0L,20:2.
-Latest5:1 The Benchmark FC. Full primary stats and audit:
-research/v3/practice-stage2-l02b-20.json. Current/next match handle is private
-.local/stage2-20261027/play-pilots/active-match.json; check fresh portal.
-Next Practice5 Total Attack United, same five bindings/formation1-1-2.
-Native cold FAIL retained; Fitness5/5. Report metrics are not full native timing.
-Candidate ranked0/20 each, M11 Practice0/20. No mid-match probes/deploy/changes.
+L02B source912b687:5/20 Practice complete,4W1L,21:4; allHOME, threeAI bots.
+Last1:2 Total Attack United after1:0 lead,shots2:9. One common block review saved:
+research/v3/practice-stage2-l02b-block-01-analysis.ru.md and companionJSON.
+430audit requests incl bootstrap:421CLEAR+9PASS,0models; report latency and
+command-application semantics unresolved. MID reported mean>1s in3/5;
+native coldFAIL not erased. No tactical promotion. Coach-v1.0 unchanged.
+
+Next:one targeted ranked invitation on SAME frozen build; if unanswered,
+Practice6 Fort Knox Athletic. No ordinary
+loss change. Finish L02B20, then exact Baseline rollback/Fitness, M11 retry
+source912b687 deployment/readback/Fitness and its same ordered20 Practice.
+Candidate ranked0/20 each; invitations expired/cancelled before Practice.
+Required ranked deliverables remain pending, Practice never counted as ranked.
+Fresh post-block table confirmed199played/366points, zero ranked delta. Quota46%used54%left.
+Private live status/URLs/credentials: .local/stage2-20261027/play-pilots/
+active-match.json and operator-checkpoint.json. Fresh portal takes precedence.
+No extra agents, automation, IAM expansion or PR merge. DraftPR9 recoverable.
 
 # Owner steering — Practice permitted 2026-10-27
 
