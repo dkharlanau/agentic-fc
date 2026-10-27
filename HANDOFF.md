@@ -1,3 +1,24 @@
+# Latest owner steering — benchmark focus, 2026-10-27
+
+Owner now says:play benchmarks to understand agent/model behavior, reaction
+speed and tactics. Current primary work is twenty built-in benchmark games per
+candidate; keep original first10 evidence as a prefix. Stop new ranked invites.
+Ranked requirements deferred under this latest steering, not falsely satisfied:
+ranked completed0 each. AWSuoliai invitation expired unanswered, no game started.
+
+L02B6/20 complete,5W1L/27:4; actual Practice7 The Benchmark FC LIVE. Check
+private active-match.json and fresh UI before any AWS probe/mutation. Same frozen
+source912b687 and exact five bindings. Current audit is read-only model-role
+observability, not a probe. MID is deterministic; GK/DEF/FWD1 are configured Nova2
+Lite Harnesses. Portal shows0 Harness counters while customMID counts432;
+actual model calls need primary-log verification before attribution.
+Read-only discovery found no usable model latency/usage or shared trace group;
+empty CloudWatch datapoints are unknown, not zero. After game10 at safe idle,
+run verify_baseline.py then private play-pilots/model_role_probe.py --apply
+through aws_run.py. It preserves config, tests saved native Harness and Runtime
+envelope paths, measures first/second local SDK wall, stops unique own sessions.
+No probe before a fresh UI confirms idle and private active-match.status=none.
+
 # Current Practice checkpoint — 2026-10-27 after five
 
 L02B source912b687:5/20 Practice complete,4W1L,21:4; allHOME, threeAI bots.
