@@ -21,7 +21,7 @@ def digest(value):
     return hashlib.sha256(json.dumps(value,sort_keys=True,separators=(',',':'),allow_nan=False).encode()).hexdigest()
 
 
-def plan():
+def plan(restart_stance=False):
     """Four logical sessions, three rounds, monotonically increasing frames.
 
     Inputs are synthetic. Session keys are local labels, not AWS session IDs.
@@ -44,6 +44,14 @@ def plan():
         out.append({'key':case['id'],'sessionKey':group,'sequence':index,'firstInSession':index==0,
                     'repeat':0,'request':request,'requestSha256':digest(request),
                     'expectedAction':case['expectedAction'],'expectedReceiver':case['expectedReceiver']})
+    if restart_stance:
+        from mid_fast_v2.restart_compat import neutral_restart
+        engine = MidEngine()
+        for row in out:
+            commands, audit = engine.choose(row['request'], row['sessionKey'])
+            _, adapted = neutral_restart(row['request'], commands, audit, row['sessionKey'])
+            if adapted.get('reason') == 'NEUTRAL_RESTART_STANCE':
+                row.update(expectedAction='SET_STANCE', expectedReceiver=None, expectedStance=0)
     return out
 
 
@@ -55,6 +63,8 @@ def errors(row, text):
             problems.append('wrong_action')
         if command['parameters'].get('target_player_id')!=row['expectedReceiver']:
             problems.append('wrong_receiver')
+        if 'expectedStance' in row and command['parameters'].get('stance') != row['expectedStance']:
+            problems.append('wrong_stance')
     return problems
 
 

@@ -1,5 +1,11 @@
 # M11 Hybrid Fast MID v3
 
+Актуальный live-pilot вариант включает явно согласованный владельцем общий
+neutral_restart adapter, такой же как в L02B. На валидном свежем KICK_OFF
+с известным ownership и unlocked SET_STANCE он выбирает Balanced; остальные
+guards и фазы сохраняют исходный результат. Это универсальное игровое
+поведение, не специальная ветка Fitness. Core M11/L01/FastEngine SHA неизменны.
+
 27 октября перед живыми пилотами HTTP entrypoint приведён к поведению
 AgentCore SDK: bounded JSON body разбирается независимо от MIME label.
 Football Fitness у L02B фактически присылал non-application/json Content-Type,

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "checkedDate": "2026-10-27",
-  "status": "http-mime-mismatch-confirmed-transport-fix-prepared",
+  "status": "mime-fixed-neutral-restart-approved-awaiting-fitness",
   "candidate": "L02B",
   "nativeValidResponses": 224,
   "footballFitness": {
@@ -30,7 +30,26 @@
     "m11ExtractedValid": 30
   },
   "newArtifacts": {
-    "L02B": "42f9bfb8aa189873ff78ed311d853f9de2e782d17ca73f838bc3912ca702abc2",
-    "M11": "0f2400f28252615426a128673115b9d7c4bf2c324d0124cb85864f457a8bfa35"
-  }
+    "L02B": "a4cdb19fa73951a8ff15533155a887ed121a88ba6a5485e63d5e889fb0db0f60",
+    "M11": "e586faeab9df66264769f90d2a3e2f907edd85c258b8a27f7b149bace641e2c3"
+  },
+  "mimeCauseConfirmedByClassification": "application/octet-stream",
+  "postMimeFitness": {
+    "L02B": {
+      "passed": 4,
+      "total": 5,
+      "failure": "0/1 active unique ticks"
+    },
+    "M11": {
+      "passed": 4,
+      "total": 5,
+      "failure": "0/1 active unique ticks",
+      "observedPlayMode": "KICK_OFF",
+      "gameTime": 0,
+      "secondRequest": "STALE_OR_DUPLICATE_FRAME"
+    }
+  },
+  "restartOwnerApproved": true,
+  "restartBehavior": "Universal balanced stance on known-ownership valid fresh KICK_OFF after original guards; stale/unknown/wrong-binding/locked/other phases unchanged",
+  "coreTacticalEngineHashesChanged": false
 }

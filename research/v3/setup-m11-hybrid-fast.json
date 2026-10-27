@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "status": "deep-simulation-passed-native-failed-not-admitted",
+  "status": "approved-neutral-restart-variant-preparing-live-pilot",
   "preparedDate": "2026-10-26",
   "name": "M11 Hybrid Fast MID v3",
   "formation": "1-1-2",
@@ -106,5 +106,12 @@
     "fitness": null,
     "ranked": null,
     "initialPackagingFailure": "stage2-native-m11-initial-20261027.json"
+  },
+  "restartCompatibility": {
+    "module": "mid_fast_v2/restart_compat.py",
+    "ownerApproved": true,
+    "command": "SET_STANCE stance0 Balanced",
+    "scope": "Valid fresh KICK_OFF with known ownership/session and unlocked command; no Fitness-only branch",
+    "coreTacticalEnginesChanged": false
   }
 }

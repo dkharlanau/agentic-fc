@@ -44,7 +44,7 @@ def grade(receipts, deadline_ms=None, deadline_source=None, candidate='L01'):
         raise ValueError('Invalid verified deadline')
     if (deadline_ms is None)!=(deadline_source is None) or (deadline_source is not None and not deadline_source.strip()):
         raise ValueError('Deadline and its verified source must be supplied together')
-    expected=plan();bykey={r['key']:r for r in expected};seen=set();rows=[];order=[]
+    expected=plan(restart_stance=candidate == 'L02B');bykey={r['key']:r for r in expected};seen=set();rows=[];order=[]
     artifact=artifact_for(candidate)
     for receipt in receipts:
         if not isinstance(receipt,dict):raise ValueError('Invalid receipt')

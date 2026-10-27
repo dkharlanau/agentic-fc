@@ -1,14 +1,14 @@
 {
-  "kind": "L02B startup candidate, same L01 policy; native/Fitness pending",
+  "kind": "L02B transport with unchanged L01 core and approved neutral restart; native/Fitness pending",
   "runtime": "PYTHON_3_13",
   "architecture": "linux-arm64",
   "entryPoint": [
     "main.py"
   ],
-  "archiveSha256": "42f9bfb8aa189873ff78ed311d853f9de2e782d17ca73f838bc3912ca702abc2",
-  "archiveBytes": 17835,
-  "uncompressedBytes": 50590,
-  "fileCount": 9,
+  "archiveSha256": "a4cdb19fa73951a8ff15533155a887ed121a88ba6a5485e63d5e889fb0db0f60",
+  "archiveBytes": 18728,
+  "uncompressedBytes": 52088,
+  "fileCount": 10,
   "sourceSha256": {
     "agentic_fc/__init__.py": "246ba241608bece9b9a1e940dd5401385aeed762ba8306d2e2a0eba7d0556df0",
     "agentic_fc/state.py": "37729e42408e71d62525876ba79199c5d1dbf5b9526b8c91c05f996dac151690",
@@ -18,7 +18,8 @@
     "runtime_v1/sensing.py": "74a8d38db31806ed8e5b426ae16ce4e3692830e2bfa08583f62744dd339cfe1e",
     "mid_fast_v1/__init__.py": "926b0f8b20cdecb03cd9eab2664a111999c1aab63a0ff68ac907f3570f43ae3e",
     "mid_fast_v1/engine.py": "2a2154411e673c4305da9c7f1960f341246f16edac47a4629658e02b251c6635",
-    "mid_fast_v2/fastboot.py": "ab37c5a1818065843d277d3c595a432e9ff02d474ef7bd117ecf33a173ca6ca1"
+    "mid_fast_v2/fastboot.py": "53e696ed8f27ee9244b7325c2236ae2748e6bb82cfa9ee08498a550d954714d6",
+    "mid_fast_v2/restart_compat.py": "85fb1158d6be85dc66f81de9d63c0c1f85881498b518f4c4efee7056ae92948b"
   },
   "dependencies": {},
   "baselineArchiveSha256": "fb02b3abb1808991ebd2a714f2e2f5868fb7e6045f3a1de8043a86cf0ba0152a"

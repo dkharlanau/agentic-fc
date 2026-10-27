@@ -14,6 +14,7 @@ from socketserver import StreamRequestHandler, ThreadingTCPServer
 import threading
 
 from mid_fast_v1.engine import MidEngine
+from mid_fast_v2.restart_compat import neutral_restart
 
 IMPORT_MS = (time.perf_counter_ns() - BOOT_NS) / 1e6
 SESSION_HEADER = 'X-Amzn-Bedrock-AgentCore-Runtime-Session-Id'
@@ -173,6 +174,7 @@ class Handler(StreamRequestHandler):
                     with self.server.engine_lock:
                         decision_started = time.perf_counter_ns()
                         commands, audit = self.server.engine.choose(payload, headers.get(SESSION_HEADER.lower(), [None])[0])
+                        commands, audit = neutral_restart(payload, commands, audit, headers.get(SESSION_HEADER.lower(), [None])[0])
                         self.server.invocations += 1
                         ordinal = self.server.invocations
                         body = sse(commands)

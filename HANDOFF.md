@@ -1,5 +1,17 @@
 # Active owner goal reopened — 2026-10-27
 
+Latest pre-cohort fix:owner explicitly approved a universal neutral Balanced
+SET_STANCE on valid fresh KICK_OFF for BOTH candidates. MIME compatibility is
+already fixed; both real Fitness runs then failed0/1 active unique ticks on
+KICK_OFF and duplicate-frame release. New shared mid_fast_v2/restart_compat.py
+applies only after existing guards, with known ownership/session/unlocks.
+Core L01/FastEngine/M11 hashes remain reviewed; no OPEN_PLAY threshold change.
+Latest local archives: L02B a4cdb19fa73951a8ff15533155a887ed121a88ba6a5485e63d5e889fb0db0f60;
+M11 e586faeab9df66264769f90d2a3e2f907edd85c258b8a27f7b149bace641e2c3.
+Extracted local224/224 and30/30 passed;75 MID tests then focused HTTP13/M11 tests18
+passed including real HTTP restart/duplicate coverage. New AWS/Fitness deployment
+is next; no real ranked game yet. Baseline is registered during preparation.
+
 Current owner goal: deploy both candidates and complete TEN real ranked matches
 with EACH. The earlier native-only stopping result did not complete this goal.
 Required end state is20 verified completed games, two immutable10-game cohorts.

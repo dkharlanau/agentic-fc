@@ -1,5 +1,14 @@
 ## 2026-10-27 — goal resumed: deploy both and play ten each
 
+Owner explicitly approved the same SET_STANCE(Balanced) on valid fresh KICK_OFF
+for both candidates. After MIME correction both real Fitness runs returned
+4/5 because MID was active on0/1 unique ticks. M11 audit confirms KICK_OFF/time0
+then a duplicate frame. New shared adapter acts only after original guards,
+with a nonempty session, explicit known ownership and unlocked SET_STANCE;
+stale/unknown/wrong-binding/other-phase outputs remain unchanged. It applies
+universally to game restarts, not only Fitness. Core L01/FastEngine/M11 hashes
+stay unchanged; this is a disclosed common restart compatibility variant.
+
 Pre-cohort compatibility issue:exact L02B registration gave Fitness4/5/MID502.
 Rollback returned control5/5. An isolated diagnostic artifact identified
 POST /invocations with valid framing/2512-byte body but non-JSON MIME; our415

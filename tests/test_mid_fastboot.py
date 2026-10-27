@@ -16,6 +16,7 @@ from mid_fast_v2.fastboot import Server, MAX_HEADER_BYTES, SESSION_HEADER
 
 
 class FastBootTests(base_tests.MidHTTPTests):
+    restart_stance = True
     def setUp(self):
         self.environment = patch.dict(os.environ, {'MID_AUDIT': '0'})
         self.environment.start()
@@ -115,6 +116,15 @@ class FastBootTests(base_tests.MidHTTPTests):
             self.assertEqual(status, 200)
             self.assertEqual(base_tests.errors(row, base_tests.decode_response(raw)), [])
 
+    def test_http_kickoff_stance_does_not_repeat_on_stale_frame(self):
+        row = next(r for r in plan(restart_stance=True) if r.get('expectedStance') == 0)
+        headers = {'Content-Type':'application/octet-stream', SESSION_HEADER:'kickoff-http'}
+        status, _, raw = self.call('POST', '/invocations', json.dumps(row['request']), headers)
+        self.assertEqual(status, 200)
+        self.assertEqual(json.loads(base_tests.decode_response(raw))[0]['commandType'], 'SET_STANCE')
+        _, _, duplicate = self.call('POST', '/invocations', json.dumps(row['request']), headers)
+        self.assertEqual(json.loads(base_tests.decode_response(duplicate))[0]['commandType'], 'CLEAR_OVERRIDE')
+
     def test_post_waits_for_real_decision_without_early_headers(self):
         with socket.create_connection(self.server.server_address, timeout=2) as client:
             payload = json.dumps(plan()[0]['request']).encode()
@@ -132,11 +142,13 @@ class FastBootTests(base_tests.MidHTTPTests):
 
 class FastBootAdmissionTests(unittest.TestCase):
     def test_old_archive_cannot_pass_and_new_first_call_still_must_meet_deadline(self):
-        rows = plan()
+        rows = plan(restart_stance=True)
         engine = MidEngine()
         receipts = []
         for row in rows:
-            commands, _ = engine.choose(row['request'], row['sessionKey'])
+            commands, audit = engine.choose(row['request'], row['sessionKey'])
+            from mid_fast_v2.restart_compat import neutral_restart
+            commands, _ = neutral_restart(row['request'], commands, audit, row['sessionKey'])
             receipt = {key: row[key] for key in ('key', 'sessionKey', 'sequence', 'requestSha256')}
             receipt.update(planSha256=digest(rows), archiveSha256=artifact_for('L02')['archiveSha256'],
                 requestWallMs=100, complete=True, streamError=None, rawResponse=json.dumps(commands))

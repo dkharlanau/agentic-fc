@@ -6,6 +6,7 @@ import copy
 from pathlib import Path
 
 from hybrid_fast_v1.engine import HybridMidEngine
+from mid_fast_v2.restart_compat import neutral_restart
 
 ROOT = Path(__file__).resolve().parents[1]
 _spec = importlib.util.spec_from_file_location('role_eval', ROOT / 'research/v3/role-package-r1/evaluate.py')
@@ -37,6 +38,7 @@ def plan():
             state['gameState']['gameTime'] = 120 + sequence * 2
             request = {'prompt': json.dumps(state, separators=(',', ':'), allow_nan=False)}
             commands, audit = engine.choose(request, session)
+            commands, audit = neutral_restart(request, commands, audit, session)
             if audit['modelAttempted']:
                 raise AssertionError('M11 plan unexpectedly attempted a model')
             rows.append({

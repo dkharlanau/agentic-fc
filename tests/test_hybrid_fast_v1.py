@@ -203,6 +203,20 @@ class HybridFastHTTPTests(unittest.TestCase):
             self.assertEqual(status, 200)
             self.assertEqual(errors(row, raw), [])
 
+    def test_http_kickoff_stance_does_not_repeat_on_stale_frame(self):
+        from hybrid_fast_v1.evaluate import decode_response
+        row = plan()[0]
+        state = json.loads(row['request']['prompt'])
+        state['gameState']['playMode'] = 'KICK_OFF'
+        payload = {'prompt':json.dumps(state)}
+        headers = {'Content-Type':'application/octet-stream', SESSION_HEADER:'kickoff-http'}
+        status, _, raw = self.call('POST', '/invocations', json.dumps(payload), headers)
+        self.assertEqual(status, 200)
+        self.assertEqual(decode_response(raw), [{'commandType':'SET_STANCE','playerId':2,
+                                                'parameters':{'stance':0},'duration':0}])
+        _, _, duplicate = self.call('POST', '/invocations', json.dumps(payload), headers)
+        self.assertEqual(decode_response(duplicate)[0]['commandType'], 'CLEAR_OVERRIDE')
+
     def test_wrong_role_or_mode_fails_startup(self):
         with patch.dict(os.environ, {'PLAYER_ID':'4','M11_MODE':'stance'}):
             with self.assertRaises(ValueError):
@@ -234,7 +248,7 @@ class HybridFastPlanTests(unittest.TestCase):
             b = build(root / 'b.zip', root / 'b.json')
             self.assertEqual(a['archiveSha256'], b['archiveSha256'])
             self.assertEqual(a['dependencies'], {})
-            self.assertEqual(a['fileCount'], 12)
+            self.assertEqual(a['fileCount'], 13)
             self.assertEqual(a['playerId'], 2)
             self.assertEqual(a['modelCallsPerTick'], 0)
             self.assertLess(a['archiveBytes'], 100000)

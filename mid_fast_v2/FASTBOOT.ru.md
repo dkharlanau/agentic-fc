@@ -2,6 +2,14 @@
 
 ## Football compatibility correction — 27 октября
 
+Владелец также явно разрешил общий нейтральный SET_STANCE(Balanced) на
+корректном свежем KICK_OFF в обоих MID. Реальный Fitness проверил один
+уникальный стартовый тик и отверг исходный CLEAR_OVERRIDE как0/1 active.
+Адаптер restart_compat.py действует во всех матчах, после исходных guards,
+только с session, известным ownership и разрешённым SET_STANCE. Duplicate,
+unknown, wrong binding и другие фазы остаются без изменения. Core L01 file
+сохраняет SHA; активный runtime является явно согласованным restart-вариантом.
+
 Живой Football Fitness выявил отличие от native Python SDK: корректно
 фреймированный POST /invocations с JSON body2512 bytes приходит с Content-Type,
 отличным от application/json. Строгая MIME-проверка отвечала415, портал
