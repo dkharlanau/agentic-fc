@@ -1,4 +1,38 @@
-# Stage 2 execution — 2026-10-27
+# Stage 2 comparison closed — 2026-10-27
+
+Bounded requested admission/comparison protocol is complete. Result:
+EVIDENCE INSUFFICIENT — KEEP BASELINE. No candidate admitted and zero ranked
+games started, as required when native gates fail. Full final evidence/table:
+research/v3/STAGE2_COMPARISON_20261027.ru.md and stage2-comparison-20261027.json.
+
+New Workshop Baseline is restored by exact content, all five portal bindings
+re-read, formation1-1-2, final fresh Fitness5/5/READY, no active match observed.
+Original GK13/DEF19/MID15/FWD1v16 content has new account Harness versions;
+FWD2 is exact source931af03 stance policy/archive. Private exact recovery:
+.local/stage2-20261027/canonical-bindings.json, baseline-restore.json and
+fwd2-binding.json. Old-account ARNs are historical and must not be restored.
+
+L02B V1 native224/224 valid but all6 first calls1277–1843ms:FAIL.
+Initial M11 ZIP failed startup (missing agentic_fc.policy). Packaging-only
+fix244065b0d3fe10447759c2afa8684f42fa566474 includes the unchanged module;
+isolated extracted ZIP30/30 and16 M11 tests PASS. Corrected M11 archive
+b75c11aa2bf592c1b959a77a0b72a71e2d67e839bb8f5e167076b32c1cd8a390:
+native30/30 valid, all6 first calls1257–1439ms:FAIL. No candidate binding,
+Fitness or ranked block. All owned sessions stopped. Both remain isolated.
+Do not repeat the same artifacts or substitute warm-only admission.
+
+Control FWD2 contract20/20, but both first calls~2.93s failed deadline:retain
+this risk. UI Fitness0ms/model labels do not establish actual competitive
+latency/model calls. Exact L02B/M11 application audits224/30 show0 modelAttempted.
+No competitive first PLAY_ON timing or candidate football efficacy measured.
+
+Final row #11,198played,119W/6D/73L,363points,goals268:162:unchanged from
+experiment start. Group G assignment was not confirmed in the visible portal.
+Workshop active; last quota42%used/58%remaining. This is a dated observation,
+not future permission or a tournament-win claim. No automation/extra agent,
+IAM change or PR merge. Original dirty game checkout and notes preserved.
+
+# Stage 2 execution — 2026-10-27 (historical opening checkpoint)
 
 Owner now authorizes sequential L02B and final M11 v3 native/Fitness admission,
 then exactly ten completed ranked matches per admitted immutable candidate.

@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "checkedDate": "2026-10-27",
+  "decision": "EVIDENCE INSUFFICIENT \u2014 KEEP BASELINE",
+  "boundedProtocolComplete": true,
+  "tournamentWinEstablished": false,
+  "rankedGamesStarted": 0,
+  "admittedCandidates": 0,
+  "baseline": "stage2-baseline-restoration-20261027.json",
+  "historicalControl": "stage2-baseline-history-20261027.json",
+  "candidates": {
+    "L02B": {
+      "native": "stage2-native-l02b-initial-20261027.json",
+      "admitted": false,
+      "fitness": null,
+      "cohort": "ranked-l02b-10.json",
+      "footballMetrics": null
+    },
+    "M11 V3": {
+      "native": "stage2-native-m11-fixed-20261027.json",
+      "admitted": false,
+      "fitness": null,
+      "cohort": "ranked-m11-v3-10.json",
+      "footballMetrics": null
+    }
+  },
+  "confidence": {
+    "nativeNonAdmission": "high for these exact artifacts and measured six-session screens",
+    "footballSuperiority": "low; neither candidate reached ranked evaluation"
+  },
+  "risks": [
+    "Baseline FWD2 two cold calls ~2.93s also failed deadline; full team competitive deadline compliance not established",
+    "Prematch bootstrap mitigation is unproven and did not relax the gate",
+    "Group G assignment was not confirmed by the observed portal",
+    "No candidate football effect measured; historical control opponents/account differ",
+    "M11 native plan mainly exercises passing/release guards; full off-ball AWS behaviour not demonstrated"
+  ],
+  "rollback": {
+    "configuration": "GK13/DEF19/MID15/FWD1v16 equivalent content plus source931af03 FWD2 stance, formation1-1-2",
+    "privateBindings": ".local/stage2-20261027/canonical-bindings.json",
+    "privateHarnesses": ".local/stage2-20261027/baseline-restore.json",
+    "privateFwd2": ".local/stage2-20261027/fwd2-binding.json",
+    "validation": "Exact five bindings and fresh Fitness5/5, no in-flight match; verified at close"
+  },
+  "nextChange": null,
+  "repeatSameArchiveWithoutNewMeasuredHypothesis": false
+}

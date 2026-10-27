@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "checkedDate": "2026-10-27",
+  "kind": "Historical Stage 1 unchanged Baseline evidence; not new Stage 2 games",
+  "sources": [
+    {
+      "path": "research/v3/ranked-batch-17.json",
+      "sha256": "c30620bcc8a0c6d5c1f5f3869a770b919547c88d9792c17c1de9bcb766d67eef",
+      "commit": "b359071839567745f29afd52d01ef5da1feb18b1"
+    },
+    {
+      "path": "research/v3/ranked-batch-18.json",
+      "sha256": "ca61174aa8ac6769afbe5558b5d8cf1bc0b691e8804ea22dc8203b8962f526f3",
+      "commit": "b359071839567745f29afd52d01ef5da1feb18b1"
+    },
+    {
+      "path": "research/v3/ranked-batch-19.json",
+      "sha256": "99ebff5e055b11f693f1b74568ca10afe81baa2668098500edefaab8cc6bde5b",
+      "commit": "b359071839567745f29afd52d01ef5da1feb18b1"
+    },
+    {
+      "path": "research/v3/ranked-batch-20.json",
+      "sha256": "47b954f7eaba79441f7e7a5ca207c977dd2d63454f4f7baf2d40055135560a5f",
+      "commit": "b359071839567745f29afd52d01ef5da1feb18b1"
+    },
+    {
+      "path": "research/v3/ranked-batch-21.json",
+      "sha256": "abdea644025ec1357ea4f6c7fac45d114ff746874bbda11b1a405872306849e4",
+      "commit": "b359071839567745f29afd52d01ef5da1feb18b1"
+    }
+  ],
+  "lastControlledFive": {
+    "games": 5,
+    "wins": 2,
+    "draws": 0,
+    "losses": 3,
+    "points": 6,
+    "goalsFor": 9,
+    "goalsAgainst": 7,
+    "scoreless": 1,
+    "cleanSheets": 1,
+    "sideCoverage": {
+      "HOME": 5
+    },
+    "pointsPerGame": 1.2,
+    "goalDifference": 2,
+    "shots": {
+      "availableGames": 5,
+      "totalGames": 5,
+      "own": 29,
+      "opponent": 22,
+      "ownPerObservedGame": 5.8
+    },
+    "shotsOnTarget": {
+      "availableGames": 5,
+      "totalGames": 5,
+      "own": 9,
+      "opponent": 7,
+      "ownPerObservedGame": 1.8
+    }
+  },
+  "lastTwoControlledBlocks": {
+    "games": 10,
+    "wins": 6,
+    "draws": 0,
+    "losses": 4,
+    "points": 18,
+    "goalsFor": 15,
+    "goalsAgainst": 10,
+    "scoreless": 1,
+    "cleanSheets": 4,
+    "sideCoverage": {
+      "UNKNOWN": 4,
+      "AWAY": 1,
+      "HOME": 5
+    },
+    "pointsPerGame": 1.8,
+    "goalDifference": 5,
+    "shots": {
+      "availableGames": 10,
+      "totalGames": 10,
+      "own": 69,
+      "opponent": 43,
+      "ownPerObservedGame": 6.9
+    },
+    "shotsOnTarget": {
+      "availableGames": 10,
+      "totalGames": 10,
+      "own": 15,
+      "opponent": 10,
+      "ownPerObservedGame": 1.5
+    }
+  },
+  "recentFiveControlledBlocks": {
+    "games": 25,
+    "wins": 18,
+    "draws": 1,
+    "losses": 6,
+    "points": 55,
+    "goalsFor": 35,
+    "goalsAgainst": 15,
+    "scoreless": 4,
+    "cleanSheets": 15,
+    "sideCoverage": {
+      "UNKNOWN": 19,
+      "AWAY": 1,
+      "HOME": 5
+    },
+    "pointsPerGame": 2.2,
+    "goalDifference": 20,
+    "shots": {
+      "availableGames": 24,
+      "totalGames": 25,
+      "own": 147,
+      "opponent": 99,
+      "ownPerObservedGame": 6.125
+    },
+    "shotsOnTarget": {
+      "availableGames": 24,
+      "totalGames": 25,
+      "own": 35,
+      "opponent": 15,
+      "ownPerObservedGame": 1.4583333333333333
+    }
+  },
+  "limitations": [
+    "Different opponents and old Workshop account; no causal comparison with Stage 2",
+    "Unbatched games after batch21 are excluded from these cohorts",
+    "Unknown side/statistic coverage remains unknown",
+    "Report-average latency is not a per-invocation deadline audit"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "candidate": "M11 hybrid v3 packaging-corrected",
+  "status": "not-admitted-native-deadline-failure",
+  "targetCompletedMatches": 10,
+  "completedMatches": 0,
+  "sourceCommit": "244065b0d3fe10447759c2afa8684f42fa566474",
+  "archiveSha256": "b75c11aa2bf592c1b959a77a0b72a71e2d67e839bb8f5e167076b32c1cd8a390",
+  "nativeEvidence": "stage2-native-m11-fixed-20261027.json",
+  "fitness": null,
+  "matches": [],
+  "summary": null,
+  "footballComparison": null,
+  "note": "Six of six cold calls exceeded 1s; no MID binding or ranked games. Missing football metrics are null."
+}

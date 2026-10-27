@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "status": "deep-simulation-passed-native-fitness-live-pending",
+  "status": "deep-simulation-passed-native-failed-not-admitted",
   "preparedDate": "2026-10-26",
   "name": "M11 Hybrid Fast MID v3",
   "formation": "1-1-2",
@@ -65,16 +65,16 @@
   "promotionGate": {
     "native": "complete ordered screen; zero invalid decisions; fresh-session first calls and first competitive PLAY_ON calls recorded separately; official deadline not relaxed",
     "fitness": "fresh 5/5 after exact binding",
-    "rankedPilot": "five completed games is screening only; extend another five for ambiguous/promising result when window permits",
+    "rankedPilot": "exactly ten immutable completed ranked matches only after native PASS and fresh Fitness5/5; not started because native failed",
     "rollback": "restore MID15 baseline, verify all other role hashes/versions and fresh Fitness 5/5"
   },
   "claimsNotMade": [
-    "not deployed",
+    "not registered in football team",
     "not Fitness-tested",
     "not proven faster end-to-end",
     "not proven stronger in matches",
     "local simulation is not ball-physics simulation",
-    "five ranked games would be screening, not proof"
+    "ten ranked games would be evidence, not proof; none played"
   ],
   "deepRun": {
     "result": "PASS",
@@ -87,8 +87,24 @@
     "crashes": 0,
     "defensiveThirdPressOrIntercept": 0,
     "unknownPossessionActiveRate": 0,
-    "awsNative": null,
+    "awsNative": {
+      "status": "FAIL",
+      "evidence": "stage2-native-m11-fixed-20261027.json"
+    },
     "fitness": null,
     "ranked": null
+  },
+  "checkedDate": "2026-10-27",
+  "stage2Native": {
+    "sourceCommit": "244065b0d3fe10447759c2afa8684f42fa566474",
+    "archiveSha256": "b75c11aa2bf592c1b959a77a0b72a71e2d67e839bb8f5e167076b32c1cd8a390",
+    "validResponses": 30,
+    "expected": 30,
+    "firstCallsLate": 6,
+    "firstCalls": 6,
+    "admitted": false,
+    "fitness": null,
+    "ranked": null,
+    "initialPackagingFailure": "stage2-native-m11-initial-20261027.json"
   }
 }

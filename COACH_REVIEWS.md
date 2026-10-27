@@ -1,3 +1,22 @@
+## 2026-10-27 — Stage 2 comparison closed, no admitted candidate
+
+Coach-v1.0 rechecked; no controlled ranked series was started. Owner's ten-game
+rule remains intact: native failure prohibits the block. L02B224/224 valid,
+all6 cold late; corrected-package M11 v3 30/30 valid, all6 cold late. Initial
+M11 dependency omission is fixed and separately preserved, not merged into
+the new native sample. Actual application audits224/30:zero modelAttempted.
+All owned probe sessions stopped. Full evidence and limits:
+research/v3/STAGE2_COMPARISON_20261027.ru.md.
+
+C01: reject both admissions, retain exact restored Baseline/fresh Fitness5/5.
+C02/C03: insufficient football evidence; no new tactical/model/role change.
+Baseline's FWD2 cold2/2 ~2.93s remains a reliability risk, not a passed latency
+claim. No candidate Fitness or ranked results exist. Next change:none; do not
+repeat identical artifacts without a new measured hypothesis. Rollback is the
+saved exact new-account MID15-equivalent and other four canonical bindings,
+formation112 and fresh Fitness. Final row #11/198played/363points/268:162;
+no account delta. Decision:EVIDENCE INSUFFICIENT — KEEP BASELINE.
+
 ## 2026-10-27 — Stage 2 gates and M11 packaging correction
 
 Coach-v1.0 remains current. L02B completed224/224 valid native calls in

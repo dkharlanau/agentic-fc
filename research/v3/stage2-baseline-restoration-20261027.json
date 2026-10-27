@@ -56,5 +56,33 @@
     "goalsAgainst": 162
   },
   "rankedMatchesStartedThisExperiment": 0,
-  "exactRollbackPrivate": "ignored .local/stage2-20261027/canonical-bindings.json plus baseline-restore.json and fwd2-binding.json; fresh Fitness5/5"
+  "exactRollbackPrivate": "ignored .local/stage2-20261027/canonical-bindings.json plus baseline-restore.json and fwd2-binding.json; fresh Fitness5/5",
+  "finalFiveBindingsVerified": true,
+  "finalFitness": {
+    "passed": 5,
+    "total": 5,
+    "fresh": true,
+    "readyToPlay": true,
+    "activeMatchObserved": false
+  },
+  "leaderboardAfter": {
+    "rank": 11,
+    "played": 198,
+    "wins": 119,
+    "draws": 6,
+    "losses": 73,
+    "points": 363,
+    "goalsFor": 268,
+    "goalsAgainst": 162
+  },
+  "leaderboardDelta": {
+    "played": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "points": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0
+  },
+  "telemetryLimitation": "FWD2 card retained model badges from prior Harness registration; UI labels and zero-ms Fitness are not evidence of actual model calls or zero transport latency."
 }

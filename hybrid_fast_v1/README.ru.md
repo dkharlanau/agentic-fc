@@ -1,7 +1,10 @@
 # M11 Hybrid Fast MID v3
 
 Статус на 27 октября: **deep simulation PASS; isolated AWS deployment выполнен;
-в команде не зарегистрирован, Fitness и ranked M11 не запускались**.
+исправленный ZIP native FAIL (6/6 cold calls >1s); в команде не зарегистрирован,
+Fitness и ranked M11 не запускались**.
+
+Итог: [Stage 2 comparison](../research/v3/STAGE2_COMPARISON_20261027.ru.md).
 
 Первый CodeZip `d073569c...` не запустился: пакет не включал
 `agentic_fc/policy.py`, импортируемый через `agentic_fc/__init__.py`.
@@ -167,7 +170,7 @@ Gate не убирает первые вызовы из статистики.
 
 В сохранённых FWD2 sessions встречается один bootstrap/malformed response на сессию, но это только гипотеза о prematch warmup, а не основание ослаблять официальный deadline.
 
-## Завтрашний A/B
+## Протокол Stage 2
 
 A = L02B.
 B = M11 v3.
@@ -177,11 +180,13 @@ B = M11 v3.
 2. isolated native;
 3. только PASS -> exact MID binding;
 4. свежий Fitness 5/5;
-5. 5 ranked games без изменения setup;
+5. 10 ranked games без изменения setup;
 6. checkpoint;
 7. rollback MID15 + Fitness перед следующим кандидатом.
 
-Пять игр — screening. 3W2L не достаточно для promotion; 4W1L/5W0L — promising, желательно ещё 5, если окно позволяет.
+Новое указание владельца требует ровно10 завершённых игр на допущенный
+неизменный setup. Обе сборки не прошли native, поэтому эти блоки не запускались.
+Десять игр были бы свидетельством, не доказательством превосходства.
 
 Главные метрики:
 - first competitive PLAY_ON latency;
