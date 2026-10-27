@@ -1,0 +1,40 @@
+{
+  "cohort": "cloud-mid-replay-01",
+  "status": "first-match-live-visual-observation-blocked",
+  "targetCompletedMatches": 2,
+  "completedMatches": 0,
+  "coachVersion": "coach-v1.0",
+  "change": "MID initial-position replay plus isolated platformV2; other four bindings verified unchanged",
+  "sourceCommit": "4de510a0214086c1d1ee1303e75ea735793eb556",
+  "formation": "1-1-2",
+  "fitness": "5/5 twice unchanged",
+  "opponentOrder": [
+    "Total Attack United",
+    "Fort Knox Athletic"
+  ],
+  "matches": [],
+  "quotaRemainingPercent": null,
+  "deadlineUTC": "2026-10-28T03:15:50Z",
+  "observationsPlanned": [
+    "MID movement and passing after kickoff",
+    "forward spacing and sprinting",
+    "DEF protection after loss",
+    "GK position before incoming shots",
+    "visible delays and missed actions"
+  ],
+  "limits": "Two matches are a pilot, not statistical evidence; no probes or lineup changes during block.",
+  "prematch": {
+    "GK_ms": 2536,
+    "DEF_ms": 258,
+    "MID_ms": 1065,
+    "FWD4_ms": 291,
+    "FWD5_ms": 1173,
+    "allReady": true
+  },
+  "startedUTC": "2026-10-27T18:07:47Z",
+  "visualObservation": {
+    "status": "blocked",
+    "reason": "Cloud browser Unity reports WebGL unsupported; no pitch frames observed. Browser policy disallowed chrome://gpu diagnostics; no alternate route used for that denied action.",
+    "startedUTC": "2026-10-27T18:08:51Z"
+  }
+}

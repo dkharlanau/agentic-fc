@@ -53,13 +53,14 @@ def neutral_restart(payload, commands, audit, session=None):
 
 
 class KickoffRetry:
-    """One idempotent retry of a safe initial positioning response within 5 s.
+    """Idempotent replay of the last validated initial positioning response.
 
-    Football startup repeats the exact tick0/time0 payload; observed delays
-    include 0.5, 1.19, 2.23 and 2.46 seconds. This is a transport allowance,
-    not a relaxation of open-play freshness or a tournament time budget.
+    A caller can reuse its session for another unchanged initial tick long
+    after the first retry. Elapsed wall time cannot make that positioning
+    command unsafe when the complete validated state remains identical.
     Never replay a possession action or any competitive/open-play response.
     Every intervening changed/invalid request invalidates the cached response.
+    This is not a special Fitness path: the same rule applies to any caller.
     """
     def __init__(self, clock=time.monotonic):
         self.clock = clock
@@ -81,10 +82,9 @@ class KickoffRetry:
                 separators=(',', ':'), allow_nan=False).encode()).digest()
         except (TypeError, ValueError):
             return commands, audit
-        now = self.clock()
         if (previous and audit.get('reason') == 'STALE_OR_DUPLICATE_FRAME'
-                and fingerprint == previous['fingerprint']
-                and 0 <= now - previous['at'] <= 5.0):
+                and fingerprint == previous['fingerprint']):
+            self.pending[session] = previous
             audit = dict(audit, reason='IDEMPOTENT_INITIAL_KICKOFF_RETRY',
                          retryOfReason='NEUTRAL_RESTART_SUPPORT')
             return json.loads(previous['commands']), audit
@@ -92,7 +92,7 @@ class KickoffRetry:
                 and len(commands) == 1 and commands[0]['commandType'] == 'MOVE_TO'
                 and commands[0]['playerId'] == 2 and commands[0]['duration'] == 0
                 and commands[0]['parameters'].get('sprint') is False):
-            self.pending[session] = {'fingerprint':fingerprint, 'at':now,
+            self.pending[session] = {'fingerprint':fingerprint,
                                      'commands':json.dumps(commands)}
             if len(self.pending) > 64:
                 self.pending.pop(next(iter(self.pending)))

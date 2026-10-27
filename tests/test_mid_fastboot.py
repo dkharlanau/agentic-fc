@@ -1,5 +1,6 @@
 """Same full policy plan plus framing, concurrency and startup-path regressions."""
 from http.client import HTTPConnection
+import errno
 import json
 import os
 import socket
@@ -32,7 +33,13 @@ class FastBootTests(base_tests.MidHTTPTests):
     def raw(self, request):
         with socket.create_connection(self.server.server_address, timeout=2) as client:
             client.sendall(request)
-            client.shutdown(socket.SHUT_WR)
+            try:
+                client.shutdown(socket.SHUT_WR)
+            except OSError as error:
+                # Linux may already see the peer close after rejecting a large
+                # header. Still read and assert its exact HTTP rejection below.
+                if error.errno != errno.ENOTCONN:
+                    raise
             chunks = []
             while True:
                 data = client.recv(65536)
@@ -156,7 +163,7 @@ class FastBootTests(base_tests.MidHTTPTests):
             status, _, raw = self.call('POST', '/invocations', json.dumps(payload), headers)
             self.assertEqual(status, 200)
             actions.append(decode_response(raw)[0]['commandType'])
-        self.assertEqual(actions, ['MOVE_TO','MOVE_TO','CLEAR_OVERRIDE'])
+        self.assertEqual(actions, ['MOVE_TO','MOVE_TO','MOVE_TO'])
 
     def test_http_kickoff_stance_does_not_repeat_on_stale_frame(self):
         row = next(r for r in plan(restart_stance=True) if r.get('expectedRestartCompatibility'))

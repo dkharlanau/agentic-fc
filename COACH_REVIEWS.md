@@ -1070,3 +1070,28 @@ then MID-only binding/fresh Fitness5/5 and five unchanged real games if PASS.
 If import improves but wall stays late, reject and investigate session/delivery
 path; do not repeat or soften the gate. Rollback MID15/Fitness. Details:
 [mid_fast_v2/FASTBOOT.ru.md](mid_fast_v2/FASTBOOT.ru.md).
+
+## 2026-10-27 — cloud coach initial readiness repair
+
+Read HANDOFF, coach-v1.0 and latest reviews at source4a63895. The owner's latest
+window is ten hours; two unchanged observed Practice matches per admitted block
+supersede older five-ranked-game instructions. Preserve L02B/FWD4 and good DEF2
+carrying; first resolve MID Fitness, not speculative tactical changes. Fresh
+portal check4/5 and runtime audit show repeated identical initial state in one
+process after the initial single retry was consumed. Candidate replays only the
+same validated initial positioning intent until any intervening state invalidates
+it. No open-play or possession-action replay. Full AWS response and repeated
+Fitness checks remain required. See research/v3/cloud-coach/mid-initial-replay.md.
+
+## 2026-10-27 — MID restored; first cloud Practice block
+
+coach-v1.0 reread on resume. C01: two fresh unchanged Fitness checks5/5 after
+MID-only replacement; exact other four bindings and1-1-2 preserved. V2 screen
+224/224 across six fresh sessions, max2.054s after explicitly recorded client
+proxy setup/required cleanup. Earlier timeouts and15.432s diagnostic retained;
+13.121s of that diagnostic was proxy CONNECT, not agent computation. This is
+not a universal V2 speed claim or a game-server latency measurement. C02/C03
+remain observational: next two unchanged Practice matches TotalAttack/FortKnox
+with actual screen observation. No new tactical package or FWD4 change.
+Rollback is original MID with fresh Fitness; old MID readiness was4/5, so rollback
+is not falsely described as guaranteed ready. Quota unavailable, not assumed.

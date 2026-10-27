@@ -77,7 +77,7 @@ class NeutralRestartTests(unittest.TestCase):
                 adapted, _ = neutral_restart(root, original, audit, 'phase')
                 self.assertEqual(adapted, original)
 
-    def test_initial_kickoff_retry_is_exact_once_short_and_position_only(self):
+    def test_initial_kickoff_replay_is_exact_idempotent_and_position_only(self):
         for cls in (MidEngine, HybridMidEngine):
             for variant in ('exact', 'observed-delay', 'boundary', 'expired', 'changed', 'intervening', 'later-restart'):
                 with self.subTest(engine=cls.__name__, variant=variant):
@@ -93,11 +93,46 @@ class NeutralRestartTests(unittest.TestCase):
                     if variant=='intervening':
                         newer=copy.deepcopy(root);newer['gameState'].update(tick=1,gameTime=.1,playMode='PLAY_ON');call(newer)
                     second,audit=call(root)
-                    if variant in ('exact','observed-delay','boundary'):
+                    if variant in ('exact','observed-delay','boundary','expired'):
                         self.assertEqual(second,first)
                         self.assertEqual(audit['reason'],'IDEMPOTENT_INITIAL_KICKOFF_RETRY')
                     else:self.assertEqual(second[0]['commandType'],'CLEAR_OVERRIDE')
-                    third,_=call(root);self.assertEqual(third[0]['commandType'],'CLEAR_OVERRIDE')
+                    third,_=call(root)
+                    self.assertEqual(third[0]['commandType'],
+                        'MOVE_TO' if variant in ('exact','observed-delay','boundary','expired') else 'CLEAR_OVERRIDE')
+
+    def test_unchanged_initial_position_survives_long_idle_but_not_progress(self):
+        root=self.state();root['gameState'].update(tick=0,gameTime=0)
+        engine=MidEngine();clock=[0.0];retry=KickoffRetry(lambda:clock[0])
+        def call(value, session='reused-start'):
+            commands,audit=self.choose(engine,value,session)
+            return retry.apply(value,commands,audit,session)
+        first,_=call(root)
+        for instant in (3,400,500,1200):
+            clock[0]=instant
+            result,audit=call(root)
+            self.assertEqual(result,first)
+            self.assertEqual(audit['reason'],'IDEMPOTENT_INITIAL_KICKOFF_RETRY')
+        progressed=copy.deepcopy(root)
+        progressed['gameState'].update(tick=1,gameTime=.1,playMode='PLAY_ON')
+        call(progressed)
+        result,_=call(root)
+        self.assertEqual(result[0]['commandType'],'CLEAR_OVERRIDE')
+
+    def test_initial_replay_cache_is_bounded_and_session_scoped(self):
+        root=self.state();root['gameState'].update(tick=0,gameTime=0)
+        engine=MidEngine();retry=KickoffRetry()
+        for i in range(70):
+            session='session-'+str(i)
+            commands,audit=self.choose(engine,root,session)
+            retry.apply(root,commands,audit,session)
+        self.assertEqual(len(retry.pending),64)
+        self.assertNotIn('session-0',retry.pending)
+        changed=copy.deepcopy(root);changed['gameState']['players'][2]['stamina']-=1
+        commands,audit=self.choose(engine,changed,'session-69')
+        result,_=retry.apply(changed,commands,audit,'session-69')
+        self.assertEqual(result[0]['commandType'],'CLEAR_OVERRIDE')
+        self.assertNotIn('session-69',retry.pending)
 
     def test_retry_never_replays_open_play_or_invalid_identity(self):
         root=self.state();root['gameState'].update(tick=0,gameTime=0)
