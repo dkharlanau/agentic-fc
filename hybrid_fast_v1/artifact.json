@@ -5,9 +5,9 @@
   "entryPoint": [
     "main.py"
   ],
-  "archiveSha256": "e586faeab9df66264769f90d2a3e2f907edd85c258b8a27f7b149bace641e2c3",
-  "archiveBytes": 26428,
-  "uncompressedBytes": 73654,
+  "archiveSha256": "1f57a0fa672d6c76df7c2e6f94265348a4c75d0ac5aae3af8c4a1773f4c17f21",
+  "archiveBytes": 26785,
+  "uncompressedBytes": 74744,
   "fileCount": 13,
   "sourceSha256": {
     "agentic_fc/__init__.py": "246ba241608bece9b9a1e940dd5401385aeed762ba8306d2e2a0eba7d0556df0",
@@ -19,7 +19,7 @@
     "fast_path_v2/__init__.py": "bf06d90bd4e97503c35e63e5c7216d3e1cdf6f863683df7d38c245374fba288f",
     "fast_path_v2/engine.py": "677aaf841b55040705ebf77068b9e6a3393e8acc221d0a22c30cd2ed1dca368e",
     "mid_fast_v1/engine.py": "2a2154411e673c4305da9c7f1960f341246f16edac47a4629658e02b251c6635",
-    "mid_fast_v2/restart_compat.py": "85fb1158d6be85dc66f81de9d63c0c1f85881498b518f4c4efee7056ae92948b",
+    "mid_fast_v2/restart_compat.py": "6724340bacbe76061ee33437f1c0add3f11e17dcd353605c67b49e871c164462",
     "hybrid_fast_v1/__init__.py": "3dd1d1fb894a01dbb50b947a1608dd5eaa4bc035a1147e5073b09b37e4c48939",
     "hybrid_fast_v1/engine.py": "043454d615099f2a27438d4b2dcfbcec76c9f8c49ed72296c66c593d34b358de",
     "hybrid_fast_v1/main.py": "edbbabc788ad0ad096ba4820629442fc008a5a1d6f5678ff85fa52f3ad43b42a"

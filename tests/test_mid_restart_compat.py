@@ -19,17 +19,26 @@ class NeutralRestartTests(unittest.TestCase):
         commands, audit = engine.choose(root, session)
         return neutral_restart(root, commands, audit, session)
 
-    def test_known_fresh_kickoff_is_balanced_on_both_sides_and_engines(self):
+    def test_known_fresh_kickoff_supports_own_half_on_both_sides_and_engines(self):
         for cls in (MidEngine, HybridMidEngine):
             for side in (0, 1):
                 with self.subTest(engine=cls.__name__, side=side):
                     root = self.state()
                     root['teamId'] = side
                     commands, audit = self.choose(cls(), root)
-                    self.assertEqual(commands, [{'commandType':'SET_STANCE','playerId':2,
-                                                'parameters':{'stance':0},'duration':0}])
-                    self.assertEqual(audit['reason'], 'NEUTRAL_RESTART_STANCE')
+                    self.assertEqual(commands, [{'commandType':'MOVE_TO','playerId':2,
+                                                'parameters':{'target_x':-8.0 if side==0 else 8.0,
+                                                              'target_y':0.0,'sprint':False},'duration':0}])
+                    self.assertEqual(audit['reason'], 'NEUTRAL_RESTART_SUPPORT')
                     self.assertFalse(audit['modelAttempted'])
+
+    def test_unverified_geometry_never_gets_world_move_coordinates(self):
+        root = self.state()
+        commands, audit = MidEngine().choose(root, 'frame')
+        audit['frame'] = 'keeper_reference_xz'
+        adapted, _ = neutral_restart(root, commands, audit, 'frame')
+        self.assertEqual(adapted, [{'commandType':'SET_STANCE','playerId':2,
+                                   'parameters':{'stance':0},'duration':0}])
 
     def test_duplicate_and_old_kickoffs_still_release(self):
         for cls in (MidEngine, HybridMidEngine):

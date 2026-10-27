@@ -49,9 +49,10 @@ def plan(restart_stance=False):
         engine = MidEngine()
         for row in out:
             commands, audit = engine.choose(row['request'], row['sessionKey'])
-            _, adapted = neutral_restart(row['request'], commands, audit, row['sessionKey'])
-            if adapted.get('reason') == 'NEUTRAL_RESTART_STANCE':
-                row.update(expectedAction='SET_STANCE', expectedReceiver=None, expectedStance=0)
+            adapted_commands, adapted = neutral_restart(row['request'], commands, audit, row['sessionKey'])
+            if adapted.get('reason') in ('NEUTRAL_RESTART_STANCE', 'NEUTRAL_RESTART_SUPPORT'):
+                row.update(expectedAction=adapted_commands[0]['commandType'], expectedReceiver=None,
+                           expectedParameters=adapted_commands[0]['parameters'], expectedRestartCompatibility=True)
     return out
 
 
@@ -63,8 +64,8 @@ def errors(row, text):
             problems.append('wrong_action')
         if command['parameters'].get('target_player_id')!=row['expectedReceiver']:
             problems.append('wrong_receiver')
-        if 'expectedStance' in row and command['parameters'].get('stance') != row['expectedStance']:
-            problems.append('wrong_stance')
+        if 'expectedParameters' in row and command['parameters'] != row['expectedParameters']:
+            problems.append('wrong_restart_parameters')
     return problems
 
 

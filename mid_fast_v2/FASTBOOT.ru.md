@@ -10,6 +10,13 @@
 unknown, wrong binding и другие фазы остаются без изменения. Core L01 file
 сохраняет SHA; активный runtime является явно согласованным restart-вариантом.
 
+Последующий Fitness подтвердил:даже фактически выданная SET_STANCE не считается
+активной. В рамках нового автономного разрешения общий restart adapter использует
+поддержку MID внутри своей половины:MOVE_TO(-8*sideSign,0), sprint=false,
+только на подтверждённой полноразмерной documented_xy геометрии с keeper anchors.
+На неизвестной геометрии остаётся neutral stance; исходные guards сохранены.
+Поведение общее для всех рестартов матчей, не привязано к Fitness session.
+
 Живой Football Fitness выявил отличие от native Python SDK: корректно
 фреймированный POST /invocations с JSON body2512 bytes приходит с Content-Type,
 отличным от application/json. Строгая MIME-проверка отвечала415, портал

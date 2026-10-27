@@ -117,11 +117,12 @@ class FastBootTests(base_tests.MidHTTPTests):
             self.assertEqual(base_tests.errors(row, base_tests.decode_response(raw)), [])
 
     def test_http_kickoff_stance_does_not_repeat_on_stale_frame(self):
-        row = next(r for r in plan(restart_stance=True) if r.get('expectedStance') == 0)
+        row = next(r for r in plan(restart_stance=True) if r.get('expectedRestartCompatibility'))
         headers = {'Content-Type':'application/octet-stream', SESSION_HEADER:'kickoff-http'}
         status, _, raw = self.call('POST', '/invocations', json.dumps(row['request']), headers)
         self.assertEqual(status, 200)
-        self.assertEqual(json.loads(base_tests.decode_response(raw))[0]['commandType'], 'SET_STANCE')
+        self.assertEqual(json.loads(base_tests.decode_response(raw))[0]['commandType'], row['expectedAction'])
+        self.assertEqual(json.loads(base_tests.decode_response(raw))[0]['parameters'], row['expectedParameters'])
         _, _, duplicate = self.call('POST', '/invocations', json.dumps(row['request']), headers)
         self.assertEqual(json.loads(base_tests.decode_response(duplicate))[0]['commandType'], 'CLEAR_OVERRIDE')
 

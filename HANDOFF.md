@@ -1,5 +1,22 @@
 # Active owner goal reopened — 2026-10-27
 
+Latest owner steering:work autonomously, make needed project corrections, and
+expand bot testing toward20–50 matches per setup to study weaknesses before
+live-player competition. Current bounded plan:20 L02B +20 M11=40 completed
+ranked games, preserving the original first10-per-candidate deliverable.
+Current actual progress0/40. Do not claim human-opponent performance from bots.
+Core setups remain frozen during each cohort; review at safe boundaries.
+
+Real Fitness did not count even emitted SET_STANCE as active. Under the owner's
+broader authorization, the common restart adapter now uses a useful central
+own-half support MOVE_TO(-8*sideSign,0), nonsprinting, ONLY for validated full-size
+documented XY with keeper anchors. Unknown geometry keeps neutral stance; all
+identity/session/freshness/ownership/unlock guards remain. This applies to game
+restarts generally, not a Fitness-only condition. Latest local ZIPs:
+L02B cf99810d48a0fee06efc05d12a547a96aa621f4f5030497d4444430576de608f;
+M11 1f57a0fa672d6c76df7c2e6f94265348a4c75d0ac5aae3af8c4a1773f4c17f21.
+77 MID/18 M11 checks and extracted224/224 +30/30 passed. Deployment/Fitness next.
+
 Latest pre-cohort fix:owner explicitly approved a universal neutral Balanced
 SET_STANCE on valid fresh KICK_OFF for BOTH candidates. MIME compatibility is
 already fixed; both real Fitness runs then failed0/1 active unique ticks on
@@ -14,8 +31,8 @@ is next; no real ranked game yet. Baseline is registered during preparation.
 
 Current owner goal: deploy both candidates and complete TEN real ranked matches
 with EACH. The earlier native-only stopping result did not complete this goal.
-Required end state is20 verified completed games, two immutable10-game cohorts.
-Current progress0/20; L02B and corrected-package M11 v3 already exist as exact
+Original minimum end state was20 verified games; latest owner steering expands
+the target to40 as above. L02B and corrected-package M11 v3 already exist as exact
 READY isolated AWS deployments, but neither has played a ranked match yet.
 
 Execution decision under the renewed owner goal: proceed with bounded real-game

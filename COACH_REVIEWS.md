@@ -1,5 +1,12 @@
 ## 2026-10-27 — goal resumed: deploy both and play ten each
 
+Latest owner authorization is autonomous necessary corrections and20–50 bot
+games per setup; bounded plan20 each. Emitted neutral SET_STANCE still counted
+0/1 active in actual Fitness. Common restart support now moves MID centrally
+inside its own half only in verified full-size XY, without sprint or ball action;
+unknown geometry falls back to neutral stance, stale/unknown ownership releases.
+No core tactical-engine hashes changed. Native/play tests remain distinct.
+
 Owner explicitly approved the same SET_STANCE(Balanced) on valid fresh KICK_OFF
 for both candidates. After MIME correction both real Fitness runs returned
 4/5 because MID was active on0/1 unique ticks. M11 audit confirms KICK_OFF/time0

@@ -212,8 +212,8 @@ class HybridFastHTTPTests(unittest.TestCase):
         headers = {'Content-Type':'application/octet-stream', SESSION_HEADER:'kickoff-http'}
         status, _, raw = self.call('POST', '/invocations', json.dumps(payload), headers)
         self.assertEqual(status, 200)
-        self.assertEqual(decode_response(raw), [{'commandType':'SET_STANCE','playerId':2,
-                                                'parameters':{'stance':0},'duration':0}])
+        self.assertEqual(decode_response(raw), [{'commandType':'MOVE_TO','playerId':2,
+                                                'parameters':{'target_x':-8.0,'target_y':0.0,'sprint':False},'duration':0}])
         _, _, duplicate = self.call('POST', '/invocations', json.dumps(payload), headers)
         self.assertEqual(decode_response(duplicate)[0]['commandType'], 'CLEAR_OVERRIDE')
 
