@@ -1,0 +1,35 @@
+{
+  "status": "prepared-native-only-not-installed",
+  "hypothesis": "Explicit teamCode mapping and signed forward progress may remove the prepared DEF AWAY failure. Preserve all other prompt rules, model and live lineup.",
+  "preserved": "All live five bindings and1-1-2; FWD4 not changed. Existing DEF carrying preserved.",
+  "arms": [
+    {
+      "name": "prepared",
+      "path": "research/v3/coach-three-stage2/def-forward-pass.txt",
+      "sha256": "74730d24ec64e71774fa1bc614a25f9790e3cad71cf1b83006d56b009a2f6ff7",
+      "words": 445
+    },
+    {
+      "name": "explicit-side",
+      "path": "research/v3/cloud-coach/def-pass/explicit-side-candidate.txt",
+      "sha256": "71515d5567b1e40c445540e5df04e46382ac7ea555f3facfc387fc8664a5ed0d",
+      "words": 498
+    }
+  ],
+  "cases": [
+    "explicit own possession HOME",
+    "ambiguous owner HOME",
+    "explicit own possession AWAY",
+    "ambiguous owner AWAY"
+  ],
+  "testBoundary": "One-call systemPrompt overrides on fresh owned diagnostic sessions of existing DEF harness; no persistent update or portal change. Same maxIterations1/maxTokens512/timeout30 for both arms; not identical to live defaults.",
+  "gate": "All8 complete assigned-player valid JSON commands; confirmed safe forward opportunity PASS, ambiguous ownership CLEAR_OVERRIDE. Report full external SDK latency, cold calls and model metadata separately. Never substitute this screen for Fitness or observed games.",
+  "observationsRequiredBeforeInstall": [
+    "resolve any contract failure",
+    "latency and exact configuration review",
+    "freshFitness5/5",
+    "two unchanged observedPractice games"
+  ],
+  "quotaRemainingPercent": null,
+  "designChallenge": "Rejected a broader shorter-prompt draft before testing: it changed off-ball pressure and too many tactical rules. This comparison changes only explicit identity/direction wording."
+}

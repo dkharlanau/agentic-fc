@@ -1,0 +1,46 @@
+{
+  "candidate": "L02B",
+  "kind": "local extracted archive, six fresh Python processes with site packages disabled",
+  "python": "3.12.14",
+  "system": "Linux",
+  "machine": "x86_64",
+  "archiveSha256": "239f95187bc3fa19def668fd53918b18afd2f66c0af23d0de8ba48e22154a078",
+  "planSha256": "ff18c3e157959f695882c50a5a1b371a3b58a2bb34aa021ad73555335f015570",
+  "requests": 224,
+  "passed": 224,
+  "auditEnabled": true,
+  "traceEnabled": true,
+  "traceRecords": 224,
+  "processes": 6,
+  "localProcessReadyMs": {
+    "n": 6,
+    "p50": 46.715,
+    "p95": 76.36,
+    "max": 85.246954
+  },
+  "localImportMs": {
+    "n": 6,
+    "p50": 34.66,
+    "p95": 55.192,
+    "max": 61.089848
+  },
+  "localHTTPMs": {
+    "n": 224,
+    "p50": 0.585,
+    "p95": 1.411,
+    "max": 6.557565
+  },
+  "excluded": [
+    "AWS microVM startup",
+    "AWS CodeZip launcher",
+    "remote network",
+    "game command application"
+  ],
+  "native": null,
+  "fitness": null,
+  "promotion": false,
+  "failures": [],
+  "unitTestsPassed": 173,
+  "privacyTestsPassed": 3,
+  "tacticalPolicyChanged": false
+}

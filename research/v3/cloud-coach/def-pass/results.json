@@ -1,0 +1,160 @@
+{
+  "status": "reject-both-arms-not-installed",
+  "liveBindingsChanged": false,
+  "strictJSONPassed": 0,
+  "completeCalls": 8,
+  "calls": 8,
+  "ownedSessionsStopped": true,
+  "rows": [
+    {
+      "arm": "prepared",
+      "side": 0,
+      "case": "explicit",
+      "firstInSession": true,
+      "expected": "PASS",
+      "fullResponseMs": 15084.953611949459,
+      "strictJSONPassed": false,
+      "decodedCommand": {
+        "commandType": "PASS",
+        "playerId": 1,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "decodedExpectedTypeMatched": true
+    },
+    {
+      "arm": "prepared",
+      "side": 0,
+      "case": "ambiguous",
+      "firstInSession": false,
+      "expected": "CLEAR_OVERRIDE",
+      "fullResponseMs": 1395.2324829879217,
+      "strictJSONPassed": false,
+      "decodedCommand": {
+        "commandType": "PASS",
+        "playerId": 1,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "decodedExpectedTypeMatched": false
+    },
+    {
+      "arm": "explicit-side",
+      "side": 0,
+      "case": "explicit",
+      "firstInSession": true,
+      "expected": "PASS",
+      "fullResponseMs": 3104.742367984727,
+      "strictJSONPassed": false,
+      "decodedCommand": {
+        "commandType": "PASS",
+        "playerId": 1,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "decodedExpectedTypeMatched": true
+    },
+    {
+      "arm": "explicit-side",
+      "side": 0,
+      "case": "ambiguous",
+      "firstInSession": false,
+      "expected": "CLEAR_OVERRIDE",
+      "fullResponseMs": 1402.8055460075848,
+      "strictJSONPassed": false,
+      "decodedCommand": {
+        "commandType": "PASS",
+        "playerId": 1,
+        "parameters": {
+          "target_player_id": 3,
+          "type": "GROUND"
+        },
+        "duration": 0
+      },
+      "decodedExpectedTypeMatched": false
+    },
+    {
+      "arm": "prepared",
+      "side": 1,
+      "case": "explicit",
+      "firstInSession": true,
+      "expected": "PASS",
+      "fullResponseMs": 3474.424469983205,
+      "strictJSONPassed": false,
+      "decodedCommand": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 1,
+        "parameters": {},
+        "duration": 0
+      },
+      "decodedExpectedTypeMatched": false
+    },
+    {
+      "arm": "prepared",
+      "side": 1,
+      "case": "ambiguous",
+      "firstInSession": false,
+      "expected": "CLEAR_OVERRIDE",
+      "fullResponseMs": 1171.8465010053478,
+      "strictJSONPassed": false,
+      "decodedCommand": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 1,
+        "parameters": {},
+        "duration": 0
+      },
+      "decodedExpectedTypeMatched": true
+    },
+    {
+      "arm": "explicit-side",
+      "side": 1,
+      "case": "explicit",
+      "firstInSession": true,
+      "expected": "PASS",
+      "fullResponseMs": 3031.652831006795,
+      "strictJSONPassed": false,
+      "decodedCommand": {
+        "commandType": "CLEAR_OVERRIDE",
+        "playerId": 1,
+        "parameters": {},
+        "duration": 0
+      },
+      "decodedExpectedTypeMatched": false
+    },
+    {
+      "arm": "explicit-side",
+      "side": 1,
+      "case": "ambiguous",
+      "firstInSession": false,
+      "expected": "CLEAR_OVERRIDE",
+      "fullResponseMs": 1034.7124470281415,
+      "strictJSONPassed": false,
+      "decodedCommand": {
+        "commandType": "MARK",
+        "playerId": 1,
+        "parameters": {
+          "target_player_id": 0,
+          "tightness": "TIGHT"
+        },
+        "duration": 1
+      },
+      "decodedExpectedTypeMatched": false
+    }
+  ],
+  "limitations": [
+    "Synthetic states, not game outcomes",
+    "Both arms used same per-invocation caps1iteration/512tokens/30seconds, different from live defaults",
+    "Sequential ambiguous state follows explicit possession within each diagnostic session; carry-over is a possible explanation",
+    "Fenced parsing is diagnostic only, not a strictJSON pass"
+  ],
+  "decision": "Explicit side wording did not fix AWAY PASS and did not reliably reject ambiguous possession; preserve current DEF. Do not add reasoning or deploy this candidate."
+}

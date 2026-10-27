@@ -16,7 +16,7 @@ def build(archive, manifest, candidate='L02'):
         raise ValueError('Binary archives must stay in .local')
     original = json.loads((ROOT / 'mid_fast_v1/artifact.json').read_text())
     entry = {'L02': 'mid_fast_v2/main.py', 'L02B': 'mid_fast_v2/fastboot.py'}[candidate]
-    sources = (*SOURCES, entry, 'mid_fast_v2/restart_compat.py') if candidate == 'L02B' else (*SOURCES, entry)
+    sources = (*SOURCES, entry, 'mid_fast_v2/restart_compat.py', 'mid_fast_v2/trace.py') if candidate == 'L02B' else (*SOURCES, entry)
     hashes = {p: hashlib.sha256((ROOT / p).read_bytes()).hexdigest() for p in sources}
     for p in SOURCES:
         if hashes[p] != original['sourceSha256'][p]:

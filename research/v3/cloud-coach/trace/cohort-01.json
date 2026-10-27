@@ -1,0 +1,61 @@
+{
+  "status": "completed-analysis-recorded",
+  "cohort": "cloud-trace-01",
+  "mode": "Practice",
+  "targetCompletedMatches": 2,
+  "completedMatches": 2,
+  "opponentOrder": [
+    "Fort Knox Athletic",
+    "Total Attack United"
+  ],
+  "formation": "1-1-2",
+  "change": "MID diagnostic logging only, unchanged decisions; other four exact bindings retained",
+  "sourceCommit": "aa68b25ef0ff0b403fdaf28ae02fc9f16115b666",
+  "fitness": "5/5 twice unchanged",
+  "native": "224/224 plus224bounded trace records",
+  "visualMethod": "Reconstruction of recorded inputs; not Unity footage. Raw frames/logs private. Unknown bounds and sampling gaps explicit.",
+  "goals": [
+    "Verify actual raw coordinate scale and extent evidence",
+    "Observe forward spacing, energy and transition into shooting",
+    "Separate explicit commands from default-engine actions"
+  ],
+  "matches": [
+    {
+      "label": "trace01-fortknox",
+      "opponent": "Fort Knox Athletic",
+      "side": "HOME",
+      "result": "2-0",
+      "completedObservedUTC": "2026-10-27T18:58:30Z",
+      "sampleGameTimeRange": [
+        1.839999,
+        119.67193
+      ],
+      "unityPitchVisible": false,
+      "reconstructionAvailable": true,
+      "tacticalChange": false,
+      "fullStateSamples": 55
+    },
+    {
+      "label": "trace02-totalattack",
+      "opponent": "Total Attack United",
+      "side": "HOME",
+      "result": "5-0",
+      "completedObservedUTC": "2026-10-27T19:07:04Z",
+      "unityPitchVisible": false,
+      "reconstructionAvailable": true,
+      "tacticalChange": false,
+      "fullStateSamples": 90
+    }
+  ],
+  "quotaRemainingPercent": null,
+  "startedUTC": "2026-10-27T18:54:06.557Z",
+  "summary": {
+    "wins": 2,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 7,
+    "goalsAgainst": 0,
+    "causalImprovementClaim": false
+  },
+  "decision": "Retain diagnostic MID; investigate narrow FWD5 offball outlet independently. No causal tactical or physical claims from this logger-only cohort."
+}

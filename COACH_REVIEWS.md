@@ -1095,3 +1095,46 @@ remain observational: next two unchanged Practice matches TotalAttack/FortKnox
 with actual screen observation. No new tactical package or FWD4 change.
 Rollback is original MID with fresh Fitness; old MID readiness was4/5, so rollback
 is not falsely described as guaranteed ready. Quota unavailable, not assumed.
+
+## 2026-10-27 — owner-directed match trace pilot
+
+coach-v1.0 previously read in this session, file unchanged. Owner now requests
+logs and actual-coordinate verification, then stronger attack and shot diagnosis.
+C01: earlier cloud block closes partial1/2 after diagnostic redirect, not a full
+comparison. New block two unchangedPractice:FortKnox,TotalAttack. OnlyMID logger
+changes; native224/224 plus224bounded traces, Fitness5/5 twice, exact other four
+bindings/112 retained. C02/C03: reconstruct real sampled inputs, not Unity footage;
+cloudWebGL remains unavailable. No exact pitch extent, shotpower effect, completed
+pass or tactical causal claim from sparse samples. Eight-call DEF wording screen
+rejected; no persistentDEF/FWD4 change. Rollback replay-safeMID source4de510a.
+
+## 2026-10-27 — trace block closed; narrow FWD5 outlet candidate
+
+coach-v1.0 reread. Two unchanged logger Practice matches completed: Fort Knox
+2:0, Total Attack 5:0, both HOME. No tactical improvement claimed from diagnostic
+logging or two wins. 145 full snapshots establish small-coordinate observations
+and stamina 0–1, not exact pitch bounds or causal shot-energy effects. C02/C03:
+retain protected FWD4, good DEF and shot/power rules. Test only existing FWD5
+outlet mode on the exact original archive and platform V1. Projected shadow
+states differ 16 times; exact historical/current outlet implementations match
+on all 147 projections. These are not actual FWD5 invocation replays.
+Initial 8/8 command screen failed first full-call latency 7.583s. Separate
+transport diagnostic 6.242s included 2.236s connection setup; residual is not
+pure compute. Qualified fresh-session screen after explicit client-only setup
+passed 8/8, maximum 3.994s; prior failures retained, no agent prewarming.
+Next admission requires real Fitness 5/5, then two unchanged Practice matches
+Fort Knox/Total Attack. Assess observed separation, energy and useful participation,
+not score alone. Exact original FWD5 rollback retained. No other tactical change.
+
+## 2026-10-27 — outlet block complete; do not promote
+
+coach-v1.0 C01/C02/C03 reread after the two unchanged games: Fort Knox3:0,
+Total Attack1:3. Own FWD5 audits confirm 13/7 non-sprinting outlet commands;
+14/17 eligible subsequent cross-agent snapshots are closer to the requested
+target, but intervening actions/contacts are unobserved. Open-play energy is
+not clearly worse, while mean forward separation decreased in both sampled
+opponent comparisons. The initial claim of better spacing is not established;
+no causal blame for the loss or shot-power conclusion follows. Retain evidence
+and restore original FWD5 with fresh Fitness. Next inspect actual ownership/aim
+contracts rather than adding more positional rules. FWD4, DEF, GK and MID policy
+unchanged. Details: research/v3/cloud-coach/fwd5-outlet/analysis.json.
