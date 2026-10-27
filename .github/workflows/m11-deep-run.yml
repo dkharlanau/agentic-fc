@@ -1,0 +1,31 @@
+name: M11 deep simulations
+on:
+  pull_request:
+    paths:
+      - 'hybrid_fast_v1/**'
+      - 'research/v3/m11_*.py'
+      - 'research/v3/ranked-batch-*.json'
+      - 'research/v3/model-prompt-lab/results/mid-l02*.json'
+      - '.github/workflows/m11-deep-run.yml'
+  workflow_dispatch:
+
+jobs:
+  deep:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: State, mirror, adversarial and experiment simulations
+        run: |
+          python research/v3/m11_deep_sim.py --samples 6000 --output /tmp/m11-deep.json
+          cat /tmp/m11-deep.json
+      - name: Fresh-process startup comparison
+        run: |
+          python research/v3/m11_local_startup_compare.py --rounds 12 --output /tmp/m11-startup.json
+          cat /tmp/m11-startup.json
+      - name: Focused M11 regressions
+        run: python -m unittest tests.test_hybrid_fast_v1 -v

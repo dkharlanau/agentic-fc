@@ -37,7 +37,8 @@ def verify(archive, candidate='L02'):
     if hashlib.sha256(archive.read_bytes()).hexdigest() != artifact['archiveSha256']:
         raise ValueError('Archive mismatch')
     groups = defaultdict(list)
-    for row in plan():
+    planned = plan(restart_stance=candidate == 'L02B')
+    for row in planned:
         groups[row['sessionKey']].append(row)
     rows, boots, imports = [], [], []
     with tempfile.TemporaryDirectory(prefix='mid-l02-') as scratch:
@@ -92,7 +93,7 @@ def verify(archive, candidate='L02'):
     return {
         'candidate': candidate, 'kind': 'local extracted archive, six fresh Python processes with site packages disabled',
         'python': platform.python_version(), 'system': platform.system(), 'machine': platform.machine(),
-        'archiveSha256': artifact['archiveSha256'], 'planSha256': digest(plan()),
+        'archiveSha256': artifact['archiveSha256'], 'planSha256': digest(planned),
         'requests': len(rows), 'passed': sum(not row['errors'] for row in rows),
         'auditEnabled': True,
         'processes': len(boots), 'localProcessReadyMs': lab.distribution(boots),

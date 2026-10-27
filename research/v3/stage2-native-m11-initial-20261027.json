@@ -1,0 +1,96 @@
+{
+  "kind": "M11 full native calls; not game-server latency",
+  "candidate": "M11",
+  "planSha256": "c875f852f0403c3110e6b80f89707d764ed94024e8bea498695102b6c563e607",
+  "expected": 30,
+  "received": 1,
+  "completeOrderedSet": false,
+  "validDecisions": 0,
+  "fullRequestMs": {
+    "n": 1,
+    "p50": 30041.70026,
+    "p95": 30041.70026,
+    "max": 30041.70026
+  },
+  "firstInSessionMs": {
+    "n": 1,
+    "p50": 30041.70026,
+    "p95": 30041.70026,
+    "max": 30041.70026
+  },
+  "laterInSessionMs": {
+    "n": 0,
+    "p50": null,
+    "p95": null,
+    "max": null
+  },
+  "deadlineMs": 1000.0,
+  "deadlineSource": "https://agenticfootballcup.com/",
+  "p95TargetMs": 800,
+  "lateOrInvalid": 1,
+  "nativeGatePassed": false,
+  "fitness": null,
+  "eligibleForRankedPromotion": false,
+  "failureReasons": [
+    "incomplete_or_reordered_plan",
+    "invalid_or_incomplete_response",
+    "first_session_call_deadline_exceeded",
+    "overall_p95_target_exceeded"
+  ],
+  "firstCalls": {
+    "count": 1,
+    "invalid": 1,
+    "late": 1
+  },
+  "laterCalls": {
+    "count": 0,
+    "invalid": 0,
+    "late": 0
+  },
+  "sessionTelemetry": {
+    "status": "observed",
+    "observedCalls": 1,
+    "observedLogicalSessions": 1,
+    "issues": [],
+    "serverSessionLifecycleVerified": false
+  },
+  "gameServerDeadlineVerified": false,
+  "schemaVersion": 1,
+  "checkedDate": "2026-10-27",
+  "label": "M11 v3 initial package",
+  "sourceCommit": "095e3994b8ea55f6671b7833171c0ff83b484b92",
+  "archiveSha256": "d073569caa3fd2e8aac3cafe07c1f98ffdc76cc17aba145b1a7bee27dbec03fc",
+  "platform": "V1",
+  "measurementLocation": "AWS CloudShell us-east-1",
+  "prewarmPerformed": false,
+  "completeResponses": 0,
+  "firstFullHTTPAttemptMs": [
+    30041.70026
+  ],
+  "headersMs": {
+    "n": 0,
+    "p50": null,
+    "p95": null,
+    "max": null
+  },
+  "bodyAfterHeadersMs": {
+    "n": 0,
+    "p50": null,
+    "p95": null,
+    "max": null
+  },
+  "firstCompetitivePlayOnMs": null,
+  "footballRegistered": false,
+  "rankedMatchesPlayed": 0,
+  "ownedSessionsStopped": true,
+  "limitations": [
+    "External SDK native path; game-server latency and command application unmeasured",
+    "No competitive PLAY_ON call because candidate never registered"
+  ],
+  "startupFailure": "ModuleNotFoundError: No module named agentic_fc.policy",
+  "attemptErrorTypes": [
+    "ReadTimeoutError"
+  ],
+  "timingInterpretation": "30s is time to read timeout, not completed response latency",
+  "supersededBy": "packaging-only correction b75c11aa2bf592c1b959a77a0b72a71e2d67e839bb8f5e167076b32c1cd8a390; fresh native required"
+}

@@ -1,4 +1,344 @@
+## 2026-10-27 — owner cancels games; Dot handoff
+
+Owner requests prompt for up to8h and all public work pushed toGitHub; next2games
+cancelled at0/2. Prepared3corrections source00d9325:24localtestsPASS; savednative
+GK6/6,FWD2 4/4; DEF2/3, AWAYunexpectedCLEAR. DEF not installed. GK/FWD2 briefly
+registered while idle, no games, then exact originalGKfast/FWD2 restored; all5
+bindings verified. Fresh finalFitness4/5 MIDFAIL, so current readinessBLOCKED.
+Do not hide recurrence under historical5/5 or attribute it to unrelatedcandidate.
+Next operator first resolvesMIDreadiness, then DEFcandidate if retained. All own
+native sessions stopped. Results/helpers:coach-three-stage2/. Remainingquota16%,
+reserve10%; no automation/agents. C01 package not validated by games; C02/C03
+remain hypotheses. FWD4 preserved; DEFcarrying preserved unless better safe pass.
+
+## 2026-10-27 — shot pilot closed; owner requests three corrections
+
+coach-v1.0 actually reread on resume, unchanged. Completed2Practice:FortKnox2:0,
+TotalAttack2:3;4:3goals,12:7shots. FWD2 exact logs161calls,0SHOOT; extension
+unexercised, benefit unproven. GK168calls allCLEAR; near-goal positions in sampled
+owned logs contradict wandering/model-wait explanation. C02: owner empty-goal
+miss remains unattributed; screen00:08 vsTotalAttack showed two forwards clustered
+with low energy. At01:40 DEF2 had ball with a seemingly open diagonal forward;
+next goal cannot be attributed to that gap. C03: incoming-ball interception is
+a bounded new hypothesis, not a proven save fix. Owner explicitly authorises
+three corrections, overriding single-change guidance: GK incoming ball; FWD2
+separate outlet/pressure release; DEF2 safe scoring pass while preserving good
+carrying and defence. Owner corrects FWD4 is good: unchanged. MID3/112 unchanged.
+Plan:coach-three-stage2/plan.json. Fresh native/readback/Fitness5/5 before exactly
+two observedPractice games. Rollback exact previousbindings; quota reserve10%.
+No change during matches; no new agents or automation.
+
+## 2026-10-27 — three-bot GK block closed; next open-goal shot pilot
+
+coach-v1.0 actually read on resume and hash rechecked unchanged after block.
+Owner supersedes five-game cadence with short 2–3 game iterations. Completed
+Practice block: TotalAttack1:0, Benchmark2:0, FortKnox5:0; 3W,8:0,18:13shots.
+Sources: practice-stage2-l02b-gk-fast-01.json and stage2-gk-fast-cohort-audit.json.
+C01: unchanged config during3, freshFitness5/5 and exact bindings before start.
+C03: retain DEF2; observed cover with MID3 at1:26–1:41 versus FortKnox. Keeper
+excursions by opponent are a major confounder, not proof of our shooting quality.
+C02: own FWD2 issued noSHOOT in3. Owner requests immediate accurate open-goal
+shots, a higher forward outlet, and safe escape under pressure. Queue separately.
+Next single tactical change: opt-in FWD2 central shot at conspicuously vacated
+goal, known ownership/geometry, clear central lane, bounded range; keep power0.8.
+No additional model call. Local17testsPASS. Native mirrored check/readback and
+freshFitness precede two observed games. Rollback: exact priorFWD2 binding.
+Report role/latency attribution remains unresolved: ownedGK onlyCLEAR in games
+but portal own column includesGKDist. Internal compute/flush mostly<1ms is not
+end-to-end latency. DEF/FWD1 game model duration remains unknown, not zero.
+Compact model prompts can be prepared, but do not silently combine deployment
+with this shot pilot. Unknown corner-coordinate semantics remain explicit.
+
+## 2026-10-27 — actual readiness5/5; three observed games start
+
+coach-v1.0 hash rechecked unchanged. Exact all5 portal bindings read back;
+GKFastdcaf97c plus MIDretry50028079, originalDEF/FWD1/FWD2,112. ActualfreshFitness
+5/5,5commands100%active. Its0ms mean is not game latency. Owner explicitly asks
+for three distinct bots and actual user-like visual coaching; startTotalAttack,
+thenBenchmark,FortKnox without in-game probes/settings. Agentquota32%remaining;
+stop starting further work at10%. Journal practice-stage2-l02b-gk-fast-01.json.
+C01 frozen3; C02 actual pass receipt/shot setup; C03 keeper position/coverage.
+CanonicalGK13 and originalL02B912 bindings are preserved for rollback. Current
+pilot includes requested MID startup compatibility repair, not pureGK causalA/B.
+
+## 2026-10-27 — readiness repair before three-bot coaching cycle
+
+Owner explicitly asks to fix MID3 and immediately watch games; short cycle now
+three games, one per benchmark. GK Fast replaces rejected G3. GK firstFitness
+failed because FREE KICK_OFF returned CLEAR; misleading portal held-possession
+tip contradicted own Runtime logs. Source dcaf97c holds current own GK position
+on verifiedXY restart; GK then passed actualFitness. Remaining MID3 failure is
+exact startup duplicate after1.19/2.23/2.46s, beyond1s retry window. Owner requested
+repair: source0028079 allows one exact initial tick0/time0 position retry within5s;
+changed/intervening/third/expired/PLAY_ON frames still release.13focused testsPASS.
+Separate MID Runtime preserves original rollback and all open-play policy bytes.
+This pilot therefore includes GK change plus declared startup transport repair;
+not a pure GK-only causal comparison. No more laboratory exploration once actual
+Fitness5/5 passes. Follow actual ball/receiver/shot/keeper episodes on screen.
+
+## 2026-10-27 — owner shortens development cycle to two games
+
+Direct owner instruction supersedes the prior five-game development cadence:
+one change, deploy, TWO observed matches, review, next iteration. No active match
+interrupted. Current G3 GK prompt deployed separately, saved native2/2 commands
+verified, all own sessions stopped; registered onlyGK, Fitness running. Planned
+bots are TotalAttack then Benchmark. No additional native exploration before
+these games unless an actual readiness failure requires diagnosis. Quota reserve10%.
+
+## 2026-10-27 — GK screen selects G3 delegation for portal validation
+
+coach-v1.0 rechecked unchanged before new proposed Practice block. Native evidence
+in research/v3/keeper-stage2/results.json: originalNova2/8,Micro3/8 initial safety
+agreement; Micro wrong-side moves/false possession reject model-only replacement.
+G2-Nova9/12 still has AWAY errors; rejected. C03 next change is GK prompt-only
+G3 on SAME Nova2Lite: built-in keeper handles open-play saves/position/distribution,
+neutral stance only at kickoff. This removes model-generated unsafe targets;
+actual save/pass benefit unknown. G3 declared policy12/12 after fence removal,
+strictJSON10/12; native max33s retained, not a low-latency certification. Fresh
+saved readback/native/Fitness must precede play. Candidate uses separate Harness;
+canonicalGK13 exact binding is rollback. Other4roles/112 frozen. Proposed five
+Practice bots:TotalAttack,Benchmark,FortKnox,TotalAttack,Benchmark. No in-game
+probes or tuning. Check agent quota before each game; stop starting work at10%
+remaining per owner. All40 comparison sessions stopped; no live game interrupted.
+
+## 2026-10-27 — owner requests improvement after two visual games
+
+HANDOFF, coach-v1.0 and latest reviews actually reread. Owner explicitly directs
+improvement now; visual block closes at two completed games, no live interruption.
+Source: practice-stage2-l02b-coach-01.json:2W/6:1,14:11shots, incomplete sampled
+screen coverage. Successful GK-to-DEF release observed once; no pass census.
+C01: owner redirect accepted at idle boundary. C02 deferred: low energy/forward
+crowding observed, weak shot cause unknown. C03: check GK model-only speed and
+position safety. Current prompt assumes full-sizeXY despite observed smallXZ
+ball/XYplayers; alternative explanation is prompt/geometry rather than model.
+Predeclare identical bounded states, baseline and Micro, raw JSON/role legality,
+safe goal-side positions, ownership and distribution; retain all cold latency.
+One next change only after readback and freshFitness5/5. Reject model if unsafe;
+canonical GK13 is exact rollback. Other roles and112 fixed, L02B MID retained.
+Practice bot outcomes do not establish human-opponent superiority.
+
+## 2026-10-27 — owner selects L02B only; Baseline stopped after two
+
+HANDOFF, coach-v1.0 and latest reviews actually read on resume. The owner
+explicitly ends Baseline testing and requests L02B only, with direct on-screen
+coaching of passes, shots and conceded long-range goals. Baseline game2 was
+already completed3:6 vs Total Attack; no live match interrupted. The two-game
+partial cohort closes1W1L/7:6,11:12shots,7:6reported SOT. Not a completed5/20
+comparison and not proof that L02B wins against human opponents.
+C01: direct owner redirect overrides the planned fifth-game boundary; restore
+exact previously played L02B912b687 MID and freshFitness5/5, four roles/112 fixed.
+C02/C03: watch actual episodes; pass commands are not completed passes. Owner's
+long-shot observation is a hypothesis until distance/keeper position are observed.
+No new tactical change yet. Local logger-only patch remains undeployed. Next
+five unchanged L02B Practice games form a NEW visual-observation block; start
+with Total Attack to inspect the stated weakness. Rollback is canonicalMID15.
+
+## 2026-10-27 — Baseline benchmark series starts; local analysis in parallel
+
+Coach-v1.0 unchanged, checked before start. Owner explicitly asks Baseline to
+play while analysis continues. All20 unchanged MID native diagnostic sessions
+finished and were stopped. Exact canonical5bindings/formation1-1-2 and actual
+Fitness5/5 verified. Baseline20 starts in the same Benchmark/TotalAttack/FortKnox
+order; first10 provides a matching prefix for L02B10. No probes, deployment or
+settings changes during games; offline analysis and unpublished candidate work
+can proceed. C01 frozen control; C02/C03 evaluated at five-game boundaries.
+P05 identity prompt is only prepared, not installed; M11 remains closed4.
+Baseline rollback is already current. No promotion from native diagnostics.
+
+## 2026-10-27 — M11 stopped by owner; L02B/Baseline pass diagnosis
+
+Coach-v1.0 reread. Latest direct instruction supersedes fifth-game plan: owner
+observed passes missing teammates, stopped M11 and redirected to L02B/Baseline.
+Completed M11 games1–4:2W2L/6:6,18:21shots; game4 already terminal0:2.
+C01: close partial cohort; exact Baseline rollback and actual5/5 verified.
+C02: misplaced passes are an owner observation, not a proven wrong-team bug.
+L01 selects from same-side teammates; game4 submitted6MIDpasses, no recipient
+or outcome fields in old runtime logs. C03: no GK/DEF/prompt change justified.
+Next single improvement is L02B observability only: bounded recipient/line/space
+metadata; actual completion remainsnull. Policy hash unchanged, no deployment.
+Baseline20 and M11 repair are superseded by bounded same-input pass diagnosis;
+full native screen uses saved unchanged MID and synthetic fixtures, no match.
+Rollback remains canonicalMID15/Fitness5/5. No tournament promotion.
+
+## 2026-10-27 — owner-approved repair and matched comparison
+
+Coach-v1.0 actually reread, unchanged. C01: complete the current old-M11 block
+of five unchanged; owner authorizes a separate integration repair thereafter.
+C02/C03: no new on-ball thresholds, defensive roles, GK prompt or formation.
+Initial calibration-handoff reproduction is a concrete integration defect,
+not proof of a lost match. First two games lack active off-ball decisions;
+third Fort Knox3:0 includes25SET_STANCE+4MARK, showing conditional behavior.
+Next plan: Baseline20, isolated corrected-M11 verification and new20 on the
+same opponent order; compare against L02B10 separately. Rollback canonical
+MID15/current-account exact binding plus freshFitness5/5. Cold native failures
+remain disclosed; Practice results do not establish tournament promotion.
+
+## 2026-10-27 — L02B first10 closed; owner requests M11 then Baseline
+
+Coach-v1.0 rechecked, unchanged. L02B games6–10:3W2L/12:5,27:22shots;
+first10 total7W3L/33:9,61:48shots,one scoreless/five clean sheets.
+Primary bounded journals and block02JSON saved. Owner now directs M11 testing
+then comparison with canonicalBaseline; close L02B at10, do not silently fill
+its remaining20-plan. Next immutable cohorts:M11 twenty, Baseline twenty,
+same ordered bots and shell, onlyMID changes. C01 accepted operationally;
+no ordinary-loss tuning. C02 retained:losses2:9,3:10 and0:5shots show poor
+chance volume in failures, not a proven cause. C03 remains open:two1:0→1:2
+reversals, no verified live coverage/keeper trace. Default-engine contribution
+large:812CLEAR+20PASS in832MIDrequests,0models.
+Saved GK/DEF/FWD1 native check uses6responses with nonzero token metadata;
+all sessions cleaned, no configuration override. Full local wall1.10–4.05s
+versus reported model528–828ms; do not equate stages. Four fenced responses,
+six valid assigned commands after normalization. One AWAY GK frame suggests
+ball-coordinate/positioning error; live causality unknown. No GK/DEF/model change
+in this comparison. Exact canonical rollback and freshFitness before M11.
+
+## 2026-10-27 — L02B Practice block1, five completed
+
+Coach-v1.0 rechecked by actual content/hash, unchanged. Owner explicitly allows
+Practice; source912b687, fiveHOME bot games,4W1L/21:4, separate from ranked0.
+Primary bounds:stage2-practice-l02b-01..05; details in
+research/v3/practice-stage2-l02b-block-01-analysis.ru.md and companionJSON.
+C01 accepted operationally: exactMID-only/freshFitness5/5/frozen configuration,
+no changes or probes during matches. Continue twenty unchanged; no promotion.
+C02 insufficient: loss1:2 had2:9shots; largest9:0 strongly affects aggregate.
+Without it3W1L/12:4 and24:26shots. Nine explicitMID passes among430requests
+with421CLEAR mean default-engine contribution is large; wins do not prove the
+new passing policy is superior. C03 retained as hypothesis: observed1:0→1:2
+late reversal in game5; no verified turnover/coverage/GK causal trace. Same
+attacking bot was beaten3:0 earlier, so seed/opponent dynamics remain alternatives.
+ReportedMID means exceed1s in3/5; exact late rate unknown, native coldFAIL retained.
+Report command semantics differ from Runtime audit; generated coaching excluded.
+Next change:none during cohort. Critical-failure rollback canonicalMID15,
+unchanged four roles/1-1-2 and freshFitness5/5. Human/AWAY evidence absent.
+
+## 2026-10-27 — startup duplicate experiment before first cohort
+
+Coach-v1.0 unchanged. C01: no candidate cohort yet; baseline restored after
+L02B support Fitness4/5. Logs show first valid MOVE_TO followed0.51s later by
+exact same payload/release; 0/1active unique ticks. Hypothesis:startup retry
+supersedes first response. One common transport exception caches safe initial
+kickoff position for exactly one identical retry within1s; changed/expired/
+third/open-play/later-restart inputs release. This is disclosed, not a silent
+claim that duplicate active execution never occurs. Native deadline unchanged.
+C02/C03 tactical conclusions remain deferred. Next Fitness is the distinguishing
+test; rollback canonicalMID15 + fresh5/5. No other roles or formation changes.
+
+## 2026-10-27 — autonomous twenty-game extension, resume
+
+HANDOFF, coach-v1.0 and current reviews actually re-read. Owner expands bot
+pilots to twenty each, with five-game review boundaries and immutable cohorts.
+C01 preserved; C02/C03 remain hypotheses until primary results. Fresh unplanned
+Baseline observation: AWAY 1:0 Mr Football FC, separately recorded, not counted
+as either candidate. Exact support build c1c7ac1 is being deployed before the
+first candidate Fitness and ranked start. No mid-match probes or mutations.
+
+## 2026-10-27 — goal resumed: deploy both and play ten each
+
+Latest owner authorization is autonomous necessary corrections and20–50 bot
+games per setup; bounded plan20 each. Emitted neutral SET_STANCE still counted
+0/1 active in actual Fitness. Common restart support now moves MID centrally
+inside its own half only in verified full-size XY, without sprint or ball action;
+unknown geometry falls back to neutral stance, stale/unknown ownership releases.
+No core tactical-engine hashes changed. Native/play tests remain distinct.
+
+Owner explicitly approved the same SET_STANCE(Balanced) on valid fresh KICK_OFF
+for both candidates. After MIME correction both real Fitness runs returned
+4/5 because MID was active on0/1 unique ticks. M11 audit confirms KICK_OFF/time0
+then a duplicate frame. New shared adapter acts only after original guards,
+with a nonempty session, explicit known ownership and unlocked SET_STANCE;
+stale/unknown/wrong-binding/other-phase outputs remain unchanged. It applies
+universally to game restarts, not only Fitness. Core L01/FastEngine/M11 hashes
+stay unchanged; this is a disclosed common restart compatibility variant.
+
+Pre-cohort compatibility issue:exact L02B registration gave Fitness4/5/MID502.
+Rollback returned control5/5. An isolated diagnostic artifact identified
+POST /invocations with valid framing/2512-byte body but non-JSON MIME; our415
+became portal502. Fix only the transport MIME assumption in L02B/M11, matching
+official SDK request.json semantics. JSON/body/framing validation remains.
+Both policy hashes unchanged; no ranked series has started, progress0/20.
+
+HANDOFF, full coach-v1.0 and latest reviews actually read on resume. The owner
+renewed the concrete end state:both deployments plus10 real ranked games each.
+The prior native-only phase was progress, not completion of this new goal.
+Execution decision:bounded owner-requested pilots after exact MID-only binding
+and fresh Fitness5/5; native cold-call FAIL remains visible and is not converted
+into admission/promotion PASS. C01:two immutable10-game cohorts, no ordinary-loss
+changes or mid-match probes. C02/C03:defer tactical conclusions to the full cohort.
+Critical identity/ownership/output/Fitness failure still triggers exact baseline
+rollback. No tactical code, thresholds, other four roles or formation changes.
+Current required games0/20. All actual gameplay and limits go into cohort JSON.
+
+## 2026-10-27 — Stage 2 comparison closed, no admitted candidate
+
+Coach-v1.0 rechecked; no controlled ranked series was started. Owner's ten-game
+rule remains intact: native failure prohibits the block. L02B224/224 valid,
+all6 cold late; corrected-package M11 v3 30/30 valid, all6 cold late. Initial
+M11 dependency omission is fixed and separately preserved, not merged into
+the new native sample. Actual application audits224/30:zero modelAttempted.
+All owned probe sessions stopped. Full evidence and limits:
+research/v3/STAGE2_COMPARISON_20261027.ru.md.
+
+C01: reject both admissions, retain exact restored Baseline/fresh Fitness5/5.
+C02/C03: insufficient football evidence; no new tactical/model/role change.
+Baseline's FWD2 cold2/2 ~2.93s remains a reliability risk, not a passed latency
+claim. No candidate Fitness or ranked results exist. Next change:none; do not
+repeat identical artifacts without a new measured hypothesis. Rollback is the
+saved exact new-account MID15-equivalent and other four canonical bindings,
+formation112 and fresh Fitness. Final row #11/198played/363points/268:162;
+no account delta. Decision:EVIDENCE INSUFFICIENT — KEEP BASELINE.
+
+## 2026-10-27 — Stage 2 gates and M11 packaging correction
+
+Coach-v1.0 remains current. L02B completed224/224 valid native calls in
+CloudShell us-east-1/V1; all six first calls exceeded1s, later218/218 timely.
+No MID registration/Fitness/ranked for L02B. C01 rejects admission; C02/C03
+football effect remains unknown. Baseline restored by exact content in the new
+account, exact five bindings and formation112 verified, fresh Fitness5/5.
+Control FWD2 contract20/20 but both cold calls ~2.93s: keep as an explicit risk.
+
+First M11 package failed startup: CloudWatch ModuleNotFoundError for
+agentic_fc.policy, first call timed out at30s, owned session stopped. Existing
+repository-level tests hid the missing ZIP dependency. One next correction:
+include the unchanged module and verify the extracted archive in isolated
+stdlib-only processes before a NEW immutable native run. No tactical module,
+threshold, model, role or baseline binding changes. Initial failed archive
+and receipts are preserved separately; no warm-only or ranked admission.
+
+## 2026-10-27 — Stage 2: coach read, exact candidates and ten-game instruction
+
+Actually read HANDOFF, coach-v1.0, the latest 26 October deep-run reviews,
+M11_DEEP_RUN_RESULT_20261026, DUAL_SETUP_TEST_20261027, candidate and recovery
+manifests. Owner's new experiment instruction supersedes the older five-game
+screen: exactly ten completed ranked games per admitted immutable candidate.
+C01: one operator, no concurrent match/probe/deployment; baseline shell fixed.
+C02/C03: no further tactical change inside this comparison. Only final M11
+hybrid v3 is eligible for screening, never the earlier pure FastEngine MID.
+First restore baseline in the newly provisioned Stage 2 account; old portal
+bindings point to the previous account and are not healthy current evidence.
+Admission remains strict native deadline (cold calls included), exact MID-only
+binding and fresh Fitness5/5. Rollback is the recreated MID15-equivalent
+configuration plus exact other four bindings, formation1-1-2 and fresh Fitness.
+No candidate is admitted or ranked-tested by this preparation record.
+
 ## 2026-10-25 — L02 cold-call gate failed on V1 and V2
+
+## 2026-10-26 — M11 deep run завершён
+
+Coach-v1.0 и текущий handoff повторно сверены. Первоначальный pure-FastEngine MID не принят. Deep run выявил stale tick, binding/identity, contradictory ownership, central-pass safety и DEF+MID double-press risks; M11 переработан в hybrid v3.
+
+Финальный candidate сохраняет L01 для владения/неясности/restart и включает deterministic FastEngine только для off-ball OPEN_PLAY. В своей defensive third MID не press/intercept, а cover/mark. 6000 HOME random states + 6000 AWAY mirrors, adversarial cases и five-role deterministic shadow прошли с 0 critical invariant failures, 0 safety/mirror/crash/on-ball mismatch и 0 defensive-third chase. Это decision simulation, не physical football proof.
+
+Latency verdict: M11 не быстрее L02B локально значимо (~33.6 vs ~32.8ms p50 fresh-process CI). Главный риск — external first-session path. L02/V1 historical 6/6 cold calls >1s; optimistic import/startup saving всё равно не проходит. Native/Fitness остаются mandatory.
+
+Experiment-design correction: пять игр — screening, не причинное доказательство. 3W2L не продвигать как winner; 4W1L/5W0L требуют по возможности ещё пять. Ranking/possession/report-average latency не заменяют timely-useful action rate. A=L02B, B=M11 v3; остальные роли/112 фиксированы; rollback MID15 + Fitness.
+
+
+## 2026-10-26 — подготовка M11 и A/B на 27 октября
+
+Повторно прочитаны HANDOFF и coach-v1.0. Новое явное указание владельца разрешает подготовить второй сетап, но не означает менять live-команду сегодня. Сохраняем принцип одного изменения: в A=L02B и B=M11 меняется только MID; GK/DEF/FWD1, deterministic FWD2 stance и 1-1-2 фиксированы. M11 убирает LLM у MID и использует уже проверяемую FastEngine policy в минимальном stdlib-only transport. Это гипотеза latency/reliability, не доказанное усиление.
+
+До любого ranked: isolated native с first-call deadline и полным response gate -> exact binding -> свежий Fitness5/5. Затем пять завершённых игр без правок и rollback MID15/Fitness перед следующим кандидатом. Если native/Fitness не проходит, матчей кандидата нет. Не смешивать с новой моделью, формацией или большим prompt rewrite. C01 сохраняет baseline как контроль; C02/C03 оцениваются по shots-on-target/scoreless/центральной страховке после полного блока, а не по possession или одному матчу.
+
 
 Both isolated native runs returned 224/224 valid full responses, but all six
 first calls exceeded the 1-second tournament deadline. V2 first calls were
@@ -730,3 +1070,28 @@ then MID-only binding/fresh Fitness5/5 and five unchanged real games if PASS.
 If import improves but wall stays late, reject and investigate session/delivery
 path; do not repeat or soften the gate. Rollback MID15/Fitness. Details:
 [mid_fast_v2/FASTBOOT.ru.md](mid_fast_v2/FASTBOOT.ru.md).
+
+## 2026-10-27 — cloud coach initial readiness repair
+
+Read HANDOFF, coach-v1.0 and latest reviews at source4a63895. The owner's latest
+window is ten hours; two unchanged observed Practice matches per admitted block
+supersede older five-ranked-game instructions. Preserve L02B/FWD4 and good DEF2
+carrying; first resolve MID Fitness, not speculative tactical changes. Fresh
+portal check4/5 and runtime audit show repeated identical initial state in one
+process after the initial single retry was consumed. Candidate replays only the
+same validated initial positioning intent until any intervening state invalidates
+it. No open-play or possession-action replay. Full AWS response and repeated
+Fitness checks remain required. See research/v3/cloud-coach/mid-initial-replay.md.
+
+## 2026-10-27 — MID restored; first cloud Practice block
+
+coach-v1.0 reread on resume. C01: two fresh unchanged Fitness checks5/5 after
+MID-only replacement; exact other four bindings and1-1-2 preserved. V2 screen
+224/224 across six fresh sessions, max2.054s after explicitly recorded client
+proxy setup/required cleanup. Earlier timeouts and15.432s diagnostic retained;
+13.121s of that diagnostic was proxy CONNECT, not agent computation. This is
+not a universal V2 speed claim or a game-server latency measurement. C02/C03
+remain observational: next two unchanged Practice matches TotalAttack/FortKnox
+with actual screen observation. No new tactical package or FWD4 change.
+Rollback is original MID with fresh Fitness; old MID readiness was4/5, so rollback
+is not falsely described as guaranteed ready. Quota unavailable, not assumed.

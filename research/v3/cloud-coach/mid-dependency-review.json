@@ -1,0 +1,22 @@
+{
+  "scope": "M11 existing plan, MID stance defaults only; no live deployment",
+  "rows": 30,
+  "equal": true,
+  "oldEngineCommit": "931af0309229d1d9f9f332508d361b3475329bf4",
+  "oldSHA256": "677aaf841b55040705ebf77068b9e6a3393e8acc221d0a22c30cd2ed1dca368e",
+  "currentSHA256": "6e13189eba98907ffbfc261b6a1ddb36b87f5b29c9e9d513f995c0dd7730d836",
+  "mismatches": [],
+  "validation": {
+    "unitTestsPassed": 170,
+    "demo": "pass",
+    "deepHomeSamples": 6000,
+    "criticalInvariantFailures": 0,
+    "localStartupRounds": 12,
+    "nativeOrGamePromotion": false
+  },
+  "failuresRetained": [
+    "Baseline3 package-pin errors",
+    "First full repair run: obsolete third-kickoff expectation failed; updated to shared replay semantics plus changed-state invalidation"
+  ],
+  "review": "Changed shared engine adds role0/4-only opt-in paths; M11 role2 stance/default paths unchanged on inspected diff and30existing fixtures. Historical fast-path artifact untouched. New pin still rejects unreviewed bytes."
+}

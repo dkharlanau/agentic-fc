@@ -1,0 +1,20 @@
+{
+  "id": "P05-MID-identity",
+  "status": "prepared-not-registered",
+  "scope": "One identity/ownership interpretation clarification; no tactical thresholds or coordinate changes",
+  "promptBeforeSha256": "7b05fe872d47c532c374390642006759924d84048a61577bf4f3a9bba400c729",
+  "promptAfterSha256": "e350da1da7205b1c7b9666787c08ba941c34e7acfc8ae5e183d13ccd7b8648ea",
+  "modelUnchanged": "global.amazon.nova-2-lite-v1:0",
+  "otherRolesUnchanged": true,
+  "formation": "1-1-2",
+  "evidence": "baseline-pass-screen; explicit AWAY ownership received defensive responses in synthetic native calls",
+  "testPlan": "plan.json; same 20 cases, one fresh own session each; compare explicit-ownership contradictions first",
+  "promotion": false,
+  "rollback": "Canonical MID15 unchanged prompt/model, exact current-account binding, fresh Fitness5/5",
+  "limitations": [
+    "Synthetic native decision screen, not match behavior",
+    "No hard requirement for new possession fields",
+    "Marked-receiver and pass-lane tactics are outside this identity-only change",
+    "Cold/first response deadline remains a separate gate"
+  ]
+}

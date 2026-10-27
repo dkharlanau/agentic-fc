@@ -1,6 +1,6 @@
 # 04 — Model routing and AWS special features
 
-**Constraint:** Cup event site states ~2s decision cycle and a **hard 1s per-agent reply budget**. An older Game Mechanics coaching note states 500ms instead. Use live portal errors/traces as final authority. Success-rate=100% is not proof of sub-1s P95.
+**Correction (2026-10-27):** the hard1s event deadline asserted in this historical document is not established by the current public Cup page. Participant workshop material reported5s; verify actual event timing. Treat1s only as an engineering target. Success-rate=100% is not proof of sub-1s P95.
 
 ## Candidate models — not a ranking
 
@@ -46,7 +46,7 @@ See sources. Valuable heuristics can be computed locally in microseconds rather 
 
 ## Latency safety
 
-Budget: 1000ms (according to 2026 Cup site), reserve time for parse, runtime, serialization and network. A model averaging 900ms may frequently be late. Use a measured deadline and don't invent wait guarantees. Default to bounded quick logic under pressure.
+Engineering target:1000ms, not a verified tournament rule. Reserve time for parse, runtime, serialization and network. A model averaging 900ms may frequently be late. Use a measured deadline and don't invent wait guarantees. Default to bounded quick logic under pressure.
 
 ## Costs, permissions and cleanup
 

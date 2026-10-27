@@ -1,0 +1,253 @@
+{
+  "status": "not-game-validated-owner-cancelled-two-games-for-Dot-handoff",
+  "codeCommit": "00d9325",
+  "localTestsPassed": 24,
+  "runtimeNative": [
+    {
+      "role": "gk-incoming",
+      "side": 0,
+      "stopped": true,
+      "calls": [
+        {
+          "label": "toward",
+          "completeMs": 4861.638,
+          "commands": [
+            {
+              "commandType": "INTERCEPT",
+              "playerId": 0,
+              "parameters": {
+                "aggressive": false
+              },
+              "duration": 1
+            }
+          ],
+          "passed": true
+        },
+        {
+          "label": "away",
+          "completeMs": 303.836,
+          "commands": [
+            {
+              "commandType": "CLEAR_OVERRIDE",
+              "playerId": 0,
+              "parameters": {},
+              "duration": 0
+            }
+          ],
+          "passed": true
+        },
+        {
+          "label": "wide",
+          "completeMs": 326.419,
+          "commands": [
+            {
+              "commandType": "CLEAR_OVERRIDE",
+              "playerId": 0,
+              "parameters": {},
+              "duration": 0
+            }
+          ],
+          "passed": true
+        }
+      ]
+    },
+    {
+      "role": "gk-incoming",
+      "side": 1,
+      "stopped": true,
+      "calls": [
+        {
+          "label": "toward",
+          "completeMs": 2610.765,
+          "commands": [
+            {
+              "commandType": "INTERCEPT",
+              "playerId": 0,
+              "parameters": {
+                "aggressive": false
+              },
+              "duration": 1
+            }
+          ],
+          "passed": true
+        },
+        {
+          "label": "away",
+          "completeMs": 331.275,
+          "commands": [
+            {
+              "commandType": "CLEAR_OVERRIDE",
+              "playerId": 0,
+              "parameters": {},
+              "duration": 0
+            }
+          ],
+          "passed": true
+        },
+        {
+          "label": "wide",
+          "completeMs": 313.051,
+          "commands": [
+            {
+              "commandType": "CLEAR_OVERRIDE",
+              "playerId": 0,
+              "parameters": {},
+              "duration": 0
+            }
+          ],
+          "passed": true
+        }
+      ]
+    },
+    {
+      "role": "fwd2-coach",
+      "side": 0,
+      "stopped": true,
+      "calls": [
+        {
+          "label": "support",
+          "completeMs": 3208.702,
+          "commands": [
+            {
+              "commandType": "MOVE_TO",
+              "playerId": 4,
+              "parameters": {
+                "target_x": -0.028,
+                "target_y": 1.558,
+                "sprint": false
+              },
+              "duration": 0
+            }
+          ],
+          "passed": true
+        },
+        {
+          "label": "pressure",
+          "completeMs": 297.785,
+          "commands": [
+            {
+              "commandType": "PASS",
+              "playerId": 4,
+              "parameters": {
+                "target_player_id": 3,
+                "type": "GROUND"
+              },
+              "duration": 0
+            }
+          ],
+          "passed": true
+        }
+      ]
+    },
+    {
+      "role": "fwd2-coach",
+      "side": 1,
+      "stopped": true,
+      "calls": [
+        {
+          "label": "support",
+          "completeMs": 2629.445,
+          "commands": [
+            {
+              "commandType": "SET_STANCE",
+              "playerId": 4,
+              "parameters": {
+                "stance": 1
+              },
+              "duration": 0
+            }
+          ],
+          "passed": true
+        },
+        {
+          "label": "pressure",
+          "completeMs": 313.386,
+          "commands": [
+            {
+              "commandType": "PASS",
+              "playerId": 4,
+              "parameters": {
+                "target_player_id": 3,
+                "type": "GROUND"
+              },
+              "duration": 0
+            }
+          ],
+          "passed": true
+        }
+      ]
+    }
+  ],
+  "defNative": [
+    {
+      "label": "def-own-ball-far",
+      "commands": [
+        {
+          "commandType": "PASS",
+          "playerId": 1,
+          "parameters": {
+            "target_player_id": 3,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "completeMs": 28291.443,
+      "passed": true,
+      "errors": [],
+      "stopped": true
+    },
+    {
+      "label": "def-ambiguous-owner",
+      "commands": [
+        {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 1,
+          "parameters": {},
+          "duration": 0
+        }
+      ],
+      "completeMs": 1856.135,
+      "passed": true,
+      "errors": [],
+      "stopped": true
+    },
+    {
+      "label": "def-own-ball-far-away",
+      "commands": [
+        {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 1,
+          "parameters": {},
+          "duration": 0
+        }
+      ],
+      "completeMs": 1724.681,
+      "passed": false,
+      "errors": [
+        "scenario_decision"
+      ],
+      "stopped": true
+    }
+  ],
+  "modelCallAdded": false,
+  "defModelUnchanged": true,
+  "firstDefAttempt": "Response parser raised before text persisted; own session stopped. No policy pass claimed. Repeated separate native screen retained.",
+  "registeredDuringPreparation": [
+    "GK incoming",
+    "FWD2 coach"
+  ],
+  "defCandidateInstalled": false,
+  "rollback": "Completed exact5role readback: priorGKfast/MIDretry5/canonicalDEF/FWD1/originalFWD2.",
+  "matchesAfterPackage": 0,
+  "ownerCancelledMatches": true,
+  "finalFitness": {
+    "passed": 4,
+    "failedRoles": [
+      "MID3"
+    ],
+    "status": "blocked-do-not-start-match",
+    "candidatePackageInstalled": false
+  },
+  "remainingQuotaPercentAtHandoff": 16
+}

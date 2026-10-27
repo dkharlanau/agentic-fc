@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 1,
+  "status": "registered-final-retry-fitness-five-of-five-benchmark-series-running",
+  "preparedDate": "2026-10-26",
+  "name": "M11 Hybrid Fast MID v3",
+  "formation": "1-1-2",
+  "changeSurface": "MID only",
+  "roles": {
+    "gk": {
+      "source": "current M8 baseline",
+      "registeredVersion": "13",
+      "modelId": "global.amazon.nova-2-lite-v1:0",
+      "promptFile": "research/v3/schema-clean/gk.txt",
+      "promptSha256": "43a75e8e85225b14879c7c9b839a7f8b3e5d056d8a841a1a4019b8fc8263cd36"
+    },
+    "def": {
+      "source": "current M8 baseline",
+      "registeredVersion": "19",
+      "modelId": "global.amazon.nova-2-lite-v1:0",
+      "promptFile": "research/v3/schema-clean/def.txt",
+      "promptSha256": "86426b2320f5e40e444ebe553b0827b3707ff6f5cd22599478f71e5391c838d9"
+    },
+    "mid": {
+      "source": "hybrid_fast_v1",
+      "playerId": 2,
+      "mode": "hybrid-v3",
+      "modelId": null,
+      "modelCallsPerTick": 0,
+      "onBallPolicy": "mid_fast_v1/engine.py (L01 safe outlet / shot policy)",
+      "offBallPolicy": "fast_path_v2/engine.py stance, OPEN_PLAY only",
+      "coordinationGuard": "MID cannot PRESS/INTERCEPT in own defensive third; cover/mark instead",
+      "safetyGuards": [
+        "exact myPlayers=[2]",
+        "unique 10-player identity set",
+        "ownership cross-check",
+        "fresh monotonic tick/gameTime",
+        "session/side isolation",
+        "unknown state releases"
+      ],
+      "entryPoint": "hybrid_fast_v1/main.py",
+      "prompt": null
+    },
+    "fwd1": {
+      "source": "current M8 baseline",
+      "registeredVersion": "16",
+      "modelId": "global.amazon.nova-2-lite-v1:0",
+      "promptFile": "research/v3/schema-clean/fwd1.txt",
+      "promptSha256": "ee4c92203e6fcbc86d14329913933ba68d8cd2092947bebd2c66d5ed14c17b15"
+    },
+    "fwd2": {
+      "source": "current deterministic stance baseline",
+      "runtimeRevision": 9,
+      "modelId": null,
+      "modelCallsPerTick": 0,
+      "policySource": "fast_path_v2/engine.py",
+      "policySourceSha256": "677aaf841b55040705ebf77068b9e6a3393e8acc221d0a22c30cd2ed1dca368e"
+    }
+  },
+  "comparison": {
+    "setupA": "L02B previous candidate: MID-only deterministic L01 policy with fastboot transport",
+    "setupB": "M11 v3: L01 on-ball + deterministic OPEN_PLAY off-ball, defensive-third cover and freshness/ownership guards",
+    "control": "current M8 plus deterministic FWD2 stance",
+    "reason": "A and B keep GK/DEF/FWD1/FWD2/formation fixed so football and latency differences are attributable mainly to MID candidate"
+  },
+  "promotionGate": {
+    "native": "complete ordered screen; zero invalid decisions; fresh-session first calls and first competitive PLAY_ON calls recorded separately; official deadline not relaxed",
+    "fitness": "fresh 5/5 after exact binding",
+    "rankedPilot": "exactly ten immutable completed ranked matches only after native PASS and fresh Fitness5/5; not started because native failed",
+    "rollback": "restore MID15 baseline, verify all other role hashes/versions and fresh Fitness 5/5"
+  },
+  "claimsNotMade": [
+    "not proven faster end-to-end",
+    "not proven stronger in matches",
+    "local simulation is not ball-physics simulation",
+    "ten ranked games would be evidence, not proof; none played"
+  ],
+  "deepRun": {
+    "result": "PASS",
+    "document": "research/v3/M11_DEEP_RUN_RESULT_20261026.ru.md",
+    "randomHomeStates": 6000,
+    "mirroredAwayStates": 6000,
+    "criticalInvariantFailures": 0,
+    "onBallMismatchVsL01": 0,
+    "homeAwayMismatches": 0,
+    "crashes": 0,
+    "defensiveThirdPressOrIntercept": 0,
+    "unknownPossessionActiveRate": 0,
+    "awsNative": {
+      "status": "FAIL",
+      "evidence": "stage2-native-m11-fixed-20261027.json"
+    },
+    "fitness": null,
+    "ranked": null
+  },
+  "checkedDate": "2026-10-27",
+  "stage2Native": {
+    "sourceCommit": "244065b0d3fe10447759c2afa8684f42fa566474",
+    "archiveSha256": "b75c11aa2bf592c1b959a77a0b72a71e2d67e839bb8f5e167076b32c1cd8a390",
+    "validResponses": 30,
+    "expected": 30,
+    "firstCallsLate": 6,
+    "firstCalls": 6,
+    "admitted": false,
+    "fitness": null,
+    "ranked": null,
+    "initialPackagingFailure": "stage2-native-m11-initial-20261027.json"
+  },
+  "restartCompatibility": {
+    "module": "mid_fast_v2/restart_compat.py",
+    "ownerApproved": true,
+    "command": "MOVE_TO central own-half support for validated full-size XY; neutral Balanced stance on unknown geometry",
+    "scope": "All fresh validated KICK_OFF with original identity/session/ownership/unlock guards; no Fitness-only branch",
+    "coreTacticalEnginesChanged": false,
+    "initialRetry": "One identical initialtick0/time0 own-half support retry within1s; no changed/late/third/PLAY_ON repeats"
+  },
+  "activeSupportBuild": {
+    "sourceCommit": "c1c7ac13cd6ebc10a34a223212b6bba080c30340",
+    "archiveSha256": "1f57a0fa672d6c76df7c2e6f94265348a4c75d0ac5aae3af8c4a1773f4c17f21",
+    "verifiedReady": true
+  },
+  "activePilot": {
+    "sourceCommit": "912b687141c03f72b24ab002a8bd0d9d6d646804",
+    "archiveSha256": "e259682c101f5eae1d5d769cff524b98f3b0aa0628f572822f8ab97be139fbba",
+    "fitness": {
+      "passed": 5,
+      "total": 5,
+      "source": "Fresh actual Football UI after exact five-role readback",
+      "observedAtUTC": "2026-10-27T13:57:44.027629+00:00"
+    },
+    "baselineRollbackFitness": {
+      "passed": 5,
+      "total": 5
+    },
+    "bindingsDigestSha256": "0488e2a36e168850ebb09508e191b0b6fe7e57a06b1a967757a557eb05ee3168",
+    "formation": "1-1-2"
+  }
+}

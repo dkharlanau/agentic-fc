@@ -1,0 +1,203 @@
+{
+  "sourceCommit": "4de510a0214086c1d1ee1303e75ea735793eb556",
+  "platform": "V1",
+  "initialProbe": {
+    "kind": "externally measured complete native calls; not game-server latency",
+    "candidate": "L02B",
+    "planSha256": "ff18c3e157959f695882c50a5a1b371a3b58a2bb34aa021ad73555335f015570",
+    "expected": 224,
+    "received": 224,
+    "validDecisions": 224,
+    "fullRequestMs": {
+      "n": 224,
+      "p50": 180.027,
+      "p95": 227.53,
+      "max": 3596.556287
+    },
+    "firstInSessionMs": {
+      "n": 6,
+      "p50": 1604.802,
+      "p95": 3169.172,
+      "max": 3596.556287
+    },
+    "laterInSessionMs": {
+      "n": 218,
+      "p50": 179.583,
+      "p95": 210.853,
+      "max": 340.030263
+    },
+    "deadlineMs": 5000.0,
+    "deadlineSource": "https://catalog.us-east-1.prod.workshops.aws/event/dashboard/en-US/workshop/6b-how-to-play/actions-and-stats",
+    "nativeGatePassed": true,
+    "failureReasons": []
+  },
+  "targeted": {
+    "mid-replay-targeted-native": [
+      {
+        "side": 0,
+        "label": "first",
+        "expected": "MOVE_TO",
+        "complete": false,
+        "requestWallMs": 5011.35645,
+        "passed": false
+      },
+      {
+        "side": 0,
+        "label": "repeat",
+        "expected": "MOVE_TO",
+        "complete": false,
+        "requestWallMs": 5007.728449,
+        "passed": false
+      },
+      {
+        "side": 0,
+        "label": "delayed-repeat",
+        "expected": "MOVE_TO",
+        "complete": true,
+        "requestWallMs": 3515.695481,
+        "passed": true
+      },
+      {
+        "side": 0,
+        "label": "changed",
+        "expected": "CLEAR_OVERRIDE",
+        "complete": true,
+        "requestWallMs": 164.414242,
+        "passed": true
+      },
+      {
+        "side": 0,
+        "label": "old-after-change",
+        "expected": "CLEAR_OVERRIDE",
+        "complete": true,
+        "requestWallMs": 138.396242,
+        "passed": true
+      },
+      {
+        "side": 1,
+        "label": "first",
+        "expected": "MOVE_TO",
+        "complete": true,
+        "requestWallMs": 1385.341426,
+        "passed": true
+      },
+      {
+        "side": 1,
+        "label": "repeat",
+        "expected": "MOVE_TO",
+        "complete": true,
+        "requestWallMs": 180.441213,
+        "passed": true
+      },
+      {
+        "side": 1,
+        "label": "delayed-repeat",
+        "expected": "MOVE_TO",
+        "complete": true,
+        "requestWallMs": 131.784702,
+        "passed": true
+      },
+      {
+        "side": 1,
+        "label": "changed",
+        "expected": "CLEAR_OVERRIDE",
+        "complete": true,
+        "requestWallMs": 171.509408,
+        "passed": true
+      },
+      {
+        "side": 1,
+        "label": "old-after-change",
+        "expected": "CLEAR_OVERRIDE",
+        "complete": true,
+        "requestWallMs": 186.889437,
+        "passed": true
+      }
+    ],
+    "mid-replay-targeted-native-recheck": [
+      {
+        "side": 0,
+        "label": "first",
+        "expected": "MOVE_TO",
+        "complete": true,
+        "requestWallMs": 5696.696224,
+        "passed": false
+      },
+      {
+        "side": 0,
+        "label": "repeat",
+        "expected": "MOVE_TO",
+        "complete": true,
+        "requestWallMs": 200.132338,
+        "passed": true
+      },
+      {
+        "side": 0,
+        "label": "delayed-repeat",
+        "expected": "MOVE_TO",
+        "complete": true,
+        "requestWallMs": 189.569067,
+        "passed": true
+      },
+      {
+        "side": 0,
+        "label": "changed",
+        "expected": "CLEAR_OVERRIDE",
+        "complete": true,
+        "requestWallMs": 187.214403,
+        "passed": true
+      },
+      {
+        "side": 0,
+        "label": "old-after-change",
+        "expected": "CLEAR_OVERRIDE",
+        "complete": true,
+        "requestWallMs": 142.376915,
+        "passed": true
+      },
+      {
+        "side": 1,
+        "label": "first",
+        "expected": "MOVE_TO",
+        "complete": true,
+        "requestWallMs": 1826.91607,
+        "passed": true
+      },
+      {
+        "side": 1,
+        "label": "repeat",
+        "expected": "MOVE_TO",
+        "complete": true,
+        "requestWallMs": 186.898947,
+        "passed": true
+      },
+      {
+        "side": 1,
+        "label": "delayed-repeat",
+        "expected": "MOVE_TO",
+        "complete": true,
+        "requestWallMs": 189.997278,
+        "passed": true
+      },
+      {
+        "side": 1,
+        "label": "changed",
+        "expected": "CLEAR_OVERRIDE",
+        "complete": true,
+        "requestWallMs": 138.714321,
+        "passed": true
+      },
+      {
+        "side": 1,
+        "label": "old-after-change",
+        "expected": "CLEAR_OVERRIDE",
+        "complete": true,
+        "requestWallMs": 176.195128,
+        "passed": true
+      }
+    ]
+  },
+  "overallAdmitted": false,
+  "reason": "Later targeted calls include two incomplete calls and a fresh-session response above 5 seconds. Original lineup retained.",
+  "gameOutcome": null
+}

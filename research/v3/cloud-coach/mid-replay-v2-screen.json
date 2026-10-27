@@ -1,0 +1,74 @@
+{
+  "kind": "externally measured complete native calls; not game-server latency",
+  "candidate": "L02B",
+  "planSha256": "ff18c3e157959f695882c50a5a1b371a3b58a2bb34aa021ad73555335f015570",
+  "expected": 224,
+  "received": 224,
+  "completeOrderedSet": true,
+  "validDecisions": 224,
+  "fullRequestMs": {
+    "n": 224,
+    "p50": 199.191,
+    "p95": 246.483,
+    "max": 2053.288597
+  },
+  "firstInSessionMs": {
+    "n": 6,
+    "p50": 1810.21,
+    "p95": 2008.333,
+    "max": 2053.288597
+  },
+  "laterInSessionMs": {
+    "n": 218,
+    "p50": 198.693,
+    "p95": 232.058,
+    "max": 424.207156
+  },
+  "deadlineMs": 5000.0,
+  "deadlineSource": "https://catalog.us-east-1.prod.workshops.aws/event/dashboard/en-US/workshop/6b-how-to-play/actions-and-stats",
+  "p95TargetMs": 800,
+  "lateOrInvalid": 0,
+  "nativeGatePassed": true,
+  "fitness": {
+    "first": "5/5",
+    "secondUnchanged": "5/5",
+    "observedUTC": "2026-10-27T18:05:29Z",
+    "gameLatencyNotInferredFromPortalZero": true
+  },
+  "eligibleForRankedPromotion": false,
+  "failureReasons": [],
+  "firstCalls": {
+    "count": 6,
+    "invalid": 0,
+    "late": 0
+  },
+  "laterCalls": {
+    "count": 218,
+    "invalid": 0,
+    "late": 0
+  },
+  "sessionTelemetry": {
+    "status": "observed",
+    "observedCalls": 224,
+    "observedLogicalSessions": 6,
+    "issues": [],
+    "serverSessionLifecycleVerified": false
+  },
+  "gameServerDeadlineVerified": false,
+  "sourceCommit": "4de510a0214086c1d1ee1303e75ea735793eb556",
+  "platform": "V2",
+  "qualificationBoundary": {
+    "proxySetupAndCleanupMs": 5959.4092819606885,
+    "runtimePrewarmPerformed": false,
+    "allProbeSessionIdsFresh": true,
+    "clientConnectionEstablishedByRequiredCleanup": true,
+    "connectTimeoutSeconds": 30,
+    "deadlineMs": 5000,
+    "priorFailuresRetained": true
+  },
+  "priorAttempts": {
+    "targeted": "one initial proxy-timeout; remaining responses complete",
+    "initialBroad": "one incomplete call; original owned session later confirmed terminated",
+    "diagnostic": "first response15431.7ms includes13120.7ms proxy CONNECT; second fresh session2475.7ms"
+  }
+}

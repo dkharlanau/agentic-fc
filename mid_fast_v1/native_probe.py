@@ -71,7 +71,7 @@ def main(argv=None):
     parser.add_argument('--apply',action='store_true')
     parser.add_argument('--candidate',choices=('L01','L02','L02B'),default='L01')
     args=parser.parse_args(argv)
-    p=plan()
+    p=plan(restart_stance=args.candidate == 'L02B')
     if not args.apply:
         print(json.dumps({'candidate':args.candidate,'requests':len(p),'planSha256':digest(p),'executed':False}))
         return 0

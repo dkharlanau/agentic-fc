@@ -1,0 +1,63 @@
+{
+  "id": "stage2-control-unplanned-01",
+  "configuration": "Last registered canonical Baseline; independent per-match binding trace unavailable",
+  "mode": "ranked",
+  "origin": "incoming automatic; not candidate cohort",
+  "opponent": "Mr Football FC",
+  "side": "AWAY",
+  "result": "WIN",
+  "goalsFor": 1,
+  "goalsAgainst": 0,
+  "shotsFor": 4,
+  "shotsAgainst": 2,
+  "shotsOnTargetFor": 1,
+  "shotsOnTargetAgainst": 0,
+  "possessionPercent": 47,
+  "teamReportAverageLatencyMs": 90,
+  "perRoleReportLatencyMs": {
+    "GK": 87,
+    "DEF": 89,
+    "MID": 104,
+    "FWD1": 87,
+    "FWD2": 87
+  },
+  "perRoleReportedSuccessPercent": {
+    "GK": 100,
+    "DEF": 100,
+    "MID": 100,
+    "FWD1": 100,
+    "FWD2": 100
+  },
+  "teamReportCommandCounts": {
+    "MOVE_TO": 233,
+    "INTERCEPT": 25,
+    "MARK": 21,
+    "PASS": 17,
+    "PRESS_BALL": 15,
+    "SHOOT": 11,
+    "GK_DISTRIBUTE": 6,
+    "CLEAR_OVERRIDE": 4
+  },
+  "teamReportCommands": 332,
+  "scoreless": false,
+  "cleanSheet": true,
+  "afterLeaderboard": {
+    "rank": 12,
+    "played": 199,
+    "wins": 120,
+    "draws": 6,
+    "losses": 73,
+    "goalsFor": 269,
+    "goalsAgainst": 162,
+    "goalDifference": 107,
+    "points": 366
+  },
+  "candidateCohortCounted": false,
+  "primaryReportAlias": "control-unplanned-01-report",
+  "limitations": [
+    "Report average is not full native invocation timing",
+    "Generated AI overview and coaching causality excluded",
+    "Reported 100% success does not prove all actions met deadline"
+  ],
+  "savedAtUTC": "2026-10-27T11:56:54.552475+00:00"
+}

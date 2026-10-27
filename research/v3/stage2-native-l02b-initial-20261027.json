@@ -1,0 +1,143 @@
+{
+  "kind": "externally measured complete native calls; not game-server latency",
+  "candidate": "L02B",
+  "planSha256": "a25c417f1981f1c34262ba58e993f661eaaeaf63e8fabd555582f472cd6dd3f2",
+  "expected": 224,
+  "received": 224,
+  "completeOrderedSet": true,
+  "validDecisions": 224,
+  "fullRequestMs": {
+    "n": 224,
+    "p50": 112.562,
+    "p95": 164.476,
+    "max": 1843.268285
+  },
+  "firstInSessionMs": {
+    "n": 6,
+    "p50": 1328.065,
+    "p95": 1716.055,
+    "max": 1843.268285
+  },
+  "laterInSessionMs": {
+    "n": 218,
+    "p50": 112.075,
+    "p95": 137.503,
+    "max": 242.411093
+  },
+  "deadlineMs": 1000.0,
+  "deadlineSource": "https://agenticfootballcup.com/",
+  "p95TargetMs": 800,
+  "lateOrInvalid": 6,
+  "nativeGatePassed": false,
+  "fitness": null,
+  "eligibleForRankedPromotion": false,
+  "failureReasons": [
+    "first_session_call_deadline_exceeded"
+  ],
+  "firstCalls": {
+    "count": 6,
+    "invalid": 0,
+    "late": 6
+  },
+  "laterCalls": {
+    "count": 218,
+    "invalid": 0,
+    "late": 0
+  },
+  "sessionTelemetry": {
+    "status": "observed",
+    "observedCalls": 224,
+    "observedLogicalSessions": 6,
+    "issues": [],
+    "serverSessionLifecycleVerified": false
+  },
+  "gameServerDeadlineVerified": false,
+  "schemaVersion": 1,
+  "checkedDate": "2026-10-27",
+  "label": "L02B",
+  "sourceCommit": "095e3994b8ea55f6671b7833171c0ff83b484b92",
+  "archiveSha256": "2d0d5c43d10a3ed704b5a30a0543736fa468c1f9a1bb1a52dcc0351dca835375",
+  "platform": "V1",
+  "measurementLocation": "AWS CloudShell us-east-1",
+  "prewarmPerformed": false,
+  "completeResponses": 224,
+  "firstFullHTTPAttemptMs": [
+    1334.417049,
+    1304.828259,
+    1843.268285,
+    1321.879657,
+    1334.251213,
+    1277.286634
+  ],
+  "headersMs": {
+    "n": 224,
+    "p50": 112.42778849999999,
+    "p95": 164.34899474999992,
+    "max": 1843.115188
+  },
+  "bodyAfterHeadersMs": {
+    "n": 224,
+    "p50": 0.14713600000000326,
+    "p95": 0.3213354500000022,
+    "max": 1.0254800000000017
+  },
+  "firstCompetitivePlayOnMs": null,
+  "footballRegistered": false,
+  "rankedMatchesPlayed": 0,
+  "ownedSessionsStopped": true,
+  "limitations": [
+    "External SDK native path; game-server latency and command application unmeasured",
+    "No competitive PLAY_ON call because candidate never registered"
+  ],
+  "firstValidStateInvocationMs": [
+    1334.417049,
+    1304.828259,
+    1843.268285,
+    1321.879657,
+    1334.251213,
+    1277.286634
+  ],
+  "firstSyntheticPlayOnInvocationMs": [
+    1334.417049,
+    1304.828259,
+    1843.268285,
+    1321.879657,
+    1334.251213,
+    1277.286634
+  ],
+  "audit": {
+    "records": 224,
+    "sourceCommitMatches": true,
+    "modelAttempted": 0,
+    "commandCounts": {
+      "PASS": 174,
+      "CLEAR_OVERRIDE": 26,
+      "SHOOT": 24
+    },
+    "reasonCounts": {
+      "SAFE_PROGRESSIVE_PASS": 138,
+      "SAFE_RECYCLE_PASS": 36,
+      "NO_SAFE_OUTLET": 12,
+      "CLOSE_CLEAR_SHOT": 24,
+      "UNKNOWN_POSSESSION": 4,
+      "STALE_OR_DUPLICATE_FRAME": 2,
+      "ENGINE_OFF_BALL": 4,
+      "AIRBORNE_BALL": 2,
+      "ENGINE_RESTART": 2
+    },
+    "handlerToFlushMs": {
+      "n": 224,
+      "p50": 0.651576,
+      "p95": 0.7302295,
+      "max": 0.993933
+    },
+    "readyMs": {
+      "n": 6,
+      "p50": 104.093247,
+      "p95": 141.467979,
+      "max": 143.172939
+    }
+  },
+  "lateRate": 0.026785714285714284,
+  "invalidRate": 0
+}

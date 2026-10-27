@@ -1,0 +1,306 @@
+{
+  "matches": 4,
+  "wins": 2,
+  "draws": 0,
+  "losses": 2,
+  "scorelessGames": 2,
+  "cleanSheets": 1,
+  "home": 4,
+  "away": 0,
+  "candidateAuditRequestsIncludingBootstrap": 318,
+  "candidateCommandCounts": {
+    "CLEAR_OVERRIDE": 255,
+    "PASS": 12,
+    "SET_STANCE": 40,
+    "MARK": 10,
+    "PRESS_BALL": 1
+  },
+  "candidateReasonCounts": {
+    "INVALID_PLAYER_IDENTITY_SET": 4,
+    "UNKNOWN_POSSESSION": 129,
+    "UNKNOWN_GEOMETRY": 47,
+    "ENGINE_RESTART": 73,
+    "SAFE_RECYCLE_PASS": 6,
+    "SAFE_PROGRESSIVE_PASS": 6,
+    "NO_SAFE_OUTLET": 2,
+    "KEEP_SHAPE": 22,
+    "ROLE_SUPPORT": 17,
+    "CENTRAL_COVER": 10,
+    "MID_DEFENSIVE_THIRD_COVER": 1,
+    "SINGLE_LOCAL_PRESS": 1
+  },
+  "candidateAuditCoverageMatches": 4,
+  "modelAttempted": 0,
+  "handlerMaxMs": 1.280642,
+  "fullNativeInvocationLatency": null,
+  "lateActionRate": null,
+  "invalidResponseRate": null,
+  "rankedMatchesCounted": 0,
+  "goalsFor": 6,
+  "goalsAgainst": 6,
+  "shotsFor": 18,
+  "shotsAgainst": 21,
+  "shotsOnTargetFor": 6,
+  "shotsOnTargetAgainst": 6,
+  "pointsEquivalent": 6,
+  "pointsPerGameEquivalent": 1.5,
+  "reportedPerMatchRoleMeanMs": {
+    "GK": [
+      651,
+      706,
+      628,
+      608
+    ],
+    "DEF": [
+      885,
+      886,
+      1005,
+      793
+    ],
+    "MID": [
+      993,
+      897,
+      926,
+      899
+    ],
+    "FWD1": [
+      681,
+      648,
+      605,
+      625
+    ],
+    "FWD2": [
+      1069,
+      1067,
+      1048,
+      787
+    ]
+  },
+  "reportedRoleMatchMeansOver1000": {
+    "GK": 0,
+    "DEF": 1,
+    "MID": 0,
+    "FWD1": 0,
+    "FWD2": 3
+  },
+  "scope": "Frozen source; built-in Practice benchmarks; report means are not native invocation distributions",
+  "range": [
+    1,
+    4
+  ],
+  "matchAliases": [
+    "stage2-practice-m11-v3-01",
+    "stage2-practice-m11-v3-02",
+    "stage2-practice-m11-v3-03",
+    "stage2-practice-m11-v3-04"
+  ],
+  "sourceCommit": "912b687141c03f72b24ab002a8bd0d9d6d646804",
+  "archiveSha256": "e259682c101f5eae1d5d769cff524b98f3b0aa0628f572822f8ab97be139fbba",
+  "coachVersion": "coach-v1.0",
+  "coachSha256": "f681ecf2534d9c532f9cb63c7c80a7d3e8d6810ed21723a6a0f7cabf7f5b9ef8",
+  "byOpponent": {
+    "The Benchmark FC": {
+      "matches": 2,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "scorelessGames": 2,
+      "cleanSheets": 0,
+      "home": 2,
+      "away": 0,
+      "candidateAuditRequestsIncludingBootstrap": 144,
+      "candidateCommandCounts": {
+        "CLEAR_OVERRIDE": 113,
+        "PASS": 9,
+        "MARK": 6,
+        "SET_STANCE": 15,
+        "PRESS_BALL": 1
+      },
+      "candidateReasonCounts": {
+        "INVALID_PLAYER_IDENTITY_SET": 2,
+        "UNKNOWN_POSSESSION": 66,
+        "UNKNOWN_GEOMETRY": 17,
+        "ENGINE_RESTART": 27,
+        "SAFE_RECYCLE_PASS": 6,
+        "SAFE_PROGRESSIVE_PASS": 3,
+        "CENTRAL_COVER": 6,
+        "MID_DEFENSIVE_THIRD_COVER": 1,
+        "NO_SAFE_OUTLET": 1,
+        "KEEP_SHAPE": 9,
+        "ROLE_SUPPORT": 5,
+        "SINGLE_LOCAL_PRESS": 1
+      },
+      "candidateAuditCoverageMatches": 2,
+      "modelAttempted": 0,
+      "handlerMaxMs": 1.280642,
+      "fullNativeInvocationLatency": null,
+      "lateActionRate": null,
+      "invalidResponseRate": null,
+      "rankedMatchesCounted": 0,
+      "goalsFor": 0,
+      "goalsAgainst": 4,
+      "shotsFor": 4,
+      "shotsAgainst": 14,
+      "shotsOnTargetFor": 0,
+      "shotsOnTargetAgainst": 4,
+      "pointsEquivalent": 0,
+      "pointsPerGameEquivalent": 0.0,
+      "reportedPerMatchRoleMeanMs": {
+        "GK": [
+          651,
+          608
+        ],
+        "DEF": [
+          885,
+          793
+        ],
+        "MID": [
+          993,
+          899
+        ],
+        "FWD1": [
+          681,
+          625
+        ],
+        "FWD2": [
+          1069,
+          787
+        ]
+      },
+      "reportedRoleMatchMeansOver1000": {
+        "GK": 0,
+        "DEF": 0,
+        "MID": 0,
+        "FWD1": 0,
+        "FWD2": 1
+      }
+    },
+    "Total Attack United": {
+      "matches": 1,
+      "wins": 1,
+      "draws": 0,
+      "losses": 0,
+      "scorelessGames": 0,
+      "cleanSheets": 0,
+      "home": 1,
+      "away": 0,
+      "candidateAuditRequestsIncludingBootstrap": 95,
+      "candidateCommandCounts": {
+        "CLEAR_OVERRIDE": 92,
+        "PASS": 3
+      },
+      "candidateReasonCounts": {
+        "INVALID_PLAYER_IDENTITY_SET": 1,
+        "UNKNOWN_POSSESSION": 33,
+        "UNKNOWN_GEOMETRY": 30,
+        "SAFE_PROGRESSIVE_PASS": 3,
+        "ENGINE_RESTART": 27,
+        "NO_SAFE_OUTLET": 1
+      },
+      "candidateAuditCoverageMatches": 1,
+      "modelAttempted": 0,
+      "handlerMaxMs": 1.009931,
+      "fullNativeInvocationLatency": null,
+      "lateActionRate": null,
+      "invalidResponseRate": null,
+      "rankedMatchesCounted": 0,
+      "goalsFor": 3,
+      "goalsAgainst": 2,
+      "shotsFor": 5,
+      "shotsAgainst": 7,
+      "shotsOnTargetFor": 3,
+      "shotsOnTargetAgainst": 2,
+      "pointsEquivalent": 3,
+      "pointsPerGameEquivalent": 3.0,
+      "reportedPerMatchRoleMeanMs": {
+        "GK": [
+          706
+        ],
+        "DEF": [
+          886
+        ],
+        "MID": [
+          897
+        ],
+        "FWD1": [
+          648
+        ],
+        "FWD2": [
+          1067
+        ]
+      },
+      "reportedRoleMatchMeansOver1000": {
+        "GK": 0,
+        "DEF": 0,
+        "MID": 0,
+        "FWD1": 0,
+        "FWD2": 1
+      }
+    },
+    "Fort Knox Athletic": {
+      "matches": 1,
+      "wins": 1,
+      "draws": 0,
+      "losses": 0,
+      "scorelessGames": 0,
+      "cleanSheets": 1,
+      "home": 1,
+      "away": 0,
+      "candidateAuditRequestsIncludingBootstrap": 79,
+      "candidateCommandCounts": {
+        "CLEAR_OVERRIDE": 50,
+        "SET_STANCE": 25,
+        "MARK": 4
+      },
+      "candidateReasonCounts": {
+        "INVALID_PLAYER_IDENTITY_SET": 1,
+        "KEEP_SHAPE": 13,
+        "UNKNOWN_POSSESSION": 30,
+        "ROLE_SUPPORT": 12,
+        "CENTRAL_COVER": 4,
+        "ENGINE_RESTART": 19
+      },
+      "candidateAuditCoverageMatches": 1,
+      "modelAttempted": 0,
+      "handlerMaxMs": 1.105144,
+      "fullNativeInvocationLatency": null,
+      "lateActionRate": null,
+      "invalidResponseRate": null,
+      "rankedMatchesCounted": 0,
+      "goalsFor": 3,
+      "goalsAgainst": 0,
+      "shotsFor": 9,
+      "shotsAgainst": 0,
+      "shotsOnTargetFor": 3,
+      "shotsOnTargetAgainst": 0,
+      "pointsEquivalent": 3,
+      "pointsPerGameEquivalent": 3.0,
+      "reportedPerMatchRoleMeanMs": {
+        "GK": [
+          628
+        ],
+        "DEF": [
+          1005
+        ],
+        "MID": [
+          926
+        ],
+        "FWD1": [
+          605
+        ],
+        "FWD2": [
+          1048
+        ]
+      },
+      "reportedRoleMatchMeansOver1000": {
+        "GK": 0,
+        "DEF": 1,
+        "MID": 0,
+        "FWD1": 0,
+        "FWD2": 1
+      }
+    }
+  },
+  "updatedAtUTC": "2026-10-27T14:44:30.863356+00:00",
+  "decision": "Owner stopped M11; completed partial block1..4 recorded separately. No fifth game and no M11 repair."
+}

@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 2,
+  "candidate": "L02B",
+  "status": "ready-first-ranked-start",
+  "ownerGoal": "Deploy both candidates and play ten completed real ranked matches each",
+  "targetCompletedMatches": 10,
+  "completedMatches": 0,
+  "sourceCommit": "912b687141c03f72b24ab002a8bd0d9d6d646804",
+  "archiveSha256": "2fdad20a8e8a226d36ab81f5223c2c21cc16d80980c80db7c641a69bb79ac763",
+  "formation": "1-1-2",
+  "changeSurface": "MID only",
+  "nativeGatePassed": null,
+  "nativeFailureRetained": true,
+  "pilotDecision": "Proceed with the bounded real-game pilot under the renewed concrete owner goal; do not claim native admission PASS",
+  "promotionEligibleFromNative": false,
+  "fitness": {
+    "passed": 5,
+    "total": 5,
+    "activePercent": 100,
+    "reportedCommands": 5,
+    "source": "fresh Football UI Fitness",
+    "observedAtUTC": "2026-10-27T12:08:47.632198+00:00"
+  },
+  "beforeLeaderboard": {
+    "rank": 12,
+    "played": 199,
+    "wins": 120,
+    "draws": 6,
+    "losses": 73,
+    "goalsFor": 269,
+    "goalsAgainst": 162,
+    "goalDifference": 107,
+    "points": 366
+  },
+  "matches": [],
+  "summary": null,
+  "criticalFailure": null,
+  "limitations": [
+    "Native cold calls failed the original engineering gate; real-game pilot does not erase this result",
+    "Unavailable per-game telemetry stays null"
+  ],
+  "updatedAtUTC": "2026-10-27T12:07:54.113746+00:00",
+  "bindingsDigestSha256": "12eb2eefa82d494b176974c69baa565f4c5ca4ad0c54e42883e38b2fcec1c848",
+  "fitnessAttempts": [
+    {
+      "passed": 4,
+      "total": 5,
+      "failedRole": "MID",
+      "error": "HTTP502 AGENT_RUNTIME_ERROR"
+    }
+  ],
+  "baselineRollbackFitness": {
+    "passed": 5,
+    "total": 5
+  },
+  "historicalNativeGate": {
+    "passed": false,
+    "sourceCommit": "095e3994b8ea55f6671b7833171c0ff83b484b92",
+    "archiveSha256": "2d0d5c43d10a3ed704b5a30a0543736fa468c1f9a1bb1a52dcc0351dca835375",
+    "note": "Earlier exact artifact cold calls failed; MIME-corrected artifact has not been declared native PASS"
+  },
+  "transportCorrection": "Bounded JSON parsing independent of MIME; all tactical module hashes unchanged",
+  "restartOwnerApproved": true,
+  "restartCompatibility": "Fresh validated full-size XY KICK_OFF: nonsprinting central own-half MOVE_TO; neutral stance when geometry unknown; all original guards retained",
+  "restartRetry": {
+    "scope": "One exact initial tick0/time0 own-half support retry within1s; no changed/late/third/PLAY_ON/ball-action retries",
+    "hypothesis": "Football bootstrap reuses exact initial frame; previous second release counted0/1active",
+    "verifiedFitness": true
+  },
+  "cohortFrozenAtUTC": "2026-10-27T12:08:47.632198+00:00"
+}

@@ -1,0 +1,28 @@
+{
+  "candidate": "M11 v3 packaging correction",
+  "kind": "extracted ZIP in fresh isolated processes; not AWS latency",
+  "python": "3.9.6",
+  "machine": "arm64",
+  "archiveSha256": "b75c11aa2bf592c1b959a77a0b72a71e2d67e839bb8f5e167076b32c1cd8a390",
+  "planSha256": "c875f852f0403c3110e6b80f89707d764ed94024e8bea498695102b6c563e607",
+  "processes": 6,
+  "requests": 30,
+  "passed": 30,
+  "localReadyMs": {
+    "n": 6,
+    "p50": 107.2567915,
+    "p95": 110.4818335,
+    "max": 111.285792
+  },
+  "localHTTPMs": {
+    "n": 30,
+    "p50": 0.255,
+    "p95": 2.4021416,
+    "max": 2.597667
+  },
+  "failures": [],
+  "nativeGatePassed": null,
+  "fitness": null,
+  "promotion": false,
+  "sourceCommit": "244065b0d3fe10447759c2afa8684f42fa566474"
+}

@@ -1,0 +1,232 @@
+{
+  "schemaVersion": 2,
+  "candidate": "L02B",
+  "targetCompletedMatches": 5,
+  "sourceCommit": "912b687141c03f72b24ab002a8bd0d9d6d646804",
+  "archiveSha256": "2fdad20a8e8a226d36ab81f5223c2c21cc16d80980c80db7c641a69bb79ac763",
+  "formation": "1-1-2",
+  "changeSurface": "MID only",
+  "nativeGatePassed": null,
+  "nativeFailureRetained": true,
+  "pilotDecision": "Proceed with the bounded real-game pilot under the renewed concrete owner goal; do not claim native admission PASS",
+  "promotionEligibleFromNative": false,
+  "criticalFailure": null,
+  "limitations": [
+    "Native cold calls failed the original engineering gate; real-game pilot does not erase this result",
+    "Unavailable per-game telemetry stays null"
+  ],
+  "bindingsDigestSha256": "12eb2eefa82d494b176974c69baa565f4c5ca4ad0c54e42883e38b2fcec1c848",
+  "historicalNativeGate": {
+    "passed": false,
+    "sourceCommit": "095e3994b8ea55f6671b7833171c0ff83b484b92",
+    "archiveSha256": "2d0d5c43d10a3ed704b5a30a0543736fa468c1f9a1bb1a52dcc0351dca835375",
+    "note": "Earlier exact artifact cold calls failed; MIME-corrected artifact has not been declared native PASS"
+  },
+  "transportCorrection": "Bounded JSON parsing independent of MIME; all tactical module hashes unchanged",
+  "restartOwnerApproved": true,
+  "restartCompatibility": "Fresh validated full-size XY KICK_OFF: nonsprinting central own-half MOVE_TO; neutral stance when geometry unknown; all original guards retained",
+  "restartRetry": {
+    "scope": "One exact initial tick0/time0 own-half support retry within1s; no changed/late/third/PLAY_ON/ball-action retries",
+    "hypothesis": "Football bootstrap reuses exact initial frame; previous second release counted0/1active",
+    "verifiedFitness": true
+  },
+  "mode": "practice",
+  "rankedCohortCounted": false,
+  "claimsNotMade": [
+    "Practice performance does not validate performance against live players"
+  ],
+  "cohort": "l02b-coach-01",
+  "ownerGoal": "Develop only L02B; visually evaluate actual passing, shooting and defensive episodes",
+  "status": "closed-at-two-owner-improvement",
+  "completedMatches": 2,
+  "matches": [
+    {
+      "opponent": "Total Attack United",
+      "opponentStyle": "aggressive",
+      "side": "HOME",
+      "result": "WIN",
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "shotsFor": 5,
+      "shotsAgainst": 8,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 48,
+      "teamReportAverageLatencyMs": 960,
+      "teamReportCommands": 465,
+      "teamReportCommandCounts": {
+        "PRESS_BALL": 165,
+        "INTERCEPT": 129,
+        "MOVE_TO": 94,
+        "SHOOT": 52,
+        "CLEAR_OVERRIDE": 14,
+        "GK_DISTRIBUTE": 10,
+        "PASS": 1
+      },
+      "perRoleReportLatencyMs": {
+        "GK": 664,
+        "DEF": 1293,
+        "MID": 1022,
+        "FWD1": 670,
+        "FWD2": 1046
+      },
+      "perRoleReportedSuccessPercent": {
+        "GK": 100,
+        "DEF": 100,
+        "MID": 100,
+        "FWD1": 100,
+        "FWD2": 100
+      },
+      "id": "stage2-practice-l02b-coach-01",
+      "mode": "practice",
+      "sourceCommit": "912b687141c03f72b24ab002a8bd0d9d6d646804",
+      "scoreless": false,
+      "cleanSheet": true,
+      "visualEvidenceAlias": "l02b-coach-01-visual",
+      "passCompletionRate": null,
+      "actualPassAttempts": null,
+      "actualCompletedPasses": null,
+      "reportedShotAccuracy": 0.2,
+      "notes": {
+        "coverage": "Sampled visible frames; incomplete event coverage, not video or full pass census",
+        "observations": [
+          {
+            "time": "00:33 / 00:50",
+            "finding": "Opponent goalkeeper Max Fury advanced into our half near contested ball; own GK near goal."
+          },
+          {
+            "time": "01:38 / 01:50",
+            "finding": "Both own forwards occupied a small area near opponent box; their energy bars were mostly depleted. Ball contested; exact pass recipient unknown."
+          },
+          {
+            "time": "overtime, three adjacent frames",
+            "finding": "Vic Surge near ball on opponent half, then own GK controls ball, then own DEF controls it; visually supports successful GK-to-DEF release. Full shot trajectory not captured."
+          }
+        ],
+        "goalOrigin": "Winning shot origin not captured; do not infer from goal banner",
+        "hypothesis": "Crowding and repeated contested receptions may prevent clean progression; requires repeated episodes before tactic change"
+      },
+      "savedAtUTC": "2026-10-27T15:26:08.704669+00:00"
+    },
+    {
+      "opponent": "The Benchmark FC",
+      "opponentStyle": "balanced",
+      "side": "HOME",
+      "result": "WIN",
+      "goalsFor": 5,
+      "goalsAgainst": 1,
+      "shotsFor": 9,
+      "shotsAgainst": 3,
+      "shotsOnTargetFor": 5,
+      "shotsOnTargetAgainst": 1,
+      "possessionPercent": 19,
+      "teamReportAverageLatencyMs": 808,
+      "teamReportCommands": 510,
+      "teamReportCommandCounts": {
+        "PRESS_BALL": 199,
+        "MOVE_TO": 193,
+        "SHOOT": 56,
+        "CLEAR_OVERRIDE": 23,
+        "INTERCEPT": 22,
+        "PASS": 14,
+        "GK_DISTRIBUTE": 2,
+        "MARK": 1
+      },
+      "perRoleReportLatencyMs": {
+        "GK": 635,
+        "DEF": 831,
+        "MID": 976,
+        "FWD1": 656,
+        "FWD2": 1021
+      },
+      "perRoleReportedSuccessPercent": {
+        "GK": 100,
+        "DEF": 100,
+        "MID": 100,
+        "FWD1": 100,
+        "FWD2": 100
+      },
+      "id": "stage2-practice-l02b-coach-02",
+      "mode": "practice",
+      "sourceCommit": "912b687141c03f72b24ab002a8bd0d9d6d646804",
+      "scoreless": false,
+      "cleanSheet": false,
+      "visualEvidenceAlias": "l02b-coach-02-visual",
+      "passCompletionRate": null,
+      "actualPassAttempts": null,
+      "actualCompletedPasses": null,
+      "reportedShotAccuracy": 0.5555555555555556,
+      "notes": {
+        "coverage": "Sampled visible frames from00:35; initial goal and final conceded shot not seen. Goal animation obscured later play; no full event census.",
+        "observations": [
+          {
+            "time": "00:48\u201300:51",
+            "finding": "Opponent ball carrier near centre confronted by FWD4; following frame shows FWD4 controlling ball and opponent down. Supports successful tackle/recovery rather than completed pass."
+          },
+          {
+            "time": "01:00",
+            "finding": "Ball near opponent goal, FWD4 and three opponents behind it; next frame goal animation. Exact kicker/power and initial shot point not captured."
+          },
+          {
+            "time": "01:13\u201301:14",
+            "finding": "Ball travels toward opponent goal and next frame GK controls it; own FWD4/MID near central cluster with low energy bars. Kicker unknown."
+          }
+        ],
+        "shotPowerKnown": "FWD2 explicit branch .8 from verified source931af03; FWD1 prompt example .9, actual model choice unknown. No measured ball speed or causal energy effect.",
+        "passCompletionRate": null
+      },
+      "savedAtUTC": "2026-10-27T15:34:01.137493+00:00"
+    }
+  ],
+  "opponentOrder": [
+    "Total Attack United",
+    "The Benchmark FC",
+    "Fort Knox Athletic",
+    "Total Attack United",
+    "The Benchmark FC"
+  ],
+  "parentReference": "practice-stage2-l02b-10.json",
+  "coachVersion": "coach-v1.0",
+  "visualProtocol": {
+    "primary": [
+      "pass origin and intended recipient when observable",
+      "actual ball receipt and next possession",
+      "turnover location",
+      "shot origin and outcome",
+      "keeper position and central defensive cover"
+    ],
+    "missingData": "unknown; no aggregate pass-completion rate without complete event coverage",
+    "noInGameMutations": true,
+    "reportSOTSemanticsUnverified": true
+  },
+  "blockReviews": [],
+  "fitness": {
+    "passed": 5,
+    "activeCommands": 5,
+    "activePercent": 100,
+    "attempt": 3,
+    "completedOwnFitnessSessionReset": true
+  },
+  "priorCohortFitness": "See historical L02B10; not current readiness",
+  "restoreReadback": "Original immutable artifact READY and exact saved AWS configuration re-read",
+  "returnFitnessAttempts": [
+    {
+      "attempt": 1,
+      "passed": 4,
+      "reason": "Initial positioning emitted; identical tick0 duplicate arrived2460.9ms later beyond1s replay window"
+    },
+    {
+      "attempt": 2,
+      "passed": 4,
+      "reason": "Same completed Fitness session and unchanged tick0 frame reused; freshness guard released"
+    },
+    {
+      "attempt": 3,
+      "passed": 5,
+      "reason": "Fresh test session after cleanup of completed fixed Fitness session; no code change"
+    }
+  ],
+  "cohortFrozenAtUTC": "2026-10-27T15:19:14.777670+00:00",
+  "closureReason": "Owner explicitly requests improvements now after two completed games; no match interrupted",
+  "closedAtUTC": "2026-10-27T15:41:34.395672+00:00"
+}

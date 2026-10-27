@@ -4,6 +4,23 @@ from fast_path_v2.engine import FastEngine
 ROOT=Path(__file__).resolve().parents[1]
 spec=importlib.util.spec_from_file_location('eval',ROOT/'research/v3/role-package-r1/evaluate.py');ev=importlib.util.module_from_spec(spec);spec.loader.exec_module(ev)
 class FastTests(unittest.TestCase):
+ def test_goalkeeper_restart_holds_own_position_only_in_verified_frame(self):
+  from runtime_v1.core import unwrap
+  cases=json.loads((ROOT/'research/v3/keeper-g1/fixtures.json').read_text())['cases']
+  for side,own_x in [('home',-50),('away',50)]:
+   p=unwrap(next(c['modelText'] for c in cases if c['id']==side+'-distribution'))
+   p['gameState'].update(playMode='KICK_OFF',tick=0,gameTime=0)
+   p['gameState']['ball'].update(isFree=True,possessionAgentId=None,possessionTeamCode=None)
+   for row in p['gameState']['players']:row['hasBall']=False
+   engine=FastEngine(0)
+   for _ in range(2):
+    out,audit=engine.choose(p,side)
+    self.assertEqual(out,[{'commandType':'MOVE_TO','playerId':0,'parameters':{'target_x':own_x,'target_y':0,'sprint':False},'duration':0}])
+    self.assertFalse(audit['modelAttempted'])
+   for row in p['gameState']['players']:
+    row['position']['x']/=10;row['position']['y']/=10
+   out,_=FastEngine(0).choose(p,side)
+   self.assertEqual(out[0]['commandType'],'CLEAR_OVERRIDE')
  def test_all_decisions_and_real_history_sequence(self):
   for case in ev.cases()+ev.context_cases():
    with self.subTest(case=case['id']):

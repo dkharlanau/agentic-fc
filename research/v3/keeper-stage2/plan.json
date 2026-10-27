@@ -1,0 +1,101 @@
+{
+  "kind": "Same prompt GK Nova2Lite/Micro native screen",
+  "cases": [
+    {
+      "id": "home-distant-carrier",
+      "kind": "distant-carrier",
+      "keeperPosition": {
+        "x": -5.9654136,
+        "y": -0.19654073
+      },
+      "requestSha256": "c8590d4e495dc8885b7cfe48b9131356d9b27a61b95ac19fa51dadd885395f16"
+    },
+    {
+      "id": "home-distant-free",
+      "kind": "distant-free",
+      "keeperPosition": {
+        "x": -5.9654136,
+        "y": -0.19654073
+      },
+      "requestSha256": "cc1ea24f8414112813c04f4f352093dd57131337b6c6bb7f2fc03a51a22326b0"
+    },
+    {
+      "id": "home-own-distribution",
+      "kind": "own-distribution",
+      "keeperPosition": {
+        "x": -5.9654136,
+        "y": -0.19654073
+      },
+      "requestSha256": "c806901ef85292ad81db5010e637207da1d989e4077cf7d8d5d115e15f20b9da"
+    },
+    {
+      "id": "home-opponent-keeper",
+      "kind": "opponent-keeper",
+      "keeperPosition": {
+        "x": -5.9654136,
+        "y": -0.19654073
+      },
+      "requestSha256": "77ff3c9cf86957eb5b39a897813c6ede2a59db039cb4a246e6a1bbcfc4fe2910"
+    },
+    {
+      "id": "away-distant-carrier",
+      "kind": "distant-carrier",
+      "keeperPosition": {
+        "x": 6.021047,
+        "y": -0.1915817
+      },
+      "requestSha256": "a5a0017a07fc9ef1ae34565f2ecca8a4d360b8b629be78a1f6d9ef84924243e0"
+    },
+    {
+      "id": "away-distant-free",
+      "kind": "distant-free",
+      "keeperPosition": {
+        "x": 6.021047,
+        "y": -0.1915817
+      },
+      "requestSha256": "fa6d13acbf50b01f406ee28bb6cdad740f58e1b2d29d394fcb8a192be45f446b"
+    },
+    {
+      "id": "away-own-distribution",
+      "kind": "own-distribution",
+      "keeperPosition": {
+        "x": 6.021047,
+        "y": -0.1915817
+      },
+      "requestSha256": "3386ba0fa71e97dadccd8cca97d77070bb18000b5f36b0eaf15a01e21b108838"
+    },
+    {
+      "id": "away-opponent-keeper",
+      "kind": "opponent-keeper",
+      "keeperPosition": {
+        "x": 6.021047,
+        "y": -0.1915817
+      },
+      "requestSha256": "47bb40a4c9c534f4abc31a19833dceed1fd4c85f4be2137014d59fb288ceb969"
+    }
+  ],
+  "protocol": "Alternating model order; one fresh own session per case/model; saved config unchanged; stop every own session",
+  "acceptance": "All eight safe/valid decisions, no worse raw JSON, lower paired full median and model median; any unsafe keeper movement rejects model-only installation",
+  "limitations": [
+    "Synthetic derivatives of one observed state; explicit ownership added in four cases",
+    "Safety envelope is a conservative screen, not calibrated save probability",
+    "Local SDK full time is not game-server time; cold calls retained",
+    "Micro event eligibility still requires live portal validation before installation"
+  ],
+  "alternativePromptPlan": {
+    "candidate": "G2-Nova, same saved model and config, prompt-only replacement",
+    "trigger": "Micro wrong-side move and false distribution observed in first10calls",
+    "change": "Explicit team-qualified keeper possession; delegate open-play saves/positioning instead of uncalibrated targets; current-position kickoff hold",
+    "acceptance": "All eight base cases safe and valid, followed by extra kickoff/missing/contradictory inputs before installation",
+    "rollback": "Canonical GK13 exact binding; keep L02B and other roles/112 fixed",
+    "limitations": "Built-in keeper effectiveness and pass accuracy require actual matches; safety is not save improvement"
+  },
+  "g3Plan": {
+    "change": "GK-only prompt on unchanged Nova2Lite; routine keeper decisions delegated to engine via CLEAR_OVERRIDE, neutral stance only at kickoff",
+    "trigger": "G2-Nova9/12 with AWAY binding/possession errors; reject G2",
+    "gate": "12/12 exact schema and declared G3 policy, no unsafe ball/movement commands; fresh saved native and Fitness5/5 before Practice",
+    "comparisonLimit": "G3 delegates distribution; do not relabel previous GK_DISTRIBUTE agreement failures as passes",
+    "pilot": "Five unchanged Practice games TotalAttack,Benchmark,FortKnox,TotalAttack,Benchmark; actual screen review; original GK rollback",
+    "quota": "Check remaining agent quota before each block/game; stop starting work at10% remaining"
+  }
+}

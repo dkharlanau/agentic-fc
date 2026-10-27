@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "checkedDate": "2026-10-27",
+  "status": "mime-fixed-neutral-restart-approved-awaiting-fitness",
+  "candidate": "L02B",
+  "nativeValidResponses": 224,
+  "footballFitness": {
+    "passed": 4,
+    "total": 5,
+    "failedRole": "MID",
+    "runtimeErrorStatus": 502
+  },
+  "observations": [
+    "Runtime BOOT and first successful PING appeared for the Fitness process",
+    "No MID decision audit appeared for that process",
+    "Baseline MID rollback restored fresh Fitness5/5",
+    "Diagnostic process recorded valid POST /invocations, Content-Length2512, session header present, no Expect, non-application/json MIME",
+    "Diagnostic process emitted explicit415 content_type rejection for three Football invocations"
+  ],
+  "hypothesis": null,
+  "nextTest": "Observe bounded HTTP reject/method/path/body-framing labels from a diagnostic-only transport build; no payload or credential logging",
+  "policyChanged": false,
+  "rankedGames": 0,
+  "confirmedCause": "A strict MIME gate rejected Football JSON payloads; official AgentCore SDK request.json parses JSON without this MIME gate",
+  "correction": "Parse bounded JSON independently of MIME label in L02B and M11 HTTP entrypoints; tactical modules unchanged",
+  "validation": {
+    "midTests": 71,
+    "m11Tests": 17,
+    "l02bExtractedValid": 224,
+    "m11ExtractedValid": 30
+  },
+  "newArtifacts": {
+    "L02B": "a4cdb19fa73951a8ff15533155a887ed121a88ba6a5485e63d5e889fb0db0f60",
+    "M11": "e586faeab9df66264769f90d2a3e2f907edd85c258b8a27f7b149bace641e2c3"
+  },
+  "mimeCauseConfirmedByClassification": "application/octet-stream",
+  "postMimeFitness": {
+    "L02B": {
+      "passed": 4,
+      "total": 5,
+      "failure": "0/1 active unique ticks"
+    },
+    "M11": {
+      "passed": 4,
+      "total": 5,
+      "failure": "0/1 active unique ticks",
+      "observedPlayMode": "KICK_OFF",
+      "gameTime": 0,
+      "secondRequest": "STALE_OR_DUPLICATE_FRAME"
+    }
+  },
+  "restartOwnerApproved": true,
+  "restartBehavior": "Universal balanced stance on known-ownership valid fresh KICK_OFF after original guards; stale/unknown/wrong-binding/locked/other phases unchanged",
+  "coreTacticalEngineHashesChanged": false,
+  "activePilotArtifacts": {
+    "sourceCommit": "f8e7fad",
+    "L02B": "a4cdb19fa73951a8ff15533155a887ed121a88ba6a5485e63d5e889fb0db0f60",
+    "M11": "e586faeab9df66264769f90d2a3e2f907edd85c258b8a27f7b149bace641e2c3",
+    "status": "AWS_READY_Fitness_pending"
+  },
+  "activeSupportBuild": {
+    "l02b": {
+      "sourceCommit": "c1c7ac13cd6ebc10a34a223212b6bba080c30340",
+      "archiveSha256": "cf99810d48a0fee06efc05d12a547a96aa621f4f5030497d4444430576de608f",
+      "verifiedReady": true
+    },
+    "m11": {
+      "sourceCommit": "c1c7ac13cd6ebc10a34a223212b6bba080c30340",
+      "archiveSha256": "1f57a0fa672d6c76df7c2e6f94265348a4c75d0ac5aae3af8c4a1773f4c17f21",
+      "verifiedReady": true
+    }
+  },
+  "currentStatus": "L02B actual Fitness5/5; fixed twenty-game pilot ready to start",
+  "supportFitness": {
+    "candidate": "L02B",
+    "passed": 4,
+    "total": 5,
+    "activeUniqueTicks": 0,
+    "uniqueTicks": 1,
+    "firstResponse": "NEUTRAL_RESTART_SUPPORT/MOVE_TO",
+    "secondResponse": "STALE_OR_DUPLICATE_FRAME/CLEAR_OVERRIDE",
+    "identicalPayload": true,
+    "intervalMs": 511.868,
+    "rollbackFitness": {
+      "passed": 5,
+      "total": 5
+    }
+  },
+  "nextExperiment": "Single exact initial kickoff positioning retry within1s, no competitive action retry",
+  "initialKickoffRetryFitness": {
+    "candidate": "L02B",
+    "passed": 5,
+    "total": 5,
+    "sourceCommit": "912b687141c03f72b24ab002a8bd0d9d6d646804",
+    "archiveSha256": "2fdad20a8e8a226d36ab81f5223c2c21cc16d80980c80db7c641a69bb79ac763",
+    "fiveExactBindingsVerified": true,
+    "formation": "1-1-2",
+    "observedAtUTC": "2026-10-27T12:08:47.632198+00:00",
+    "audit": {
+      "commands": [
+        "NEUTRAL_RESTART_SUPPORT/MOVE_TO",
+        "IDEMPOTENT_INITIAL_KICKOFF_RETRY/MOVE_TO"
+      ],
+      "modelAttempted": 0,
+      "handlerToFlushMs": [
+        0.82752,
+        0.489854
+      ],
+      "timingScope": "Application handler only, excludes native wall and startup"
+    }
+  }
+}

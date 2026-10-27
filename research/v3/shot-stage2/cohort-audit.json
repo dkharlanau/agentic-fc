@@ -1,0 +1,83 @@
+{
+  "scope": "Private session joins; missing joins unknown; compute is not end-to-end latency",
+  "rows": [
+    {
+      "role": "fwd2-open-goal",
+      "matchAlias": "stage2-open-goal-01",
+      "calls": 72,
+      "commands": {
+        "CLEAR_OVERRIDE": 35,
+        "SET_STANCE": 33,
+        "PASS": 3,
+        "PRESS_BALL": 1
+      },
+      "reasons": {
+        "MALFORMED_POSITION": 1,
+        "ROLE_SUPPORT": 16,
+        "KEEP_SHAPE": 17,
+        "ENGINE_RESTART": 12,
+        "UNKNOWN_POSSESSION": 22,
+        "SAFE_OUTLET": 3,
+        "SINGLE_LOCAL_PRESS": 1
+      },
+      "modelAttempted": 0,
+      "computeMedianMs": 0.554095,
+      "computeMaxMs": 1.346596
+    },
+    {
+      "role": "fwd2-open-goal",
+      "matchAlias": "stage2-open-goal-02",
+      "calls": 89,
+      "commands": {
+        "CLEAR_OVERRIDE": 46,
+        "SET_STANCE": 42,
+        "PASS": 1
+      },
+      "reasons": {
+        "MALFORMED_POSITION": 1,
+        "UNKNOWN_POSSESSION": 23,
+        "KEEP_SHAPE": 21,
+        "ROLE_SUPPORT": 21,
+        "ENGINE_RESTART": 22,
+        "SAFE_OUTLET": 1
+      },
+      "modelAttempted": 0,
+      "computeMedianMs": 0.418157,
+      "computeMaxMs": 0.996531
+    },
+    {
+      "role": "gk-fast",
+      "matchAlias": "stage2-open-goal-01",
+      "calls": 73,
+      "commands": {
+        "CLEAR_OVERRIDE": 73
+      },
+      "reasons": {
+        "MALFORMED_POSITION": 1,
+        "ENGINE_GOALKEEPER": 37,
+        "ENGINE_RESTART": 12,
+        "UNKNOWN_POSSESSION": 23
+      },
+      "modelAttempted": 0,
+      "computeMedianMs": 0.553313,
+      "computeMaxMs": 0.68527
+    },
+    {
+      "role": "gk-fast",
+      "matchAlias": "stage2-open-goal-02",
+      "calls": 95,
+      "commands": {
+        "CLEAR_OVERRIDE": 95
+      },
+      "reasons": {
+        "MALFORMED_POSITION": 1,
+        "UNKNOWN_POSSESSION": 23,
+        "ENGINE_GOALKEEPER": 44,
+        "ENGINE_RESTART": 27
+      },
+      "modelAttempted": 0,
+      "computeMedianMs": 0.416927,
+      "computeMaxMs": 0.984833
+    }
+  ]
+}

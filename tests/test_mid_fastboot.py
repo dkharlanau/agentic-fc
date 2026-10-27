@@ -1,5 +1,6 @@
 """Same full policy plan plus framing, concurrency and startup-path regressions."""
 from http.client import HTTPConnection
+import errno
 import json
 import os
 import socket
@@ -16,6 +17,7 @@ from mid_fast_v2.fastboot import Server, MAX_HEADER_BYTES, SESSION_HEADER
 
 
 class FastBootTests(base_tests.MidHTTPTests):
+    restart_stance = True
     def setUp(self):
         self.environment = patch.dict(os.environ, {'MID_AUDIT': '0'})
         self.environment.start()
@@ -31,7 +33,13 @@ class FastBootTests(base_tests.MidHTTPTests):
     def raw(self, request):
         with socket.create_connection(self.server.server_address, timeout=2) as client:
             client.sendall(request)
-            client.shutdown(socket.SHUT_WR)
+            try:
+                client.shutdown(socket.SHUT_WR)
+            except OSError as error:
+                # Linux may already see the peer close after rejecting a large
+                # header. Still read and assert its exact HTTP rejection below.
+                if error.errno != errno.ENOTCONN:
+                    raise
             chunks = []
             while True:
                 data = client.recv(65536)
@@ -85,6 +93,88 @@ class FastBootTests(base_tests.MidHTTPTests):
             client.close()
         self.assertEqual(self.server.invocations, 3)
 
+    def test_rejection_audit_uses_bounded_labels_without_header_values(self):
+        with patch('mid_fast_v2.fastboot.audit_log') as logged:
+            response = self.raw(b'POST /invocations HTTP/1.1\r\nHost: local\r\nContent-Type: private-value\r\nContent-Length: 2\r\nAuthorization: private-token\r\n\r\nxx')
+        self.assertTrue(response.startswith(b'HTTP/1.1 400 '))
+        self.assertTrue(any(call.args[0] == 'MID_L02B_HTTP_REJECT'
+                            and call.args[1]['reason'] == 'invalid_or_truncated_json'
+                            for call in logged.call_args_list))
+        self.assertNotIn('private-value', str(logged.call_args_list))
+        self.assertNotIn('private-token', str(logged.call_args_list))
+
+    def test_invalid_transport_is_not_valid_command(self):
+        for method, path, body, headers, expected in (
+            ('POST', '/invocations', '{', {'Content-Type':'application/json'}, 400),
+            ('POST', '/invocations', '{', {'Content-Type':'text/plain'}, 400),
+            ('POST', '/wrong', '{}', {'Content-Type':'application/json'}, 404),
+            ('GET', '/wrong', None, {}, 404),
+        ):
+            with self.subTest(expected=expected):
+                self.assertEqual(self.call(method, path, body, headers)[0], expected)
+
+    def test_complete_game_decision_with_default_or_non_json_mime(self):
+        row = plan()[0]
+        for i, media_type in enumerate((None, 'application/octet-stream', 'text/plain')):
+            headers = {SESSION_HEADER:'football-mime-' + str(i)}
+            if media_type is not None:
+                headers['Content-Type'] = media_type
+            status, _, raw = self.call('POST', '/invocations', json.dumps(row['request']), headers)
+            self.assertEqual(status, 200)
+            self.assertEqual(base_tests.errors(row, base_tests.decode_response(raw)), [])
+
+    def test_pass_audit_records_receiver_without_claiming_completion(self):
+        from mid_fast_v1.fixtures import base
+        root = base()
+        root['privateCanary'] = 'do-not-log-raw-state'
+        expected, facts = MidEngine().choose(root, 'private-pass-session')
+        captured = []
+        ready = threading.Event()
+        def capture(kind, fields):
+            if kind == 'MID_L02B':
+                captured.append(fields)
+                ready.set()
+        with patch.dict(os.environ, {'MID_AUDIT': '1'}), \
+                patch('mid_fast_v2.fastboot.audit_log', side_effect=capture):
+            status, _, raw = self.call('POST', '/invocations', json.dumps(root),
+                                      {SESSION_HEADER: 'private-pass-session'})
+            self.assertTrue(ready.wait(2))
+        self.assertEqual(status, 200)
+        self.assertEqual(json.loads(base_tests.decode_response(raw)), expected)
+        record = captured[0]
+        self.assertEqual(record['receiver'], expected[0]['parameters']['target_player_id'])
+        for field in ('frame', 'ownershipEvidence', 'velocityCoverage', 'safeOutlets',
+                      'receiverClearanceSpan', 'laneClearanceSpan', 'pressureDistanceSpan'):
+            self.assertEqual(record[field], facts.get(field))
+        self.assertIsNone(record['passCompleted'])
+        self.assertIsNone(record['ballRetained'])
+        self.assertNotIn('do-not-log-raw-state', json.dumps(record))
+        self.assertNotIn('private-pass-session', json.dumps(record))
+
+    def test_http_initial_kickoff_exact_retry_then_release(self):
+        from hybrid_fast_v1.evaluate import decode_response
+        row = plan()[0]
+        state = json.loads(row['request']['prompt'])
+        state['gameState'].update(playMode='KICK_OFF', tick=0, gameTime=0)
+        payload = {'prompt':json.dumps(state)}
+        headers = {'Content-Type':'application/octet-stream', SESSION_HEADER:'initial-kickoff-http'}
+        actions=[]
+        for _ in range(3):
+            status, _, raw = self.call('POST', '/invocations', json.dumps(payload), headers)
+            self.assertEqual(status, 200)
+            actions.append(decode_response(raw)[0]['commandType'])
+        self.assertEqual(actions, ['MOVE_TO','MOVE_TO','MOVE_TO'])
+
+    def test_http_kickoff_stance_does_not_repeat_on_stale_frame(self):
+        row = next(r for r in plan(restart_stance=True) if r.get('expectedRestartCompatibility'))
+        headers = {'Content-Type':'application/octet-stream', SESSION_HEADER:'kickoff-http'}
+        status, _, raw = self.call('POST', '/invocations', json.dumps(row['request']), headers)
+        self.assertEqual(status, 200)
+        self.assertEqual(json.loads(base_tests.decode_response(raw))[0]['commandType'], row['expectedAction'])
+        self.assertEqual(json.loads(base_tests.decode_response(raw))[0]['parameters'], row['expectedParameters'])
+        _, _, duplicate = self.call('POST', '/invocations', json.dumps(row['request']), headers)
+        self.assertEqual(json.loads(base_tests.decode_response(duplicate))[0]['commandType'], 'CLEAR_OVERRIDE')
+
     def test_post_waits_for_real_decision_without_early_headers(self):
         with socket.create_connection(self.server.server_address, timeout=2) as client:
             payload = json.dumps(plan()[0]['request']).encode()
@@ -102,11 +192,13 @@ class FastBootTests(base_tests.MidHTTPTests):
 
 class FastBootAdmissionTests(unittest.TestCase):
     def test_old_archive_cannot_pass_and_new_first_call_still_must_meet_deadline(self):
-        rows = plan()
+        rows = plan(restart_stance=True)
         engine = MidEngine()
         receipts = []
         for row in rows:
-            commands, _ = engine.choose(row['request'], row['sessionKey'])
+            commands, audit = engine.choose(row['request'], row['sessionKey'])
+            from mid_fast_v2.restart_compat import neutral_restart
+            commands, _ = neutral_restart(row['request'], commands, audit, row['sessionKey'])
             receipt = {key: row[key] for key in ('key', 'sessionKey', 'sequence', 'requestSha256')}
             receipt.update(planSha256=digest(rows), archiveSha256=artifact_for('L02')['archiveSha256'],
                 requestWallMs=100, complete=True, streamError=None, rawResponse=json.dumps(commands))

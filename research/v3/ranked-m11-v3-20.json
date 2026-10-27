@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 2,
+  "candidate": "M11 hybrid v3 corrected package",
+  "status": "preparing-initial-kickoff-retry-fitness",
+  "ownerGoal": "Autonomous bot pilot expanded by owner to twenty completed ranked games per candidate; first ten retained as original deliverable",
+  "targetCompletedMatches": 20,
+  "completedMatches": 0,
+  "sourceCommit": "912b687141c03f72b24ab002a8bd0d9d6d646804",
+  "archiveSha256": "e259682c101f5eae1d5d769cff524b98f3b0aa0628f572822f8ab97be139fbba",
+  "formation": "1-1-2",
+  "changeSurface": "MID only",
+  "nativeGatePassed": null,
+  "nativeFailureRetained": true,
+  "pilotDecision": "Proceed with the bounded real-game pilot under the renewed concrete owner goal; do not claim native admission PASS",
+  "promotionEligibleFromNative": false,
+  "fitness": null,
+  "beforeLeaderboard": {
+    "rank": 12,
+    "played": 199,
+    "wins": 120,
+    "draws": 6,
+    "losses": 73,
+    "goalsFor": 269,
+    "goalsAgainst": 162,
+    "goalDifference": 107,
+    "points": 366
+  },
+  "matches": [],
+  "summary": null,
+  "criticalFailure": null,
+  "limitations": [
+    "Native cold calls failed the original engineering gate; real-game pilot does not erase this result",
+    "Unavailable per-game telemetry stays null"
+  ],
+  "updatedAtUTC": "2026-10-27T12:07:54.113746+00:00",
+  "historicalNativeGate": {
+    "passed": false,
+    "sourceCommit": "244065b0d3fe10447759c2afa8684f42fa566474",
+    "archiveSha256": "b75c11aa2bf592c1b959a77a0b72a71e2d67e839bb8f5e167076b32c1cd8a390",
+    "note": "Earlier exact artifact cold calls failed; MIME-corrected artifact has not been declared native PASS"
+  },
+  "transportCorrection": "Bounded JSON parsing independent of MIME; all tactical module hashes unchanged",
+  "restartOwnerApproved": true,
+  "restartCompatibility": "Fresh validated full-size XY KICK_OFF: nonsprinting central own-half MOVE_TO; neutral stance when geometry unknown; all original guards retained",
+  "restartRetry": {
+    "scope": "One exact initial tick0/time0 own-half support retry within1s; no changed/late/third/PLAY_ON/ball-action retries",
+    "hypothesis": "Football bootstrap reuses exact initial frame; previous second release counted0/1active",
+    "verifiedFitness": false
+  }
+}

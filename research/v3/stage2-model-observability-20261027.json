@@ -1,0 +1,47 @@
+{
+  "checkedAtUTC": "2026-10-27T13:07:29.529362+00:00",
+  "roles": {
+    "gk": {
+      "portalBindingMatchesHarnessArn": true,
+      "configuredModel": "global.amazon.nova-2-lite-v1:0",
+      "modelCalls": null,
+      "modelLatencyMs": null,
+      "runtimeLogs": "Startup/system telemetry available; no usable model-call duration/usage in inspected output",
+      "counterLimitation": "Portal zero Harness counters are not zero-call evidence"
+    },
+    "def": {
+      "portalBindingMatchesHarnessArn": true,
+      "configuredModel": "global.amazon.nova-2-lite-v1:0",
+      "modelCalls": null,
+      "modelLatencyMs": null,
+      "runtimeLogs": "Startup/system telemetry available; no usable model-call duration/usage in inspected output",
+      "counterLimitation": "Portal zero Harness counters are not zero-call evidence"
+    },
+    "fwd1": {
+      "portalBindingMatchesHarnessArn": true,
+      "configuredModel": "global.amazon.nova-2-lite-v1:0",
+      "modelCalls": null,
+      "modelLatencyMs": null,
+      "runtimeLogs": "Startup/system telemetry available; no usable model-call duration/usage in inspected output",
+      "counterLimitation": "Portal zero Harness counters are not zero-call evidence"
+    }
+  },
+  "currentBenchmarkSource": "912b687141c03f72b24ab002a8bd0d9d6d646804",
+  "scope": "Read-only observations; no model/role/prompt/formation/runtime change",
+  "bedrockAccountRegionMetrics": {
+    "metricSets": 3,
+    "invocationDatapoints": 0,
+    "latencyDatapoints": 0,
+    "observedModelCalls": null,
+    "observedModelLatencyMs": null,
+    "limitation": "No datapoints returned in this account/region/time query; this does not establish zero calls"
+  },
+  "sharedTraceGroupsObserved": 0,
+  "nextMeasurement": "No further native probe required for current M11/Baseline benchmark switch",
+  "nativeCheck": {
+    "status": "completed",
+    "evidence": "stage2-model-role-native-20261027.json",
+    "responsesWithNonzeroUsage": 6,
+    "allOwnSessionsCleaned": true
+  }
+}

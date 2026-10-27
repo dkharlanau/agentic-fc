@@ -15,6 +15,7 @@ from mid_fast_v2.main import Server, SESSION_HEADER
 
 
 class MidHTTPTests(unittest.TestCase):
+    restart_stance = False
     def setUp(self):
         self.environment = patch.dict(os.environ, {'MID_AUDIT': '0'})
         self.environment.start()
@@ -39,14 +40,17 @@ class MidHTTPTests(unittest.TestCase):
 
     def test_complete_plan_matches_sdk_wire_and_decisions(self):
         engine = MidEngine()
-        rows = plan()
+        rows = plan(restart_stance=self.restart_stance)
         for row in rows:
             with self.subTest(key=row['key']):
                 status, content_type, raw = self.call('POST', '/invocations', json.dumps(row['request']),
                     {'Content-Type': 'application/json', SESSION_HEADER: row['sessionKey']})
                 self.assertEqual(status, 200)
                 self.assertTrue(content_type.startswith('text/event-stream'))
-                commands, _ = engine.choose(row['request'], row['sessionKey'])
+                commands, audit = engine.choose(row['request'], row['sessionKey'])
+                if self.restart_stance:
+                    from mid_fast_v2.restart_compat import neutral_restart
+                    commands, _ = neutral_restart(row['request'], commands, audit, row['sessionKey'])
                 sdk_wire = 'data: ' + json.dumps(json.dumps(commands, separators=(',', ':'), allow_nan=False), ensure_ascii=False) + '\n\n'
                 self.assertEqual(raw, sdk_wire)
                 self.assertEqual(errors(row, decode_response(raw)), [])

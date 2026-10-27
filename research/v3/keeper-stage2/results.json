@@ -1,0 +1,796 @@
+{
+  "kind": "GK same-input native screens; not game outcomes",
+  "screens": {
+    "models": {
+      "nova": {
+        "completed": 8,
+        "initialSafetyRubricCount": 2,
+        "g3DelegationPolicyCount": null,
+        "strictJSONCount": 2,
+        "fullMedianMs": 3902.184146500076,
+        "fullMaxMs": 29213.490750000346,
+        "modelMedianMs": 905.0,
+        "allOwnSessionsStopped": true,
+        "rows": [
+          {
+            "case": "home-distant-carrier",
+            "variant": "nova",
+            "commands": [
+              {
+                "commandType": "INTERCEPT",
+                "playerId": 0,
+                "parameters": {
+                  "aggressive": true
+                },
+                "duration": 3
+              }
+            ],
+            "completeMs": 11262.745250001899,
+            "strictJSON": false,
+            "safeDecision": false,
+            "g3PolicyPassed": null
+          },
+          {
+            "case": "home-distant-free",
+            "variant": "nova",
+            "commands": [
+              {
+                "commandType": "INTERCEPT",
+                "playerId": 0,
+                "parameters": {
+                  "aggressive": true
+                },
+                "duration": 3
+              }
+            ],
+            "completeMs": 3248.964791000617,
+            "strictJSON": false,
+            "safeDecision": false,
+            "g3PolicyPassed": null
+          },
+          {
+            "case": "home-own-distribution",
+            "variant": "nova",
+            "commands": [
+              {
+                "commandType": "GK_DISTRIBUTE",
+                "playerId": 0,
+                "parameters": {
+                  "target_player_id": 1,
+                  "method": "THROW"
+                },
+                "duration": 0
+              }
+            ],
+            "completeMs": 3614.847959001054,
+            "strictJSON": true,
+            "safeDecision": true,
+            "g3PolicyPassed": null
+          },
+          {
+            "case": "home-opponent-keeper",
+            "variant": "nova",
+            "commands": [
+              {
+                "commandType": "GK_DISTRIBUTE",
+                "playerId": 0,
+                "parameters": {
+                  "target_player_id": 1,
+                  "method": "THROW"
+                },
+                "duration": 0
+              }
+            ],
+            "completeMs": 2179.6709160007595,
+            "strictJSON": true,
+            "safeDecision": false,
+            "g3PolicyPassed": null
+          },
+          {
+            "case": "away-distant-carrier",
+            "variant": "nova",
+            "commands": [
+              {
+                "commandType": "MOVE_TO",
+                "playerId": 0,
+                "parameters": {
+                  "target_x": -0.6259,
+                  "target_y": 0.1429,
+                  "sprint": false
+                },
+                "duration": 0
+              }
+            ],
+            "completeMs": 4189.5203339990985,
+            "strictJSON": false,
+            "safeDecision": false,
+            "g3PolicyPassed": null
+          },
+          {
+            "case": "away-distant-free",
+            "variant": "nova",
+            "commands": [
+              {
+                "commandType": "INTERCEPT",
+                "playerId": 0,
+                "parameters": {
+                  "aggressive": true
+                },
+                "duration": 3
+              }
+            ],
+            "completeMs": 29213.490750000346,
+            "strictJSON": false,
+            "safeDecision": false,
+            "g3PolicyPassed": null
+          },
+          {
+            "case": "away-own-distribution",
+            "variant": "nova",
+            "commands": [
+              {
+                "commandType": "GK_DISTRIBUTE",
+                "playerId": 0,
+                "parameters": {
+                  "target_player_id": 1,
+                  "method": "THROW"
+                },
+                "duration": 0
+              }
+            ],
+            "completeMs": 26935.73729200216,
+            "strictJSON": false,
+            "safeDecision": true,
+            "g3PolicyPassed": null
+          },
+          {
+            "case": "away-opponent-keeper",
+            "variant": "nova",
+            "commands": [
+              {
+                "commandType": "GK_DISTRIBUTE",
+                "playerId": 0,
+                "parameters": {
+                  "target_player_id": 1,
+                  "method": "THROW"
+                },
+                "duration": 0
+              }
+            ],
+            "completeMs": 1631.7954170008306,
+            "strictJSON": false,
+            "safeDecision": false,
+            "g3PolicyPassed": null
+          }
+        ]
+      },
+      "micro": {
+        "completed": 8,
+        "initialSafetyRubricCount": 3,
+        "g3DelegationPolicyCount": null,
+        "strictJSONCount": 8,
+        "fullMedianMs": 3417.5847505011916,
+        "fullMaxMs": 32452.363208998577,
+        "modelMedianMs": 403.0,
+        "allOwnSessionsStopped": true,
+        "rows": [
+          {
+            "case": "home-distant-carrier",
+            "variant": "micro",
+            "commands": [
+              {
+                "commandType": "MOVE_TO",
+                "playerId": 0,
+                "parameters": {
+                  "target_x": -5.9654136,
+                  "target_y": -0.19654073,
+                  "sprint": false
+                },
+                "duration": 0
+              }
+            ],
+            "completeMs": 3220.245458000136,
+            "strictJSON": true,
+            "safeDecision": true,
+            "g3PolicyPassed": null
+          },
+          {
+            "case": "home-distant-free",
+            "variant": "micro",
+            "commands": [
+              {
+                "commandType": "MOVE_TO",
+                "playerId": 0,
+                "parameters": {
+                  "target_x": -5.9654136,
+                  "target_y": -0.19654073,
+                  "sprint": false
+                },
+                "duration": 0
+              }
+            ],
+            "completeMs": 1994.5743329990364,
+            "strictJSON": true,
+            "safeDecision": true,
+            "g3PolicyPassed": null
+          },
+          {
+            "case": "home-own-distribution",
+            "variant": "micro",
+            "commands": [
+              {
+                "commandType": "GK_DISTRIBUTE",
+                "playerId": 0,
+                "parameters": {
+                  "target_player_id": 1,
+                  "method": "THROW"
+                },
+                "duration": 0
+              }
+            ],
+            "completeMs": 3237.83000000185,
+            "strictJSON": true,
+            "safeDecision": true,
+            "g3PolicyPassed": null
+          },
+          {
+            "case": "home-opponent-keeper",
+            "variant": "micro",
+            "commands": [
+              {
+                "commandType": "GK_DISTRIBUTE",
+                "playerId": 0,
+                "parameters": {
+                  "target_player_id": 1,
+                  "method": "THROW"
+                },
+                "duration": 0
+              }
+            ],
+            "completeMs": 3353.9269590000913,
+            "strictJSON": true,
+            "safeDecision": false,
+            "g3PolicyPassed": null
+          },
+          {
+            "case": "away-distant-carrier",
+            "variant": "micro",
+            "commands": [
+              {
+                "commandType": "MOVE_TO",
+                "playerId": 0,
+                "parameters": {
+                  "target_x": -5.9654136,
+                  "target_y": -0.19654073,
+                  "sprint": false
+                },
+                "duration": 0
+              }
+            ],
+            "completeMs": 3481.242542002292,
+            "strictJSON": true,
+            "safeDecision": false,
+            "g3PolicyPassed": null
+          },
+          {
+            "case": "away-distant-free",
+            "variant": "micro",
+            "commands": [
+              {
+                "commandType": "MOVE_TO",
+                "playerId": 0,
+                "parameters": {
+                  "target_x": -5.9654136,
+                  "target_y": -0.19654073,
+                  "sprint": false
+                },
+                "duration": 0
+              }
+            ],
+            "completeMs": 32452.363208998577,
+            "strictJSON": true,
+            "safeDecision": false,
+            "g3PolicyPassed": null
+          },
+          {
+            "case": "away-own-distribution",
+            "variant": "micro",
+            "commands": [
+              {
+                "commandType": "INTERCEPT",
+                "playerId": 0,
+                "parameters": {
+                  "aggressive": true
+                },
+                "duration": 0
+              }
+            ],
+            "completeMs": 28580.872750000708,
+            "strictJSON": true,
+            "safeDecision": false,
+            "g3PolicyPassed": null
+          },
+          {
+            "case": "away-opponent-keeper",
+            "variant": "micro",
+            "commands": [
+              {
+                "commandType": "GK_DISTRIBUTE",
+                "playerId": 0,
+                "parameters": {
+                  "target_player_id": 1,
+                  "method": "THROW"
+                },
+                "duration": 0
+              }
+            ],
+            "completeMs": 26458.16595799988,
+            "strictJSON": true,
+            "safeDecision": false,
+            "g3PolicyPassed": null
+          }
+        ]
+      }
+    },
+    "g2": {
+      "g2-nova": {
+        "completed": 12,
+        "initialSafetyRubricCount": 9,
+        "g3DelegationPolicyCount": null,
+        "strictJSONCount": 12,
+        "fullMedianMs": 2090.4313749997527,
+        "fullMaxMs": 32602.66637499808,
+        "modelMedianMs": 694.5,
+        "allOwnSessionsStopped": true,
+        "rows": [
+          {
+            "case": "home-distant-carrier",
+            "variant": "g2-nova",
+            "commands": [
+              {
+                "commandType": "CLEAR_OVERRIDE",
+                "playerId": 0,
+                "parameters": {},
+                "duration": 0
+              }
+            ],
+            "completeMs": 2224.9590829997032,
+            "strictJSON": true,
+            "safeDecision": true,
+            "g3PolicyPassed": null
+          },
+          {
+            "case": "home-distant-free",
+            "variant": "g2-nova",
+            "commands": [
+              {
+                "commandType": "CLEAR_OVERRIDE",
+                "playerId": 0,
+                "parameters": {},
+                "duration": 0
+              }
+            ],
+            "completeMs": 1601.6081250018033,
+            "strictJSON": true,
+            "safeDecision": true,
+            "g3PolicyPassed": null
+          },
+          {
+            "case": "home-own-distribution",
+            "variant": "g2-nova",
+            "commands": [
+              {
+                "commandType": "GK_DISTRIBUTE",
+                "playerId": 0,
+                "parameters": {
+                  "target_player_id": 1,
+                  "method": "THROW"
+                },
+                "duration": 0
+              }
+            ],
+            "completeMs": 1803.566333001072,
+            "strictJSON": true,
+            "safeDecision": true,
+            "g3PolicyPassed": null
+          },
+          {
+            "case": "home-opponent-keeper",
+            "variant": "g2-nova",
+            "commands": [
+              {
+                "commandType": "CLEAR_OVERRIDE",
+                "playerId": 0,
+                "parameters": {},
+                "duration": 0
+              }
+            ],
+            "completeMs": 2314.4203339979867,
+            "strictJSON": true,
+            "safeDecision": true,
+            "g3PolicyPassed": null
+          },
+          {
+            "case": "away-distant-carrier",
+            "variant": "g2-nova",
+            "commands": [
+              {
+                "commandType": "CLEAR_OVERRIDE",
+                "playerId": 0,
+                "parameters": {},
+                "duration": 0
+              }
+            ],
+            "completeMs": 1542.4459589994512,
+            "strictJSON": true,
+            "safeDecision": true,
+            "g3PolicyPassed": null
+          },
+          {
+            "case": "away-distant-free",
+            "variant": "g2-nova",
+            "commands": [
+              {
+                "commandType": "CLEAR_OVERRIDE",
+                "playerId": 0,
+                "parameters": {},
+                "duration": 0
+              }
+            ],
+            "completeMs": 1955.9036669998022,
+            "strictJSON": true,
+            "safeDecision": true,
+            "g3PolicyPassed": null
+          },
+          {
+            "case": "away-own-distribution",
+            "variant": "g2-nova",
+            "commands": [
+              {
+                "commandType": "CLEAR_OVERRIDE",
+                "playerId": 0,
+                "parameters": {},
+                "duration": 0
+              }
+            ],
+            "completeMs": 1532.2530829980678,
+            "strictJSON": true,
+            "safeDecision": false,
+            "g3PolicyPassed": null
+          },
+          {
+            "case": "away-opponent-keeper",
+            "variant": "g2-nova",
+            "commands": [
+              {
+                "commandType": "GK_DISTRIBUTE",
+                "playerId": 0,
+                "parameters": {
+                  "target_player_id": 1,
+                  "method": "THROW"
+                },
+                "duration": 0
+              }
+            ],
+            "completeMs": 2474.829207996663,
+            "strictJSON": true,
+            "safeDecision": false,
+            "g3PolicyPassed": null
+          },
+          {
+            "case": "home-kickoff",
+            "variant": "g2-nova",
+            "commands": [
+              {
+                "commandType": "MOVE_TO",
+                "playerId": 0,
+                "parameters": {
+                  "target_x": -5.9654136,
+                  "target_y": -0.19654073,
+                  "sprint": false
+                },
+                "duration": 0
+              }
+            ],
+            "completeMs": 1941.5758329996606,
+            "strictJSON": true,
+            "safeDecision": true,
+            "g3PolicyPassed": null
+          },
+          {
+            "case": "away-kickoff",
+            "variant": "g2-nova",
+            "commands": [
+              {
+                "commandType": "MOVE_TO",
+                "playerId": 0,
+                "parameters": {
+                  "target_x": -5.9654136,
+                  "target_y": -0.19654073,
+                  "sprint": false
+                },
+                "duration": 0
+              }
+            ],
+            "completeMs": 28776.51862499988,
+            "strictJSON": true,
+            "safeDecision": false,
+            "g3PolicyPassed": null
+          },
+          {
+            "case": "missing-team",
+            "variant": "g2-nova",
+            "commands": [
+              {
+                "commandType": "CLEAR_OVERRIDE",
+                "playerId": 0,
+                "parameters": {},
+                "duration": 0
+              }
+            ],
+            "completeMs": 32602.66637499808,
+            "strictJSON": true,
+            "safeDecision": true,
+            "g3PolicyPassed": null
+          },
+          {
+            "case": "contradictory-possession",
+            "variant": "g2-nova",
+            "commands": [
+              {
+                "commandType": "CLEAR_OVERRIDE",
+                "playerId": 0,
+                "parameters": {},
+                "duration": 0
+              }
+            ],
+            "completeMs": 29265.420166000695,
+            "strictJSON": true,
+            "safeDecision": true,
+            "g3PolicyPassed": null
+          }
+        ]
+      }
+    },
+    "g3": {
+      "g3-nova": {
+        "completed": 12,
+        "initialSafetyRubricCount": 8,
+        "g3DelegationPolicyCount": 12,
+        "strictJSONCount": 10,
+        "fullMedianMs": 1825.639875498382,
+        "fullMaxMs": 33010.60299999881,
+        "modelMedianMs": 609.0,
+        "allOwnSessionsStopped": true,
+        "rows": [
+          {
+            "case": "home-distant-carrier",
+            "variant": "g3-nova",
+            "commands": [
+              {
+                "commandType": "CLEAR_OVERRIDE",
+                "playerId": 0,
+                "parameters": {},
+                "duration": 0
+              }
+            ],
+            "completeMs": 3101.104708002822,
+            "strictJSON": true,
+            "safeDecision": true,
+            "g3PolicyPassed": true
+          },
+          {
+            "case": "home-distant-free",
+            "variant": "g3-nova",
+            "commands": [
+              {
+                "commandType": "CLEAR_OVERRIDE",
+                "playerId": 0,
+                "parameters": {},
+                "duration": 0
+              }
+            ],
+            "completeMs": 1740.977000001294,
+            "strictJSON": true,
+            "safeDecision": true,
+            "g3PolicyPassed": true
+          },
+          {
+            "case": "home-own-distribution",
+            "variant": "g3-nova",
+            "commands": [
+              {
+                "commandType": "CLEAR_OVERRIDE",
+                "playerId": 0,
+                "parameters": {},
+                "duration": 0
+              }
+            ],
+            "completeMs": 1918.8037919993803,
+            "strictJSON": true,
+            "safeDecision": false,
+            "g3PolicyPassed": true
+          },
+          {
+            "case": "home-opponent-keeper",
+            "variant": "g3-nova",
+            "commands": [
+              {
+                "commandType": "CLEAR_OVERRIDE",
+                "playerId": 0,
+                "parameters": {},
+                "duration": 0
+              }
+            ],
+            "completeMs": 2086.056332998851,
+            "strictJSON": true,
+            "safeDecision": true,
+            "g3PolicyPassed": true
+          },
+          {
+            "case": "away-distant-carrier",
+            "variant": "g3-nova",
+            "commands": [
+              {
+                "commandType": "CLEAR_OVERRIDE",
+                "playerId": 0,
+                "parameters": {},
+                "duration": 0
+              }
+            ],
+            "completeMs": 1497.7796250022948,
+            "strictJSON": true,
+            "safeDecision": true,
+            "g3PolicyPassed": true
+          },
+          {
+            "case": "away-distant-free",
+            "variant": "g3-nova",
+            "commands": [
+              {
+                "commandType": "CLEAR_OVERRIDE",
+                "playerId": 0,
+                "parameters": {},
+                "duration": 0
+              }
+            ],
+            "completeMs": 1808.2852919978905,
+            "strictJSON": true,
+            "safeDecision": true,
+            "g3PolicyPassed": true
+          },
+          {
+            "case": "away-own-distribution",
+            "variant": "g3-nova",
+            "commands": [
+              {
+                "commandType": "CLEAR_OVERRIDE",
+                "playerId": 0,
+                "parameters": {},
+                "duration": 0
+              }
+            ],
+            "completeMs": 1542.502666998189,
+            "strictJSON": true,
+            "safeDecision": false,
+            "g3PolicyPassed": true
+          },
+          {
+            "case": "away-opponent-keeper",
+            "variant": "g3-nova",
+            "commands": [
+              {
+                "commandType": "CLEAR_OVERRIDE",
+                "playerId": 0,
+                "parameters": {},
+                "duration": 0
+              }
+            ],
+            "completeMs": 1523.6072500010778,
+            "strictJSON": true,
+            "safeDecision": true,
+            "g3PolicyPassed": true
+          },
+          {
+            "case": "home-kickoff",
+            "variant": "g3-nova",
+            "commands": [
+              {
+                "commandType": "SET_STANCE",
+                "playerId": 0,
+                "parameters": {
+                  "stance": 0
+                },
+                "duration": 0
+              }
+            ],
+            "completeMs": 1649.8375000010128,
+            "strictJSON": false,
+            "safeDecision": false,
+            "g3PolicyPassed": true
+          },
+          {
+            "case": "away-kickoff",
+            "variant": "g3-nova",
+            "commands": [
+              {
+                "commandType": "SET_STANCE",
+                "playerId": 0,
+                "parameters": {
+                  "stance": 0
+                },
+                "duration": 0
+              }
+            ],
+            "completeMs": 1842.9944589988736,
+            "strictJSON": false,
+            "safeDecision": false,
+            "g3PolicyPassed": true
+          },
+          {
+            "case": "missing-team",
+            "variant": "g3-nova",
+            "commands": [
+              {
+                "commandType": "CLEAR_OVERRIDE",
+                "playerId": 0,
+                "parameters": {},
+                "duration": 0
+              }
+            ],
+            "completeMs": 33010.60299999881,
+            "strictJSON": true,
+            "safeDecision": true,
+            "g3PolicyPassed": true
+          },
+          {
+            "case": "contradictory-possession",
+            "variant": "g3-nova",
+            "commands": [
+              {
+                "commandType": "CLEAR_OVERRIDE",
+                "playerId": 0,
+                "parameters": {},
+                "duration": 0
+              }
+            ],
+            "completeMs": 32667.112374998396,
+            "strictJSON": true,
+            "safeDecision": true,
+            "g3PolicyPassed": true
+          }
+        ]
+      }
+    }
+  },
+  "decisions": {
+    "micro": "Rejected model-only: wrong-side moves and false goalkeeper possession",
+    "g2": "Rejected prompt: AWAY ownership and kickoff targeting errors",
+    "g3": "Rejected by actual portal Fitness: GK0/1active; explicit distribution required. No matches played.",
+    "causality": "No native result establishes game improvement. Timing scopes differ; all cold maxima retained."
+  },
+  "fastGK": {
+    "implementation": "Existing verified fast_path_v2 artifact, PLAYER_ID0, deterministic; no foundation model in per-tick path",
+    "archiveSha256": "aba7083c6940cb84baf60e4c4b10e560622473efc254d44618e11b54b021a87d",
+    "change": "GK plus explicitly requested MID startup duplicate delivery repair; MID open-play tactics unchanged",
+    "policy": "Confirmed ownership + safe passing lane gives GK_DISTRIBUTE; otherwise built-in goalkeeper; no unverified goal coordinate movement",
+    "localCases": 14,
+    "nativeDistributionCases": 2,
+    "nativeAllPassed": true,
+    "allOwnSessionsStopped": true,
+    "nativeColdFullMs": [
+      3648,
+      3833
+    ],
+    "fitness": "passed5/5",
+    "practicePlan": [
+      "Total Attack United",
+      "The Benchmark FC",
+      "Fort Knox Athletic"
+    ],
+    "caution": "Native validity is not live improvement; observed matches decide",
+    "sourceCommit": "dcaf97c37be302e0dd077056eb73f2d74bcb539f",
+    "practiceResults": "3W/8:0; not causal proof or human-opponent validation",
+    "cohort": "practice-stage2-l02b-gk-fast-01.json"
+  }
+}

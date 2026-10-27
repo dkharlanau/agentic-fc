@@ -1,0 +1,974 @@
+{
+  "kind": "Unchanged Baseline MID native vs local unchanged L01; same synthetic inputs",
+  "promptSha256": "7b05fe872d47c532c374390642006759924d84048a61577bf4f3a9bba400c729",
+  "completedAtUTC": "2026-10-27T14:55:33.706900+00:00",
+  "planSha256": "4dfd3301b4a60831bb32deb2f6742486c69baa3b8c8082d1c666e80d8e01e1ba",
+  "summary": {
+    "cases": 20,
+    "markdownFences": 13,
+    "schemaValidAfterFenceRemoval": 20,
+    "explicitOwnershipContradictions": 5,
+    "passes": 10,
+    "passReceiverNotOnOwnSide": 0,
+    "passesRejectedByL01SafetyProxy": 6,
+    "sameActionAndReceiverAsL01": 2,
+    "fullFreshSessionSdkMs": {
+      "count": 20,
+      "p50": 3446.364999999787,
+      "p95": 33286.2768520974,
+      "min": 1518.3663749994594,
+      "max": 34769.38316700034,
+      "over1000": 20
+    },
+    "allOwnSessionsStopped": true
+  },
+  "limitations": [
+    "Labels express L01 safety preferences, not calibrated pass completion probabilities",
+    "A different safe command is not automatically a failure",
+    "No game server execution or physical ball outcome is observed",
+    "One model response per case; stochastic repeatability unmeasured",
+    "Native local SDK full response and model processing metadata are different timing boundaries",
+    "Fence removal is analytical normalization, not evidence of game-parser acceptance",
+    "Pass receiver IDs name an own-side player in the command contract; physical routing is unobserved",
+    "L01 safety-proxy disagreement is not a measured lost pass or an invalid command",
+    "Only baseline was invoked natively; local L01 CPU timing is not compared with SDK wall time"
+  ],
+  "rows": [
+    {
+      "id": "open-forward-home-xy",
+      "requestSha256": "666c9b789b954a17ba58a42ed8b4bd472e5f40c2f49ac10550c852365554c6bf",
+      "markdownFences": false,
+      "schemaErrorsAfterFenceRemoval": [],
+      "commands": [
+        {
+          "commandType": "PASS",
+          "playerId": 2,
+          "parameters": {
+            "target_player_id": 3,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "l02bCommands": [
+        {
+          "commandType": "PASS",
+          "playerId": 2,
+          "parameters": {
+            "target_player_id": 3,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "fullFreshSessionSdkMs": 3978.114584002469,
+      "modelReportedMs": [
+        714
+      ],
+      "usage": [
+        {
+          "inputTokens": 1855,
+          "outputTokens": 30,
+          "totalTokens": 1885
+        }
+      ],
+      "streamErrors": [],
+      "ownSessionStopped": true,
+      "explicitOwnershipContradiction": false,
+      "sameActionAndReceiverAsL01": true,
+      "passReceiverExistsOnOwnSide": true,
+      "l01PassSafetyProxyRejected": false,
+      "passCompleted": null,
+      "physicalCommandApplied": null,
+      "laneClearanceSpan": 0.2,
+      "receiverClearanceSpan": 0.223606797749979
+    },
+    {
+      "id": "open-forward-home-xz",
+      "requestSha256": "292be9ec073dd56a0d01b4dffd2fc8dc2a4bf8df17f8dd90f35cd50a8782dcf4",
+      "markdownFences": true,
+      "schemaErrorsAfterFenceRemoval": [],
+      "commands": [
+        {
+          "commandType": "PASS",
+          "playerId": 2,
+          "parameters": {
+            "target_player_id": 3,
+            "type": "THROUGH"
+          },
+          "duration": 0
+        }
+      ],
+      "l02bCommands": [
+        {
+          "commandType": "PASS",
+          "playerId": 2,
+          "parameters": {
+            "target_player_id": 3,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "fullFreshSessionSdkMs": 2414.4023330009077,
+      "modelReportedMs": [
+        617
+      ],
+      "usage": [
+        {
+          "inputTokens": 1975,
+          "outputTokens": 35,
+          "totalTokens": 2010
+        }
+      ],
+      "streamErrors": [],
+      "ownSessionStopped": true,
+      "explicitOwnershipContradiction": false,
+      "sameActionAndReceiverAsL01": true,
+      "passReceiverExistsOnOwnSide": true,
+      "l01PassSafetyProxyRejected": false,
+      "passCompleted": null,
+      "physicalCommandApplied": null,
+      "laneClearanceSpan": 0.19999999999999996,
+      "receiverClearanceSpan": 0.22360679774997894
+    },
+    {
+      "id": "open-forward-away-xy",
+      "requestSha256": "7d999a5900f90100fe0745c931515c1ac4838a4b2e133370f2a9dc6e8f970ba7",
+      "markdownFences": true,
+      "schemaErrorsAfterFenceRemoval": [],
+      "commands": [
+        {
+          "commandType": "MOVE_TO",
+          "playerId": 2,
+          "parameters": {
+            "target_x": 10.0,
+            "target_y": 0.0,
+            "sprint": true
+          },
+          "duration": 0
+        }
+      ],
+      "l02bCommands": [
+        {
+          "commandType": "PASS",
+          "playerId": 2,
+          "parameters": {
+            "target_player_id": 3,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "fullFreshSessionSdkMs": 2094.532415998401,
+      "modelReportedMs": [
+        705
+      ],
+      "usage": [
+        {
+          "inputTokens": 1855,
+          "outputTokens": 55,
+          "totalTokens": 1910
+        }
+      ],
+      "streamErrors": [],
+      "ownSessionStopped": true,
+      "explicitOwnershipContradiction": false,
+      "sameActionAndReceiverAsL01": false,
+      "passReceiverExistsOnOwnSide": null,
+      "l01PassSafetyProxyRejected": null,
+      "passCompleted": null,
+      "physicalCommandApplied": null
+    },
+    {
+      "id": "open-forward-away-xz",
+      "requestSha256": "2fd367d3e367405942769ff4339fafe3665a006cd41189c3152a95965762493f",
+      "markdownFences": false,
+      "schemaErrorsAfterFenceRemoval": [],
+      "commands": [
+        {
+          "commandType": "PRESS_BALL",
+          "playerId": 2,
+          "parameters": {
+            "intensity": 0.7
+          },
+          "duration": 5
+        }
+      ],
+      "l02bCommands": [
+        {
+          "commandType": "PASS",
+          "playerId": 2,
+          "parameters": {
+            "target_player_id": 3,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "fullFreshSessionSdkMs": 3843.569957996806,
+      "modelReportedMs": [
+        1092
+      ],
+      "usage": [
+        {
+          "inputTokens": 1975,
+          "outputTokens": 34,
+          "totalTokens": 2009
+        }
+      ],
+      "streamErrors": [],
+      "ownSessionStopped": true,
+      "explicitOwnershipContradiction": true,
+      "sameActionAndReceiverAsL01": false,
+      "passReceiverExistsOnOwnSide": null,
+      "l01PassSafetyProxyRejected": null,
+      "passCompleted": null,
+      "physicalCommandApplied": null
+    },
+    {
+      "id": "blocked-forward-line-home-xy",
+      "requestSha256": "e8eadebabedaa25a0d2e35b3d1c22eb9735833bd59ce95183abc23120e8db722",
+      "markdownFences": true,
+      "schemaErrorsAfterFenceRemoval": [],
+      "commands": [
+        {
+          "commandType": "PASS",
+          "playerId": 2,
+          "parameters": {
+            "target_player_id": 3,
+            "type": "THROUGH"
+          },
+          "duration": 0
+        }
+      ],
+      "l02bCommands": [
+        {
+          "commandType": "PASS",
+          "playerId": 2,
+          "parameters": {
+            "target_player_id": 4,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "fullFreshSessionSdkMs": 3705.7162089986377,
+      "modelReportedMs": [
+        639
+      ],
+      "usage": [
+        {
+          "inputTokens": 1855,
+          "outputTokens": 45,
+          "totalTokens": 1900
+        }
+      ],
+      "streamErrors": [],
+      "ownSessionStopped": true,
+      "explicitOwnershipContradiction": false,
+      "sameActionAndReceiverAsL01": false,
+      "passReceiverExistsOnOwnSide": true,
+      "l01PassSafetyProxyRejected": true,
+      "passCompleted": null,
+      "physicalCommandApplied": null,
+      "laneClearanceSpan": 0.0,
+      "receiverClearanceSpan": 0.1
+    },
+    {
+      "id": "blocked-forward-line-home-xz",
+      "requestSha256": "9d4d1ea072d0ddfa6eae753f9732b3d1ce63df7cd2bf3b23136ffbfd3cb68b27",
+      "markdownFences": true,
+      "schemaErrorsAfterFenceRemoval": [],
+      "commands": [
+        {
+          "commandType": "PASS",
+          "playerId": 2,
+          "parameters": {
+            "target_player_id": 3,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "l02bCommands": [
+        {
+          "commandType": "PASS",
+          "playerId": 2,
+          "parameters": {
+            "target_player_id": 4,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "fullFreshSessionSdkMs": 3669.28129200096,
+      "modelReportedMs": [
+        862
+      ],
+      "usage": [
+        {
+          "inputTokens": 1975,
+          "outputTokens": 44,
+          "totalTokens": 2019
+        }
+      ],
+      "streamErrors": [],
+      "ownSessionStopped": true,
+      "explicitOwnershipContradiction": false,
+      "sameActionAndReceiverAsL01": false,
+      "passReceiverExistsOnOwnSide": true,
+      "l01PassSafetyProxyRejected": true,
+      "passCompleted": null,
+      "physicalCommandApplied": null,
+      "laneClearanceSpan": 1.6148698540002276e-17,
+      "receiverClearanceSpan": 0.09999999999999998
+    },
+    {
+      "id": "blocked-forward-line-away-xy",
+      "requestSha256": "2570ec1e5b5be92b0875ac3756e34eed3bba46c5aabe119e0c4a58352aac8acb",
+      "markdownFences": true,
+      "schemaErrorsAfterFenceRemoval": [],
+      "commands": [
+        {
+          "commandType": "MOVE_TO",
+          "playerId": 2,
+          "parameters": {
+            "target_x": 10.0,
+            "target_y": 0.0,
+            "sprint": true
+          },
+          "duration": 0
+        }
+      ],
+      "l02bCommands": [
+        {
+          "commandType": "PASS",
+          "playerId": 2,
+          "parameters": {
+            "target_player_id": 4,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "fullFreshSessionSdkMs": 3194.0377920000174,
+      "modelReportedMs": [
+        690
+      ],
+      "usage": [
+        {
+          "inputTokens": 1855,
+          "outputTokens": 55,
+          "totalTokens": 1910
+        }
+      ],
+      "streamErrors": [],
+      "ownSessionStopped": true,
+      "explicitOwnershipContradiction": false,
+      "sameActionAndReceiverAsL01": false,
+      "passReceiverExistsOnOwnSide": null,
+      "l01PassSafetyProxyRejected": null,
+      "passCompleted": null,
+      "physicalCommandApplied": null
+    },
+    {
+      "id": "blocked-forward-line-away-xz",
+      "requestSha256": "34b1d63b4455da7aebf6d7328dd0ea390fc46e23012af3ee169e7477196c0a3f",
+      "markdownFences": false,
+      "schemaErrorsAfterFenceRemoval": [],
+      "commands": [
+        {
+          "commandType": "PRESS_BALL",
+          "playerId": 2,
+          "parameters": {
+            "intensity": 0.7
+          },
+          "duration": 5
+        }
+      ],
+      "l02bCommands": [
+        {
+          "commandType": "PASS",
+          "playerId": 2,
+          "parameters": {
+            "target_player_id": 4,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "fullFreshSessionSdkMs": 1779.89908300151,
+      "modelReportedMs": [
+        721
+      ],
+      "usage": [
+        {
+          "inputTokens": 1975,
+          "outputTokens": 28,
+          "totalTokens": 2003
+        }
+      ],
+      "streamErrors": [],
+      "ownSessionStopped": true,
+      "explicitOwnershipContradiction": true,
+      "sameActionAndReceiverAsL01": false,
+      "passReceiverExistsOnOwnSide": null,
+      "l01PassSafetyProxyRejected": null,
+      "passCompleted": null,
+      "physicalCommandApplied": null
+    },
+    {
+      "id": "both-forwards-marked-home-xy",
+      "requestSha256": "bfc64e67e7eb7ae2b09c7a3816cd2969425ba9dc40dfda0a52fd55c68e9bce21",
+      "markdownFences": true,
+      "schemaErrorsAfterFenceRemoval": [],
+      "commands": [
+        {
+          "commandType": "PASS",
+          "playerId": 2,
+          "parameters": {
+            "target_player_id": 3,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "l02bCommands": [
+        {
+          "commandType": "PASS",
+          "playerId": 2,
+          "parameters": {
+            "target_player_id": 1,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "fullFreshSessionSdkMs": 2279.2992499998945,
+      "modelReportedMs": [
+        568
+      ],
+      "usage": [
+        {
+          "inputTokens": 1855,
+          "outputTokens": 44,
+          "totalTokens": 1899
+        }
+      ],
+      "streamErrors": [],
+      "ownSessionStopped": true,
+      "explicitOwnershipContradiction": false,
+      "sameActionAndReceiverAsL01": false,
+      "passReceiverExistsOnOwnSide": true,
+      "l01PassSafetyProxyRejected": true,
+      "passCompleted": null,
+      "physicalCommandApplied": null,
+      "laneClearanceSpan": 0.01,
+      "receiverClearanceSpan": 0.01
+    },
+    {
+      "id": "both-forwards-marked-home-xz",
+      "requestSha256": "bdad20d394e6f337779e27dede6f38056cfd2c731477aae68260d4b2c76f96b3",
+      "markdownFences": true,
+      "schemaErrorsAfterFenceRemoval": [],
+      "commands": [
+        {
+          "commandType": "PASS",
+          "playerId": 2,
+          "parameters": {
+            "target_player_id": 3,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "l02bCommands": [
+        {
+          "commandType": "PASS",
+          "playerId": 2,
+          "parameters": {
+            "target_player_id": 1,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "fullFreshSessionSdkMs": 3418.7674579989107,
+      "modelReportedMs": [
+        607
+      ],
+      "usage": [
+        {
+          "inputTokens": 1975,
+          "outputTokens": 44,
+          "totalTokens": 2019
+        }
+      ],
+      "streamErrors": [],
+      "ownSessionStopped": true,
+      "explicitOwnershipContradiction": false,
+      "sameActionAndReceiverAsL01": false,
+      "passReceiverExistsOnOwnSide": true,
+      "l01PassSafetyProxyRejected": true,
+      "passCompleted": null,
+      "physicalCommandApplied": null,
+      "laneClearanceSpan": 0.009999999999999998,
+      "receiverClearanceSpan": 0.009999999999999998
+    },
+    {
+      "id": "both-forwards-marked-away-xy",
+      "requestSha256": "485e8e37337ec813da27aa3eab94d9bc407de8d47abf766ac7138ac895daa9fd",
+      "markdownFences": false,
+      "schemaErrorsAfterFenceRemoval": [],
+      "commands": [
+        {
+          "commandType": "MOVE_TO",
+          "playerId": 2,
+          "parameters": {
+            "target_x": 10,
+            "target_y": 0,
+            "sprint": true
+          },
+          "duration": 0
+        }
+      ],
+      "l02bCommands": [
+        {
+          "commandType": "PASS",
+          "playerId": 2,
+          "parameters": {
+            "target_player_id": 1,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "fullFreshSessionSdkMs": 3473.9625420006632,
+      "modelReportedMs": [
+        729
+      ],
+      "usage": [
+        {
+          "inputTokens": 1855,
+          "outputTokens": 36,
+          "totalTokens": 1891
+        }
+      ],
+      "streamErrors": [],
+      "ownSessionStopped": true,
+      "explicitOwnershipContradiction": false,
+      "sameActionAndReceiverAsL01": false,
+      "passReceiverExistsOnOwnSide": null,
+      "l01PassSafetyProxyRejected": null,
+      "passCompleted": null,
+      "physicalCommandApplied": null
+    },
+    {
+      "id": "both-forwards-marked-away-xz",
+      "requestSha256": "62f89e54163c3df2c0b520f228f85d9da2e37c4b60cc1334865c1beffba53a3b",
+      "markdownFences": false,
+      "schemaErrorsAfterFenceRemoval": [],
+      "commands": [
+        {
+          "commandType": "MOVE_TO",
+          "playerId": 2,
+          "parameters": {
+            "target_x": 0.0,
+            "target_y": 0.0,
+            "sprint": false
+          },
+          "duration": 0
+        }
+      ],
+      "l02bCommands": [
+        {
+          "commandType": "PASS",
+          "playerId": 2,
+          "parameters": {
+            "target_player_id": 1,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "fullFreshSessionSdkMs": 26920.0683329982,
+      "modelReportedMs": [
+        912
+      ],
+      "usage": [
+        {
+          "inputTokens": 1975,
+          "outputTokens": 40,
+          "totalTokens": 2015
+        }
+      ],
+      "streamErrors": [],
+      "ownSessionStopped": true,
+      "explicitOwnershipContradiction": false,
+      "sameActionAndReceiverAsL01": false,
+      "passReceiverExistsOnOwnSide": null,
+      "l01PassSafetyProxyRejected": null,
+      "passCompleted": null,
+      "physicalCommandApplied": null
+    },
+    {
+      "id": "all-outlets-marked-home-xy",
+      "requestSha256": "739dd4262d0b9943446a4366972a6310eb42032af99e4641c862ec524d7bf3d4",
+      "markdownFences": true,
+      "schemaErrorsAfterFenceRemoval": [],
+      "commands": [
+        {
+          "commandType": "PASS",
+          "playerId": 2,
+          "parameters": {
+            "target_player_id": 3,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "l02bCommands": [
+        {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 2,
+          "parameters": {},
+          "duration": 0
+        }
+      ],
+      "fullFreshSessionSdkMs": 33208.218624997244,
+      "modelReportedMs": [
+        829
+      ],
+      "usage": [
+        {
+          "inputTokens": 1855,
+          "outputTokens": 34,
+          "totalTokens": 1889
+        }
+      ],
+      "streamErrors": [],
+      "ownSessionStopped": true,
+      "explicitOwnershipContradiction": false,
+      "sameActionAndReceiverAsL01": false,
+      "passReceiverExistsOnOwnSide": true,
+      "l01PassSafetyProxyRejected": true,
+      "passCompleted": null,
+      "physicalCommandApplied": null,
+      "laneClearanceSpan": 0.01,
+      "receiverClearanceSpan": 0.01
+    },
+    {
+      "id": "all-outlets-marked-home-xz",
+      "requestSha256": "e93ea787867c5ae81ecebe0897fe8b07bbd5449234f847dfcfcc4d2582366bc5",
+      "markdownFences": true,
+      "schemaErrorsAfterFenceRemoval": [],
+      "commands": [
+        {
+          "commandType": "PASS",
+          "playerId": 2,
+          "parameters": {
+            "target_player_id": 3,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "l02bCommands": [
+        {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 2,
+          "parameters": {},
+          "duration": 0
+        }
+      ],
+      "fullFreshSessionSdkMs": 26718.20687500076,
+      "modelReportedMs": [
+        622
+      ],
+      "usage": [
+        {
+          "inputTokens": 1980,
+          "outputTokens": 34,
+          "totalTokens": 2014
+        }
+      ],
+      "streamErrors": [],
+      "ownSessionStopped": true,
+      "explicitOwnershipContradiction": false,
+      "sameActionAndReceiverAsL01": false,
+      "passReceiverExistsOnOwnSide": true,
+      "l01PassSafetyProxyRejected": true,
+      "passCompleted": null,
+      "physicalCommandApplied": null,
+      "laneClearanceSpan": 0.009999999999999998,
+      "receiverClearanceSpan": 0.009999999999999998
+    },
+    {
+      "id": "all-outlets-marked-away-xy",
+      "requestSha256": "8fb432229adafbe070e5c0698d67dd6ca7fbba6a2e3155e437a9bea00c4c4c97",
+      "markdownFences": false,
+      "schemaErrorsAfterFenceRemoval": [],
+      "commands": [
+        {
+          "commandType": "MOVE_TO",
+          "playerId": 2,
+          "parameters": {
+            "target_x": 5.0,
+            "target_y": 0.0,
+            "sprint": true
+          },
+          "duration": 0
+        }
+      ],
+      "l02bCommands": [
+        {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 2,
+          "parameters": {},
+          "duration": 0
+        }
+      ],
+      "fullFreshSessionSdkMs": 34769.38316700034,
+      "modelReportedMs": [
+        776
+      ],
+      "usage": [
+        {
+          "inputTokens": 1855,
+          "outputTokens": 40,
+          "totalTokens": 1895
+        }
+      ],
+      "streamErrors": [],
+      "ownSessionStopped": true,
+      "explicitOwnershipContradiction": false,
+      "sameActionAndReceiverAsL01": false,
+      "passReceiverExistsOnOwnSide": null,
+      "l01PassSafetyProxyRejected": null,
+      "passCompleted": null,
+      "physicalCommandApplied": null
+    },
+    {
+      "id": "all-outlets-marked-away-xz",
+      "requestSha256": "2c7f23c8a02d6e37f56f37f58b0b5ff4c22b4fd110949aa4cda22738373b355a",
+      "markdownFences": true,
+      "schemaErrorsAfterFenceRemoval": [],
+      "commands": [
+        {
+          "commandType": "PRESS_BALL",
+          "playerId": 2,
+          "parameters": {
+            "intensity": 0.7
+          },
+          "duration": 5
+        }
+      ],
+      "l02bCommands": [
+        {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 2,
+          "parameters": {},
+          "duration": 0
+        }
+      ],
+      "fullFreshSessionSdkMs": 1639.6948330002488,
+      "modelReportedMs": [
+        705
+      ],
+      "usage": [
+        {
+          "inputTokens": 1980,
+          "outputTokens": 40,
+          "totalTokens": 2020
+        }
+      ],
+      "streamErrors": [],
+      "ownSessionStopped": true,
+      "explicitOwnershipContradiction": true,
+      "sameActionAndReceiverAsL01": false,
+      "passReceiverExistsOnOwnSide": null,
+      "l01PassSafetyProxyRejected": null,
+      "passCompleted": null,
+      "physicalCommandApplied": null
+    },
+    {
+      "id": "opponent-same-id-home-xy",
+      "requestSha256": "625ae6e985fe63e95de4777532dc08d78126d8d4be9fa569023335a0c5cf648a",
+      "markdownFences": false,
+      "schemaErrorsAfterFenceRemoval": [],
+      "commands": [
+        {
+          "commandType": "PRESS_BALL",
+          "playerId": 2,
+          "parameters": {
+            "intensity": 0.7
+          },
+          "duration": 5
+        }
+      ],
+      "l02bCommands": [
+        {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 2,
+          "parameters": {},
+          "duration": 0
+        }
+      ],
+      "fullFreshSessionSdkMs": 26982.96595800275,
+      "modelReportedMs": [
+        663
+      ],
+      "usage": [
+        {
+          "inputTokens": 1855,
+          "outputTokens": 28,
+          "totalTokens": 1883
+        }
+      ],
+      "streamErrors": [],
+      "ownSessionStopped": true,
+      "explicitOwnershipContradiction": false,
+      "sameActionAndReceiverAsL01": false,
+      "passReceiverExistsOnOwnSide": null,
+      "l01PassSafetyProxyRejected": null,
+      "passCompleted": null,
+      "physicalCommandApplied": null
+    },
+    {
+      "id": "opponent-same-id-home-xz",
+      "requestSha256": "f96906b3556abc6d5cf669ca4b9c773e0f138e2598d5de1426cc0fe4c5b85db6",
+      "markdownFences": true,
+      "schemaErrorsAfterFenceRemoval": [],
+      "commands": [
+        {
+          "commandType": "PRESS_BALL",
+          "playerId": 2,
+          "parameters": {
+            "intensity": 0.7
+          },
+          "duration": 5
+        }
+      ],
+      "l02bCommands": [
+        {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 2,
+          "parameters": {},
+          "duration": 0
+        }
+      ],
+      "fullFreshSessionSdkMs": 1518.3663749994594,
+      "modelReportedMs": [
+        580
+      ],
+      "usage": [
+        {
+          "inputTokens": 1975,
+          "outputTokens": 40,
+          "totalTokens": 2015
+        }
+      ],
+      "streamErrors": [],
+      "ownSessionStopped": true,
+      "explicitOwnershipContradiction": false,
+      "sameActionAndReceiverAsL01": false,
+      "passReceiverExistsOnOwnSide": null,
+      "l01PassSafetyProxyRejected": null,
+      "passCompleted": null,
+      "physicalCommandApplied": null
+    },
+    {
+      "id": "opponent-same-id-away-xy",
+      "requestSha256": "06e87e9e3020558da3b91d32a22d52224834edd70656b7623d0738ae0009bb6d",
+      "markdownFences": true,
+      "schemaErrorsAfterFenceRemoval": [],
+      "commands": [
+        {
+          "commandType": "PASS",
+          "playerId": 2,
+          "parameters": {
+            "target_player_id": 4,
+            "type": "THROUGH"
+          },
+          "duration": 0
+        }
+      ],
+      "l02bCommands": [
+        {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 2,
+          "parameters": {},
+          "duration": 0
+        }
+      ],
+      "fullFreshSessionSdkMs": 2115.1672910018533,
+      "modelReportedMs": [
+        1054
+      ],
+      "usage": [
+        {
+          "inputTokens": 1855,
+          "outputTokens": 35,
+          "totalTokens": 1890
+        }
+      ],
+      "streamErrors": [],
+      "ownSessionStopped": true,
+      "explicitOwnershipContradiction": true,
+      "sameActionAndReceiverAsL01": false,
+      "passReceiverExistsOnOwnSide": true,
+      "l01PassSafetyProxyRejected": false,
+      "passCompleted": null,
+      "physicalCommandApplied": null,
+      "laneClearanceSpan": 0.22645087767549058,
+      "receiverClearanceSpan": 0.25
+    },
+    {
+      "id": "opponent-same-id-away-xz",
+      "requestSha256": "6718da8e47c91bad9c2a1fec08a76b0d5ef3c4bb31e38dbd10f3418d56449b5e",
+      "markdownFences": true,
+      "schemaErrorsAfterFenceRemoval": [],
+      "commands": [
+        {
+          "commandType": "PASS",
+          "playerId": 2,
+          "parameters": {
+            "target_player_id": 4,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "l02bCommands": [
+        {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 2,
+          "parameters": {},
+          "duration": 0
+        }
+      ],
+      "fullFreshSessionSdkMs": 1726.7289590017754,
+      "modelReportedMs": [
+        813
+      ],
+      "usage": [
+        {
+          "inputTokens": 1975,
+          "outputTokens": 34,
+          "totalTokens": 2009
+        }
+      ],
+      "streamErrors": [],
+      "ownSessionStopped": true,
+      "explicitOwnershipContradiction": true,
+      "sameActionAndReceiverAsL01": false,
+      "passReceiverExistsOnOwnSide": true,
+      "l01PassSafetyProxyRejected": false,
+      "passCompleted": null,
+      "physicalCommandApplied": null,
+      "laneClearanceSpan": 0.22645087767549058,
+      "receiverClearanceSpan": 0.24999999999999997
+    }
+  ]
+}
