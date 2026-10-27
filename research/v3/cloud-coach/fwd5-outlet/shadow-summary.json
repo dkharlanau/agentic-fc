@@ -1,0 +1,129 @@
+{
+  "kind": "Counterfactual replay of whitelisted MID-observer input projections, not actual FWD5 decisions or physical outcomes",
+  "limits": [
+    "Fields outside the trace whitelist unavailable",
+    "MID and FWD5 invocations may see different instants",
+    "No claim of pass completion or winning benefit"
+  ],
+  "matches": [
+    {
+      "match": "trace01-fortknox",
+      "rows": 56,
+      "arms": {
+        "installed": {
+          "commands": {
+            "CLEAR_OVERRIDE": 35,
+            "SET_STANCE": 20,
+            "PRESS_BALL": 1
+          },
+          "reasons": {
+            "MALFORMED_POSITION": 1,
+            "ROLE_SUPPORT": 6,
+            "UNKNOWN_POSSESSION": 23,
+            "KEEP_SHAPE": 14,
+            "ENGINE_RESTART": 11,
+            "SINGLE_LOCAL_PRESS": 1
+          },
+          "differencesFromInstalled": 0,
+          "changedInstalledShots": []
+        },
+        "outlet": {
+          "commands": {
+            "CLEAR_OVERRIDE": 35,
+            "MOVE_TO": 6,
+            "SET_STANCE": 14,
+            "PRESS_BALL": 1
+          },
+          "reasons": {
+            "MALFORMED_POSITION": 1,
+            "PASSING_OUTLET_POSITION": 6,
+            "UNKNOWN_POSSESSION": 23,
+            "KEEP_SHAPE": 14,
+            "ENGINE_RESTART": 11,
+            "SINGLE_LOCAL_PRESS": 1
+          },
+          "differencesFromInstalled": 6,
+          "changedInstalledShots": []
+        },
+        "coordinated": {
+          "commands": {
+            "CLEAR_OVERRIDE": 35,
+            "MOVE_TO": 18,
+            "SET_STANCE": 2,
+            "PRESS_BALL": 1
+          },
+          "reasons": {
+            "MALFORMED_POSITION": 1,
+            "SEPARATE_FORWARD_OUTLET": 18,
+            "UNKNOWN_POSSESSION": 23,
+            "ROLE_SUPPORT": 2,
+            "ENGINE_RESTART": 11,
+            "SINGLE_LOCAL_PRESS": 1
+          },
+          "differencesFromInstalled": 18,
+          "changedInstalledShots": []
+        }
+      }
+    },
+    {
+      "match": "trace02-totalattack",
+      "rows": 91,
+      "arms": {
+        "installed": {
+          "commands": {
+            "CLEAR_OVERRIDE": 52,
+            "SET_STANCE": 37,
+            "PASS": 2
+          },
+          "reasons": {
+            "MALFORMED_POSITION": 1,
+            "UNKNOWN_POSSESSION": 27,
+            "KEEP_SHAPE": 27,
+            "ROLE_SUPPORT": 10,
+            "ENGINE_RESTART": 24,
+            "SAFE_OUTLET": 2
+          },
+          "differencesFromInstalled": 0,
+          "changedInstalledShots": []
+        },
+        "outlet": {
+          "commands": {
+            "CLEAR_OVERRIDE": 52,
+            "SET_STANCE": 27,
+            "MOVE_TO": 10,
+            "PASS": 2
+          },
+          "reasons": {
+            "MALFORMED_POSITION": 1,
+            "UNKNOWN_POSSESSION": 27,
+            "KEEP_SHAPE": 27,
+            "PASSING_OUTLET_POSITION": 10,
+            "ENGINE_RESTART": 24,
+            "SAFE_OUTLET": 2
+          },
+          "differencesFromInstalled": 10,
+          "changedInstalledShots": []
+        },
+        "coordinated": {
+          "commands": {
+            "CLEAR_OVERRIDE": 52,
+            "MOVE_TO": 33,
+            "SET_STANCE": 4,
+            "PASS": 2
+          },
+          "reasons": {
+            "MALFORMED_POSITION": 1,
+            "UNKNOWN_POSSESSION": 27,
+            "SEPARATE_FORWARD_OUTLET": 33,
+            "ROLE_SUPPORT": 3,
+            "ENGINE_RESTART": 24,
+            "SAFE_OUTLET": 2,
+            "KEEP_SHAPE": 1
+          },
+          "differencesFromInstalled": 33,
+          "changedInstalledShots": []
+        }
+      }
+    }
+  ]
+}

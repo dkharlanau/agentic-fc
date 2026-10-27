@@ -15,6 +15,7 @@ import threading
 
 from mid_fast_v1.engine import MidEngine
 from mid_fast_v2.restart_compat import neutral_restart, KickoffRetry
+from mid_fast_v2.trace import snapshot as trace_snapshot
 
 IMPORT_MS = (time.perf_counter_ns() - BOOT_NS) / 1e6
 SESSION_HEADER = 'X-Amzn-Bedrock-AgentCore-Runtime-Session-Id'
@@ -30,7 +31,8 @@ def sse(commands):
 
 
 def audit_log(kind, fields):
-    if os.environ.get('MID_AUDIT', '0') == '1':
+    if (os.environ.get('MID_AUDIT', '0') == '1'
+            or kind == 'MID_TRACE' and os.environ.get('MID_TRACE', '0') == '1'):
         try:
             print(kind + ' ' + json.dumps(fields, separators=(',', ':'), allow_nan=False), flush=True)
         except (OSError, ValueError):
@@ -183,6 +185,11 @@ class Handler(StreamRequestHandler):
                     decision_done = time.perf_counter_ns()
                     self.send_body(200, body, 'text/event-stream; charset=utf-8', close)
                     sent = time.perf_counter_ns()
+                    if os.environ.get('MID_TRACE', '0') == '1':
+                        try:
+                            audit_log('MID_TRACE', trace_snapshot(payload, commands, audit, handler_unix_ns))
+                        except (TypeError, ValueError, KeyError, AttributeError, OverflowError):
+                            audit_log('MID_TRACE', {'schema': 1, 'omitted': 'invalid_trace'})
                     if os.environ.get('MID_AUDIT', '0') == '1':
                         # Hashing is diagnostics only; first import follows full response.
                         import hashlib

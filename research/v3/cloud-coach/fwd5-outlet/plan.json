@@ -1,0 +1,39 @@
+{
+  "status": "tested-not-promoted-original-restored",
+  "hypothesis": "A separate non-sprinting FWD5 outlet when our team has the ball may preserve energy and provide a passing option without changing shots or defence.",
+  "change": "Existing FWD2_MODE=outlet on the exact installed FWD5 archive; platform remainsV1. No code change, model call, power or aim change.",
+  "archiveSha256": "ef9b7c704e1d8fb011fae6ea55e5239d2ac54f64c76afc0ef439dc76d5aea226",
+  "baselineSource": "095e3994b8ea55f6671b7833171c0ff83b484b92",
+  "preserved": [
+    "GK",
+    "DEF",
+    "MID trace",
+    "FWD4",
+    "formation1-1-2",
+    "all own-possession shooting/passing rules",
+    "AWAY policy"
+  ],
+  "evidence": "145full snapshots contain16FWD5 samples below0.25stamina. Shadow outlet differs in16projected states across2games, only offball with own possession. Broader coordinated mode differs in51states and is not selected.",
+  "gates": [
+    "exact configuration and archive readback",
+    "mirrored native support/onball/unknown-ownership checks and full-response latency",
+    "freshFitness5/5",
+    "two unchangedPractice games FortKnox thenTotalAttack"
+  ],
+  "observe": [
+    "actual movement toward declared outlet in raw units",
+    "open-play stamina/sprint share",
+    "FWD4/FWD5 separation and passing availability",
+    "goals and team shots with report-attribution limits"
+  ],
+  "reject": [
+    "readiness or safety regression",
+    "wrong coordinate movement",
+    "persistent lost attacking participation or no useful evidence afterblock"
+  ],
+  "rollback": "Exact original FWD5 binding retained; restore and freshFitness. Do not change after one ordinary loss midblock.",
+  "causalLimits": "Two games not proof; compare matched bots and actual movement, not score alone. Stamina during SHOOTING may be after expenditure, not its cause.",
+  "quotaRemainingPercent": null,
+  "initialNativeFailureRetained": true,
+  "qualifiedScreen": "8/8 exact commands after explicit client setup; two fresh sessions max3993.5ms; not game-server latency"
+}

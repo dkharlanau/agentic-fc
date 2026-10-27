@@ -1,0 +1,72 @@
+{
+  "decision": "Do not promote. Restore original FWD5 after completed two-match block and rerun Fitness.",
+  "results": [
+    "Fort Knox3:0",
+    "Total Attack1:3"
+  ],
+  "actualOutletCommands": [
+    13,
+    7
+  ],
+  "allOutletCommandsNonSprinting": true,
+  "nextSampleCloserToTarget": {
+    "closer": 14,
+    "evaluated": 17,
+    "limit": "Cross-agent sparse samples, not proof of causal movement or successful pass."
+  },
+  "openPlayObservations": [
+    {
+      "match": "trace01-fortknox",
+      "fullSamples": 55,
+      "openPlaySamples": 41,
+      "fwd5MeanEnergy": 0.5516891463414634,
+      "fwd5LowEnergyCount": 11,
+      "meanForwardSeparationRaw": 3.489235347190514,
+      "fwd5MeanX": 0.5099826585365854,
+      "fwd5ShootingStateSamples": 1
+    },
+    {
+      "match": "trace02-totalattack",
+      "fullSamples": 90,
+      "openPlaySamples": 61,
+      "fwd5MeanEnergy": 0.7608177540983606,
+      "fwd5LowEnergyCount": 5,
+      "meanForwardSeparationRaw": 5.002200989601473,
+      "fwd5MeanX": -0.7842516721311475,
+      "fwd5ShootingStateSamples": 0
+    },
+    {
+      "match": "outlet01-fortknox",
+      "fullSamples": 73,
+      "openPlaySamples": 56,
+      "fwd5MeanEnergy": 0.6803756071428572,
+      "fwd5LowEnergyCount": 5,
+      "meanForwardSeparationRaw": 1.8728560938011325,
+      "fwd5MeanX": 0.0096420714285714,
+      "fwd5ShootingStateSamples": 1
+    },
+    {
+      "match": "outlet02-totalattack",
+      "fullSamples": 83,
+      "openPlaySamples": 60,
+      "fwd5MeanEnergy": 0.78326765,
+      "fwd5LowEnergyCount": 5,
+      "meanForwardSeparationRaw": 2.9221453993370665,
+      "fwd5MeanX": -1.3385853166666666,
+      "fwd5ShootingStateSamples": 0
+    }
+  ],
+  "interpretation": "Commands execute and energy is not clearly worse, but forward separation decreased in both opponent samples and useful attacking benefit is not established. This is not proof that outlet caused the loss.",
+  "alternativeExplanations": [
+    "Opponent trajectories and stochastic model/default AI decisions",
+    "Different possession paths and score states",
+    "Unequal snapshot coverage; baseline Fort Knox has a long gap"
+  ],
+  "nextHypothesis": "Inspect actual FWD5 ownership and aim contracts before changing shot power; preserve original lineup during offline review.",
+  "limits": [
+    "Two games not statistical evidence",
+    "Portal command columns unreliable",
+    "Stamina samples are not necessarily pre-shot",
+    "Raw observed ranges not pitch dimensions"
+  ]
+}

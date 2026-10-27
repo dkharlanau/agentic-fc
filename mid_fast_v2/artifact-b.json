@@ -5,10 +5,10 @@
   "entryPoint": [
     "main.py"
   ],
-  "archiveSha256": "a0e9d2e7daae3b83f7b866f5b92e802f6d0a877f4a84aeb98df9a57ea548e999",
-  "archiveBytes": 20133,
-  "uncompressedBytes": 56829,
-  "fileCount": 10,
+  "archiveSha256": "239f95187bc3fa19def668fd53918b18afd2f66c0af23d0de8ba48e22154a078",
+  "archiveBytes": 22260,
+  "uncompressedBytes": 62679,
+  "fileCount": 11,
   "sourceSha256": {
     "agentic_fc/__init__.py": "246ba241608bece9b9a1e940dd5401385aeed762ba8306d2e2a0eba7d0556df0",
     "agentic_fc/state.py": "37729e42408e71d62525876ba79199c5d1dbf5b9526b8c91c05f996dac151690",
@@ -18,8 +18,9 @@
     "runtime_v1/sensing.py": "74a8d38db31806ed8e5b426ae16ce4e3692830e2bfa08583f62744dd339cfe1e",
     "mid_fast_v1/__init__.py": "926b0f8b20cdecb03cd9eab2664a111999c1aab63a0ff68ac907f3570f43ae3e",
     "mid_fast_v1/engine.py": "2a2154411e673c4305da9c7f1960f341246f16edac47a4629658e02b251c6635",
-    "mid_fast_v2/fastboot.py": "7b92e1545cbade00b274fad8c6fa5a721445ac8e561096aa24f8d8cdd2b5163c",
-    "mid_fast_v2/restart_compat.py": "e72ddf4674caf4251367d6ac7fba9be0a3ab1b748268434f7a98dd2426980906"
+    "mid_fast_v2/fastboot.py": "9187fa3656efe5418d30dbbc2e16f012fc0f1aa3bf4b5ff25a869e627eb8a280",
+    "mid_fast_v2/restart_compat.py": "e72ddf4674caf4251367d6ac7fba9be0a3ab1b748268434f7a98dd2426980906",
+    "mid_fast_v2/trace.py": "06ce78c7c6d996204db927f8e62ddaa5457b46cfd0364f3a6247a096859431f5"
   },
   "dependencies": {},
   "baselineArchiveSha256": "fb02b3abb1808991ebd2a714f2e2f5868fb7e6045f3a1de8043a86cf0ba0152a"

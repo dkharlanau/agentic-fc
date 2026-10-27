@@ -1,0 +1,75 @@
+{
+  "kind": "externally measured complete native calls; not game-server latency",
+  "candidate": "L02B",
+  "planSha256": "ff18c3e157959f695882c50a5a1b371a3b58a2bb34aa021ad73555335f015570",
+  "expected": 224,
+  "received": 224,
+  "completeOrderedSet": true,
+  "validDecisions": 224,
+  "fullRequestMs": {
+    "n": 224,
+    "p50": 198.932,
+    "p95": 252.099,
+    "max": 2288.276693
+  },
+  "firstInSessionMs": {
+    "n": 6,
+    "p50": 1927.136,
+    "p95": 2248.341,
+    "max": 2288.276693
+  },
+  "laterInSessionMs": {
+    "n": 218,
+    "p50": 198.657,
+    "p95": 241.242,
+    "max": 316.05436
+  },
+  "deadlineMs": 5000.0,
+  "deadlineSource": "https://catalog.us-east-1.prod.workshops.aws/event/dashboard/en-US/workshop/6b-how-to-play/actions-and-stats",
+  "p95TargetMs": 800,
+  "lateOrInvalid": 0,
+  "nativeGatePassed": true,
+  "fitness": {
+    "first": "5/5",
+    "secondUnchanged": "5/5",
+    "verifiedUTC": "2026-10-27T18:51:49Z"
+  },
+  "eligibleForRankedPromotion": false,
+  "failureReasons": [],
+  "firstCalls": {
+    "count": 6,
+    "invalid": 0,
+    "late": 0
+  },
+  "laterCalls": {
+    "count": 218,
+    "invalid": 0,
+    "late": 0
+  },
+  "sessionTelemetry": {
+    "status": "observed",
+    "observedCalls": 224,
+    "observedLogicalSessions": 6,
+    "issues": [],
+    "serverSessionLifecycleVerified": false
+  },
+  "gameServerDeadlineVerified": false,
+  "sourceCommit": "aa68b25ef0ff0b403fdaf28ae02fc9f16115b666",
+  "qualificationBoundary": {
+    "proxySetupAndCleanupMs": 3738.418747961987,
+    "runtimePrewarmPerformed": false,
+    "allProbeSessionIdsFresh": true,
+    "clientConnectionEstablishedByIdempotentOldProbeCleanup": true,
+    "connectTimeoutSeconds": 30,
+    "deadlineMs": 5000,
+    "priorFailuresRetained": true
+  },
+  "traceVerification": {
+    "records": 224,
+    "allSchema1": true,
+    "allWithin8192Bytes": true,
+    "paginationComplete": true,
+    "expected": 224,
+    "passed": true
+  }
+}

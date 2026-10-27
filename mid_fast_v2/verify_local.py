@@ -32,7 +32,9 @@ server.serve_forever()
 """
 
 
-def verify(archive, candidate='L02'):
+def verify(archive, candidate='L02', trace=False):
+    if trace and candidate != 'L02B':
+        raise ValueError('Trace requires L02B')
     artifact = artifact_for(candidate)
     if hashlib.sha256(archive.read_bytes()).hexdigest() != artifact['archiveSha256']:
         raise ValueError('Archive mismatch')
@@ -40,7 +42,7 @@ def verify(archive, candidate='L02'):
     planned = plan(restart_stance=candidate == 'L02B')
     for row in planned:
         groups[row['sessionKey']].append(row)
-    rows, boots, imports = [], [], []
+    rows, boots, imports, traces = [], [], [], []
     with tempfile.TemporaryDirectory(prefix='mid-l02-') as scratch:
         with zipfile.ZipFile(archive) as source:
             source.extractall(scratch)  # Hash-pinned archive produced by our builder.
@@ -48,7 +50,7 @@ def verify(archive, candidate='L02'):
             started = time.perf_counter_ns()
             log = tempfile.TemporaryFile()
             child = subprocess.Popen([sys.executable, '-I', '-S', '-c', BOOT_CODE], cwd=scratch,
-                env={'PLAYER_ID': '2', 'MID_AUDIT': '1'}, stdout=subprocess.PIPE, stderr=log)
+                env={'PLAYER_ID': '2', 'MID_AUDIT': '1', 'MID_TRACE': '1' if trace else '0'}, stdout=subprocess.PIPE, stderr=log)
             client = None
             try:
                 with selectors.DefaultSelector() as ready:
@@ -80,6 +82,11 @@ def verify(archive, candidate='L02'):
                     if response.status != 200:
                         problems.append('http_status')
                     rows.append({'key': case['key'], 'localHTTPMs': elapsed, 'errors': problems})
+                # Same keep-alive connection: the next request is processed only
+                # after the last response's post-flush diagnostics have finished.
+                client.request('GET', '/ping')
+                response = client.getresponse()
+                response.read()
             finally:
                 if client:
                     client.close()
@@ -89,13 +96,20 @@ def verify(archive, candidate='L02'):
                 except subprocess.TimeoutExpired:
                     child.kill()
                     child.communicate()
+                log.seek(0)
+                for line in log.read().decode().splitlines():
+                    if line.startswith('MID_TRACE '):
+                        traces.append(json.loads(line.removeprefix('MID_TRACE ')))
                 log.close()
+    if trace and (len(traces) != len(rows) or any(r.get('schema') != 1 for r in traces)):
+        raise ValueError('Trace coverage mismatch')
     return {
         'candidate': candidate, 'kind': 'local extracted archive, six fresh Python processes with site packages disabled',
         'python': platform.python_version(), 'system': platform.system(), 'machine': platform.machine(),
         'archiveSha256': artifact['archiveSha256'], 'planSha256': digest(planned),
         'requests': len(rows), 'passed': sum(not row['errors'] for row in rows),
         'auditEnabled': True,
+        'traceEnabled': trace, 'traceRecords': len(traces),
         'processes': len(boots), 'localProcessReadyMs': lab.distribution(boots),
         'localImportMs': lab.distribution(imports), 'localHTTPMs': lab.distribution([r['localHTTPMs'] for r in rows]),
         'excluded': ['AWS microVM startup', 'AWS CodeZip launcher', 'remote network', 'game command application'],
@@ -109,10 +123,11 @@ if __name__ == '__main__':
     parser.add_argument('--candidate', choices=('L02', 'L02B'), default='L02')
     parser.add_argument('--archive', type=Path)
     parser.add_argument('--output', type=Path)
+    parser.add_argument('--trace', action='store_true')
     args = parser.parse_args()
     args.archive = args.archive or ROOT / ('.local/mid-fast-v2' + ('b' if args.candidate == 'L02B' else '') + '/deployment.zip')
     args.output = args.output or ROOT / ('research/v3/model-prompt-lab/results/mid-' + args.candidate.lower() + '-local.json')
-    report = verify(args.archive, args.candidate)
+    report = verify(args.archive, args.candidate, args.trace)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(report, indent=2) + '\n')
     print(json.dumps(report))

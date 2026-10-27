@@ -1,0 +1,34 @@
+{
+  "calls": 8,
+  "valid": 8,
+  "fullRequestMs": [
+    2923.88189,
+    265.00346,
+    162.8485,
+    156.615322,
+    3993.543169,
+    182.66117,
+    172.366191,
+    154.461924
+  ],
+  "allOwnedSessionsStopped": true,
+  "measurementBoundary": "external SDK full response after separately recorded client connection setup; not game server",
+  "prewarm": false,
+  "deadlineMs": 5000,
+  "passed": true,
+  "clientConnectionSetup": {
+    "connectionSetupMs": 14052.50516399974,
+    "agentPrewarm": false,
+    "priorFailuresRetained": true,
+    "allSessionIdsFresh": true
+  },
+  "priorUnqualifiedFirstCallMs": 7582.973753,
+  "diagnosticFirstCall": {
+    "fullMs": 6241.8,
+    "connectProxyTlsMs": 2236.0,
+    "residualIsNotPureCompute": true
+  },
+  "fitness": null,
+  "installed": false,
+  "scope": "bounded eight-case screen; not broad deadline guarantee"
+}

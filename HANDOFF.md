@@ -1,58 +1,70 @@
-# Current cloud checkpoint — 27 October 2026, 18:20 UTC
+# Current cloud checkpoint — 27 October 2026, 19:44 UTC
 
-Owner requests cloud-only autonomous coaching until 28 October03:15:50UTC,
-with a reliable final setup. No Mac work. Other project loops are paused.
-The latest owner authorizes GitHub publication and main integration after checks;
-older no-merge language below is historical, not the current grant.
+Cloud-only autonomous coaching ends 28 October 03:15:50 UTC. No Mac work.
+Other project loops remain paused. Owner authorizes checked GitHub publication
+and main integration. No extra agents, automations, IAM changes or secrets in Git.
 
-## Actual team and readiness
+## Actual installed team
 
-- Only MID changed: replay-safe initial positioning, source
-  4de510a0214086c1d1ee1303e75ea735793eb556, isolated platformV2.
-  Archive a0e9d2e7daae3b83f7b866f5b92e802f6d0a877f4a84aeb98df9a57ea548e999.
-- Two unchanged fresh Fitness runs5/5; all five exact bindings read back.
-  GK, DEF, FWD4, FWD5 and formation1-1-2 preserved. Private cloud receipts only.
-- Broad V2 qualification224/224, six fresh sessions, max2053.3ms after explicit
-  SDK proxy setup during required cleanup; no agent prewarming. Previous timeout
-  attempts retained. A diagnostic15.432s call spent13.121s in proxyCONNECT.
-  Not a guarantee of game-server latency or proof V2 universally beatsV1.
-- Practice vs Total Attack United completed1:0, HOME. No active match.
-  Block remains1/2; do not silently label it completed or change the lineup.
-- Actual pitch observation failed: Unity says WebGL unsupported in cloud browser.
-  Screenshot confirms only loading screen; live commentary and final score were
-  visible. No physical passing/saving/positioning improvement claimed.
-  Browser policy disallowed chrome://gpu diagnostics; no bypass attempted.
-- Do not start another supposedly observed match until visual access is resolved.
-  Continue independent repository repair, recorded-evidence review and preparation.
+Only MID changed from the original five: replay-safe initial positioning plus
+bounded, opt-in post-response state logging. Local source
+`aa68b25ef0ff0b403fdaf28ae02fc9f16115b666`, archive
+`239f95187bc3fa19def668fd53918b18afd2f66c0af23d0de8ba48e22154a078`.
+Two fresh unchanged Fitness runs 5/5; exact five bindings and 1-1-2 verified.
+GK, DEF, FWD4 and FWD5 unchanged. No active match at this checkpoint.
+Rollback MID is replay-safe V2 source 4de510a, not the old broken 4/5 MID.
 
-## Verified discoveries and work remaining
+Logger native qualification: 224/224 valid responses and bounded traces, six
+fresh sessions, maximum 2288.3 ms after separately recorded client-connection
+setup; no agent prewarming. Earlier proxy failures retained. This is external
+SDK timing, not game-server latency. Latest full local suite: 176 tests PASS.
 
-Owned runtime logs contain4MIDpasses,4FWD5passes and67GK CLEAR_OVERRIDE commands.
-The portal labels own commands as zero passes and3GK distributions. Therefore
-per-role/command attribution and generated coach narrative remain unreliable.
-See research/v3/cloud-coach/practice01-command-audit.json; submitted actions do
-not establish physical pass completion or saves. Goalkeeper baseline delegates
-saves to built-inAI; no extra model calls were introduced.
+## Completed Practice and evidence limits
 
-Code published to owned branch atfff3f3313ce7ae3d9eaf27bca8af9bb243a7fae6.
-Subsequent local build repair retains historical artifact manifests and adds a
-separate reviewed shared-dependency pin.30M11 fixture decisions match the exact
-historical engine;170unit tests and demo pass;6000 mirrored/adversarial samples
-show zero critical failures. M11 remains closed: no M11 deployment or new games.
-These are code checks, not football outcomes. Hosted checks forfff3f331 failed
-on earlier package pins/obsolete retry expectation; no unchanged rerun requested.
-Publish checked repair, review exact-headCI, then reconcile stackedPR9/main.
+- Replay-safe MID only: Total Attack 1:0 HOME. Earlier block closed partial 1/2
+  when owner redirected work toward logs; not a completed comparison block.
+- Logger-only MID, all other policies unchanged: Fort Knox 2:0 and Total Attack
+  5:0 HOME. Two-game block complete, 7:0 aggregate. No tactical gain inferred.
+- 145 full ten-player snapshots from these two games. Cloud Unity WebGL remains
+  unavailable. Reconstruction uses actual sampled inputs, not live pitch footage.
+- Actual player envelope x[-6.4,6.400768], y[-3.363475,3.33266]; ball ground
+  envelope x[-5.741002,6.856873], z[-3.640975,3.579014]. These are observed ranges,
+  NOT measured pitch boundaries or exact goalposts. Stamina scale observed 0–1.
+- FWD4/FWD5 low-energy SHOOTING-state samples do not prove pre-shot exhaustion
+  caused weak shots. Exact power/aim/ball physics remain unverified.
+- Portal per-role command attribution and AI narrative remain inconsistent with
+  owned runtime logs. CLEAR_OVERRIDE releases control; it does not clear a ball.
+- A Fort Knox trace gap has continuous audit ordinals, not demonstrated logger
+  loss. Keep-alive timeout messages alone do not establish decision failures.
 
-Quota remaining is unavailable, not assumed. At a verified10% reserve stop new
-work, finish any active game and preserve checkpoint. No new agents/automations,
-IAM expansion or secret publication. Private workspace is
-/workspace/shared/fc-cloud-20261027/repo/.local/stage2-20261027/.
+## Completed FWD5 experiment, original restored
 
-Next: finish review/publication of build repair; resolve visual observation in
-an authorized cloud browser without bypassing restrictions; keep reliable lineup
-and no tactical promotions from one unobserved win. Recheck actual portal before
-any new match. Original MID rollback is retained but was4/5 before repair, so do
-not call it guaranteed ready. Final setup must itself pass freshFitness.
+Existing outlet mode tested on exact original archive/platform V1. Two unchanged
+Practice games: Fort Knox 3:0, Total Attack 1:3. Actual own audits confirm 13/7
+non-sprinting outlet commands. Energy not clearly worse, but mean forward
+separation decreased in both sampled opponent comparisons. No useful attacking
+benefit established; not proof that outlet caused the loss. Candidate NOT promoted.
+Original FWD5 restored, exact five bindings read back, fresh Fitness 5/5 at 19:44.
+Current active team is the logger baseline described above. No active match.
+Initial eight-case native screen failed first full call 7583 ms. Diagnostic first
+call 6242 ms included 2236 ms proxy/TLS setup. Qualified fresh-session screen after
+recorded client-only setup passed 8/8, maximum 3994 ms; no agent prewarming.
+All owned probe sessions stopped. Preserve failed evidence and measurement limits.
+See research/v3/cloud-coach/fwd5-outlet/analysis.json. DEF wording screen also
+rejected; no persistent DEF change. FWD4 remains protected.
+
+## Git and next action
+
+Readiness repair and dependency-pin repair merged via PR9 into main
+`beb00dbfead079d3a4efa92ad68cd7e646f716f0`; exact-head main checks passed.
+Logger/offline renderer/cohort records are local work, not yet published.
+Publish only reviewed, sanitized source and aggregates; raw states, credentials,
+ARNs and session identifiers stay in ignored .local/.
+
+Next: publish reviewed logger/renderer and sanitized experiment records. Inspect
+actual possession/aim contracts before another tactical change; retain baseline. Check quota before blocks; remaining
+quota unavailable, not assumed. At verified 10% reserve stop new work and finish
+checkpoint. Preserve final ready setup by the deadline.
 
 ---
 
