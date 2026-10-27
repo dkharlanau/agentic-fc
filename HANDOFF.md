@@ -4,23 +4,25 @@ Cloud-only autonomous coaching ends 28 October 03:56:26 UTC (owner extended the 
 Other project loops remain paused. Owner authorizes checked GitHub publication
 and main integration. No extra agents, automations, IAM changes or secrets in Git.
 
-## Actual installed team — 20:48 UTC
+## Actual installed team — 22:26 UTC
 
-Original FWD5 restored after finishing experiments. Exact five bindings read back
-and fresh Fitness5/5 verified. GK, DEF, FWD4 and FWD5 original; MID logger V2;
-formation1-1-2. No active match. Do not confuse prepared finishing code with live.
-MID logger sourceaa68b25, archive239f95187bc3fa19def668fd53918b18afd2f66c0af23d0de8ba48e22154a078.
+Originalbaseline restored: MIDreplay-safe traceV2, originalGK/DEF/FWD4/FWD5,
+formation1-1-2. Exactallfive saved bindings andfreshFitness5/5 verified22:26.
+No active game. Fourteen Practice games completed across distinct configurations.
+Ownhalf-only FWD5 sourced7e8154/archive10fd94dc finished1:2/2:0. Actualmovement
+closer to target20/23paired observations, but usefulpasses/strongerteam unproven.
+Candidate onhold, notpromoted. Priorunrestrictedcounter source35f61e2 rejected
+for15attacking-phase retreatcommands; emergencyMID also notpromoted. Allsource
+and sanitizedreceipts preserved; no publication implies runtimepromotion.
+Next unchanged baselinecontrol pair TotalAttack/FortKnox after prematchReady,
+using MIDtraceobserver only. No new code/runtime simultaneously. Stop newwork
+by03:56:26UTC and preserve best verified reliable setup; quotareserveunknown.
 
-Finishing source317dd9f81b6a7ca950f193f52e1a368f0e3bc3ab, archive7cc73e9162b245c7936ed8f7da811877780f44d52467dd0805029877e1232ba1
-remains an unpromoted experiment. V1partialblock8:0closed1/2 after nextprematch
-5566ms, despiteportalReady. IdenticalarchiveV2 passed32/32native across8fresh
-sessions, first2.020–3.995s and later<=.296s, with explicit clientsetup boundary.
-V2 freshFitness5/5, prematches986/1023ms, gamesTotalAttack1:3/FortKnox4:0.
-Own new-rule triggers1/0 respectively. No immediate goal followed the TotalAttack
-trigger; the FortKnox win did not exercise the exception. Causal benefit unproven,
-so original FWD5 restored. All own diagnostic sessions stopped.
-Latest full local suite180PASS before documentation/renderer annotation changes.
-No claim that sampledV2startup universally solves latency.
+Previous finishing experiment is closed and unpromoted. OriginalFWD5 was restored
+with exactall5 andfreshFitness5/5 before this new MID-only trial. V1partial8:0
+closedafter5566ms nextprematch; identical finishingV2 games1:3/4:0, no causal gain.
+Do not reinstall it merely because code is preserved in main. Main13726cdc has
+finishing records and project coaching skill, exacthead pushchecks bothPASS.
 
 ## Completed Practice and evidence limits
 

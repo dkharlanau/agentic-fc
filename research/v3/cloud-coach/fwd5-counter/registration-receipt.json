@@ -1,0 +1,6 @@
+{
+  "firstFitness": "4/5 FAIL AGENT_NOT_FOUND",
+  "cause": "Operator text entry appended candidate ARN to existing field; substring readback was insufficient. No match started.",
+  "repair": "Whole field replaced, exact saved text equality verified; subsequent allfivebindings exact equality and fresh Fitness5/5 at21:51. Initial failed result retained.",
+  "action": "Exact equality readback mandatory for allfivebindings."
+}

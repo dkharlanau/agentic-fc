@@ -1,0 +1,22 @@
+{
+  "decision": "Not promoted; restore originalMIDtrace after the completed block",
+  "outcomes": [
+    "TotalAttack2-1",
+    "FortKnox4-0"
+  ],
+  "actualEmergencyTriggers": [
+    0,
+    1
+  ],
+  "episode": {
+    "match": "midsafety02-fortknox",
+    "gameTime": 42.48078,
+    "action": "SHOOT CENTER1.0",
+    "nextSampleSecondsLater": 2.000047,
+    "observed": "Ball remained in own third and was held by opponent MID at next sample. No successful forward clearance established.",
+    "limits": "Intervening kick, interception or command non-application cannot be distinguished from sparse snapshots."
+  },
+  "separateFinding": "At trigger, both own forwards were almost coincident behind MID near own goal; no forward outlet existed. This motivates separate offball availability, not a proven fix.",
+  "causalWinsClaim": false,
+  "next": "OriginalMIDbaseline; separate FWD5 safe counter-outlet experiment only after gates"
+}

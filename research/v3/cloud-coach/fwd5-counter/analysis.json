@@ -1,0 +1,177 @@
+{
+  "decision": "Not promoted; restrict follow-up hypothesis to own-half escape, preserve final-third behavior",
+  "results": [
+    "TotalAttack1-4",
+    "FortKnox1-0"
+  ],
+  "sampledMetrics": [
+    {
+      "match": "trace01-fortknox",
+      "openPlaySamples": 41,
+      "lastScore": {
+        "home": 2,
+        "away": 0
+      },
+      "meanForwardSeparation": 3.489235347190514,
+      "fwd5MeanX": 0.5099826585365854,
+      "fwd5MeanEnergy": 0.5516891463414634,
+      "fwd5AheadOfBallFraction": 0.2682926829268293,
+      "fwd5OwnThirdFraction": 0.14634146341463414,
+      "bothBehindDangerBallSamples": 0
+    },
+    {
+      "match": "trace02-totalattack",
+      "openPlaySamples": 61,
+      "lastScore": {
+        "home": 5,
+        "away": 0
+      },
+      "meanForwardSeparation": 5.002200989601473,
+      "fwd5MeanX": -0.7842516721311475,
+      "fwd5MeanEnergy": 0.7608177540983606,
+      "fwd5AheadOfBallFraction": 0.19672131147540983,
+      "fwd5OwnThirdFraction": 0.3770491803278688,
+      "bothBehindDangerBallSamples": 0
+    },
+    {
+      "match": "outlet01-fortknox",
+      "openPlaySamples": 56,
+      "lastScore": {
+        "home": 3,
+        "away": 0
+      },
+      "meanForwardSeparation": 1.8728560938011325,
+      "fwd5MeanX": 0.0096420714285714,
+      "fwd5MeanEnergy": 0.6803756071428572,
+      "fwd5AheadOfBallFraction": 0.19642857142857142,
+      "fwd5OwnThirdFraction": 0.10714285714285714,
+      "bothBehindDangerBallSamples": 1
+    },
+    {
+      "match": "outlet02-totalattack",
+      "openPlaySamples": 60,
+      "lastScore": {
+        "home": 1,
+        "away": 3
+      },
+      "meanForwardSeparation": 2.9221453993370665,
+      "fwd5MeanX": -1.3385853166666666,
+      "fwd5MeanEnergy": 0.78326765,
+      "fwd5AheadOfBallFraction": 0.35,
+      "fwd5OwnThirdFraction": 0.38333333333333336,
+      "bothBehindDangerBallSamples": 3
+    },
+    {
+      "match": "finishv2-01-totalattack",
+      "openPlaySamples": 58,
+      "lastScore": {
+        "home": 1,
+        "away": 3
+      },
+      "meanForwardSeparation": 2.81427454101308,
+      "fwd5MeanX": 0.9308903103448276,
+      "fwd5MeanEnergy": 0.6502271551724138,
+      "fwd5AheadOfBallFraction": 0.41379310344827586,
+      "fwd5OwnThirdFraction": 0.10344827586206896,
+      "bothBehindDangerBallSamples": 0
+    },
+    {
+      "match": "finishv2-02-fortknox",
+      "openPlaySamples": 60,
+      "lastScore": {
+        "home": 4,
+        "away": 0
+      },
+      "meanForwardSeparation": 2.2770416937362397,
+      "fwd5MeanX": 2.71284545,
+      "fwd5MeanEnergy": 0.43590121666666665,
+      "fwd5AheadOfBallFraction": 0.16666666666666666,
+      "fwd5OwnThirdFraction": 0.0,
+      "bothBehindDangerBallSamples": 0
+    },
+    {
+      "match": "midsafety01-totalattack",
+      "openPlaySamples": 74,
+      "lastScore": {
+        "home": 2,
+        "away": 1
+      },
+      "meanForwardSeparation": 4.238319044478066,
+      "fwd5MeanX": -0.08723635135135135,
+      "fwd5MeanEnergy": 0.584938472972973,
+      "fwd5AheadOfBallFraction": 0.3108108108108108,
+      "fwd5OwnThirdFraction": 0.13513513513513514,
+      "bothBehindDangerBallSamples": 2
+    },
+    {
+      "match": "midsafety02-fortknox",
+      "openPlaySamples": 51,
+      "lastScore": {
+        "home": 4,
+        "away": 0
+      },
+      "meanForwardSeparation": 2.1878110206887493,
+      "fwd5MeanX": -1.0397315098039215,
+      "fwd5MeanEnergy": 0.6724555490196078,
+      "fwd5AheadOfBallFraction": 0.29411764705882354,
+      "fwd5OwnThirdFraction": 0.37254901960784315,
+      "bothBehindDangerBallSamples": 7
+    },
+    {
+      "match": "counter01-totalattack",
+      "openPlaySamples": 56,
+      "lastScore": {
+        "home": 1,
+        "away": 4
+      },
+      "meanForwardSeparation": 2.820771386808388,
+      "fwd5MeanX": 0.24886178571428572,
+      "fwd5MeanEnergy": 0.8116314285714286,
+      "fwd5AheadOfBallFraction": 0.42857142857142855,
+      "fwd5OwnThirdFraction": 0.125,
+      "bothBehindDangerBallSamples": 1,
+      "counterCommands": 31,
+      "pairedFollowups": 28,
+      "closer": 18,
+      "within0_5": 3
+    },
+    {
+      "match": "counter02-fortknox",
+      "openPlaySamples": 58,
+      "lastScore": {
+        "home": 1,
+        "away": 0
+      },
+      "meanForwardSeparation": 2.4758189720379153,
+      "fwd5MeanX": 0.39798903448275863,
+      "fwd5MeanEnergy": 0.8267373965517242,
+      "fwd5AheadOfBallFraction": 0.39655172413793105,
+      "fwd5OwnThirdFraction": 0.017241379310344827,
+      "bothBehindDangerBallSamples": 0,
+      "counterCommands": 38,
+      "pairedFollowups": 37,
+      "closer": 25,
+      "within0_5": 6
+    }
+  ],
+  "observedRetreatCommandsInAttackingThird": [
+    6,
+    9
+  ],
+  "matchedCounterCommands": [
+    31,
+    38
+  ],
+  "matchedBallInOpponentHalf": [
+    15,
+    24
+  ],
+  "meaning": "Own FWD5 moved closer to requested targets in43of65paired sparsefollowups. Availability ahead ofball increased, but this is not proof of usefulpasses. Candidate also requested retreat to nearhalfway while ball in attackingthird15times, reducing attacking support by design.",
+  "limits": [
+    "Two uncontrolledPractice games do not prove resultcausality",
+    "Sparseframes cannot showallcontacts",
+    "Energy and samplefractions are not matchtimeweighted",
+    "Baseline comparisons span differentpolicies and matchstates",
+    "No tournamentwinprobability estimated"
+  ]
+}

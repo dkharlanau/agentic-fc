@@ -1,0 +1,44 @@
+{
+  "candidate": "MID-SAFETY-v1",
+  "kind": "Exact emergency archive; reused baseline224-command HTTP plan, new emergency cases separately tested",
+  "python": "3.12.14",
+  "system": "Linux",
+  "machine": "x86_64",
+  "archiveSha256": "6237373b1bcbfedcb03aef61d1725ffd1dd5c4f3675dda26e92305f0eec3e3d1",
+  "planSha256": "ff18c3e157959f695882c50a5a1b371a3b58a2bb34aa021ad73555335f015570",
+  "requests": 224,
+  "passed": 224,
+  "auditEnabled": true,
+  "traceEnabled": true,
+  "traceRecords": 224,
+  "processes": 6,
+  "localProcessReadyMs": {
+    "n": 6,
+    "p50": 33.601,
+    "p95": 44.501,
+    "max": 46.966968
+  },
+  "localImportMs": {
+    "n": 6,
+    "p50": 18.257,
+    "p95": 28.28,
+    "max": 31.117981
+  },
+  "localHTTPMs": {
+    "n": 224,
+    "p50": 0.416,
+    "p95": 0.686,
+    "max": 1.337104
+  },
+  "excluded": [
+    "AWS microVM startup",
+    "AWS CodeZip launcher",
+    "remote network",
+    "game command application"
+  ],
+  "native": null,
+  "fitness": null,
+  "promotion": false,
+  "failures": [],
+  "baselineArtifactUnchanged": true
+}

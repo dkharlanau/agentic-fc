@@ -1,0 +1,17 @@
+{
+  "kind": "Uninstalled isolated counter-outlet wrapper; exact baseline dependencies and policy preserved",
+  "baselineArchiveSha256": "ef9b7c704e1d8fb011fae6ea55e5239d2ac54f64c76afc0ef439dc76d5aea226",
+  "archiveSha256": "10fd94dc35296f6cf5fce4b195bc82cbf08792db423c2d8d38b0e86a2f94a62c",
+  "archiveBytes": 20615623,
+  "unchangedArchiveMembers": 3804,
+  "replacementSourceHashes": {
+    "main.py": "5aaee178f3db9796b37f69ef907b38e6d0d087d14d5cb8e5346c9b777d43165d",
+    "fwd_counter_v1/__init__.py": "02aff46293bf6a2d71eca6b2c951d30057db5ba74a6a2a25fd5244bb54560f53",
+    "fwd_counter_v1/candidate.py": "34da1189eb206c8235a26caf173329b2621ee2d35988b6377e4b8877f07f4633"
+  },
+  "changes": [
+    "main.py replaced",
+    "two fwd_counter_v1 modules added"
+  ],
+  "deployment": null
+}

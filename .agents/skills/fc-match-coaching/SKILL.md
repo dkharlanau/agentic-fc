@@ -24,6 +24,8 @@ permission. Preserve a running block and any newer owner restriction.
   repeated inputs, cold and later calls. Passing a response schema is not Fitness.
   Fresh Fitness and prematch readiness are separate gates. A rendered saved field
   is not proof of persistence: close/reopen or read the saved detail view.
+  Replace the whole editable field, then compare the entire saved binding for
+  exact equality. A substring match can miss an accidentally concatenated ARN.
 - Keep one bounded tactical hypothesis per comparison. Respect the current block
   size. Ordinary losses do not authorize mid-block tuning. Record partial blocks
   and genuine readiness failures rather than quietly resetting the series.

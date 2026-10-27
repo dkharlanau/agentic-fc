@@ -1,0 +1,70 @@
+{
+  "decision": "Hold candidate, not promoted; repeat original control now before inference",
+  "results": [
+    "TotalAttack1-2",
+    "FortKnox2-0"
+  ],
+  "ownhalfCounterCommands": [
+    14,
+    11
+  ],
+  "pairedFollowups": [
+    12,
+    11
+  ],
+  "closerToTarget": [
+    12,
+    8
+  ],
+  "sameTimeBallMatches": [
+    13,
+    11
+  ],
+  "matchedBallOnlyOwnHalf": true,
+  "sampledMetrics": [
+    {
+      "match": "counterhalf01-totalattack",
+      "openPlaySamples": 55,
+      "lastScore": {
+        "home": 1,
+        "away": 2
+      },
+      "meanForwardSeparation": 3.5791792998811984,
+      "fwd5MeanX": 0.2466868181818182,
+      "fwd5MeanEnergy": 0.8401047818181818,
+      "fwd5AheadOfBallFraction": 0.36363636363636365,
+      "fwd5OwnThirdFraction": 0.12727272727272726,
+      "bothBehindDangerBallSamples": 1,
+      "counterCommands": 14,
+      "pairedFollowups": 12,
+      "closer": 12,
+      "within0_5": 1
+    },
+    {
+      "match": "counterhalf02-fortknox",
+      "openPlaySamples": 59,
+      "lastScore": {
+        "home": 2,
+        "away": 0
+      },
+      "meanForwardSeparation": 3.2174129038449935,
+      "fwd5MeanX": 0.905906593220339,
+      "fwd5MeanEnergy": 0.5307661355932204,
+      "fwd5AheadOfBallFraction": 0.3728813559322034,
+      "fwd5OwnThirdFraction": 0.01694915254237288,
+      "bothBehindDangerBallSamples": 0,
+      "counterCommands": 11,
+      "pairedFollowups": 11,
+      "closer": 8,
+      "within0_5": 1
+    }
+  ],
+  "observations": "Own-role movement toward targets in20/23paired followups; no newlyrequested opposite-half retreat by codeguard and24same-time matched states. Useful completed passes and stronger matchoutcomes not yet established.",
+  "limits": [
+    "Remaining unmatched command has sparse-frame gap",
+    "Two HOME bot games are not causal comparison or tournamentforecast",
+    "Metric samplecounts not timeweighted",
+    "V1baseline andV2candidate runtime differ"
+  ],
+  "next": "Restore exact originalFWD5, freshFitness, unchanged TotalAttack/FortKnox control pair; no new policy simultaneously"
+}
