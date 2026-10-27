@@ -1,0 +1,227 @@
+{
+  "scope": "Local SDK InvokeHarness, saved configuration with no model/prompt/tool overrides; fresh and subsequent request in own sessions; not game-server measurement",
+  "fixtureFile": "research/v3/fixtures/observed-live-away-open-play.json",
+  "fixtureSha256": "6efef0bc9e20c1497759b628403170ceff7e711ce56533e0a6333a896a34d11f",
+  "roles": [
+    "GK",
+    "DEF",
+    "FWD1"
+  ],
+  "responses": [
+    {
+      "role": "gk",
+      "ordinal": 0,
+      "headersMs": 2920.510332998674,
+      "firstEventMs": 3848.275291999016,
+      "completeMs": 4047.161832999336,
+      "modelReportedLatencyMs": [
+        828
+      ],
+      "usage": [
+        {
+          "inputTokens": 2090,
+          "outputTokens": 46,
+          "totalTokens": 2136
+        }
+      ],
+      "strictRawJSON": false,
+      "normalizedAssignedCommandValid": true,
+      "commands": [
+        {
+          "commandType": "MOVE_TO",
+          "playerId": 0,
+          "parameters": {
+            "target_x": -0.6259,
+            "target_y": 0.1429,
+            "sprint": false
+          },
+          "duration": 0
+        }
+      ],
+      "streamErrors": 0
+    },
+    {
+      "role": "gk",
+      "ordinal": 1,
+      "headersMs": 535.4691249995085,
+      "firstEventMs": 1236.4055840007495,
+      "completeMs": 1287.0274169999902,
+      "modelReportedLatencyMs": [
+        700
+      ],
+      "usage": [
+        {
+          "inputTokens": 3376,
+          "outputTokens": 46,
+          "totalTokens": 3422
+        }
+      ],
+      "strictRawJSON": false,
+      "normalizedAssignedCommandValid": true,
+      "commands": [
+        {
+          "commandType": "MOVE_TO",
+          "playerId": 0,
+          "parameters": {
+            "target_x": -0.6259,
+            "target_y": 0.1429,
+            "sprint": false
+          },
+          "duration": 0
+        }
+      ],
+      "streamErrors": 0
+    },
+    {
+      "role": "def",
+      "ordinal": 0,
+      "headersMs": 1362.0786249994126,
+      "firstEventMs": 1982.395541999722,
+      "completeMs": 2071.076209000239,
+      "modelReportedLatencyMs": [
+        572
+      ],
+      "usage": [
+        {
+          "inputTokens": 2052,
+          "outputTokens": 40,
+          "totalTokens": 2092
+        }
+      ],
+      "strictRawJSON": false,
+      "normalizedAssignedCommandValid": true,
+      "commands": [
+        {
+          "commandType": "PRESS_BALL",
+          "playerId": 1,
+          "parameters": {
+            "intensity": 0.7
+          },
+          "duration": 5
+        }
+      ],
+      "streamErrors": 0
+    },
+    {
+      "role": "def",
+      "ordinal": 1,
+      "headersMs": 510.85395799964317,
+      "firstEventMs": 1074.551125000653,
+      "completeMs": 1098.8392079998448,
+      "modelReportedLatencyMs": [
+        528
+      ],
+      "usage": [
+        {
+          "inputTokens": 3332,
+          "outputTokens": 38,
+          "totalTokens": 3370
+        }
+      ],
+      "strictRawJSON": false,
+      "normalizedAssignedCommandValid": true,
+      "commands": [
+        {
+          "commandType": "PRESS_BALL",
+          "playerId": 1,
+          "parameters": {
+            "intensity": 0.7
+          },
+          "duration": 5
+        }
+      ],
+      "streamErrors": 0
+    },
+    {
+      "role": "fwd1",
+      "ordinal": 0,
+      "headersMs": 2581.5262909982266,
+      "firstEventMs": 3334.9441249993106,
+      "completeMs": 3679.3505829991773,
+      "modelReportedLatencyMs": [
+        683
+      ],
+      "usage": [
+        {
+          "inputTokens": 2270,
+          "outputTokens": 40,
+          "totalTokens": 2310
+        }
+      ],
+      "strictRawJSON": true,
+      "normalizedAssignedCommandValid": true,
+      "commands": [
+        {
+          "commandType": "MOVE_TO",
+          "playerId": 3,
+          "parameters": {
+            "target_x": 2.0,
+            "target_y": 0.0,
+            "sprint": true
+          },
+          "duration": 0
+        }
+      ],
+      "streamErrors": 0
+    },
+    {
+      "role": "fwd1",
+      "ordinal": 1,
+      "headersMs": 506.3320420013042,
+      "firstEventMs": 1023.5846250016039,
+      "completeMs": 1143.212000000858,
+      "modelReportedLatencyMs": [
+        572
+      ],
+      "usage": [
+        {
+          "inputTokens": 3550,
+          "outputTokens": 40,
+          "totalTokens": 3590
+        }
+      ],
+      "strictRawJSON": true,
+      "normalizedAssignedCommandValid": true,
+      "commands": [
+        {
+          "commandType": "MOVE_TO",
+          "playerId": 3,
+          "parameters": {
+            "target_x": 2.0,
+            "target_y": 0.0,
+            "sprint": true
+          },
+          "duration": 0
+        }
+      ],
+      "streamErrors": 0
+    }
+  ],
+  "responseCount": 6,
+  "usageObservedResponses": 6,
+  "strictRawJSONResponses": 2,
+  "normalizedAssignedCommands": 6,
+  "allOwnSessionsCleaned": true,
+  "liveModelInvocationCount": null,
+  "tacticalRisk": {
+    "role": "GK",
+    "scope": "One capturedAWAY frame, repeated with tick/timeadvanced; not independent match episodes",
+    "ownKeeperX": 6.021047,
+    "ballX": -0.6259029,
+    "ballHeightY": 0.14291042,
+    "ballGroundZ": -1.0906866,
+    "returnedTarget": {
+      "target_x": -0.6259,
+      "target_y": 0.1429
+    },
+    "observation": "Both responses target the ballx/y pair across midfield instead of remaining near own goal",
+    "inference": "Possible ball-height/lateral and scale interpretation error; live match impact unverified"
+  },
+  "limitations": [
+    "Local caller network/session/bootstrap and model service stages differ",
+    "Metadata model processing528\u2013828ms is not complete response time",
+    "Markdown fences violate stated raw-array prompt; actual game parser tolerance not established",
+    "Synthetic/native behavior is not proof of a match cause or winning human players"
+  ],
+  "completedAtUTC": "2026-10-27T13:41:12.207114+00:00"
+}

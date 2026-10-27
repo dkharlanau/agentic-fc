@@ -1,5 +1,11 @@
 # M11 Hybrid Fast MID v3
 
+Текущийbenchmarkcheckpoint27октября:source912b687, ZIPe259682c...,
+AWSREADY/readback и freshFitness5/5, точныепятьпривязок, толькоMIDзаменён.
+Идёт серия20штатныхPractice; затемканоническийBaseline20втомжепорядке.
+ИсторическиеnativecoldFAILниженепревращаютсявPASS;promotionнезаявлен.
+Актуальныйжурнал:research/v3/practice-stage2-m11-v3-20.json.
+
 Общий startup-retry вариант: после реального Fitness4/5 с MOVE_TO и
 идентичным повтором через0.51s добавлен один idempotent retry безопасной
 начальной KICK_OFF позиции (tick0/time0, полное совпадение входа, ≤1s).

@@ -1,3 +1,39 @@
+# Current M11 readiness — 2026-10-27
+
+FinalM11 retry source912b687 is READY/readback verified, exact five portal
+bindings read, onlyMID changed, formation1-1-2. Canonical rollback freshly
+passedFitness5/5, then M11 freshFitness5/5. FirstM11 benchmark LIVE,
+The Benchmark FC; no probe or setting change until terminal. RequiredM11 0/20, Baseline0/20 queued after it in same order.
+Private m11-retry-binding and play-pilots/active-match.json are authoritative.
+Keep M11 frozen for all20, five-game reviews; no probes/deploy/settings inLIVE.
+Fresh global row12/199played/366points/269:162; Practice changes no ranked score.
+
+# Latest owner priority — M11 then Baseline, 2026-10-27
+
+Owner now explicitly requests M11 testing followed by comparison with Baseline.
+Close L02B at10 completed Practice (7W3L/33:9), preserving the original20-plan
+as closed-at-ten-owner-redirect. Do not continue its remaining10.
+Current plan:M11 twenty built-in benchmark games, then canonicalBaselineM8
+MID15-equivalent twenty in exactly the same balanced/attack/defense order.
+OnlyMID differs; other four roles/1-1-2 fixed. No more ranked invitations.
+Both new cohorts0/20. L02B10 is a separate reference, never labelled Baseline.
+
+M11 final retry ZIP e259682c101f5eae1d5d769cff524b98f3b0aa0628f572822f8ab97be139fbba,
+source912b687141c03f72b24ab002a8bd0d9d6d646804 is deploying under exact private
+m11-retry-deploy/binding. AfterREADY:canonicalMID rollback/Fitness, M11MID-only
+readback of five roles, freshFitness5/5, then benchmarks. Historical nativeFAIL
+retained; no promotion claim. No match is active in the latest portal.
+Three model-role native sessions finished and were cleaned. Saved configs exact,
+no overrides; local full responsefirst2.07–4.05s, second1.10–1.29s; model metadata
+528–828ms. GK/DEF emitted Markdown fences, FWD1 rawJSON; actual game parsing
+unknown. GK copied ballx/y instead of staying near own goal in one captured
+AWAY frame; tactical risk requires separate scope, not a proven match cause.
+Do not apply GK/DEF/model/prompt changes during this comparison.
+
+Private current state always .local/stage2-20261027/play-pilots/active-match.json
+and operator-checkpoint.json plus fresh portal. Goal staysactive. Original
+ranked work deferred by latest explicit benchmark focus, counts0each.
+
 # Latest owner steering — benchmark focus, 2026-10-27
 
 Owner now says:play benchmarks to understand agent/model behavior, reaction

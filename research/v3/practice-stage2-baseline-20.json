@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 2,
+  "candidate": "Baseline M8 canonical MID15-equivalent",
+  "mode": "practice",
+  "status": "queued-after-m11",
+  "ownerGoal": "Compare M11 with canonical Baseline in same20 built-in benchmarks",
+  "targetCompletedMatches": 20,
+  "completedMatches": 0,
+  "sourceCommit": "095e3994b8ea55f6671b7833171c0ff83b484b92",
+  "formation": "1-1-2",
+  "changeSurface": "MID only relative to M11; Nova2Lite MID15-equivalent restored",
+  "roles": {
+    "gk": {
+      "model": {
+        "bedrockModelConfig": {
+          "modelId": "global.amazon.nova-2-lite-v1:0",
+          "apiFormat": "converse_stream"
+        }
+      },
+      "promptSha256": "43a75e8e85225b14879c7c9b839a7f8b3e5d056d8a841a1a4019b8fc8263cd36",
+      "memoryDisabled": true
+    },
+    "def": {
+      "model": {
+        "bedrockModelConfig": {
+          "modelId": "global.amazon.nova-2-lite-v1:0",
+          "apiFormat": "converse_stream"
+        }
+      },
+      "promptSha256": "86426b2320f5e40e444ebe553b0827b3707ff6f5cd22599478f71e5391c838d9",
+      "memoryDisabled": true
+    },
+    "mid": {
+      "model": {
+        "bedrockModelConfig": {
+          "modelId": "global.amazon.nova-2-lite-v1:0",
+          "apiFormat": "converse_stream"
+        }
+      },
+      "promptSha256": "7b05fe872d47c532c374390642006759924d84048a61577bf4f3a9bba400c729",
+      "memoryDisabled": true
+    },
+    "fwd1": {
+      "model": {
+        "bedrockModelConfig": {
+          "modelId": "global.amazon.nova-2-lite-v1:0",
+          "apiFormat": "converse_stream"
+        }
+      },
+      "promptSha256": "ee4c92203e6fcbc86d14329913933ba68d8cd2092947bebd2c66d5ed14c17b15",
+      "memoryDisabled": true
+    }
+  },
+  "fwd2": {
+    "model": null,
+    "policy": "deterministic stance revision9 equivalent",
+    "policySourceSha256": "677aaf841b55040705ebf77068b9e6a3393e8acc221d0a22c30cd2ed1dca368e"
+  },
+  "opponentSchedule": [
+    "The Benchmark FC",
+    "Total Attack United",
+    "Fort Knox Athletic",
+    "The Benchmark FC",
+    "Total Attack United",
+    "Fort Knox Athletic",
+    "The Benchmark FC",
+    "Total Attack United",
+    "Fort Knox Athletic",
+    "The Benchmark FC",
+    "Total Attack United",
+    "Fort Knox Athletic",
+    "The Benchmark FC",
+    "Total Attack United",
+    "Fort Knox Athletic",
+    "The Benchmark FC",
+    "Total Attack United",
+    "Fort Knox Athletic",
+    "The Benchmark FC",
+    "Total Attack United"
+  ],
+  "matches": [],
+  "summary": null,
+  "blockReviews": [],
+  "fitness": null,
+  "beforeLeaderboard": null,
+  "limitations": [
+    "Managed MID live command/reason/model usage audit may be unavailable; preserve unknown as null",
+    "Same ordered bots; seeds uncontrolled; onlyHOME if actual portal supports onlyHOME",
+    "Practice is separate from ranked; human performance unverified"
+  ]
+}

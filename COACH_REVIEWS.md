@@ -1,3 +1,22 @@
+## 2026-10-27 — L02B first10 closed; owner requests M11 then Baseline
+
+Coach-v1.0 rechecked, unchanged. L02B games6–10:3W2L/12:5,27:22shots;
+first10 total7W3L/33:9,61:48shots,one scoreless/five clean sheets.
+Primary bounded journals and block02JSON saved. Owner now directs M11 testing
+then comparison with canonicalBaseline; close L02B at10, do not silently fill
+its remaining20-plan. Next immutable cohorts:M11 twenty, Baseline twenty,
+same ordered bots and shell, onlyMID changes. C01 accepted operationally;
+no ordinary-loss tuning. C02 retained:losses2:9,3:10 and0:5shots show poor
+chance volume in failures, not a proven cause. C03 remains open:two1:0→1:2
+reversals, no verified live coverage/keeper trace. Default-engine contribution
+large:812CLEAR+20PASS in832MIDrequests,0models.
+Saved GK/DEF/FWD1 native check uses6responses with nonzero token metadata;
+all sessions cleaned, no configuration override. Full local wall1.10–4.05s
+versus reported model528–828ms; do not equate stages. Four fenced responses,
+six valid assigned commands after normalization. One AWAY GK frame suggests
+ball-coordinate/positioning error; live causality unknown. No GK/DEF/model change
+in this comparison. Exact canonical rollback and freshFitness before M11.
+
 ## 2026-10-27 — L02B Practice block1, five completed
 
 Coach-v1.0 rechecked by actual content/hash, unchanged. Owner explicitly allows

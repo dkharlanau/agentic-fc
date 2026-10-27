@@ -37,5 +37,11 @@
     "limitation": "No datapoints returned in this account/region/time query; this does not establish zero calls"
   },
   "sharedTraceGroupsObserved": 0,
-  "nextMeasurement": "At safe idle boundary after ten benchmark games: existing saved Harness routes, fresh and subsequent native responses, no invocation overrides; unique own sessions cleaned up"
+  "nextMeasurement": "No further native probe required for current M11/Baseline benchmark switch",
+  "nativeCheck": {
+    "status": "completed",
+    "evidence": "stage2-model-role-native-20261027.json",
+    "responsesWithNonzeroUsage": 6,
+    "allOwnSessionsCleaned": true
+  }
 }

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "status": "central-restart-support-variant-ready-awaiting-fitness",
+  "status": "registered-final-retry-fitness-five-of-five-benchmark-series-running",
   "preparedDate": "2026-10-26",
   "name": "M11 Hybrid Fast MID v3",
   "formation": "1-1-2",
@@ -69,8 +69,6 @@
     "rollback": "restore MID15 baseline, verify all other role hashes/versions and fresh Fitness 5/5"
   },
   "claimsNotMade": [
-    "not registered in football team",
-    "not Fitness-tested",
     "not proven faster end-to-end",
     "not proven stronger in matches",
     "local simulation is not ball-physics simulation",
@@ -112,11 +110,28 @@
     "ownerApproved": true,
     "command": "MOVE_TO central own-half support for validated full-size XY; neutral Balanced stance on unknown geometry",
     "scope": "All fresh validated KICK_OFF with original identity/session/ownership/unlock guards; no Fitness-only branch",
-    "coreTacticalEnginesChanged": false
+    "coreTacticalEnginesChanged": false,
+    "initialRetry": "One identical initialtick0/time0 own-half support retry within1s; no changed/late/third/PLAY_ON repeats"
   },
   "activeSupportBuild": {
     "sourceCommit": "c1c7ac13cd6ebc10a34a223212b6bba080c30340",
     "archiveSha256": "1f57a0fa672d6c76df7c2e6f94265348a4c75d0ac5aae3af8c4a1773f4c17f21",
     "verifiedReady": true
+  },
+  "activePilot": {
+    "sourceCommit": "912b687141c03f72b24ab002a8bd0d9d6d646804",
+    "archiveSha256": "e259682c101f5eae1d5d769cff524b98f3b0aa0628f572822f8ab97be139fbba",
+    "fitness": {
+      "passed": 5,
+      "total": 5,
+      "source": "Fresh actual Football UI after exact five-role readback",
+      "observedAtUTC": "2026-10-27T13:57:44.027629+00:00"
+    },
+    "baselineRollbackFitness": {
+      "passed": 5,
+      "total": 5
+    },
+    "bindingsDigestSha256": "0488e2a36e168850ebb09508e191b0b6fe7e57a06b1a967757a557eb05ee3168",
+    "formation": "1-1-2"
   }
 }
