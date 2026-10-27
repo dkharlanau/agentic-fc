@@ -4,7 +4,7 @@
   "status": "running",
   "ownerGoal": "Owner explicitly allowed temporary Practice testing during autonomous work",
   "targetCompletedMatches": 20,
-  "completedMatches": 3,
+  "completedMatches": 4,
   "sourceCommit": "912b687141c03f72b24ab002a8bd0d9d6d646804",
   "archiveSha256": "2fdad20a8e8a226d36ab81f5223c2c21cc16d80980c80db7c641a69bb79ac763",
   "formation": "1-1-2",
@@ -257,6 +257,85 @@
       "scoreless": false,
       "cleanSheet": true,
       "savedAtUTC": "2026-10-27T12:32:43.082Z"
+    },
+    {
+      "opponent": "The Benchmark FC",
+      "opponentStyle": "balanced",
+      "side": "HOME",
+      "result": "WIN",
+      "goalsFor": 5,
+      "goalsAgainst": 1,
+      "shotsFor": 7,
+      "shotsAgainst": 2,
+      "shotsOnTargetFor": 5,
+      "shotsOnTargetAgainst": 1,
+      "possessionPercent": 22,
+      "preMatchConnectivityLatencyMs": {
+        "GK": 461,
+        "DEF": 369,
+        "MID": 1140,
+        "FWD1": 349,
+        "FWD2": 1903
+      },
+      "teamReportAverageLatencyMs": 801,
+      "perRoleReportLatencyMs": {
+        "GK": 627,
+        "DEF": 829,
+        "MID": 983,
+        "FWD1": 645,
+        "FWD2": 957
+      },
+      "perRoleReportedSuccessPercent": {
+        "GK": 100,
+        "DEF": 100,
+        "MID": 100,
+        "FWD1": 100,
+        "FWD2": 100
+      },
+      "teamReportCommands": 500,
+      "teamReportCommandCounts": {
+        "PRESS_BALL": 234,
+        "MOVE_TO": 139,
+        "SHOOT": 50,
+        "CLEAR_OVERRIDE": 31,
+        "INTERCEPT": 25,
+        "PASS": 20,
+        "GK_DISTRIBUTE": 1
+      },
+      "candidateAudit": {
+        "scope": "Latest isolated Runtime process; includes startup/bootstrap; unique session and match-window mapping retained privately",
+        "requestCount": 95,
+        "commandCounts": {
+          "CLEAR_OVERRIDE": 92,
+          "PASS": 3
+        },
+        "reasonCounts": {
+          "INCOMPLETE_PLAYERS": 1,
+          "ENGINE_OFF_BALL": 41,
+          "UNKNOWN_POSSESSION": 16,
+          "ENGINE_RESTART": 34,
+          "SAFE_PROGRESSIVE_PASS": 1,
+          "SAFE_RECYCLE_PASS": 2
+        },
+        "modelAttempted": 0,
+        "handlerMaxMs": 0.8299,
+        "fullNativeLatency": null,
+        "firstCompetitivePlayOnLatencyMs": null,
+        "lateActionRate": null,
+        "invalidResponseRate": null
+      },
+      "telemetryInconsistencies": [
+        "Runtime submitted92CLEAR and3PASS; report team31CLEAR and20PASS; submitted vs applied/default-engine semantics unresolved",
+        "Generated goal narrative mentions sixth goal with final5:1; narrative not used as factual evidence",
+        "Report100%success does not establish full deadline compliance"
+      ],
+      "criticalFailure": null,
+      "primaryReportAlias": "practice-l02b-04-report",
+      "id": "stage2-practice-l02b-04",
+      "mode": "practice",
+      "scoreless": false,
+      "cleanSheet": false,
+      "savedAtUTC": "2026-10-27T12:39:33.704Z"
     }
   ],
   "summary": null,
