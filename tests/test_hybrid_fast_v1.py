@@ -190,8 +190,18 @@ class HybridFastHTTPTests(unittest.TestCase):
 
     def test_ping_and_transport_rejections(self):
         self.assertEqual(self.call('GET','/ping')[0], 200)
-        self.assertEqual(self.call('POST','/invocations','{}',{'Content-Type':'text/plain'})[0], 415)
+        self.assertEqual(self.call('POST','/invocations','{',{'Content-Type':'text/plain'})[0], 400)
         self.assertEqual(self.call('POST','/wrong','{}',{'Content-Type':'application/json'})[0], 404)
+
+    def test_complete_game_decision_with_default_or_non_json_mime(self):
+        row = plan()[0]
+        for i, media_type in enumerate((None, 'application/octet-stream', 'text/plain')):
+            headers = {SESSION_HEADER:'football-mime-' + str(i)}
+            if media_type is not None:
+                headers['Content-Type'] = media_type
+            status, _, raw = self.call('POST', '/invocations', json.dumps(row['request']), headers)
+            self.assertEqual(status, 200)
+            self.assertEqual(errors(row, raw), [])
 
     def test_wrong_role_or_mode_fails_startup(self):
         with patch.dict(os.environ, {'PLAYER_ID':'4','M11_MODE':'stance'}):

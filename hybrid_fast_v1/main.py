@@ -143,10 +143,9 @@ class Handler(StreamRequestHandler):
                     if 'content-length' not in headers:
                         self.reject(411)
                         return
-                    if headers.get('content-type', [''])[0].split(';', 1)[0].strip().lower() != 'application/json':
-                        self.reject(415)
-                        return
                     try:
+                        # Match the official SDK's request.json() behavior:
+                        # validate bounded JSON bytes, regardless of MIME label.
                         raw = self.rfile.read(length)
                         if len(raw) != length:
                             raise ValueError('truncated_body')

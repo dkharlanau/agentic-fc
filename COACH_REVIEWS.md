@@ -1,5 +1,12 @@
 ## 2026-10-27 — goal resumed: deploy both and play ten each
 
+Pre-cohort compatibility issue:exact L02B registration gave Fitness4/5/MID502.
+Rollback returned control5/5. An isolated diagnostic artifact identified
+POST /invocations with valid framing/2512-byte body but non-JSON MIME; our415
+became portal502. Fix only the transport MIME assumption in L02B/M11, matching
+official SDK request.json semantics. JSON/body/framing validation remains.
+Both policy hashes unchanged; no ranked series has started, progress0/20.
+
 HANDOFF, full coach-v1.0 and latest reviews actually read on resume. The owner
 renewed the concrete end state:both deployments plus10 real ranked games each.
 The prior native-only phase was progress, not completion of this new goal.

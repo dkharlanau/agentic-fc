@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "checkedDate": "2026-10-27",
-  "status": "investigating-football-fitness-compatibility",
+  "status": "http-mime-mismatch-confirmed-transport-fix-prepared",
   "candidate": "L02B",
   "nativeValidResponses": 224,
   "footballFitness": {
@@ -13,10 +13,24 @@
   "observations": [
     "Runtime BOOT and first successful PING appeared for the Fitness process",
     "No MID decision audit appeared for that process",
-    "Baseline MID rollback restored fresh Fitness5/5"
+    "Baseline MID rollback restored fresh Fitness5/5",
+    "Diagnostic process recorded valid POST /invocations, Content-Length2512, session header present, no Expect, non-application/json MIME",
+    "Diagnostic process emitted explicit415 content_type rejection for three Football invocations"
   ],
-  "hypothesis": "Football caller request framing/content type differs from native Python SDK calls; not yet confirmed",
+  "hypothesis": null,
   "nextTest": "Observe bounded HTTP reject/method/path/body-framing labels from a diagnostic-only transport build; no payload or credential logging",
   "policyChanged": false,
-  "rankedGames": 0
+  "rankedGames": 0,
+  "confirmedCause": "A strict MIME gate rejected Football JSON payloads; official AgentCore SDK request.json parses JSON without this MIME gate",
+  "correction": "Parse bounded JSON independently of MIME label in L02B and M11 HTTP entrypoints; tactical modules unchanged",
+  "validation": {
+    "midTests": 71,
+    "m11Tests": 17,
+    "l02bExtractedValid": 224,
+    "m11ExtractedValid": 30
+  },
+  "newArtifacts": {
+    "L02B": "42f9bfb8aa189873ff78ed311d853f9de2e782d17ca73f838bc3912ca702abc2",
+    "M11": "0f2400f28252615426a128673115b9d7c4bf2c324d0124cb85864f457a8bfa35"
+  }
 }

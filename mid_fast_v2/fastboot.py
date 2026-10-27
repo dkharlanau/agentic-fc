@@ -128,13 +128,15 @@ class Handler(StreamRequestHandler):
                 started = time.perf_counter_ns()
                 handler_unix_ns = time.time_ns()
                 if method != 'GET' and self.server.invocations == 0:
+                    media_type = headers.get('content-type', [''])[0].split(';', 1)[0].strip().lower()
                     audit_log('MID_L02B_HTTP_FIRST_REQUEST', {
                         'buildCommit': os.environ.get('BUILD_COMMIT', 'local'),
                         'methodIsPost': method == 'POST',
                         'pathIsInvocations': path == '/invocations',
                         'contentLengthPresent': 'content-length' in headers,
                         'contentLength': length,
-                        'contentTypeIsJson': headers.get('content-type', [''])[0].split(';', 1)[0].strip().lower() == 'application/json',
+                        'contentTypeIsJson': media_type == 'application/json',
+                        'contentTypeClass': media_type if media_type in ('application/json', 'application/octet-stream', 'text/plain') else ('missing' if not media_type else 'other'),
                         'expectPresent': 'expect' in headers,
                         'sessionHeaderPresent': SESSION_HEADER.lower() in headers,
                     })
@@ -156,10 +158,10 @@ class Handler(StreamRequestHandler):
                     if 'content-length' not in headers:
                         self.reject(411, 'missing_content_length')
                         return
-                    if headers.get('content-type', [''])[0].split(';', 1)[0].strip().lower() != 'application/json':
-                        self.reject(415, 'content_type')
-                        return
                     try:
+                        # AgentCore's SDK parses JSON independently of MIME. The
+                        # Football caller uses a different/default Content-Type.
+                        # Framing/body bounds and JSON validation still apply.
                         raw = self.rfile.read(length)
                         if len(raw) != length:
                             raise ValueError('truncated_body')

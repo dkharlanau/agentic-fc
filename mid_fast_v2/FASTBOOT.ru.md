@@ -1,5 +1,22 @@
 # L02B: исправление запуска L02 на V1
 
+## Football compatibility correction — 27 октября
+
+Живой Football Fitness выявил отличие от native Python SDK: корректно
+фреймированный POST /invocations с JSON body2512 bytes приходит с Content-Type,
+отличным от application/json. Строгая MIME-проверка отвечала415, портал
+показывал MID runtime502 и Fitness4/5. Диагностические метки подтвердили отказ;
+сырые заголовки/тело не сохранялись в публичных данных.
+
+Исправление соответствует установленному AgentCore SDK `_handle_invocation`:
+он вызывает `await request.json()` без MIME gate. Транспорт теперь валидирует
+ограниченные JSON bytes независимо от MIME label. Дублированные заголовки,
+неоднозначный framing, размеры, invalid/truncated JSON остаются отклонёнными.
+Политика L01 не меняется. Аналогично исправлен M11 v3 HTTP entrypoint.
+Проверки включают отсутствующий MIME, application/octet-stream и text/plain
+с полным правильным решением; invalid JSON не превращается в команду.
+Это исправление Football compatibility, не заявление native deadline PASS.
+
 Кандидат, не установлен. Native и Fitness ещё не выполнены. Исходный L02
 сохранён: его провалы на V1/V2 не отменяются. Владелец разрешил автономную
 передачу и выпуск после native PASS и свежего Fitness 5/5 на границе серии.

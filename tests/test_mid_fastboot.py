@@ -87,13 +87,33 @@ class FastBootTests(base_tests.MidHTTPTests):
 
     def test_rejection_audit_uses_bounded_labels_without_header_values(self):
         with patch('mid_fast_v2.fastboot.audit_log') as logged:
-            response = self.raw(b'POST /invocations HTTP/1.1\r\nHost: local\r\nContent-Type: private-value\r\nContent-Length: 2\r\nAuthorization: private-token\r\n\r\n{}')
-        self.assertTrue(response.startswith(b'HTTP/1.1 415 '))
+            response = self.raw(b'POST /invocations HTTP/1.1\r\nHost: local\r\nContent-Type: private-value\r\nContent-Length: 2\r\nAuthorization: private-token\r\n\r\nxx')
+        self.assertTrue(response.startswith(b'HTTP/1.1 400 '))
         self.assertTrue(any(call.args[0] == 'MID_L02B_HTTP_REJECT'
-                            and call.args[1]['reason'] == 'content_type'
+                            and call.args[1]['reason'] == 'invalid_or_truncated_json'
                             for call in logged.call_args_list))
         self.assertNotIn('private-value', str(logged.call_args_list))
         self.assertNotIn('private-token', str(logged.call_args_list))
+
+    def test_invalid_transport_is_not_valid_command(self):
+        for method, path, body, headers, expected in (
+            ('POST', '/invocations', '{', {'Content-Type':'application/json'}, 400),
+            ('POST', '/invocations', '{', {'Content-Type':'text/plain'}, 400),
+            ('POST', '/wrong', '{}', {'Content-Type':'application/json'}, 404),
+            ('GET', '/wrong', None, {}, 404),
+        ):
+            with self.subTest(expected=expected):
+                self.assertEqual(self.call(method, path, body, headers)[0], expected)
+
+    def test_complete_game_decision_with_default_or_non_json_mime(self):
+        row = plan()[0]
+        for i, media_type in enumerate((None, 'application/octet-stream', 'text/plain')):
+            headers = {SESSION_HEADER:'football-mime-' + str(i)}
+            if media_type is not None:
+                headers['Content-Type'] = media_type
+            status, _, raw = self.call('POST', '/invocations', json.dumps(row['request']), headers)
+            self.assertEqual(status, 200)
+            self.assertEqual(base_tests.errors(row, base_tests.decode_response(raw)), [])
 
     def test_post_waits_for_real_decision_without_early_headers(self):
         with socket.create_connection(self.server.server_address, timeout=2) as client:

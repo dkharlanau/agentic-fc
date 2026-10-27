@@ -1,5 +1,12 @@
 # M11 Hybrid Fast MID v3
 
+27 октября перед живыми пилотами HTTP entrypoint приведён к поведению
+AgentCore SDK: bounded JSON body разбирается независимо от MIME label.
+Football Fitness у L02B фактически присылал non-application/json Content-Type,
+что прежняя общая транспортная проверка отклоняла415/portal502. Код тактики
+M11 v3/L01/FastEngine не менялся. Актуальный SHA — в artifact.json; прежние
+native receipts ниже относятся к прежним ZIP, не к этой транспортной сборке.
+
 Статус на 27 октября: **deep simulation PASS; isolated AWS deployment выполнен;
 исправленный ZIP native FAIL (6/6 cold calls >1s); в команде не зарегистрирован,
 Fitness и ranked M11 не запускались**.
