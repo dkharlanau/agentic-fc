@@ -45,12 +45,15 @@ def unwrap(payload):
 
 
 class FastEngine:
-    def __init__(self,player_id,support_mode='stance'):
+    def __init__(self,player_id,support_mode='stance',shot_mode='baseline'):
         if type(player_id) is not int or player_id not in range(5):raise ValueError('player_id')
         if support_mode not in ('stance','probe-wide','outlet'):raise ValueError('support_mode')
         if support_mode!='stance' and player_id!=4:raise ValueError('FWD2-only mode')
+        if shot_mode not in ('baseline','open-goal'):raise ValueError('shot_mode')
+        if shot_mode!='baseline' and player_id!=4:raise ValueError('FWD2-only shot mode')
         self.pid=player_id
         self.support_mode=support_mode
+        self.shot_mode=shot_mode
         self.sessions={}
 
     def choose(self,payload,session='test'):
@@ -124,6 +127,20 @@ class FastEngine:
             # Explicit hasBall=false overrides inferred/qualified ownership.
             if me.has_ball is False:return done(reason='CONTRADICTORY_POSSESSION')
             corridor=min((line_distance(o.x,o.y,me.x,me.y,goal_x,0) for o in state.opponents if o.pid!=0),default=span)
+            if self.shot_mode=='open-goal' and state.play_mode=='PLAY_ON':
+                # Fixed keeper anchors are goal proxies, not surveyed posts.
+                # Only exploit a conspicuous excursion and a clear central lane;
+                # never extend range because the keeper moved toward the shooter.
+                distance=math.hypot(me.x-goal_x,me.y)
+                keeper_from_goal=math.hypot(goalkeeper.x-goal_x,goalkeeper.y)
+                keeper_lane=line_distance(goalkeeper.x,goalkeeper.y,me.x,me.y,goal_x,0)
+                if distance<=.35*span and abs(me.y)<=.10*span and \
+                        keeper_from_goal>.18*span and keeper_lane>.06*span and corridor>.04*span:
+                    facts['shotContext']={'distanceSpan':distance/span,
+                        'keeperGoalDistanceSpan':keeper_from_goal/span,
+                        'keeperLaneClearanceSpan':keeper_lane/span,
+                        'fieldLaneClearanceSpan':corridor/span}
+                    return done('SHOOT',{'aim_location':'CENTER','power':.8},'OPEN_GOAL_CENTER_SHOT')
             if state.play_mode=='PLAY_ON' and pid in (2,3,4) and math.hypot(me.x-goal_x,me.y)<=.20*span and abs(me.y)<=.10*span and corridor>.02*span:
                 return done('SHOOT',{'aim_location':'BL' if goalkeeper.y>0 else 'TR','power':.8},'CLOSE_CLEAR_SHOT')
             targets=[]
