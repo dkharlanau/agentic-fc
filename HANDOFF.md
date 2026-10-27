@@ -6,6 +6,8 @@ and main integration. No extra agents, automations, IAM changes or secrets in Gi
 
 ## Actual installed team — 23:17 UTC
 
+Here "baseline" means the handed-off L02B control, NOT the retired Baseline or M11 setup.
+
 Originalbaseline: MIDreplay-safe traceV2 sourceaa68b25, originalGK/DEF/FWD4/FWD5,
 formation1-1-2. FreshFitness5/5, exactallfiveUIbindings andAWSREADY readback23:14.
 DEF/FWD4 are managedharness resources: get_harness, not get_agent_runtime.

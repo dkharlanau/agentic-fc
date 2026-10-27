@@ -20,6 +20,8 @@ permission. Preserve a running block and any newer owner restriction.
 - Before changing a role, retain the exact prior binding and artifact/configuration
   identity. Isolated native checks must use newly created owned session IDs;
   save their identity privately before invocation and stop only those sessions.
+- Respect resource kind: managed harness and native runtime use different read APIs.
+  ResourceNotFound from the wrong API does not establish a missing registered player.
 - Check complete response bytes, command identity, adversarial ownership/geometry,
   repeated inputs, cold and later calls. Passing a response schema is not Fitness.
   Fresh Fitness and prematch readiness are separate gates. A rendered saved field
