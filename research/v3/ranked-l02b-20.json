@@ -1,19 +1,26 @@
 {
   "schemaVersion": 2,
   "candidate": "L02B",
-  "status": "preparing-central-restart-support-fitness",
+  "status": "ready-first-ranked-start",
   "ownerGoal": "Autonomous bot pilot expanded by owner to twenty completed ranked games per candidate; first ten retained as original deliverable",
   "targetCompletedMatches": 20,
   "completedMatches": 0,
-  "sourceCommit": "c1c7ac13cd6ebc10a34a223212b6bba080c30340",
-  "archiveSha256": "cf99810d48a0fee06efc05d12a547a96aa621f4f5030497d4444430576de608f",
+  "sourceCommit": "912b687141c03f72b24ab002a8bd0d9d6d646804",
+  "archiveSha256": "2fdad20a8e8a226d36ab81f5223c2c21cc16d80980c80db7c641a69bb79ac763",
   "formation": "1-1-2",
   "changeSurface": "MID only",
   "nativeGatePassed": null,
   "nativeFailureRetained": true,
   "pilotDecision": "Proceed with the bounded real-game pilot under the renewed concrete owner goal; do not claim native admission PASS",
   "promotionEligibleFromNative": false,
-  "fitness": null,
+  "fitness": {
+    "passed": 5,
+    "total": 5,
+    "activePercent": 100,
+    "reportedCommands": 5,
+    "source": "fresh Football UI Fitness",
+    "observedAtUTC": "2026-10-27T12:08:47.632198+00:00"
+  },
   "beforeLeaderboard": {
     "rank": 12,
     "played": 199,
@@ -32,8 +39,8 @@
     "Native cold calls failed the original engineering gate; real-game pilot does not erase this result",
     "Unavailable per-game telemetry stays null"
   ],
-  "updatedAtUTC": "2026-10-27T11:56:54.552475+00:00",
-  "bindingsDigestSha256": "566e0bee3d3014e93d2d33c080016d9f6979fb38256194345f376ff6865011bf",
+  "updatedAtUTC": "2026-10-27T12:07:54.113746+00:00",
+  "bindingsDigestSha256": "12eb2eefa82d494b176974c69baa565f4c5ca4ad0c54e42883e38b2fcec1c848",
   "fitnessAttempts": [
     {
       "passed": 4,
@@ -54,5 +61,11 @@
   },
   "transportCorrection": "Bounded JSON parsing independent of MIME; all tactical module hashes unchanged",
   "restartOwnerApproved": true,
-  "restartCompatibility": "Fresh validated full-size XY KICK_OFF: nonsprinting central own-half MOVE_TO; neutral stance when geometry unknown; all original guards retained"
+  "restartCompatibility": "Fresh validated full-size XY KICK_OFF: nonsprinting central own-half MOVE_TO; neutral stance when geometry unknown; all original guards retained",
+  "restartRetry": {
+    "scope": "One exact initial tick0/time0 own-half support retry within1s; no changed/late/third/PLAY_ON/ball-action retries",
+    "hypothesis": "Football bootstrap reuses exact initial frame; previous second release counted0/1active",
+    "verifiedFitness": true
+  },
+  "cohortFrozenAtUTC": "2026-10-27T12:08:47.632198+00:00"
 }

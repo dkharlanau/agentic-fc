@@ -70,7 +70,7 @@
       "verifiedReady": true
     }
   },
-  "currentStatus": "Preparing bounded idempotent startup retry build",
+  "currentStatus": "L02B actual Fitness5/5; fixed twenty-game pilot ready to start",
   "supportFitness": {
     "candidate": "L02B",
     "passed": 4,
@@ -86,5 +86,27 @@
       "total": 5
     }
   },
-  "nextExperiment": "Single exact initial kickoff positioning retry within1s, no competitive action retry"
+  "nextExperiment": "Single exact initial kickoff positioning retry within1s, no competitive action retry",
+  "initialKickoffRetryFitness": {
+    "candidate": "L02B",
+    "passed": 5,
+    "total": 5,
+    "sourceCommit": "912b687141c03f72b24ab002a8bd0d9d6d646804",
+    "archiveSha256": "2fdad20a8e8a226d36ab81f5223c2c21cc16d80980c80db7c641a69bb79ac763",
+    "fiveExactBindingsVerified": true,
+    "formation": "1-1-2",
+    "observedAtUTC": "2026-10-27T12:08:47.632198+00:00",
+    "audit": {
+      "commands": [
+        "NEUTRAL_RESTART_SUPPORT/MOVE_TO",
+        "IDEMPOTENT_INITIAL_KICKOFF_RETRY/MOVE_TO"
+      ],
+      "modelAttempted": 0,
+      "handlerToFlushMs": [
+        0.82752,
+        0.489854
+      ],
+      "timingScope": "Application handler only, excludes native wall and startup"
+    }
+  }
 }

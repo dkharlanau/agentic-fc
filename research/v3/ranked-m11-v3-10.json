@@ -1,12 +1,12 @@
 {
   "schemaVersion": 2,
   "candidate": "M11 hybrid v3 corrected package",
-  "status": "preparing-central-restart-support-fitness",
+  "status": "preparing-initial-kickoff-retry-fitness",
   "ownerGoal": "Deploy both candidates and play ten completed real ranked matches each",
   "targetCompletedMatches": 10,
   "completedMatches": 0,
-  "sourceCommit": "c1c7ac13cd6ebc10a34a223212b6bba080c30340",
-  "archiveSha256": "1f57a0fa672d6c76df7c2e6f94265348a4c75d0ac5aae3af8c4a1773f4c17f21",
+  "sourceCommit": "912b687141c03f72b24ab002a8bd0d9d6d646804",
+  "archiveSha256": "e259682c101f5eae1d5d769cff524b98f3b0aa0628f572822f8ab97be139fbba",
   "formation": "1-1-2",
   "changeSurface": "MID only",
   "nativeGatePassed": null,
@@ -32,7 +32,7 @@
     "Native cold calls failed the original engineering gate; real-game pilot does not erase this result",
     "Unavailable per-game telemetry stays null"
   ],
-  "updatedAtUTC": "2026-10-27T11:56:54.552475+00:00",
+  "updatedAtUTC": "2026-10-27T12:07:54.113746+00:00",
   "historicalNativeGate": {
     "passed": false,
     "sourceCommit": "244065b0d3fe10447759c2afa8684f42fa566474",
@@ -41,5 +41,10 @@
   },
   "transportCorrection": "Bounded JSON parsing independent of MIME; all tactical module hashes unchanged",
   "restartOwnerApproved": true,
-  "restartCompatibility": "Fresh validated full-size XY KICK_OFF: nonsprinting central own-half MOVE_TO; neutral stance when geometry unknown; all original guards retained"
+  "restartCompatibility": "Fresh validated full-size XY KICK_OFF: nonsprinting central own-half MOVE_TO; neutral stance when geometry unknown; all original guards retained",
+  "restartRetry": {
+    "scope": "One exact initial tick0/time0 own-half support retry within1s; no changed/late/third/PLAY_ON/ball-action retries",
+    "hypothesis": "Football bootstrap reuses exact initial frame; previous second release counted0/1active",
+    "verifiedFitness": false
+  }
 }

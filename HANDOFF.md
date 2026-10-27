@@ -1,3 +1,16 @@
+# Live pilot ready — 2026-10-27
+
+L02B exact source912b687141c03f72b24ab002a8bd0d9d6d646804 deployedREADY,
+archive2fdad20a8e8a226d36ab81f5223c2c21cc16d80980c80db7c641a69bb79ac763.
+Fresh actual Fitness5/5,5commands100%active. Five exact bindings re-read,
+onlyMID differs, formation1-1-2. Initial retry hypothesis supported by Fitness;
+not a native latency PASS. Now start twenty unchanged real ranked L02B games,
+with compact reviews after each5 and first10 deliverable preserved. Actual0/20.
+M11 retry artifact locally ready but deployment/Fitness/cohort pending0/20.
+No probes/deploy/mutation during any live game. Private live checkpoint and
+all primary handles under .local/stage2-20261027/play-pilots. Baseline recovery
+canonical-bindings.json remains exact and tested. Goal staysactive until done.
+
 # Active checkpoint — 2026-10-27 kickoff retry correction
 
 Owner authorized autonomous necessary corrections and20 games each (40 total).
