@@ -1,3 +1,92 @@
+## 2026-10-27 — three-bot GK block closed; next open-goal shot pilot
+
+coach-v1.0 actually read on resume and hash rechecked unchanged after block.
+Owner supersedes five-game cadence with short 2–3 game iterations. Completed
+Practice block: TotalAttack1:0, Benchmark2:0, FortKnox5:0; 3W,8:0,18:13shots.
+Sources: practice-stage2-l02b-gk-fast-01.json and stage2-gk-fast-cohort-audit.json.
+C01: unchanged config during3, freshFitness5/5 and exact bindings before start.
+C03: retain DEF2; observed cover with MID3 at1:26–1:41 versus FortKnox. Keeper
+excursions by opponent are a major confounder, not proof of our shooting quality.
+C02: own FWD2 issued noSHOOT in3. Owner requests immediate accurate open-goal
+shots, a higher forward outlet, and safe escape under pressure. Queue separately.
+Next single tactical change: opt-in FWD2 central shot at conspicuously vacated
+goal, known ownership/geometry, clear central lane, bounded range; keep power0.8.
+No additional model call. Local17testsPASS. Native mirrored check/readback and
+freshFitness precede two observed games. Rollback: exact priorFWD2 binding.
+Report role/latency attribution remains unresolved: ownedGK onlyCLEAR in games
+but portal own column includesGKDist. Internal compute/flush mostly<1ms is not
+end-to-end latency. DEF/FWD1 game model duration remains unknown, not zero.
+Compact model prompts can be prepared, but do not silently combine deployment
+with this shot pilot. Unknown corner-coordinate semantics remain explicit.
+
+## 2026-10-27 — actual readiness5/5; three observed games start
+
+coach-v1.0 hash rechecked unchanged. Exact all5 portal bindings read back;
+GKFastdcaf97c plus MIDretry50028079, originalDEF/FWD1/FWD2,112. ActualfreshFitness
+5/5,5commands100%active. Its0ms mean is not game latency. Owner explicitly asks
+for three distinct bots and actual user-like visual coaching; startTotalAttack,
+thenBenchmark,FortKnox without in-game probes/settings. Agentquota32%remaining;
+stop starting further work at10%. Journal practice-stage2-l02b-gk-fast-01.json.
+C01 frozen3; C02 actual pass receipt/shot setup; C03 keeper position/coverage.
+CanonicalGK13 and originalL02B912 bindings are preserved for rollback. Current
+pilot includes requested MID startup compatibility repair, not pureGK causalA/B.
+
+## 2026-10-27 — readiness repair before three-bot coaching cycle
+
+Owner explicitly asks to fix MID3 and immediately watch games; short cycle now
+three games, one per benchmark. GK Fast replaces rejected G3. GK firstFitness
+failed because FREE KICK_OFF returned CLEAR; misleading portal held-possession
+tip contradicted own Runtime logs. Source dcaf97c holds current own GK position
+on verifiedXY restart; GK then passed actualFitness. Remaining MID3 failure is
+exact startup duplicate after1.19/2.23/2.46s, beyond1s retry window. Owner requested
+repair: source0028079 allows one exact initial tick0/time0 position retry within5s;
+changed/intervening/third/expired/PLAY_ON frames still release.13focused testsPASS.
+Separate MID Runtime preserves original rollback and all open-play policy bytes.
+This pilot therefore includes GK change plus declared startup transport repair;
+not a pure GK-only causal comparison. No more laboratory exploration once actual
+Fitness5/5 passes. Follow actual ball/receiver/shot/keeper episodes on screen.
+
+## 2026-10-27 — owner shortens development cycle to two games
+
+Direct owner instruction supersedes the prior five-game development cadence:
+one change, deploy, TWO observed matches, review, next iteration. No active match
+interrupted. Current G3 GK prompt deployed separately, saved native2/2 commands
+verified, all own sessions stopped; registered onlyGK, Fitness running. Planned
+bots are TotalAttack then Benchmark. No additional native exploration before
+these games unless an actual readiness failure requires diagnosis. Quota reserve10%.
+
+## 2026-10-27 — GK screen selects G3 delegation for portal validation
+
+coach-v1.0 rechecked unchanged before new proposed Practice block. Native evidence
+in research/v3/keeper-stage2/results.json: originalNova2/8,Micro3/8 initial safety
+agreement; Micro wrong-side moves/false possession reject model-only replacement.
+G2-Nova9/12 still has AWAY errors; rejected. C03 next change is GK prompt-only
+G3 on SAME Nova2Lite: built-in keeper handles open-play saves/position/distribution,
+neutral stance only at kickoff. This removes model-generated unsafe targets;
+actual save/pass benefit unknown. G3 declared policy12/12 after fence removal,
+strictJSON10/12; native max33s retained, not a low-latency certification. Fresh
+saved readback/native/Fitness must precede play. Candidate uses separate Harness;
+canonicalGK13 exact binding is rollback. Other4roles/112 frozen. Proposed five
+Practice bots:TotalAttack,Benchmark,FortKnox,TotalAttack,Benchmark. No in-game
+probes or tuning. Check agent quota before each game; stop starting work at10%
+remaining per owner. All40 comparison sessions stopped; no live game interrupted.
+
+## 2026-10-27 — owner requests improvement after two visual games
+
+HANDOFF, coach-v1.0 and latest reviews actually reread. Owner explicitly directs
+improvement now; visual block closes at two completed games, no live interruption.
+Source: practice-stage2-l02b-coach-01.json:2W/6:1,14:11shots, incomplete sampled
+screen coverage. Successful GK-to-DEF release observed once; no pass census.
+C01: owner redirect accepted at idle boundary. C02 deferred: low energy/forward
+crowding observed, weak shot cause unknown. C03: check GK model-only speed and
+position safety. Current prompt assumes full-sizeXY despite observed smallXZ
+ball/XYplayers; alternative explanation is prompt/geometry rather than model.
+Predeclare identical bounded states, baseline and Micro, raw JSON/role legality,
+safe goal-side positions, ownership and distribution; retain all cold latency.
+One next change only after readback and freshFitness5/5. Reject model if unsafe;
+canonical GK13 is exact rollback. Other roles and112 fixed, L02B MID retained.
+Practice bot outcomes do not establish human-opponent superiority.
+
 ## 2026-10-27 — owner selects L02B only; Baseline stopped after two
 
 HANDOFF, coach-v1.0 and latest reviews actually read on resume. The owner

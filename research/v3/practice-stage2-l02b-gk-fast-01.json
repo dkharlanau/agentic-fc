@@ -1,0 +1,248 @@
+{
+  "schemaVersion": 1,
+  "cohort": "l02b-gk-fast-01",
+  "candidate": "L02B + GK Fast",
+  "targetCompletedMatches": 3,
+  "completedMatches": 3,
+  "status": "completed",
+  "mode": "practice",
+  "formation": "1-1-2",
+  "changeSurface": "GK plus explicitly requested MID startup duplicate delivery repair; MID open-play tactics unchanged",
+  "gkSourceCommit": "dcaf97c37be302e0dd077056eb73f2d74bcb539f",
+  "gkArchiveSha256": "aba7083c6940cb84baf60e4c4b10e560622473efc254d44618e11b54b021a87d",
+  "midSourceCommit": "002807901e47cd587442d40c339736397f15e43d",
+  "opponentOrder": [
+    "Total Attack United",
+    "The Benchmark FC",
+    "Fort Knox Athletic"
+  ],
+  "matches": [
+    {
+      "opponent": "Total Attack United",
+      "opponentStyle": "aggressive",
+      "side": "HOME",
+      "result": "WIN",
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "shotsFor": 6,
+      "shotsAgainst": 7,
+      "shotsOnTargetFor": 1,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 45,
+      "teamReportAverageLatencyMs": 837,
+      "teamReportCommands": 324,
+      "teamReportCommandCounts": {
+        "MOVE_TO": 133,
+        "PRESS_BALL": 91,
+        "INTERCEPT": 50,
+        "SHOOT": 42,
+        "CLEAR_OVERRIDE": 7,
+        "GK_DISTRIBUTE": 1
+      },
+      "perRoleReportLatencyMs": {
+        "GK": 617,
+        "DEF": 914,
+        "MID": 1064,
+        "FWD1": 611,
+        "FWD2": 1001
+      },
+      "perRoleReportedSuccessPercent": {
+        "GK": 100,
+        "DEF": 100,
+        "MID": 100,
+        "FWD1": 100,
+        "FWD2": 100
+      },
+      "id": "stage2-gk-fast-01",
+      "mode": "practice",
+      "sourceCommit": "dcaf97c37be302e0dd077056eb73f2d74bcb539f",
+      "midSourceCommit": "002807901e47cd587442d40c339736397f15e43d",
+      "scoreless": false,
+      "cleanSheet": true,
+      "visualEvidenceAlias": "gk-fast-01-visual",
+      "passCompletionRate": null,
+      "actualPassAttempts": null,
+      "actualCompletedPasses": null,
+      "reportedShotAccuracy": 0.16666666666666666,
+      "notes": {
+        "coverage": "Sampled frames from kickoff; many gaps and goal animation; no full trajectory or pass census",
+        "observations": [
+          {
+            "time": "00:02 and00:08",
+            "finding": "MID3 initially controls at centre; laterFWD4 controls on advanced right flank surrounded by opponents. Intermediate pass trajectory unseen."
+          },
+          {
+            "time": "00:16",
+            "finding": "Both forwards low energy bars; MID3 controls in central circle with forwards further ahead."
+          },
+          {
+            "time": "00:44",
+            "finding": "DEF2 is at opponent penalty area near a multi-player cluster; opponent AlFrenzy controls. Own keeper stayed near own goal in sampled views."
+          },
+          {
+            "time": "01:03",
+            "finding": "DEF2 back near own penalty area; both forwards and MID around opposing ballcarrier in midfield."
+          }
+        ],
+        "ownerObservation": "DEF2 had passing options toward forwards but did not pass; exact timestamp unavailable",
+        "goalOrigin": "Winning shot origin not captured; report credits MID3",
+        "hypotheses": [
+          "DEF2 may leave central cover to chase high; check recurrence",
+          "Forward fatigue/spacing may impede useful options; cause and shot effect not established"
+        ],
+        "passCompletionRate": null
+      },
+      "savedAtUTC": "2026-10-27T16:15:35.966112+00:00"
+    },
+    {
+      "opponent": "The Benchmark FC",
+      "opponentStyle": "balanced",
+      "side": "HOME",
+      "result": "WIN",
+      "goalsFor": 2,
+      "goalsAgainst": 0,
+      "shotsFor": 4,
+      "shotsAgainst": 4,
+      "shotsOnTargetFor": 2,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 48,
+      "teamReportAverageLatencyMs": 818,
+      "teamReportCommands": 370,
+      "teamReportCommandCounts": {
+        "MOVE_TO": 143,
+        "PRESS_BALL": 89,
+        "INTERCEPT": 64,
+        "PASS": 27,
+        "SHOOT": 26,
+        "CLEAR_OVERRIDE": 14,
+        "GK_DISTRIBUTE": 5,
+        "FOLLOW_PLAYER": 1,
+        "MARK": 1
+      },
+      "perRoleReportLatencyMs": {
+        "GK": 602,
+        "DEF": 802,
+        "MID": 1015,
+        "FWD1": 633,
+        "FWD2": 806
+      },
+      "perRoleReportedSuccessPercent": {
+        "GK": 100,
+        "DEF": 100,
+        "MID": 100,
+        "FWD1": 100,
+        "FWD2": 100
+      },
+      "id": "stage2-gk-fast-02",
+      "mode": "practice",
+      "sourceCommit": "dcaf97c37be302e0dd077056eb73f2d74bcb539f",
+      "midSourceCommit": "002807901e47cd587442d40c339736397f15e43d",
+      "scoreless": false,
+      "cleanSheet": true,
+      "visualEvidenceAlias": "gk-fast-02-visual",
+      "passCompletionRate": null,
+      "actualPassAttempts": null,
+      "actualCompletedPasses": null,
+      "reportedShotAccuracy": 0.5,
+      "notes": [
+        "Only initial 00:02 frame was directly observed before context interruption: FWD4 controlled ball at centre, MID3 behind-left, FWD5 wide lower flank, DEF2 deeper. Remaining gameplay was not observed; do not infer pass accuracy or goal origins from report narrative.",
+        "Owner reports DEF2 seems to play well; preserve DEF2 and assess concrete episodes rather than change from one high-position frame.",
+        "Report marks 2:0 win,4:4 shots. Report role attribution/latency requires owned-log reconciliation after third game."
+      ],
+      "savedAtUTC": "2026-10-27T16:22:19.872974+00:00"
+    },
+    {
+      "opponent": "Fort Knox Athletic",
+      "opponentStyle": "defensive",
+      "side": "HOME",
+      "result": "WIN",
+      "goalsFor": 5,
+      "goalsAgainst": 0,
+      "shotsFor": 8,
+      "shotsAgainst": 2,
+      "shotsOnTargetFor": 5,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 31,
+      "teamReportAverageLatencyMs": 974,
+      "teamReportCommands": 400,
+      "teamReportCommandCounts": {
+        "MARK": 105,
+        "PRESS_BALL": 84,
+        "MOVE_TO": 79,
+        "PASS": 62,
+        "INTERCEPT": 44,
+        "CLEAR_OVERRIDE": 23,
+        "GK_DISTRIBUTE": 3
+      },
+      "perRoleReportLatencyMs": {
+        "GK": 660,
+        "DEF": 1054,
+        "MID": 1131,
+        "FWD1": 758,
+        "FWD2": 809
+      },
+      "perRoleReportedSuccessPercent": {
+        "GK": 100,
+        "DEF": 100,
+        "MID": 100,
+        "FWD1": 100,
+        "FWD2": 100
+      },
+      "id": "stage2-gk-fast-03",
+      "mode": "practice",
+      "sourceCommit": "dcaf97c37be302e0dd077056eb73f2d74bcb539f",
+      "midSourceCommit": "002807901e47cd587442d40c339736397f15e43d",
+      "scoreless": false,
+      "cleanSheet": true,
+      "visualEvidenceAlias": "gk-fast-03-visual",
+      "passCompletionRate": null,
+      "actualPassAttempts": null,
+      "actualCompletedPasses": null,
+      "reportedShotAccuracy": 0.625,
+      "notes": [
+        "Sampled visual observations only, no full trajectory census. 00:05 DEF2 stayed behind attacking group, both forwards already used visible energy. Opponent keeper Pat Bunker had advanced far from own goal.",
+        "00:17 ball airborne near opponent box after FWD4 advance; shot origin/power not captured. 00:23 opponent controlled ball at own box with both our forwards nearby. First goal followed, exact recovery and shot not captured.",
+        "00:33 opponent keeper again near centre in crowded group. 01:01 keeper carried ball toward our goal; our GK stayed near own goal, MID3 covered in front, DEF2 seen in slide farther upfield.",
+        "01:26–01:41 DEF2 and MID3 held own box area while forwards contested opponent possession nearby. This supports preserving DEF2; it does not prove a completed defensive action or pass success rate.",
+        "01:54 ball travelled toward visibly empty opponent goal, subsequent score5:0. Exact kicker/power not captured. Repeated opponent keeper excursions are a confounder for large win.",
+        "Owner says DEF2 plays well; preserve DEF2. Inspect exact owned runtime commands/latency before tactical change."
+      ],
+      "savedAtUTC": "2026-10-27T16:28:55.477175+00:00"
+    }
+  ],
+  "coachVersion": "coach-v1.0",
+  "ownerCadence": "One change/deploy,2–3observed games,review; current3oneperbenchmark",
+  "limitations": [
+    "No physical pass-completion census from command totals",
+    "ReportedSOT semantics not verified",
+    "Native cold3.6–3.8s not game-server latency",
+    "No claim of advantage against human opponents"
+  ],
+  "createdAtUTC": "2026-10-27T15:59:31.065866+00:00",
+  "kickoffCorrection": "Validated full-size XY: hold own GK current position on KICK_OFF",
+  "midArchiveSha256": "c5aba85979fc4ceef49eda068671a8b38d0bbea96082b4ce785b3273173d3a3e",
+  "midBaseSourceCommit": "912b687141c03f72b24ab002a8bd0d9d6d646804",
+  "bindingsDigestSha256": "37c5d5e966dd7770a6e785f75e56759caa518267637f431a4f5807f6d98d26ce",
+  "fitness": {
+    "passed": 5,
+    "activeCommands": 5,
+    "activePercent": 100,
+    "reportedMeanMs": 0,
+    "note": "0ms is not actual game latency"
+  },
+  "bindingsVerified": true,
+  "cohortFrozenAtUTC": "2026-10-27T16:09:31.375205+00:00",
+  "review": {
+    "wins": 3,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 8,
+    "goalsAgainst": 0,
+    "shotsFor": 18,
+    "shotsAgainst": 13,
+    "decision": "Retain current GK/MID and DEF; test FWD2 open-goal shots separately",
+    "causalImprovementEstablished": false,
+    "runtimeAudit": "stage2-gk-fast-cohort-audit.json",
+    "limits": "All HOME Practice, sampled screen only; opponent keeper excursions; report role attribution unresolved"
+  }
+}

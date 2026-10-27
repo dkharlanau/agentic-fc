@@ -1,0 +1,19 @@
+{
+  "cohort": "l02b-open-goal-01",
+  "mode": "practice",
+  "targetCompletedMatches": 2,
+  "completedMatches": 0,
+  "status": "running",
+  "sourceCommit": "5d3d13ab1b385abb205bf3a9054c0152a7391631",
+  "archiveSha256": "180da69d21ef466a336cf43847682c2ed8bcd717cc7cf7e9c44c3de4bced39db",
+  "formation": "1-1-2",
+  "changeSurface": "FWD2 open-goal centre shot only; other four roles unchanged",
+  "coachVersion": "coach-v1.0",
+  "fitnessPassed": 5,
+  "opponentOrder": [
+    "Fort Knox Athletic",
+    "Total Attack United"
+  ],
+  "matches": [],
+  "createdAtUTC": "2026-10-27T16:40:51.971487+00:00"
+}

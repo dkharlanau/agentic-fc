@@ -1,0 +1,127 @@
+{
+  "kind": "Owned Runtime decisions, paired by exact private match session; internal duration is not full game latency",
+  "matches": [
+    {
+      "id": "stage2-gk-fast-01",
+      "roles": {
+        "GK": {
+          "calls": 66,
+          "commands": {
+            "CLEAR_OVERRIDE": 66
+          },
+          "internalMedianMs": 0.5423305,
+          "internalMaxMs": 1.610525,
+          "internalMetric": "decision_compute",
+          "modelAttempted": false
+        },
+        "MID": {
+          "calls": 65,
+          "commands": {
+            "CLEAR_OVERRIDE": 61,
+            "PASS": 4
+          },
+          "internalMedianMs": 0.600826,
+          "internalMaxMs": 0.80664,
+          "internalMetric": "handler_to_flush",
+          "modelAttempted": false
+        },
+        "FWD2": {
+          "calls": 65,
+          "commands": {
+            "CLEAR_OVERRIDE": 20,
+            "SET_STANCE": 44,
+            "PASS": 1
+          },
+          "internalMedianMs": 0.558061,
+          "internalMaxMs": 1.400959,
+          "internalMetric": "decision_compute",
+          "modelAttempted": false
+        }
+      }
+    },
+    {
+      "id": "stage2-gk-fast-02",
+      "roles": {
+        "GK": {
+          "calls": 73,
+          "commands": {
+            "CLEAR_OVERRIDE": 73
+          },
+          "internalMedianMs": 0.547498,
+          "internalMaxMs": 1.314388,
+          "internalMetric": "decision_compute",
+          "modelAttempted": false
+        },
+        "MID": {
+          "calls": 72,
+          "commands": {
+            "CLEAR_OVERRIDE": 71,
+            "PASS": 1
+          },
+          "internalMedianMs": 0.8229185,
+          "internalMaxMs": 0.951774,
+          "internalMetric": "handler_to_flush",
+          "modelAttempted": false
+        },
+        "FWD2": {
+          "calls": 71,
+          "commands": {
+            "CLEAR_OVERRIDE": 32,
+            "SET_STANCE": 35,
+            "PASS": 3,
+            "INTERCEPT": 1
+          },
+          "internalMedianMs": 0.409591,
+          "internalMaxMs": 0.966668,
+          "internalMetric": "decision_compute",
+          "modelAttempted": false
+        }
+      }
+    },
+    {
+      "id": "stage2-gk-fast-03",
+      "roles": {
+        "GK": {
+          "calls": 80,
+          "commands": {
+            "CLEAR_OVERRIDE": 80
+          },
+          "internalMedianMs": 0.5538815,
+          "internalMaxMs": 1.377486,
+          "internalMetric": "decision_compute",
+          "modelAttempted": false
+        },
+        "MID": {
+          "calls": 76,
+          "commands": {
+            "CLEAR_OVERRIDE": 72,
+            "PASS": 4
+          },
+          "internalMedianMs": 0.6291645,
+          "internalMaxMs": 0.84786,
+          "internalMetric": "handler_to_flush",
+          "modelAttempted": false
+        },
+        "FWD2": {
+          "calls": 79,
+          "commands": {
+            "CLEAR_OVERRIDE": 50,
+            "SET_STANCE": 27,
+            "PASS": 2
+          },
+          "internalMedianMs": 0.551149,
+          "internalMaxMs": 1.311945,
+          "internalMetric": "decision_compute",
+          "modelAttempted": false
+        }
+      }
+    }
+  ],
+  "modelRoleGameLatencyMs": null,
+  "reportAttribution": "unresolved: owned GK returns only CLEAR_OVERRIDE while portal own column contains GK_DISTRIBUTE; report team/role counters are not safe to attribute",
+  "notes": [
+    "No inference of zero model calls from missing Harness game traces",
+    "No pass-completion or shot-speed measurement",
+    "Own decision logs cannot establish network or scheduling latency"
+  ]
+}

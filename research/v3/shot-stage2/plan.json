@@ -1,0 +1,73 @@
+{
+  "candidate": "FWD2 open-goal centre shot",
+  "status": "fitness5/5-verified-ready-for-two-games",
+  "scope": "FWD2 only; GK,DEF,MID,FWD1 and 1-1-2 unchanged",
+  "hypothesis": "A bounded immediate central shot can exploit conspicuous keeper excursions without another model call",
+  "preconditions": [
+    "known calibrated geometry",
+    "confirmed non-contradictory possession",
+    "PLAY_ON",
+    "distance<=0.35 calibrated span",
+    "lateral offset<=0.10 span",
+    "keeper>0.18 span from fixed goal proxy",
+    "keeper clearance from shot segment>0.06 span",
+    "field-player clearance>0.04 span"
+  ],
+  "action": {
+    "aim_location": "CENTER",
+    "power": 0.8
+  },
+  "baseline": "Prior FWD2 immutable binding; original shot range0.20 span and corner rule remain outside extension",
+  "rollback": "Restore exact prior FWD2 binding saved privately; freshFitness5/5",
+  "testPlan": "Two observed Practice games: Fort Knox then Total Attack; no in-game tuning",
+  "decision": "Retain only if branch is exercised safely with observed benefit; zero triggers means insufficient evidence",
+  "latency": "No new model, network, tool or model reasoning step; compare full native cold/warm separately from internal compute",
+  "limitations": [
+    "Goal anchors are proxies, not surveyed posts",
+    "Corner-coordinate mapping not validated",
+    "No power increase or human-opponent superiority claim",
+    "Portal role/latency attribution unresolved"
+  ],
+  "queuedSeparately": [
+    "FWD2 remains a higher outlet after loss",
+    "Safe escape from crowded own goal area using only supported actions",
+    "Compact FWD1 prompt with native validation before any separate deployment"
+  ],
+  "compactPrompt": {
+    "file": "fwd1-compact-draft.txt",
+    "status": "draft-not-deployed",
+    "note": "Includes behavioral simplification; not equivalent to baseline and requires separate validation"
+  },
+  "localTests": 18,
+  "sourceCommit": "5d3d13ab1b385abb205bf3a9054c0152a7391631",
+  "archiveSha256": "180da69d21ef466a336cf43847682c2ed8bcd717cc7cf7e9c44c3de4bced39db",
+  "native": {
+    "passed": 6,
+    "total": 6,
+    "allSessionsStopped": true,
+    "fullMs": [
+      [
+        5321,
+        327,
+        945
+      ],
+      [
+        3638,
+        360,
+        319
+      ]
+    ],
+    "coldMs": [
+      5321,
+      3638
+    ],
+    "scope": "SDK wall; cold retained; not game-server latency"
+  },
+  "bindingsVerified": true,
+  "fitness": {
+    "passed": 5,
+    "activeCommands": 5,
+    "activePercent": 100,
+    "meanNotGameLatency": true
+  }
+}

@@ -38,6 +38,22 @@ def shot_sequence(side=0,variant='open'):
 
 
 class OpenGoalTests(unittest.TestCase):
+    def test_small_live_xz_ball_frame_in_both_directions(self):
+        for side in (0,1):
+            for variant,expected in [('open','SHOOT'),('blocked','PASS')]:
+                seed,state=shot_sequence(side,variant)
+                for payload in (seed,state):
+                    gs=payload['gameState']
+                    for player in gs['players']:
+                        player['position']={k:v/10 for k,v in player['position'].items()}
+                        player['stamina']=1
+                        if player['agentId']=='agentId_0':player['lastAction']='StayNearGoal'
+                    bp=gs['ball']['position'];gs['ball']['position']={'x':bp['x']/10,'y':.15,'z':bp['y']/10}
+                engine=FastEngine(4,shot_mode='open-goal');engine.choose(seed,'game')
+                commands,audit=engine.choose(state,'game')
+                self.assertEqual(audit['frame'],'keeper_reference_xz')
+                self.assertEqual(commands[0]['commandType'],expected)
+
     def test_mirrored_clear_open_goal_and_baseline_unchanged(self):
         for side in (0,1):
             seed,state=shot_sequence(side)
