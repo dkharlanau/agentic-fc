@@ -1,3 +1,22 @@
+# Stage 2 execution — 2026-10-27
+
+Owner now authorizes sequential L02B and final M11 v3 native/Fitness admission,
+then exactly ten completed ranked matches per admitted immutable candidate.
+This supersedes historical five-game screening below. Latest protocol:
+research/v3/STAGE2_TEST_20261027.ru.md. Current source commit095e3994b8ea55f6671b7833171c0ff83b484b92.
+New Workshop joined with explicit owner confirmation of its terms. New account
+starts with zero Harnesses/Runtime resources; portal still references old account
+bindings, Fitness is not healthy. No match is active in the observed portal.
+Restore exact baseline content first, then require fresh Fitness5/5 before
+candidate screening. No candidate has yet been deployed/registered/admitted.
+Current portal leaderboard snapshot: #11,198 played,119W/6D/73L,363points,
+goals268:162. Dashboard's 20-match summary is a different surface, not the total.
+Local L02B224/224 and84 focused unit tests passed; these are not AWS evidence.
+Original game checkout and its uncommitted notes remain untouched; independent
+branch codex/stage2-native-screen-20261027 preserves the exact candidate source.
+Private receipts/current credentials are under .local/stage2-20261027 only.
+No IAM expansion, automation, or extra agent is authorized by this checkpoint.
+
 # M11 v3 deep-run checkpoint — 2026-10-26
 
 Authoritative M11 after deep run is **hybrid v3**, not the earlier pure FastEngine MID. Exact result: research/v3/M11_DEEP_RUN_RESULT_20261026.ru.md; test protocol: research/v3/DUAL_SETUP_TEST_20261027.ru.md.

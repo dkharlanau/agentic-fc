@@ -1,3 +1,19 @@
+## 2026-10-27 — Stage 2: coach read, exact candidates and ten-game instruction
+
+Actually read HANDOFF, coach-v1.0, the latest 26 October deep-run reviews,
+M11_DEEP_RUN_RESULT_20261026, DUAL_SETUP_TEST_20261027, candidate and recovery
+manifests. Owner's new experiment instruction supersedes the older five-game
+screen: exactly ten completed ranked games per admitted immutable candidate.
+C01: one operator, no concurrent match/probe/deployment; baseline shell fixed.
+C02/C03: no further tactical change inside this comparison. Only final M11
+hybrid v3 is eligible for screening, never the earlier pure FastEngine MID.
+First restore baseline in the newly provisioned Stage 2 account; old portal
+bindings point to the previous account and are not healthy current evidence.
+Admission remains strict native deadline (cold calls included), exact MID-only
+binding and fresh Fitness5/5. Rollback is the recreated MID15-equivalent
+configuration plus exact other four bindings, formation1-1-2 and fresh Fitness.
+No candidate is admitted or ranked-tested by this preparation record.
+
 ## 2026-10-25 — L02 cold-call gate failed on V1 and V2
 
 ## 2026-10-26 — M11 deep run завершён
