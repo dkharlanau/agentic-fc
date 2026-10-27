@@ -51,5 +51,40 @@
   },
   "restartOwnerApproved": true,
   "restartBehavior": "Universal balanced stance on known-ownership valid fresh KICK_OFF after original guards; stale/unknown/wrong-binding/locked/other phases unchanged",
-  "coreTacticalEngineHashesChanged": false
+  "coreTacticalEngineHashesChanged": false,
+  "activePilotArtifacts": {
+    "sourceCommit": "f8e7fad",
+    "L02B": "a4cdb19fa73951a8ff15533155a887ed121a88ba6a5485e63d5e889fb0db0f60",
+    "M11": "e586faeab9df66264769f90d2a3e2f907edd85c258b8a27f7b149bace641e2c3",
+    "status": "AWS_READY_Fitness_pending"
+  },
+  "activeSupportBuild": {
+    "l02b": {
+      "sourceCommit": "c1c7ac13cd6ebc10a34a223212b6bba080c30340",
+      "archiveSha256": "cf99810d48a0fee06efc05d12a547a96aa621f4f5030497d4444430576de608f",
+      "verifiedReady": true
+    },
+    "m11": {
+      "sourceCommit": "c1c7ac13cd6ebc10a34a223212b6bba080c30340",
+      "archiveSha256": "1f57a0fa672d6c76df7c2e6f94265348a4c75d0ac5aae3af8c4a1773f4c17f21",
+      "verifiedReady": true
+    }
+  },
+  "currentStatus": "Preparing bounded idempotent startup retry build",
+  "supportFitness": {
+    "candidate": "L02B",
+    "passed": 4,
+    "total": 5,
+    "activeUniqueTicks": 0,
+    "uniqueTicks": 1,
+    "firstResponse": "NEUTRAL_RESTART_SUPPORT/MOVE_TO",
+    "secondResponse": "STALE_OR_DUPLICATE_FRAME/CLEAR_OVERRIDE",
+    "identicalPayload": true,
+    "intervalMs": 511.868,
+    "rollbackFitness": {
+      "passed": 5,
+      "total": 5
+    }
+  },
+  "nextExperiment": "Single exact initial kickoff positioning retry within1s, no competitive action retry"
 }

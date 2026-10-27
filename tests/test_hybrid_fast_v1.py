@@ -203,6 +203,20 @@ class HybridFastHTTPTests(unittest.TestCase):
             self.assertEqual(status, 200)
             self.assertEqual(errors(row, raw), [])
 
+    def test_http_initial_kickoff_exact_retry_then_release(self):
+        from hybrid_fast_v1.evaluate import decode_response
+        row = plan()[0]
+        state = json.loads(row['request']['prompt'])
+        state['gameState'].update(playMode='KICK_OFF', tick=0, gameTime=0)
+        payload = {'prompt':json.dumps(state)}
+        headers = {'Content-Type':'application/octet-stream', SESSION_HEADER:'initial-kickoff-http'}
+        actions=[]
+        for _ in range(3):
+            status, _, raw = self.call('POST', '/invocations', json.dumps(payload), headers)
+            self.assertEqual(status, 200)
+            actions.append(decode_response(raw)[0]['commandType'])
+        self.assertEqual(actions, ['MOVE_TO','MOVE_TO','CLEAR_OVERRIDE'])
+
     def test_http_kickoff_stance_does_not_repeat_on_stale_frame(self):
         from hybrid_fast_v1.evaluate import decode_response
         row = plan()[0]

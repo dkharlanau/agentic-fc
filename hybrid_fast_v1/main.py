@@ -15,7 +15,7 @@ from socketserver import StreamRequestHandler, ThreadingTCPServer
 import threading
 
 from hybrid_fast_v1.engine import HybridMidEngine
-from mid_fast_v2.restart_compat import neutral_restart
+from mid_fast_v2.restart_compat import neutral_restart, KickoffRetry
 
 IMPORT_MS = (time.perf_counter_ns() - BOOT_NS) / 1e6
 SESSION_HEADER = 'X-Amzn-Bedrock-AgentCore-Runtime-Session-Id'
@@ -50,6 +50,7 @@ class Server(ThreadingTCPServer):
             raise ValueError('M11 supports stance mode only')
         self.engine = HybridMidEngine()
         self.engine_lock = threading.Lock()
+        self.kickoff_retry = KickoffRetry()
         self.ping_lock = threading.Lock()
         self.first_ping = True
         self.invocations = 0
@@ -160,6 +161,7 @@ class Handler(StreamRequestHandler):
                         decision_started = time.perf_counter_ns()
                         commands, audit = self.server.engine.choose(payload, session)
                         commands, audit = neutral_restart(payload, commands, audit, session)
+                        commands, audit = self.server.kickoff_retry.apply(payload, commands, audit, headers.get(SESSION_HEADER.lower(), [None])[0])
                         self.server.invocations += 1
                         ordinal = self.server.invocations
                         body = sse(commands)

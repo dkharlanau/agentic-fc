@@ -1,12 +1,12 @@
 {
   "schemaVersion": 2,
   "candidate": "M11 hybrid v3 corrected package",
-  "status": "pending-after-l02b",
+  "status": "preparing-central-restart-support-fitness",
   "ownerGoal": "Deploy both candidates and play ten completed real ranked matches each",
   "targetCompletedMatches": 10,
   "completedMatches": 0,
-  "sourceCommit": "a1da488ea2db32e5516ec4f32400d1cde930d881",
-  "archiveSha256": "0f2400f28252615426a128673115b9d7c4bf2c324d0124cb85864f457a8bfa35",
+  "sourceCommit": "c1c7ac13cd6ebc10a34a223212b6bba080c30340",
+  "archiveSha256": "1f57a0fa672d6c76df7c2e6f94265348a4c75d0ac5aae3af8c4a1773f4c17f21",
   "formation": "1-1-2",
   "changeSurface": "MID only",
   "nativeGatePassed": null,
@@ -14,7 +14,17 @@
   "pilotDecision": "Proceed with the bounded real-game pilot under the renewed concrete owner goal; do not claim native admission PASS",
   "promotionEligibleFromNative": false,
   "fitness": null,
-  "beforeLeaderboard": null,
+  "beforeLeaderboard": {
+    "rank": 12,
+    "played": 199,
+    "wins": 120,
+    "draws": 6,
+    "losses": 73,
+    "goalsFor": 269,
+    "goalsAgainst": 162,
+    "goalDifference": 107,
+    "points": 366
+  },
   "matches": [],
   "summary": null,
   "criticalFailure": null,
@@ -22,12 +32,14 @@
     "Native cold calls failed the original engineering gate; real-game pilot does not erase this result",
     "Unavailable per-game telemetry stays null"
   ],
-  "updatedAtUTC": "2026-10-27T11:14:28.669612+00:00",
+  "updatedAtUTC": "2026-10-27T11:56:54.552475+00:00",
   "historicalNativeGate": {
     "passed": false,
     "sourceCommit": "244065b0d3fe10447759c2afa8684f42fa566474",
     "archiveSha256": "b75c11aa2bf592c1b959a77a0b72a71e2d67e839bb8f5e167076b32c1cd8a390",
     "note": "Earlier exact artifact cold calls failed; MIME-corrected artifact has not been declared native PASS"
   },
-  "transportCorrection": "Bounded JSON parsing independent of MIME; all tactical module hashes unchanged"
+  "transportCorrection": "Bounded JSON parsing independent of MIME; all tactical module hashes unchanged",
+  "restartOwnerApproved": true,
+  "restartCompatibility": "Fresh validated full-size XY KICK_OFF: nonsprinting central own-half MOVE_TO; neutral stance when geometry unknown; all original guards retained"
 }

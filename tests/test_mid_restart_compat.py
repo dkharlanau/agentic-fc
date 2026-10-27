@@ -6,7 +6,7 @@ import unittest
 from hybrid_fast_v1.engine import HybridMidEngine
 from hybrid_fast_v1.evaluate import plan
 from mid_fast_v1.engine import MidEngine
-from mid_fast_v2.restart_compat import neutral_restart
+from mid_fast_v2.restart_compat import neutral_restart, KickoffRetry
 
 
 class NeutralRestartTests(unittest.TestCase):
@@ -76,6 +76,38 @@ class NeutralRestartTests(unittest.TestCase):
                 original, audit = cls().choose(root, 'phase')
                 adapted, _ = neutral_restart(root, original, audit, 'phase')
                 self.assertEqual(adapted, original)
+
+    def test_initial_kickoff_retry_is_exact_once_short_and_position_only(self):
+        for cls in (MidEngine, HybridMidEngine):
+            for variant in ('exact', 'expired', 'changed', 'intervening', 'later-restart'):
+                with self.subTest(engine=cls.__name__, variant=variant):
+                    root=self.state();root['gameState'].update(tick=0, gameTime=0)
+                    if variant == 'later-restart': root['gameState']['tick']=100
+                    engine=cls();clock=[0.0];retry=KickoffRetry(lambda:clock[0])
+                    def call(value):
+                        commands,audit=self.choose(engine,value)
+                        return retry.apply(value,commands,audit,'restart-match')
+                    first,_=call(root);self.assertEqual(first[0]['commandType'],'MOVE_TO')
+                    clock[0]=1.01 if variant=='expired' else .5
+                    if variant=='changed': root['gameState']['players'][2]['stamina']-=1
+                    if variant=='intervening':
+                        newer=copy.deepcopy(root);newer['gameState'].update(tick=1,gameTime=.1,playMode='PLAY_ON');call(newer)
+                    second,audit=call(root)
+                    if variant=='exact':
+                        self.assertEqual(second,first)
+                        self.assertEqual(audit['reason'],'IDEMPOTENT_INITIAL_KICKOFF_RETRY')
+                    else:self.assertEqual(second[0]['commandType'],'CLEAR_OVERRIDE')
+                    third,_=call(root);self.assertEqual(third[0]['commandType'],'CLEAR_OVERRIDE')
+
+    def test_retry_never_replays_open_play_or_invalid_identity(self):
+        root=self.state();root['gameState'].update(tick=0,gameTime=0)
+        retry=KickoffRetry(lambda:0);engine=MidEngine()
+        commands,audit=self.choose(engine,root);retry.apply(root,commands,audit,'restart-match')
+        invalid=copy.deepcopy(root);invalid['myPlayers']=[3]
+        commands,audit=self.choose(engine,invalid)
+        self.assertEqual(retry.apply(invalid,commands,audit,'restart-match')[0][0]['commandType'],'CLEAR_OVERRIDE')
+        commands,audit=self.choose(engine,root)
+        self.assertEqual(retry.apply(root,commands,audit,'restart-match')[0][0]['commandType'],'CLEAR_OVERRIDE')
 
 
 if __name__ == '__main__':

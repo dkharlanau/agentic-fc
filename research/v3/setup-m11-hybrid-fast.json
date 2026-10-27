@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "status": "approved-neutral-restart-variant-preparing-live-pilot",
+  "status": "central-restart-support-variant-ready-awaiting-fitness",
   "preparedDate": "2026-10-26",
   "name": "M11 Hybrid Fast MID v3",
   "formation": "1-1-2",
@@ -110,8 +110,13 @@
   "restartCompatibility": {
     "module": "mid_fast_v2/restart_compat.py",
     "ownerApproved": true,
-    "command": "SET_STANCE stance0 Balanced",
-    "scope": "Valid fresh KICK_OFF with known ownership/session and unlocked command; no Fitness-only branch",
+    "command": "MOVE_TO central own-half support for validated full-size XY; neutral Balanced stance on unknown geometry",
+    "scope": "All fresh validated KICK_OFF with original identity/session/ownership/unlock guards; no Fitness-only branch",
     "coreTacticalEnginesChanged": false
+  },
+  "activeSupportBuild": {
+    "sourceCommit": "c1c7ac13cd6ebc10a34a223212b6bba080c30340",
+    "archiveSha256": "1f57a0fa672d6c76df7c2e6f94265348a4c75d0ac5aae3af8c4a1773f4c17f21",
+    "verifiedReady": true
   }
 }

@@ -1,3 +1,26 @@
+# Active checkpoint — 2026-10-27 kickoff retry correction
+
+Owner authorized autonomous necessary corrections and20 games each (40 total).
+Candidate progress0/40. An incoming Baseline AWAY win1:0 is recorded separately
+in research/v3/stage2-control-unplanned-01.json; fresh table199games/366points.
+Both shared-support AWS builds READY, but L02B Fitness remained4/5:logs prove
+MOVE_TO then identical-payload duplicate release0.51s later. Baseline restored,
+fresh5/5/READY. No candidate game started and no active match observed.
+
+Next common pre-cohort fix:one idempotent retry of the exact initial tick0/time0
+KICK_OFF own-half non-sprint support within1s; never replay PASS/SHOOT, changed
+state, PLAY_ON, later restart, expired or third repeat. Any intervening request
+invalidates the cached response. Core engines/freshness guards unchanged;
+this explicitly bounded HTTP retry exception is separate from competitive
+stale-state handling. Hypothesis:startup duplicate replaces active result in
+Fitness; actual next Fitness must verify it, not synthetic tests.
+
+Local extracted224/224 and30/30 passed. Latest archives:
+L02B2fdad20a8e8a226d36ab81f5223c2c21cc16d80980c80db7c641a69bb79ac763;
+M11e259682c101f5eae1d5d769cff524b98f3b0aa0628f572822f8ab97be139fbba.
+Deploy exact new commit, verifyREADY/readback, exactMID-only bindings and
+Fitness5/5 before actual ranked start. Historical cold nativeFAIL retained.
+
 # Active owner goal reopened — 2026-10-27
 
 Latest owner steering:work autonomously, make needed project corrections, and

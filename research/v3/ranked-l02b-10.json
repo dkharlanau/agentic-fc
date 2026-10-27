@@ -1,12 +1,12 @@
 {
   "schemaVersion": 2,
   "candidate": "L02B",
-  "status": "preparing-mime-corrected-fitness",
+  "status": "preparing-central-restart-support-fitness",
   "ownerGoal": "Deploy both candidates and play ten completed real ranked matches each",
   "targetCompletedMatches": 10,
   "completedMatches": 0,
-  "sourceCommit": "a1da488ea2db32e5516ec4f32400d1cde930d881",
-  "archiveSha256": "42f9bfb8aa189873ff78ed311d853f9de2e782d17ca73f838bc3912ca702abc2",
+  "sourceCommit": "c1c7ac13cd6ebc10a34a223212b6bba080c30340",
+  "archiveSha256": "cf99810d48a0fee06efc05d12a547a96aa621f4f5030497d4444430576de608f",
   "formation": "1-1-2",
   "changeSurface": "MID only",
   "nativeGatePassed": null,
@@ -15,15 +15,15 @@
   "promotionEligibleFromNative": false,
   "fitness": null,
   "beforeLeaderboard": {
-    "rank": 11,
-    "played": 198,
-    "wins": 119,
+    "rank": 12,
+    "played": 199,
+    "wins": 120,
     "draws": 6,
     "losses": 73,
-    "goalsFor": 268,
+    "goalsFor": 269,
     "goalsAgainst": 162,
-    "goalDifference": 106,
-    "points": 363
+    "goalDifference": 107,
+    "points": 366
   },
   "matches": [],
   "summary": null,
@@ -32,7 +32,7 @@
     "Native cold calls failed the original engineering gate; real-game pilot does not erase this result",
     "Unavailable per-game telemetry stays null"
   ],
-  "updatedAtUTC": "2026-10-27T11:14:28.668672+00:00",
+  "updatedAtUTC": "2026-10-27T11:56:54.552475+00:00",
   "bindingsDigestSha256": "566e0bee3d3014e93d2d33c080016d9f6979fb38256194345f376ff6865011bf",
   "fitnessAttempts": [
     {
@@ -52,5 +52,7 @@
     "archiveSha256": "2d0d5c43d10a3ed704b5a30a0543736fa468c1f9a1bb1a52dcc0351dca835375",
     "note": "Earlier exact artifact cold calls failed; MIME-corrected artifact has not been declared native PASS"
   },
-  "transportCorrection": "Bounded JSON parsing independent of MIME; all tactical module hashes unchanged"
+  "transportCorrection": "Bounded JSON parsing independent of MIME; all tactical module hashes unchanged",
+  "restartOwnerApproved": true,
+  "restartCompatibility": "Fresh validated full-size XY KICK_OFF: nonsprinting central own-half MOVE_TO; neutral stance when geometry unknown; all original guards retained"
 }

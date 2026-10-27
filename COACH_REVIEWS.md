@@ -1,3 +1,24 @@
+## 2026-10-27 — startup duplicate experiment before first cohort
+
+Coach-v1.0 unchanged. C01: no candidate cohort yet; baseline restored after
+L02B support Fitness4/5. Logs show first valid MOVE_TO followed0.51s later by
+exact same payload/release; 0/1active unique ticks. Hypothesis:startup retry
+supersedes first response. One common transport exception caches safe initial
+kickoff position for exactly one identical retry within1s; changed/expired/
+third/open-play/later-restart inputs release. This is disclosed, not a silent
+claim that duplicate active execution never occurs. Native deadline unchanged.
+C02/C03 tactical conclusions remain deferred. Next Fitness is the distinguishing
+test; rollback canonicalMID15 + fresh5/5. No other roles or formation changes.
+
+## 2026-10-27 — autonomous twenty-game extension, resume
+
+HANDOFF, coach-v1.0 and current reviews actually re-read. Owner expands bot
+pilots to twenty each, with five-game review boundaries and immutable cohorts.
+C01 preserved; C02/C03 remain hypotheses until primary results. Fresh unplanned
+Baseline observation: AWAY 1:0 Mr Football FC, separately recorded, not counted
+as either candidate. Exact support build c1c7ac1 is being deployed before the
+first candidate Fitness and ranked start. No mid-match probes or mutations.
+
 ## 2026-10-27 — goal resumed: deploy both and play ten each
 
 Latest owner authorization is autonomous necessary corrections and20–50 bot
