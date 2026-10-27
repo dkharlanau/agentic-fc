@@ -4,7 +4,7 @@
   "status": "running",
   "ownerGoal": "Owner explicitly allowed temporary Practice testing during autonomous work",
   "targetCompletedMatches": 20,
-  "completedMatches": 2,
+  "completedMatches": 3,
   "sourceCommit": "912b687141c03f72b24ab002a8bd0d9d6d646804",
   "archiveSha256": "2fdad20a8e8a226d36ab81f5223c2c21cc16d80980c80db7c641a69bb79ac763",
   "formation": "1-1-2",
@@ -93,7 +93,14 @@
       "mode": "practice",
       "scoreless": false,
       "cleanSheet": false,
-      "savedAtUTC": "2026-10-27T12:18:35.378Z"
+      "savedAtUTC": "2026-10-27T12:18:35.378Z",
+      "preMatchConnectivityLatencyMs": {
+        "GK": 277,
+        "DEF": 344,
+        "MID": 1184,
+        "FWD1": 274,
+        "FWD2": 1264
+      }
     },
     {
       "opponent": "Total Attack United",
@@ -164,7 +171,92 @@
       "mode": "practice",
       "scoreless": false,
       "cleanSheet": true,
-      "savedAtUTC": "2026-10-27T12:24:57.990Z"
+      "savedAtUTC": "2026-10-27T12:24:57.990Z",
+      "preMatchConnectivityLatencyMs": {
+        "GK": 606,
+        "DEF": 457,
+        "MID": 2941,
+        "FWD1": 240,
+        "FWD2": 1218
+      }
+    },
+    {
+      "opponent": "Fort Knox Athletic",
+      "opponentStyle": "defensive",
+      "side": "HOME",
+      "result": "WIN",
+      "goalsFor": 9,
+      "goalsAgainst": 0,
+      "shotsFor": 10,
+      "shotsAgainst": 0,
+      "shotsOnTargetFor": 9,
+      "shotsOnTargetAgainst": 0,
+      "possessionPercent": 23,
+      "preMatchConnectivityLatencyMs": {
+        "GK": 255,
+        "DEF": 360,
+        "MID": 12858,
+        "FWD1": 260,
+        "FWD2": 1115
+      },
+      "teamReportAverageLatencyMs": 896,
+      "perRoleReportLatencyMs": {
+        "GK": 720,
+        "DEF": 880,
+        "MID": 1113,
+        "FWD1": 755,
+        "FWD2": 1191
+      },
+      "perRoleReportedSuccessPercent": {
+        "GK": 100,
+        "DEF": 100,
+        "MID": 100,
+        "FWD1": 100,
+        "FWD2": 100
+      },
+      "teamReportCommands": 550,
+      "teamReportCommandCounts": {
+        "MARK": 270,
+        "MOVE_TO": 116,
+        "PASS": 87,
+        "CLEAR_OVERRIDE": 28,
+        "PRESS_BALL": 28,
+        "INTERCEPT": 18,
+        "GK_DISTRIBUTE": 3
+      },
+      "candidateAudit": {
+        "scope": "Latest isolated Runtime process; includes startup/bootstrap; unique session and match-window mapping retained privately",
+        "requestCount": 104,
+        "commandCounts": {
+          "CLEAR_OVERRIDE": 103,
+          "PASS": 1
+        },
+        "reasonCounts": {
+          "INCOMPLETE_PLAYERS": 1,
+          "ENGINE_OFF_BALL": 37,
+          "UNKNOWN_POSSESSION": 20,
+          "ENGINE_RESTART": 45,
+          "SAFE_PROGRESSIVE_PASS": 1
+        },
+        "modelAttempted": 0,
+        "handlerMaxMs": 0.759686,
+        "fullNativeLatency": null,
+        "firstCompetitivePlayOnLatencyMs": null,
+        "lateActionRate": null,
+        "invalidResponseRate": null
+      },
+      "telemetryInconsistencies": [
+        "Runtime submitted103CLEAR and1PASS; team report28CLEAR and87PASS; submitted vs applied/default-engine command semantics unresolved",
+        "Report has noSHOOT category despite10primaryshots and9goals; generated causal coaching excluded",
+        "MID1113ms andFWD21191ms with100%success do not prove deadline compliance"
+      ],
+      "criticalFailure": null,
+      "primaryReportAlias": "practice-l02b-03-report",
+      "id": "stage2-practice-l02b-03",
+      "mode": "practice",
+      "scoreless": false,
+      "cleanSheet": true,
+      "savedAtUTC": "2026-10-27T12:32:43.082Z"
     }
   ],
   "summary": null,

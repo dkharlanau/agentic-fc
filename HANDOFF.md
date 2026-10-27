@@ -1,10 +1,10 @@
 # Current Practice progress — 2026-10-27
 
-L02B frozen build912b687: 2/20 completed Practice; 2W0D0L,6:1.
-Latest3:0 Total Attack United. Full primary stats and audit:
+L02B frozen build912b687: 3/20 completed Practice; 3W0D0L,15:1.
+Latest9:0 Fort Knox Athletic. Full primary stats and audit:
 research/v3/practice-stage2-l02b-20.json. Current/next match handle is private
 .local/stage2-20261027/play-pilots/active-match.json; check fresh portal.
-Next Practice3 Fort Knox Athletic, same five bindings/formation1-1-2.
+Next Practice4 The Benchmark FC, same five bindings/formation1-1-2.
 Native cold FAIL retained; Fitness5/5. Report metrics are not full native timing.
 Candidate ranked0/20 each, M11 Practice0/20. No mid-match probes/deploy/changes.
 
