@@ -1,3 +1,25 @@
+# Current Practice progress — 2026-10-27
+
+Owner permits Practice. L02B frozenbuild912b687:1/20 completed Practice,
+HOME3:1 The Benchmark FC. Primary shots4:9,SOT3:1,reportedMID1173ms;
+77 runtime requests including bootstrap,76CLEAR+1PASS,0modelAttempted,
+max application handler0.768ms. Report command/latency semantics differ from
+runtime audit; full deadline/late rate unavailable, not assumed zero.
+No candidate ranked game completed. Next Practice2 Total Attack United on
+same five bindings/formation; no runtime/probe mutation during live games.
+Current live handle/status must be read from private play-pilots/active-match.json.
+
+# Owner steering — Practice permitted 2026-10-27
+
+Owner now explicitly permits temporary Practice testing too. Keep separate
+mode/journals; Practice does not fulfil ranked counts or alter the frozen setup.
+L02B Fitness5/5/build912b687 registered, no candidate completed games yet.
+First random ranked invitation expired unanswered; second pending invitation
+cancelled for a bounded Practice block. No LIVE session interrupted. Next:
+L02B Practice20 on the same frozen setup, collect evidence and review every5.
+Then remaining ranked and M11 work. Public Practice journal:
+research/v3/practice-stage2-l02b-20.json. No claims of human-player validation.
+
 # Live pilot ready — 2026-10-27
 
 L02B exact source912b687141c03f72b24ab002a8bd0d9d6d646804 deployedREADY,
