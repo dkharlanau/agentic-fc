@@ -1,23 +1,26 @@
-# Current cloud checkpoint — 27 October 2026, 19:44 UTC
+# Current cloud checkpoint — 27 October 2026, 20:19 UTC
 
-Cloud-only autonomous coaching ends 28 October 03:15:50 UTC. No Mac work.
+Cloud-only autonomous coaching ends 28 October 03:56:26 UTC (owner extended the window at 19:56 UTC). No Mac work.
 Other project loops remain paused. Owner authorizes checked GitHub publication
 and main integration. No extra agents, automations, IAM changes or secrets in Git.
 
-## Actual installed team
+## Actual installed team — 20:48 UTC
 
-Only MID changed from the original five: replay-safe initial positioning plus
-bounded, opt-in post-response state logging. Local source
-`aa68b25ef0ff0b403fdaf28ae02fc9f16115b666`, archive
-`239f95187bc3fa19def668fd53918b18afd2f66c0af23d0de8ba48e22154a078`.
-Two fresh unchanged Fitness runs 5/5; exact five bindings and 1-1-2 verified.
-GK, DEF, FWD4 and FWD5 unchanged. No active match at this checkpoint.
-Rollback MID is replay-safe V2 source 4de510a, not the old broken 4/5 MID.
+Original FWD5 restored after finishing experiments. Exact five bindings read back
+and fresh Fitness5/5 verified. GK, DEF, FWD4 and FWD5 original; MID logger V2;
+formation1-1-2. No active match. Do not confuse prepared finishing code with live.
+MID logger sourceaa68b25, archive239f95187bc3fa19def668fd53918b18afd2f66c0af23d0de8ba48e22154a078.
 
-Logger native qualification: 224/224 valid responses and bounded traces, six
-fresh sessions, maximum 2288.3 ms after separately recorded client-connection
-setup; no agent prewarming. Earlier proxy failures retained. This is external
-SDK timing, not game-server latency. Latest full local suite: 176 tests PASS.
+Finishing source317dd9f81b6a7ca950f193f52e1a368f0e3bc3ab, archive7cc73e9162b245c7936ed8f7da811877780f44d52467dd0805029877e1232ba1
+remains an unpromoted experiment. V1partialblock8:0closed1/2 after nextprematch
+5566ms, despiteportalReady. IdenticalarchiveV2 passed32/32native across8fresh
+sessions, first2.020–3.995s and later<=.296s, with explicit clientsetup boundary.
+V2 freshFitness5/5, prematches986/1023ms, gamesTotalAttack1:3/FortKnox4:0.
+Own new-rule triggers1/0 respectively. No immediate goal followed the TotalAttack
+trigger; the FortKnox win did not exercise the exception. Causal benefit unproven,
+so original FWD5 restored. All own diagnostic sessions stopped.
+Latest full local suite180PASS before documentation/renderer annotation changes.
+No claim that sampledV2startup universally solves latency.
 
 ## Completed Practice and evidence limits
 
@@ -45,7 +48,7 @@ non-sprinting outlet commands. Energy not clearly worse, but mean forward
 separation decreased in both sampled opponent comparisons. No useful attacking
 benefit established; not proof that outlet caused the loss. Candidate NOT promoted.
 Original FWD5 restored, exact five bindings read back, fresh Fitness 5/5 at 19:44.
-Current active team is the logger baseline described above. No active match.
+This is a historical rollback receipt; see the current finishing candidate above.
 Initial eight-case native screen failed first full call 7583 ms. Diagnostic first
 call 6242 ms included 2236 ms proxy/TLS setup. Qualified fresh-session screen after
 recorded client-only setup passed 8/8, maximum 3994 ms; no agent prewarming.
@@ -57,12 +60,16 @@ rejected; no persistent DEF change. FWD4 remains protected.
 
 Readiness repair and dependency-pin repair merged via PR9 into main
 `beb00dbfead079d3a4efa92ad68cd7e646f716f0`; exact-head main checks passed.
-Logger/offline renderer/cohort records are local work, not yet published.
+Logger/renderer and closed outlet records subsequently merged via PR10 into
+main `9907eae0a43dbb27ec335fbbb9cc9680e76c40f3`; both exact-head push checks passed.
 Publish only reviewed, sanitized source and aggregates; raw states, credentials,
 ARNs and session identifiers stay in ignored .local/.
 
-Next: publish reviewed logger/renderer and sanitized experiment records. Inspect
-actual possession/aim contracts before another tactical change; retain baseline. Check quota before blocks; remaining
+Next: preserve finishing work and verified coaching skill, then investigate owner-requested
+own-goal emergency escape with unchanged baseline retained until gates. Do not
+change DEF good dribbling or protectedFWD4. Existing MID NO_SAFE_OUTLET in the
+defensive third precedes a recorded loss/goal; causality and safe clearance
+application need testing. CLEAR_OVERRIDE is not a kick. Check quota before blocks; remaining
 quota unavailable, not assumed. At verified 10% reserve stop new work and finish
 checkpoint. Preserve final ready setup by the deadline.
 

@@ -26,6 +26,7 @@ class TraceRenderTests(unittest.TestCase):
         ET.fromstring(svg)
         self.assertNotIn('<script>', svg)
         self.assertIn('NOT gameplay footage', svg)
+        self.assertIn(str(record['playMode']), svg)
         self.assertIn('Goals not surveyed', svg)
         self.assertIn('unknown team-qualified owner', MODULE['render']({**record, 'ball': {
             **record['ball'], 'possessionTeamCode': None}}))

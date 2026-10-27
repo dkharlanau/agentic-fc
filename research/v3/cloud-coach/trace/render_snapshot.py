@@ -53,7 +53,7 @@ def render(record, bounds=None):
              '<rect width="1100" height="740" fill="#101c23"/>',
              '<g font-family="sans-serif" fill="#eff6f8">',
              '<text x="35" y="38" font-size="23">Recorded input snapshot · NOT gameplay footage</text>',
-             f'<text x="35" y="66" font-size="16">Game time {esc(record.get("gameTime"))} · score {esc(record.get("score", {}).get("home"))}:{esc(record.get("score", {}).get("away"))} · frame {esc(record.get("frame"))}</text>',
+             f'<text x="35" y="66" font-size="16">Game time {esc(record.get("gameTime"))} · score {esc(record.get("score", {}).get("home"))}:{esc(record.get("score", {}).get("away"))} · {esc(record.get("playMode"))} · frame {esc(record.get("frame"))}</text>',
              '<rect x="45" y="90" width="970" height="490" fill="#153c31" stroke="#8bab9a"/>']
     # No surveyed pitch or goalposts are invented from goalkeeper positions.
     for x, y, label in [(x0, y0, f'x={x0:.2f}, y={y0:.2f}'), (x1, y1, f'x={x1:.2f}, y={y1:.2f}')]:

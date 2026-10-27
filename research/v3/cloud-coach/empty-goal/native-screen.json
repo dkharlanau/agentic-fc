@@ -1,0 +1,40 @@
+{
+  "calls": 20,
+  "valid": 20,
+  "fullRequestMs": [
+    3460.963221,
+    165.7709,
+    174.84217,
+    189.228574,
+    196.264992,
+    188.257006,
+    215.929602,
+    202.009089,
+    181.393322,
+    172.723219,
+    2915.749778,
+    173.432976,
+    209.986509,
+    212.484541,
+    479.61367,
+    222.682244,
+    175.928121,
+    185.440413,
+    184.854808,
+    208.072955
+  ],
+  "warmP95Ms": 479.61367,
+  "allOwnedSessionsStopped": true,
+  "measurementBoundary": "external SDK full response after separately recorded client connection setup; not game server",
+  "agentPrewarm": false,
+  "deadlineMs": 5000,
+  "passed": true,
+  "connectionBoundary": {
+    "clientConnectionSetupMs": 3147.0686200191267,
+    "method": "idempotent stop of already-stopped owned prior-candidate probe; same SDK endpoint",
+    "agentPrewarm": false,
+    "allSessionIdsFresh": true,
+    "priorLatencyFailuresRetained": true
+  },
+  "sourceCommit": "317dd9f81b6a7ca950f193f52e1a368f0e3bc3ab"
+}

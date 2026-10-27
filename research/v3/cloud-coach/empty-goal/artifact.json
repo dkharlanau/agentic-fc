@@ -1,0 +1,17 @@
+{
+  "kind": "Uninstalled isolated finishing wrapper; exact baseline dependencies and policy preserved",
+  "baselineArchiveSha256": "ef9b7c704e1d8fb011fae6ea55e5239d2ac54f64c76afc0ef439dc76d5aea226",
+  "archiveSha256": "7cc73e9162b245c7936ed8f7da811877780f44d52467dd0805029877e1232ba1",
+  "archiveBytes": 20614692,
+  "unchangedArchiveMembers": 3804,
+  "replacementSourceHashes": {
+    "main.py": "d3a96ad34fe5ebd32db59aa6245909ac909a85e4ebab58d3c7ae4fa5957fcf46",
+    "fwd_finish_v1/__init__.py": "02aff46293bf6a2d71eca6b2c951d30057db5ba74a6a2a25fd5244bb54560f53",
+    "fwd_finish_v1/candidate.py": "117371f94eb248aa0a827b0f61bed46140ccf85a7d714fae85cc8876e4a29fa5"
+  },
+  "changes": [
+    "main.py replaced",
+    "two fwd_finish_v1 modules added"
+  ],
+  "deployment": null
+}

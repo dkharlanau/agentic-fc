@@ -1,0 +1,31 @@
+{
+  "status": "local-candidate-not-installed",
+  "hypothesis": "FWD5 may safely exploit an empty goal from around midfield instead of passing when the opponent keeper has left the goal.",
+  "scope": "Only a finishing exception to exact original FWD5; all offball decisions and other4 roles preserved.",
+  "change": "Known baseline self-possession; HOME calibrated small frame only; own attacking half, range<=0.55 span, lateral<=0.15span, energy>=0.5, clearfield corridor>0.04span, keeper>0.25span from goal and>0.06span from shotsegment. CENTER with original0.8power.",
+  "observedSupport": "One projected snapshot in four saved games meets the proposed gate. Not evidence of scoring benefit; previous narrower open-goal candidate had zero native-game triggers.",
+  "preserved": [
+    "No ownership-guard relaxation",
+    "No extra model calls",
+    "Original power0.8",
+    "Exact original baseline archive except new wrapper entrypoint",
+    "Original FWD4 DEF GK MID and112"
+  ],
+  "limits": [
+    "Keeper anchors are proxies, not surveyed posts",
+    "Sparse MID snapshots projected into FWD5 input are not actual FWD5 request replay",
+    "Only one triggering historical sample; overfitting risk",
+    "No score or accuracy gain assumed"
+  ],
+  "gates": [
+    "Synthetic identity/geometry/possession/locked-command tests",
+    "Full local suite",
+    "Exact old archive content retained except declared files",
+    "Extracted-code shadow parity",
+    "Isolated native screen, own sessions cleanup",
+    "FreshFitness5/5",
+    "Two unchangedPractice matches"
+  ],
+  "rollback": "Original FWD5 exact binding, freshFitness5/5; do not promote if no observed safe useful triggers or reliability regression.",
+  "nextQueuedOwnerRequest": "Validate supported emergency forward clearance for DEF/MID near own goal under pressure; CLEAR_OVERRIDE is not clearance. Do not mix into this candidate."
+}
