@@ -1,3 +1,16 @@
+## 2026-10-27 — goal resumed: deploy both and play ten each
+
+HANDOFF, full coach-v1.0 and latest reviews actually read on resume. The owner
+renewed the concrete end state:both deployments plus10 real ranked games each.
+The prior native-only phase was progress, not completion of this new goal.
+Execution decision:bounded owner-requested pilots after exact MID-only binding
+and fresh Fitness5/5; native cold-call FAIL remains visible and is not converted
+into admission/promotion PASS. C01:two immutable10-game cohorts, no ordinary-loss
+changes or mid-match probes. C02/C03:defer tactical conclusions to the full cohort.
+Critical identity/ownership/output/Fitness failure still triggers exact baseline
+rollback. No tactical code, thresholds, other four roles or formation changes.
+Current required games0/20. All actual gameplay and limits go into cohort JSON.
+
 ## 2026-10-27 — Stage 2 comparison closed, no admitted candidate
 
 Coach-v1.0 rechecked; no controlled ranked series was started. Owner's ten-game

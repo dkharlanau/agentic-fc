@@ -1,13 +1,37 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "candidate": "L02B",
-  "status": "not-admitted-native-deadline-failure",
+  "status": "awaiting-fitness",
+  "ownerGoal": "Deploy both candidates and play ten completed real ranked matches each",
   "targetCompletedMatches": 10,
   "completedMatches": 0,
-  "nativeEvidence": "stage2-native-l02b-initial-20261027.json",
+  "sourceCommit": "095e3994b8ea55f6671b7833171c0ff83b484b92",
+  "archiveSha256": "2d0d5c43d10a3ed704b5a30a0543736fa468c1f9a1bb1a52dcc0351dca835375",
+  "formation": "1-1-2",
+  "changeSurface": "MID only",
+  "nativeGatePassed": false,
+  "nativeFailureRetained": true,
+  "pilotDecision": "Proceed with the bounded real-game pilot under the renewed concrete owner goal; do not claim native admission PASS",
+  "promotionEligibleFromNative": false,
   "fitness": null,
+  "beforeLeaderboard": {
+    "rank": 11,
+    "played": 198,
+    "wins": 119,
+    "draws": 6,
+    "losses": 73,
+    "goalsFor": 268,
+    "goalsAgainst": 162,
+    "goalDifference": 106,
+    "points": 363
+  },
   "matches": [],
   "summary": null,
-  "footballComparison": null,
-  "note": "Ranked block was prohibited by the predeclared native gate. Missing football metrics are null, not zero."
+  "criticalFailure": null,
+  "limitations": [
+    "Native cold calls failed the original engineering gate; real-game pilot does not erase this result",
+    "Unavailable per-game telemetry stays null"
+  ],
+  "updatedAtUTC": "2026-10-27T10:57:47.582662+00:00",
+  "bindingsDigestSha256": "566e0bee3d3014e93d2d33c080016d9f6979fb38256194345f376ff6865011bf"
 }

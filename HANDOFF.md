@@ -1,4 +1,26 @@
-# Stage 2 comparison closed — 2026-10-27
+# Active owner goal reopened — 2026-10-27
+
+Current owner goal: deploy both candidates and complete TEN real ranked matches
+with EACH. The earlier native-only stopping result did not complete this goal.
+Required end state is20 verified completed games, two immutable10-game cohorts.
+Current progress0/20; L02B and corrected-package M11 v3 already exist as exact
+READY isolated AWS deployments, but neither has played a ranked match yet.
+
+Execution decision under the renewed owner goal: proceed with bounded real-game
+pilots after exact MID-only registration/readback and fresh Fitness5/5, retaining
+the reported native cold-call failures as explicit risks. Do not relabel native
+FAIL as PASS or claim promotion eligibility from this exception. Other four
+roles/formation/model/prompt settings remain fixed. No concurrent probe/match,
+no ordinary-loss changes. Critical identity/ownership/output/Fitness failures
+still require rollback, correction and a truthful incomplete-goal checkpoint.
+
+Order:L02B ten games → control MID15-equivalent/readback/Fitness → corrected
+M11 v3 ten games → final comparison and selected/rollback setup. Goal remains
+active until all20 real games and their evidence are complete. No new automation
+or agent. Source builds and private baseline recovery remain as recorded below.
+Current quota43%used/57%remaining; refresh at cohort boundaries.
+
+# Stage 2 comparison closed — 2026-10-27 (historical native-only phase)
 
 Bounded requested admission/comparison protocol is complete. Result:
 EVIDENCE INSUFFICIENT — KEEP BASELINE. No candidate admitted and zero ranked
