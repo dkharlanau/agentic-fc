@@ -6,7 +6,7 @@ candidate; keep original first10 evidence as a prefix. Stop new ranked invites.
 Ranked requirements deferred under this latest steering, not falsely satisfied:
 ranked completed0 each. AWSuoliai invitation expired unanswered, no game started.
 
-L02B6/20 complete,5W1L/27:4; actual Practice7 The Benchmark FC LIVE. Check
+L02B7/20 complete,6W1L/30:4; Practice8 Total Attack United next. Check
 private active-match.json and fresh UI before any AWS probe/mutation. Same frozen
 source912b687 and exact five bindings. Current audit is read-only model-role
 observability, not a probe. MID is deterministic; GK/DEF/FWD1 are configured Nova2
