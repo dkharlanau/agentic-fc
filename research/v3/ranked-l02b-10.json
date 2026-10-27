@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "candidate": "L02B",
+  "status": "not-admitted-native-deadline-failure",
+  "targetCompletedMatches": 10,
+  "completedMatches": 0,
+  "nativeEvidence": "stage2-native-l02b-initial-20261027.json",
+  "fitness": null,
+  "matches": [],
+  "summary": null,
+  "footballComparison": null,
+  "note": "Ranked block was prohibited by the predeclared native gate. Missing football metrics are null, not zero."
+}

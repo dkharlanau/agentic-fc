@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "checkedDate": "2026-10-27",
+  "setup": "Stage2 restored Baseline M8 plus deterministic FWD2 stance",
+  "sourceCommit": "095e3994b8ea55f6671b7833171c0ff83b484b92",
+  "formation": "1-1-2",
+  "roleContent": "research/v3/final-setup-20261025.json",
+  "restoredHarnessContentVerified": true,
+  "memoryDisabled": true,
+  "allFivePortalBindingsVerifiedAfterReload": true,
+  "fitness": {
+    "passed": 5,
+    "total": 5,
+    "fresh": true,
+    "commandsDisplayed": 5,
+    "displayedAverageMs": 0,
+    "limitation": "Fitness display is not competitive invocation latency"
+  },
+  "fwd2Native": {
+    "location": "AWS CloudShell us-east-1",
+    "platform": "V1",
+    "valid": 20,
+    "total": 20,
+    "fullResponseMs": {
+      "n": 20,
+      "p50": 116.28254050000001,
+      "p95": 2922.1186770000004,
+      "max": 2936.141342
+    },
+    "firstResponseMs": {
+      "n": 2,
+      "p50": 2928.760992,
+      "p95": 2935.403307,
+      "max": 2936.141342
+    },
+    "laterResponseMs": {
+      "n": 18,
+      "p50": 114.79740100000001,
+      "p95": 170.5678099999999,
+      "max": 227.382439
+    },
+    "lateCount": 2,
+    "deadlineMs": 1000,
+    "strictDeadlineGatePassed": false,
+    "ownedSessionsStopped": true,
+    "limitation": "Contract restoration check; control cold calls failed deadline. Not new candidate admission or game-server timing."
+  },
+  "leaderboardBefore": {
+    "rank": 11,
+    "played": 198,
+    "wins": 119,
+    "draws": 6,
+    "losses": 73,
+    "points": 363,
+    "goalsFor": 268,
+    "goalsAgainst": 162
+  },
+  "rankedMatchesStartedThisExperiment": 0,
+  "exactRollbackPrivate": "ignored .local/stage2-20261027/canonical-bindings.json plus baseline-restore.json and fwd2-binding.json; fresh Fitness5/5"
+}

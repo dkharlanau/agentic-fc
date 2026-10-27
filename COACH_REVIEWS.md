@@ -1,3 +1,20 @@
+## 2026-10-27 — Stage 2 gates and M11 packaging correction
+
+Coach-v1.0 remains current. L02B completed224/224 valid native calls in
+CloudShell us-east-1/V1; all six first calls exceeded1s, later218/218 timely.
+No MID registration/Fitness/ranked for L02B. C01 rejects admission; C02/C03
+football effect remains unknown. Baseline restored by exact content in the new
+account, exact five bindings and formation112 verified, fresh Fitness5/5.
+Control FWD2 contract20/20 but both cold calls ~2.93s: keep as an explicit risk.
+
+First M11 package failed startup: CloudWatch ModuleNotFoundError for
+agentic_fc.policy, first call timed out at30s, owned session stopped. Existing
+repository-level tests hid the missing ZIP dependency. One next correction:
+include the unchanged module and verify the extracted archive in isolated
+stdlib-only processes before a NEW immutable native run. No tactical module,
+threshold, model, role or baseline binding changes. Initial failed archive
+and receipts are preserved separately; no warm-only or ranked admission.
+
 ## 2026-10-27 — Stage 2: coach read, exact candidates and ten-game instruction
 
 Actually read HANDOFF, coach-v1.0, the latest 26 October deep-run reviews,

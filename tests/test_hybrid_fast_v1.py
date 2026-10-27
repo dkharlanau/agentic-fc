@@ -14,6 +14,7 @@ from hybrid_fast_v1.build_package import build
 from hybrid_fast_v1.evaluate import errors, plan
 from hybrid_fast_v1.deploy import plan as deployment_plan
 from hybrid_fast_v1.main import Server, SESSION_HEADER
+from hybrid_fast_v1.verify_local import verify as verify_archive
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -223,10 +224,26 @@ class HybridFastPlanTests(unittest.TestCase):
             b = build(root / 'b.zip', root / 'b.json')
             self.assertEqual(a['archiveSha256'], b['archiveSha256'])
             self.assertEqual(a['dependencies'], {})
-            self.assertEqual(a['fileCount'], 11)
+            self.assertEqual(a['fileCount'], 12)
             self.assertEqual(a['playerId'], 2)
             self.assertEqual(a['modelCallsPerTick'], 0)
             self.assertLess(a['archiveBytes'], 100000)
+        finally:
+            shutil.rmtree(root, ignore_errors=True)
+
+    def test_extracted_archive_serves_native_plan_without_repository_imports(self):
+        root = ROOT / '.local' / 'm11-ci-isolated-package'
+        if root.exists():
+            shutil.rmtree(root)
+        root.mkdir(parents=True)
+        try:
+            archive, manifest = root / 'deployment.zip', root / 'artifact.json'
+            build(archive, manifest)
+            result = verify_archive(archive, manifest)
+            self.assertEqual(result['processes'], 6)
+            self.assertEqual(result['requests'], len(plan()))
+            self.assertEqual(result['passed'], len(plan()))
+            self.assertEqual(result['failures'], [])
         finally:
             shutil.rmtree(root, ignore_errors=True)
 

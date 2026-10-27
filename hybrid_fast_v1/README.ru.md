@@ -1,6 +1,21 @@
 # M11 Hybrid Fast MID v3
 
-Статус: **deep simulation PASS; не деплоился; AWS native, Fitness и реальные матчи не выполнены**.
+Статус на 27 октября: **deep simulation PASS; isolated AWS deployment выполнен;
+в команде не зарегистрирован, Fitness и ranked M11 не запускались**.
+
+Первый CodeZip `d073569c...` не запустился: пакет не включал
+`agentic_fc/policy.py`, импортируемый через `agentic_fc/__init__.py`.
+AWS native получил timeout, CloudWatch подтвердил ModuleNotFoundError.
+Исправление упаковки добавляет этот неизменённый модуль; тактика M11 v3,
+FastEngine, L01 и HTTP entrypoint побайтно сохранены.
+Новый архив: `b75c11aa2bf592c1b959a77a0b72a71e2d67e839bb8f5e167076b32c1cd8a390`.
+Перед новым AWS gate проверять ZIP в изолированных процессах вне репозитория:
+
+    python3 hybrid_fast_v1/verify_local.py
+
+Проверка использует `-I -S` и только извлечённые файлы архива: существующие
+модули рабочего checkout больше не могут скрыть пропущенную зависимость.
+Локальный PASS по-прежнему не означает native PASS.
 
 Актуальный M11 — не первоначальный pure-FastEngine MID. Deep run 26 октября изменил архитектуру после найденных counterexamples. Полный разбор: research/v3/M11_DEEP_RUN_RESULT_20261026.ru.md.
 

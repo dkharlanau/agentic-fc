@@ -10,6 +10,7 @@ SOURCES = (
     'agentic_fc/__init__.py',
     'agentic_fc/state.py',
     'agentic_fc/geometry.py',
+    'agentic_fc/policy.py',
     'runtime_v1/__init__.py',
     'runtime_v1/sensing.py',
     'fast_path_v2/__init__.py',
