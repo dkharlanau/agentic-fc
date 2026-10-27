@@ -1,8 +1,8 @@
 {
   "cohort": "cloud-mid-replay-01",
-  "status": "first-match-live-visual-observation-blocked",
+  "status": "1-of-2-complete-visual-hold",
   "targetCompletedMatches": 2,
-  "completedMatches": 0,
+  "completedMatches": 1,
   "coachVersion": "coach-v1.0",
   "change": "MID initial-position replay plus isolated platformV2; other four bindings verified unchanged",
   "sourceCommit": "4de510a0214086c1d1ee1303e75ea735793eb556",
@@ -12,7 +12,31 @@
     "Total Attack United",
     "Fort Knox Athletic"
   ],
-  "matches": [],
+  "matches": [
+    {
+      "opponent": "Total Attack United",
+      "side": "HOME",
+      "result": "1-0",
+      "mode": "Practice",
+      "completedObservedUTC": "2026-10-27T18:12:32Z",
+      "visualPitchObserved": false,
+      "reportedPossession": [
+        52,
+        48
+      ],
+      "reportedShots": [
+        1,
+        10
+      ],
+      "reportedShotsOnTarget": [
+        1,
+        0
+      ],
+      "reportedGoal": "MID3 minute1",
+      "reportAttribution": "Unresolved: deterministic own roles versus model-like own-column latencies and opponent CLEAR-heavy counts. Do not attribute per-role columns or AI narrative causally.",
+      "physicalPassingAndSavingOutcome": "unobserved"
+    }
+  ],
   "quotaRemainingPercent": null,
   "deadlineUTC": "2026-10-28T03:15:50Z",
   "observationsPlanned": [

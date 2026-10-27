@@ -203,7 +203,7 @@ class HybridFastHTTPTests(unittest.TestCase):
             self.assertEqual(status, 200)
             self.assertEqual(errors(row, raw), [])
 
-    def test_http_initial_kickoff_exact_retry_then_release(self):
+    def test_http_initial_kickoff_replays_until_state_changes(self):
         from hybrid_fast_v1.evaluate import decode_response
         row = plan()[0]
         state = json.loads(row['request']['prompt'])
@@ -215,7 +215,13 @@ class HybridFastHTTPTests(unittest.TestCase):
             status, _, raw = self.call('POST', '/invocations', json.dumps(payload), headers)
             self.assertEqual(status, 200)
             actions.append(decode_response(raw)[0]['commandType'])
-        self.assertEqual(actions, ['MOVE_TO','MOVE_TO','CLEAR_OVERRIDE'])
+        self.assertEqual(actions, ['MOVE_TO','MOVE_TO','MOVE_TO'])
+        state['gameState']['players'][2]['stamina'] -= 1
+        changed = {'prompt':json.dumps(state)}
+        for request in (changed, payload):
+            status, _, raw = self.call('POST', '/invocations', json.dumps(request), headers)
+            self.assertEqual(status, 200)
+            self.assertEqual(decode_response(raw)[0]['commandType'], 'CLEAR_OVERRIDE')
 
     def test_http_kickoff_stance_does_not_repeat_on_stale_frame(self):
         from hybrid_fast_v1.evaluate import decode_response
@@ -241,6 +247,16 @@ class HybridFastHTTPTests(unittest.TestCase):
 
 
 class HybridFastPlanTests(unittest.TestCase):
+    def test_reviewed_dependency_pin_still_rejects_unreviewed_bytes(self):
+        original = Path.read_bytes
+        def altered(path):
+            data = original(path)
+            return data + b'\n# unreviewed change\n' if path == ROOT / 'fast_path_v2/engine.py' else data
+        with patch.object(Path, 'read_bytes', altered):
+            with self.assertRaisesRegex(ValueError, 'Reviewed fast-path dependency changed'):
+                build(ROOT / '.local/m11-pin-rejection/unused.zip',
+                      ROOT / '.local/m11-pin-rejection/unused.json')
+
     def test_six_fresh_sessions_and_ordered_first_calls(self):
         rows = plan()
         sessions = {}
@@ -265,6 +281,8 @@ class HybridFastPlanTests(unittest.TestCase):
             self.assertEqual(a['fileCount'], 13)
             self.assertEqual(a['playerId'], 2)
             self.assertEqual(a['modelCallsPerTick'], 0)
+            self.assertNotEqual(a['baselineFastEngineSha256'], a['reviewedFastEngineSha256'])
+            self.assertEqual(a['reviewedFastEngineSha256'], a['sourceSha256']['fast_path_v2/engine.py'])
             self.assertLess(a['archiveBytes'], 100000)
         finally:
             shutil.rmtree(root, ignore_errors=True)

@@ -1,3 +1,63 @@
+# Current cloud checkpoint — 27 October 2026, 18:20 UTC
+
+Owner requests cloud-only autonomous coaching until 28 October03:15:50UTC,
+with a reliable final setup. No Mac work. Other project loops are paused.
+The latest owner authorizes GitHub publication and main integration after checks;
+older no-merge language below is historical, not the current grant.
+
+## Actual team and readiness
+
+- Only MID changed: replay-safe initial positioning, source
+  4de510a0214086c1d1ee1303e75ea735793eb556, isolated platformV2.
+  Archive a0e9d2e7daae3b83f7b866f5b92e802f6d0a877f4a84aeb98df9a57ea548e999.
+- Two unchanged fresh Fitness runs5/5; all five exact bindings read back.
+  GK, DEF, FWD4, FWD5 and formation1-1-2 preserved. Private cloud receipts only.
+- Broad V2 qualification224/224, six fresh sessions, max2053.3ms after explicit
+  SDK proxy setup during required cleanup; no agent prewarming. Previous timeout
+  attempts retained. A diagnostic15.432s call spent13.121s in proxyCONNECT.
+  Not a guarantee of game-server latency or proof V2 universally beatsV1.
+- Practice vs Total Attack United completed1:0, HOME. No active match.
+  Block remains1/2; do not silently label it completed or change the lineup.
+- Actual pitch observation failed: Unity says WebGL unsupported in cloud browser.
+  Screenshot confirms only loading screen; live commentary and final score were
+  visible. No physical passing/saving/positioning improvement claimed.
+  Browser policy disallowed chrome://gpu diagnostics; no bypass attempted.
+- Do not start another supposedly observed match until visual access is resolved.
+  Continue independent repository repair, recorded-evidence review and preparation.
+
+## Verified discoveries and work remaining
+
+Owned runtime logs contain4MIDpasses,4FWD5passes and67GK CLEAR_OVERRIDE commands.
+The portal labels own commands as zero passes and3GK distributions. Therefore
+per-role/command attribution and generated coach narrative remain unreliable.
+See research/v3/cloud-coach/practice01-command-audit.json; submitted actions do
+not establish physical pass completion or saves. Goalkeeper baseline delegates
+saves to built-inAI; no extra model calls were introduced.
+
+Code published to owned branch atfff3f3313ce7ae3d9eaf27bca8af9bb243a7fae6.
+Subsequent local build repair retains historical artifact manifests and adds a
+separate reviewed shared-dependency pin.30M11 fixture decisions match the exact
+historical engine;170unit tests and demo pass;6000 mirrored/adversarial samples
+show zero critical failures. M11 remains closed: no M11 deployment or new games.
+These are code checks, not football outcomes. Hosted checks forfff3f331 failed
+on earlier package pins/obsolete retry expectation; no unchanged rerun requested.
+Publish checked repair, review exact-headCI, then reconcile stackedPR9/main.
+
+Quota remaining is unavailable, not assumed. At a verified10% reserve stop new
+work, finish any active game and preserve checkpoint. No new agents/automations,
+IAM expansion or secret publication. Private workspace is
+/workspace/shared/fc-cloud-20261027/repo/.local/stage2-20261027/.
+
+Next: finish review/publication of build repair; resolve visual observation in
+an authorized cloud browser without bypassing restrictions; keep reliable lineup
+and no tactical promotions from one unobserved win. Recheck actual portal before
+any new match. Original MID rollback is retained but was4/5 before repair, so do
+not call it guaranteed ready. Final setup must itself pass freshFitness.
+
+---
+
+## Historical handoff (superseded where explicitly stated above)
+
 # Current checkpoint — Dot handoff, 2026-10-27
 
 Owner cancelled the next two games and requested immediate GitHub upload plus an

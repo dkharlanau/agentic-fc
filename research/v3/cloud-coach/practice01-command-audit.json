@@ -1,0 +1,54 @@
+{
+  "scope": "Postmatch owned-runtime logs in fixed match window; no invocation probes",
+  "visualObservation": false,
+  "gameServerTimingVerified": false,
+  "roles": {
+    "MID": {
+      "decisionRows": 66,
+      "commands": {
+        "CLEAR_OVERRIDE": 62,
+        "PASS": 4
+      },
+      "reasons": {
+        "INCOMPLETE_PLAYERS": 1,
+        "ENGINE_OFF_BALL": 37,
+        "UNKNOWN_POSSESSION": 17,
+        "ENGINE_RESTART": 6,
+        "NO_SAFE_OUTLET": 1,
+        "SAFE_RECYCLE_PASS": 2,
+        "SAFE_PROGRESSIVE_PASS": 2
+      }
+    },
+    "GK": {
+      "decisionRows": 67,
+      "commands": {
+        "CLEAR_OVERRIDE": 67
+      },
+      "reasons": {
+        "MALFORMED_POSITION": 1,
+        "ENGINE_GOALKEEPER": 42,
+        "UNKNOWN_POSSESSION": 18,
+        "ENGINE_RESTART": 6
+      }
+    },
+    "FWD5": {
+      "decisionRows": 67,
+      "commands": {
+        "CLEAR_OVERRIDE": 25,
+        "SET_STANCE": 36,
+        "PRESS_BALL": 2,
+        "PASS": 4
+      },
+      "reasons": {
+        "MALFORMED_POSITION": 1,
+        "KEEP_SHAPE": 23,
+        "SINGLE_LOCAL_PRESS": 2,
+        "UNKNOWN_POSSESSION": 18,
+        "SAFE_OUTLET": 4,
+        "ENGINE_RESTART": 6,
+        "ROLE_SUPPORT": 13
+      }
+    }
+  },
+  "reportConflict": "Portal own column claims zero passes and3GK distributions. Owned MID/FWD5 logs contain8PASS commands and GK67CLEAR_OVERRIDE/0GK_DISTRIBUTE. Report attribution cannot be used for tactical diagnosis. Submitted passes are not completed physical passes."
+}

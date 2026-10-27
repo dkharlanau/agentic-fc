@@ -27,9 +27,13 @@ def build(archive, manifest):
     if '.local' not in archive.resolve().parts:
         raise ValueError('Binary archives must stay under .local')
     baseline = json.loads((ROOT / 'fast_path_v2/artifact.json').read_text())
+    reviewed = json.loads((ROOT / 'hybrid_fast_v1/reviewed_dependencies.json').read_text())
     l01 = json.loads((ROOT / 'mid_fast_v1/artifact.json').read_text())
     hashes = {p: hashlib.sha256((ROOT / p).read_bytes()).hexdigest() for p in SOURCES}
     for path, expected in baseline['sourceSha256'].items():
+        # Keep the historical archive manifest truthful. Later shared-source
+        # revisions need an explicit, separately reviewed pin, not a bypass.
+        expected = reviewed['sourceSha256'].get(path, expected)
         if path in hashes and hashes[path] != expected:
             raise ValueError('Reviewed fast-path dependency changed: ' + path)
     if hashes['mid_fast_v1/engine.py'] != l01['sourceSha256']['mid_fast_v1/engine.py']:
@@ -65,6 +69,7 @@ def build(archive, manifest):
         'mode': 'stance',
         'modelCallsPerTick': 0,
         'baselineFastEngineSha256': baseline['sourceSha256']['fast_path_v2/engine.py'],
+        'reviewedFastEngineSha256': reviewed['sourceSha256']['fast_path_v2/engine.py'],
     }
     manifest.parent.mkdir(parents=True, exist_ok=True)
     manifest.write_text(json.dumps(report, indent=2) + '\n')

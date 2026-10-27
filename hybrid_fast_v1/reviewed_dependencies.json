@@ -1,0 +1,7 @@
+{
+  "scope": "Build compatibility only; M11 remains closed and is not deployed",
+  "review": "../research/v3/cloud-coach/mid-dependency-review.json",
+  "sourceSha256": {
+    "fast_path_v2/engine.py": "6e13189eba98907ffbfc261b6a1ddb36b87f5b29c9e9d513f995c0dd7730d836"
+  }
+}
