@@ -1,0 +1,54 @@
+{
+  "status": "completed-not-promoted-original-restored",
+  "sourceCommit": "35f61e2eae84b66db71dd074225eb44576170e6a",
+  "archiveSha256": "17cbdab13068c4bd57994356729ac401d1d48747706ef3150f66d66c25544443",
+  "platform": "V2",
+  "mode": "Practice",
+  "formation": "1-1-2",
+  "onlyChangedRole": "FWD5",
+  "otherFourExactVerified": true,
+  "freshFitness": "5/5 after corrected whole-field registration",
+  "native": "28/28, ownprobesstopped",
+  "target": 2,
+  "matches": [
+    {
+      "label": "counter01-totalattack",
+      "opponent": "Total Attack United",
+      "startedUTC": "2026-10-27T21:51:43Z",
+      "prematchMs": {
+        "GK": 1122,
+        "DEF": 319,
+        "MID": 1248,
+        "FWD4": 360,
+        "FWD5": 1219
+      },
+      "result": "1-4",
+      "side": "HOME",
+      "completedObservedUTC": "2026-10-27T21:57:30Z",
+      "counterOutletCommands": 31
+    },
+    {
+      "label": "counter02-fortknox",
+      "opponent": "Fort Knox Athletic",
+      "startedUTC": "2026-10-27T21:58:22Z",
+      "prematchMs": {
+        "GK": 1527,
+        "DEF": 339,
+        "MID": 1082,
+        "FWD4": 353,
+        "FWD5": 1220
+      },
+      "result": "1-0",
+      "side": "HOME",
+      "completedObservedUTC": "2026-10-27T22:03:02Z",
+      "counterOutletCommands": 38
+    }
+  ],
+  "promotion": false,
+  "decision": "Retreat during attacking-phase exposed; notpromoted",
+  "rollback": {
+    "exactFiveBindings": true,
+    "freshFitness": "5/5",
+    "observedUTC": "2026-10-27T22:05:54Z"
+  }
+}

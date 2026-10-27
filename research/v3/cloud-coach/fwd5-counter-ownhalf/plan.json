@@ -1,0 +1,10 @@
+{
+  "hypothesis": "Offer FWD5 outlet only during own-half escape; preserve original attacking-half behavior",
+  "parentTrial": "fwd5-counter/cohort-01.json, source35f61e2",
+  "specificRepair": "All normalizedball_x>=0 requests return original baseline unchanged, removing observed unwanted retreat during attacking-phase",
+  "unchanged": "Original noncarrier/cover/localchaser/frame/side/clock/energy/restart guards; otherfour roles;112",
+  "admission": "Full204tests and extracted5tests plus10gameprojectedshadow; isolatednative/Fitness stillpending",
+  "success": "Useful own-half forward option without new opponent-half retreat; not increasedcommandcount",
+  "rollback": "Exact originalFWD5 and freshFitness; otherfourbaseline",
+  "promotion": false
+}

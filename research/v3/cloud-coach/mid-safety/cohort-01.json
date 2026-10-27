@@ -1,0 +1,52 @@
+{
+  "status": "completed-not-promoted-original-restored",
+  "mode": "Practice",
+  "target": 2,
+  "opponents": [
+    "Total Attack United",
+    "Fort Knox Athletic"
+  ],
+  "sourceCommit": "8e140e9e78db3218bb6fdc6aaab27c35e9cfe9ee",
+  "archiveSha256": "6237373b1bcbfedcb03aef61d1725ffd1dd5c4f3675dda26e92305f0eec3e3d1",
+  "platform": "V2",
+  "change": "Only MID last-resort forward shot in pressured own third when original safe-pass choices exhausted",
+  "otherFourOriginalBindingsVerified": true,
+  "formation": "1-1-2",
+  "fitness": "5/5",
+  "native": "24/24 with allownedprobesstopped",
+  "matches": [
+    {
+      "label": "midsafety01-totalattack",
+      "opponent": "Total Attack United",
+      "side": "HOME",
+      "result": "2-1",
+      "completedObservedUTC": "2026-10-27T21:16:47Z",
+      "lastObservedGameTime": 148.43489,
+      "causalImprovementClaim": false,
+      "emergencyTriggers": 0
+    },
+    {
+      "label": "midsafety02-fortknox",
+      "opponent": "Fort Knox Athletic",
+      "side": "HOME",
+      "result": "4-0",
+      "completedObservedUTC": "2026-10-27T21:23:46Z",
+      "causalImprovementClaim": false,
+      "emergencyTriggers": 1
+    }
+  ],
+  "quotaRemainingPercent": null,
+  "summary": {
+    "wins": 2,
+    "losses": 0,
+    "draws": 0,
+    "goalsFor": 6,
+    "goalsAgainst": 1
+  },
+  "decision": "Attempted kick not verified to remove danger: next snapshot ball still nearown goal with opponent carrier. Do not infer benefit from two wins. Restore originalMIDtrace; retain evidence.",
+  "rollback": {
+    "observedUTC": "2026-10-27T21:40:23Z",
+    "allFiveBindingsMatch": true,
+    "freshFitness": "5/5"
+  }
+}

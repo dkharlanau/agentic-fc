@@ -1,0 +1,45 @@
+{
+  "status": "completed-not-promoted-original-restored",
+  "ownerRequestUTC": "2026-10-27T20:00:15Z",
+  "hypothesis": "When MID has confirmed possession in its own third, an opponent is close and all existing safe-pass options fail, a legal forward shot attempt may reduce immediate danger.",
+  "change": "Only baseline NO_SAFE_OUTLET may become SHOOT CENTER power1.0 duration0 forplayer2. Own-thirddepth<=1/3span;nearest-opponentdistance<=0.06span.",
+  "preserved": [
+    "All original ownership, staleframe, ballheight, holderdistance and safe-pass gates",
+    "Safe passes take precedence",
+    "All normal MID commands and kickoff replay",
+    "Exact original fast HTTP transport and bounded trace",
+    "Other4roles and112formation"
+  ],
+  "evidence": "Two changed decisions in582projected MID snapshots from7games. One qualifying own-third NO_SAFE_OUTLET was followed by conceded goal about2.48game seconds later. Counterfactual benefit unknown.",
+  "actionTruth": "SHOOT is an attempted kick toward opponent goal under existing command contract; not a dedicated clearance primitive. CENTER avoids unverified corner mapping; power1.0 stays within documented0\u20131. CLEAR_OVERRIDE never means kick.",
+  "gates": [
+    "Mirrored XY/XZ positive cases and safe-pass priority",
+    "Opponent/unknown possession, stale/repeatedframes, airball, unlockedcommands, restart, outside-zone and no-pressure gates",
+    "Inherited fullHTTPframing/restart/replay contracts",
+    "Exactarchive224baseline replay plus224boundedtraces",
+    "Isolatednative emergency and normal cases; ownsessioncleanup",
+    "FreshFitness5/5 and exactall5bindings",
+    "Two unchangedPractice games TotalAttack/FortKnox"
+  ],
+  "observe": [
+    "Whether the new branch actually triggers",
+    "Subsequent ball displacement/velocity away from own goal",
+    "Possession and pressure around the action",
+    "No unsafe ownership or wrong player",
+    "No latency/readiness regression"
+  ],
+  "stopOrReject": [
+    "Wrong-direction or unowned action",
+    "Required readiness/latency failure",
+    "No verified useful physical effect or insufficient triggers: retain candidateonhold, not automatic promotion"
+  ],
+  "rollback": "Exact existing MIDtraceV2 sourceaa68b25 andarchive239f..., freshFitness5/5; other4originalbindings retained",
+  "limits": [
+    "Sparse2-second traces can miss contacts and exact launch",
+    "Goalkeeper anchors are proxies, not surveyed goalposts",
+    "PhysicalAWAY application still unobserved",
+    "Failed safe-pass fixture corrected: original fixture was blocked, revised fixture explicitly verifies baselinePASS"
+  ],
+  "quotaRemainingPercent": null,
+  "officialRecheck": "Workshop Actions and Stats and Game Rules read21:03\u201321:04UTC: SHOOTCENTER power0\u20131 requirespossession; ballnevergoesoutofplay. A forward kick is not a stoppage and may rebound. Five-seconddecisionlimit confirmed."
+}

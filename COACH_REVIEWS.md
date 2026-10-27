@@ -1179,3 +1179,89 @@ as evidence, not a proven improvement. Next prioritize owner-requested emergency
 forward escape only with established possession, own-third pressure and no safe
 pass. Baseline MID already rejects unsafe passes; any new kick must be separately
 validated. No change to protectedFWD4 or goodDEF carrying.
+
+## 2026-10-27 — emergency MID escape candidate
+
+Owner asks for emergency forward release rather than risky passing near own goal.
+C03: baseline MID already rejects unsafe passes. Two of582projected snapshots have
+NO_SAFE_OUTLET in own third with nearestopponent<=.06span; one precedes a conceded
+goal by2.48game seconds. This does not prove clearance would prevent it. Candidate
+wraps unchanged MID policy: only this qualified branch attempts SHOOT CENTER1.0.
+No ownership relaxation, no unsafe pass, no new model, no DEF/FWD4 changes.
+Physical clearance remains unverified; zero triggers or no useful effect cannot
+justify promotion. Exact baseline transport retained, local224/224HTTP+224traces;
+mirrored/safety and inheritedtransport tests19PASS after correcting one improperly
+labelled blocked safe-pass fixture. Fullsuite/native/Fitness remain separate gates.
+
+Emergency preflight21:10UTC: source8e140e9, archive6237373b, native24/24 including
+mirroreddanger, safe-pass precedence, unknown/opponent, stale, kickoffreplay and
+normal commands; first2.425/2.199s, warmp95.269s, no agentprewarm, ownprobesstopped.
+ExactMID-only binding and originalother4/112 verified; freshFitness5/5. Two-game
+TotalAttack/FortKnox block begins only after prematchReady. Current official rules
+confirm ballneveroutofplay: a forward shot can rebound, not create a stoppage.
+
+## 2026-10-27 — emergency trial completed, no promotion
+
+Two unchanged games: TotalAttack2:1 (observed game time148.43), FortKnox4:0.
+Triggers0/1. At42.48 inFortKnox the attemptedforwardSHOT1.0 was followed two
+seconds later by a ball still near own goal, held by opponentMID. Sparse frames
+cannot distinguish a blocked kick, interception or non-application. Successful
+clearance not established; wins are not attributed to the unverified action.
+Restore baselineMIDtrace andFitness. A concrete separate defect: both ownforwards
+were nearly coincident behind MID in that dangerframe, offering no forwardoutlet.
+Next bounded hypothesis is FWD5 offball availability with explicit non-carrier,
+nearest-defender and cover guards; no change to FWD4 or DEFgooddribbling.
+
+## 2026-10-27 21:43 UTC — separate counter outlet candidate
+
+Re-read coach-v1.0 C01–C03. Emergency wrapper is removed, exact five original
+bindings and fresh Fitness5/5 verified21:40. C03 motivates one offball change,
+not a new shooting or goalkeeper policy. FWD5 may offer a bounded HOME outlet
+only when its non-carrier status is established, another outfielder plus GK
+cover behind the ball, and it is not the nearest needed local chaser. Preserve
+all original onball, restart, unvalidated frame and AWAY behavior. A safe channel
+is retained for six game seconds to reduce sample-to-sample zigzagging.
+Extracted exact original dependencies plus wrapper: synthetic5/5; full local
+suite204PASS. Shadow642sparse projected states,238changed offball decisions;
+these are not real FWD5 input replay or movement evidence. Actual forward
+separation, target application, passing availability and defensive cost must be
+observed in a two-game unchanged block after native/Fitness gates. Alternative:
+the explicit movement may be ignored or remove useful defense. No promotion
+from command counts or two wins alone. No changes to FWD4, DEF, GK or MID.
+
+## 2026-10-27 22:04 UTC — counter outlet block closed
+
+C01 preserved: unchanged two-game block, TotalAttack1:4/FortKnox1:0. No midblock
+changes. C02/C03:69actual outletcommands,43of65paired next-sample positions moved
+closer to targets, but useful pass completion is not established. Own FWD5 more
+often ahead of ball; mean forward separation did not improve over loggerbaseline.
+A concrete policy defect:15commands requested retreat towardhalfway while ball
+was in attackingthird. Originalpolicy restored; freshFitness pending. Do not
+attribute losses solely to this, but do not retain a rule that pulls support away
+from attack. Next narrow the same hypothesis to ball in ownhalf; preserve all
+opponent-half original commands and protected roles. Avoid a new unrelated fix.
+The firstregistration failure was operator fieldappend, not runtimefailure;
+fullreplacement plus exactequality and repeatedFitness resolved before anymatch.
+
+## 2026-10-27 22:12 UTC — own-half-only follow-up admission
+
+Rechecked unchanged coach-v1.0 C01–C03. Same bounded outlet hypothesis, now
+restricted to ball in ownhalf; all opponent-half decisions are originalbaseline.
+OriginalFWD5 was restored with exactallfive andFitness5/5 before revision.
+Sourced7e8154, archive10fd94dc, full204tests and5extractedcodechecksPASS.
+Projected794states across10games:128changed own-half decisions, not actual
+movement or a demonstrated improvement. Native32/32 (including unchanged
+opponent-half/halfway cases), first2.722/2.255s, warmp95.222s after separate
+clientconnection setup; ownprobes stopped. FreshFitness/readback pending,
+then unchanged twoPractice games. Otherfour roles and112 preserved.
+
+## 2026-10-27 22:26 UTC — own-half follow-up closed; control next
+
+Two unchanged games1:2/2:0;25outletcommands.20of23paired ownFWD5 positions moved
+closer to requested targets.24same-time matches place ball in ownhalf; one gap
+unresolved. New code preserves opponent-half behavior. Sample forwardseparation
+3.58/3.22 versus priorunrestricted2.82/2.48, but game contexts differ. Usefulpass
+completion and matchstrength remain unproven. Hold rather than promote. Original
+FWD5 restored; exactallfive andfreshFitness5/5 verified22:26. Next C01 control:
+repeat originalTotalAttack/FortKnox pair in this timewindow, no newpolicy, to avoid
+mistaking matchvariance for effects. FWD4/DEF/GK/MID unchanged throughout.

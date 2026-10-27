@@ -1,0 +1,37 @@
+{
+  "status": "candidate-not-installed",
+  "hypothesis": "Keeping one protected offball counter outlet may prevent both forwards retreating behind MID, improving a safe next pass without abandoning the nearest needed defender.",
+  "change": "Only FWD5 offball HOME shape/unknown branches, proven non-carrier, cover and nearest-chaser guards; bounded nonsprinting MOVE_TO. Original onball behavior unchanged.",
+  "evidence": "FortKnox emergency episode42.48: bothforwards nearly coincident behind MID; no useful forward outlet.",
+  "alternative": "Built-in behavior may already move them later; explicit MOVE may reduce defensive contribution or be ignored.",
+  "gates": [
+    "Exact original baseline archive preserved",
+    "Synthetic ownership/restart/cover/nearest/frame/time checks",
+    "Extracted deployment-code shadow on sparse recorded inputs",
+    "Isolated V2 native response under5s",
+    "Exact five bindings and freshFitness5/5",
+    "Two unchanged Practice games TotalAttack/FortKnox"
+  ],
+  "observe": [
+    "Own FWD5 moves toward target, not just more commands",
+    "Greater forward separation and availability ahead of ball",
+    "No abandonment of nearest required chase",
+    "Actual useful pass/attack continuation and defensive cost"
+  ],
+  "reject": [
+    "Failed readiness",
+    "Wrong team or unsafe carrier override",
+    "No applied useful movement or no measurable availability",
+    "Unresolved defense regression"
+  ],
+  "rollback": "OriginalFWD5, MIDtracebaseline, originalother3 and112; freshFitness",
+  "limits": [
+    "HOME-only physical movement evidence",
+    "Keeper anchors not surveyed pitch bounds",
+    "Sparse cross-role snapshots not exact FWD5 replay",
+    "V2 runtime is an operational change from originalV1, not evidence of tactical causality"
+  ],
+  "firstTestFailure": "Synthetic positive fixture used keeperanchors\u00b15 outside validatedMOVE\u00b15.5..6.5; corrected fixture to\u00b16.4 without relaxing guard.",
+  "fullSuiteFirstAttempt": "Default unittest discover ran0; rerun explicit tests directory, result pending.",
+  "fullSuite": "204 PASS; first default discovery ran0, not a PASS"
+}

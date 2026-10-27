@@ -1,0 +1,2206 @@
+{
+  "kind": "Extracted exact deployment code; projected MID inputs, NOT real FWD5 request replay",
+  "archiveSha256": "17cbdab13068c4bd57994356729ac401d1d48747706ef3150f66d66c25544443",
+  "syntheticHOMEAWAY": true,
+  "rows": [
+    {
+      "match": "trace01-fortknox",
+      "projectedStates": 56,
+      "changedDecisions": 20,
+      "changes": [
+        {
+          "gameTime": 1.839999,
+          "channel": 1,
+          "target": {
+            "target_x": 0.43654,
+            "target_y": 1.672855,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 3.839997,
+          "channel": 1,
+          "target": {
+            "target_x": 0.43654,
+            "target_y": 1.672855,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 5.839995,
+          "channel": -1,
+          "target": {
+            "target_x": 0.43654,
+            "target_y": -1.672855,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 15.680168,
+          "channel": -1,
+          "target": {
+            "target_x": 0.43654,
+            "target_y": -1.672855,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 17.680214,
+          "channel": -1,
+          "target": {
+            "target_x": 0.43654,
+            "target_y": -1.672855,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 19.70026,
+          "channel": -1,
+          "target": {
+            "target_x": 0.43654,
+            "target_y": -1.672855,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 25.680397,
+          "channel": 1,
+          "target": {
+            "target_x": 0.43654,
+            "target_y": 1.672855,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 27.740444,
+          "channel": 1,
+          "target": {
+            "target_x": 0.43654,
+            "target_y": 1.672855,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 29.700489,
+          "channel": 1,
+          "target": {
+            "target_x": 0.43654,
+            "target_y": 1.672855,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 31.720535,
+          "channel": -1,
+          "target": {
+            "target_x": 0.43654,
+            "target_y": -1.672855,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 33.74058,
+          "channel": -1,
+          "target": {
+            "target_x": 0.43654,
+            "target_y": -1.672855,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 35.740627,
+          "channel": -1,
+          "target": {
+            "target_x": 0.43654,
+            "target_y": -1.672855,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 39.700718,
+          "channel": 1,
+          "target": {
+            "target_x": 0.43654,
+            "target_y": 1.672855,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 60.561195,
+          "channel": 1,
+          "target": {
+            "target_x": 0.43654,
+            "target_y": 1.672855,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 68.580505,
+          "channel": 1,
+          "target": {
+            "target_x": 0.43654,
+            "target_y": 1.672855,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 70.60017,
+          "channel": 1,
+          "target": {
+            "target_x": 0.43654,
+            "target_y": 1.672855,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 72.55984,
+          "channel": -1,
+          "target": {
+            "target_x": 0.43654,
+            "target_y": -1.672855,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 113.672935,
+          "channel": -1,
+          "target": {
+            "target_x": 0.43654,
+            "target_y": -1.672855,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 115.6726,
+          "channel": -1,
+          "target": {
+            "target_x": 0.43654,
+            "target_y": -1.672855,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 119.67193,
+          "channel": -1,
+          "target": {
+            "target_x": 0.43654,
+            "target_y": -1.672855,
+            "sprint": false
+          }
+        }
+      ]
+    },
+    {
+      "match": "trace02-totalattack",
+      "projectedStates": 91,
+      "changedDecisions": 40,
+      "changes": [
+        {
+          "gameTime": 0.46,
+          "channel": 1,
+          "target": {
+            "target_x": 0.471666,
+            "target_y": 1.650201,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 2.419998,
+          "channel": 1,
+          "target": {
+            "target_x": 0.471666,
+            "target_y": 1.650201,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 4.439996,
+          "channel": 1,
+          "target": {
+            "target_x": 0.471666,
+            "target_y": 1.650201,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 8.420002,
+          "channel": 1,
+          "target": {
+            "target_x": 0.471666,
+            "target_y": 1.650201,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 10.460049,
+          "channel": 1,
+          "target": {
+            "target_x": 0.471666,
+            "target_y": 1.650201,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 12.460094,
+          "channel": -1,
+          "target": {
+            "target_x": 0.471666,
+            "target_y": -1.650201,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 14.46014,
+          "channel": -1,
+          "target": {
+            "target_x": 0.471666,
+            "target_y": -1.650201,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 16.240181,
+          "channel": -1,
+          "target": {
+            "target_x": 0.471666,
+            "target_y": -1.650201,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 18.260227,
+          "channel": 1,
+          "target": {
+            "target_x": 0.471666,
+            "target_y": 1.650201,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 20.220272,
+          "channel": 1,
+          "target": {
+            "target_x": 0.471666,
+            "target_y": 1.650201,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 22.220318,
+          "channel": 1,
+          "target": {
+            "target_x": 0.471666,
+            "target_y": 1.650201,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 24.54037,
+          "channel": -1,
+          "target": {
+            "target_x": 0.471666,
+            "target_y": -1.650201,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 26.540417,
+          "channel": -1,
+          "target": {
+            "target_x": 0.471666,
+            "target_y": -1.650201,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 28.540462,
+          "channel": -1,
+          "target": {
+            "target_x": 2.23148,
+            "target_y": -1.650201,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 31.240524,
+          "channel": -1,
+          "target": {
+            "target_x": 0.471666,
+            "target_y": -1.650201,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 33.24057,
+          "channel": -1,
+          "target": {
+            "target_x": 0.471666,
+            "target_y": -1.650201,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 37.260662,
+          "channel": 1,
+          "target": {
+            "target_x": 1.230777,
+            "target_y": 1.650201,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 39.260708,
+          "channel": 1,
+          "target": {
+            "target_x": 0.471666,
+            "target_y": 1.650201,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 41.06075,
+          "channel": -1,
+          "target": {
+            "target_x": 0.471666,
+            "target_y": -1.650201,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 43.120796,
+          "channel": -1,
+          "target": {
+            "target_x": 0.471666,
+            "target_y": -1.650201,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 47.120888,
+          "channel": -1,
+          "target": {
+            "target_x": 0.471666,
+            "target_y": -1.650201,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 53.121025,
+          "channel": -1,
+          "target": {
+            "target_x": 0.471666,
+            "target_y": -1.650201,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 54.24105,
+          "channel": 1,
+          "target": {
+            "target_x": 0.471666,
+            "target_y": 1.650201,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 69.120415,
+          "channel": 1,
+          "target": {
+            "target_x": 0.471666,
+            "target_y": 1.650201,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 70.50018,
+          "channel": -1,
+          "target": {
+            "target_x": 0.471666,
+            "target_y": -1.650201,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 75.11941,
+          "channel": -1,
+          "target": {
+            "target_x": 0.471666,
+            "target_y": -1.650201,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 77.11907,
+          "channel": 1,
+          "target": {
+            "target_x": 0.471666,
+            "target_y": 1.650201,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 79.11874,
+          "channel": 1,
+          "target": {
+            "target_x": 0.471666,
+            "target_y": 1.650201,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 81.1384,
+          "channel": 1,
+          "target": {
+            "target_x": 0.471666,
+            "target_y": 1.650201,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 83.118065,
+          "channel": -1,
+          "target": {
+            "target_x": 0.471666,
+            "target_y": -1.650201,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 85.15772,
+          "channel": -1,
+          "target": {
+            "target_x": 0.471666,
+            "target_y": -1.650201,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 87.11739,
+          "channel": -1,
+          "target": {
+            "target_x": 0.471666,
+            "target_y": -1.650201,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 89.137054,
+          "channel": -1,
+          "target": {
+            "target_x": 0.471666,
+            "target_y": -1.650201,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 91.11672,
+          "channel": -1,
+          "target": {
+            "target_x": 2.829096,
+            "target_y": -1.650201,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 93.11639,
+          "channel": -1,
+          "target": {
+            "target_x": 0.471666,
+            "target_y": -1.650201,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 95.11605,
+          "channel": 1,
+          "target": {
+            "target_x": 0.471666,
+            "target_y": 1.650201,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 97.15571,
+          "channel": 1,
+          "target": {
+            "target_x": 0.471666,
+            "target_y": 1.650201,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 101.03506,
+          "channel": 1,
+          "target": {
+            "target_x": 0.471666,
+            "target_y": 1.650201,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 115.03271,
+          "channel": 1,
+          "target": {
+            "target_x": 0.471666,
+            "target_y": 1.650201,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 117.05237,
+          "channel": -1,
+          "target": {
+            "target_x": 0.471666,
+            "target_y": -1.650201,
+            "sprint": false
+          }
+        }
+      ]
+    },
+    {
+      "match": "outlet01-fortknox",
+      "projectedStates": 74,
+      "changedDecisions": 24,
+      "changes": [
+        {
+          "gameTime": 1.779999,
+          "channel": 1,
+          "target": {
+            "target_x": 0.443467,
+            "target_y": 1.673513,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 9.800034,
+          "channel": -1,
+          "target": {
+            "target_x": 0.443467,
+            "target_y": -1.673513,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 23.820354,
+          "channel": 1,
+          "target": {
+            "target_x": 0.443467,
+            "target_y": 1.673513,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 31.600533,
+          "channel": -1,
+          "target": {
+            "target_x": 0.443467,
+            "target_y": -1.673513,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 41.62076,
+          "channel": -1,
+          "target": {
+            "target_x": 0.443467,
+            "target_y": -1.673513,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 43.620808,
+          "channel": -1,
+          "target": {
+            "target_x": 0.443467,
+            "target_y": -1.673513,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 61.021206,
+          "channel": -1,
+          "target": {
+            "target_x": 0.443467,
+            "target_y": -1.673513,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 62.92125,
+          "channel": -1,
+          "target": {
+            "target_x": 0.443467,
+            "target_y": -1.673513,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 67.02077,
+          "channel": -1,
+          "target": {
+            "target_x": 0.443467,
+            "target_y": -1.673513,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 72.99976,
+          "channel": 1,
+          "target": {
+            "target_x": 0.443467,
+            "target_y": 1.673513,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 77.37903,
+          "channel": 1,
+          "target": {
+            "target_x": 0.443467,
+            "target_y": 1.673513,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 79.358696,
+          "channel": -1,
+          "target": {
+            "target_x": 0.443467,
+            "target_y": -1.673513,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 85.83761,
+          "channel": -1,
+          "target": {
+            "target_x": 0.443467,
+            "target_y": -1.673513,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 90.33685,
+          "channel": 1,
+          "target": {
+            "target_x": 0.443467,
+            "target_y": 1.673513,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 91.8566,
+          "channel": 1,
+          "target": {
+            "target_x": 0.443467,
+            "target_y": 1.673513,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 95.81593,
+          "channel": 1,
+          "target": {
+            "target_x": 0.443467,
+            "target_y": 1.673513,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 97.85559,
+          "channel": 1,
+          "target": {
+            "target_x": 0.443467,
+            "target_y": 1.673513,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 103.83459,
+          "channel": -1,
+          "target": {
+            "target_x": 0.443467,
+            "target_y": -1.673513,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 109.85358,
+          "channel": -1,
+          "target": {
+            "target_x": 0.443467,
+            "target_y": -1.673513,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 111.81325,
+          "channel": -1,
+          "target": {
+            "target_x": 0.443467,
+            "target_y": -1.673513,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 113.8729,
+          "channel": -1,
+          "target": {
+            "target_x": 0.443467,
+            "target_y": -1.673513,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 115.83257,
+          "channel": -1,
+          "target": {
+            "target_x": 0.443467,
+            "target_y": -1.673513,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 117.83224,
+          "channel": -1,
+          "target": {
+            "target_x": 0.443467,
+            "target_y": -1.673513,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 119.8519,
+          "channel": 1,
+          "target": {
+            "target_x": 2.685218,
+            "target_y": 1.673513,
+            "sprint": false
+          }
+        }
+      ]
+    },
+    {
+      "match": "outlet02-totalattack",
+      "projectedStates": 84,
+      "changedDecisions": 33,
+      "changes": [
+        {
+          "gameTime": 1.019999,
+          "channel": -1,
+          "target": {
+            "target_x": 0.488078,
+            "target_y": -1.663204,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 11.000061,
+          "channel": -1,
+          "target": {
+            "target_x": 0.488078,
+            "target_y": -1.663204,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 13.040108,
+          "channel": -1,
+          "target": {
+            "target_x": 0.488078,
+            "target_y": -1.663204,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 21.02029,
+          "channel": 1,
+          "target": {
+            "target_x": 0.488078,
+            "target_y": 1.663204,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 25.040382,
+          "channel": 1,
+          "target": {
+            "target_x": 0.488078,
+            "target_y": 1.663204,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 27.020428,
+          "channel": 1,
+          "target": {
+            "target_x": 0.488078,
+            "target_y": 1.663204,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 29.020473,
+          "channel": 1,
+          "target": {
+            "target_x": 0.488078,
+            "target_y": 1.663204,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 33.040565,
+          "channel": -1,
+          "target": {
+            "target_x": 0.488078,
+            "target_y": -1.663204,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 35.06061,
+          "channel": -1,
+          "target": {
+            "target_x": 0.488078,
+            "target_y": -1.663204,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 37.000656,
+          "channel": 1,
+          "target": {
+            "target_x": 0.488078,
+            "target_y": 1.663204,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 39.0007,
+          "channel": 1,
+          "target": {
+            "target_x": 0.488078,
+            "target_y": 1.663204,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 43.000793,
+          "channel": 1,
+          "target": {
+            "target_x": 0.488078,
+            "target_y": 1.663204,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 53.74104,
+          "channel": -1,
+          "target": {
+            "target_x": 0.488078,
+            "target_y": -1.663204,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 55.721085,
+          "channel": -1,
+          "target": {
+            "target_x": 0.488078,
+            "target_y": -1.663204,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 61.64122,
+          "channel": 1,
+          "target": {
+            "target_x": 0.488078,
+            "target_y": 1.663204,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 65.601006,
+          "channel": -1,
+          "target": {
+            "target_x": 0.910636,
+            "target_y": -1.663204,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 67.60067,
+          "channel": -1,
+          "target": {
+            "target_x": 0.488078,
+            "target_y": -1.663204,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 69.600334,
+          "channel": -1,
+          "target": {
+            "target_x": 0.488078,
+            "target_y": -1.663204,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 73.59966,
+          "channel": -1,
+          "target": {
+            "target_x": 0.488078,
+            "target_y": -1.663204,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 77.638985,
+          "channel": 1,
+          "target": {
+            "target_x": 0.488078,
+            "target_y": 1.663204,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 79.63865,
+          "channel": 1,
+          "target": {
+            "target_x": 0.488078,
+            "target_y": 1.663204,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 81.61832,
+          "channel": 1,
+          "target": {
+            "target_x": 0.488078,
+            "target_y": 1.663204,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 84.957756,
+          "channel": 1,
+          "target": {
+            "target_x": 0.488078,
+            "target_y": 1.663204,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 92.95641,
+          "channel": -1,
+          "target": {
+            "target_x": 0.488078,
+            "target_y": -1.663204,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 94.99607,
+          "channel": -1,
+          "target": {
+            "target_x": 0.488078,
+            "target_y": -1.663204,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 102.03489,
+          "channel": -1,
+          "target": {
+            "target_x": 0.488078,
+            "target_y": -1.663204,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 104.01456,
+          "channel": -1,
+          "target": {
+            "target_x": 0.488078,
+            "target_y": -1.663204,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 105.994225,
+          "channel": -1,
+          "target": {
+            "target_x": 0.488078,
+            "target_y": -1.663204,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 111.893234,
+          "channel": 1,
+          "target": {
+            "target_x": 0.488078,
+            "target_y": 1.663204,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 113.8929,
+          "channel": 1,
+          "target": {
+            "target_x": 0.488078,
+            "target_y": 1.663204,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 115.87257,
+          "channel": 1,
+          "target": {
+            "target_x": 0.488078,
+            "target_y": 1.663204,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 117.912224,
+          "channel": -1,
+          "target": {
+            "target_x": 0.488078,
+            "target_y": -1.663204,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 119.871895,
+          "channel": -1,
+          "target": {
+            "target_x": 0.488078,
+            "target_y": -1.663204,
+            "sprint": false
+          }
+        }
+      ]
+    },
+    {
+      "match": "finishv2-01-totalattack",
+      "projectedStates": 84,
+      "changedDecisions": 30,
+      "changes": [
+        {
+          "gameTime": 2.099998,
+          "channel": -1,
+          "target": {
+            "target_x": 0.44192,
+            "target_y": -1.54671,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 18.82024,
+          "channel": -1,
+          "target": {
+            "target_x": 0.44192,
+            "target_y": -1.54671,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 28.780468,
+          "channel": -1,
+          "target": {
+            "target_x": 0.44192,
+            "target_y": -1.54671,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 30.780514,
+          "channel": -1,
+          "target": {
+            "target_x": 0.44192,
+            "target_y": -1.54671,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 34.800606,
+          "channel": 1,
+          "target": {
+            "target_x": 0.44192,
+            "target_y": 1.54671,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 36.860653,
+          "channel": 1,
+          "target": {
+            "target_x": 0.44192,
+            "target_y": 1.54671,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 38.820698,
+          "channel": 1,
+          "target": {
+            "target_x": 0.44192,
+            "target_y": 1.54671,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 42.84079,
+          "channel": -1,
+          "target": {
+            "target_x": 0.44192,
+            "target_y": -1.54671,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 48.860928,
+          "channel": -1,
+          "target": {
+            "target_x": 0.44192,
+            "target_y": -1.54671,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 64.56118,
+          "channel": 1,
+          "target": {
+            "target_x": 0.44192,
+            "target_y": 1.54671,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 66.48086,
+          "channel": 1,
+          "target": {
+            "target_x": 0.44192,
+            "target_y": 1.54671,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 68.48052,
+          "channel": -1,
+          "target": {
+            "target_x": 0.44192,
+            "target_y": -1.54671,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 70.46019,
+          "channel": -1,
+          "target": {
+            "target_x": 0.44192,
+            "target_y": -1.54671,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 72.399864,
+          "channel": -1,
+          "target": {
+            "target_x": 0.44192,
+            "target_y": -1.54671,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 74.37953,
+          "channel": 1,
+          "target": {
+            "target_x": 0.44192,
+            "target_y": 1.54671,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 78.41885,
+          "channel": -1,
+          "target": {
+            "target_x": 0.44192,
+            "target_y": -1.54671,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 80.39852,
+          "channel": -1,
+          "target": {
+            "target_x": 0.44192,
+            "target_y": -1.54671,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 86.37752,
+          "channel": 1,
+          "target": {
+            "target_x": 0.44192,
+            "target_y": 1.54671,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 88.39718,
+          "channel": -1,
+          "target": {
+            "target_x": 0.44192,
+            "target_y": -1.54671,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 94.17621,
+          "channel": -1,
+          "target": {
+            "target_x": 0.44192,
+            "target_y": -1.54671,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 96.17587,
+          "channel": 1,
+          "target": {
+            "target_x": 0.44192,
+            "target_y": 1.54671,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 98.135544,
+          "channel": 1,
+          "target": {
+            "target_x": 0.44192,
+            "target_y": 1.54671,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 100.1752,
+          "channel": 1,
+          "target": {
+            "target_x": 0.44192,
+            "target_y": 1.54671,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 102.13487,
+          "channel": 1,
+          "target": {
+            "target_x": 0.44192,
+            "target_y": 1.54671,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 104.17453,
+          "channel": 1,
+          "target": {
+            "target_x": 0.44192,
+            "target_y": 1.54671,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 106.174194,
+          "channel": -1,
+          "target": {
+            "target_x": 0.44192,
+            "target_y": -1.54671,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 108.17386,
+          "channel": -1,
+          "target": {
+            "target_x": 0.44192,
+            "target_y": -1.54671,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 110.17352,
+          "channel": -1,
+          "target": {
+            "target_x": 0.44192,
+            "target_y": -1.54671,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 112.17319,
+          "channel": -1,
+          "target": {
+            "target_x": 0.44192,
+            "target_y": -1.54671,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 116.172516,
+          "channel": 1,
+          "target": {
+            "target_x": 0.44192,
+            "target_y": 1.54671,
+            "sprint": false
+          }
+        }
+      ]
+    },
+    {
+      "match": "finishv2-02-fortknox",
+      "projectedStates": 85,
+      "changedDecisions": 24,
+      "changes": [
+        {
+          "gameTime": 10.400047,
+          "channel": -1,
+          "target": {
+            "target_x": 0.463365,
+            "target_y": -1.622003,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 28.42046,
+          "channel": -1,
+          "target": {
+            "target_x": 0.463365,
+            "target_y": -1.622003,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 30.400505,
+          "channel": 1,
+          "target": {
+            "target_x": 0.463365,
+            "target_y": 1.622003,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 32.40055,
+          "channel": -1,
+          "target": {
+            "target_x": 1.541046,
+            "target_y": -1.622003,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 38.42069,
+          "channel": -1,
+          "target": {
+            "target_x": 0.463365,
+            "target_y": -1.622003,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 42.42078,
+          "channel": -1,
+          "target": {
+            "target_x": 0.463365,
+            "target_y": -1.622003,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 48.420918,
+          "channel": 1,
+          "target": {
+            "target_x": 0.463365,
+            "target_y": 1.622003,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 50.400963,
+          "channel": 1,
+          "target": {
+            "target_x": 0.463365,
+            "target_y": 1.622003,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 52.42101,
+          "channel": 1,
+          "target": {
+            "target_x": 0.463365,
+            "target_y": 1.622003,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 54.401054,
+          "channel": 1,
+          "target": {
+            "target_x": 0.463365,
+            "target_y": 1.622003,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 56.4211,
+          "channel": 1,
+          "target": {
+            "target_x": 2.780513,
+            "target_y": 1.622003,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 58.62115,
+          "channel": -1,
+          "target": {
+            "target_x": 0.463365,
+            "target_y": -1.622003,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 68.640495,
+          "channel": 1,
+          "target": {
+            "target_x": 0.463365,
+            "target_y": 1.622003,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 70.68015,
+          "channel": 1,
+          "target": {
+            "target_x": 0.463365,
+            "target_y": 1.622003,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 74.5595,
+          "channel": -1,
+          "target": {
+            "target_x": 0.463365,
+            "target_y": -1.622003,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 76.59916,
+          "channel": -1,
+          "target": {
+            "target_x": 0.463365,
+            "target_y": -1.622003,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 78.61882,
+          "channel": -1,
+          "target": {
+            "target_x": 0.463365,
+            "target_y": -1.622003,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 86.4775,
+          "channel": -1,
+          "target": {
+            "target_x": 0.463365,
+            "target_y": -1.622003,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 90.43684,
+          "channel": -1,
+          "target": {
+            "target_x": 0.463365,
+            "target_y": -1.622003,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 92.4365,
+          "channel": -1,
+          "target": {
+            "target_x": 0.463365,
+            "target_y": -1.622003,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 102.43482,
+          "channel": -1,
+          "target": {
+            "target_x": 0.463365,
+            "target_y": -1.622003,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 104.45448,
+          "channel": -1,
+          "target": {
+            "target_x": 0.463365,
+            "target_y": -1.622003,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 106.37416,
+          "channel": -1,
+          "target": {
+            "target_x": 0.463365,
+            "target_y": -1.622003,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 110.333496,
+          "channel": -1,
+          "target": {
+            "target_x": 0.463365,
+            "target_y": -1.622003,
+            "sprint": false
+          }
+        }
+      ]
+    },
+    {
+      "match": "midsafety01-totalattack",
+      "projectedStates": 92,
+      "changedDecisions": 41,
+      "changes": [
+        {
+          "gameTime": 0.06,
+          "channel": 1,
+          "target": {
+            "target_x": 0.440937,
+            "target_y": 1.543266,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 6.099995,
+          "channel": 1,
+          "target": {
+            "target_x": 0.440937,
+            "target_y": 1.543266,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 8.099995,
+          "channel": 1,
+          "target": {
+            "target_x": 0.440937,
+            "target_y": 1.543266,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 14.100132,
+          "channel": 1,
+          "target": {
+            "target_x": 0.440937,
+            "target_y": 1.543266,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 16.100178,
+          "channel": 1,
+          "target": {
+            "target_x": 0.440937,
+            "target_y": 1.543266,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 26.120407,
+          "channel": -1,
+          "target": {
+            "target_x": 0.440937,
+            "target_y": -1.543266,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 32.140545,
+          "channel": -1,
+          "target": {
+            "target_x": 0.440937,
+            "target_y": -1.543266,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 34.10059,
+          "channel": -1,
+          "target": {
+            "target_x": 0.440937,
+            "target_y": -1.543266,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 36.100636,
+          "channel": -1,
+          "target": {
+            "target_x": 0.440937,
+            "target_y": -1.543266,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 40.100727,
+          "channel": -1,
+          "target": {
+            "target_x": 0.440937,
+            "target_y": -1.543266,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 42.100773,
+          "channel": -1,
+          "target": {
+            "target_x": 0.440937,
+            "target_y": -1.543266,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 47.960907,
+          "channel": 1,
+          "target": {
+            "target_x": 0.440937,
+            "target_y": 1.543266,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 49.940952,
+          "channel": 1,
+          "target": {
+            "target_x": 0.440937,
+            "target_y": 1.543266,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 51.900997,
+          "channel": 1,
+          "target": {
+            "target_x": 0.440937,
+            "target_y": 1.543266,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 53.961044,
+          "channel": 1,
+          "target": {
+            "target_x": 0.440937,
+            "target_y": 1.543266,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 55.94109,
+          "channel": 1,
+          "target": {
+            "target_x": 0.440937,
+            "target_y": 1.543266,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 57.941135,
+          "channel": -1,
+          "target": {
+            "target_x": 0.440937,
+            "target_y": -1.543266,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 59.96118,
+          "channel": -1,
+          "target": {
+            "target_x": 0.440937,
+            "target_y": -1.543266,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 61.981228,
+          "channel": -1,
+          "target": {
+            "target_x": 0.440937,
+            "target_y": -1.543266,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 63.961273,
+          "channel": -1,
+          "target": {
+            "target_x": 0.440937,
+            "target_y": -1.543266,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 77.95893,
+          "channel": -1,
+          "target": {
+            "target_x": 0.440937,
+            "target_y": -1.543266,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 87.97725,
+          "channel": 1,
+          "target": {
+            "target_x": 0.440937,
+            "target_y": 1.543266,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 91.95658,
+          "channel": 1,
+          "target": {
+            "target_x": 0.440937,
+            "target_y": 1.543266,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 93.956245,
+          "channel": 1,
+          "target": {
+            "target_x": 0.440937,
+            "target_y": 1.543266,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 95.95591,
+          "channel": -1,
+          "target": {
+            "target_x": 0.440937,
+            "target_y": -1.543266,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 97.93558,
+          "channel": 1,
+          "target": {
+            "target_x": 0.440937,
+            "target_y": 1.543266,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 99.93524,
+          "channel": 1,
+          "target": {
+            "target_x": 0.440937,
+            "target_y": 1.543266,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 101.9749,
+          "channel": 1,
+          "target": {
+            "target_x": 0.440937,
+            "target_y": 1.543266,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 103.95457,
+          "channel": 1,
+          "target": {
+            "target_x": 0.440937,
+            "target_y": 1.543266,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 105.934235,
+          "channel": -1,
+          "target": {
+            "target_x": 0.440937,
+            "target_y": -1.543266,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 109.93356,
+          "channel": -1,
+          "target": {
+            "target_x": 0.440937,
+            "target_y": -1.543266,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 111.953224,
+          "channel": -1,
+          "target": {
+            "target_x": 0.440937,
+            "target_y": -1.543266,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 113.93289,
+          "channel": -1,
+          "target": {
+            "target_x": 1.083583,
+            "target_y": -1.543266,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 125.830894,
+          "channel": 1,
+          "target": {
+            "target_x": 0.440937,
+            "target_y": 1.543266,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 127.83056,
+          "channel": 1,
+          "target": {
+            "target_x": 0.440937,
+            "target_y": 1.543266,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 131.85135,
+          "channel": -1,
+          "target": {
+            "target_x": 0.440937,
+            "target_y": -1.543266,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 137.89264,
+          "channel": -1,
+          "target": {
+            "target_x": 0.440937,
+            "target_y": -1.543266,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 141.83348,
+          "channel": 1,
+          "target": {
+            "target_x": 0.440937,
+            "target_y": 1.543266,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 143.85391,
+          "channel": 1,
+          "target": {
+            "target_x": 0.440937,
+            "target_y": 1.543266,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 145.83434,
+          "channel": 1,
+          "target": {
+            "target_x": 0.440937,
+            "target_y": 1.543266,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 147.87477,
+          "channel": 1,
+          "target": {
+            "target_x": 2.645602,
+            "target_y": 1.543266,
+            "sprint": false
+          }
+        }
+      ]
+    },
+    {
+      "match": "midsafety02-fortknox",
+      "projectedStates": 76,
+      "changedDecisions": 26,
+      "changes": [
+        {
+          "gameTime": 20.480278,
+          "channel": -1,
+          "target": {
+            "target_x": 0.544157,
+            "target_y": -1.681499,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 22.480324,
+          "channel": -1,
+          "target": {
+            "target_x": 0.544157,
+            "target_y": -1.681499,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 24.48037,
+          "channel": -1,
+          "target": {
+            "target_x": 0.544157,
+            "target_y": -1.681499,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 36.480644,
+          "channel": 1,
+          "target": {
+            "target_x": 0.544157,
+            "target_y": 1.681499,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 38.46069,
+          "channel": 1,
+          "target": {
+            "target_x": 0.544157,
+            "target_y": 1.681499,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 42.48078,
+          "channel": 1,
+          "target": {
+            "target_x": 0.544157,
+            "target_y": 1.681499,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 44.480827,
+          "channel": -1,
+          "target": {
+            "target_x": 0.544157,
+            "target_y": -1.681499,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 48.46092,
+          "channel": -1,
+          "target": {
+            "target_x": 0.544157,
+            "target_y": -1.681499,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 50.480965,
+          "channel": 1,
+          "target": {
+            "target_x": 0.544157,
+            "target_y": 1.681499,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 54.481056,
+          "channel": 1,
+          "target": {
+            "target_x": 0.544157,
+            "target_y": 1.681499,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 56.481102,
+          "channel": 1,
+          "target": {
+            "target_x": 0.544157,
+            "target_y": 1.681499,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 58.481148,
+          "channel": -1,
+          "target": {
+            "target_x": 0.544157,
+            "target_y": -1.681499,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 60.481194,
+          "channel": -1,
+          "target": {
+            "target_x": 1.11084,
+            "target_y": -1.681499,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 66.34088,
+          "channel": 1,
+          "target": {
+            "target_x": 1.171666,
+            "target_y": 1.681499,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 68.340546,
+          "channel": 1,
+          "target": {
+            "target_x": 0.544157,
+            "target_y": 1.681499,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 70.16024,
+          "channel": -1,
+          "target": {
+            "target_x": 0.544157,
+            "target_y": -1.681499,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 72.13991,
+          "channel": -1,
+          "target": {
+            "target_x": 0.544157,
+            "target_y": -1.681499,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 76.13924,
+          "channel": -1,
+          "target": {
+            "target_x": 0.544157,
+            "target_y": -1.681499,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 78.1589,
+          "channel": -1,
+          "target": {
+            "target_x": 0.544157,
+            "target_y": -1.681499,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 80.17856,
+          "channel": -1,
+          "target": {
+            "target_x": 0.544157,
+            "target_y": -1.681499,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 82.19822,
+          "channel": -1,
+          "target": {
+            "target_x": 0.544157,
+            "target_y": -1.681499,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 94.17621,
+          "channel": -1,
+          "target": {
+            "target_x": 0.544157,
+            "target_y": -1.681499,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 98.15554,
+          "channel": 1,
+          "target": {
+            "target_x": 0.544157,
+            "target_y": 1.681499,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 102.15487,
+          "channel": 1,
+          "target": {
+            "target_x": 0.544157,
+            "target_y": 1.681499,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 104.17453,
+          "channel": -1,
+          "target": {
+            "target_x": 0.544157,
+            "target_y": -1.681499,
+            "sprint": false
+          }
+        },
+        {
+          "gameTime": 106.21419,
+          "channel": -1,
+          "target": {
+            "target_x": 0.544157,
+            "target_y": -1.681499,
+            "sprint": false
+          }
+        }
+      ]
+    }
+  ],
+  "benefitProven": false
+}

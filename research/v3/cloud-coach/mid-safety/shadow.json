@@ -1,0 +1,53 @@
+{
+  "kind": "Projected sparse MID traces, not full exact raw request replay",
+  "rows": [
+    {
+      "match": "trace01-fortknox",
+      "projectedStates": 56,
+      "changed": []
+    },
+    {
+      "match": "trace02-totalattack",
+      "projectedStates": 91,
+      "changed": []
+    },
+    {
+      "match": "outlet01-fortknox",
+      "projectedStates": 74,
+      "changed": [
+        {
+          "gameTime": 97.85559,
+          "depthSpan": 0.2126423632179146,
+          "pressureSpan": 0.05555100911843056
+        }
+      ]
+    },
+    {
+      "match": "outlet02-totalattack",
+      "projectedStates": 84,
+      "changed": [
+        {
+          "gameTime": 33.040565,
+          "depthSpan": 0.291945425736227,
+          "pressureSpan": 0.04858316971490322
+        }
+      ]
+    },
+    {
+      "match": "finish01-fortknox",
+      "projectedStates": 108,
+      "changed": []
+    },
+    {
+      "match": "finishv2-01-totalattack",
+      "projectedStates": 84,
+      "changed": []
+    },
+    {
+      "match": "finishv2-02-fortknox",
+      "projectedStates": 85,
+      "changed": []
+    }
+  ],
+  "physicalClearanceProven": false
+}
