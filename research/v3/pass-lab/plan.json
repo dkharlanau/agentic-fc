@@ -1,0 +1,3916 @@
+{
+  "kind": "Predeclared synthetic same-input MID decision screen",
+  "source": "mid_fast_v1/fixtures.py; own/opponent explicit ownership",
+  "baseline": "Unchanged canonical MID15 Nova2Lite Harness",
+  "l02b": "Unchanged L01 decision policy executed locally; no AWS latency comparison",
+  "nativeProtocol": "One isolated fresh session per case, no saved Harness override, stop every own session",
+  "scopes": [
+    "HOME/AWAY",
+    "documented XY / counterfactual raw XZ"
+  ],
+  "limitations": [
+    "Labels express L01 safety preferences, not calibrated pass completion probabilities",
+    "A different safe command is not automatically a failure",
+    "No game server execution or physical ball outcome is observed",
+    "One model response per case; stochastic repeatability unmeasured",
+    "Native local SDK full response and model processing metadata are different timing boundaries"
+  ],
+  "rows": [
+    {
+      "id": "open-forward-home-xy",
+      "state": {
+        "teamId": 0,
+        "myPlayers": [
+          2
+        ],
+        "unlockedCommands": [],
+        "gameState": {
+          "tick": 100,
+          "gameTime": 10.0,
+          "playMode": "PLAY_ON",
+          "players": [
+            {
+              "teamCode": "home",
+              "agentId": "agentId_0",
+              "position": {
+                "x": -50,
+                "y": 0
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "StayNearGoal"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_1",
+              "position": {
+                "x": -15,
+                "y": -15
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_2",
+              "position": {
+                "x": 0,
+                "y": 0
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": true,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_3",
+              "position": {
+                "x": 20,
+                "y": 0
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_4",
+              "position": {
+                "x": 15,
+                "y": 20
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_0",
+              "position": {
+                "x": 50,
+                "y": 0
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "StayNearGoal"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_1",
+              "position": {
+                "x": 8,
+                "y": -20
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_2",
+              "position": {
+                "x": 30,
+                "y": -20
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_3",
+              "position": {
+                "x": 40,
+                "y": 20
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_4",
+              "position": {
+                "x": -20,
+                "y": 25
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            }
+          ],
+          "ball": {
+            "position": {
+              "x": 0,
+              "y": 0
+            },
+            "velocity": {
+              "x": 0,
+              "y": 0
+            },
+            "isFree": false,
+            "possessionTeamCode": "home",
+            "possessionAgentId": "agentId_2"
+          }
+        }
+      },
+      "referenceAction": "PASS",
+      "referenceReceiver": 3,
+      "requestSha256": "666c9b789b954a17ba58a42ed8b4bd472e5f40c2f49ac10550c852365554c6bf",
+      "l02bDecision": [
+        {
+          "commandType": "PASS",
+          "playerId": 2,
+          "parameters": {
+            "target_player_id": 3,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "l02bReason": "SAFE_PROGRESSIVE_PASS"
+    },
+    {
+      "id": "open-forward-home-xz",
+      "state": {
+        "teamId": 0,
+        "myPlayers": [
+          2
+        ],
+        "unlockedCommands": [],
+        "gameState": {
+          "tick": 100,
+          "gameTime": 10.0,
+          "playMode": "PLAY_ON",
+          "players": [
+            {
+              "teamCode": "home",
+              "agentId": "agentId_0",
+              "position": {
+                "x": -6.0,
+                "y": 0.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "StayNearGoal"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_1",
+              "position": {
+                "x": -1.7999999999999998,
+                "y": -1.7999999999999998
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_2",
+              "position": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": true,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_3",
+              "position": {
+                "x": 2.4,
+                "y": 0.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_4",
+              "position": {
+                "x": 1.7999999999999998,
+                "y": 2.4
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_0",
+              "position": {
+                "x": 6.0,
+                "y": 0.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "StayNearGoal"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_1",
+              "position": {
+                "x": 0.96,
+                "y": -2.4
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_2",
+              "position": {
+                "x": 3.5999999999999996,
+                "y": -2.4
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_3",
+              "position": {
+                "x": 4.8,
+                "y": 2.4
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_4",
+              "position": {
+                "x": -2.4,
+                "y": 3.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            }
+          ],
+          "ball": {
+            "position": {
+              "x": 0.0,
+              "y": 0,
+              "z": 0.0
+            },
+            "velocity": {
+              "x": 0.0,
+              "y": 0,
+              "z": 0.0
+            },
+            "isFree": false,
+            "possessionTeamCode": "home",
+            "possessionAgentId": "agentId_2"
+          }
+        }
+      },
+      "referenceAction": "PASS",
+      "referenceReceiver": 3,
+      "requestSha256": "292be9ec073dd56a0d01b4dffd2fc8dc2a4bf8df17f8dd90f35cd50a8782dcf4",
+      "l02bDecision": [
+        {
+          "commandType": "PASS",
+          "playerId": 2,
+          "parameters": {
+            "target_player_id": 3,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "l02bReason": "SAFE_PROGRESSIVE_PASS"
+    },
+    {
+      "id": "open-forward-away-xy",
+      "state": {
+        "teamId": 1,
+        "myPlayers": [
+          2
+        ],
+        "unlockedCommands": [],
+        "gameState": {
+          "tick": 100,
+          "gameTime": 10.0,
+          "playMode": "PLAY_ON",
+          "players": [
+            {
+              "teamCode": "away",
+              "agentId": "agentId_0",
+              "position": {
+                "x": 50,
+                "y": 0
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "StayNearGoal"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_1",
+              "position": {
+                "x": 15,
+                "y": -15
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_2",
+              "position": {
+                "x": 0,
+                "y": 0
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": true,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_3",
+              "position": {
+                "x": -20,
+                "y": 0
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_4",
+              "position": {
+                "x": -15,
+                "y": 20
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_0",
+              "position": {
+                "x": -50,
+                "y": 0
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "StayNearGoal"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_1",
+              "position": {
+                "x": -8,
+                "y": -20
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_2",
+              "position": {
+                "x": -30,
+                "y": -20
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_3",
+              "position": {
+                "x": -40,
+                "y": 20
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_4",
+              "position": {
+                "x": 20,
+                "y": 25
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            }
+          ],
+          "ball": {
+            "position": {
+              "x": 0,
+              "y": 0
+            },
+            "velocity": {
+              "x": 0,
+              "y": 0
+            },
+            "isFree": false,
+            "possessionTeamCode": "away",
+            "possessionAgentId": "agentId_2"
+          }
+        }
+      },
+      "referenceAction": "PASS",
+      "referenceReceiver": 3,
+      "requestSha256": "7d999a5900f90100fe0745c931515c1ac4838a4b2e133370f2a9dc6e8f970ba7",
+      "l02bDecision": [
+        {
+          "commandType": "PASS",
+          "playerId": 2,
+          "parameters": {
+            "target_player_id": 3,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "l02bReason": "SAFE_PROGRESSIVE_PASS"
+    },
+    {
+      "id": "open-forward-away-xz",
+      "state": {
+        "teamId": 1,
+        "myPlayers": [
+          2
+        ],
+        "unlockedCommands": [],
+        "gameState": {
+          "tick": 100,
+          "gameTime": 10.0,
+          "playMode": "PLAY_ON",
+          "players": [
+            {
+              "teamCode": "away",
+              "agentId": "agentId_0",
+              "position": {
+                "x": 6.0,
+                "y": 0.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "StayNearGoal"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_1",
+              "position": {
+                "x": 1.7999999999999998,
+                "y": -1.7999999999999998
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_2",
+              "position": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": true,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_3",
+              "position": {
+                "x": -2.4,
+                "y": 0.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_4",
+              "position": {
+                "x": -1.7999999999999998,
+                "y": 2.4
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_0",
+              "position": {
+                "x": -6.0,
+                "y": 0.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "StayNearGoal"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_1",
+              "position": {
+                "x": -0.96,
+                "y": -2.4
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_2",
+              "position": {
+                "x": -3.5999999999999996,
+                "y": -2.4
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_3",
+              "position": {
+                "x": -4.8,
+                "y": 2.4
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_4",
+              "position": {
+                "x": 2.4,
+                "y": 3.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            }
+          ],
+          "ball": {
+            "position": {
+              "x": 0.0,
+              "y": 0,
+              "z": 0.0
+            },
+            "velocity": {
+              "x": 0.0,
+              "y": 0,
+              "z": 0.0
+            },
+            "isFree": false,
+            "possessionTeamCode": "away",
+            "possessionAgentId": "agentId_2"
+          }
+        }
+      },
+      "referenceAction": "PASS",
+      "referenceReceiver": 3,
+      "requestSha256": "2fd367d3e367405942769ff4339fafe3665a006cd41189c3152a95965762493f",
+      "l02bDecision": [
+        {
+          "commandType": "PASS",
+          "playerId": 2,
+          "parameters": {
+            "target_player_id": 3,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "l02bReason": "SAFE_PROGRESSIVE_PASS"
+    },
+    {
+      "id": "blocked-forward-line-home-xy",
+      "state": {
+        "teamId": 0,
+        "myPlayers": [
+          2
+        ],
+        "unlockedCommands": [],
+        "gameState": {
+          "tick": 100,
+          "gameTime": 10.0,
+          "playMode": "PLAY_ON",
+          "players": [
+            {
+              "teamCode": "home",
+              "agentId": "agentId_0",
+              "position": {
+                "x": -50,
+                "y": 0
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "StayNearGoal"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_1",
+              "position": {
+                "x": -15,
+                "y": -15
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_2",
+              "position": {
+                "x": 0,
+                "y": 0
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": true,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_3",
+              "position": {
+                "x": 20,
+                "y": 0
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_4",
+              "position": {
+                "x": 15,
+                "y": 20
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_0",
+              "position": {
+                "x": 50,
+                "y": 0
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "StayNearGoal"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_1",
+              "position": {
+                "x": 10,
+                "y": 0
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_2",
+              "position": {
+                "x": 30,
+                "y": -20
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_3",
+              "position": {
+                "x": 40,
+                "y": 20
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_4",
+              "position": {
+                "x": -20,
+                "y": 25
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            }
+          ],
+          "ball": {
+            "position": {
+              "x": 0,
+              "y": 0
+            },
+            "velocity": {
+              "x": 0,
+              "y": 0
+            },
+            "isFree": false,
+            "possessionTeamCode": "home",
+            "possessionAgentId": "agentId_2"
+          }
+        }
+      },
+      "referenceAction": "PASS",
+      "referenceReceiver": 4,
+      "requestSha256": "e8eadebabedaa25a0d2e35b3d1c22eb9735833bd59ce95183abc23120e8db722",
+      "l02bDecision": [
+        {
+          "commandType": "PASS",
+          "playerId": 2,
+          "parameters": {
+            "target_player_id": 4,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "l02bReason": "SAFE_PROGRESSIVE_PASS"
+    },
+    {
+      "id": "blocked-forward-line-home-xz",
+      "state": {
+        "teamId": 0,
+        "myPlayers": [
+          2
+        ],
+        "unlockedCommands": [],
+        "gameState": {
+          "tick": 100,
+          "gameTime": 10.0,
+          "playMode": "PLAY_ON",
+          "players": [
+            {
+              "teamCode": "home",
+              "agentId": "agentId_0",
+              "position": {
+                "x": -6.0,
+                "y": 0.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "StayNearGoal"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_1",
+              "position": {
+                "x": -1.7999999999999998,
+                "y": -1.7999999999999998
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_2",
+              "position": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": true,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_3",
+              "position": {
+                "x": 2.4,
+                "y": 0.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_4",
+              "position": {
+                "x": 1.7999999999999998,
+                "y": 2.4
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_0",
+              "position": {
+                "x": 6.0,
+                "y": 0.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "StayNearGoal"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_1",
+              "position": {
+                "x": 1.2,
+                "y": 0.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_2",
+              "position": {
+                "x": 3.5999999999999996,
+                "y": -2.4
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_3",
+              "position": {
+                "x": 4.8,
+                "y": 2.4
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_4",
+              "position": {
+                "x": -2.4,
+                "y": 3.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            }
+          ],
+          "ball": {
+            "position": {
+              "x": 0.0,
+              "y": 0,
+              "z": 0.0
+            },
+            "velocity": {
+              "x": 0.0,
+              "y": 0,
+              "z": 0.0
+            },
+            "isFree": false,
+            "possessionTeamCode": "home",
+            "possessionAgentId": "agentId_2"
+          }
+        }
+      },
+      "referenceAction": "PASS",
+      "referenceReceiver": 4,
+      "requestSha256": "9d4d1ea072d0ddfa6eae753f9732b3d1ce63df7cd2bf3b23136ffbfd3cb68b27",
+      "l02bDecision": [
+        {
+          "commandType": "PASS",
+          "playerId": 2,
+          "parameters": {
+            "target_player_id": 4,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "l02bReason": "SAFE_PROGRESSIVE_PASS"
+    },
+    {
+      "id": "blocked-forward-line-away-xy",
+      "state": {
+        "teamId": 1,
+        "myPlayers": [
+          2
+        ],
+        "unlockedCommands": [],
+        "gameState": {
+          "tick": 100,
+          "gameTime": 10.0,
+          "playMode": "PLAY_ON",
+          "players": [
+            {
+              "teamCode": "away",
+              "agentId": "agentId_0",
+              "position": {
+                "x": 50,
+                "y": 0
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "StayNearGoal"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_1",
+              "position": {
+                "x": 15,
+                "y": -15
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_2",
+              "position": {
+                "x": 0,
+                "y": 0
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": true,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_3",
+              "position": {
+                "x": -20,
+                "y": 0
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_4",
+              "position": {
+                "x": -15,
+                "y": 20
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_0",
+              "position": {
+                "x": -50,
+                "y": 0
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "StayNearGoal"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_1",
+              "position": {
+                "x": -10,
+                "y": 0
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_2",
+              "position": {
+                "x": -30,
+                "y": -20
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_3",
+              "position": {
+                "x": -40,
+                "y": 20
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_4",
+              "position": {
+                "x": 20,
+                "y": 25
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            }
+          ],
+          "ball": {
+            "position": {
+              "x": 0,
+              "y": 0
+            },
+            "velocity": {
+              "x": 0,
+              "y": 0
+            },
+            "isFree": false,
+            "possessionTeamCode": "away",
+            "possessionAgentId": "agentId_2"
+          }
+        }
+      },
+      "referenceAction": "PASS",
+      "referenceReceiver": 4,
+      "requestSha256": "2570ec1e5b5be92b0875ac3756e34eed3bba46c5aabe119e0c4a58352aac8acb",
+      "l02bDecision": [
+        {
+          "commandType": "PASS",
+          "playerId": 2,
+          "parameters": {
+            "target_player_id": 4,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "l02bReason": "SAFE_PROGRESSIVE_PASS"
+    },
+    {
+      "id": "blocked-forward-line-away-xz",
+      "state": {
+        "teamId": 1,
+        "myPlayers": [
+          2
+        ],
+        "unlockedCommands": [],
+        "gameState": {
+          "tick": 100,
+          "gameTime": 10.0,
+          "playMode": "PLAY_ON",
+          "players": [
+            {
+              "teamCode": "away",
+              "agentId": "agentId_0",
+              "position": {
+                "x": 6.0,
+                "y": 0.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "StayNearGoal"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_1",
+              "position": {
+                "x": 1.7999999999999998,
+                "y": -1.7999999999999998
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_2",
+              "position": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": true,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_3",
+              "position": {
+                "x": -2.4,
+                "y": 0.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_4",
+              "position": {
+                "x": -1.7999999999999998,
+                "y": 2.4
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_0",
+              "position": {
+                "x": -6.0,
+                "y": 0.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "StayNearGoal"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_1",
+              "position": {
+                "x": -1.2,
+                "y": 0.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_2",
+              "position": {
+                "x": -3.5999999999999996,
+                "y": -2.4
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_3",
+              "position": {
+                "x": -4.8,
+                "y": 2.4
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_4",
+              "position": {
+                "x": 2.4,
+                "y": 3.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            }
+          ],
+          "ball": {
+            "position": {
+              "x": 0.0,
+              "y": 0,
+              "z": 0.0
+            },
+            "velocity": {
+              "x": 0.0,
+              "y": 0,
+              "z": 0.0
+            },
+            "isFree": false,
+            "possessionTeamCode": "away",
+            "possessionAgentId": "agentId_2"
+          }
+        }
+      },
+      "referenceAction": "PASS",
+      "referenceReceiver": 4,
+      "requestSha256": "34b1d63b4455da7aebf6d7328dd0ea390fc46e23012af3ee169e7477196c0a3f",
+      "l02bDecision": [
+        {
+          "commandType": "PASS",
+          "playerId": 2,
+          "parameters": {
+            "target_player_id": 4,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "l02bReason": "SAFE_PROGRESSIVE_PASS"
+    },
+    {
+      "id": "both-forwards-marked-home-xy",
+      "state": {
+        "teamId": 0,
+        "myPlayers": [
+          2
+        ],
+        "unlockedCommands": [],
+        "gameState": {
+          "tick": 100,
+          "gameTime": 10.0,
+          "playMode": "PLAY_ON",
+          "players": [
+            {
+              "teamCode": "home",
+              "agentId": "agentId_0",
+              "position": {
+                "x": -50,
+                "y": 0
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "StayNearGoal"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_1",
+              "position": {
+                "x": -15,
+                "y": -15
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_2",
+              "position": {
+                "x": 0,
+                "y": 0
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": true,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_3",
+              "position": {
+                "x": 20,
+                "y": 0
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_4",
+              "position": {
+                "x": 15,
+                "y": 20
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_0",
+              "position": {
+                "x": 50,
+                "y": 0
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "StayNearGoal"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_1",
+              "position": {
+                "x": 20,
+                "y": 1
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_2",
+              "position": {
+                "x": 15,
+                "y": 21
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_3",
+              "position": {
+                "x": 40,
+                "y": 20
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_4",
+              "position": {
+                "x": -20,
+                "y": 25
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            }
+          ],
+          "ball": {
+            "position": {
+              "x": 0,
+              "y": 0
+            },
+            "velocity": {
+              "x": 0,
+              "y": 0
+            },
+            "isFree": false,
+            "possessionTeamCode": "home",
+            "possessionAgentId": "agentId_2"
+          }
+        }
+      },
+      "referenceAction": "PASS",
+      "referenceReceiver": 1,
+      "requestSha256": "bfc64e67e7eb7ae2b09c7a3816cd2969425ba9dc40dfda0a52fd55c68e9bce21",
+      "l02bDecision": [
+        {
+          "commandType": "PASS",
+          "playerId": 2,
+          "parameters": {
+            "target_player_id": 1,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "l02bReason": "SAFE_RECYCLE_PASS"
+    },
+    {
+      "id": "both-forwards-marked-home-xz",
+      "state": {
+        "teamId": 0,
+        "myPlayers": [
+          2
+        ],
+        "unlockedCommands": [],
+        "gameState": {
+          "tick": 100,
+          "gameTime": 10.0,
+          "playMode": "PLAY_ON",
+          "players": [
+            {
+              "teamCode": "home",
+              "agentId": "agentId_0",
+              "position": {
+                "x": -6.0,
+                "y": 0.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "StayNearGoal"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_1",
+              "position": {
+                "x": -1.7999999999999998,
+                "y": -1.7999999999999998
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_2",
+              "position": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": true,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_3",
+              "position": {
+                "x": 2.4,
+                "y": 0.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_4",
+              "position": {
+                "x": 1.7999999999999998,
+                "y": 2.4
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_0",
+              "position": {
+                "x": 6.0,
+                "y": 0.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "StayNearGoal"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_1",
+              "position": {
+                "x": 2.4,
+                "y": 0.12
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_2",
+              "position": {
+                "x": 1.7999999999999998,
+                "y": 2.52
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_3",
+              "position": {
+                "x": 4.8,
+                "y": 2.4
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_4",
+              "position": {
+                "x": -2.4,
+                "y": 3.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            }
+          ],
+          "ball": {
+            "position": {
+              "x": 0.0,
+              "y": 0,
+              "z": 0.0
+            },
+            "velocity": {
+              "x": 0.0,
+              "y": 0,
+              "z": 0.0
+            },
+            "isFree": false,
+            "possessionTeamCode": "home",
+            "possessionAgentId": "agentId_2"
+          }
+        }
+      },
+      "referenceAction": "PASS",
+      "referenceReceiver": 1,
+      "requestSha256": "bdad20d394e6f337779e27dede6f38056cfd2c731477aae68260d4b2c76f96b3",
+      "l02bDecision": [
+        {
+          "commandType": "PASS",
+          "playerId": 2,
+          "parameters": {
+            "target_player_id": 1,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "l02bReason": "SAFE_RECYCLE_PASS"
+    },
+    {
+      "id": "both-forwards-marked-away-xy",
+      "state": {
+        "teamId": 1,
+        "myPlayers": [
+          2
+        ],
+        "unlockedCommands": [],
+        "gameState": {
+          "tick": 100,
+          "gameTime": 10.0,
+          "playMode": "PLAY_ON",
+          "players": [
+            {
+              "teamCode": "away",
+              "agentId": "agentId_0",
+              "position": {
+                "x": 50,
+                "y": 0
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "StayNearGoal"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_1",
+              "position": {
+                "x": 15,
+                "y": -15
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_2",
+              "position": {
+                "x": 0,
+                "y": 0
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": true,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_3",
+              "position": {
+                "x": -20,
+                "y": 0
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_4",
+              "position": {
+                "x": -15,
+                "y": 20
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_0",
+              "position": {
+                "x": -50,
+                "y": 0
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "StayNearGoal"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_1",
+              "position": {
+                "x": -20,
+                "y": 1
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_2",
+              "position": {
+                "x": -15,
+                "y": 21
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_3",
+              "position": {
+                "x": -40,
+                "y": 20
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_4",
+              "position": {
+                "x": 20,
+                "y": 25
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            }
+          ],
+          "ball": {
+            "position": {
+              "x": 0,
+              "y": 0
+            },
+            "velocity": {
+              "x": 0,
+              "y": 0
+            },
+            "isFree": false,
+            "possessionTeamCode": "away",
+            "possessionAgentId": "agentId_2"
+          }
+        }
+      },
+      "referenceAction": "PASS",
+      "referenceReceiver": 1,
+      "requestSha256": "485e8e37337ec813da27aa3eab94d9bc407de8d47abf766ac7138ac895daa9fd",
+      "l02bDecision": [
+        {
+          "commandType": "PASS",
+          "playerId": 2,
+          "parameters": {
+            "target_player_id": 1,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "l02bReason": "SAFE_RECYCLE_PASS"
+    },
+    {
+      "id": "both-forwards-marked-away-xz",
+      "state": {
+        "teamId": 1,
+        "myPlayers": [
+          2
+        ],
+        "unlockedCommands": [],
+        "gameState": {
+          "tick": 100,
+          "gameTime": 10.0,
+          "playMode": "PLAY_ON",
+          "players": [
+            {
+              "teamCode": "away",
+              "agentId": "agentId_0",
+              "position": {
+                "x": 6.0,
+                "y": 0.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "StayNearGoal"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_1",
+              "position": {
+                "x": 1.7999999999999998,
+                "y": -1.7999999999999998
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_2",
+              "position": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": true,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_3",
+              "position": {
+                "x": -2.4,
+                "y": 0.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_4",
+              "position": {
+                "x": -1.7999999999999998,
+                "y": 2.4
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_0",
+              "position": {
+                "x": -6.0,
+                "y": 0.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "StayNearGoal"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_1",
+              "position": {
+                "x": -2.4,
+                "y": 0.12
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_2",
+              "position": {
+                "x": -1.7999999999999998,
+                "y": 2.52
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_3",
+              "position": {
+                "x": -4.8,
+                "y": 2.4
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_4",
+              "position": {
+                "x": 2.4,
+                "y": 3.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            }
+          ],
+          "ball": {
+            "position": {
+              "x": 0.0,
+              "y": 0,
+              "z": 0.0
+            },
+            "velocity": {
+              "x": 0.0,
+              "y": 0,
+              "z": 0.0
+            },
+            "isFree": false,
+            "possessionTeamCode": "away",
+            "possessionAgentId": "agentId_2"
+          }
+        }
+      },
+      "referenceAction": "PASS",
+      "referenceReceiver": 1,
+      "requestSha256": "62f89e54163c3df2c0b520f228f85d9da2e37c4b60cc1334865c1beffba53a3b",
+      "l02bDecision": [
+        {
+          "commandType": "PASS",
+          "playerId": 2,
+          "parameters": {
+            "target_player_id": 1,
+            "type": "GROUND"
+          },
+          "duration": 0
+        }
+      ],
+      "l02bReason": "SAFE_RECYCLE_PASS"
+    },
+    {
+      "id": "all-outlets-marked-home-xy",
+      "state": {
+        "teamId": 0,
+        "myPlayers": [
+          2
+        ],
+        "unlockedCommands": [],
+        "gameState": {
+          "tick": 100,
+          "gameTime": 10.0,
+          "playMode": "PLAY_ON",
+          "players": [
+            {
+              "teamCode": "home",
+              "agentId": "agentId_0",
+              "position": {
+                "x": -50,
+                "y": 0
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "StayNearGoal"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_1",
+              "position": {
+                "x": -15,
+                "y": -15
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_2",
+              "position": {
+                "x": 0,
+                "y": 0
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": true,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_3",
+              "position": {
+                "x": 20,
+                "y": 0
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_4",
+              "position": {
+                "x": 15,
+                "y": 20
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_0",
+              "position": {
+                "x": 50,
+                "y": 0
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "StayNearGoal"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_1",
+              "position": {
+                "x": 20,
+                "y": 1
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_2",
+              "position": {
+                "x": 15,
+                "y": 21
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_3",
+              "position": {
+                "x": -15,
+                "y": -14
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_4",
+              "position": {
+                "x": -20,
+                "y": 25
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            }
+          ],
+          "ball": {
+            "position": {
+              "x": 0,
+              "y": 0
+            },
+            "velocity": {
+              "x": 0,
+              "y": 0
+            },
+            "isFree": false,
+            "possessionTeamCode": "home",
+            "possessionAgentId": "agentId_2"
+          }
+        }
+      },
+      "referenceAction": "CLEAR_OVERRIDE",
+      "referenceReceiver": null,
+      "requestSha256": "739dd4262d0b9943446a4366972a6310eb42032af99e4641c862ec524d7bf3d4",
+      "l02bDecision": [
+        {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 2,
+          "parameters": {},
+          "duration": 0
+        }
+      ],
+      "l02bReason": "NO_SAFE_OUTLET"
+    },
+    {
+      "id": "all-outlets-marked-home-xz",
+      "state": {
+        "teamId": 0,
+        "myPlayers": [
+          2
+        ],
+        "unlockedCommands": [],
+        "gameState": {
+          "tick": 100,
+          "gameTime": 10.0,
+          "playMode": "PLAY_ON",
+          "players": [
+            {
+              "teamCode": "home",
+              "agentId": "agentId_0",
+              "position": {
+                "x": -6.0,
+                "y": 0.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "StayNearGoal"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_1",
+              "position": {
+                "x": -1.7999999999999998,
+                "y": -1.7999999999999998
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_2",
+              "position": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": true,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_3",
+              "position": {
+                "x": 2.4,
+                "y": 0.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_4",
+              "position": {
+                "x": 1.7999999999999998,
+                "y": 2.4
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_0",
+              "position": {
+                "x": 6.0,
+                "y": 0.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "StayNearGoal"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_1",
+              "position": {
+                "x": 2.4,
+                "y": 0.12
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_2",
+              "position": {
+                "x": 1.7999999999999998,
+                "y": 2.52
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_3",
+              "position": {
+                "x": -1.7999999999999998,
+                "y": -1.68
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_4",
+              "position": {
+                "x": -2.4,
+                "y": 3.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            }
+          ],
+          "ball": {
+            "position": {
+              "x": 0.0,
+              "y": 0,
+              "z": 0.0
+            },
+            "velocity": {
+              "x": 0.0,
+              "y": 0,
+              "z": 0.0
+            },
+            "isFree": false,
+            "possessionTeamCode": "home",
+            "possessionAgentId": "agentId_2"
+          }
+        }
+      },
+      "referenceAction": "CLEAR_OVERRIDE",
+      "referenceReceiver": null,
+      "requestSha256": "e93ea787867c5ae81ecebe0897fe8b07bbd5449234f847dfcfcc4d2582366bc5",
+      "l02bDecision": [
+        {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 2,
+          "parameters": {},
+          "duration": 0
+        }
+      ],
+      "l02bReason": "NO_SAFE_OUTLET"
+    },
+    {
+      "id": "all-outlets-marked-away-xy",
+      "state": {
+        "teamId": 1,
+        "myPlayers": [
+          2
+        ],
+        "unlockedCommands": [],
+        "gameState": {
+          "tick": 100,
+          "gameTime": 10.0,
+          "playMode": "PLAY_ON",
+          "players": [
+            {
+              "teamCode": "away",
+              "agentId": "agentId_0",
+              "position": {
+                "x": 50,
+                "y": 0
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "StayNearGoal"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_1",
+              "position": {
+                "x": 15,
+                "y": -15
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_2",
+              "position": {
+                "x": 0,
+                "y": 0
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": true,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_3",
+              "position": {
+                "x": -20,
+                "y": 0
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_4",
+              "position": {
+                "x": -15,
+                "y": 20
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_0",
+              "position": {
+                "x": -50,
+                "y": 0
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "StayNearGoal"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_1",
+              "position": {
+                "x": -20,
+                "y": 1
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_2",
+              "position": {
+                "x": -15,
+                "y": 21
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_3",
+              "position": {
+                "x": 15,
+                "y": -14
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_4",
+              "position": {
+                "x": 20,
+                "y": 25
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            }
+          ],
+          "ball": {
+            "position": {
+              "x": 0,
+              "y": 0
+            },
+            "velocity": {
+              "x": 0,
+              "y": 0
+            },
+            "isFree": false,
+            "possessionTeamCode": "away",
+            "possessionAgentId": "agentId_2"
+          }
+        }
+      },
+      "referenceAction": "CLEAR_OVERRIDE",
+      "referenceReceiver": null,
+      "requestSha256": "8fb432229adafbe070e5c0698d67dd6ca7fbba6a2e3155e437a9bea00c4c4c97",
+      "l02bDecision": [
+        {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 2,
+          "parameters": {},
+          "duration": 0
+        }
+      ],
+      "l02bReason": "NO_SAFE_OUTLET"
+    },
+    {
+      "id": "all-outlets-marked-away-xz",
+      "state": {
+        "teamId": 1,
+        "myPlayers": [
+          2
+        ],
+        "unlockedCommands": [],
+        "gameState": {
+          "tick": 100,
+          "gameTime": 10.0,
+          "playMode": "PLAY_ON",
+          "players": [
+            {
+              "teamCode": "away",
+              "agentId": "agentId_0",
+              "position": {
+                "x": 6.0,
+                "y": 0.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "StayNearGoal"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_1",
+              "position": {
+                "x": 1.7999999999999998,
+                "y": -1.7999999999999998
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_2",
+              "position": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": true,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_3",
+              "position": {
+                "x": -2.4,
+                "y": 0.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_4",
+              "position": {
+                "x": -1.7999999999999998,
+                "y": 2.4
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_0",
+              "position": {
+                "x": -6.0,
+                "y": 0.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "StayNearGoal"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_1",
+              "position": {
+                "x": -2.4,
+                "y": 0.12
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_2",
+              "position": {
+                "x": -1.7999999999999998,
+                "y": 2.52
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_3",
+              "position": {
+                "x": 1.7999999999999998,
+                "y": -1.68
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_4",
+              "position": {
+                "x": 2.4,
+                "y": 3.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            }
+          ],
+          "ball": {
+            "position": {
+              "x": 0.0,
+              "y": 0,
+              "z": 0.0
+            },
+            "velocity": {
+              "x": 0.0,
+              "y": 0,
+              "z": 0.0
+            },
+            "isFree": false,
+            "possessionTeamCode": "away",
+            "possessionAgentId": "agentId_2"
+          }
+        }
+      },
+      "referenceAction": "CLEAR_OVERRIDE",
+      "referenceReceiver": null,
+      "requestSha256": "2c7f23c8a02d6e37f56f37f58b0b5ff4c22b4fd110949aa4cda22738373b355a",
+      "l02bDecision": [
+        {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 2,
+          "parameters": {},
+          "duration": 0
+        }
+      ],
+      "l02bReason": "NO_SAFE_OUTLET"
+    },
+    {
+      "id": "opponent-same-id-home-xy",
+      "state": {
+        "teamId": 0,
+        "myPlayers": [
+          2
+        ],
+        "unlockedCommands": [],
+        "gameState": {
+          "tick": 100,
+          "gameTime": 10.0,
+          "playMode": "PLAY_ON",
+          "players": [
+            {
+              "teamCode": "home",
+              "agentId": "agentId_0",
+              "position": {
+                "x": -50,
+                "y": 0
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "StayNearGoal"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_1",
+              "position": {
+                "x": -15,
+                "y": -15
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_2",
+              "position": {
+                "x": 0,
+                "y": 0
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_3",
+              "position": {
+                "x": 20,
+                "y": 0
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_4",
+              "position": {
+                "x": 15,
+                "y": 20
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_0",
+              "position": {
+                "x": 50,
+                "y": 0
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "StayNearGoal"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_1",
+              "position": {
+                "x": 8,
+                "y": -20
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_2",
+              "position": {
+                "x": 30,
+                "y": -20
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": true,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_3",
+              "position": {
+                "x": 40,
+                "y": 20
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_4",
+              "position": {
+                "x": -20,
+                "y": 25
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            }
+          ],
+          "ball": {
+            "position": {
+              "x": 0,
+              "y": 0
+            },
+            "velocity": {
+              "x": 0,
+              "y": 0
+            },
+            "isFree": false,
+            "possessionTeamCode": "away",
+            "possessionAgentId": "agentId_2"
+          }
+        }
+      },
+      "referenceAction": "CLEAR_OVERRIDE",
+      "referenceReceiver": null,
+      "requestSha256": "625ae6e985fe63e95de4777532dc08d78126d8d4be9fa569023335a0c5cf648a",
+      "l02bDecision": [
+        {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 2,
+          "parameters": {},
+          "duration": 0
+        }
+      ],
+      "l02bReason": "ENGINE_OFF_BALL"
+    },
+    {
+      "id": "opponent-same-id-home-xz",
+      "state": {
+        "teamId": 0,
+        "myPlayers": [
+          2
+        ],
+        "unlockedCommands": [],
+        "gameState": {
+          "tick": 100,
+          "gameTime": 10.0,
+          "playMode": "PLAY_ON",
+          "players": [
+            {
+              "teamCode": "home",
+              "agentId": "agentId_0",
+              "position": {
+                "x": -6.0,
+                "y": 0.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "StayNearGoal"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_1",
+              "position": {
+                "x": -1.7999999999999998,
+                "y": -1.7999999999999998
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_2",
+              "position": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_3",
+              "position": {
+                "x": 2.4,
+                "y": 0.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_4",
+              "position": {
+                "x": 1.7999999999999998,
+                "y": 2.4
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_0",
+              "position": {
+                "x": 6.0,
+                "y": 0.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "StayNearGoal"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_1",
+              "position": {
+                "x": 0.96,
+                "y": -2.4
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_2",
+              "position": {
+                "x": 3.5999999999999996,
+                "y": -2.4
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": true,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_3",
+              "position": {
+                "x": 4.8,
+                "y": 2.4
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_4",
+              "position": {
+                "x": -2.4,
+                "y": 3.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            }
+          ],
+          "ball": {
+            "position": {
+              "x": 0.0,
+              "y": 0,
+              "z": 0.0
+            },
+            "velocity": {
+              "x": 0.0,
+              "y": 0,
+              "z": 0.0
+            },
+            "isFree": false,
+            "possessionTeamCode": "away",
+            "possessionAgentId": "agentId_2"
+          }
+        }
+      },
+      "referenceAction": "CLEAR_OVERRIDE",
+      "referenceReceiver": null,
+      "requestSha256": "f96906b3556abc6d5cf669ca4b9c773e0f138e2598d5de1426cc0fe4c5b85db6",
+      "l02bDecision": [
+        {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 2,
+          "parameters": {},
+          "duration": 0
+        }
+      ],
+      "l02bReason": "ENGINE_OFF_BALL"
+    },
+    {
+      "id": "opponent-same-id-away-xy",
+      "state": {
+        "teamId": 1,
+        "myPlayers": [
+          2
+        ],
+        "unlockedCommands": [],
+        "gameState": {
+          "tick": 100,
+          "gameTime": 10.0,
+          "playMode": "PLAY_ON",
+          "players": [
+            {
+              "teamCode": "away",
+              "agentId": "agentId_0",
+              "position": {
+                "x": 50,
+                "y": 0
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "StayNearGoal"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_1",
+              "position": {
+                "x": 15,
+                "y": -15
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_2",
+              "position": {
+                "x": 0,
+                "y": 0
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_3",
+              "position": {
+                "x": -20,
+                "y": 0
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_4",
+              "position": {
+                "x": -15,
+                "y": 20
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_0",
+              "position": {
+                "x": -50,
+                "y": 0
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "StayNearGoal"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_1",
+              "position": {
+                "x": -8,
+                "y": -20
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_2",
+              "position": {
+                "x": -30,
+                "y": -20
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": true,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_3",
+              "position": {
+                "x": -40,
+                "y": 20
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_4",
+              "position": {
+                "x": 20,
+                "y": 25
+              },
+              "velocity": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            }
+          ],
+          "ball": {
+            "position": {
+              "x": 0,
+              "y": 0
+            },
+            "velocity": {
+              "x": 0,
+              "y": 0
+            },
+            "isFree": false,
+            "possessionTeamCode": "home",
+            "possessionAgentId": "agentId_2"
+          }
+        }
+      },
+      "referenceAction": "CLEAR_OVERRIDE",
+      "referenceReceiver": null,
+      "requestSha256": "06e87e9e3020558da3b91d32a22d52224834edd70656b7623d0738ae0009bb6d",
+      "l02bDecision": [
+        {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 2,
+          "parameters": {},
+          "duration": 0
+        }
+      ],
+      "l02bReason": "ENGINE_OFF_BALL"
+    },
+    {
+      "id": "opponent-same-id-away-xz",
+      "state": {
+        "teamId": 1,
+        "myPlayers": [
+          2
+        ],
+        "unlockedCommands": [],
+        "gameState": {
+          "tick": 100,
+          "gameTime": 10.0,
+          "playMode": "PLAY_ON",
+          "players": [
+            {
+              "teamCode": "away",
+              "agentId": "agentId_0",
+              "position": {
+                "x": 6.0,
+                "y": 0.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "StayNearGoal"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_1",
+              "position": {
+                "x": 1.7999999999999998,
+                "y": -1.7999999999999998
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_2",
+              "position": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_3",
+              "position": {
+                "x": -2.4,
+                "y": 0.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "away",
+              "agentId": "agentId_4",
+              "position": {
+                "x": -1.7999999999999998,
+                "y": 2.4
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_0",
+              "position": {
+                "x": -6.0,
+                "y": 0.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "StayNearGoal"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_1",
+              "position": {
+                "x": -0.96,
+                "y": -2.4
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_2",
+              "position": {
+                "x": -3.5999999999999996,
+                "y": -2.4
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": true,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_3",
+              "position": {
+                "x": -4.8,
+                "y": 2.4
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            },
+            {
+              "teamCode": "home",
+              "agentId": "agentId_4",
+              "position": {
+                "x": 2.4,
+                "y": 3.0
+              },
+              "velocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "hasBall": false,
+              "stamina": 0.8,
+              "lastAction": "Stay"
+            }
+          ],
+          "ball": {
+            "position": {
+              "x": 0.0,
+              "y": 0,
+              "z": 0.0
+            },
+            "velocity": {
+              "x": 0.0,
+              "y": 0,
+              "z": 0.0
+            },
+            "isFree": false,
+            "possessionTeamCode": "home",
+            "possessionAgentId": "agentId_2"
+          }
+        }
+      },
+      "referenceAction": "CLEAR_OVERRIDE",
+      "referenceReceiver": null,
+      "requestSha256": "6718da8e47c91bad9c2a1fec08a76b0d5ef3c4bb31e38dbd10f3418d56449b5e",
+      "l02bDecision": [
+        {
+          "commandType": "CLEAR_OVERRIDE",
+          "playerId": 2,
+          "parameters": {},
+          "duration": 0
+        }
+      ],
+      "l02bReason": "ENGINE_OFF_BALL"
+    }
+  ]
+}

@@ -1,3 +1,38 @@
+# Live priority — Baseline games with parallel local analysis, 2026-10-27
+
+Owner explicitly asks Baseline to play while analysis continues. Start Baseline20
+in same bot order, fixed canonical5roles/1-1-2 and freshFitness5/5. First10 is
+matching L02B10 prefix. No probes/deploy/settings during LIVE; local analytical
+work only. Native unchangedMID20/20 completed; all20 own sessions stopped.
+M11 closed4 at owner request, no repair. P05 identity-only prompt prepared,
+not installed/tested. L02B logger-only patch local,35testsPASS,not deployed.
+Private active-match.json and portal hold current progress. Next save each
+Baseline report, review every5; choose best with L02B only after evidence.
+
+# Current checkpoint — owner stopped M11, 2026-10-27
+
+Current work: L02B and Baseline pass diagnosis; no new matches. Owner explicitly
+stopped M11 after observing misplaced passes and redirected away from its repair.
+M11 closed at FOUR completed games,2W2L/6:6. Last Benchmark0:2 had already ended;
+it was not aborted. No fifth game, no M11 code fix or deployment.
+
+Canonical Baseline MID15 restored; all5 exact portal bindings verified;
+unchanged prompts/models/other roles/1-1-2, actual freshFitness5/5. Incoming
+Mr Football FC invite declined as requested tests were stopped. Portal idle.
+L02B10 remains7W3L/33:9. Neither candidate is promoted; native cold failures remain.
+
+Local L02B diagnostic-only patch in fastboot.py logs pass receiver/line/space
+and evidence; policy unchanged, not built/deployed.35 targeted tests PASS.
+Current isolated native screen: unchanged Baseline MID,20 predeclared synthetic
+cases compared with local L01 decisions; private baseline_pass_screen.py and
+baseline-pass-screen.json. No model/prompt override. Each own session must be
+stopped; check receipt completion before any game or other probe. This screen
+measures decision behavior, not physical pass completion or game-server latency.
+Public plan:research/v3/pass-lab/plan.json. Next: inspect results, persist bounded
+findings, choose one evidenced improvement; do not resume M11 or bulk matches.
+Private active-match.json/portal override old notes. User asks concise checkpoints
+for compaction. Worktree is stage2-native-screen; main checkout is dirty, untouched.
+
 # Current owner-approved plan — 2026-10-27
 
 Owner explicitly authorizes autonomous M11 repair and matched comparison with

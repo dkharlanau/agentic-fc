@@ -190,6 +190,18 @@ class Handler(StreamRequestHandler):
                             'buildCommit': os.environ.get('BUILD_COMMIT', 'local'),
                             'policy': audit['policy'], 'reason': audit['reason'],
                             'commandType': commands[0]['commandType'], 'modelAttempted': False,
+                            # Decision evidence only: no payload, player names or
+                            # session identifiers. A submitted pass is not a completion.
+                            'frame': audit.get('frame'),
+                            'ownershipEvidence': audit.get('ownershipEvidence'),
+                            'velocityCoverage': audit.get('velocityCoverage'),
+                            'safeOutlets': audit.get('safeOutlets'),
+                            'receiver': audit.get('receiver'),
+                            'receiverClearanceSpan': audit.get('receiverClearanceSpan'),
+                            'laneClearanceSpan': audit.get('laneClearanceSpan'),
+                            'pressureDistanceSpan': audit.get('pressureDistanceSpan'),
+                            'passCompleted': audit.get('passCompleted'),
+                            'ballRetained': audit.get('ballRetained'),
                             'invocationOrdinal': ordinal, 'firstInProcess': ordinal == 1,
                             'payloadSha256': hashlib.sha256(raw).hexdigest(),
                             'handlerUnixNs': handler_unix_ns,

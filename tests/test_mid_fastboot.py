@@ -116,6 +116,34 @@ class FastBootTests(base_tests.MidHTTPTests):
             self.assertEqual(status, 200)
             self.assertEqual(base_tests.errors(row, base_tests.decode_response(raw)), [])
 
+    def test_pass_audit_records_receiver_without_claiming_completion(self):
+        from mid_fast_v1.fixtures import base
+        root = base()
+        root['privateCanary'] = 'do-not-log-raw-state'
+        expected, facts = MidEngine().choose(root, 'private-pass-session')
+        captured = []
+        ready = threading.Event()
+        def capture(kind, fields):
+            if kind == 'MID_L02B':
+                captured.append(fields)
+                ready.set()
+        with patch.dict(os.environ, {'MID_AUDIT': '1'}), \
+                patch('mid_fast_v2.fastboot.audit_log', side_effect=capture):
+            status, _, raw = self.call('POST', '/invocations', json.dumps(root),
+                                      {SESSION_HEADER: 'private-pass-session'})
+            self.assertTrue(ready.wait(2))
+        self.assertEqual(status, 200)
+        self.assertEqual(json.loads(base_tests.decode_response(raw)), expected)
+        record = captured[0]
+        self.assertEqual(record['receiver'], expected[0]['parameters']['target_player_id'])
+        for field in ('frame', 'ownershipEvidence', 'velocityCoverage', 'safeOutlets',
+                      'receiverClearanceSpan', 'laneClearanceSpan', 'pressureDistanceSpan'):
+            self.assertEqual(record[field], facts.get(field))
+        self.assertIsNone(record['passCompleted'])
+        self.assertIsNone(record['ballRetained'])
+        self.assertNotIn('do-not-log-raw-state', json.dumps(record))
+        self.assertNotIn('private-pass-session', json.dumps(record))
+
     def test_http_initial_kickoff_exact_retry_then_release(self):
         from hybrid_fast_v1.evaluate import decode_response
         row = plan()[0]

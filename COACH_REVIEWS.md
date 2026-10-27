@@ -1,3 +1,30 @@
+## 2026-10-27 — Baseline benchmark series starts; local analysis in parallel
+
+Coach-v1.0 unchanged, checked before start. Owner explicitly asks Baseline to
+play while analysis continues. All20 unchanged MID native diagnostic sessions
+finished and were stopped. Exact canonical5bindings/formation1-1-2 and actual
+Fitness5/5 verified. Baseline20 starts in the same Benchmark/TotalAttack/FortKnox
+order; first10 provides a matching prefix for L02B10. No probes, deployment or
+settings changes during games; offline analysis and unpublished candidate work
+can proceed. C01 frozen control; C02/C03 evaluated at five-game boundaries.
+P05 identity prompt is only prepared, not installed; M11 remains closed4.
+Baseline rollback is already current. No promotion from native diagnostics.
+
+## 2026-10-27 — M11 stopped by owner; L02B/Baseline pass diagnosis
+
+Coach-v1.0 reread. Latest direct instruction supersedes fifth-game plan: owner
+observed passes missing teammates, stopped M11 and redirected to L02B/Baseline.
+Completed M11 games1–4:2W2L/6:6,18:21shots; game4 already terminal0:2.
+C01: close partial cohort; exact Baseline rollback and actual5/5 verified.
+C02: misplaced passes are an owner observation, not a proven wrong-team bug.
+L01 selects from same-side teammates; game4 submitted6MIDpasses, no recipient
+or outcome fields in old runtime logs. C03: no GK/DEF/prompt change justified.
+Next single improvement is L02B observability only: bounded recipient/line/space
+metadata; actual completion remainsnull. Policy hash unchanged, no deployment.
+Baseline20 and M11 repair are superseded by bounded same-input pass diagnosis;
+full native screen uses saved unchanged MID and synthetic fixtures, no match.
+Rollback remains canonicalMID15/Fitness5/5. No tournament promotion.
+
 ## 2026-10-27 — owner-approved repair and matched comparison
 
 Coach-v1.0 actually reread, unchanged. C01: complete the current old-M11 block

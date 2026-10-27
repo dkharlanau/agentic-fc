@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "candidate": "Baseline M8 canonical MID15-equivalent",
   "mode": "practice",
-  "status": "queued-after-m11",
+  "status": "ready-owner-approved-games-with-parallel-local-analysis",
   "ownerGoal": "Compare M11 with canonical Baseline in same20 built-in benchmarks",
   "targetCompletedMatches": 20,
   "completedMatches": 0,
@@ -81,8 +81,23 @@
   "matches": [],
   "summary": null,
   "blockReviews": [],
-  "fitness": null,
-  "beforeLeaderboard": null,
+  "fitness": {
+    "passed": 5,
+    "total": 5,
+    "observedAtUTC": "2026-10-27T14:52:15.447329+00:00",
+    "source": "Actual portal after exact canonical five-binding rollback"
+  },
+  "beforeLeaderboard": {
+    "rank": 12,
+    "played": 199,
+    "wins": 120,
+    "draws": 6,
+    "losses": 73,
+    "goalsFor": 269,
+    "goalsAgainst": 162,
+    "points": 366,
+    "source": "Fresh portal ranked table before Baseline cohort; Practice counters excluded"
+  },
   "limitations": [
     "Managed MID live command/reason/model usage audit may be unavailable; preserve unknown as null",
     "Same ordered bots; seeds uncontrolled; onlyHOME if actual portal supports onlyHOME",

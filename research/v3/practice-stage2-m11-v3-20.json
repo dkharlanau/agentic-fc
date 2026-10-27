@@ -1,10 +1,10 @@
 {
   "schemaVersion": 2,
   "candidate": "M11 Hybrid v3",
-  "status": "running",
+  "status": "closed-at-four-owner-redirect",
   "ownerGoal": "Latest owner: test M11 then compare against canonical Baseline on same built-in benchmarks",
   "targetCompletedMatches": 20,
-  "completedMatches": 3,
+  "completedMatches": 4,
   "sourceCommit": "912b687141c03f72b24ab002a8bd0d9d6d646804",
   "archiveSha256": "e259682c101f5eae1d5d769cff524b98f3b0aa0628f572822f8ab97be139fbba",
   "formation": "1-1-2",
@@ -267,6 +267,94 @@
       "scoreless": false,
       "cleanSheet": true,
       "savedAtUTC": "2026-10-27T14:37:38.208870+00:00"
+    },
+    {
+      "opponent": "The Benchmark FC",
+      "opponentStyle": "balanced",
+      "side": "HOME",
+      "result": "LOSS",
+      "goalsFor": 0,
+      "goalsAgainst": 2,
+      "shotsFor": 2,
+      "shotsAgainst": 6,
+      "shotsOnTargetFor": 0,
+      "shotsOnTargetAgainst": 2,
+      "possessionPercent": 47,
+      "teamReportAverageLatencyMs": 821,
+      "teamReportCommands": 369,
+      "teamReportCommandCounts": {
+        "PRESS_BALL": 174,
+        "MOVE_TO": 112,
+        "PASS": 24,
+        "SHOOT": 22,
+        "CLEAR_OVERRIDE": 16,
+        "INTERCEPT": 16,
+        "GK_DISTRIBUTE": 5
+      },
+      "perRoleReportLatencyMs": {
+        "GK": 608,
+        "DEF": 793,
+        "MID": 899,
+        "FWD1": 625,
+        "FWD2": 787
+      },
+      "perRoleReportedSuccessPercent": {
+        "GK": 100,
+        "DEF": 100,
+        "MID": 100,
+        "FWD1": 100,
+        "FWD2": 100
+      },
+      "candidateAudit": {
+        "sourceCommit": "912b687141c03f72b24ab002a8bd0d9d6d646804",
+        "scope": "Latest isolated Runtime process; includes startup/bootstrap; unique session and match-window mapping retained privately",
+        "requestCount": 72,
+        "commandCounts": {
+          "CLEAR_OVERRIDE": 44,
+          "PASS": 6,
+          "MARK": 6,
+          "SET_STANCE": 15,
+          "PRESS_BALL": 1
+        },
+        "reasonCounts": {
+          "INVALID_PLAYER_IDENTITY_SET": 1,
+          "SAFE_PROGRESSIVE_PASS": 3,
+          "SAFE_RECYCLE_PASS": 3,
+          "UNKNOWN_POSSESSION": 27,
+          "UNKNOWN_GEOMETRY": 1,
+          "ENGINE_RESTART": 14,
+          "CENTRAL_COVER": 6,
+          "MID_DEFENSIVE_THIRD_COVER": 1,
+          "NO_SAFE_OUTLET": 1,
+          "KEEP_SHAPE": 9,
+          "ROLE_SUPPORT": 5,
+          "SINGLE_LOCAL_PRESS": 1
+        },
+        "modelAttempted": 0,
+        "handlerMaxMs": 1.280642,
+        "fullNativeLatency": null,
+        "firstCompetitivePlayOnLatencyMs": null,
+        "lateActionRate": null,
+        "invalidResponseRate": null
+      },
+      "criticalFailure": null,
+      "primaryReportAlias": "practice-m11-04-report",
+      "preMatchConnectivityLatencyMs": {
+        "GK": 346,
+        "DEF": 400,
+        "MID": 1111,
+        "FWD1": 342,
+        "FWD2": 1214
+      },
+      "telemetryInconsistencies": [
+        "Submitted Runtime commands differ from report/default-engine command counts; command application semantics unresolved",
+        "Reported100%success does not establish full native deadline compliance"
+      ],
+      "id": "stage2-practice-m11-v3-04",
+      "mode": "practice",
+      "scoreless": true,
+      "cleanSheet": false,
+      "savedAtUTC": "2026-10-27T14:44:30.809698+00:00"
     }
   ],
   "summary": null,
@@ -275,7 +363,7 @@
     "Native cold calls failed the original engineering gate; real-game pilot does not erase this result",
     "Unavailable per-game telemetry stays null"
   ],
-  "updatedAtUTC": "2026-10-27T14:37:38.208870+00:00",
+  "updatedAtUTC": "2026-10-27T14:44:30.809698+00:00",
   "historicalNativeGate": {
     "passed": false,
     "sourceCommit": "244065b0d3fe10447759c2afa8684f42fa566474",
@@ -313,7 +401,16 @@
     "The Benchmark FC",
     "Total Attack United"
   ],
-  "blockReviews": [],
+  "blockReviews": [
+    {
+      "range": [
+        1,
+        4
+      ],
+      "file": "practice-stage2-m11-v3-block-01.json",
+      "decision": "Owner stopped M11; no further games or M11 repair"
+    }
+  ],
   "afterModelRoleCheck": "Three saved Harness model checks completed and sessions cleaned; no model/prompt overrides",
   "comparisonControl": "Baseline M8 with MID15-equivalent Nova2Lite; other four roles and formation unchanged",
   "verifiedReady": true,
@@ -323,5 +420,7 @@
     "total": 5
   },
   "cohortFrozenAtUTC": "2026-10-27T13:57:44.027629+00:00",
-  "historicalFitnessAttempts": []
+  "historicalFitnessAttempts": [],
+  "closedAtUTC": "2026-10-27T14:52:15.447329+00:00",
+  "closureReason": "Owner stopped M11 testing and repair; work redirected to L02B and Baseline. Fourth match had already completed 0:2; not aborted."
 }
