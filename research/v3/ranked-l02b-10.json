@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "candidate": "L02B",
-  "status": "awaiting-fitness",
+  "status": "diagnosing-fitness-502-baseline-restored",
   "ownerGoal": "Deploy both candidates and play ten completed real ranked matches each",
   "targetCompletedMatches": 10,
   "completedMatches": 0,
@@ -13,7 +13,12 @@
   "nativeFailureRetained": true,
   "pilotDecision": "Proceed with the bounded real-game pilot under the renewed concrete owner goal; do not claim native admission PASS",
   "promotionEligibleFromNative": false,
-  "fitness": null,
+  "fitness": {
+    "passed": 4,
+    "total": 5,
+    "failedRole": "MID",
+    "error": "HTTP502 AGENT_RUNTIME_ERROR"
+  },
   "beforeLeaderboard": {
     "rank": 11,
     "played": 198,
@@ -32,6 +37,18 @@
     "Native cold calls failed the original engineering gate; real-game pilot does not erase this result",
     "Unavailable per-game telemetry stays null"
   ],
-  "updatedAtUTC": "2026-10-27T10:57:47.582662+00:00",
-  "bindingsDigestSha256": "566e0bee3d3014e93d2d33c080016d9f6979fb38256194345f376ff6865011bf"
+  "updatedAtUTC": "2026-10-27T11:03:49.434798+00:00",
+  "bindingsDigestSha256": "566e0bee3d3014e93d2d33c080016d9f6979fb38256194345f376ff6865011bf",
+  "fitnessAttempts": [
+    {
+      "passed": 4,
+      "total": 5,
+      "failedRole": "MID",
+      "error": "HTTP502 AGENT_RUNTIME_ERROR"
+    }
+  ],
+  "baselineRollbackFitness": {
+    "passed": 5,
+    "total": 5
+  }
 }

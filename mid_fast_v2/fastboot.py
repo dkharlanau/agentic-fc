@@ -67,7 +67,11 @@ class Handler(StreamRequestHandler):
         self.wfile.write(head + body)
         self.wfile.flush()
 
-    def reject(self, status):
+    def reject(self, status, reason='invalid_request'):
+        audit_log('MID_L02B_HTTP_REJECT', {
+            'buildCommit': os.environ.get('BUILD_COMMIT', 'local'),
+            'status': status, 'reason': reason,
+        })
         self.send_body(status, b'{"error":"invalid_request"}', close=True)
 
     def read_request(self):
@@ -112,19 +116,33 @@ class Handler(StreamRequestHandler):
             while True:
                 try:
                     request = self.read_request()
-                except (ValueError, UnicodeError):
-                    self.reject(400)
+                except (ValueError, UnicodeError) as error:
+                    allowed = {'request_line', 'version', 'headers', 'header_syntax',
+                               'header_count', 'host', 'ambiguous_framing', 'length'}
+                    reason = error.args[0] if type(error) is ValueError and error.args and error.args[0] in allowed else 'invalid_framing'
+                    self.reject(400, reason)
                     return
                 if request is None:
                     return
                 method, path, headers, length, close = request
                 started = time.perf_counter_ns()
                 handler_unix_ns = time.time_ns()
+                if method != 'GET' and self.server.invocations == 0:
+                    audit_log('MID_L02B_HTTP_FIRST_REQUEST', {
+                        'buildCommit': os.environ.get('BUILD_COMMIT', 'local'),
+                        'methodIsPost': method == 'POST',
+                        'pathIsInvocations': path == '/invocations',
+                        'contentLengthPresent': 'content-length' in headers,
+                        'contentLength': length,
+                        'contentTypeIsJson': headers.get('content-type', [''])[0].split(';', 1)[0].strip().lower() == 'application/json',
+                        'expectPresent': 'expect' in headers,
+                        'sessionHeaderPresent': SESSION_HEADER.lower() in headers,
+                    })
                 if 'expect' in headers:
-                    self.reject(417)
+                    self.reject(417, 'expect')
                     return
                 if length > MAX_BODY_BYTES:
-                    self.reject(413)
+                    self.reject(413, 'body_limit')
                     return
                 if method == 'GET' and path == '/ping' and length == 0:
                     self.send_body(200, b'{"status":"Healthy"}', close=close)
@@ -136,10 +154,10 @@ class Handler(StreamRequestHandler):
                             'processAgeAtPingMs': (started - BOOT_NS) / 1e6})
                 elif method == 'POST' and path == '/invocations':
                     if 'content-length' not in headers:
-                        self.reject(411)
+                        self.reject(411, 'missing_content_length')
                         return
                     if headers.get('content-type', [''])[0].split(';', 1)[0].strip().lower() != 'application/json':
-                        self.reject(415)
+                        self.reject(415, 'content_type')
                         return
                     try:
                         raw = self.rfile.read(length)
@@ -147,7 +165,7 @@ class Handler(StreamRequestHandler):
                             raise ValueError('truncated_body')
                         payload = json.loads(raw)
                     except (ValueError, UnicodeError):
-                        self.reject(400)
+                        self.reject(400, 'invalid_or_truncated_json')
                         return
                     decoded = time.perf_counter_ns()
                     with self.server.engine_lock:
@@ -176,12 +194,16 @@ class Handler(StreamRequestHandler):
                             'processAgeAtHandlerMs': (started - BOOT_NS) / 1e6,
                         })
                 else:
-                    self.reject(404)
+                    self.reject(404, 'method_or_path')
                     return
                 if close:
                     return
-        except OSError:
+        except OSError as error:
             # Timeouts/disconnects are not valid commands and expose no request data.
+            audit_log('MID_L02B_HTTP_IO_ERROR', {
+                'buildCommit': os.environ.get('BUILD_COMMIT', 'local'),
+                'errorType': type(error).__name__,
+            })
             return
 
 

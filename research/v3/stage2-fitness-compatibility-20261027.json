@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "checkedDate": "2026-10-27",
+  "status": "investigating-football-fitness-compatibility",
+  "candidate": "L02B",
+  "nativeValidResponses": 224,
+  "footballFitness": {
+    "passed": 4,
+    "total": 5,
+    "failedRole": "MID",
+    "runtimeErrorStatus": 502
+  },
+  "observations": [
+    "Runtime BOOT and first successful PING appeared for the Fitness process",
+    "No MID decision audit appeared for that process",
+    "Baseline MID rollback restored fresh Fitness5/5"
+  ],
+  "hypothesis": "Football caller request framing/content type differs from native Python SDK calls; not yet confirmed",
+  "nextTest": "Observe bounded HTTP reject/method/path/body-framing labels from a diagnostic-only transport build; no payload or credential logging",
+  "policyChanged": false,
+  "rankedGames": 0
+}

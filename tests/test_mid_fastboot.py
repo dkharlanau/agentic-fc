@@ -85,6 +85,16 @@ class FastBootTests(base_tests.MidHTTPTests):
             client.close()
         self.assertEqual(self.server.invocations, 3)
 
+    def test_rejection_audit_uses_bounded_labels_without_header_values(self):
+        with patch('mid_fast_v2.fastboot.audit_log') as logged:
+            response = self.raw(b'POST /invocations HTTP/1.1\r\nHost: local\r\nContent-Type: private-value\r\nContent-Length: 2\r\nAuthorization: private-token\r\n\r\n{}')
+        self.assertTrue(response.startswith(b'HTTP/1.1 415 '))
+        self.assertTrue(any(call.args[0] == 'MID_L02B_HTTP_REJECT'
+                            and call.args[1]['reason'] == 'content_type'
+                            for call in logged.call_args_list))
+        self.assertNotIn('private-value', str(logged.call_args_list))
+        self.assertNotIn('private-token', str(logged.call_args_list))
+
     def test_post_waits_for_real_decision_without_early_headers(self):
         with socket.create_connection(self.server.server_address, timeout=2) as client:
             payload = json.dumps(plan()[0]['request']).encode()
