@@ -1,22 +1,25 @@
-# Current cloud checkpoint — 27 October 2026, 20:19 UTC
+# Current cloud checkpoint — 27 October 2026, 23:18 UTC
 
 Cloud-only autonomous coaching ends 28 October 03:56:26 UTC (owner extended the window at 19:56 UTC). No Mac work.
 Other project loops remain paused. Owner authorizes checked GitHub publication
 and main integration. No extra agents, automations, IAM changes or secrets in Git.
 
-## Actual installed team — 22:26 UTC
+## Actual installed team — 23:17 UTC
 
-Originalbaseline restored: MIDreplay-safe traceV2, originalGK/DEF/FWD4/FWD5,
-formation1-1-2. Exactallfive saved bindings andfreshFitness5/5 verified22:26.
-No active game. Fourteen Practice games completed across distinct configurations.
-Ownhalf-only FWD5 sourced7e8154/archive10fd94dc finished1:2/2:0. Actualmovement
-closer to target20/23paired observations, but usefulpasses/strongerteam unproven.
-Candidate onhold, notpromoted. Priorunrestrictedcounter source35f61e2 rejected
-for15attacking-phase retreatcommands; emergencyMID also notpromoted. Allsource
-and sanitizedreceipts preserved; no publication implies runtimepromotion.
-Next unchanged baselinecontrol pair TotalAttack/FortKnox after prematchReady,
-using MIDtraceobserver only. No new code/runtime simultaneously. Stop newwork
-by03:56:26UTC and preserve best verified reliable setup; quotareserveunknown.
+Originalbaseline: MIDreplay-safe traceV2 sourceaa68b25, originalGK/DEF/FWD4/FWD5,
+formation1-1-2. FreshFitness5/5, exactallfiveUIbindings andAWSREADY readback23:14.
+DEF/FWD4 are managedharness resources: get_harness, not get_agent_runtime.
+NativeGK/MID/FWD5 use runtimeAPI. Harnessmodel/prompts unchanged.
+No activegame. Eighteen Practice games completed acrossdifferentconfigs:13W5L,
+43:17. Selectedloggerbaseline separately6games5W1L14:4, includinglatestBenchmark
+1:0/TotalAttack2:3. No tacticalcandidatepromoted. No humanwinprobability claimed.
+Power1.0 candidate is LOCALONLY source 2ab4d1d, archiveeb2f3d36;208tests,
+extracted4, random1000 andshadow1197states6triggers. IsolatedAWSdeployment denied
+oninitialattempt andone evidence-basedretry; exactownerconfirmationpending.
+Do not retry/deployviaanotherroute. Native/Fitness/matches forpowerNOTRUN.
+All previouscandidateholds remain. Exactprivate ownercheckpoint saved outsideGit,
+withoutcredentials. Await pendingauthorization while preserving reliablebaseline;
+finish permittedwindow by03:56:26UTC, no automaticextension. Quotareserveunknown.
 
 Previous finishing experiment is closed and unpromoted. OriginalFWD5 was restored
 with exactall5 andfreshFitness5/5 before this new MID-only trial. V1partial8:0
@@ -153,3 +156,12 @@ Main checkout is dirty and untouched. DraftPR9 attached; no merge. No force/rese
 Public repo: code, sanitised results and handoff only. Secrets/ARN/account/session/
 match IDs, raw states/logs/screenshots stay ignored.local. Native/helper scripts
 require local private context and existing SDK; another computer needs own login.
+
+PR12 mergedmaina61fa09bab242f0719b43c0b0bb8eb6ef2311c39, exacttree82845f97,
+PRchecks40595102265/40595102262 andmain40595590342/40595590373 PASS.
+
+22:55 UTC: maxpowerisolateddeployment blocked by approvalreview, one evidence-based
+retry also denied. No further deployattempts; specificownerconfirmation requested.
+Read-only reconciliation22:52 found no artifact or namedruntime. Baselineportal
+unchanged, noactivegame. Local208/extracted4testsPASS; native/Fitness NOTRUN for
+powercandidate. Continue independentbaseline analysis; do not bypass denial.

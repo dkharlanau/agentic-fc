@@ -1,0 +1,177 @@
+{
+  "observedUTC": "2026-10-27T23:15:00Z",
+  "mode": "Practice only",
+  "totalsAcrossDifferentConfigurations": {
+    "played": 18,
+    "wins": 13,
+    "draws": 0,
+    "losses": 5,
+    "goalsFor": 43,
+    "goalsAgainst": 17
+  },
+  "limits": "Do not treat combined totals as one setup or forecast human tournament outcomes. Partialblocks preserved.",
+  "games": [
+    {
+      "cohortFile": "practice-mid-replay-01.json",
+      "label": "mid-replay01-totalattack",
+      "opponent": "Total Attack United",
+      "side": "HOME",
+      "result": "1-0",
+      "completedObservedUTC": "2026-10-27T18:12:32Z",
+      "configuration": "MID initial-position replay plus isolated platformV2; other four bindings verified unchanged"
+    },
+    {
+      "cohortFile": "trace/cohort-01.json",
+      "label": "trace01-fortknox",
+      "opponent": "Fort Knox Athletic",
+      "side": "HOME",
+      "result": "2-0",
+      "completedObservedUTC": "2026-10-27T18:58:30Z",
+      "configuration": "MID diagnostic logging only, unchanged decisions; other four exact bindings retained"
+    },
+    {
+      "cohortFile": "trace/cohort-01.json",
+      "label": "trace02-totalattack",
+      "opponent": "Total Attack United",
+      "side": "HOME",
+      "result": "5-0",
+      "completedObservedUTC": "2026-10-27T19:07:04Z",
+      "configuration": "MID diagnostic logging only, unchanged decisions; other four exact bindings retained"
+    },
+    {
+      "cohortFile": "fwd5-outlet/cohort-01.json",
+      "label": "outlet01-fortknox",
+      "opponent": "Fort Knox Athletic",
+      "side": "HOME",
+      "result": "3-0",
+      "completedObservedUTC": "2026-10-27T19:35:47Z",
+      "configuration": "FWD5 existing outlet mode only, original archive and V1 platform"
+    },
+    {
+      "cohortFile": "fwd5-outlet/cohort-01.json",
+      "label": "outlet02-totalattack",
+      "opponent": "Total Attack United",
+      "side": "HOME",
+      "result": "1-3",
+      "completedObservedUTC": "2026-10-27T19:41:04Z",
+      "configuration": "FWD5 existing outlet mode only, original archive and V1 platform"
+    },
+    {
+      "cohortFile": "empty-goal/cohort-01.json",
+      "label": "finish01-fortknox",
+      "opponent": "Fort Knox Athletic",
+      "side": "HOME",
+      "result": "8-0",
+      "completedObservedUTC": "2026-10-27T20:13:53Z",
+      "configuration": "FWD5 empty-goal finishing exception only; originaloffballandpower; other4and112unchanged"
+    },
+    {
+      "cohortFile": "empty-goal/cohort-v2.json",
+      "label": "finishv2-01-totalattack",
+      "opponent": "Total Attack United",
+      "side": "HOME",
+      "result": "1-3",
+      "completedObservedUTC": "2026-10-27T20:31:47Z",
+      "configuration": "Exact same finishing code as partialV1trial; runtimeplatform only for readiness. Other4and112preserved."
+    },
+    {
+      "cohortFile": "empty-goal/cohort-v2.json",
+      "label": "finishv2-02-fortknox",
+      "opponent": "Fort Knox Athletic",
+      "side": "HOME",
+      "result": "4-0",
+      "completedObservedUTC": "2026-10-27T20:37:51Z",
+      "configuration": "Exact same finishing code as partialV1trial; runtimeplatform only for readiness. Other4and112preserved."
+    },
+    {
+      "cohortFile": "mid-safety/cohort-01.json",
+      "label": "midsafety01-totalattack",
+      "opponent": "Total Attack United",
+      "side": "HOME",
+      "result": "2-1",
+      "completedObservedUTC": "2026-10-27T21:16:47Z",
+      "configuration": "Only MID last-resort forward shot in pressured own third when original safe-pass choices exhausted"
+    },
+    {
+      "cohortFile": "mid-safety/cohort-01.json",
+      "label": "midsafety02-fortknox",
+      "opponent": "Fort Knox Athletic",
+      "side": "HOME",
+      "result": "4-0",
+      "completedObservedUTC": "2026-10-27T21:23:46Z",
+      "configuration": "Only MID last-resort forward shot in pressured own third when original safe-pass choices exhausted"
+    },
+    {
+      "cohortFile": "fwd5-counter/cohort-01.json",
+      "label": "counter01-totalattack",
+      "opponent": "Total Attack United",
+      "side": "HOME",
+      "result": "1-4",
+      "completedObservedUTC": "2026-10-27T21:57:30Z",
+      "configuration": "FWD5"
+    },
+    {
+      "cohortFile": "fwd5-counter/cohort-01.json",
+      "label": "counter02-fortknox",
+      "opponent": "Fort Knox Athletic",
+      "side": "HOME",
+      "result": "1-0",
+      "completedObservedUTC": "2026-10-27T22:03:02Z",
+      "configuration": "FWD5"
+    },
+    {
+      "cohortFile": "fwd5-counter-ownhalf/cohort-01.json",
+      "label": "counterhalf01-totalattack",
+      "opponent": "Total Attack United",
+      "side": "HOME",
+      "result": "1-2",
+      "completedObservedUTC": "2026-10-27T22:19:38Z",
+      "configuration": "FWD5"
+    },
+    {
+      "cohortFile": "fwd5-counter-ownhalf/cohort-01.json",
+      "label": "counterhalf02-fortknox",
+      "opponent": "Fort Knox Athletic",
+      "side": "HOME",
+      "result": "2-0",
+      "completedObservedUTC": "2026-10-27T22:25:21Z",
+      "configuration": "FWD5"
+    },
+    {
+      "cohortFile": "baseline-control/cohort-02.json",
+      "label": "control02-totalattack",
+      "opponent": "Total Attack United",
+      "side": "HOME",
+      "result": "2-1",
+      "completedObservedUTC": "2026-10-27T22:34:28Z",
+      "configuration": "Original GK DEF FWD4 FWD5; replay-safe logger MIDV2;112"
+    },
+    {
+      "cohortFile": "baseline-control/cohort-02.json",
+      "label": "control02-fortknox",
+      "opponent": "Fort Knox Athletic",
+      "side": "HOME",
+      "result": "2-0",
+      "completedObservedUTC": "2026-10-27T22:40:24Z",
+      "configuration": "Original GK DEF FWD4 FWD5; replay-safe logger MIDV2;112"
+    },
+    {
+      "cohortFile": "baseline-control/cohort-03.json",
+      "label": "control03-benchmark",
+      "opponent": "The Benchmark FC",
+      "side": "HOME",
+      "result": "1-0",
+      "completedObservedUTC": "2026-10-27T23:03:29Z",
+      "configuration": "OriginalfivebaselinewithMIDtraceV2;112 unchanged"
+    },
+    {
+      "cohortFile": "baseline-control/cohort-03.json",
+      "label": "control03-totalattack",
+      "opponent": "Total Attack United",
+      "side": "HOME",
+      "result": "2-3",
+      "completedObservedUTC": "2026-10-27T23:10:32Z",
+      "configuration": "OriginalfivebaselinewithMIDtraceV2;112 unchanged"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "decision": "Retain originalbaseline; counter-outlet candidate not promoted",
+  "repeatControl": [
+    "TotalAttack2-1",
+    "FortKnox2-0"
+  ],
+  "earlierLoggerControl": [
+    "FortKnox2-0",
+    "TotalAttack5-0"
+  ],
+  "candidateOwnHalf": [
+    "TotalAttack1-2",
+    "FortKnox2-0"
+  ],
+  "interpretation": "No evidence candidate improves matchoutcomes over repeated original control. Small nonrandomized samples do not establish causal superiority.",
+  "next": "Bounded separate finishing power1.0 diagnostic against unchanged earlier0.8 finishinggate; no ownership relaxation or offball change."
+}

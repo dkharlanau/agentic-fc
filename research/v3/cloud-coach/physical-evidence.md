@@ -61,3 +61,24 @@ contains none. Generated prose also describes CLEAR_OVERRIDE as ball clearance.
 That command releases control to built-in AI. Do not follow the report's advice
 to use RESET or derive tactical causes from its prose. Preserve final score as a
 separate observed outcome and verify each additional metric's attribution.
+
+
+## 27 October 22:46 UTC: sampled pre-goal speed asymmetry
+
+Across15recordedPracticegames (first root game has no fulltrace),39home goals
+and14away goals were observed. Last pre-goal openplay snapshot shows a freeball
+for19home and11away goals. Maximum positive x velocity in those19home samples
+is4.471232;10of11away freeball samples have |vx|13.7–15.37, one3.68. These are
+raw game-coordinate velocities, not measured launch power or metres/second.
+All11away freeball pre-goal samples precede scorechange by0.10–0.58game seconds,
+shorter than the typical2second decision interval. GoalkeeperJump is already
+present in several cases: adding a late reactive cloud instruction is not proven
+to help. Sparse and outcome-selected samples can bias this comparison. Some
+positive-direction freeball samples outside scoring moments exceed8, so there is
+no established universal4.5speed cap. Direction does not identify the kicker.
+
+Official AWS sample forward still specifies SHOOT power0–1, matching the signed
+workshop page inspected21:03. Do not blindly use100 or equate command intent with
+launch. A separate maxpower1.0 diagnostic can preserve the earlier0.8 finisher's
+exact narrow ownership/open-goal gates. Its response schema and goal count alone
+will not establish physical power mapping. Raw episodes retained privately.

@@ -1265,3 +1265,43 @@ completion and matchstrength remain unproven. Hold rather than promote. Original
 FWD5 restored; exactallfive andfreshFitness5/5 verified22:26. Next C01 control:
 repeat originalTotalAttack/FortKnox pair in this timewindow, no newpolicy, to avoid
 mistaking matchvariance for effects. FWD4/DEF/GK/MID unchanged throughout.
+
+## 2026-10-27 22:48 UTC — baseline retained; bounded power diagnostic
+
+Control completed2:1/2:0 with originalFWD5 and unchanged otherfour. Keepbaseline;
+ownhalfoutlet not promoted. C02: sampled pre-goal velocity asymmetry is real in
+these inputs but does not identify shotlaunchpower or kicker; preserve selection
+bias and missedframes. C03:11away freeball snapshots precede concededgoal by
+0.10–0.58s, so a new cloudreaction afterlaunch is unlikely to arrive in time;
+GoalkeeperJump already appears in several episodes. No goalkeeperchange justified.
+Next narrow maxpower1.0 diagnostic keeps earlier finisher's exact gate; only
+qualified branch power changes from0.8 to1.0 versus that earlier candidate.
+Against installedbaseline it still adds a finishingexception, not just onefloat.
+Full208tests, extracted4guards,1000random comparisons(578qualified, onlypower
+changed),1197projectedstates6triggers. Sparse triggers mean two games may be
+inconclusive; noautomaticpromotion or claim ofaccuracy. No ownership relaxation,
+no change to FWD4/DEF/GK/MID. Native/Fitness/readback before two-game block.
+
+## 2026-10-27 22:56 UTC — independent baseline breadth check
+
+Powercandidate isolateddeployment is blocked pending specificconfirmation; do not
+retry or substitute anotherruntime. Currentbaseline remains unchanged and valid.
+C01: next bounded two-game control checks a different bot style (Benchmark), then
+TotalAttack again. This is independent already-authorized Practice, not a path
+around the deployment denial. No runtime/code change, no candidateinstallation.
+Observe attack creation and dangerous transitions; preserve all outcomes. No
+human-opponent winprobability inferred. Nativegate for blockedpower remainsNOTRUN.
+
+## 2026-10-27 23:17 UTC — baseline breadth and preserved checkpoint
+
+Benchmark1:0 / TotalAttack2:3, unchanged originalbaseline. Six logger-baseline
+control games total5W1L14:4, not unbeaten and not a human-tournamentforecast.
+All rootPractice cohorts18games13W5L43:17 are recorded separately; do not use
+combineddifferent-config totals as one setup. FreshFitness5/5, exactUIbindings,
+and native/harness-aware AWSreadbackREADY verified23:14. Firstgenericread wrongly
+used runtimeAPI for DEFharness and gotResourceNotFound; correctharnessAPI verifies
+unchangedmodel/prompt, not a missingplayer. No roles changed.
+Maxpowerisolateddeployment denied twice; ownerconfirmationpending, no workaround.
+Onlylocalqualification exists. Existingbaseline remains selected; save prepared
+code and actualfailure/holds without claiming deployment. Private checkpoint
+contains exactbindings but no credentials; publicrepo excludes thoseidentifiers.

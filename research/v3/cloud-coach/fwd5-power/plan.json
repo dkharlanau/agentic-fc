@@ -1,0 +1,35 @@
+{
+  "status": "local-qualified-isolated-deployment-blocked-pending-owner-confirmation",
+  "hypothesis": "A legal maxpower1.0 request may produce a faster effective shot than the earlier0.8 narrow finisher; physicalmappingunknown",
+  "singleVariableVersusEarlierFinisher": "Only power0.8\u21921.0 in the same EMPTY_GOAL_MIDRANGE guard; newauditreason identifiesdiagnostic. Originalclose shots/offball remain unchanged.",
+  "guardPreservation": [
+    "Exactoriginalbaseline dependencies",
+    "Confirmed baseline ownpossession",
+    "HOME knownsmallframe",
+    "Keeper excursion and openfieldlane",
+    "Stamina>=.5",
+    "Range<=.55span, inside attackinghalf, lateral<=.15span",
+    "No newownershipinference or FWD4/DEF/GK/MID change"
+  ],
+  "comparisonAgainstBaseline": "Adds narrow finishing exception, not a onefloatdifference from the installedbaseline; distinguish references",
+  "evidence": "15recordedgames:19home pre-goal freeball samples maxvx4.47;10of11away pre-goal freeball samples |vx|13.7\u201315.37. Outcome-selected sparse samples do not establish launchpower.",
+  "validation": [
+    "1000random states versus earlierfinisher:onlypowerdifference onqualifiedbranch",
+    "Exactarchive extractedshadow",
+    "Native freshsessions",
+    "Exactbinding+Fitness5/5",
+    "Two unchangedPracticegames"
+  ],
+  "observe": [
+    "Actual maxpowerbranchtriggers",
+    "Matched ownshooter and subsequent balltrajectory",
+    "Possession changes orinterceptions",
+    "No wrongownership orlatencyregression"
+  ],
+  "reject": "No triggers or no attributable physicaleffect: keepheld, not automaticpromotion",
+  "rollback": "OriginalFWD5 andfreshFitness, otherfourretained",
+  "maximumPowerSource": "OfficialAWSsampleforward and signedworkshop0\u20131; no requestabove1",
+  "randomComparisonChanged": 578,
+  "localTests": "208 PASS, extracted4PASS, random1000onlypowerdiff578, shadow1197states6triggers",
+  "blocked": "Isolated AWS deployment rejected twice by approval review despite existing workflow; no further attempts. Exact artifact/runtime absent at read-only reconciliation22:52. Portalbaseline unchanged. Specific ownerconfirmation requested22:55."
+}

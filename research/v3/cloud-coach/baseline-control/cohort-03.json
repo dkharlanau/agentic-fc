@@ -1,0 +1,36 @@
+{
+  "status": "completed-baseline-retained",
+  "mode": "Practice",
+  "configuration": "OriginalfivebaselinewithMIDtraceV2;112 unchanged",
+  "freshFitness": "5/5 at22:56",
+  "purpose": "Independent breadth check on balanced Benchmark, then TotalAttack; no candidate deployment or denied action workaround",
+  "target": 2,
+  "matches": [
+    {
+      "label": "control03-benchmark",
+      "opponent": "The Benchmark FC",
+      "startedUTC": "2026-10-27T22:57:10Z",
+      "prematchFwd5Ms": 1106,
+      "result": "1-0",
+      "side": "HOME",
+      "completedObservedUTC": "2026-10-27T23:03:29Z"
+    },
+    {
+      "label": "control03-totalattack",
+      "opponent": "Total Attack United",
+      "startedUTC": "2026-10-27T23:04:32.165Z",
+      "prematchFwd5Ms": 1007,
+      "result": "2-3",
+      "side": "HOME",
+      "completedObservedUTC": "2026-10-27T23:10:32Z"
+    }
+  ],
+  "deploymentChange": false,
+  "summary": {
+    "wins": 1,
+    "losses": 1,
+    "goalsFor": 3,
+    "goalsAgainst": 3
+  },
+  "decision": "Retainbaseline absentstrongervalidatedcandidate, notbecauseunbeaten. Lossretained;nomidblockchanges."
+}

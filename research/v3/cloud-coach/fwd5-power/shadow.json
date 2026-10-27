@@ -1,0 +1,163 @@
+{
+  "kind": "Extracted exact deployment code; projected MID inputs, NOT real FWD5 request replay",
+  "archiveSha256": "eb2f3d36924fb11d001098280e2e43f2f09d4c96ba7253e8e6ae32886af0ff44",
+  "syntheticHOMEAWAY": true,
+  "rows": [
+    {
+      "match": "trace01-fortknox",
+      "projectedStates": 56,
+      "changedDecisions": 0,
+      "changes": []
+    },
+    {
+      "match": "trace02-totalattack",
+      "projectedStates": 91,
+      "changedDecisions": 1,
+      "changes": [
+        {
+          "gameTime": 72.65982,
+          "context": {
+            "distanceSpan": 0.5136218569245312,
+            "lateralSpan": 0.12952962586627184,
+            "fieldLaneSpan": 0.042953110680576514,
+            "keeperLaneSpan": 0.5790547928239539,
+            "stamina": 0.653226
+          }
+        }
+      ]
+    },
+    {
+      "match": "outlet01-fortknox",
+      "projectedStates": 74,
+      "changedDecisions": 0,
+      "changes": []
+    },
+    {
+      "match": "outlet02-totalattack",
+      "projectedStates": 84,
+      "changedDecisions": 0,
+      "changes": []
+    },
+    {
+      "match": "finish01-fortknox",
+      "projectedStates": 108,
+      "changedDecisions": 1,
+      "changes": [
+        {
+          "gameTime": 13.600121,
+          "context": {
+            "distanceSpan": 0.277057147314186,
+            "lateralSpan": 0.10671331245377992,
+            "fieldLaneSpan": 0.04545267084755053,
+            "keeperLaneSpan": 0.3937918601292495,
+            "stamina": 0.760962
+          }
+        }
+      ]
+    },
+    {
+      "match": "finishv2-01-totalattack",
+      "projectedStates": 84,
+      "changedDecisions": 1,
+      "changes": [
+        {
+          "gameTime": 50.800972,
+          "context": {
+            "distanceSpan": 0.4798578409292312,
+            "lateralSpan": 0.13787067364499,
+            "fieldLaneSpan": 0.09113918553017625,
+            "keeperLaneSpan": 0.6133739881455229,
+            "stamina": 0.702584
+          }
+        }
+      ]
+    },
+    {
+      "match": "finishv2-02-fortknox",
+      "projectedStates": 85,
+      "changedDecisions": 0,
+      "changes": []
+    },
+    {
+      "match": "midsafety01-totalattack",
+      "projectedStates": 92,
+      "changedDecisions": 0,
+      "changes": []
+    },
+    {
+      "match": "midsafety02-fortknox",
+      "projectedStates": 76,
+      "changedDecisions": 0,
+      "changes": []
+    },
+    {
+      "match": "counter01-totalattack",
+      "projectedStates": 87,
+      "changedDecisions": 0,
+      "changes": []
+    },
+    {
+      "match": "counter02-fortknox",
+      "projectedStates": 65,
+      "changedDecisions": 0,
+      "changes": []
+    },
+    {
+      "match": "counterhalf01-totalattack",
+      "projectedStates": 72,
+      "changedDecisions": 2,
+      "changes": [
+        {
+          "gameTime": 33.000565,
+          "context": {
+            "distanceSpan": 0.41615687460036155,
+            "lateralSpan": 0.1201743073232296,
+            "fieldLaneSpan": 0.04303522096128891,
+            "keeperLaneSpan": 0.5027056769844235,
+            "stamina": 1.0
+          }
+        },
+        {
+          "gameTime": 97.475655,
+          "context": {
+            "distanceSpan": 0.4395695420510193,
+            "lateralSpan": 0.13628538068123924,
+            "fieldLaneSpan": 0.041218104686947005,
+            "keeperLaneSpan": 0.12030424255768807,
+            "stamina": 0.958491
+          }
+        }
+      ]
+    },
+    {
+      "match": "counterhalf02-fortknox",
+      "projectedStates": 72,
+      "changedDecisions": 1,
+      "changes": [
+        {
+          "gameTime": 54.081047,
+          "context": {
+            "distanceSpan": 0.4833474736774065,
+            "lateralSpan": 0.11853259175468496,
+            "fieldLaneSpan": 0.052477272610069486,
+            "keeperLaneSpan": 0.5719490303035132,
+            "stamina": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "match": "control02-totalattack",
+      "projectedStates": 80,
+      "changedDecisions": 0,
+      "changes": []
+    },
+    {
+      "match": "control02-fortknox",
+      "projectedStates": 71,
+      "changedDecisions": 0,
+      "changes": []
+    }
+  ],
+  "benefitProven": false
+}

@@ -1,0 +1,17 @@
+{
+  "kind": "Uninstalled isolated max-power finishing wrapper; exact baseline dependencies and policy preserved",
+  "baselineArchiveSha256": "ef9b7c704e1d8fb011fae6ea55e5239d2ac54f64c76afc0ef439dc76d5aea226",
+  "archiveSha256": "eb2f3d36924fb11d001098280e2e43f2f09d4c96ba7253e8e6ae32886af0ff44",
+  "archiveBytes": 20614695,
+  "unchangedArchiveMembers": 3804,
+  "replacementSourceHashes": {
+    "main.py": "721cb2aecd8fc1db193057f7cfe72cc336f403b1a115858dee4ebe002817b68c",
+    "fwd_power_v1/__init__.py": "02aff46293bf6a2d71eca6b2c951d30057db5ba74a6a2a25fd5244bb54560f53",
+    "fwd_power_v1/candidate.py": "4d37e09b704d7ebd0318022c65a328cd47dee74bf752a79813852aa5812d89a4"
+  },
+  "changes": [
+    "main.py replaced",
+    "two fwd_power_v1 modules added"
+  ],
+  "deployment": null
+}

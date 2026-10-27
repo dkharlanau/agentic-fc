@@ -1,0 +1,59 @@
+{
+  "sourceCommit": "a61fa09bab242f0719b43c0b0bb8eb6ef2311c39",
+  "sourceFiles": [
+    "research/v3/matches.json",
+    "research/v3/ranked-batch-12-analysis.ru.md",
+    "research/v3/ranked-batch-15-analysis.ru.md",
+    "research/v3/ranked-batch-16.json"
+  ],
+  "scope": "Bounded historical human-opponent review, not modern currentrank or teamforecast",
+  "inventory": "matches.json has80entries with20setup labels,13unattributedbackground;2entrieslackopponent. Later batches are separate, not blindlysummed.",
+  "signals": [
+    {
+      "opponent": "Goalpost Shifters",
+      "records": [
+        "live-23",
+        "live-40",
+        "live-61"
+      ],
+      "results": [
+        "1-3",
+        "0-2",
+        "1-2"
+      ],
+      "side": "AWAY",
+      "limit": "Three different/partlyunattributed setups; does not isolate side or tactic effect. One13:10shots loss shows volume alone insufficient."
+    },
+    {
+      "opponent": "Amber Dragons X",
+      "records": [
+        "live-67",
+        "separateincomingafterbatch12"
+      ],
+      "results": [
+        "1-2",
+        "0-2"
+      ],
+      "limit": "First1:8shots indicates chancecreation pressure, secondrecordsource differs; no common currentconfiguration proven."
+    },
+    {
+      "opponent": "Team AA",
+      "records": [
+        "live-38",
+        "ranked-batch-15"
+      ],
+      "results": [
+        "3-0",
+        "0-1"
+      ],
+      "limit": "Reversal under differentcontexts; no guarantee based on onepreviouswin."
+    }
+  ],
+  "decisions": [
+    "Do not substitute repeatedbotwins for humanopponentvalidation",
+    "Do not optimize disputed commandcounts/SOTefficiency",
+    "AWAYphysicalapplication remains a distinctunverifiedrisk",
+    "Preserve smallsample and setupconfounding; no new tournamentmatches authorized by thisreview"
+  ],
+  "next": "Use actual futuregroupopponents when officialassignmentvisible; currentrepositorydidnotconfirmGroupG roster."
+}
