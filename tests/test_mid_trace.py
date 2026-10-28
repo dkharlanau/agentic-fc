@@ -1,5 +1,7 @@
 """Diagnostic trace privacy, bounds and response-ordering checks."""
 import copy
+from contextlib import contextmanager
+import hashlib
 from http.client import HTTPConnection
 import json
 import os
@@ -14,6 +16,78 @@ from mid_fast_v2.trace import snapshot
 
 
 class MidTraceTests(unittest.TestCase):
+    @contextmanager
+    def diagnostics_off_server(self):
+        with patch.dict(os.environ, {'MID_TRACE':'0', 'MID_AUDIT':'0', 'PLAYER_ID':'2'}), \
+                patch('mid_fast_v2.fastboot.trace_snapshot',
+                      side_effect=AssertionError('disabled trace was generated')) as traced, \
+                patch('hashlib.sha256', wraps=hashlib.sha256) as hashed, \
+                patch('builtins.print') as printed:
+            server = Server(('127.0.0.1', 0))
+            worker = threading.Thread(target=server.serve_forever, daemon=True)
+            worker.start()
+            client = HTTPConnection(*server.server_address, timeout=2)
+            try:
+                yield client, traced, hashed, printed
+            finally:
+                client.close()
+                server.shutdown()
+                server.server_close()
+                worker.join(3)
+
+    def test_disabled_diagnostics_skip_trace_hash_and_print(self):
+        state = base()
+        self.assertEqual(state['gameState']['playMode'], 'PLAY_ON')
+        expected, _ = MidEngine().choose(state, 'quiet-play')
+        with self.diagnostics_off_server() as (client, traced, hashed, printed):
+            client.request('POST', '/invocations', json.dumps(state),
+                           {SESSION_HEADER:'quiet-play'})
+            response = client.getresponse()
+            raw = response.read().decode()
+            self.assertEqual(response.status, 200)
+            self.assertEqual(json.loads(json.loads(raw.removeprefix('data: ').strip())), expected)
+            # A same-connection ping can only be handled after the preceding
+            # invocation's post-response diagnostics path has finished.
+            client.request('GET', '/ping')
+            response = client.getresponse()
+            self.assertEqual(response.status, 200)
+            self.assertEqual(json.loads(response.read()), {'status':'Healthy'})
+            client.request('POST', '/wrong', '{}')
+            response = client.getresponse()
+            response.read()
+            self.assertEqual(response.status, 404)
+            traced.assert_not_called()
+            hashed.assert_not_called()
+            printed.assert_not_called()
+
+    def test_disabled_diagnostics_preserve_initial_kickoff_replay_hash(self):
+        state = base()
+        state['gameState'].update(playMode='KICK_OFF', tick=0, gameTime=0)
+        fingerprint_input = json.dumps(state, sort_keys=True,
+                                       separators=(',', ':'), allow_nan=False).encode()
+        expected = [{'commandType':'MOVE_TO', 'playerId':2,
+                     'parameters':{'target_x':-8.0, 'target_y':0.0, 'sprint':False},
+                     'duration':0}]
+        with self.diagnostics_off_server() as (client, traced, hashed, printed):
+            for _ in range(3):
+                client.request('POST', '/invocations', json.dumps(state),
+                               {SESSION_HEADER:'quiet-kickoff'})
+                response = client.getresponse()
+                raw = response.read().decode()
+                self.assertEqual(response.status, 200)
+                self.assertEqual(json.loads(json.loads(raw.removeprefix('data: ').strip())), expected)
+            client.request('GET', '/ping')
+            response = client.getresponse()
+            response.read()
+            self.assertEqual(response.status, 200)
+            # This fingerprint protects exact initial-kickoff replay. It is
+            # policy correctness, not the disabled raw-payload audit hash.
+            self.assertEqual(hashed.call_count, 3)
+            for call in hashed.call_args_list:
+                self.assertEqual(call.args, (fingerprint_input,))
+            traced.assert_not_called()
+            printed.assert_not_called()
+
     def test_whitelist_does_not_log_raw_payload_chat_names_or_secrets(self):
         state = base()
         state['teamChat'] = ['private-canary']

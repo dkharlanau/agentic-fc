@@ -1317,3 +1317,14 @@ missing/invalid raw stamina must not become full-energy shot permission. Preserv
 baseline and exact old artifacts, not a performance claim. No AWS deployment or
 new matches; max-power-specific permission hold remains. New offline analyzer
 makes episode gaps and mixed-input rejection explicit.
+
+## 2026-10-28 05:55 UTC — owner requests quiet match execution
+
+Re-read coach-v1.0. Owner now requests disabling own diagnostics for real matches;
+Practice only remains binding. No tactical change or claim of faster play yet.
+MID already supports MID_TRACE=0 / MID_AUDIT=0; preserve correctness-critical
+kickoff replay hashing. GK/FWD5 need an opt-in FAST_AUDIT guard around their own
+JSON/log call. Preserve SDK warnings and platform logs, historical evidence,
+formation and all decision engines. Original deployed archives must be patched
+in-place, not replaced by a newer engine or mismatched constructor. Offline
+221 tests pass; installation, live Fitness and latency remain pending.

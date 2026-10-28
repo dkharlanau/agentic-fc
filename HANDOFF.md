@@ -1,3 +1,16 @@
+# Quiet execution preparation — 28 October 2026, 05:55 UTC
+
+Owner requests removing own diagnostic logging from live match execution.
+Prepared FAST_AUDIT default-off guard; MID uses existing MID_AUDIT/MID_TRACE=0.
+No policy change. 221 offline tests pass. Live installation/Fitness still pending.
+Cloud Workshop access restored after temporary credentials expired; no Mac.
+Owner explicitly permits needed uploads at05:49; isolated power experiment is
+no longer waiting on that prior upload permission, but must follow quiet-setup
+verification separately. Practice only; never accept incoming invitations.
+Retain SDK/platform safety logs and all existing private match history.
+
+---
+
 # Renewed cloud review — 28 October 2026, 05:10 UTC
 
 Owner explicitly requested further work, defeat analysis and improvements at
