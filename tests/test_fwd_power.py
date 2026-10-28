@@ -70,6 +70,18 @@ class PowerTests(unittest.TestCase):
         _,state=finish_sequence()
         self.assertEqual(PowerEngine().choose(state)[0],FastEngine(4).choose(state)[0])
 
+    def test_unknown_or_invalid_raw_energy_cannot_enable_shot(self):
+        for value in ('missing', None, 'bad', '1', True, False,
+                      float('nan'), float('inf'), -1, 1.01, 100):
+            seed, state = finish_sequence()
+            me = next(p for p in state['gameState']['players']
+                      if p['teamCode']=='home' and p['agentId']=='agentId_4')
+            if value == 'missing': me.pop('stamina')
+            else: me['stamina'] = value
+            (actual, audit), (expected, _) = self.decision(state, seed)
+            self.assertEqual(actual, expected, repr(value))
+            self.assertNotEqual(actual[0]['commandType'], 'SHOOT', repr(value))
+
     def test_input_unchanged_and_role_bound(self):
         seed,state=finish_sequence();before=copy.deepcopy(state)
         self.decision(state,seed);self.assertEqual(state,before)

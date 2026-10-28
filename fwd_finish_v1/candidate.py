@@ -43,6 +43,17 @@ class FinishEngine:
         # may be inferred by its unchanged conservative contact guard.
         if state.side != 0 or audit.get('playMode') != 'PLAY_ON' or state.my is None:
             return commands, audit
+        # The legacy parser defaults unknown stamina to 1.0 and accepts a
+        # percentage scale. This exception is small-world-only: require actual
+        # finite 0–1 input, never infer full energy from missing/invalid data.
+        raw_me = next((p for p in root.get('gameState', {}).get('players', [])
+                       if p.get('teamCode') == 'home'
+                       and p.get('agentId') == 'agentId_4'), {})
+        raw_stamina = raw_me.get('stamina')
+        if (type(raw_stamina) not in (int, float)
+                or not math.isfinite(raw_stamina)
+                or not .5 <= raw_stamina <= 1.0):
+            return commands, audit
         me = state.my
         if me.has_ball is False or not math.isfinite(me.stamina) or me.stamina < .5:
             return commands, audit

@@ -1305,3 +1305,15 @@ Maxpowerisolateddeployment denied twice; ownerconfirmationpending, no workaround
 Onlylocalqualification exists. Existingbaseline remains selected; save prepared
 code and actualfailure/holds without claiming deployment. Private checkpoint
 contains exactbindings but no credentials; publicrepo excludes thoseidentifiers.
+
+## 2026-10-28 05:10 UTC — renewed matched defeat review
+
+Owner renewed analysis and improvements at05:03. Re-read coach-v1.0; C01 matched
+same-policy/same-opponent HOME wins5:0/2:1 with loss2:3, not mixed experiments.
+C02/C03: reject blanket fatigue/crowding explanation and late reactive-GK fix;
+pre-launch ownership/contact gaps remain. See loss-review/README.md and matched
+counters. Repair a reproduced safety bug in uninstalled finishing wrappers:
+missing/invalid raw stamina must not become full-energy shot permission. Preserve
+baseline and exact old artifacts, not a performance claim. No AWS deployment or
+new matches; max-power-specific permission hold remains. New offline analyzer
+makes episode gaps and mixed-input rejection explicit.

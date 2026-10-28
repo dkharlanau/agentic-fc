@@ -1,3 +1,15 @@
+# Renewed cloud review — 28 October 2026, 05:10 UTC
+
+Owner explicitly requested further work, defeat analysis and improvements at
+05:03 UTC, after the prior session ended. Current bounded slice: matched-loss
+analysis and candidate safety repair. No new duration was promised. Cloud only.
+Selected team remains unchanged, last verified03:10Fitness5/5/exactfive/AWSREADY.
+Max-power-specific deployment approval remains pending; no bypass or retry.
+See research/v3/cloud-coach/loss-review/README.md. Old power archive eb2f3d36
+predates the new raw-stamina repair; do not call it the repaired artifact.
+
+---
+
 # Current cloud checkpoint — 27 October 2026, 23:18 UTC
 
 Cloud-only autonomous coaching ends 28 October 03:56:26 UTC (owner extended the window at 19:56 UTC). No Mac work.

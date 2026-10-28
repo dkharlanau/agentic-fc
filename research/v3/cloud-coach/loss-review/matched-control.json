@@ -1,0 +1,112 @@
+{
+  "basis": "Same selected L02B control, same Total Attack opponent, HOME Practice; unequal sampled trajectories, not randomized trial",
+  "rows": [
+    {
+      "label": "trace02-totalattack",
+      "openPlaySamples": 61,
+      "ownStamina": {
+        "0": {
+          "knownSamples": 61,
+          "below025Samples": 0
+        },
+        "1": {
+          "knownSamples": 61,
+          "below025Samples": 0
+        },
+        "2": {
+          "knownSamples": 61,
+          "below025Samples": 16
+        },
+        "3": {
+          "knownSamples": 61,
+          "below025Samples": 8
+        },
+        "4": {
+          "knownSamples": 61,
+          "below025Samples": 5
+        }
+      },
+      "midForwardWithin1Samples": 17,
+      "conceded": []
+    },
+    {
+      "label": "control02-totalattack",
+      "openPlaySamples": 60,
+      "ownStamina": {
+        "0": {
+          "knownSamples": 60,
+          "below025Samples": 0
+        },
+        "1": {
+          "knownSamples": 60,
+          "below025Samples": 2
+        },
+        "2": {
+          "knownSamples": 60,
+          "below025Samples": 8
+        },
+        "3": {
+          "knownSamples": 60,
+          "below025Samples": 27
+        },
+        "4": {
+          "knownSamples": 60,
+          "below025Samples": 13
+        }
+      },
+      "midForwardWithin1Samples": 16,
+      "conceded": [
+        {
+          "observedScoreTime": 91.036736,
+          "lastSampleGapSeconds": 0.1799700000000115,
+          "scoreIncrement": 1
+        }
+      ]
+    },
+    {
+      "label": "control03-totalattack",
+      "openPlaySamples": 59,
+      "ownStamina": {
+        "0": {
+          "knownSamples": 59,
+          "below025Samples": 0
+        },
+        "1": {
+          "knownSamples": 59,
+          "below025Samples": 0
+        },
+        "2": {
+          "knownSamples": 59,
+          "below025Samples": 3
+        },
+        "3": {
+          "knownSamples": 59,
+          "below025Samples": 16
+        },
+        "4": {
+          "knownSamples": 59,
+          "below025Samples": 14
+        }
+      },
+      "midForwardWithin1Samples": 8,
+      "conceded": [
+        {
+          "observedScoreTime": 25.960403,
+          "lastSampleGapSeconds": 1.7800399999999996,
+          "scoreIncrement": 1
+        },
+        {
+          "observedScoreTime": 37.900677,
+          "lastSampleGapSeconds": 1.940045000000005,
+          "scoreIncrement": 1
+        },
+        {
+          "observedScoreTime": 71.93994,
+          "lastSampleGapSeconds": 0.1799700000000115,
+          "scoreIncrement": 1
+        }
+      ]
+    }
+  ],
+  "causalityEstablished": false
+}
