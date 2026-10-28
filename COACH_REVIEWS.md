@@ -1340,3 +1340,41 @@ TotalAttack remain unresolved, not blamed on GK or logging. No event trace from
 these games by owner request; portal role attribution remains inconsistent.
 C02 next maxpower test retains strict HOME/ownership/lane/stamina gates and uses
 quiet entrypoint. Other four roles fixed. No automatic promotion on bot scores.
+
+## 2026-10-28 07:26 UTC — owner authorizes careful tournament-time candidate
+
+Re-read coach-v1.0 and fc-match-coaching. Owner resumed narrowly scoped
+improvement work after the06:53 stop. Cloud only; no live changes during games,
+no invitations. First inspect actual deployed quiet archive, not newer source
+engine. C02: reported Hail Mary AWAY loss0:1 has4shots and0reportedSOT,
+but historic SOT semantics remain unresolved; this does not prove four misses.
+Amber HOME draw1:1 and win2:1 are owner games, not controlled Practice.
+Latest selected baseline was restored06:52 withFitness5/5 after quiet power
+trial1:4/4:0 versus quiet control4:3/5:0. Candidate not promoted.
+Current slice: one justified offline candidate plus regression tests, retain
+exact five originals and diagnostics off. No match-strength claim from tests.
+
+## 2026-10-28 07:48 UTC — close-shot aim preparation held
+
+C02: actual archived geometry passes72 synthetic mirrored cases; no established
+AWAY bug. Prepared fwd_aim_v1 only for existing close shots with keeper displaced
+and clear of center.225 aggregate tests and4 exact-archive focused tests pass;
+3804 baseline members unchanged. Builder ZipInfo aliasing fixed before successful
+new-path build.1352 historical match projections have0baselineSHOOT; sparse
+coverage cannot demonstrate benefit. No AWS update, nativeprobe, Fitness or new
+Practice in this slice. Candidate HOLD; current original quiet team untouched.
+Owner told existing team need not wait for this unproven candidate.
+
+## 2026-10-28 08:03 UTC — renewed attack request after Hallucination loss
+
+Owner explicitly asks changes after second loss. Read latest coach-v1.0; current
+quiet originals still selected, no new AWS changes or games. Report HOME0:1,
+reported shots1:11, possession45:55; role-command tables remain unreliable.
+C02: abandon rare aim-only trial for this task. Investigate original FWD5
+SAFE_OUTLET interrupting current AdvanceToGoalWithBall/DRIBBLING with backward
+pass. Historical mixed-policy MID projections show eligible cases, not actual
+latest-game FWD5 calls. Test a narrow CLEAR_OVERRIDE continuation, no invented
+on-ball MOVE_TO contract, no added shots, models, logs or role changes. Require
+verified contact, known energy, no pressure, clear forward path, defensive cover,
+no own-danger area and preserved progressive passes. Baseline exact archive
+remains rollback. Native/Fitness/Practice gates remain pending.
