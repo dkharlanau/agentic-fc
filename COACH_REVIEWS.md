@@ -1328,3 +1328,15 @@ JSON/log call. Preserve SDK warnings and platform logs, historical evidence,
 formation and all decision engines. Original deployed archives must be patched
 in-place, not replaced by a newer engine or mismatched constructor. Offline
 221 tests pass; installation, live Fitness and latency remain pending.
+
+## 2026-10-28 06:20 UTC — quiet baseline verified; bounded power trial next
+
+Own diagnostic removal complete, unchanged policy pair4:3/5:0 against TotalAttack
+and FortKnox. C01 technical readiness supported by221 offline tests, exact AWS
+configuration/endpoints, Fitness5/5 and both pre-match screens under1.5s. Retain
+first external GK15.337s failure and separately qualified2.554/3.507s fresh-call
+results; not an unconditional latency guarantee. C03 three conceded goals against
+TotalAttack remain unresolved, not blamed on GK or logging. No event trace from
+these games by owner request; portal role attribution remains inconsistent.
+C02 next maxpower test retains strict HOME/ownership/lane/stamina gates and uses
+quiet entrypoint. Other four roles fixed. No automatic promotion on bot scores.

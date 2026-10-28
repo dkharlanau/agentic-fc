@@ -1,3 +1,18 @@
+# Quiet team verified — 28 October 2026, 06:20 UTC
+
+Own diagnostics off on selected GK/FWD5/MID; original decision engines retained.
+All runtimes and DEFAULT endpoints READY (GK3/MID2/FWD5-2), Fitness5/5.
+Practice HOME: Total Attack4:3, Fort Knox5:0, unchanged pair. No runtime collectors.
+See research/v3/cloud-coach/quiet-runtime/result.json for exact limits/archives.
+Initial GK external cold call15.337s failed deadline; qualified fresh calls after
+separate client connection setup2.554/3.507s passed. Preserve this failure.
+SDK/platform logs remain. No causal claim or tournament odds from two bot wins.
+Next separately authorized maxpower trial: patched raw-stamina guard AND own
+logging off. Keep quiet original FWD5 available for exact rollback; do not reuse
+old archive or old blocked-deployment receipt. No invites; Practice only.
+
+---
+
 # Quiet execution preparation — 28 October 2026, 05:55 UTC
 
 Owner requests removing own diagnostic logging from live match execution.

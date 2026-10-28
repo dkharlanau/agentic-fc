@@ -1,0 +1,98 @@
+{
+  "observedUTC": "2026-10-28T06:20:00Z",
+  "scope": "Own diagnostic logging only; same engine policies and formation 1-1-2",
+  "sourceCommit": "c440b0c",
+  "githubCommit": "9eaf78f5c19a8e47bd3c02eb3b9d1321e928c79b",
+  "flags": {
+    "MID_AUDIT": "0",
+    "MID_TRACE": "0",
+    "FAST_AUDIT": "0"
+  },
+  "artifacts": {
+    "GK": {
+      "beforeSha256": "aba7083c6940cb84baf60e4c4b10e560622473efc254d44618e11b54b021a87d",
+      "afterSha256": "a431b34fe2a8ba42ea734f698297057ffaa83ee93dd68c952e228d06aca9ffe7",
+      "changedMembers": [
+        "main.py"
+      ],
+      "unchangedMembers": 3804
+    },
+    "FWD5": {
+      "beforeSha256": "ef9b7c704e1d8fb011fae6ea55e5239d2ac54f64c76afc0ef439dc76d5aea226",
+      "afterSha256": "3e275c79c27490d9c63bbad789f8cb0b906b3fef1ad8ffba32d98cd94a0ea94d",
+      "changedMembers": [
+        "main.py"
+      ],
+      "unchangedMembers": 3804
+    }
+  },
+  "MIDArchiveUnchanged": true,
+  "runtimeAndDefaultEndpointReady": true,
+  "versions": {
+    "GK": "3",
+    "MID": "2",
+    "FWD5": "2"
+  },
+  "fitnessPassed": 5,
+  "offlineTests": 221,
+  "nativeFirstGKFullMs": 15336.9,
+  "qualifiedFreshGKFirstMs": [
+    2553.9,
+    3507.3
+  ],
+  "qualifiedBoundary": "client TLS/proxy setup separated using already-stopped owned probe cleanup; no runtime prewarm",
+  "nativeAllCommandsMatched": true,
+  "prematchMs": [
+    [
+      1203,
+      251,
+      1082,
+      294,
+      1137
+    ],
+    [
+      1076,
+      480,
+      1484,
+      557,
+      1144
+    ]
+  ],
+  "practice": [
+    {
+      "alias": "quiet01",
+      "opponent": "Total Attack United",
+      "side": "HOME",
+      "mode": "Practice",
+      "score": [
+        4,
+        3
+      ],
+      "result": "W",
+      "configuration": "same baseline engines, diagnostics off",
+      "portalBothTeamsAllResponseSuccessPercent": 100,
+      "causalClaim": false
+    },
+    {
+      "alias": "quiet02",
+      "opponent": "Fort Knox Athletic",
+      "side": "HOME",
+      "mode": "Practice",
+      "score": [
+        5,
+        0
+      ],
+      "result": "W",
+      "configuration": "same baseline engines, diagnostics off",
+      "causalClaim": false
+    }
+  ],
+  "limits": [
+    "No runtime collectors during games",
+    "SDK/platform logs retained",
+    "No proof that logging removal caused speed or score changes",
+    "Portal command attribution inconsistent; do not infer goals or policy from role labels",
+    "Cloud WebGL unavailable; no claim to have watched field animation",
+    "Cold-start timing risk retained"
+  ]
+}

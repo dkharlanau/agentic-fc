@@ -17,9 +17,11 @@ def stream(commands):
 @app.entrypoint
 async def invoke(payload, context):
     commands, audit = engine.choose(payload, getattr(context, 'session_id', None) or 'default')
-    audit['buildCommit'] = os.environ.get('BUILD_COMMIT', 'local')
-    audit['command'] = commands[0]
-    app.logger.info('NHITL_FAST ' + json.dumps(audit, separators=(',', ':')))
+    # Diagnostics are opt-in; avoid audit serialization on the game path.
+    if os.environ.get('FAST_AUDIT', '0') == '1':
+        audit['buildCommit'] = os.environ.get('BUILD_COMMIT', 'local')
+        audit['command'] = commands[0]
+        app.logger.info('NHITL_FAST ' + json.dumps(audit, separators=(',', ':')))
     return stream(commands)
 
 
